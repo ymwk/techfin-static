@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Web/css/designsystem.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Sidebar</h2>
+        <p class="comp-pagetitle-desc">서비스화면 Sidebar</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Default</h3>
+
+          <!-- SOLSidebar start -->
+          <div class="SOLSidebar-root">
+            <nav class="SOLSidebar-nav">
+              <ul class="SOLSidebar-lnb">
+                <li class="SOLSidebar-lnb-item">
+                  <button type="button" class="SOLSidebar-toggle">
+                    <span class="SOLSvg-root SOLSvg-company">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M13 11H17.8C18.9201 11 19.4802 11 19.908 11.218C20.2843 11.4097 20.5903 11.7157 20.782 12.092C21 12.5198 21 13.0799 21 14.2V21M13 21V6.2C13 5.0799 13 4.51984 12.782 4.09202C12.5903 3.71569 12.2843 3.40973 11.908 3.21799C11.4802 3 10.9201 3 9.8 3H6.2C5.0799 3 4.51984 3 4.09202 3.21799C3.71569 3.40973 3.40973 3.71569 3.21799 4.09202C3 4.51984 3 5.0799 3 6.2V21M22 21H2M6.5 7H9.5M6.5 11H9.5M6.5 15H9.5"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span>기업신용평가</span>
+                    <i class="SOLIcon-root SOLIcon-gt--d s--sm"></i>
+                  </button>
+                  <ul class="SOLSidebar-lnb-child">
+                    <li>
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/service/register/"
+                        >신용평가 신청</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/service/submit"
+                        >신용평가등급확인서 제출</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/service/result"
+                        >등급 산출 및 제출내역</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="SOLSidebar-lnb-item">
+                  <button type="button" class="SOLSidebar-toggle">
+                    <span class="SOLSvg-root SOLSvg-mypage">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M2 6.8C2 5.11984 2 4.27976 2.32698 3.63803C2.6146 3.07354 3.07354 2.6146 3.63803 2.32698C4.27976 2 5.11984 2 6.8 2H17.2C18.8802 2 19.7202 2 20.362 2.32698C20.9265 2.6146 21.3854 3.07354 21.673 3.63803C22 4.27976 22 5.11984 22 6.8V17.2C22 18.8802 22 19.7202 21.673 20.362C21.3854 20.9265 20.9265 21.3854 20.362 21.673C20.2487 21.7308 20.1292 21.7783 20 21.8174C19.3974 22 18.5835 22 17.2 22H6.8C5.41649 22 4.6026 22 4.00002 21.8174C3.87082 21.7783 3.75133 21.7308 3.63803 21.673C3.07354 21.3854 2.6146 20.9265 2.32698 20.362C2 19.7202 2 18.8802 2 17.2V6.8Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M12 13C13.933 13 15.5 11.433 15.5 9.5C15.5 7.567 13.933 6 12 6C10.067 6 8.5 7.567 8.5 9.5C8.5 11.433 10.067 13 12 13Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M15 16H8.99998C8.07067 16 7.60601 16 7.21961 16.0769C5.63285 16.3925 4.39246 17.6329 4.07684 19.2196C4.00518 19.5799 4.00033 19.0081 4 19.8174C4.60258 20 5.41647 20 6.79998 20H17.2C18.5835 20 19.3974 20 20 19.8174C19.9996 19.0081 19.9948 19.5799 19.9231 19.2196C19.6075 17.6329 18.3671 16.3925 16.7803 16.0769C16.3939 16 15.9293 16 15 16Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                    <span>마이페이지</span>
+                    <i class="SOLIcon-root SOLIcon-gt--d s--sm"></i>
+                  </button>
+                  <ul class="SOLSidebar-lnb-child">
+                    <li class="st--active">
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/mypage/company"
+                        >회사 관리</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/mypage/cert"
+                        >인증서 관리</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/mypage/member"
+                        >회원 관리</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/mypage/me"
+                        >내 정보 관리</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/mypage/account"
+                        >정산 관리</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="SOLSidebar-lnb-item">
+                  <button type="button" class="SOLSidebar-toggle">
+                    <span class="SOLSvg-root SOLSvg-customer">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M10 9.00224C10.1762 8.50136 10.524 8.079 10.9817 7.80998C11.4395 7.54095 11.9777 7.4426 12.501 7.53237C13.0243 7.62213 13.499 7.89421 13.8409 8.30041C14.1829 8.70661 14.37 9.22072 14.3692 9.75168C14.3692 11.2506 12.1209 12 12.1209 12M12.1499 15H12.1599M9.9 20.7L11.36 22.4375C11.5771 22.727 11.6857 22.8717 11.8188 22.9235C11.9353 22.9688 12.0647 22.9688 12.1812 22.9235C12.3143 22.8717 12.4229 22.727 12.64 22.4375L14.1 20.7C14.3931 20.3091 14.5397 20.1137 14.7185 19.9645C14.9569 19.7656 15.2383 19.6248 15.5405 19.5535C15.7671 19.5 16.0114 19.5 16.5 19.5C17.8978 19.5 18.5967 19.5 19.1481 19.2716C19.8831 18.9672 20.4672 18.3831 20.7716 17.6481C21 17.0967 21 16.3978 21 15V7.3C21 5.61984 21 4.77976 20.673 4.13803C20.3854 3.57354 19.9265 3.1146 19.362 2.82698C18.7202 2.5 17.8802 2.5 16.2 2.5H7.8C6.11984 2.5 5.27976 2.5 4.63803 2.82698C4.07354 3.1146 3.6146 3.57354 3.32698 4.13803C3 4.77976 3 5.61984 3 7.3V15C3 16.3978 3 17.0967 3.22836 17.6481C3.53284 18.3831 4.11687 18.9672 4.85195 19.2716C5.40326 19.5 6.10218 19.5 7.5 19.5C7.98858 19.5 8.23287 19.5 8.45951 19.5535C8.76169 19.6248 9.04312 19.7656 9.2815 19.9645C9.46028 20.1137 9.60685 20.3091 9.9 20.7Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span>고객지원</span>
+                    <i class="SOLIcon-root SOLIcon-gt--d s--sm"></i>
+                  </button>
+                  <ul class="SOLSidebar-lnb-child">
+                    <li>
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/cs/notice"
+                        >공지사항</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/cs/faq"
+                        >자주 묻는 질문</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="SOLSidebar-link"
+                        href="/src/app/crediview/cs/inquiry"
+                        >1:1 문의</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- SOLSidebar end -->
+
+          <!-- 이벤트 배너 -->
+          <div class="side-event-bnwrap">
+            <img
+              src="/static/Common/image/crediview/event/side-event-bn-img.png"
+              alt="이벤트 배너"
+            />
+            <a href="#" class="event-detail-btn">
+              <span class="blind">이벤트 자세히 보기</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+.SOLSidebar {
+    &-root {
+        flex-shrink: 0;
+        width: var(--side-w);
+        min-height: 450px;
+        margin-top: -24px;
+
+        .st--open,
+        .SOLSidebar-toggle:hover {
+            // .SOLSvg-root,
+            .SOLIcon-root {
+                opacity: 1
+            }
+        }
+
+        .st--open {
+            .SOLSidebar-lnb-child {
+                max-height: 500px;
+                transition: max-height .6s;
+            }
+
+            .SOLSidebar-toggle {
+                .SOLSvg-root { opacity: 1 }
+                .SOLIcon-root { transform: rotate(-180deg) }
+            }
+        }
+
+        .st--active {
+            font-weight: 700;
+            color: var(--c-active)
+        }
+    }
+
+    &-nav {
+        height: 100%;
+    }
+
+    &-lnb {
+        display: flex;
+        flex-direction: column;
+        word-break: keep-all;
+    
+        &-child {
+            max-height: 0;
+            overflow: hidden;
+            margin-top: -1px;
+            border-bottom: 1px solid var(--tb-border);
+    
+            li:first-of-type {
+                margin-top: 14px
+            }
+            li:last-of-type {
+                margin-bottom: 14px;
+            }
+        }
+    }
+
+    &-toggle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        height: 72px;
+        border-bottom: 1px solid var(--tb-border);
+        text-align: left;
+        font-size: var(--font-16);
+        line-height: 1.5;
+
+        .SOLSvg-root {
+            color: #333;
+            opacity: .2;
+            transition: opacity .3s;
+        }
+
+        .SOLIcon-root {
+            margin-left: auto;
+            opacity: .5;
+            transition: opacity .3s, transform .3s;
+        }
+    }
+
+    &-link {
+        display: flex;
+        align-items: center;
+        padding: 10px 0 10px 32px;
+        line-height: 1.5;
+        color: inherit;
+        transition: color .3s;
+
+        &:hover {
+            color: var(--c-active)
+        }
+    }
+}

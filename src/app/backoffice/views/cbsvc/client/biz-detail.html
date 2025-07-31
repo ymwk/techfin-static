@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../resource/js/common.js" ></script>
+<script type="text/javascript" >
+
+setBizAccountGrid();
+setBizModitGrid();
+
+var gridid_page = 1; // 실제 그리드 ID_page 변수명 셋팅
+
+
+$(document).ready(function(){
+	
+	$("#btn_certView").click(function(){
+		viewParam.noBiz = $("#no_biz").text().replace(/-/gi, "");
+		moveUrl("/cbsvc/client/cert");
+	})
+	// 사업자등록증명원 스크래핑 
+	$("#btn_infoscrap").click(function(){
+		bofConfirm("새로운 정보를 불러오시겠습니까? <br/> 새로운 정보를 불러올 경우 기존 데이터가 변경될 수 있습니다.",function(){
+			var noBiz = $("#no_biz").text().replace(/-/gi, "");
+			var param = {
+				noBiz : $("#no_biz").text().replace(/-/gi, "")
+			}
+			postAjax("/api/cbsvc/client/biz/bizinfoscrap", param, function(data){
+				bofAlertCallBack("완료되었습니다.",function(){
+					getBizDetail(noBiz);
+				});
+				
+			})	
+		})
+		
+	})
+	
+});
+
+// 사업자 상세 조회 
+function getBizDetail(noBiz){
+	var param = {
+			noBiz : noBiz
+		}
+	//Dcloud.showLoading();
+	postAjax("/api/cbsvc/client/biz/detail", param, function(data){
+		var data = data.resultData;
+		var bizDetail = data.bizDetail;
+		bizDetail.no_biz = formatBusinessNumber(bizDetail.no_biz);
+		bizDetail.no_corp = formatCorpNumber(bizDetail.no_corp);
+		bizDetail.da_open = formatDateString(bizDetail.da_open);
+		setDataValue(bizDetail);
+		
+		var bizCstList = data.bizCstList;
+		var bizCstListCnt = bizCstList.length;
+		$("#biz_cst_cnt").text(bizCstListCnt);
+		$("#bizAccountGridArea").jqGrid("clearGridData");
+		$("#bizAccountGridArea").jqGrid("setGridParam",{data : bizCstList});
+		$("#bizAccountGridArea").trigger("reloadGrid");
+		
+		var scpCertHisList = data.scpCertHisList;
+		var scpCertHisListCnt = scpCertHisList.length;
+		for(var i=0; i < scpCertHisList.length; i++){
+			var obj = scpCertHisList[i];
+			scpCertHisList[i].cert_reg_biz = obj.cert_reg_biz.value;
+			scpCertHisList[i].nm_id_insert = obj.nm_insert + "("+ obj.id_insert +")";	
+		}
+		
+		$("#scp_cert_cnt").text(scpCertHisListCnt);
+		$("#bizModiGridArea").jqGrid("clearGridData");
+		$("#bizModiGridArea").jqGrid("setGridParam",{data : scpCertHisList});
+		$("#bizModiGridArea").trigger("reloadGrid");
+	})  
+}
+
+
+
+// 계정정보 그리드 세팅 
+function setBizAccountGrid(){//사업자관리 조회 - 계정정보 그리드 세팅
+	$("#bizAccountGridArea").jqGrid({
+       datatype: "local",
+       //data: dataArr,
+       height: 90, 
+       width: 1200,
+       colNames : ['No','아이디(ID)','사용자명','부서명','회원등급','가입일자','사용유무'], 
+       colModel:[
+           {name : "no_row",
+           index : "no_row",
+           width : 4,
+           align : 'center',
+           hidden: false
+           },
+
+           {name : "id_cst",
+           index : "id_cst",
+           width : 17,
+           align : 'center',
+           hidden: false
+           },
+
+           {name : "nm_cst",
+           index : "nm_cst",
+           width : 17,
+           align : 'center',
+           hidden: false
+           },
+
+           {name : "depart",
+           index : "depart",
+           width : 14,
+           align : 'center',
+           hidden: false
+           },
+           
+           {name : "nm_cd",
+           index : "nm_cd",
+           width : 11,
+           align : 'center',
+           hidden: false
+           },
+           
+           {name : "dt_insert",
+           index : "dt_insert",
+           width : 19,
+           align : 'center',
+           hidden: false
+           },
+           
+           {name : 'yn_del', // 받아올 변수 이름 
+           index : 'yn_del', // jqgrid에서 쓸이름 
+           width : 11, 
+           align : 'center',
+           hidden: false,
+           formatter: function(value){
+        	   return value === 'N' ?  '사용' : '미사용';
+           }
+       }],
+
+       shrinkToFit:true,
+      }); 
+	
+    $("#bizAccountGridArea").setGridWidth($("#bizAccParentArea").width());
+    $("#bizAccountGridArea").setGridHeight($("#bizAccParentArea").height()); 
+}     
+
+// 정보 변경 이력 그리드 세팅 
+function setBizModitGrid(){//사업자관리 조회 - 정보변경이력 그리드 세팅
+	$("#bizModiGridArea").jqGrid({
+       datatype: "local",
+       //data: dataArr,
+       height: 90, 
+       width: 1200,
+       colNames : ['No','기업명/사업자등록번호/대표자/법인등록번호/사업장소재지/개업일/업태/종목','최종 업데이트 일시','처리자'], 
+       colModel:[
+           {name : "no_row",
+           index : "no_row",
+           width : 4,
+           align : 'center',
+           hidden: false
+           },
+
+           {name : "cert_reg_biz",
+           index : "cert_reg_biz",
+           width : 17,
+           align : 'center',
+           hidden: false
+           },
+
+           {name : "dt_insert",
+           index : "dt_insert",
+           width : 17,
+           align : 'center',
+           hidden: false
+           },
+           
+           {name : "nm_id_insert",
+           index : "nm_id_insert",
+           width : 14,
+           align : 'center',
+           hidden: false
+           }
+       ],
+
+       shrinkToFit:true,
+      }); 
+    $("#bizModiGridArea").setGridWidth($("#bizModiParentArea").width());
+    $("#bizModiGridArea").setGridHeight($("#bizModiParentArea").height());
+}  
+
+</script>
+<head>
+<body>
+<div class="pa_container">
+	<!-- 컨텐츠 영역 -->
+	<div class="pa_content">
+		
+		<div class="dialog_btnbx" style="text-align:right; margin-bottom: -17px;">
+			<div>
+				<div class="basic_title_bx" style="float: left; margin-left: 5px;">
+					<h3>사업자 정보</h3>
+				</div>
+
+				<div>
+					<hr style="width: 100%; float: left;">
+				</div>
+			</div>
+		</div>
+		<div class="LUX_basic_tbl th_border">
+			<div>
+				<div style="float: left; margin-left: 5px; margin-top: 3px;">
+					<h2 style="font-size: 14px;">기본 정보</h2>
+				</div>
+				<div class="dialog_btnbx" style="text-align:right;">
+					<div>
+						<button type="button" class="LUX_basic_btn SAOverConfirm basic2" style="height: 30px; width: 130px; font-size: 13px; background: #858585; border: none;" id="btn_certView">
+							<span>인증서 등록 현황</span>
+						</button>
+						<button type="button" class="LUX_basic_btn SAOverConfirm basic2" style="height: 30px; width: 130px; font-size: 13px; background: #858585; border: none; margin-right: 10px;" id="btn_infoscrap">
+							<span>정보업데이트</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<table class="tblarea2" style="margin-top: 7px; width: 49%; float: left; margin-right: 22px;">
+				<colgroup>
+					<col style="width: 20%;">
+					<col style="width: 30%;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="celcnt" scope="row">
+							<div class="inbx" style="text-align: left;">기업명</div>
+						</th>
+						<td class="cellft" style="padding:3px">
+							<div class="inbx" style="margin-left: -25px;">
+								<div class="LUX_basic_text">
+									<div class="inbx" id="nm_company">테크핀레이팅스</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th class="celcnt" scope="row" style="vertical-align: middle">
+							<div class="inbx" style="text-align: left;">사업자등록번호</div>
+						</th>
+						<td class="cellft" style="padding:3px">
+							<div class="inbx" style="margin-left: -25px;">
+								<div class="LUX_basic_text">
+									<div class="inbx" id="no_biz">111-222-3333</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th class="celcnt" scope="row" style="vertical-align: middle">
+							<div class="inbx" style="text-align: left;">대표자</div>
+						</th>
+						<td class="cellft" style="padding:3px">
+							<div class="inbx" style="margin-left: -25px;">
+								<div class="LUX_basic_text">
+									<div class="inbx" id="nm_ceo">테스트</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th class="celcnt" scope="row" style="vertical-align: middle">
+							<div class="inbx" style="text-align: left;">법인등록번호</div>
+						</th>
+						<td class="cellft" style="padding:3px">
+							<div class="inbx" style="margin-left: -25px;">
+								<div class="LUX_basic_text">
+									<div class="inbx" id="no_corp">11111-222222</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="tblarea2" style="margin-top: 7px; width: 49%;">
+				<colgroup>
+					<col style="width: 20%;">
+					<col style="width: 30%;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="celcnt" scope="row">
+							<div class="inbx" style="text-align: left;">사업장소재지</div>
+						</th>
+						<td class="cellft" style="padding:3px">
+							<div class="inbx" style="margin-left: -25px;">
+								<div class="LUX_basic_text">
+									<div class="inbx" id="addr_company">서울시 중구 을지로 79</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th class="celcnt" scope="row" style="vertical-align: middle">
+							<div class="inbx" style="text-align: left;">개업일</div>
+						</th>
+						<td class="cellft" style="padding:3px">
+							<div class="inbx" style="margin-left: -25px;">
+								<div class="LUX_basic_text">
+									<div class="inbx" id="da_open">2024-09-29</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th class="celcnt" scope="row" style="vertical-align: middle">
+							<div class="inbx" style="text-align: left;">업태</div>
+						</th>
+						<td class="cellft" style="padding:3px">
+							<div class="inbx" style="margin-left: -25px;">
+								<div class="LUX_basic_text">
+									<div class="inbx" id="ty_biz">서비스업</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th class="celcnt" scope="row" style="vertical-align: middle">
+							<div class="inbx" style="text-align: left;">종목</div>
+						</th>
+						<td class="cellft" style="padding:3px">
+							<div class="inbx" style="margin-left: -25px;">
+								<div class="LUX_basic_text">
+									<div class="inbx" id="item_biz">금융업</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div>
+				<div class="basic_title_bx" style="margin-top: 30px; margin-bottom: -10px; display: flex;">
+					<h2 style="margin-left: 5px; font-size: 14px;">계정 정보</h2>
+					<h2 style="display: inline; margin-left: 3px;">(<span id="biz_cst_cnt">##</span>건)</h2>
+				</div>
+				<div class="table_area" style="margin-top:23px">					
+					<div id="bizAccParentArea" class="grid_tbl_item" style="width: 99%;">
+						<table id="bizAccountGridArea"></table>
+					</div>
+					<div id="bizAccountPagingArea" style="margin-top: 20px;margin-bottom:10px"></div>
+				</div>
+			</div>
+			
+			<div>
+				<div class="basic_title_bx" style="margin-top: 30px; margin-bottom: -10px; display: flex;">
+					<h2 style="margin-left: 5px; font-size: 14px;">정보 변경 이력</h2>
+					<h2 style="display: inline; margin-left: 3px;">(<span id="scp_cert_cnt">##</span>건)</h2>
+				</div>
+				<div class="table_area" style="margin-top:23px">					
+					<div id="bizModiParentArea" class="grid_tbl_item" style="width: 99%;">
+						<table id="bizModiGridArea"></table>
+					</div>
+					<div id="bizModiPagingArea" style="margin-top: 20px;margin-bottom:10px"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

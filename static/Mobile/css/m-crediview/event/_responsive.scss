@@ -1,0 +1,395 @@
+@charset "UTF-8";
+
+@include desktop-min-type02 {
+  // section01
+  .crediview-event-container .event-section {
+    &.first {
+      background-position: top center;
+      padding: 60px 0;
+      background-size: cover;
+      position: relative;
+      height: 1024px;
+    }
+    .event-wrap {
+      width: 100%;
+      padding: 0 90px;
+      box-sizing: border-box;
+    }
+    .flex-box {
+      flex-flow: wrap;
+      .left {
+        width: 100%;
+        position: static;
+        .infor-content {
+          p.txt-s button.share-btn {
+            position: absolute;
+            top: 60px;
+            right: 90px;
+          }
+
+          .txt-md span {
+            font-size: 52px;
+          }
+
+          .btn-box {
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            padding-top: 0px;
+            span.sub-txt {
+              display: block;
+              padding-bottom: 26px;
+            }
+            button {
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+      .right {
+        width: 100%;
+        img {
+          width: 407px;
+
+          display: block;
+          margin: 0 auto;
+          margin-top: 30px;
+          margin-bottom: 70px;
+        }
+      }
+    }
+  }
+  // section02
+  .crediview-event-container .event-section.two {
+    padding: 60px 0;
+    h3.tit {
+      font-size: 33px;
+      &::before {
+        width: 52px;
+      }
+    }
+    ul.process-box {
+      margin-top: 40px;
+      padding: 0px;
+      flex-flow: wrap;
+      &:before {
+        width: 90%;
+        height: 2px;
+      }
+      &:after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+      li {
+        width: 100%;
+        padding: 53px 0;
+      }
+    }
+  }
+  //section03
+  .crediview-event-container .event-section.three {
+    padding: 60px 0;
+    h3.tit {
+      font-size: 33px;
+      &::before {
+        content: "";
+        width: 52px;
+      }
+    }
+  }
+  //section04
+  .crediview-event-container .event-section.fourth {
+    padding: 71px 0;
+    ul.infor-list-box {
+      padding: 72px 40px;
+      li {
+        padding: 63px 17px;
+        &:first-child {
+          padding: 0px 17px 63px 17px;
+        }
+        &:last-child {
+          padding: 63px 17px 0px 17px;
+        }
+      }
+    }
+  }
+
+  //section05
+  .crediview-event-container .event-section.fifth {
+    padding: 40px 0;
+  }
+}
+
+@include mobile {
+  // section01
+  .crediview-event-container .event-section.first {
+    padding: 28px 0;
+    height: 667px;
+  }
+  .crediview-event-container .event-section .event-wrap {
+    padding: 0 22px;
+  }
+  .crediview-event-container .event-section .flex-box .left h2.logo span {
+    width: 100px;
+    background-size: 100px;
+  }
+
+  .crediview-event-container .event-section .flex-box .left .infor-content {
+    padding-top: 50px;
+  }
+
+  .crediview-event-container
+    .event-section
+    .flex-box
+    .left
+    .infor-content
+    p.txt-s {
+    justify-content: center;
+    span {
+      font-size: var(--font-18);
+      &::before {
+        height: 18px;
+      }
+    }
+  }
+  .crediview-event-container
+    .event-section
+    .flex-box
+    .left
+    .infor-content
+    .txt-md {
+    text-align: center;
+  }
+
+  .crediview-event-container
+    .event-section
+    .flex-box
+    .left
+    .infor-content
+    .txt-md
+    span {
+    font-size: 29px;
+  }
+
+  .crediview-event-container
+    .event-section
+    .flex-box
+    .left
+    .infor-content
+    p.txt-s
+    button.share-btn {
+    top: 28px;
+    right: 22px;
+    width: 66px;
+    height: 30px;
+  }
+  .crediview-event-container
+    .event-section
+    .flex-box
+    .left
+    .infor-content
+    p.txt-s
+    button.share-btn
+    span {
+    font-size: var(--font-14);
+    padding: 5px 0;
+  }
+  .crediview-event-container
+    .event-section
+    .flex-box
+    .left
+    .infor-content
+    p.txt-s
+    button.share-btn
+    span:after {
+    width: 13px;
+    height: 18px;
+    background-size: 18px;
+    top: 3px;
+  }
+
+  .crediview-event-container
+    .event-section
+    .flex-box
+    .left
+    .infor-content
+    .btn-box {
+    bottom: 28px;
+  }
+  .crediview-event-container
+    .event-section
+    .flex-box
+    .left
+    .infor-content
+    .btn-box
+    button {
+    width: 160px;
+    height: 51px;
+    span {
+      font-size: var(--font-15);
+      &:after {
+        top: 1px;
+      }
+    }
+  }
+
+  .crediview-event-container
+    .event-section
+    .flex-box
+    .left
+    .infor-content
+    .btn-box {
+    width: 100%;
+    text-align: center;
+    span.sub-txt {
+      font-size: var(--font-14);
+      padding-bottom: 15px;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .crediview-event-container .event-section .flex-box .right img {
+    width: 275px;
+  }
+  //section2
+  .crediview-event-container .event-section.two {
+    padding: 36px 0;
+    h3.tit {
+      font-size: 22px;
+      &::before {
+        width: 32px;
+        height: 3px;
+      }
+    }
+    ul.process-box {
+      li {
+        padding: 29px 0;
+        span.step {
+          width: 69px;
+          height: 25px;
+          i {
+            font-size: 14px;
+            padding-top: 4px;
+          }
+        }
+        div.img {
+          padding-top: 19px;
+          height: 56px;
+          img {
+            width: 56px;
+            height: 56px;
+          }
+        }
+        span.tit {
+          padding-top: 25px;
+          font-size: 16px;
+        }
+        span.con {
+          font-size: 14px;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+  //section03
+  .crediview-event-container .event-section.three {
+    h3.tit {
+      font-size: 22px;
+      &::before {
+        content: "";
+        width: 32px;
+      }
+    }
+    h4.sub-tit {
+      width: 135px;
+      height: 38px;
+      margin-top: 43px;
+      span {
+        font-size: var(--font-16);
+        padding-top: 9px;
+      }
+    }
+    div.img {
+      width: 220px;
+      height: 220px;
+      span.event-img {
+        width: 157px;
+        height: 128px;
+        background-size: 157px;
+      }
+    }
+    span.event-menu-tit {
+      font-size: var(--font-16);
+      padding: 38px 0 20px 0;
+    }
+    span.event-menu-txt {
+      font-size: var(--font-14);
+    }
+  }
+  //secction04
+  .crediview-event-container .event-section.fourth {
+    padding: 86px 0;
+    ul.infor-list-box {
+      padding: 25px 16px;
+      li {
+        padding: 29px 6px;
+        &:first-child {
+          padding: 0px 6px 29px 6px;
+        }
+        &:last-child {
+          padding: 29px 6px 0px 6px;
+        }
+        span.tit {
+          font-size: var(--font-16);
+          padding-bottom: 18px;
+        }
+        span.txt {
+          font-size: var(--font-14);
+        }
+      }
+    }
+    div.btn-box {
+      button.gradation {
+        width: 160px;
+        height: 51px;
+        span {
+          font-size: var(--font-16);
+          &::after {
+            top: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  //section05
+  .crediview-event-container .event-section.fifth {
+    div.note-box {
+      h3.note-tit {
+        font-size: var(--font-18);
+        padding: 0 0 35px 22px;
+        &::before {
+          width: 16px;
+          height: 16px;
+          background-size: 16px;
+        }
+      }
+      ul.note-list-box {
+        li {
+          padding-bottom: 20px;
+          font-size: var(--font-14);
+          dl {
+            dd {
+              &::before {
+                top: 7px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 기업회원초대이벤트

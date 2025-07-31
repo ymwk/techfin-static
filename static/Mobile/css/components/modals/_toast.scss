@@ -1,0 +1,90 @@
+.SOLToast-root {
+  z-index: 9999;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  &.bottom-position {
+    justify-content: flex-end;
+    .SOLToast-box {
+      margin-bottom: 20px;
+    }
+  }
+
+  &.p--fixed {
+    position: absolute;
+    inset: unset;
+
+    .SOLToast-box {
+      box-shadow: unset;
+    }
+  }
+  &.form-toast-type {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translate(-50%, 0);
+    display: block;
+    .SOLToast-box {
+      width: 309px;
+      min-height: 56px;
+      border-radius: 2px;
+    }
+  }
+}
+
+.SOLToast-backdrop {
+  @include backdrop;
+}
+
+.SOLToast-box {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  min-width: 100px;
+  min-height: 52px;
+  padding: 14px 24px;
+  background-color: #283556;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  word-break: keep-all;
+  // animation: toastIn .8s .2s var(--ease) both, toastOut .4s 3s var(--ease) both;
+  animation: toastIn 0.8s 0.2s var(--ease) both;
+
+  &.c--error {
+    background-color: #ffeded;
+    color: var(--fc-default);
+
+    .SOLToast-icon::before {
+      content: "!";
+      background: #fc5356;
+      color: #fff;
+    }
+  }
+}
+
+.SOLToast-icon {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff url(../../Common/image/icon/ic_info.svg) no-repeat center
+      center / 5px;
+    color: #283556;
+    margin-right: 10px;
+    font-size: 10px;
+  }
+}

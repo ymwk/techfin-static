@@ -1,0 +1,150 @@
+.SOLCheck-root {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 2em;
+  line-height: 18px;
+  font-size: var(--font-14);
+  &.mgt-15 {
+    margin-top: 15px;
+  }
+
+  &.s--lg {
+    font-size: var(--font-16);
+    line-height: 24px;
+
+    .SOLCheck-label {
+      gap: 10px;
+
+      [type="checkbox"] {
+        width: 24px;
+        height: 24px;
+
+        &::after {
+          width: 8px;
+          height: 11px;
+        }
+      }
+    }
+  }
+
+  &.s--sm {
+    font-size: var(--font-13);
+  }
+
+  .SOLText-note {
+    display: block;
+  }
+}
+// agreement-type01
+.agreement-type01 {
+  .SOLCheck-label {
+    [type="checkbox"] {
+      border-radius: 100%;
+      background-color: #fff;
+      &::after {
+        border-right: 2px solid #bbbbbd;
+        border-bottom: 2px solid #bbbbbd;
+      }
+    }
+    [type="checkbox"]:checked {
+      border: none;
+      &::after {
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+}
+// agreement-type02
+.agreement-type02 {
+  .SOLCheck-label {
+    [type="checkbox"] {
+      border: none;
+      background-color: #fff;
+      &::after {
+        border-right: 2px solid #bbbbbd;
+        border-bottom: 2px solid #bbbbbd;
+      }
+    }
+    [type="checkbox"]:checked {
+      background-color: #fff !important;
+      border: none;
+      &::after {
+        border-right: 2px solid #3b5dfb;
+        border-bottom: 2px solid #3b5dfb;
+      }
+    }
+  }
+}
+
+table .SOLCheck-root {
+  display: inline-flex;
+}
+
+.members-loginbox,
+.SOLCheck-root.t--terms {
+  input[type="checkbox"] {
+    background-color: #fff;
+  }
+}
+
+.SOLCheck-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  [type="checkbox"] {
+    appearance: none;
+    flex-shrink: 0;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(10, 43, 88, 0.1);
+    border-radius: 3px;
+    background-color: var(--c-bg);
+    color: var(--c-disabled);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 6px;
+      height: 9px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      margin-top: -1px;
+      border-radius: 1px;
+    }
+
+    &:checked {
+      border-color: transparent;
+      background-color: var(--c-component) !important;
+      &::after {
+        color: #fff;
+      }
+
+      &:disabled {
+        background-color: var(--c-disabled) !important;
+      }
+    }
+
+    &:hover,
+    &:hover + span {
+      cursor: pointer;
+    }
+
+    &:disabled,
+    &:disabled + span {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    &:disabled {
+      background-color: #f5f5f5;
+    }
+  }
+}

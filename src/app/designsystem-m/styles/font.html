@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>크레디뷰 Design System - Color</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/Mobile/css/designsystem-m.css">
+</head>
+<body>
+  <div class="comp-inner-root">
+    <div class="comp-top">
+      <h2 class="comp-pagetitle">Heading / Font</h2>
+      <p class="comp-pagetitle-desc">제목 및 텍스트 스타일</p>
+      <button type="button" class="comp-btn-code" onclick="openCode()">Code View</button>
+    </div>
+
+    <div id="compContents">
+      <section class="comp-section">
+        <h3 class="comp-objtitle">Font style</h3>
+        <div class="comp-cbox">
+          <p>font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;</p>
+          <p>root size: 14px</p>
+          <p>default color: #222</p>
+        </div>
+      </section>
+
+      <section class="comp-section">
+        <h3 class="comp-objtitle">Heading</h3>
+        <div class="comp-fbox">
+          <h2 class="SOLTitle-t1">서브페이지 타이틀 24px</h2>
+        </div>
+
+        <div class="comp-fbox">
+          <h3 class="SOLTitle-t2">콘텐츠/팝업 타이틀 20px</h3>
+        </div>
+
+        <div class="comp-fbox">
+          <h3 class="SOLTitle-t3">요소 타이틀 18px</h3>
+        </div>
+
+        <div class="comp-fbox">
+          <h4 class="SOLTitle-t4">요소 타이틀 16px</h5>
+        </div>
+      </section>
+
+      <section class="comp-section">
+        <h3 class="comp-objtitle">Text / Description</h3>
+        <div class="comp-fbox">
+          <p class="SOLText-body">Large Size 본문글 16px</p>
+        </div>
+
+        <div class="comp-fbox">
+          <p class="SOLText-desc">Medium Size 설명글 14px</p>
+        </div>
+      </section>
+
+      <section class="comp-section">
+        <h3 class="comp-objtitle">Caption</h3>
+        <div class="comp-fbox">
+          <p class="SOLText-caption">Large Size 캡션 16px</p>
+        </div>
+
+        <div class="comp-fbox">
+          <p class="SOLText-note">Medium Size 캡션 14px</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  
+  <!-- code view -->
+  <script src="/src/app/designsystem/js/highlight.min.js"></script>
+  <script src="/src/app/designsystem/js/go.min.js"></script>
+  <script src="/src/app/designsystem/js/codeview.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <!-- component js -->
+  <script src="/src/app/designsystem/js/popper.min.js"></script>
+  <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>  
+  <script src="/src/app/designsystem/js/custom.js"></script>
+</body>
+</html>

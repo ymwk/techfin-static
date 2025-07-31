@@ -1,0 +1,88 @@
+.SOLCombobox-root {
+  position: relative;
+  width: 100%;
+  min-width: 70px;
+  background-color: #fff;
+
+  &:has(button:focus) {
+    .SOLCombobox-option {
+      max-height: calc(12em + 2px);
+      border: 1px solid rgba(10, 43, 88, 0.1);
+      overflow-y: auto;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.SOLCombobox-button {
+  @include formStyle;
+  padding-right: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    border-style: solid;
+    border-color: currentColor transparent transparent;
+    border-width: 6px 5px;
+    margin-top: -3px;
+    border-radius: 2px;
+  }
+}
+
+.SOLCombobox-button.error {
+  border: solid 1px var(--c-error);
+}
+
+.SOLCombobox-button.success {
+  border: solid 1px var(--c-success);
+}
+
+.SOLCombobox-option {
+  z-index: 9999;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  margin-top: 2px;
+  border-radius: var(--form-round);
+  background-color: #fff;
+  overflow: hidden;
+
+  &.st--visible {
+    max-height: calc(12em + 2px);
+    border: 1px solid rgba(10, 43, 88, 0.1);
+    overflow-y: auto;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+
+    &.st--active {
+      background-color: var(--bc-hover);
+    }
+    &:hover:not(.st--active, :has(button:disabled)) {
+      background-color: rgba(77, 124, 254, 0.05);
+    }
+    & > * {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 2.4em;
+      text-align: left;
+      padding: 5px var(--form-pd);
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

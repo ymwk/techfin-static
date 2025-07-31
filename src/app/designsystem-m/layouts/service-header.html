@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Mobile/css/designsystem-m.css" />
+    <style>
+      .SOLHeader-root.t--landing {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Header</h2>
+        <p class="comp-pagetitle-desc">Landing 및 로그인화면 header</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Header theme : logout</h3>
+
+          <header class="SOLHeader-root">
+            <div class="SOLHeader-inner">
+              <h1 class="SOLHeader-logo">
+                <a href="/src/app/crediview/landing">
+                  <div class="logo">
+                    <span class="eng">Crediview</span>
+                    <span class="kr">크레디뷰</span>
+                  </div>
+                </a>
+              </h1>
+
+              <nav class="SOLHeader-nav service">
+                <a href="#">서비스 소개</a>
+                <a href="#">기업신용평가</a>
+                <a href="#" class="ai-report-txt"
+                  >AI경영진단보고서<span class="label"
+                    ><span class="beta">Beta</span></span
+                  ></a
+                >
+
+                <div class="SOLHeader-nav-submenu">
+                  <div class="SOLHeader-nav-submenu-inner service">
+                    <ul>
+                      <li><a href="#">기업신용평가</a></li>
+                    </ul>
+
+                    <ul>
+                      <li><a href="#">신용평가 신청</a></li>
+                      <li><a href="#">신용평가등급확인서 제출</a></li>
+                      <li><a href="#">등급 산출 및 제출내역</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+              <div class="SOLHeader-global">
+                <a
+                  href="/src/app/crediview/members/signup/index.html"
+                  class="SOLHeader-global-link"
+                  >회원가입</a
+                >
+                <a
+                  href="/src/app/crediview/members/login/index.html"
+                  class="SOLHeader-global-btn"
+                  >로그인</a
+                >
+              </div>
+            </div>
+          </header>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      const topBtn = document.querySelector(".landing-topBtn");
+
+      //header toggle
+      const nav = document.querySelector(".SOLHeader-nav");
+      const submenu = document.querySelector(".SOLHeader-nav-submenu");
+      const subHeader = document.querySelector(".SOLHeader-root");
+
+      function slideDown(element) {
+        element.classList.remove("slide-up", "slide-hidden");
+        element.classList.add("slide-down");
+      }
+
+      function slideUp(element) {
+        element.classList.remove("slide-down");
+        element.classList.add("slide-up");
+        setTimeout(() => {
+          element.classList.add("slide-hidden");
+        }, 300);
+      }
+
+      // 헤더 메뉴 마우스 오버시 bg-active 클래스 추가
+      nav.addEventListener("mouseenter", () => {
+        slideDown(submenu);
+        subHeader.classList.add("bg-active");
+      });
+
+      nav.addEventListener("mouseleave", () => {
+        slideUp(submenu);
+        subHeader.classList.remove("bg-active");
+      });
+    </script>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

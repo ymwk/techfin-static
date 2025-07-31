@@ -1,0 +1,2712 @@
+@charset "UTF-8";
+@import "../../Common/font/pretendard/pretendardvariable.css";
+@import "../../Common/font/gmarketsans/GmarketSans.css";
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  touch-action: auto;
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+  touch-action: auto;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary { /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+select,
+textarea {
+  font: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+:root {
+  --fc-default: #222;
+  --fc-gray1: #7b7b7b;
+  --fc-gray2: #9b9ba0;
+  --fc-rating: #1e479f;
+  --c-component: #265cf0;
+  --c-disabled: #bebebe;
+  --c-active: #3b5dfb;
+  --c-success: #18be71;
+  --c-error: #fc5356;
+  --c-warn: #febb2b;
+  --c-bg: #f8f9fb;
+  --tb-border: #e6e8eb;
+  --tb-bg: #f7f8fa;
+  --c-hover: #e9eff3;
+  --bc-hover: rgba(77, 124, 254, 0.1);
+  --form-h: 38px;
+  --form-round: 4px;
+  --form-pd: 1em;
+  --form-c-border: rgb(10, 43, 88, 0.1);
+  --form-c-border-h: rgb(10, 43, 88, 0.3);
+  --form-c-bg-dis: #f5f5f5;
+  --form-c-text-dis: rgba(34, 34, 34, 0.2);
+  --max-w: 1200px;
+  --min-w: 1200px;
+  --spc-w: 35px;
+  --side-w: 220px;
+  --side-gap: 40px;
+  --max-w-ld: 1102px;
+  --max-w-auto: auto;
+  --font-14: 1rem;
+  --font-9: 0.64rem;
+  --font-11: 0.79rem;
+  --font-12: 0.86rem;
+  --font-13: 0.93rem;
+  --font-15: 1.07rem;
+  --font-16: 1.14rem;
+  --font-17: 1.21rem;
+  --font-18: 1.29rem;
+  --font-19: 1.36rem;
+  --font-20: 1.43rem;
+  --font-21: 1.5rem;
+  --font-22: 1.57rem;
+  --font-24: 1.71rem;
+  --font-26: 1.86rem;
+  --font-28: 2rem;
+  --font-30: 2.142rem;
+  --font-32: 2.29rem;
+  --font-34: 2.43rem;
+  --font-36: 2.57rem;
+  --font-50: 3.57rem;
+  --font-60: 4.29rem;
+  --font-80: 5.71rem;
+  --ease: cubic-bezier(0, 0.75, 0, 1);
+  --gra: linear-gradient(97deg, #0046ff, #8e48ff 60%);
+  --beta-g: linear-gradient(
+    108.47deg,
+    #22d6ff -38.28%,
+    #225eff 43.3%,
+    #8c2fff 100%
+  );
+  --header-bg: #3d58c9;
+}
+@media screen and (max-width: 767px) {
+  :root {
+    --spc-w: 5vw;
+  }
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+div::before, div::after, p::before, p::after, span::before, span::after,
+dl::before,
+dl::after, dt::before, dt::after, dd::before, dd::after, ol::before, ol::after, ul::before, ul::after, li::before, li::after, button::before, button::after, a::before, a::after, input::before, input::after, i::before, i::after {
+  box-sizing: border-box;
+}
+
+input, button, a, textarea {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: #bbb;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid;
+  margin: 0;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+}
+
+.ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.AidataReport-cover {
+  padding: 7.5rem 7.5rem;
+  height: 100%;
+}
+.AidataReport-cover::before {
+  content: "";
+  width: 561px;
+  height: 704px;
+  background: url("../../Common/image/crediview/aireport/cover-bg-top.png") no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.AidataReport-cover::after {
+  content: "";
+  width: 561px;
+  height: 1163px;
+  background: url("../../Common/image/crediview/aireport/cover-bg-bottom.png") no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.AidataReport-cover-contents .title-box .qr-mark-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.AidataReport-cover-contents .title-box .qr-mark-wrap .qr-mark {
+  font-size: var(--font-14);
+  font-weight: 500;
+  color: #000000;
+  position: relative;
+  padding: 2rem 0 0 0.625rem;
+  display: block;
+}
+.AidataReport-cover-contents .title-box .t1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #292d36;
+  padding: 7.728rem 0 2rem 0;
+}
+.AidataReport-cover-contents .title-box .t2 {
+  font-size: 6.313rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+.AidataReport-cover-contents .title-box .t2 .text-gradient {
+  width: 248px;
+  height: 74px;
+  background: url(../../Common/image/crediview/aireport/cover-gradation-txt.png) no-repeat;
+  display: inline-block;
+  margin-right: 1.25rem;
+}
+.AidataReport-cover-contents .title-box .t2 .gradient-bg {
+  width: 73px;
+  height: 50px;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #8c2fff 0%, #225eff 50%, #22d6ff 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem 0 0 0.625rem;
+}
+.AidataReport-cover-contents .title-box .t2 .gradient-bg i {
+  font-size: 1.938rem;
+  text-align: center;
+  font-style: normal;
+  display: block;
+  color: #fff;
+}
+.AidataReport-cover-contents .title-box .t3 {
+  display: block;
+  font-size: var(--font-20);
+  font-weight: 400;
+  color: #292d36;
+  letter-spacing: 0.188rem;
+}
+.AidataReport-cover-contents .title-box .t4 {
+  font-size: var(--font-20);
+  font-weight: 500;
+  color: #406eff;
+  line-height: 1.75rem;
+  padding-top: 3.125rem;
+  display: block;
+}
+.AidataReport-cover-contents .infor-box {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 155px;
+}
+.AidataReport-cover-contents .infor-box .infor-wrap {
+  width: 590px;
+}
+.AidataReport-cover-contents .infor-box .infor-wrap .title {
+  font-size: var(--font-22);
+  font-weight: 700;
+  color: #292d36;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 2px #8e95a9;
+}
+.AidataReport-cover-contents .infor-box .infor-wrap .infor-list {
+  padding-top: 2.5rem;
+}
+.AidataReport-cover-contents .infor-box .infor-wrap .infor-list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.AidataReport-cover-contents .infor-box .infor-wrap .infor-list li span {
+  display: inline-block;
+}
+.AidataReport-cover-contents .infor-box .infor-wrap .infor-list li span.tit {
+  width: 121px;
+  font-size: var(--font-20);
+  font-weight: 500;
+  color: #686b71;
+}
+.AidataReport-cover-contents .infor-box .infor-wrap .infor-list li span.con {
+  font-size: var(--font-20);
+  font-weight: 700;
+  color: #292d36;
+  padding-left: 40px;
+}
+.AidataReport-cover-contents .infor-box .infor-wrap .infor-txt {
+  font-size: var(--font-18);
+  font-weight: 500;
+  color: #292d36;
+  border-top: solid 1px #8e95a9;
+  border-bottom: solid 2px #8e95a9;
+  padding: 1.5rem;
+  line-height: 1.75rem;
+}
+.AidataReport-cover-contents .infor-box .infor-wrap .company-signture {
+  display: block;
+  font-size: var(--font-28);
+  font-weight: 400;
+  color: #292d36;
+  text-align: center;
+  padding: 5.5rem 8.125rem 0 0;
+  position: relative;
+}
+.AidataReport-cover-contents .infor-box .infor-wrap .company-signture::before {
+  content: "";
+  width: 105px;
+  height: 105px;
+  background: url("../../Common/image/crediview/aireport/company-sign.png") no-repeat;
+  background-size: 105px;
+  position: absolute;
+  top: 3rem;
+  right: 6.3rem;
+}
+.AidataReport-cover-contents .bottom-infor-txt {
+  position: absolute;
+  bottom: 6.25rem;
+  left: 7.5rem;
+  font-size: var(--font-16);
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #000000;
+}
+
+.AidataReport-contents.app-index-type {
+  background: #fff;
+}
+.AidataReport-contents.app-index-type .content-box.summary-type .content {
+  border: none;
+  padding: 1.25rem 0rem 2.25rem 0rem;
+}
+.AidataReport-contents.app-index-type .content-box.summary-type .content .AidataReport-header {
+  padding-top: 0;
+  background: #fff;
+  padding: 0rem 0 1.5rem 0;
+}
+.AidataReport-contents.app-index-type .content-box.summary-type .content .table-wrap table tbody.rating-tier tr td span {
+  padding: 3.7rem 2rem;
+}
+.AidataReport-contents.app-index-type .AidataReport-header-contents {
+  padding: 0 0;
+}
+.AidataReport-header {
+  width: 100%;
+  height: auto;
+  padding-top: 44px;
+  background: rgb(232, 234, 239);
+}
+.AidataReport-header-contents {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 2.4rem;
+  flex-grow: 1;
+}
+.AidataReport-header-contents .h-title .h1-tit {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #292d36;
+}
+.AidataReport-header-contents .h-title .h2-tit {
+  font-size: var(--font-17);
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 0.625rem;
+}
+.AidataReport-header-contents .date-box {
+  display: flex;
+  align-items: center;
+}
+.AidataReport-header-contents .date-box span {
+  display: block;
+  position: relative;
+}
+.AidataReport-header-contents .date-box span.date-txt01 {
+  padding-right: 1.25rem;
+}
+.AidataReport-header-contents .date-box span.date-txt01::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: rgb(172, 172, 172);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.AidataReport-header-contents .date-box span.date-txt02 {
+  padding-left: 1.25rem;
+}
+.AidataReport-header-contents .date-box span i {
+  display: inline-block;
+  font-style: normal;
+  font-size: var(--font-16);
+  font-weight: 400;
+}
+.AidataReport-header-contents .date-box span i.tit {
+  padding: 0 0.5rem 0 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+.AidataReport-header-contents .date-box span i.date {
+  color: rgba(0, 0, 0, 0.8);
+}
+.AidataReport-contents {
+  flex-grow: 1;
+  padding: 0.5rem 1.875rem;
+  background: rgb(232, 234, 239);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.AidataReport-contents .content-box {
+  padding-bottom: 0.75rem;
+}
+.AidataReport-contents .content-box .grapth-box-inner {
+  padding: 0rem 0rem;
+  height: calc(100% - 69px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth .unit-currency {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 0.625rem;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth .unit-currency span {
+  display: block;
+  height: 16px;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year .tit {
+  font-size: var(--font-15);
+  font-weight: 500;
+  color: #292d36;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year .graph {
+  width: 420px;
+  height: 16px;
+  border-radius: 4px;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year .graph.low {
+  background-color: rgb(255, 201, 169);
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year .graph.medium {
+  background-color: rgb(93, 93, 93);
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year .graph.high {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year .graph .legend-graph-bar {
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: 4px;
+  background: #edeef0;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  transition: ease-in-out 0.3s;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year.new {
+  margin-top: 0.5rem;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year.new .legend-graph-bar.low {
+  background: #ff8255;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year.new .legend-graph-bar.medium {
+  background: #5d5d5d;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year.new .legend-graph-bar.high {
+  background: #5d77f1;
+}
+.AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year .percent {
+  width: 68px;
+  text-align: right;
+}
+.AidataReport-contents .content-box.summary-type.height-default .content {
+  min-height: 207px;
+  max-height: 207px;
+}
+.AidataReport-contents .content-box.summary-type .box-header {
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+.AidataReport-contents .content-box.summary-type .content {
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  padding: 1.25rem 1.875rem 1.25rem 1.875rem;
+  overflow: hidden;
+}
+.AidataReport-contents .content-box.summary-type .content.bt-radius {
+  border-radius: 0px 0px 12px 12px;
+}
+.AidataReport-contents .content-box.summary-type .content:last-child {
+  margin-bottom: 0;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #c7c8ca;
+  padding-bottom: 0.938rem;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .tit {
+  font-size: var(--font-20);
+  font-weight: 700;
+  color: #221f20;
+  position: relative;
+  padding: 0 0 0 3.1rem;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .tit::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  background: url("../../Common/image/crediview/aireport/icon-growth.png") no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .tit.t02::before {
+  content: "";
+  background: url("../../Common/image/crediview/aireport/icon-growth-benefit.png") no-repeat;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .tit.t03::before {
+  content: "";
+  background: url("../../Common/image/crediview/aireport/icon-safe.png") no-repeat;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .tit.t04::before {
+  content: "";
+  background: url("../../Common/image/crediview/aireport/icon-coin flow.png") no-repeat;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .txt {
+  font-size: var(--font-17);
+  font-weight: 700;
+  color: #292d36;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .txt.high i {
+  color: #5d77f1;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .txt.medium i {
+  color: #5d5d5d;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .txt.low i {
+  color: #ff8255;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .txt i.high {
+  color: #5d77f1;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .txt i.medium {
+  color: #5d5d5d;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .txt i.low {
+  color: #ff8255;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-header .txt i.infor-insufficient {
+  color: #c4b4e1;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 0.75rem;
+  gap: 1.875rem;
+  padding: 0 0.625rem 0 0.625rem;
+  margin-top: 0.625rem;
+  position: relative;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #dbdfe7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .left {
+  width: 50%;
+  padding-right: 0.625rem;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .right {
+  width: 50%;
+  padding-left: 0.625rem;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .tit {
+  font-size: var(--font-16);
+  font-weight: 700;
+  color: #221f20;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt {
+  display: flex;
+  align-items: center;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt.high {
+  color: #5d77f1;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt.high .state-txt {
+  background: #5d77f1;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt.medium {
+  color: #5d5d5d;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt.medium .state-txt {
+  background: #5d5d5d;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt.low {
+  color: #ff8255;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt.low .state-txt {
+  background: #ff8255;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt.infor-insufficient {
+  color: #c4b4e1;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt.infor-insufficient .state-txt {
+  background: #c4b4e1;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt.warning {
+  color: #f34747;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt.warning .state-txt {
+  background: #f34747;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt span {
+  display: inline-block;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt span.percent {
+  font-size: var(--font-28);
+  font-weight: 700;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt span.percent i {
+  font-size: var(--font-20);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt span.percent i.up {
+  font-size: var(--font-28);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt span.state-txt {
+  width: 70px;
+  height: 30px;
+  border-radius: 20px;
+  font-size: var(--font-15);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-left: 0.625rem;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt span.state-txt.low {
+  background: #ff8255;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt span.state-txt.medium {
+  background: #5d5d5d;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .tit-box .txt span.state-txt.high {
+  background: #5d77f1;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth {
+  padding-top: 1rem;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .unit-currency {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 0.625rem;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .unit-currency span {
+  display: block;
+  height: 16px;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .tit {
+  font-size: var(--font-15);
+  font-weight: 500;
+  color: #292d36;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .graph {
+  width: 425px;
+  height: 16px;
+  border-radius: 4px;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .graph.low {
+  background-color: rgb(255, 201, 169);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .graph.medium {
+  background-color: rgb(93, 93, 93);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .graph.high {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .graph .legend-graph-bar {
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: 4px;
+  background: #c4c4c4;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  transition: ease-in-out 0.3s;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year.new {
+  margin-top: 0.5rem;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year.new .legend-graph-bar.low {
+  background: #ff8255;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year.new .legend-graph-bar.medium {
+  background: #5d5d5d;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year.new .legend-graph-bar.high {
+  background: #5d77f1;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .percent {
+  width: 68px;
+  text-align: right;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph {
+  display: block;
+  width: 460px;
+  height: 24px;
+  background: #edeef0;
+  border: solid 1px #c9cacc;
+  border-radius: 4px;
+  position: relative;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph.high {
+  background: rgb(56, 71, 145);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i {
+  display: inline-block;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i.legend-graph-bar {
+  width: 0%;
+  height: 100%;
+  border-radius: 2px;
+  transition: ease-in-out 0.3s;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i.legend-graph-bar.medium {
+  background: rgb(93, 93, 93);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i.legend-graph-bar.high {
+  background: rgb(93, 119, 241);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i.legend-graph-bar.low {
+  background: rgb(255, 130, 85);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i.ps {
+  position: absolute;
+  top: 25px;
+  left: auto;
+  font-size: 9px;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i.ps.p0 {
+  left: 0;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i.ps.p48 {
+  left: 48%;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i.ps.p40 {
+  left: 40%;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i.ps.p50 {
+  left: 50%;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph i.ps.p100 {
+  right: 0;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph em {
+  display: inline-block;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph em.legend-graph-bar {
+  position: relative;
+  width: 0%;
+  height: 100%;
+  border-radius: 4px;
+  transition: ease-in-out 0.3s;
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph em.legend-graph-bar.medium {
+  background: rgb(93, 93, 93);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph em.legend-graph-bar.high {
+  background: rgb(93, 119, 241);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph em.legend-graph-bar.low {
+  background: rgb(255, 130, 85);
+}
+.AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph em.legend-graph-bar i {
+  display: block;
+  position: absolute;
+}
+.AidataReport-contents .content-box.summary-type .content .h2-tit-box .h2-tit {
+  font-size: var(--font-22);
+  font-weight: 700;
+  color: #221f20;
+  border-bottom: solid 1px #221f20;
+  padding: 0.625rem 0;
+  margin-bottom: 1.5rem;
+}
+.AidataReport-contents .content-box.summary-type .content .h2-tit-box .h2-tit.mgb-no {
+  margin-bottom: 0;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box {
+  display: flex;
+  justify-content: space-between;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box.gap20 {
+  gap: 20px;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box.gap40 {
+  gap: 40px;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box.bd-st {
+  border-top: solid 1px #c7c8ca;
+  margin-top: 10px;
+  padding-top: 25px;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box.reference-type {
+  position: relative;
+  margin-top: 24px;
+  padding-top: 24px;
+  z-index: 2;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box.reference-type::before {
+  content: "";
+  width: 2000px;
+  height: 1px;
+  background: #c7c8ca;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box.reference-type:after {
+  content: "";
+  width: 2000px;
+  height: 1000px;
+  background: #f7f7f8;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: -1;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.w33 {
+  width: 33%;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.w35 {
+  width: 35%;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.w40 {
+  width: 40%;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.w50 {
+  width: 50%;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.w60 {
+  width: 60%;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.w65 {
+  width: 65%;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.w100 {
+  width: 100%;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.pdt35 {
+  padding-top: 2.188rem;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.align-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .tit-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.625rem;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .tit-box.f-end {
+  justify-content: flex-end;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .tit-box .tit {
+  font-size: var(--font-20);
+  font-weight: 700;
+  color: #221f20;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .tit-box .tit .sub-tit {
+  font-size: var(--font-14);
+  font-weight: 500;
+  color: #686b71;
+  display: inline-block;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .appendix-tit-box .tit {
+  font-size: var(--font-28);
+  font-weight: 700;
+  text-align: center;
+  padding: 0.75rem 0;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(90deg, #7181ff 0%, #7ba9ff 100%);
+  border-radius: 12px;
+  color: #fff;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  padding: 0 1.25rem 0.5rem 1.25rem;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span {
+  display: inline-block;
+  font-size: var(--font-15);
+  font-weight: 500;
+  color: #292d36;
+  position: relative;
+  padding: 0 0.75rem 0 0.95rem;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span:last-child {
+  padding-right: 0px;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span.average::before {
+  background: #b7c5dc;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span.average-company::before {
+  background: #516fbf;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span.prev-year-revenue::before {
+  background: #edeef0;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span.revenue::before {
+  background: #516fbf;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span.revenue-growth-rate::before {
+  background: #8075ff;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span.revenue-amount::before {
+  background: #adc4ff;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span.pupple-c01::before {
+  background: #c6c2fb;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span.pupple-c02::before {
+  background: #8072e4;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .graph-named span.pupple-c03::before {
+  background: #af65f9;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #c7c8ca;
+  border-radius: 12px;
+  padding: 1.875rem;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box.no-border {
+  border: none;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .tit-box .tit {
+  width: 100%;
+  text-align: center;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .tit-box .tit span {
+  display: inline-block;
+  font-size: var(--font-14);
+  font-weight: 500;
+  color: #686b71;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: wrap;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named.type02 {
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named.type02 span {
+  width: auto;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named.gap25 {
+  gap: 10px 25px;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i {
+  display: block;
+  font-style: normal;
+  font-size: var(--font-15);
+  font-weight: 500;
+  color: #292d36;
+  padding: 0 0 0 0.7rem;
+  position: relative;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #516fbf;
+  border-radius: 100%;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c01::before {
+  content: "";
+  background: #1f77b4;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c02::before {
+  content: "";
+  background: #f08080;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c03::before {
+  content: "";
+  background: #afeeee;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c04::before {
+  content: "";
+  background: #caaee6;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c05::before {
+  content: "";
+  background: #ffc107;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c06::before {
+  content: "";
+  background: #66bb6a;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c07::before {
+  content: "";
+  background: #adc4ff;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c-purpple-c01::before {
+  content: "";
+  background: #6699ff;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c-purpple-c02::before {
+  content: "";
+  background: #ffb2b2;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c-purpple-c03::before {
+  content: "";
+  background: #baffff;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c-purpple-c04::before {
+  content: "";
+  background: #e0ccff;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c-purpple-c05::before {
+  content: "";
+  background: #ffe082;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named span i.c-purpple-c06::before {
+  content: "";
+  background: #b2ebb8;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box {
+  display: flex;
+  justify-content: space-between;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor {
+  padding: 1rem 0 0 0;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor .named {
+  font-size: var(--font-22);
+  font-weight: 700;
+  color: #243f64;
+  display: flex;
+  align-items: center;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor .named .tax-id {
+  font-size: var(--font-18);
+  font-weight: 400;
+  color: #292d36;
+  display: inline-block;
+  padding: 0 0 0 0.625rem;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor .infor-sub {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0 0 0;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor .infor-sub span {
+  font-size: var(--font-16);
+  font-weight: 400;
+  color: #292d36;
+  position: relative;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor .infor-sub span.named02 {
+  padding-right: 1.25rem;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor .infor-sub span.named02::before {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background: rgba(135, 147, 174, 0.3);
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul {
+  display: flex;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li:first-child {
+  border-left: solid 1px #c7c8ca;
+  border-right: solid 1px #c7c8ca;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li span {
+  display: block;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li span.tit {
+  width: 200px;
+  font-size: var(--font-15);
+  font-weight: 700;
+  color: #292d36;
+  text-align: center;
+  background: #ebebeb;
+  padding: 0.438rem 0;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li span.infor-con {
+  font-size: var(--font-26);
+  font-weight: 700;
+  text-align: center;
+  padding: 0.438rem 0;
+  height: 58px;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li span.infor-con.closurse-status {
+  color: #b03026;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li span.infor-con.advisory-status {
+  color: #e48020;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li span.infor-con.warning-status {
+  color: #d95a48;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li span.infor-con.safety-status {
+  color: #188515;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li span.infor-con i {
+  display: block;
+  font-size: var(--font-14);
+  font-weight: 400;
+  color: #292d36;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li span.infor-con02 {
+  font-size: var(--font-26);
+  font-weight: 700;
+  color: #221f20;
+  text-align: center;
+  padding: 0.438rem 0;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .companyinfo-box .infor-sub02 ul li span.infor-con02 i {
+  display: inline-block;
+  font-size: var(--font-22);
+  font-weight: 400;
+  color: #292d36;
+}
+.AidataReport-contents .content-box.summary-type .content .infor-txt02 span {
+  display: block;
+}
+.AidataReport-contents .content-box.summary-type .content .infor-txt02 span.tit {
+  font-size: var(--font-16);
+  font-weight: 700;
+  color: #686b71;
+  padding-top: 1.5rem;
+}
+.AidataReport-contents .content-box.summary-type .content .infor-txt02 span.con {
+  font-size: var(--font-16);
+  font-weight: 400;
+  color: #686b71;
+  padding-top: 0.313rem;
+}
+.AidataReport-contents .content-box.summary-type.summary-h-type02 .box-header {
+  margin-bottom: 0rem;
+  border-radius: 12px 12px 0 0;
+}
+.AidataReport-contents .content-box.summary-type.summary-h-type02 .content {
+  border-radius: 0 0 12px 12px;
+}
+.AidataReport-contents .content-box .box-header {
+  width: 100%;
+  height: 58px;
+  background: linear-gradient(90deg, #7181ff 0%, #7ba9ff 100%);
+  border-radius: 12px 12px 0 0;
+  padding: 0 1.875rem;
+  display: flex;
+  align-items: center;
+}
+.AidataReport-contents .content-box .box-header .title {
+  font-size: var(--font-22);
+  font-weight: 700;
+  color: #fff;
+}
+.AidataReport-contents .content-box .box-header .sub-tit {
+  display: inline-block;
+  font-size: var(--font-14);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.625rem 0 0 0.625rem;
+}
+.AidataReport-contents .content-box .box-header .sub-tit em {
+  font-weight: 700;
+  color: #fff;
+  font-size: var(--font-15);
+}
+.AidataReport-contents .content-box .box-header .sub-tit em.f-23 {
+  font-size: 23px;
+}
+.AidataReport-contents .content-box .content {
+  padding: 1.25rem 1.875rem;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  border: solid 1px rgba(0, 0, 0, 0.16);
+}
+.AidataReport-contents .content-box .content.no-padding {
+  padding: 0;
+}
+.AidataReport-contents .content-box .content .flex {
+  display: flex;
+}
+.AidataReport-contents .content-box .content .flex.start {
+  justify-content: flex-start;
+}
+.AidataReport-contents .content-box .content .flex.between {
+  justify-content: space-between;
+}
+.AidataReport-contents .content-box .content .flex.center {
+  justify-content: center;
+}
+.AidataReport-contents .content-box .content .flex.end {
+  justify-content: flex-end;
+}
+.AidataReport-contents .content-box .content .flex.gap10 {
+  gap: 10px;
+}
+.AidataReport-contents .content-box .content .flex.gap20 {
+  gap: 20px;
+}
+.AidataReport-contents .content-box .content .flex.gap30 {
+  gap: 30px;
+}
+.AidataReport-contents .content-box .content .flex.gap40 {
+  gap: 40px;
+}
+.AidataReport-contents .content-box .content .tb-left {
+  width: 80%;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type thead {
+  border-top: solid 1px #696c71;
+  border-bottom: solid 1px #696c71;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type thead tr.left th {
+  text-align: left;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type thead tr.right th {
+  text-align: right;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type thead tr:first-child th {
+  border-top: none;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type thead tr th {
+  text-align: center;
+  background-color: #ebebeb;
+  padding: 0.625rem;
+  display: table-cell;
+  vertical-align: middle;
+  border-top: solid 1px #c7c8ca;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type thead tr th.bd-right {
+  border-right: solid 1px #d3d3d3;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type thead tr th span {
+  display: block;
+  font-size: var(--font-15);
+  font-weight: 400;
+  color: #221f20;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr.high td {
+  background: #edf4ff;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr.left td {
+  text-align: left;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr.right td {
+  text-align: right;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  height: 36px;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td.left {
+  text-align: left;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td.right {
+  text-align: right;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td.bd-right {
+  border-right: solid 1px #d3d3d3;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td.high {
+  background: #edf4ff;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td span {
+  display: block;
+  padding: 0.6rem;
+  font-size: var(--font-15);
+  font-weight: 400;
+  color: #221f20;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td span.c-up {
+  color: var(--c-active);
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td span.c-down {
+  color: var(--c-error);
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td span.bold {
+  font-weight: 700;
+}
+.AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td span.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st thead.bd-t-bold {
+  border-top: solid 2px #221f20;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st thead tr th {
+  border-right: solid 1px #c7c8ca;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st thead tr th:last-child {
+  border-right: none;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st thead tr th .tit {
+  font-size: var(--font-18);
+  font-weight: 700;
+  color: #221f20;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st thead tr th .tit i {
+  display: inline-block;
+  font-size: var(--font-14);
+  font-weight: 500;
+  color: #686b71;
+  padding-left: 0.313rem;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td {
+  border-right: solid 1px #c7c8ca;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td.bd-left {
+  border-left: solid 1px #c7c8ca;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td:last-child {
+  border-right: none;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td.tit-bg {
+  background-color: #f5f5f8;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td.tit-bg span {
+  font-size: var(--font-18);
+  font-weight: 700;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td span.a-c01 {
+  color: #273f73;
+  font-weight: 700;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td span.b-c01 {
+  color: #33589e;
+  font-weight: 700;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td span.c-c01 {
+  color: #ff6e39;
+  font-weight: 700;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td span.tb-txt-st {
+  display: block;
+  font-size: var(--font-16);
+  font-weight: 500;
+  padding: 0px 0 0.625rem 1.875rem;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td span.tb-txt-st:first-child {
+  padding-top: 1.875rem;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td span.tb-txt-st:last-child {
+  padding-bottom: 1.875rem;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td span.tb-txt-st i {
+  font-weight: 700;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td .list-type {
+  padding: 0 0 0.938rem 0;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td .list-type:first-child {
+  padding-top: 1.875rem;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td .list-type:last-child {
+  padding-bottom: 1.875rem;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td .list-type li span {
+  font-size: var(--font-16);
+  font-weight: 500;
+  position: relative;
+  display: block;
+  padding: 0 0 0.625rem 2.8rem;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td .list-type li span::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  background: #292d36;
+  position: absolute;
+  top: 9px;
+  left: 29px;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td .list-type li span.tit {
+  font-weight: 700;
+  padding: 0 0 10px 1.875rem;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td .list-type li span.tit::before {
+  content: none;
+}
+.AidataReport-contents .content-box .content .table-wrap.border-st tbody tr td .list-type li:last-child span {
+  padding-bottom: 0rem;
+}
+.AidataReport-contents .content-box .content .table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.AidataReport-contents .content-box .content .table-wrap table tbody tr th,
+.AidataReport-contents .content-box .content .table-wrap table tbody tr td {
+  border-bottom: solid 1px #c7c8ca;
+}
+.AidataReport-contents .content-box .content .table-wrap table tbody tr th span,
+.AidataReport-contents .content-box .content .table-wrap table tbody tr td span {
+  display: block;
+  padding: 0.938rem;
+  font-size: var(--font-15);
+  font-weight: 500;
+}
+.AidataReport-contents .content-box .content .table-wrap table tbody tr th {
+  background: #ebebeb;
+  vertical-align: middle;
+  text-align: left;
+}
+.AidataReport-contents .content-box .content .table-wrap table tbody tr th span {
+  color: #221f20;
+}
+.AidataReport-contents .content-box .content .table-wrap table tbody tr td {
+  background: #fff;
+}
+.AidataReport-contents .content-box .content .table-wrap table tbody tr td span {
+  color: #292d36;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  width: 100%;
+}
+.AidataReport-contents .content-box .content .table-wrap table tbody tr:last-child th,
+.AidataReport-contents .content-box .content .table-wrap table tbody tr:last-child td {
+  border-bottom: solid 1px #c7c8ca;
+}
+.AidataReport-contents .content-box .content .table-wrap table tbody tr:first-child th,
+.AidataReport-contents .content-box .content .table-wrap table tbody tr:first-child td {
+  border-top: solid 1px #c7c8ca;
+}
+.AidataReport-contents .content-box .content .rating-box {
+  border-radius: 8px;
+  border: solid 1px #c7c8ca;
+  width: 20%;
+  position: relative;
+}
+.AidataReport-contents .content-box .content .rating-box span {
+  display: block;
+  text-align: center;
+}
+.AidataReport-contents .content-box .content .rating-box span.t1 {
+  font-size: var(--font-18);
+  font-weight: 500;
+  color: rgba(34, 31, 32, 0.7);
+  padding-top: 1.425rem;
+}
+.AidataReport-contents .content-box .content .rating-box span.grade-txt {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #292d36;
+  height: calc(100% - 77px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AidataReport-contents .content-box .content .rating-box span.grade-txt em {
+  font-size: 2.063rem;
+}
+.AidataReport-contents .content-box .content .rating-box span.t2 {
+  width: 100%;
+  background: #ebebeb;
+  border-radius: 0 0 8px 8px;
+  padding: 0.625rem;
+  font-size: var(--font-16);
+  font-weight: 500;
+  color: #221f20;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.AidataReport-contents .content-box .content .dialog-box {
+  width: 35%;
+  background: rgb(237, 244, 255);
+  border-radius: 0 0 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+}
+.AidataReport-contents .content-box .content .dialog-box .graph-named {
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 1.25rem;
+}
+.AidataReport-contents .content-box .content .report-legend {
+  width: 65%;
+}
+.AidataReport-contents .content-box .content .report-legend.pd {
+  padding: 1.875rem;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1.25rem;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li:last-child {
+  padding-bottom: 0;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li.infor-insufficient .legend-graph {
+  border: solid 1px #c4b4e1;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li.infor-insufficient .legend-graph-bar {
+  background: #efeaf9;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li.infor-insufficient .Probability-bar {
+  background: none;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li.infor-insufficient .status-txt {
+  color: #c4b4e1;
+  border: solid 2px #c4b4e1;
+  background: #efeaf9;
+  border-radius: 4px;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li span {
+  display: inline-block;
+  text-align: left;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li span.legend-tit {
+  font-size: var(--font-17);
+  font-weight: 500;
+  color: #292d36;
+  padding-right: 0.5rem;
+  width: 100px;
+  text-align: right;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .legend-graph {
+  width: 436px;
+  height: 24px;
+  background: #edeef0;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  position: relative;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .legend-graph .legend-graph-bar {
+  width: 0%;
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .legend-graph .legend-graph-bar.low {
+  background: rgb(255, 130, 85);
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .legend-graph .legend-graph-bar.medium {
+  background: rgb(93, 93, 93);
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .legend-graph .legend-graph-bar.high {
+  background: rgb(93, 119, 241);
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .legend-graph .legend-graph-bar.Probability-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: dotted 1px #333;
+  border-radius: 0;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .status {
+  width: 105px;
+  padding: 0 0 0 0.938rem;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .status i {
+  font-style: normal;
+  font-size: var(--font-16);
+  font-weight: 700;
+  display: inline-block;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .status i.txt {
+  color: #8b8b8f;
+  padding: 0 0 0 3px;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .status i.low {
+  color: #ff8255;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .status i.medium {
+  color: #5d5d5d;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .status i.high {
+  color: #5d77f1;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .status-txt {
+  width: 65px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--font-14);
+  font-weight: 700;
+  margin-left: 1rem;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .status-txt.low {
+  color: #ff8255;
+  border: solid 2px rgba(255, 137, 94, 0.7);
+  background: #fff3ef;
+  border-radius: 4px;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .status-txt.medium {
+  color: #5d5d5d;
+  border: solid 2px rgba(102, 125, 165, 0.7);
+  background: #f0f2f6;
+  border-radius: 4px;
+}
+.AidataReport-contents .content-box .content .report-legend .report-legend-list li .status-txt.high {
+  color: #5d77f1;
+  border: solid 2px rgba(95, 123, 255, 0.7);
+  background: #eff2ff;
+  border-radius: 4px;
+}
+.AidataReport-contents .content-box .content .border-type-box .infor-txt {
+  font-size: var(--font-17);
+  font-weight: 700;
+  color: #292d36;
+}
+.AidataReport-contents .content-box .content .border-type-box .infor-txt span.high {
+  color: #5d77f1;
+}
+.AidataReport-contents .content-box .content .border-type-box .infor-txt span.low {
+  color: #ff8255;
+}
+.AidataReport-contents .content-box .content .border-type-box .infor-txt span.medium {
+  color: #5d5d5d;
+}
+.AidataReport-contents .content-box .content .border-type-box .infor-txt span.infor-insufficient {
+  color: #c4b4e1;
+}
+.AidataReport-contents .content-box .content .border-type-box .box {
+  border: solid 1px rgb(199, 200, 202);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: rgb(235, 235, 235);
+  border-radius: 8px 8px 0 0;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .tit {
+  font-size: var(--font-18);
+  font-weight: 700;
+  color: #221f20;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt {
+  display: flex;
+  align-items: center;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt.high {
+  color: #5d77f1;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt.high .state-txt {
+  background-color: #5d77f1;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt.medium {
+  color: rgb(93, 93, 93);
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt.medium .state-txt {
+  background-color: rgb(93, 93, 93);
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt.low {
+  color: #ff8255;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt.low .state-txt {
+  background-color: #ff8255;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt.infor-insufficient {
+  color: #c4b4e1;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt.infor-insufficient .state-txt {
+  background-color: #c4b4e1;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt span {
+  display: inline-block;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt span.percent {
+  font-size: var(--font-28);
+  font-weight: 700;
+}
+.AidataReport-contents .content-box .content .border-type-box .box .tit-box .txt span.state-txt {
+  width: 70px;
+  height: 30px;
+  border-radius: 20px;
+  font-size: var(--font-15);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-left: 0.625rem;
+}
+.AidataReport-contents .content-box .content .border-type-box .box.w50 {
+  width: 50%;
+}
+.AidataReport-contents .content-box .content .border-type-box .unit-currency {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.625rem 2rem 0.625rem 0;
+}
+.AidataReport-contents .content-box .content .border-type-box .unit-currency span {
+  display: block;
+  height: 16px;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  padding: 3rem 1.25rem 5rem 1.25rem;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con.pd-0 {
+  padding: 0;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: wrap;
+  padding-top: 1rem;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .graph {
+  display: block;
+  width: 100%;
+  height: 41px;
+  background: #edeef0;
+  border: solid 1px #c9cacc;
+  border-radius: 4px;
+  position: relative;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .graph.high {
+  background: rgb(56, 71, 145);
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .graph i {
+  display: inline-block;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .graph i.legend-graph-bar {
+  width: 0%;
+  height: 100%;
+  border-radius: 4px;
+  transition: ease-in-out 0.3s;
+  position: relative;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .graph i.legend-graph-bar.medium {
+  background: rgb(93, 93, 93);
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .graph i.legend-graph-bar.high {
+  background: rgb(93, 119, 241);
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .graph i.legend-graph-bar.low {
+  background: rgb(255, 130, 85);
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .graph i.legend-graph-bar .percent-num {
+  display: flex;
+  position: absolute;
+  top: -40px;
+  right: -21px;
+  width: auto;
+  height: 26px;
+  border-radius: 4px;
+  background: #1e1b39;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  color: #fff;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .graph i.legend-graph-bar .percent-num::before {
+  content: "";
+  width: 14px;
+  height: 9px;
+  background: url(../../Common/image/crediview/aireport/triangle-ico.png) no-repeat;
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .ps {
+  position: relative;
+  width: 100%;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .ps i {
+  text-align: right;
+  color: rgb(104, 107, 113);
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .ps i.w-txt {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: auto;
+  padding-top: 1rem;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .ps i.high {
+  color: #5d77f1;
+  font-weight: 700;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .ps i.medium {
+  color: #e8eaef;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .ps i.low {
+  color: #ff8255;
+}
+.AidataReport-contents .content-box .content .border-type-box .graph-con .graph-box-rate .ps i em {
+  display: block;
+  font-weight: 400;
+  padding-top: 0.125rem;
+}
+.AidataReport-contents .content-box .content .infor-txt-list {
+  padding-top: 1rem;
+}
+.AidataReport-contents .content-box .content .infor-txt-list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: top;
+  padding-bottom: 0.625rem;
+}
+.AidataReport-contents .content-box .content .infor-txt-list li span {
+  display: inline-block;
+  font-size: var(--font-15);
+  color: #686b71;
+}
+.AidataReport-contents .content-box .content .infor-txt-list li span.tit {
+  font-weight: 700;
+  position: relative;
+  padding: 0 0.625rem 0 0.625rem;
+}
+.AidataReport-contents .content-box .content .infor-txt-list li span.tit:before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background: #686b71;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+.AidataReport-contents .content-box .content .infor-txt-list li span.txt {
+  font-weight: 500;
+}
+.AidataReport-contents .content-box .content .infor-txt-list li:last-child {
+  padding-bottom: 0;
+}
+.AidataReport-contents .content-box .content .infor-txt-list-type02 {
+  padding-top: 1.5rem;
+}
+.AidataReport-contents .content-box .content .infor-txt-list-type02 li.bold-tit span {
+  display: block;
+  font-size: var(--font-16);
+  font-weight: 700;
+  color: #686b71;
+  padding-bottom: 0.438rem;
+}
+.AidataReport-contents .content-box .content .infor-txt-list-type02 li.bold-tit span::before {
+  content: none;
+}
+.AidataReport-contents .content-box .content .infor-txt-list-type02 li.bold-tit span i {
+  display: inline-block;
+  font-size: var(--font-16);
+  font-weight: 400;
+  color: #686b71;
+  padding-left: 0.313rem;
+}
+.AidataReport-contents .content-box .content .infor-txt-list-type02 li.list {
+  padding-bottom: 0.188rem;
+}
+.AidataReport-contents .content-box .content .infor-txt-list-type02 li.list:last-child {
+  padding-bottom: 0px;
+}
+.AidataReport-contents .content-box .content .infor-txt-list-type02 li.list span {
+  display: block;
+  font-size: var(--font-16);
+  font-weight: 400;
+  color: #686b71;
+  position: relative;
+  padding: 0 0 0 0;
+  letter-spacing: -0.4px;
+}
+.AidataReport-contents .content-box .content .infor-txt-list-type02 li.list span::before {
+  content: none;
+}
+.AidataReport-contents .content-box .content .empty-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.AidataReport-contents .content-box .content .empty-box span {
+  display: block;
+}
+.AidataReport-contents .content-box .content .empty-box span.empty-img {
+  width: 72px;
+  height: 72px;
+  background: url(../../Common/image/crediview/aireport/empty-img.png) no-repeat center center;
+}
+.AidataReport-contents .content-box .content .empty-box span.empty-txt {
+  font-size: var(--font-15);
+  font-weight: 500;
+  color: #9a9ba5;
+}
+.AidataReport-contents .content-box .content .graph-named {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.AidataReport-contents .content-box .content .graph-named span {
+  display: inline-block;
+  font-size: var(--font-15);
+  font-weight: 500;
+  color: #292d36;
+  position: relative;
+  padding: 0 0.75rem 0 0.95rem;
+}
+.AidataReport-contents .content-box .content .graph-named span:last-child {
+  padding-right: 0px;
+}
+.AidataReport-contents .content-box .content .graph-named span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+.AidataReport-contents .content-box .content .graph-named span.average::before {
+  background: #b7c5dc;
+}
+.AidataReport-contents .content-box .content .graph-named span.average-company::before {
+  background: #516fbf;
+}
+.AidataReport-contents .content-box .content .graph-named span.prev-year-revenue::before {
+  background: #edeef0;
+}
+.AidataReport-contents .content-box .content .graph-named span.revenue::before {
+  background: #516fbf;
+}
+.AidataReport-contents .content-box .content .graph-named span.revenue-growth-rate::before {
+  background: #8075ff;
+}
+.AidataReport-contents .content-box .content .graph-named span.revenue-amount::before {
+  background: #adc4ff;
+}
+.AidataReport-contents .content-box .content .graph-named span.pupple-c01::before {
+  background: #c6c2fb;
+}
+.AidataReport-contents .content-box .content .graph-named span.pupple-c02::before {
+  background: #8072e4;
+}
+.AidataReport-contents .content-box .content .graph-named span.pupple-c03::before {
+  background: #af65f9;
+}
+.AidataReport-contents .content-box .content .graph-named span.blue-c01::before {
+  background: #adc4ff;
+}
+.AidataReport-contents .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-14);
+  font-weight: 400;
+  color: rgb(104, 107, 113);
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.AidataReport-contents .footer .copyright-txt {
+  width: 36%;
+  text-align: left;
+  flex-shrink: 0;
+}
+.AidataReport-contents .footer .bun-infor {
+  width: 36%;
+  text-align: right;
+  flex-shrink: 0;
+}
+.AidataReport-contents .footer .pagenation-wrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.AidataReport-contents .c-high {
+  color: #5d77f1 !important;
+}
+.AidataReport-contents .c-medium {
+  color: #5d5d5d !important;
+}
+.AidataReport-contents .c-low {
+  color: #ff8255 !important;
+}
+.AidataReport-contents .c-warning {
+  color: #f34747 !important;
+}
+.AidataReport-contents .c-insufficient {
+  color: #c4b4e1 !important;
+}
+.AidataReport-contents .impor-txt {
+  font-size: var(--font-12);
+  font-weight: 400;
+  padding-top: 2px;
+}
+.AidataReport-contents .impor-txt.pd-type {
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+}
+
+.AidataReport-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AidataReport-wrap {
+  width: 1238px;
+  min-height: 297mm;
+  background: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.AidataReport-wrap.cover {
+  height: 1750px;
+}
+
+i {
+  font-style: normal;
+}
+
+@media print {
+  /* 프린트용 스타일만 따로 지정 */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html,
+  body {
+    width: 77.375rem;
+    min-height: 109.375rem;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .AidataReport-wrap {
+    width: 100%;
+    min-height: 109.375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    page-break-inside: avoid;
+  }
+  .AidataReport-contents {
+    flex-grow: 1;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .AidataReport-contents .content-box .content {
+    -moz-column-break-inside: avoid;
+         break-inside: avoid;
+  }
+  .AidataReport-contents .footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: var(--font-14);
+    font-weight: 400;
+    color: rgb(104, 107, 113);
+    position: relative;
+  }
+  .content-box {
+    page-break-before: auto; /* 페이지 시작 전에 자동으로 분리 */
+    page-break-after: auto; /* 페이지 끝에서 자동으로 분리 */
+  }
+  .table-wrap {
+    page-break-before: auto;
+    page-break-after: auto;
+  }
+  .AidataReport-header {
+    padding-top: 1rem;
+  }
+  .AidataReport-header-contents .h-title .h1-tit {
+    font-size: 1.8rem;
+  }
+  .AidataReport-contents .content-box .box-header {
+    height: 35px;
+  }
+  .AidataReport-contents .content-box .box-header .title {
+    font-size: var(--font-18);
+  }
+  .AidataReport-contents .content-box .content .report-legend.pd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .AidataReport-contents .content-box .content .report-legend .report-legend-list li {
+    padding-bottom: 0.5rem;
+  }
+  .AidataReport-contents .content-box .content .report-legend .report-legend-list li span.legend-tit {
+    width: 80px;
+  }
+  .AidataReport-contents .content-box .content .report-legend .report-legend-list li .legend-graph {
+    width: 350px;
+  }
+  .AidataReport-contents .content-box .content .report-legend .report-legend-list li {
+    padding-bottom: 1rem;
+  }
+  .AidataReport-wrap.cover {
+    height: 297mm; /* A4 높이 */
+    margin: 0; /* 여백 제거 */
+    page-break-after: always; /* 다음 페이지로 넘어가도록 설정 */
+  }
+  .AidataReport-cover::after {
+    background-size: 400px;
+  }
+  .AidataReport-cover-contents .bottom-infor-txt {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding-top: 80px;
+  }
+  .AidataReport-wrap.page01 {
+    height: 297mm; /* A4 높이 */
+    margin: 0; /* 여백 제거 */
+    page-break-after: always; /* 다음 페이지로 넘어가도록 설정 */
+    transform: scale(0.5);
+  }
+  .AidataReport-contents .content-box.summary-type .content {
+    padding: 1.25rem 1.875rem 1.2rem 1.875rem;
+  }
+  .AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth {
+    padding-top: 0.8rem;
+  }
+  .AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .tit {
+    width: 40px;
+  }
+  .AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year.new {
+    margin-top: 0.2rem;
+  }
+  .AidataReport-contents .content-box.summary-type.height-default .content {
+    height: 197px;
+  }
+  .AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .old .tit {
+    width: 40px;
+  }
+  .AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .graph {
+    padding-right: 10px;
+    width: 400px;
+  }
+  .AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-rate .graph {
+    padding-right: 10px;
+    width: 400px;
+  }
+  .AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .graph {
+    width: 335px;
+    padding-right: 10px;
+  }
+  .AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .percent {
+    width: 55px;
+  }
+  .AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .percent {
+    width: 55px;
+  }
+  .AidataReport-contents .content-box.summary-type .content .summary-legend-graph-wrap .graph-box-growth .year .graph.low {
+    padding-right: 10px;
+  }
+  .AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year {
+    gap: 5px;
+  }
+  .AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year .tit {
+    width: 35px;
+  }
+  .AidataReport-contents .content-box .grapth-box-inner .graph-box-growth.common .year .graph {
+    width: 350px;
+  }
+  .AidataReport-contents .content-box.summary-type .content {
+    padding: 1.35rem 1.875rem 1.35rem 1.875rem;
+  }
+  .AidataReport-contents .content-box .content .table-wrap.static-type thead tr th {
+    height: 38px;
+  }
+  .AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td {
+    height: 38px;
+  }
+  .AidataReport-contents .content-box .content .table-wrap.static-type tbody tr td span {
+    letter-spacing: -1.5px;
+  }
+  .AidataReport-contents .content-box.summary-type .content .none-board-type-box.bd-st {
+    margin-top: 0.625rem;
+    padding-top: 0.625rem;
+  }
+  .AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.w33 {
+    width: 32%;
+  }
+  .AidataReport-contents .content-box.summary-type .content .none-board-type-box .box.w50 {
+    width: 48%;
+  }
+  .AidataReport-contents .content-box .content .border-type-box .box.w50 {
+    width: 48%;
+  }
+  .AidataReport-contents .content-box.summary-type .content .none-board-type-box .box .circle-graph-box .graph-circle-named.gap25 {
+    gap: 10px 12px;
+    margin-top: 15px;
+  }
+  .AidataReport-contents.app-index-type .content-box .content .table-wrap {
+    height: calc(100vh - 250px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .AidataReport-contents.app-index-type .content-box .content .table-wrap table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+  }
+  .AidataReport-contents.app-index-type .content-box .content .table-wrap table tbody {
+    height: 100%;
+  }
+  .AidataReport-contents.app-index-type .content-box .content .table-wrap table tbody tr td span {
+    padding: 0.538rem;
+  }
+}

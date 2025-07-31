@@ -1,0 +1,195 @@
+.SOLDatepicker-root {
+  flex-grow: 1;
+}
+
+.SOLSearchbox-inputs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  .SOLInput-field {
+    padding-right: 40px;
+    background: url(../../Common/image/icon/ic_calendar.svg) no-repeat right
+      10px center / 16px;
+  }
+}
+
+.SOLDatepicker-popper {
+  z-index: 999;
+  position: absolute;
+  visibility: hidden;
+
+  &.open {
+    visibility: visible;
+  }
+}
+
+.SOLDatepicker-box {
+  position: relative;
+  padding: 24px 24px 0;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(10, 43, 88, 0.1);
+  background-color: #fff;
+  box-shadow: 0 3px 12px rgba(55, 29, 110, 0.07);
+  color: #222;
+}
+
+.SOLDatepicker-action {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  border-top: 1px solid var(--tb-border);
+  padding: 16px 0;
+  margin-top: 16px;
+
+  .SOLBtn-root {
+    min-width: 90px;
+  }
+}
+
+.SOLDatepicker-cont {
+  display: flex;
+  gap: 40px;
+}
+
+.SOLDatepicker-section {
+  flex: 1;
+}
+
+.SOLDatepicker-month {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  font-weight: 700;
+  font-size: var(--font-20);
+}
+
+.SOLDatepicker-month-prev,
+.SOLDatepicker-month-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .SOLIconBtn-root {
+    width: 26px;
+    height: 26px;
+    border-radius: 10px;
+
+    &:not(:disabled):hover {
+      background-color: var(--bc-hover);
+      color: var(--c-active);
+    }
+  }
+}
+.SOLDatepicker-month-prev {
+  left: 0;
+}
+.SOLDatepicker-month-next {
+  right: 0;
+}
+
+.SOLDatepicker-week,
+.SOLDatepicker-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px 0;
+
+  .SOLDatepicker-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+
+    &:nth-child(7n + 1),
+    &.t--off {
+      color: var(--c-error);
+    }
+  }
+}
+
+.SOLDatepicker-week {
+  opacity: 0.6;
+
+  .SOLDatepicker-item {
+    height: 40px;
+  }
+}
+
+.SOLDatepicker-days {
+  &:has(.t--end) {
+    .SOLDatepicker-item {
+      &:not(.t--disabled) {
+        background-color: var(--bc-hover);
+      }
+    }
+  }
+
+  .SOLDatepicker-item {
+    &.t--disabled {
+      opacity: 0.4;
+
+      .SOLDatepicker-btn {
+        &:hover,
+        &:focus {
+          border-color: transparent;
+          cursor: default;
+        }
+      }
+    }
+
+    &.t--start::before,
+    &.t--end::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      background-color: var(--bc-hover);
+    }
+    &.t--start::before {
+      right: 0;
+    }
+    &.t--end::before {
+      left: 0;
+    }
+
+    &.t--start ~ .SOLDatepicker-item {
+      &:not(.t--disabled) {
+        background-color: var(--bc-hover);
+      }
+    }
+
+    &.t--end,
+    &.t--end ~ .SOLDatepicker-item {
+      &:not(.t--disabled) {
+        background-color: inherit;
+      }
+    }
+  }
+}
+
+.SOLDatepicker-btn {
+  z-index: 1;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  font-size: var(--font-15);
+  color: inherit;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: rgba(54, 78, 164, 0.6);
+  }
+
+  &.t--selected {
+    background-color: var(--c-active);
+    color: #fff !important;
+  }
+}

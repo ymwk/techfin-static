@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - Input</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Mobile/css/designsystem-m.css" />
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Input:textarea</h2>
+        <p class="comp-pagetitle-desc">인풋 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Default : width 100%, rows 5</h3>
+          <div class="comp-fbox">
+            <div class="SOLTextarea-root">
+              <textarea
+                placeholder="내용을 입력하세요."
+                rows="5"
+                class="SOLTextarea_field"
+              ></textarea>
+            </div>
+
+            <div class="SOLTextarea-root">
+              <textarea
+                placeholder="내용을 입력하세요."
+                rows="5"
+                class="SOLTextarea_field"
+                disabled="true"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">내용 null 에러메세지</h3>
+          <div class="comp-fbox-align-base">
+            <div class="SOLTextarea-root">
+              <textarea
+                placeholder="내용을 입력하세요."
+                rows="5"
+                class="SOLTextarea_field error"
+              ></textarea>
+              <div class="SOLInput-byte s--between mgt5">
+                <p class="SOLInput-msg c--error">인증번호를 입력해주세요.</p>
+                <span class="SOLInput-byte--count">
+                  <i>0</i>
+                  <i>/</i>
+                  <i>2000</i>
+                  <i>byte</i>
+                </span>
+              </div>
+            </div>
+
+            <div class="SOLTextarea-root">
+              <textarea
+                placeholder="내용을 입력하세요."
+                rows="5"
+                class="SOLTextarea_field"
+                disabled="true"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Default : width 100%, rows 5</h3>
+          <div class="comp-fbox">
+            <div class="SOLTextarea-root">
+              <textarea
+                placeholder="내용을 입력하세요."
+                rows="5"
+                class="SOLTextarea_field"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">내용 null 에러메세지</h3>
+          <div class="comp-fbox">
+            <div class="SOLTextarea-root">
+              <textarea
+                placeholder="내용을 입력하세요."
+                rows="5"
+                class="SOLTextarea_field error"
+              ></textarea>
+            </div>
+          </div>
+          <div class="SOLInput-byte s--between mgt5">
+            <p class="SOLInput-msg c--error">인증번호를 입력해주세요.</p>
+            <span class="SOLInput-byte--count">
+              <i>0</i>
+              <i>/</i>
+              <i>2000</i>
+              <i>byte</i>
+            </span>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

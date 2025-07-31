@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>운영관리-등급신청내역</title>
+<script type="text/javascript" src="../resource/js/common.js" ></script>
+<script src="../resource/js/summernote/summernote-lite.js"></script>
+<script src="../resource/js/summernote/lang/summernote-ko-KR.js"></script>
+
+<link rel="stylesheet" href="../resource/css/summernote/summernote-lite.css">
+<style>
+	.flex-list{	
+		display: flex;
+		justify-content: flex-start;
+		flex-flow: wrap;
+		gap: 10px;
+		padding: 5px 0;
+	}
+
+	.flex-list div.filter-btn{
+		position: relative;
+	}
+
+	.flex-list div.filter-btn span{
+		background-color: #f5f5f5;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		padding: 2px 5px;
+		font-size: 12px;
+		color: #666;
+		cursor: pointer;
+	}
+
+	.flex-list div.filter-btn div.hover{
+		width: 180px;
+		display: none;
+		position: absolute;
+		background-color: #f5f5f5;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		padding: 5px;
+		font-size: 12px;
+		color: #666;
+		z-index: 1;
+		top:-40px;
+		left: 0;
+	}
+
+</style>
+<script type="text/javascript" >
+
+$(document).ready(function(){	
+	
+	$("#btnSubmit").click(function(){
+		bofAlert("시스템 준비중입니다.")
+	});
+	
+	$("#btnRecent").click(function(){
+		bofAlert("시스템 준비중입니다.")
+	});
+	
+	$("#btn_list").click(function(){
+		scrollToTopOfElement("reqHisContainer");
+		$("#reqHisDetailViewArea").empty();
+		getReqHisGridData(1,"reqHisGridArea");
+	})
+	
+});
+
+/* function viewList(){
+	$("#reqHisDetailViewArea").empty();
+} */
+
+function getReqHisDetail(noReq){
+	var param = {
+			noReq : noReq
+	}
+	postAjax("/api/cbsvc/run/reqhis/detail", param, function(data){
+		var data = data.resultData;
+		var reqHisDetail = data.reqHisDetail;
+		reqHisDetail.amt_pay = formatCurrency(reqHisDetail.amt_pay) + ' 원'  
+		reqHisDetail.no_biz = formatBusinessNumber(reqHisDetail.no_biz);
+		reqHisDetail.no_corp = formatCorpNumber(reqHisDetail.no_corp);
+		reqHisDetail.da_open = formatDateString(reqHisDetail.da_open);
+		reqHisDetail.hp_dam = formatPhoneNumber(reqHisDetail.hp_dam);
+		setDataValue(reqHisDetail);
+	})  
+}
+
+/**
+ * 탭 조회
+ */
+/* function onTabActive(obj,id){ 
+	if(id == "submitHis"){
+		$("#hisDetailViewArea").empty();
+		openSubmitRecent('/cbsvc/run/submithis-detail');
+	}else if(id == "recentHis"){
+		$("#hisDetailViewArea").empty();
+		openSubmitRecent('/cbsvc/run/reqhis-recent');
+	}
+	
+} */
+
+function openSubmitRecent(url){ //계정관리 수정
+	Dcloud.showLoading();
+	$("#reqHisDetailViewArea").load(url, function(response, status, xhr){
+		console.log(status);
+		Dcloud.closeLoading();
+		
+		if(status === 'error'){
+			$("#divContents").load('/common/error_404', function(){});
+		}
+		
+	});
+}
+
+//필터 show/hide 기능
+$(document).ready(function() {
+    $('.filter-btn span').hover(
+        function() {
+            $(this).siblings('.hover').show();
+        },
+        function() {
+            $(this).siblings('.hover').hide();
+        }
+    );
+});
+
+
+
+
+</script>
+<head>
+<body>
+	<div class="pa_container">
+		<!-- 컨텐츠 영역 -->
+		<div class="pa_content">
+			<div class="tab_menu" style="width:100%; display: inline-flex;">
+				<div class="LUX_basic_tabs sao_main_tab" style="display: inline-block; width:100%">
+					<div class="tabsin">
+						<!-- li 활성화 시 class="active" 추가 -->
+						<ul class="tabs_lst"  id="tablst">
+							<li class="active2" style="margin-left: -12px"><a><span>신청내역</span></a></li>
+							<li><a id="btnSubmit" style="font-size: 15px"><span>제출내역</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="LUX_basic_tabs sao_main_tab" style="display: inline-block; margin-left: -90px;">
+					<div class="tabsin">
+						<ul class="tabs_lst" id="tablst">
+							<li><a id="btnRecent"  style="font-size: 15px"><span>최근이력</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="LUX_basic_tbl th_border">
+				<div style="margin-bottom: 35px;">
+					<table class="tblarea2" style="margin-right: 13px; width: 100%">
+						<caption style="font-size: 14px; font-weight: bold; margin-bottom: 10px; margin-left: 5px; text-align: left;">기본 정보</caption>
+						<colgroup>
+							<col style="width: 20%;">
+							<col style="width: 30%;">
+							<col style="width: 20%;">
+							<col style="width: 30%;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">관리번호</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text" style="display: ruby">
+											<div class="inbx" id="no_req">ABCD-A10020</div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">발급번호</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text" style="display: ruby">
+											<div class="inbx" id="no_issued">ABCD-A10020</div>
+											<div>
+												<button onClick="openDocDetail()"><img src="../resource/imgs/factoring/button.png" width="13" height="17"></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">신청일시</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="dt_req"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">상품명</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="nm_prd"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">산출일시</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="dt_cal"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">결제만료일</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="da_pay_expire"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">데이터기준일</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="da_std_cal"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">유효기간</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="da_issued_expire"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">신용평가등급</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="grade_final">
+												<div class="flex-list">
+													<div class="filter-btn">
+														<span>FILTER01</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER02</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER03</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER04</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER05</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER06</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER07</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER08</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER09</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER10</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER11</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													<div class="filter-btn">
+														<span>FILTER12</span>
+														<div class="hover">조회일 현재 금융질서문란 정보 보유</div>
+													</div>
+													
+
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">등급유형</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="ty_mis_fs"></div>
+										</div>
+									</div>
+								</td>
+								
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">상태</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="nm_stat"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">상세 사유(상태)</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="">-</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">용도</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="nm_issued"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">결제 금액</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -20px; text-align: right;">
+										<div class="LUX_basic_text" style="width: 100%;">
+											<div class="inbx" id="amt_pay"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div style="margin-bottom: 35px;">
+					<table class="tblarea2" style="margin-right: 13px; width: 100%">
+						<caption style="font-size: 14px; font-weight: bold; margin-bottom: 10px; margin-left: 5px; text-align: left;">기업 정보</caption>
+						<colgroup>
+							<col style="width: 20%;">
+							<col style="width: 30%;">
+							<col style="width: 20%;">
+							<col style="width: 30%;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">기업명</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="nm_company"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">사업장 소재지</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="addr_company"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">사업자등록번호</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="no_biz"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">개업일</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="da_open"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">대표자</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="nm_ceo"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">업태</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="ty_biz"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">법인등록번호</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="no_corp"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">종목</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="item_biz"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div style="margin-bottom: 20px;">
+					<table class="tblarea2" style="margin-right: 13px; width: 100%">
+						<caption style="font-size: 14px; font-weight: bold; margin-bottom: 10px; margin-left: 5px; text-align: left;">신청자 정보</caption>
+						<colgroup>
+							<col style="width: 20%;">
+							<col style="width: 30%;">
+							<col style="width: 20%;">
+							<col style="width: 30%;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">이름</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="nm_dam"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">소속부서</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="depart_dam"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">연락처</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="hp_dam"></div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">이메일 주소</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="addr_em"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div style="float: right; margin-right: 15px">
+					<button class="LUX_basic_btn SAOverConfirm basic" style="width: 67px; height: 30px;  padding:0; font-size:13px; " id="btn_list">
+						<span>목록</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

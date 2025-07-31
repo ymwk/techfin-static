@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>크레디뷰 서비스</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/crediview.css">
+</head>
+<body>
+  <!-- Modal start -->
+  <div class="SOLModal-root">
+    <div class="SOLModal-backdrop"></div>
+    <div class="SOLModal-box">
+      <div class="SOLModal-title">
+        <h3 class="SOLTitle-t2">초대 재요청</h3>
+        <div class="SOLModal-close">
+          <button type="button" class="SOLIconBtn-root">
+            <i class="SOLIcon-root SOLIcon-close"></i>
+            <span class="blind">Close</span>
+          </button>
+        </div>
+      </div>
+      <div class="SOLModal-content">
+
+        <p class="SOLTitle-t3">아래 정보로 다시 초대하시겠어요?</p>
+
+        <div class="wrapper-inputlist">
+          <label class="SOLInput-root">
+            <span class="SOLInput-label">이메일 주소</span>
+            <div class="SOLInput-box">
+              <input type="text" placeholder="이메일 주소를 입력하세요." value="kimtech@techfinratings.com" class="SOLInput-field">
+              <span class="SOLInput-wrap">
+                <span class="SOLInput-wrap--hidden">
+                  <button type="button" class="SOLInput-btn SOLIcon-close"><span class="blind">Del</span></button>
+                </span>
+              </span>
+            </div>
+          </label>
+
+          <label class="SOLInput-root">
+            <span class="SOLInput-label">소속 부서</span>
+            <div class="SOLInput-box">
+              <input type="text" placeholder="소속 부서를 입력하세요." value="경영기획실" class="SOLInput-field">
+              <span class="SOLInput-wrap">
+                <span class="SOLInput-wrap--hidden">
+                  <button type="button" class="SOLInput-btn SOLIcon-close"><span class="blind">Del</span></button>
+                </span>
+              </span>
+            </div>
+          </label>
+
+          <label class="SOLInput-root">
+            <span class="SOLInput-label">이름</span>
+            <div class="SOLInput-box">
+              <input type="text" placeholder="이름을 입력하세요." value="김테크" class="SOLInput-field">
+              <span class="SOLInput-wrap">
+                <span class="SOLInput-wrap--hidden">
+                  <button type="button" class="SOLInput-btn SOLIcon-close"><span class="blind">Del</span></button>
+                </span>
+              </span>
+            </div>
+          </label>
+        </div><!-- wrapper-inputlist -->
+
+        <ul class="SOLModal-msgbox">
+          <li>요청을 받은 회원은 가입할 경우, 일반회원 등급이 됩니다.</li>
+          <li>회원 초대 유효기간은 30일입니다.</li>
+        </ul>
+
+      </div>
+      <div class="SOLModal-action">
+        <button type="button" class="SOLBtn-root s--lg t--outlined">취소</button>
+        <button type="button" class="SOLBtn-root s--lg t--contained">초대</button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+</body>
+</html>

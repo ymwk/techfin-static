@@ -1,0 +1,125 @@
+.SOLSelectGroup-root {
+  display: flex;
+  gap: 8px;
+
+  &.t--min {
+    .SOLSelectGroup-label {
+      gap: 10px;
+
+      input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  .SOLCombobox-root {
+    width: unset;
+    flex-grow: 1;
+  }
+}
+
+.SOLSelectGroup-label {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px;
+  border: 1px solid var(--tb-border);
+  border-radius: 8px;
+  line-height: 1.5;
+  transition: border-color 0.2s;
+
+  input[type="radio"] {
+    appearance: none;
+    flex-shrink: 0;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    border: 1px solid rgba(10, 43, 88, 0.18);
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--c-disabled);
+    transition: border-color 0.2s;
+
+    &:checked {
+      border: 6px solid var(--c-active);
+    }
+
+    &:hover,
+    &:hover + span {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+  }
+
+  &:has(input:checked) {
+    border-color: var(--c-active);
+    box-shadow: 0 2px 10px rgba(7, 31, 75, 0.1);
+  }
+
+  &:has(input:disabled) {
+    cursor: not-allowed;
+
+    & > * {
+      opacity: 0.7;
+    }
+
+    .SOLTitle-t4,
+    .label {
+      color: var(--fc-gray2);
+    }
+
+    .ico {
+      filter: grayscale(100%);
+      opacity: 0.4;
+    }
+  }
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    color: var(--fc-gray1);
+  }
+
+  .ico {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bc-hover) no-repeat center center / 80%;
+  }
+
+  .ico-card {
+    background-image: url(../../Common/image/img/img_ic_card.svg);
+  }
+  .ico-account {
+    background-image: url(../../Common/image/img/img_ic_account.svg);
+  }
+  .ico-virtual {
+    background-image: url(../../Common/image/img/img_ic_virture.svg);
+  }
+  .ico-public {
+    background-image: url(../../Common/image/img/img_ic_public.svg);
+  }
+  .ico-private {
+    background-image: url(../../Common/image/img/img_ic_private.svg);
+  }
+  .ico-own {
+    background-image: url(../../Common/image/img/img_ic_own.svg);
+  }
+  .ico-company {
+    background-image: url(../../Common/image/img/img_ic_company.svg);
+  }
+
+  .ico-private {
+    background-size: 50%;
+  }
+}

@@ -1,0 +1,153 @@
+.SOLFile {
+  &-root {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+    height: var(--form-h);
+    font-size: var(--font-14);
+
+    input[type="file"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+
+      &:disabled {
+        ~ .SOLFile-box {
+          opacity: 0.7;
+          background-color: rgba(239, 239, 239, 0.3);
+        }
+
+        ~ .SOLFile-btn {
+          opacity: 0.7;
+        }
+      }
+
+      &:not(:disabled) {
+        ~ .SOLFile-btn {
+          &:hover {
+            background-color: #ccc;
+          }
+        }
+      }
+    }
+
+    &:hover:not(:has(input:disabled)) {
+      .SOLFile-box {
+        border-color: var(--form-c-border-h);
+      }
+      .SOLBtn-root {
+        background-color: var(--bc-hover);
+      }
+      .SOLInput-wrap--hidden {
+        opacity: 1;
+        max-height: 30px;
+      }
+    }
+
+    &:hover:has(input:disabled) {
+      .SOLBtn-root {
+        background-color: inherit;
+      }
+    }
+
+    &:has(input:disabled) {
+      cursor: not-allowed;
+
+      .SOLBtn-root {
+        background-color: var(--form-c-bg-dis) !important;
+        color: rgba(34, 34, 34, 0.2);
+        border-color: rgba(10, 43, 88, 0.1);
+
+        &::before {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    .SOLBtn-root {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 11px;
+        height: 15px;
+        background: url(../../Common/image/icon/ic_file.svg) no-repeat left top;
+      }
+    }
+
+    .SOLInput-wrap--hidden {
+      position: absolute;
+      right: 8px;
+    }
+  }
+
+  // value print box
+  &-box {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    @include formBox;
+  }
+
+  &-ico {
+    display: inline-block;
+    min-height: 15px;
+    padding-left: 18px;
+    background: url(../../Common/image/icon/ic_file.svg) no-repeat left center;
+  }
+}
+
+.SOLFile-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.5em;
+  gap: 0.7em 1em;
+  font-size: var(--font-13);
+}
+
+.SOLFile-list-item {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  min-width: calc(50% - 1em);
+  overflow: hidden;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    min-width: 0;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  small {
+    flex-shrink: 0;
+    color: var(--fc-gray2);
+    text-transform: uppercase;
+  }
+}
+
+.SOLFile-list-name {
+  @include ellipsis;
+}
+
+.SOLFile-list-btn {
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #bbbbbd;
+  color: #fff;
+  font-size: var(--font-16);
+}

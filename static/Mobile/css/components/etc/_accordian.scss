@@ -1,0 +1,194 @@
+.SOLAccordian-root {
+  border: 1px solid var(--tb-border);
+  border-radius: 8px;
+  padding: 12px 24px;
+
+  ::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 6px solid var(--c-bg);
+    border-radius: 18px;
+    background-color: #dcdbdf;
+  }
+
+  &.s--sm {
+    .SOLAccordian-item {
+      padding: 0;
+
+      &.st--open {
+        padding-bottom: 12px;
+      }
+    }
+  }
+
+  &.t--faq {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    font-size: var(--font-15);
+
+    ::-webkit-scrollbar-thumb {
+      border-color: #fff;
+    }
+
+    .SOLAccordian-item {
+      border: 1px solid var(--tb-border) !important;
+      border-radius: 8px;
+      padding: 1.33em;
+    }
+
+    .SOLAccordian-title {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .SOLAccordian-btn {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      &:hover {
+        .SOLAccordian-arr {
+          color: var(--fc-default);
+        }
+      }
+    }
+
+    .SOLAccordian-category {
+      display: flex;
+      align-items: center;
+      width: 8em;
+      font-weight: 400;
+      font-size: var(--font-14);
+      text-align: left;
+
+      &::before {
+        content: "";
+        width: 1.7em;
+        height: 1.7em;
+        margin-right: 0.5em;
+        color: var(--c-active);
+        background: url(../../Common/image/icon/ic_q.svg) no-repeat left center /
+          contain;
+      }
+    }
+
+    .SOLAccordian-arr {
+      color: var(--c-disabled);
+      transition: color 0.3s;
+    }
+
+    .SOLAccordian-body {
+      border-radius: 0;
+      background-color: unset;
+    }
+
+    .SOLAccordian-box {
+      margin-top: 1em;
+      border-top: 1px solid var(--tb-border);
+      font-size: var(--font-14);
+      padding-left: 2.2em;
+    }
+  }
+}
+
+.SOLAccordian-header {
+  padding-top: 12px;
+  padding-bottom: 18px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--tb-border);
+}
+
+.SOLAccordian-item {
+  padding: 12px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--c-bg);
+  }
+
+  &.st--open {
+    &:not(:last-child) {
+      border-bottom: 0;
+    }
+  }
+}
+
+.SOLAccordian-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
+  font-size: var(--font-16);
+}
+
+.SOLAccordian-btn {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.SOLAccordian-arr {
+  display: inline-block;
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+
+.SOLAccordian-body {
+  display: flex;
+  border-radius: 8px;
+  background-color: var(--c-bg);
+  color: #404252;
+  word-break: keep-all;
+  transition: max-height 0.2s;
+}
+
+.SOLAccordian-box {
+  flex: 1;
+  max-height: 100%;
+  padding: 24px;
+  overflow-y: scroll;
+  line-height: 1.6;
+}
+
+.SOLAccordian-custom {
+  .SOLAccordian-btn {
+    padding: 4px 8px;
+  }
+}
+
+.SOLAccordian-body,
+.js-accordian-body {
+  overflow: hidden;
+  max-height: 0;
+
+  .SOLSearchbox-root {
+    flex: 1;
+  }
+}
+
+.js-accordian-root,
+.SOLAccordian-item {
+  &.st--open {
+    .js-accordian-body {
+      max-height: 207px;
+    }
+
+    .SOLAccordian-arr {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.js-accordian-root:not(.SOLAccordian-item).st--open {
+  .js-accordian-body {
+    overflow: visible;
+  }
+}

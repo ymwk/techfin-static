@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Web/css/designsystem.css" />
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Datepicker</h2>
+        <p class="comp-pagetitle-desc">날짜 선택 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Default</h3>
+
+          <div class="SOLDatepicker-root">
+            <div class="SOLSearchbox-inputs">
+              <label class="SOLInput-root" style="width: 132px">
+                <div class="SOLInput-box">
+                  <input
+                    type="text"
+                    title="검색시작일자"
+                    value="2022-07-15"
+                    class="SOLInput-field"
+                    readonly
+                  />
+                </div>
+              </label>
+              <span>~</span>
+              <label class="SOLInput-root" style="width: 132px">
+                <div class="SOLInput-box">
+                  <input
+                    type="text"
+                    title="검색종료일자"
+                    value="2023-01-15"
+                    class="SOLInput-field"
+                    readonly
+                  />
+                </div>
+              </label>
+            </div>
+
+            <div class="SOLDatepicker-popper open">
+              <div class="SOLDatepicker-box">
+                <div class="SOLDatepicker-cont">
+                  <div class="SOLDatepicker-section">
+                    <div class="SOLDatepicker-month">
+                      <span>2024.12</span>
+                      <div class="SOLDatepicker-month-prev">
+                        <button type="button" class="SOLIconBtn-root c--dark">
+                          <i class="SOLIcon-root SOLIcon-gt--l s--sm"></i>
+                          <i class="SOLIcon-root SOLIcon-gt--l s--sm"></i>
+                          <span class="blind">이전해</span>
+                        </button>
+                        <button type="button" class="SOLIconBtn-root c--dark">
+                          <i class="SOLIcon-root SOLIcon-gt--l s--sm"></i>
+                          <span class="blind">이전달</span>
+                        </button>
+                      </div>
+
+                      <div class="SOLDatepicker-month-next">
+                        <button type="button" class="SOLIconBtn-root c--dark">
+                          <i class="SOLIcon-root SOLIcon-gt--r s--sm"></i>
+                          <span class="blind">다음달</span>
+                        </button>
+                        <button type="button" class="SOLIconBtn-root c--dark">
+                          <i class="SOLIcon-root SOLIcon-gt--r s--sm"></i>
+                          <i class="SOLIcon-root SOLIcon-gt--r s--sm"></i>
+                          <span class="blind">다음해</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="SOLDatepicker-calendar">
+                      <div class="SOLDatepicker-week">
+                        <span class="SOLDatepicker-item">일</span>
+                        <span class="SOLDatepicker-item">월</span>
+                        <span class="SOLDatepicker-item">화</span>
+                        <span class="SOLDatepicker-item">수</span>
+                        <span class="SOLDatepicker-item">목</span>
+                        <span class="SOLDatepicker-item">금</span>
+                        <span class="SOLDatepicker-item">토</span>
+                      </div>
+                      <div class="SOLDatepicker-days">
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            1
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            2
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            3
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            4
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            5
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            6
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--start"
+                          ><button
+                            type="button"
+                            class="SOLDatepicker-btn t--selected"
+                          >
+                            7
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            8
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            9
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            10
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            11
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            12
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            13
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            14
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            15
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            16
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            17
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            18
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            19
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            20
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            21
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            22
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            23
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            24
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            25
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            26
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            27
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            28
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            29
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            30
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            31
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--disabled"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            1
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--disabled"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            2
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--disabled"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            3
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--disabled"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            4
+                          </button></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="SOLDatepicker-section">
+                    <div class="SOLDatepicker-month">
+                      <span>2025.01</span>
+                      <div class="SOLDatepicker-month-prev">
+                        <button type="button" class="SOLIconBtn-root c--dark">
+                          <i class="SOLIcon-root SOLIcon-gt--l s--sm"></i>
+                          <i class="SOLIcon-root SOLIcon-gt--l s--sm"></i>
+                          <span class="blind">이전해</span>
+                        </button>
+                        <button type="button" class="SOLIconBtn-root c--dark">
+                          <i class="SOLIcon-root SOLIcon-gt--l s--sm"></i>
+                          <span class="blind">이전달</span>
+                        </button>
+                      </div>
+
+                      <div class="SOLDatepicker-month-next">
+                        <button type="button" class="SOLIconBtn-root c--dark">
+                          <i class="SOLIcon-root SOLIcon-gt--r s--sm"></i>
+                          <span class="blind">다음달</span>
+                        </button>
+                        <button type="button" class="SOLIconBtn-root c--dark">
+                          <i class="SOLIcon-root SOLIcon-gt--r s--sm"></i>
+                          <i class="SOLIcon-root SOLIcon-gt--r s--sm"></i>
+                          <span class="blind">다음해</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="SOLDatepicker-calendar">
+                      <div class="SOLDatepicker-week">
+                        <span class="SOLDatepicker-item">일</span>
+                        <span class="SOLDatepicker-item">월</span>
+                        <span class="SOLDatepicker-item">화</span>
+                        <span class="SOLDatepicker-item">수</span>
+                        <span class="SOLDatepicker-item">목</span>
+                        <span class="SOLDatepicker-item">금</span>
+                        <span class="SOLDatepicker-item">토</span>
+                      </div>
+                      <div class="SOLDatepicker-days">
+                        <span class="SOLDatepicker-item t--disabled"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            29
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--disabled"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            30
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--disabled"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            31
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            1
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            2
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            3
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            4
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--end"
+                          ><button
+                            type="button"
+                            class="SOLDatepicker-btn t--selected"
+                          >
+                            5
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            6
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            7
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            8
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            9
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            10
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            11
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            12
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            13
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            14
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            15
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            16
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            17
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            18
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            19
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            20
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            21
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            22
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            23
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            24
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            25
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            26
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            27
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--off"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            28
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--off"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            29
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--off"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            30
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            31
+                          </button></span
+                        >
+                        <span class="SOLDatepicker-item t--disabled"
+                          ><button type="button" class="SOLDatepicker-btn">
+                            1
+                          </button></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="SOLDatepicker-action">
+                  <button type="button" class="SOLBtn-root t--outlined">
+                    취소
+                  </button>
+                  <button type="button" class="SOLBtn-root t--contained">
+                    적용
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

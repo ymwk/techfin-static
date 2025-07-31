@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - Input</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Mobile/css/designsystem-m.css" />
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Combo-box</h2>
+        <p class="comp-pagetitle-desc">셀렉트박스 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Default : width 100%</h3>
+          <div class="comp-fbox">
+            <div class="SOLCombobox-root">
+              <button
+                type="button"
+                class="SOLCombobox-button"
+                onclick="combobox(this)"
+              >
+                선택된 옵션
+              </button>
+              <div class="SOLCombobox-option">
+                <ul>
+                  <li class="st--active">
+                    <button type="button">선택된 옵션</button>
+                  </li>
+                  <li><button type="button">옵션 2</button></li>
+                  <li><button type="button">옵션 3</button></li>
+                  <li><button type="button">옵션 4</button></li>
+                  <li><button type="button" disabled>옵션 5</button></li>
+                  <li><button type="button">옵션 6</button></li>
+                  <li><button type="button">옵션 7</button></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="SOLCombobox-root">
+              <button
+                type="button"
+                class="SOLCombobox-button"
+                onclick="combobox(this)"
+                disabled="true"
+              >
+                Combobox
+              </button>
+              <div class="SOLCombobox-option">
+                <ul>
+                  <li><button type="button">옵션 1</button></li>
+                  <li><button type="button">옵션 2</button></li>
+                  <li><button type="button">옵션 3</button></li>
+                  <li><button type="button">옵션 4</button></li>
+                  <li><button type="button">옵션 5</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">선택 null 에러메세지</h3>
+          <div class="comp-fbox">
+            <div class="SOLCombobox-root">
+              <button
+                type="button"
+                class="SOLCombobox-button error"
+                onclick="combobox(this)"
+              >
+                선택된 옵션
+              </button>
+              <div class="SOLCombobox-option">
+                <ul>
+                  <li class="st--active">
+                    <button type="button">선택된 옵션</button>
+                  </li>
+                  <li><button type="button">옵션 2</button></li>
+                  <li><button type="button">옵션 3</button></li>
+                  <li><button type="button">옵션 4</button></li>
+                  <li><button type="button" disabled>옵션 5</button></li>
+                  <li><button type="button">옵션 6</button></li>
+                  <li><button type="button">옵션 7</button></li>
+                </ul>
+              </div>
+              <div class="SOLInput-byte s--between mgt5">
+                <p class="SOLInput-msg c--error">옵션을 선택해주세요.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">width 200px 지정</h3>
+          <div class="comp-fbox">
+            <div class="SOLCombobox-root" style="width: 200px">
+              <button
+                type="button"
+                class="SOLCombobox-button"
+                onclick="combobox(this)"
+              >
+                Combobox
+              </button>
+              <div class="SOLCombobox-option">
+                <ul>
+                  <li><button type="button">옵션 1</button></li>
+                  <li><button type="button">옵션 2</button></li>
+                  <li><button type="button">옵션 3</button></li>
+                  <li><button type="button">옵션 4</button></li>
+                  <li><button type="button">옵션 5</button></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="SOLCombobox-root" style="width: 200px">
+              <button
+                type="button"
+                class="SOLCombobox-button"
+                onclick="combobox(this)"
+                disabled="true"
+              >
+                Combobox
+              </button>
+              <div class="SOLCombobox-option">
+                <ul>
+                  <li><button type="button">옵션 1</button></li>
+                  <li><button type="button">옵션 2</button></li>
+                  <li><button type="button">옵션 3</button></li>
+                  <li><button type="button">옵션 4</button></li>
+                  <li><button type="button">옵션 5</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">선택 null 에러메세지</h3>
+          <div class="comp-fbox-align-base">
+            <div class="SOLCombobox-root" style="width: 200px">
+              <button
+                type="button"
+                class="SOLCombobox-button error"
+                onclick="combobox(this)"
+              >
+                Combobox
+              </button>
+              <div class="SOLCombobox-option">
+                <ul>
+                  <li><button type="button">옵션 1</button></li>
+                  <li><button type="button">옵션 2</button></li>
+                  <li><button type="button">옵션 3</button></li>
+                  <li><button type="button">옵션 4</button></li>
+                  <li><button type="button">옵션 5</button></li>
+                </ul>
+              </div>
+              <div class="SOLInput-byte s--between mgt5">
+                <p class="SOLInput-msg c--error">옵션을 선택해주세요.</p>
+              </div>
+            </div>
+            <div class="SOLCombobox-root" style="width: 200px">
+              <button
+                type="button"
+                class="SOLCombobox-button"
+                onclick="combobox(this)"
+              >
+                Combobox
+              </button>
+              <div class="SOLCombobox-option">
+                <ul>
+                  <li><button type="button">옵션 1</button></li>
+                  <li><button type="button">옵션 2</button></li>
+                  <li><button type="button">옵션 3</button></li>
+                  <li><button type="button">옵션 4</button></li>
+                  <li><button type="button">옵션 5</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

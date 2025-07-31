@@ -1,0 +1,305 @@
+.SOLSelectGroup-root {
+  display: flex;
+  gap: 8px;
+
+  &.t--min {
+    .SOLSelectGroup-label {
+      gap: 10px;
+
+      input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  .SOLCombobox-root {
+    width: unset;
+    flex-grow: 1;
+  }
+}
+
+.SOLSelectGroup-label {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px;
+  border: 1px solid var(--tb-border);
+  border-radius: 8px;
+  line-height: 1.5;
+  transition: border-color 0.2s;
+
+  input[type="radio"] {
+    appearance: none;
+    flex-shrink: 0;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    border: 1px solid rgba(10, 43, 88, 0.18);
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--c-disabled);
+    transition: border-color 0.2s;
+
+    &:checked {
+      border: 6px solid var(--c-active);
+    }
+
+    &:hover,
+    &:hover + span {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+  }
+
+  &:has(input:checked) {
+    border-color: var(--c-active);
+    box-shadow: 0 2px 10px rgba(7, 31, 75, 0.1);
+  }
+
+  &:has(input:disabled) {
+    cursor: not-allowed;
+
+    & > * {
+      opacity: 0.7;
+    }
+
+    .SOLTitle-t4,
+    .label {
+      color: var(--fc-gray2);
+    }
+
+    .ico {
+      filter: grayscale(100%);
+      opacity: 0.4;
+    }
+  }
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    color: var(--fc-gray1);
+  }
+
+  .ico {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bc-hover) no-repeat center center / 80%;
+  }
+
+  .ico-card {
+    background-image: url(../../Common/image/img/img_ic_card.svg);
+  }
+  .ico-account {
+    background-image: url(../../Common/image/img/img_ic_account.svg);
+  }
+  .ico-virtual {
+    background-image: url(../../Common/image/img/img_ic_virture.svg);
+  }
+  .ico-public {
+    background-image: url(../../Common/image/img/img_ic_public.svg);
+  }
+  .ico-private {
+    background-image: url(../../Common/image/img/img_ic_private.svg);
+  }
+  .ico-own {
+    background-image: url(../../Common/image/img/img_ic_own.svg);
+  }
+  .ico-company {
+    background-image: url(../../Common/image/img/img_ic_company.svg);
+  }
+
+  .ico-private {
+    background-size: 50%;
+  }
+}
+
+// 공공기관 제출처 선택
+
+.public-institution-component {
+  width: 100%;
+  border: solid 1px #e6e8eb;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px -4px #371d6e12;
+  padding: 20px 30px;
+  &.mgt20 {
+    margin-top: 20px;
+  }
+  h3.SOLTitle-t3 {
+    text-align: left;
+  }
+  &.radio {
+    margin-bottom: 25px;
+    ul.list {
+      li {
+        padding-bottom: 0;
+      }
+    }
+  }
+  ul.list {
+    &.left {
+      li {
+        text-align: left;
+      }
+      .box {
+        span {
+          display: block;
+          &.code {
+            font-size: 10px;
+            padding-top: 3px;
+          }
+        }
+      }
+    }
+    li {
+      border-bottom: solid 1px #e6e8eb;
+      padding: 10px 0;
+      &:first-child {
+        padding-top: 0px;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      .inner-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+          .SOLCheck-label {
+            flex-flow: wrap;
+            .chk-box {
+              padding-right: 5px;
+            }
+            span.code {
+              display: block;
+              width: 100%;
+              font-size: 10px;
+              font-weight: 400;
+            }
+          }
+          .SOLRadio-label {
+            line-height: 17px;
+            gap: 10px;
+            p {
+              .code {
+                display: block;
+                font-size: 10px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .right {
+          width: 40%;
+
+          .infor {
+            span {
+              display: block;
+              &:last-child {
+                padding-top: 3px;
+              }
+              &.code {
+                font-size: 10px;
+                font-weight: 400;
+              }
+            }
+          }
+
+          .SOLCheck-label {
+            flex-flow: wrap;
+            .chk-box {
+              padding-right: 5px;
+            }
+            span.code {
+              display: block;
+              width: 100%;
+              font-size: 10px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      &.disabled {
+        color: #bebebe;
+        .inner-flex {
+          .SOLCheck-label {
+            .chk-box {
+              padding-right: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    &.number-type {
+      counter-reset: number;
+      padding: 20px 0;
+      li {
+        text-align: left;
+        border-bottom: solid 1px #e6e8eb;
+        position: relative;
+        counter-increment: number;
+        &::before {
+          content: counter(number);
+          position: absolute;
+          color: #222222;
+          top: 50%;
+          left: 0;
+          font-size: 14px;
+          font-weight: 400;
+          transform: translate(0, -50%);
+        }
+        &:first-child {
+          &::before {
+            top: 18px;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        .box {
+          padding: 0 0 0 20px;
+          span {
+            display: block;
+            color: #222222;
+            font-weight: 400;
+            &.tit {
+              font-size: 14px;
+            }
+            &.code {
+              font-size: 10px;
+              padding-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .SOLAlert-msgbox {
+    margin: 10px 0;
+
+    ul.list {
+      li {
+        border-bottom: none;
+      }
+    }
+  }
+  .console-footer {
+    .SOLBtn-root {
+      &.w-sm {
+        max-width: 100px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 서비스 로그인</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Web/css/crediview.css" />
+  </head>
+  <body>
+    <div class="SOLAlert-root">
+      <div class="SOLAlert-backdrop"></div>
+      <div class="SOLAlert-box s--sm">
+        <div class="SOLAlert-icon">
+          <!-- info icon -->
+          <i class="SOLIcon-root SOLIcon-alert c--warn">
+            <svg viewBox="0 0 45 39">
+              <path
+                d="M23.8867 1.36586L23.8799 1.3619L23.8731 1.35804C22.564 0.619288 20.8603 1.05515 20.0989 2.38349C20.0984 2.38432 20.098 2.38516 20.0975 2.38599L1.8671 33.8818C1.86672 33.8825 1.86633 33.8831 1.86595 33.8838C1.62536 34.2965 1.5 34.7673 1.5 35.2476C1.5 36.7818 2.75146 38 4.27438 38H40.7244C41.2074 38 41.6731 37.8764 42.0876 37.649L42.0937 37.6456C43.4357 36.8972 43.8915 35.2106 43.1363 33.8899L43.1338 33.8855L24.9088 2.38162L24.9088 2.38156C24.652 1.93773 24.2893 1.60149 23.8867 1.36586Z"
+                fill="#FEBB2B"
+                fill-opacity="0.2"
+                stroke="#FEBB2B"
+                stroke-width="2"
+                stroke-miterlimit="10"
+              ></path>
+            </svg>
+            <svg viewBox="0 0 2 21" class="mark">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1 0.5C1.55228 0.5 2 0.947715 2 1.5V15.2143C2 15.7666 1.55228 16.2143 1 16.2143C0.447716 16.2143 0 15.7666 0 15.2143V1.5C0 0.947715 0.447716 0.5 1 0.5ZM1 20.5C1.55228 20.5 2 20.0523 2 19.5C2 18.9477 1.55228 18.5 1 18.5C0.447716 18.5 0 18.9477 0 19.5C0 20.0523 0.447716 20.5 1 20.5Z"
+              ></path>
+            </svg>
+          </i>
+        </div>
+        <div class="SOLAlert-content">
+          <p class="SOLText-desc">
+            <em>보고서 신청 횟수 제한 안내</em>
+          </p>
+          <div class="SOLAlert-msgbox">
+            이번달 보고서 신청가능 횟수는 1회 입니다.<br />
+            계속 신청하시겠어요?
+          </div>
+          <p class="SOLText-desc left">
+            ※ 보고서 신청가능 횟수는 월 3회이며, 신청 횟수를 초과할 경우
+            다음달에 신청가능합니다.
+          </p>
+        </div>
+        <div class="SOLAlert-action">
+          <button type="button" class="SOLBtn-root t--outlined">취소</button>
+          <button type="button" class="SOLBtn-root t--contained">신청</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

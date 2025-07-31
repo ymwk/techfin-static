@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Web/css/designsystem.css" />
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">table</h2>
+        <p class="comp-pagetitle-desc">table 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Default Table</h3>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Dropdown table</h3>
+          <div class="console-header">
+            <h3 class="SOLTitle-t3">
+              상세 진단내역
+              <em>400</em>
+              건
+            </h3>
+          </div>
+          <table
+            class="SOLTable-list l--auto dropdown-wrap"
+            title="결제내역테이블"
+          >
+            <thead>
+              <tr>
+                <th>번호</th>
+                <th>진단일</th>
+                <th>실시간 진단 등급</th>
+                <th>데이터 기준월</th>
+                <th>진단 상태</th>
+                <th>취소/삭제</th>
+                <th>다운로드</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <span>2025-12-30</span>
+                </td>
+                <td><em>BBB+</em></td>
+                <td>
+                  <span>2025-12</span>
+                </td>
+                <td><span class="diagnosis-state process">진단진행</span></td>
+                <td>
+                  <button type="button" class="SOLBtn-root s--xs">취소</button>
+                </td>
+                <td></td>
+                <td>
+                  <div class="dropdown-btn-wrap">
+                    <button class="dropdown-btn">
+                      <i class="blind">토글 버튼</i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dropdown-content">
+                <td colspan="8">
+                  <div class="dropdown-content-inner">
+                    <div class="dropdown-content-header">
+                      <h4 class="dropdown-content-title">진단 상세내역</h4>
+                    </div>
+                    <div class="dropdown-content-body">
+                      <p>진단 상세내역 내용이 들어갑니다.</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>
+                  <span>2025-12-30</span>
+                </td>
+                <td><em>BBB+</em></td>
+                <td>
+                  <span>2025-12</span>
+                </td>
+                <td><span class="diagnosis-state complete">진단완료</span></td>
+                <td></td>
+                <td>
+                  <button class="SOLBtn-root s--sm SOLBtn-download">
+                    <i class="download">다운로드</i>
+                  </button>
+                </td>
+                <td>
+                  <div class="dropdown-btn-wrap">
+                    <button class="dropdown-btn">
+                      <i class="blind">토글 버튼</i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dropdown-content">
+                <td colspan="8">
+                  <div class="dropdown-content-inner">
+                    <div class="dropdown-content-header">
+                      <h4 class="dropdown-content-title">진단 상세내역</h4>
+                    </div>
+                    <div class="dropdown-content-body">
+                      <p>진단 상세내역 내용이 들어갑니다.</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="disabled">
+                <td>1</td>
+                <td>
+                  <span>2025-12-30</span>
+                </td>
+                <td><em>BBB+</em></td>
+                <td>
+                  <span>2025-12</span>
+                </td>
+                <td><span class="diagnosis-state failed">진단불가</span></td>
+                <td>
+                  <button type="button" class="SOLBtn-root s--xs">삭제</button>
+                </td>
+                <td></td>
+                <td>
+                  <div class="dropdown-btn-wrap">
+                    <button class="dropdown-btn">
+                      <i class="blind">토글 버튼</i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dropdown-content">
+                <td colspan="8">
+                  <div class="dropdown-content-inner">
+                    <div class="dropdown-content-header">
+                      <h4 class="dropdown-content-title">진단 상세내역</h4>
+                    </div>
+                    <div class="dropdown-content-body">
+                      <p>진단 상세내역 내용이 들어갑니다.</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".dropdown-btn").forEach((button) => {
+          button.addEventListener("click", () => {
+            const currentRow = button.closest("tr");
+            const contentRow = currentRow?.nextElementSibling;
+            const isOpen = currentRow?.classList.contains("on");
+
+            // 모든 열 초기화
+            document.querySelectorAll("tr.on").forEach((row) => {
+              row.classList.remove("on");
+              const nextRow = row.nextElementSibling;
+              if (nextRow?.classList.contains("dropdown-content")) {
+                nextRow.classList.remove("active");
+                nextRow.style.display = "none";
+              }
+            });
+
+            // 클릭한 행이 닫힌 상태면 열기
+            if (!isOpen && contentRow?.classList.contains("dropdown-content")) {
+              currentRow.classList.add("on");
+              contentRow.classList.add("active");
+              contentRow.style.display = "table-row";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

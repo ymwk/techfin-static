@@ -1,0 +1,346 @@
+@charset "UTF-8";
+
+@media print {
+  /* 프린트용 스타일만 따로 지정 */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html,
+  body {
+    width: 77.375rem;
+    min-height: 109.375rem;
+    margin: 0;
+    padding: 0;
+    //zoom: 0.7;
+    margin: 0 auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .AidataReport-wrap {
+    width: 100%;
+    min-height: 109.375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    page-break-inside: avoid;
+  }
+  .AidataReport-contents {
+    flex-grow: 1;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .AidataReport-contents .content-box .content {
+    break-inside: avoid;
+  }
+  .AidataReport-contents .footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: var(--font-14);
+    font-weight: 400;
+    color: rgb(104, 107, 113);
+    //break-inside: avoid;
+    position: relative;
+  }
+
+  .content-box {
+    page-break-before: auto; /* 페이지 시작 전에 자동으로 분리 */
+    page-break-after: auto; /* 페이지 끝에서 자동으로 분리 */
+  }
+
+  .table-wrap {
+    page-break-before: auto;
+    page-break-after: auto;
+  }
+
+  .AidataReport-header {
+    padding-top: 1rem;
+  }
+  .AidataReport-header-contents .h-title .h1-tit {
+    font-size: 1.8rem;
+  }
+  .AidataReport-contents .content-box .box-header {
+    height: 35px;
+    .title {
+      font-size: var(--font-18);
+    }
+  }
+
+  .AidataReport-contents .content-box .content .report-legend.pd {
+    // padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .AidataReport-contents
+    .content-box
+    .content
+    .report-legend
+    .report-legend-list
+    li {
+    padding-bottom: 0.5rem;
+    span.legend-tit {
+      width: 80px;
+    }
+  }
+
+  .AidataReport-contents
+    .content-box
+    .content
+    .report-legend
+    .report-legend-list
+    li
+    .legend-graph {
+    width: 350px;
+  }
+
+  .AidataReport-contents
+    .content-box
+    .content
+    .report-legend
+    .report-legend-list
+    li {
+    padding-bottom: 1rem;
+  }
+
+  //표지
+  .AidataReport-wrap.cover {
+    height: 297mm; /* A4 높이 */
+    margin: 0; /* 여백 제거 */
+    page-break-after: always; /* 다음 페이지로 넘어가도록 설정 */
+  }
+  .AidataReport-cover {
+  }
+  .AidataReport-cover::after {
+    background-size: 400px;
+  }
+  .AidataReport-cover-contents .bottom-infor-txt {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding-top: 80px;
+  }
+
+  //page01
+  .AidataReport-wrap.page01 {
+    height: 297mm; /* A4 높이 */
+    margin: 0; /* 여백 제거 */
+    page-break-after: always; /* 다음 페이지로 넘어가도록 설정 */
+    transform: scale(0.5);
+  }
+
+  .AidataReport-contents .content-box.summary-type .content {
+    padding: 1.25rem 1.875rem 1.2rem 1.875rem;
+  }
+
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .summary-legend-graph-wrap
+    .graph-box-growth {
+    padding-top: 0.8rem;
+    .year {
+      .tit {
+        width: 40px;
+      }
+      &.new {
+        margin-top: 0.2rem;
+      }
+    }
+  }
+
+  .AidataReport-contents .content-box.summary-type.height-default .content {
+    height: 197px;
+  }
+
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .summary-legend-graph-wrap
+    .graph-box-growth
+    .old
+    .tit {
+    width: 40px;
+  }
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .summary-legend-graph-wrap
+    .graph-box-growth
+    .year
+    .graph {
+    padding-right: 10px;
+    width: 400px;
+  }
+
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .summary-legend-graph-wrap
+    .graph-box-rate
+    .graph {
+    padding-right: 10px;
+    width: 400px;
+  }
+
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .summary-legend-graph-wrap
+    .graph-box-growth
+    .year
+    .graph {
+    width: 335px;
+    padding-right: 10px;
+  }
+
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .summary-legend-graph-wrap
+    .graph-box-growth
+    .year
+    .percent {
+    width: 55px;
+  }
+
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .summary-legend-graph-wrap
+    .graph-box-growth
+    .year
+    .percent {
+    width: 55px;
+  }
+
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .summary-legend-graph-wrap
+    .graph-box-growth
+    .year
+    .graph.low {
+    padding-right: 10px;
+  }
+
+  .AidataReport-contents
+    .content-box
+    .grapth-box-inner
+    .graph-box-growth.common
+    .year {
+    gap: 5px;
+  }
+  .AidataReport-contents
+    .content-box
+    .grapth-box-inner
+    .graph-box-growth.common
+    .year
+    .tit {
+    width: 35px;
+  }
+  .AidataReport-contents
+    .content-box
+    .grapth-box-inner
+    .graph-box-growth.common
+    .year
+    .graph {
+    width: 350px;
+  }
+
+  //page09
+  .AidataReport-contents .content-box.summary-type .content {
+    padding: 1.35rem 1.875rem 1.35rem 1.875rem;
+  }
+
+  .AidataReport-contents
+    .content-box
+    .content
+    .table-wrap.static-type
+    thead
+    tr
+    th {
+    height: 38px;
+  }
+
+  .AidataReport-contents
+    .content-box
+    .content
+    .table-wrap.static-type
+    tbody
+    tr
+    td {
+    height: 38px;
+  }
+  .AidataReport-contents
+    .content-box
+    .content
+    .table-wrap.static-type
+    tbody
+    tr
+    td
+    span {
+    letter-spacing: -1.5px;
+  }
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .none-board-type-box.bd-st {
+    margin-top: 0.625rem;
+    padding-top: 0.625rem;
+  }
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .none-board-type-box
+    .box.w33 {
+    width: 32%;
+  }
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .none-board-type-box
+    .box.w50 {
+    width: 48%;
+  }
+  .AidataReport-contents .content-box .content .border-type-box .box.w50 {
+    width: 48%;
+  }
+  .AidataReport-contents
+    .content-box.summary-type
+    .content
+    .none-board-type-box
+    .box
+    .circle-graph-box
+    .graph-circle-named.gap25 {
+    gap: 10px 12px;
+    margin-top: 15px;
+  }
+
+  .AidataReport-contents.app-index-type .content-box .content .table-wrap {
+    height: calc(100vh - 250px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    table {
+      width: 100%;
+      height: 100%;
+      border-collapse: collapse;
+      tbody {
+        height: 100%;
+        tr {
+          td {
+            span {
+              padding: 0.538rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

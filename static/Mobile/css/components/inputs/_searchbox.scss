@@ -1,0 +1,106 @@
+.SOLTab-container .SOLSearchbox-root {
+  margin-top: -30px;
+}
+
+.SOLSearchbox-header {
+  display: flex;
+  align-items: center;
+  height: 38px;
+
+  &-option {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+.SOLSearchbox-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  background-color: transparent;
+  white-space: nowrap;
+
+  .SOLInput-label {
+    font-weight: normal;
+    color: inherit;
+  }
+
+  .s--grow {
+    flex: 1;
+  }
+}
+
+.SOLSearchbox-label {
+  flex-shrink: 0;
+  padding-right: 4px;
+}
+
+.SOLSearchbox-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: solid 1px var(--form-c-border);
+  height: var(--form-h-s);
+  border-radius: 6px;
+  .SOLCombobox-root {
+    flex-shrink: 0;
+    position: relative;
+    &:before {
+      content: "";
+      width: 1px;
+      height: 16px;
+      background: #e2e2e2;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    .SOLCombobox-button {
+      border: none;
+      background: transparent;
+      border-radius: 0px;
+      height: auto;
+    }
+  }
+  .SOLInput-box {
+    border: none;
+    height: auto;
+    position: relative;
+    .SOLSvg-search {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translate(0, -50%);
+      display: block;
+    }
+  }
+}
+
+.SOLSearchbox-btns {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.SOLSearchbox-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.SOLSearchbox-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .SOLSearchbox-label {
+    min-width: 55px;
+  }
+}

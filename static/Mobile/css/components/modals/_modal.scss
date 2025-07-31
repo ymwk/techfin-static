@@ -1,0 +1,352 @@
+.SOLModal-root {
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.s--mb .SOLModal-box {
+    max-width: 360px;
+  }
+
+  &.s--sm .SOLModal-box {
+    max-width: 520px;
+  }
+  &.s--md .SOLModal-box {
+    max-width: 890px;
+  }
+  &.s--lg .SOLModal-box {
+    max-width: var(--max-w);
+  }
+  &.s--full .SOLModal-box {
+    max-width: unset;
+  }
+
+  .SOLTable-data:not(.t--result) {
+    caption {
+      margin-bottom: 0.7em;
+    }
+
+    th,
+    td {
+      height: 42px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }
+}
+
+.SOLModal-backdrop {
+  @include backdrop;
+}
+
+.SOLModal-box {
+  @include popBox;
+  width: calc(100% - 80px);
+  min-height: 250px;
+  max-width: 590px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.SOLModal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  margin: -2px -2px 0 auto;
+}
+
+.SOLModal-title {
+  position: relative;
+  flex-shrink: 0;
+  &-desc {
+    font-size: 14px;
+    font-weight: 400;
+    color: #404252;
+    display: block;
+    padding: 10px 0 0 0;
+  }
+  .SOLTitle-t2 {
+    height: 40px;
+    border-bottom: 1px solid #eaeaea;
+    &.center {
+      text-align: center;
+      border: none;
+    }
+  }
+
+  .SOLTitle-t3.pdt40 {
+    padding: 40px 0 0 0;
+  }
+
+  .SOLTitle-t3.border-type {
+    border-bottom: solid 1px #e6e8eb;
+    padding-bottom: 10px;
+  }
+}
+
+.SOLModal-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 0;
+  overflow-y: auto;
+}
+
+.SOLModal-desc {
+  font-size: var(--font-14);
+  text-align: center;
+  line-height: 20px;
+}
+
+.SOLModal-bottom-desc {
+  padding: 0 0 20px 0;
+  font-size: 14px;
+  border-bottom: solid 1px #e6e8eb;
+  span.bold {
+    font-weight: 700;
+  }
+}
+
+.SOLModal-action {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 0 6px;
+
+  .SOLBtn-root {
+    flex: 1;
+    max-width: 160px;
+  }
+}
+
+.SOLModal-msgbox {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--c-bg);
+  line-height: 1.6;
+
+  li {
+    &::before {
+      content: "·";
+      padding-right: 4px;
+    }
+  }
+}
+
+.SOLModal-terms-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  color: var(--fc-gray1);
+  line-height: 1.43;
+}
+
+.SOLModal-terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  &.h--sm {
+    & > li {
+      padding: 8px 16px;
+    }
+  }
+
+  & > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+
+    &:not(:first-of-type) {
+      font-size: var(--font-13);
+    }
+  }
+}
+
+.txt-link {
+  color: var(--c-active);
+  text-decoration: underline;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  padding: 20px 0 0 0;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// 안내용 공통 팝업
+.review-popup-component {
+  position: fixed;
+  z-index: 998;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 600px;
+  border-radius: 16px 16px 0 0;
+  background-color: #fff;
+  box-shadow: 0 3px 6px 0 #00000029;
+  box-sizing: border-box;
+  //display: none;
+  &.w312 {
+    width: 312px;
+    height: 480px;
+    .review-popup-header {
+      .tit {
+        font-size: var(--font-16);
+      }
+    }
+  }
+  &.w520 {
+    width: 520px;
+    height: 400px;
+  }
+  &.w400 {
+    width: 400px;
+  }
+
+  &.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.bottom {
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.left {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  &.right {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+  }
+
+  .review-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #e6e8eb;
+    padding: 16px 24px;
+    .tit {
+      width: 100%;
+      font-size: 20px;
+      font-weight: 700;
+      color: #222222;
+      padding-right: 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .h-close-btn {
+      display: block;
+      text-indent: -9999px;
+      width: 16px;
+      height: 16px;
+      background: url(/src/app/backoffice/resource/images/review-popup-c-btn.png)
+        no-repeat;
+      cursor: pointer;
+    }
+  }
+  .review-popup-contents {
+    padding: 30px 24px 0 24px;
+    max-height: calc(100% - 90px);
+    overflow-y: scroll;
+    /* Webkit 기반 브라우저 (Chrome, Safari 등) */
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: #222222;
+    }
+  }
+  .review-popup-contents::-webkit-scrollbar-track {
+    background: transparent; /* 스크롤 트랙 숨기기 */
+  }
+
+  .skip-today-box {
+    width: 100%;
+    position: absolute;
+    bottom: -51px;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #353535;
+    padding: 16px 24px;
+    border-radius: 0 0 16px 16px;
+    box-sizing: border-box;
+
+    .chk-box {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      label {
+        color: #fff;
+        display: inline-block;
+        padding: 0 0 0 5px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #bababa;
+      }
+    }
+
+    .skip-btn-close {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #bababa;
+      position: relative;
+      padding: 0 0 0 20px;
+      cursor: pointer;
+      margin-left: auto; // 핵심 포인트
+      &:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: url(/src/app/backoffice/resource/images/skip-btn-close.png)
+          no-repeat;
+        position: absolute;
+        top: 4px;
+        left: 0;
+      }
+    }
+  }
+}
+
+// 안내용 공통 팝업 사이즈별
+@media all and (max-width: 800px) {
+  .review-popup-component {
+    width: 90%;
+  }
+}

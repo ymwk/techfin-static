@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.AidataReport {
+  &-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-wrap {
+    width: 1238px;
+    //height: 1123px;
+    min-height: 297mm;
+    background: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &.cover {
+      height: 1750px;
+    }
+  }
+}
+i {
+  font-style: normal;
+}

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <title>크레디뷰 웹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="Description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Classification" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="크레디뷰" />
+    <meta property="og:image" content="/Crediview.jpg" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="웹사이트주소" />
+    <meta property="al:web:url" content="웹사이트주소" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="웹사이트주소" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/Web/css/crediview.css" />
+  </head>
+  <body>
+    <div class="console-root">
+      <!-- header include -->
+      <header class="SOLHeader-root">
+        <div class="SOLHeader-inner">
+          <h1 class="SOLHeader-logo">
+            <a href="/src/app/crediview/landing">
+              <div class="logo">
+                <span class="eng">Crediview</span>
+                <span class="kr">크레디뷰</span>
+              </div>
+            </a>
+          </h1>
+
+          <nav class="SOLHeader-nav service">
+            <a href="#">서비스 소개</a>
+            <a href="#">기업신용평가</a>
+            <a href="#"
+              >AI경영진단보고서<span class="label"
+                ><span class="beta">Beta</span></span
+              ></a
+            >
+
+            <div class="SOLHeader-nav-submenu">
+              <div class="SOLHeader-nav-submenu-inner service">
+                <ul>
+                  <li><a href="#">기업신용평가</a></li>
+                </ul>
+
+                <ul>
+                  <li><a href="#">신용평가 신청</a></li>
+                  <li><a href="#">신용평가등급확인서 제출</a></li>
+                  <li><a href="#">등급 산출 및 제출내역</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div class="SOLHeader-global">
+            <a
+              href="/src/app/crediview/members/signup/index.html"
+              class="SOLHeader-global-link"
+              >회원가입</a
+            >
+            <a
+              href="/src/app/crediview/members/login/index.html"
+              class="SOLHeader-global-btn"
+              >로그인</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <div class="console-container">
+        <div class="console-inner">
+          <div class="console-content">
+            <div class="console-title">
+              <h2 class="SOLTitle-t1">신용정보활용체제</h2>
+            </div>
+
+            <div class="console-main">
+              <!-- console-header -->
+              <div class="console-header">
+                <div class="console-header-option">
+                  <div class="SOLCombobox-root" style="width: 200px">
+                    <button
+                      type="button"
+                      class="SOLCombobox-button"
+                      onclick="combobox(this)"
+                    >
+                      시행일 : 2024-07-01
+                    </button>
+                    <div class="SOLCombobox-option">
+                      <ul>
+                        <li>
+                          <button type="button">시행일 : 2024-07-01</button>
+                        </li>
+                        <li>
+                          <button type="button">시행일 : 2024-11-01</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guide-body">
+                <h3 class="SOLTitle-t3">
+                  주식회사 테크핀레이팅스는 “신용정보의 이용 및 보호에 관한
+                  법률” 제 31조에 의거 관리하는 신용정보의 종류, 이용목적,
+                  제공대상 및 신용정보주체의 권리 및 행사방법,
+                  신용정보관리⋅보호인 등에 대하여 다음과 같이 공시합니다.
+                </h3>
+
+                <h4 class="SOLTitle-t4">
+                  제1조(신용정보 보호 및 권리에 관한 기본 계획)
+                </h4>
+                <ul class="guide-list pdl-0">
+                  <li>
+                    <p>
+                      주식회사 테크핀레이팅스는 신용정보의 이용 및 보호에 관한
+                      법률(이하 "신용정보법") 및 관련 법령을 철저히 준수하며,
+                      수집된 기업 정보를 안전하게 관리하고 보호합니다. 이러한
+                      활동은 고객 동의 하에 금융거래를 비롯한 상업적 거래의 설정
+                      및 유지에 필수적입니다. 주식회사 테크핀레이팅스는 고객
+                      권익을 최우선으로 하여 정보를 합법적이고 적절하게 처리할
+                      것을 약속합니다. 기업 정보의 외부 제공은 고객의 사전 고지
+                      및 동의, 또는 법적으로 허용되는 경우에 한해 이루어집니다.
+                      또한, 관련 법률에 따라 기업 정보 접근 및 수정 권리를
+                      보장하며, 사용자의 권리와 이익을 보호하기 위해 지속적인
+                      노력을 기울일 것입니다.
+                    </p>
+                  </li>
+                </ul>
+
+                <h4 class="SOLTitle-t4">
+                  제2조(관리하는 신용정보의 종류 : 기업 및 법인신용정보)
+                </h4>
+                <ul class="guide-list">
+                  <li>
+                    <p>1. 식별정보</p>
+                  </li>
+                  <li>
+                    <p>2. 신용거래정보</p>
+                  </li>
+                  <li>
+                    <p>3. 신용도판단정보</p>
+                  </li>
+                  <li>
+                    <p>4. 신용능력정보</p>
+                  </li>
+                  <li>
+                    <p>5. 공공정보</p>
+                  </li>
+                  <li>
+                    <p>6. 신용등급 및 평점정보</p>
+                  </li>
+                  <li>
+                    <p>7. 신용조회정보</p>
+                  </li>
+                  <li>
+                    <p>8. 기업신용평가를 위한 정보</p>
+                  </li>
+                  <li>
+                    <p>9. 기타 신용도를 판단할 수 있는 정보</p>
+                  </li>
+                </ul>
+
+                <h4 class="SOLTitle-t4">제3조(관리하는 신용정보의 이용목적)</h4>
+                <ul class="guide-list">
+                  <li>
+                    <p>1. 기업신용조회업무</p>
+                  </li>
+                  <li>
+                    <p>2. 집중관리·활용</p>
+                  </li>
+                  <li>
+                    <p>3. 통계작성, 연구, 공익적 기록보존 등</p>
+                  </li>
+                  <li>
+                    <p>
+                      4. 신용정보회사 또는 신용정보 집중기관 상호간 신용정보
+                      교환 및 활용
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      5. 기업에 관한 신용정보 그 밖의 정보를 기초로 하는 데이터
+                      분석 및 컨설팅 업무
+                    </p>
+                  </li>
+                  <li>
+                    <p>6. 신용정보법 및 다른 법령이 허용하는 목적</p>
+                  </li>
+                  <li>
+                    <p>7. 기타 동법 및 다른 법률의 규정에서 정한 경우</p>
+                  </li>
+                </ul>
+
+                <h4 class="SOLTitle-t4">
+                  제4조(관리하는 신용정보의 제공 대상)
+                </h4>
+                <ul class="guide-list">
+                  <li>
+                    <p>1. 국가기관, 지방자치단체, 공공단체 및 연구기관</p>
+                  </li>
+                  <li>
+                    <p>2. 신용정보제공·이용자</p>
+                  </li>
+                  <li>
+                    <p>3. 신용정보회사</p>
+                  </li>
+                  <li>
+                    <p>4. 신용정보 집중기관</p>
+                  </li>
+                  <li>
+                    <p>5. 기타 신용정보법 및 다른 법률에서 허용하는 자</p>
+                  </li>
+                </ul>
+
+                <h4 class="SOLTitle-t4">
+                  제5조(신용정보주체의 권리 및 행사방법)
+                </h4>
+                <ul class="guide-list">
+                  <li>
+                    <p>
+                      1. 신용정보 열람청구권<br />
+                      신용정보주체는 본인의 신분을 나타내는 증표를 제시하고,
+                      신용정보회사가 보유하고 있는 본인에 관한 신용정보에 대한
+                      열람을 청구할 수 있습니다.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      2. 신용정보 정정·삭제 청구권<br />
+                      신용정보주체의 신용정보가 사실과 다른 경우에는
+                      신용정보회사에게 정정 또는 삭제를 청구할 수 있습니다.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      3. 신용정보 제공 사실 통보 요구권<br />
+                      신용정보주체는 본인에 관한 신용정보를 제공한 내역을
+                      통보하도록 요구할 수 있습니다.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      4. 신용정보 이용 및 제공사실 조회권<br />
+                      신용정보주체는 본인에 관한 신용정보를 이용하거나 제공한
+                      내역을 조회할 수 있습니다.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      5. 손해배상청구권<br />
+                      신용정보회사 등과 기타 신용정보의 이용자가 동법을 위반하여
+                      신용정보 주체에게 피해를 입힌 경우 신용정보 주체는
+                      위반자에 대하여 손해배상을 청구할 수 있습니다. 안내 및
+                      접수처는 제7조와 같습니다.
+                    </p>
+                  </li>
+                </ul>
+
+                <h4 class="SOLTitle-t4">
+                  제6조(기업신용등급에 산정되는 신용정보의 종류, 반영비중 및
+                  반영기)
+                </h4>
+                <ul class="guide-list">
+                  <li>
+                    <p>
+                      기업신용등급 산정에 반영되는 신용정보의 종류와 반영비중 및
+                      반영기간에 관한 자료는 (주)테크핀레이팅스 홈페이지 하단의
+                      신용평가체계 공시를 참고하시기 바랍니다.
+                    </p>
+                  </li>
+                </ul>
+
+                <h4 class="SOLTitle-t4">제7조(신용정보관리⋅보호인)</h4>
+
+                <ul class="guide-list">
+                  <li>
+                    <table class="SOLTable-list l--auto">
+                      <thead>
+                        <tr>
+                          <th>구분</th>
+                          <th>부서 및 담당자</th>
+                          <th>연락처</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>신용정보 관리 / 보호인</td>
+                          <td>사업지원본부 김창훈 본부장</td>
+                          <td>02-6233-2553</td>
+                        </tr>
+                        <tr>
+                          <td>신용정보보호 담당부서</td>
+                          <td>경영전략팀</td>
+                          <td>02-6233-2604</td>
+                        </tr>
+                        <tr>
+                          <td>신용정보관련 고객 지원부서</td>
+                          <td>금융솔루션팀</td>
+                          <td>02-6233-2555</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>
+                        <p>
+                          ※ 주소 : 서울특별시 중구 을지로29, 더존을지타워 10F
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <h4 class="SOLTitle-t4">
+                  제8조(신용정보 활용체제 변경에 따른 공지)
+                </h4>
+                <ul class="guide-list">
+                  <li>
+                    <p>
+                      기업신용등급 산정에 반영되는 신용정보의 종류와 반영비중 및
+                      반영기간에 관한 자료는 (주)테크핀레이팅스 홈페이지 하단의
+                      신용평가체계 공시를 참고하시기 바랍니다.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- console-main -->
+          </div>
+          <!-- console-content -->
+        </div>
+        <!-- console-inner -->
+      </div>
+      <!-- console-container -->
+
+      <!-- footer include -->
+      <footer class="SOLFooter-root">
+        <nav class="SOLFooter-nav">
+          <ul class="SOLFooter-nav-menu">
+            <li>
+              <a href="#서비스 소개">서비스 소개</a>
+              <ul>
+                <li><a href="#기업신용평가">기업신용평가</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/src/app/crediview/service/register">기업신용평가</a>
+              <ul>
+                <li>
+                  <a href="/src/app/crediview/service/register"
+                    >신용평가 신청</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/app/crediview/service/submit"
+                    >신용평가등급확인서 제출</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/app/crediview/service/result"
+                    >등급 산출 및 제출내역</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#회사소개"
+                >AI경영진단보고서<span class="label"
+                  ><span class="beta">Beta</span></span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#회사소개">회사소개</a>
+            </li>
+            <li>
+              <a href="#다운로드센터">다운로드센터</a>
+            </li>
+            <li>
+              <a href="/src/app/crediview/cs/notice">고객지원</a>
+              <ul>
+                <li><a href="/src/app/crediview/cs/notice">공지사항</a></li>
+                <li><a href="/src/app/crediview/cs/faq">자주 묻는 질문</a></li>
+                <li><a href="/src/app/crediview/cs/inquiry">1:1 문의</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <hr class="SOLFooter-line" />
+
+        <div class="SOLFooter-container">
+          <div class="SOLFooter-content">
+            <div class="SOLFooter-logo">
+              <img
+                src="/static/Common/image/crediview/logo/logo_techpin_bk.png"
+                alt="Techfin ratings"
+              />
+            </div>
+            <div class="SOLFooter-menu">
+              <a href="/src/app/crediview/common/conditions.html"
+                >신용평가체계</a
+              >
+              <a href="/src/app/crediview/common/privacy.html"
+                ><em>개인정보처리방침</em></a
+              >
+            </div>
+            <div class="SOLFooter-utils">
+              <div class="SOLFooter-social">
+                <a href="#blog"
+                  ><img
+                    src="/static/Common/image/icon/ic_sns_blog.svg"
+                    alt="blog"
+                /></a>
+                <!-- <a href="#kakao"><img src="/static/image/icon/ic_sns_kakao.svg" alt="kakao"></a>
+                  <a href="#facebook"><img src="/static/image/icon/ic_sns_facebook.svg" alt="facebook"></a>
+                  <a href="#youtube"><img src="/static/image/icon/ic_sns_youtube.svg" alt="youtube"></a> -->
+              </div>
+              <div class="SOLFooter-dropbox">
+                <div class="SOLFooter-dropbox-inner">
+                  <button type="button" class="SOLFooter-dropbox-btn">
+                    Family Site
+                  </button>
+                  <ul>
+                    <li>
+                      <a href="https://techfinratings.com" target="_blank"
+                        >Techfin ratings</a
+                      >
+                    </li>
+                    <li><a href="" target="_blank">WEHAGO</a></li>
+                    <li><a href="" target="_blank">Amaranth 10</a></li>
+                    <li><a href="" target="_blank">OmniEsol</a></li>
+                    <li>
+                      <a href="" target="_blank">매출채권팩토링 플랫폼</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- SOLFooter-utils end -->
+          </div>
+
+          <div class="SOLFooter-address">
+            <p class="line">
+              <span>(주)테크핀레이팅스</span>
+              <span>대표 : 옥형석</span>
+              <!-- <span>주소 : 서울특별시 중구 을지로 29, 10F (을지로 1가, 더존을지타워)</span> -->
+              <span>사업자등록번호 : 370-88-02545</span>
+              <span>통신판매업신고 : 2024-서울중구-1794</span>
+            </p>
+            <p class="line">
+              <span>대표전화 : 1660-3832</span>
+              <span>이메일 : support@techfinratings.com</span>
+            </p>
+            <p class="copyright">
+              Copyright©Techfinratings Co,. Ltd All Rights Reserved.
+            </p>
+          </div>
+        </div>
+        <!-- SOLFooter-container end -->
+      </footer>
+    </div>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

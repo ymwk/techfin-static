@@ -1,0 +1,105 @@
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.lock {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.landing {
+  &-root {
+    .mb-landing-container {
+      width: 100%;
+      .landing-section-inner {
+        padding: 0 20px;
+        height: 100%;
+        &.pd-0 {
+          padding: 0;
+        }
+      }
+    }
+  }
+  // top button
+  &-topper {
+    z-index: 9;
+    position: sticky;
+    right: 0;
+    bottom: 0;
+    &-wrap {
+      position: absolute;
+      bottom: 100px;
+      right: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+    &-list {
+      border-radius: 8px;
+      border: solid 1px #ebebeb;
+      background-color: #fff;
+      padding: 16px 0;
+      margin-bottom: 16px;
+      li {
+        &:first-child {
+          a {
+            padding: 0px 0;
+          }
+        }
+
+        &:nth-child(2) {
+          a {
+            padding-bottom: 0px;
+          }
+        }
+
+        &:nth-child(3) {
+          a {
+            padding-bottom: 0px;
+          }
+        }
+
+        &:last-child {
+          a {
+            padding-bottom: 0px;
+          }
+        }
+        a {
+          display: block;
+          padding: 24px 10px;
+          .img {
+            img {
+              display: block;
+              margin: 0 auto;
+            }
+          }
+          span {
+            display: block;
+            font-size: var(--font-12);
+            color: var(--fc-default);
+            font-weight: 400;
+            text-align: center;
+            padding: 4px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-topBtn {
+    width: 40px;
+    height: 40px;
+    background: url("../../Common/image/crediview/landing/ic-quick-top-normal.png")
+      no-repeat center;
+    background-size: 40px;
+    transition: color 0.2s, bottom 0.4s;
+    display: none;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      background: url("../../Common/image/crediview/landing/ic-quick-top-hover.png")
+        no-repeat center;
+      background-size: 40px;
+    }
+  }
+}

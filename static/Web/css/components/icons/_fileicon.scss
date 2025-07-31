@@ -1,0 +1,79 @@
+.SOLFileIcon--root {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  &.file--icon--pdf {
+    background-image: url("../../Common/image/icon/file_board_pdf_small.svg");
+  }
+
+  &.file--icon--ppt {
+    background-image: url("../../Common/image/icon/file_board_ppt_small.svg");
+  }
+
+  &.file--icon--xls {
+    background-image: url("../../Common/image/icon/file_board_xls_small.svg");
+  }
+
+  &.file--icon--doc {
+    background-image: url("../../Common/image/icon/file_board_doc_small.svg");
+  }
+
+  &.file--icon--hwp {
+    background-image: url("../../Common/image/icon/file_board_hwp_small.svg");
+  }
+
+  &.file--icon--img {
+    background-image: url("../../Common/image/icon/file_board_img_small.svg");
+  }
+
+  &.file--icon--mov {
+    background-image: url("../../Common/image/icon/file_board_mov_small.svg");
+  }
+
+  &.file--icon--zip {
+    background-image: url("../../Common/image/icon/file_board_zip_small.svg");
+  }
+
+  &.file--icon--html {
+    background-image: url("../../Common/image/icon/file_board_html_small.svg");
+  }
+
+  &.file--icon--txt {
+    background-image: url("../../Common/image/icon/file_board_txt_small.svg");
+  }
+
+  &.file--icon--xd {
+    background-image: url("../../Common/image/icon/file_board_xd_small.svg");
+  }
+
+  &.file--icon--ps {
+    background-image: url("../../Common/image/icon/file_board_ps_small.svg");
+  }
+
+  &.file--icon--ai {
+    background-image: url("../../Common/image/icon/file_board_ai_small.svg");
+  }
+
+  &.file--icon--ae {
+    background-image: url("../../Common/image/icon/file_board_ae_small.svg");
+  }
+
+  &.file--icon--pr {
+    background-image: url("../../Common/image/icon/file_board_pr_small.svg");
+  }
+
+  &.file--icon--mp3 {
+    background-image: url("../../Common/image/icon/file_board_mp3_small.svg");
+  }
+
+  &.file--icon--etc {
+    background-image: url("../../Common/image/icon/file_board_etc_small.svg");
+  }
+
+  &.file--icon--id {
+    background-image: url("../../Common/image/icon/file_board_id_small.svg");
+  }
+}

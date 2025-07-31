@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>크레디뷰 서비스</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/crediview.css">
+</head>
+<body>
+  <!-- Modal start -->
+  <div class="SOLModal-root">
+    <div class="SOLModal-backdrop"></div>
+    <div class="SOLModal-box">
+      <div class="SOLModal-title">
+        <h3 class="SOLTitle-t2">휴대폰 번호 인증</h3>
+        <div class="SOLModal-close">
+          <button type="button" class="SOLIconBtn-root">
+            <i class="SOLIcon-root SOLIcon-close"></i>
+            <span class="blind">Close</span>
+          </button>
+        </div>
+      </div>
+      <div class="SOLModal-content">
+        
+
+        <div class="wrapper-inputlist">
+          <label class="SOLInput-root s--lg error-type02">
+            <div class="flex-column">
+                <span class="SOLInput-label">휴대폰 번호</span>
+                <div class="SOLInput-box">
+                    <input type="text" placeholder="휴대폰 번호를 입력하세요." value="" class="SOLInput-field">
+                    <span class="SOLInput-wrap">
+                        <span class="SOLInput-wrap--hidden">
+                            <button type="button" class="SOLInput-btn SOLIcon-close"><span class="blind">Del</span></button>
+                        </span>
+                    <button type="button" class="SOLBtn-root t--outlined" disabled="false">인증번호 전송</button>
+                    </span>
+                </div>
+              </div>
+            
+            <!-- 에러메세지 -->
+            <div class="SOLInput-byte s--between">
+                <p class="SOLInput-msg c--error">휴대폰 번호는 01로 시작하고 10~11자리여야 합니다.</p>
+             <!-- byte -->
+                <!-- <span class="SOLInput-byte--count">
+                    <i>0</i>
+                    <i>/</i>
+                    <i>2000</i>
+                    <i>byte</i>
+                </span> -->
+            </div>
+          </label>
+
+         
+          
+          <label class="SOLInput-root s--lg error-type02">
+            <div class="flex-column">
+                <span class="SOLInput-label">인증번호</span>
+                <div class="SOLInput-box">
+                    <input type="text" title="인증번호" placeholder="인증번호를 입력하세요." class="SOLInput-field">
+                    <span class="SOLInput-wrap">
+                    <span class="SOLInput-count">02:00</span>
+                    <button type="button" class="SOLBtn-root t--outlined" disabled="true" style="width:106px">인증</button>
+                    </span>
+                </div>
+            </div>
+          </label>
+
+          
+        </div>
+        
+      </div>
+      <div class="SOLModal-action">
+        <button type="button" class="SOLBtn-root s--lg t--outlined">취소</button>
+        <button type="button" class="SOLBtn-root s--lg t--contained" disabled>확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+</body>
+</html>

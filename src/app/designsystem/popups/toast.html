@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - Modal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Web/css/designsystem.css" />
+    <style>
+      .SOLToast-root {
+        position: relative;
+        width: 100%;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Toast popup</h2>
+        <p class="comp-pagetitle-desc">토스트 메시지 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Default Toast</h3>
+
+          <div class="SOLToast-root">
+            <div class="SOLToast-box">
+              <p class="SOLToast-icon">인증완료 되었습니다.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Backdrop Toast</h3>
+
+          <div class="SOLToast-root">
+            <div class="SOLToast-backdrop"></div>
+            <div class="SOLToast-box">
+              <p class="SOLToast-icon">인증완료 되었습니다.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Error Toast</h3>
+
+          <div class="SOLToast-root">
+            <div class="SOLToast-backdrop"></div>
+            <div class="SOLToast-box c--error">
+              <p class="SOLToast-icon">회원등급 변경 대기중입니다.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Snackbar</h3>
+
+          <div class="SOLToast-root">
+            <div class="SOLToast-backdrop"></div>
+            <div class="SOLToast-box c--error">
+              <p class="SOLToast-icon">
+                임시회원입니다. 관리자에게 회원등급 변경을 요청하세요.
+              </p>
+              <button type="button" class="SOLTextBtn-root">요청하기</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

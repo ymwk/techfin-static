@@ -1,0 +1,939 @@
+@import "../../Common/font/pretendard/pretendardvariable.css";
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  touch-action: auto;
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+  touch-action: auto;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary { /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+select,
+textarea {
+  font: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+:root {
+  --fc-default: #222;
+  --fc-gray1: #7b7b7b;
+  --fc-gray2: #9b9ba0;
+  --fc-rating: #1e479f;
+  --c-component: #265cf0;
+  --c-disabled: #bebebe;
+  --c-active: #3b5dfb;
+  --c-success: #18be71;
+  --c-error: #fc5356;
+  --c-warn: #febb2b;
+  --c-bg: #f8f9fb;
+  --tb-border: #e6e8eb;
+  --tb-bg: #f7f8fa;
+  --c-hover: #e9eff3;
+  --bc-hover: rgba(77, 124, 254, 0.1);
+  --form-h: 38px;
+  --form-round: 4px;
+  --form-pd: 1em;
+  --form-c-border: rgb(10, 43, 88, 0.1);
+  --form-c-border-h: rgb(10, 43, 88, 0.3);
+  --form-c-bg-dis: #f5f5f5;
+  --form-c-text-dis: rgba(34, 34, 34, 0.2);
+  --max-w: 1200px;
+  --min-w: 1200px;
+  --spc-w: 35px;
+  --side-w: 220px;
+  --side-gap: 40px;
+  --max-w-ld: 1102px;
+  --max-w-auto: auto;
+  --font-14: 1rem;
+  --font-9: 0.64rem;
+  --font-11: 0.79rem;
+  --font-12: 0.86rem;
+  --font-13: 0.93rem;
+  --font-15: 1.07rem;
+  --font-16: 1.14rem;
+  --font-17: 1.21rem;
+  --font-18: 1.29rem;
+  --font-19: 1.36rem;
+  --font-20: 1.43rem;
+  --font-21: 1.5rem;
+  --font-22: 1.57rem;
+  --font-24: 1.71rem;
+  --font-26: 1.86rem;
+  --font-28: 2rem;
+  --font-30: 2.142rem;
+  --font-32: 2.29rem;
+  --font-34: 2.43rem;
+  --font-36: 2.57rem;
+  --font-50: 3.57rem;
+  --font-60: 4.29rem;
+  --font-80: 5.71rem;
+  --ease: cubic-bezier(0, 0.75, 0, 1);
+  --gra: linear-gradient(97deg, #0046ff, #8e48ff 60%);
+  --beta-g: linear-gradient(
+    108.47deg,
+    #22d6ff -38.28%,
+    #225eff 43.3%,
+    #8c2fff 100%
+  );
+  --header-bg: #3d58c9;
+}
+@media screen and (max-width: 767px) {
+  :root {
+    --spc-w: 5vw;
+  }
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+div::before, div::after, p::before, p::after, span::before, span::after,
+dl::before,
+dl::after, dt::before, dt::after, dd::before, dd::after, ol::before, ol::after, ul::before, ul::after, li::before, li::after, button::before, button::after, a::before, a::after, input::before, input::after, i::before, i::after {
+  box-sizing: border-box;
+}
+
+input, button, a, textarea {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: #bbb;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid;
+  margin: 0;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+}
+
+.ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  padding-top: 10rem;
+  gap: 2rem;
+}
+
+.doc-header {
+  z-index: 1;
+  position: absolute;
+  inset: 0 0 auto 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 4rem;
+  width: 100%;
+  height: 10rem;
+}
+
+.doc-btn-download {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  aspect-ratio: 1;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: color 0.2s;
+}
+.doc-btn-download:hover {
+  color: #fff;
+}
+.doc-btn-download svg {
+  width: 3.5rem;
+}
+.doc-btn-download path {
+  fill: currentColor;
+}
+
+.SOLDOC-root {
+  position: relative;
+  width: 123.8rem;
+  aspect-ratio: 21/29.7;
+  padding: 14.5rem 10rem 7rem;
+  background: #fff url(../../Common/image/crediview/doc/doc_paper.png) no-repeat left top/100%;
+}
+.SOLDOC-root::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72rem;
+  height: 88.8rem;
+  background-image: url(../../Common/image/crediview/doc/doc_pattern2.png), url(../../Common/image/crediview/doc/doc_pattern2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.SOLDOC-root::after {
+  content: "";
+  position: absolute;
+  bottom: 10rem;
+  right: 0;
+  width: 33.4rem;
+  height: 56.5rem;
+  background-image: url(../../Common/image/crediview/doc/doc_pattern1.png), url(../../Common/image/crediview/doc/doc_pattern1.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+}
+.SOLDOC-root > * {
+  position: relative;
+  z-index: 1;
+}
+
+.SOLDOC-lead {
+  position: absolute;
+  top: 7rem;
+  left: 10rem;
+  right: 10rem;
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  margin-bottom: 4.4rem;
+}
+.SOLDOC-lead .use {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+}
+.SOLDOC-lead .num {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.9rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.SOLDOC-foot {
+  position: absolute;
+  bottom: 9.6rem;
+  left: 10rem;
+  right: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+.SOLDOC-foot .qr-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  text-align: right;
+}
+.SOLDOC-foot .qr {
+  width: 10.125rem;
+  height: 10.125rem;
+}
+.SOLDOC-foot .qr img {
+  max-width: 100%;
+}
+
+.SOLDOC-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2.6rem;
+  color: #001a4f;
+}
+
+.SOLDOC-title {
+  font-size: 5.4rem;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+}
+
+.SOLDOC-title-sub, .SOLDOC-table caption {
+  margin-bottom: 0.8rem;
+  font-size: 2.2rem;
+  line-height: 1.82;
+  font-weight: 700;
+}
+
+.SOLDOC-rating {
+  font-size: 13rem;
+  color: #1e479f;
+  font-weight: 700;
+  text-align: center;
+}
+
+.SOLDOC-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+}
+
+.SOLDOC-desc-list {
+  margin-top: -0.8rem;
+  font-size: 1.7rem;
+  line-height: 1.82;
+  word-break: keep-all;
+}
+.SOLDOC-desc-list > li {
+  position: relative;
+  padding-left: 1.1em;
+  counter-increment: number 1;
+}
+.SOLDOC-desc-list > li::before {
+  content: counter(number) ".";
+  position: absolute;
+  left: 0;
+}
+
+.SOLDOC-company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 2.6rem;
+}
+.SOLDOC-company .stamp {
+  height: 7.7rem;
+}
+.SOLDOC-company .stamp img {
+  max-height: 100%;
+}
+
+.SOLDOC-graph-box {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  background-color: rgba(212, 205, 199, 0.3);
+}
+.SOLDOC-graph-box .desc {
+  margin-top: auto;
+  font-size: 1.6rem;
+}
+
+.SOLDOC-graph-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.SOLDOC-graph-canvas {
+  position: relative;
+  margin-bottom: -1px;
+}
+.SOLDOC-graph-canvas img,
+.SOLDOC-graph-canvas svg {
+  display: block;
+  width: 100%;
+}
+
+.SOLDOC-graph-tag {
+  position: absolute;
+  bottom: 2rem;
+}
+.SOLDOC-graph-tag .tag {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 7rem;
+  height: 5rem;
+  padding: 0 2rem;
+  border-radius: 0.7rem;
+  background-color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e479f;
+  line-height: 1.1;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateX(-50%);
+}
+.SOLDOC-graph-tag .tag::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  border-width: 1rem 0.7rem;
+  transform: translateX(-50%);
+}
+
+.SOLDOC-graph-legend {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+.SOLDOC-graph-legend > li {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+}
+.SOLDOC-graph-legend > li .bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+.SOLDOC-graph-legend > li .legend {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.2em;
+  line-height: 1.82;
+}
+.SOLDOC-graph-legend > li:first-of-type .bar {
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  background-color: #182a50;
+}
+.SOLDOC-graph-legend > li:nth-child(2) .bar {
+  background-color: #3f598a;
+}
+.SOLDOC-graph-legend > li:nth-child(3) .bar {
+  background-color: #617cb2;
+}
+.SOLDOC-graph-legend > li:nth-child(4) .bar {
+  background-color: #7299e7;
+}
+.SOLDOC-graph-legend > li:nth-child(5) .bar {
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  background-color: #ff976e;
+}
+
+.SOLDOC-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-top: 1px solid #ababab;
+  font-size: 1.8rem;
+}
+.SOLDOC-table caption {
+  display: flex;
+}
+.SOLDOC-table th {
+  width: 17rem;
+  background-color: rgba(212, 205, 199, 0.5);
+  font-weight: normal;
+  text-align: left;
+}
+.SOLDOC-table th,
+.SOLDOC-table td {
+  height: 2.7rem;
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
+.SOLDOC-table th p.flex-txt,
+.SOLDOC-table td p.flex-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.SOLDOC-table th p.flex-txt .sm-txt,
+.SOLDOC-table td p.flex-txt .sm-txt {
+  display: inline-block;
+  font-size: var(--font-20);
+  font-weight: 200;
+}
+
+@media print {
+  html,
+  body {
+    font-size: 0.571vh !important;
+  }
+  .doc-root {
+    padding-top: 0;
+    justify-content: center;
+    gap: 0;
+  }
+  .doc-header {
+    display: none;
+  }
+  .SOLDOC-root {
+    padding: 14.5rem 8rem 7rem;
+  }
+  .SOLDOC-lead {
+    top: 5.5rem;
+    left: 8rem;
+    right: 8rem;
+  }
+  .SOLDOC-foot {
+    bottom: 8rem;
+    left: 8rem;
+    right: 8rem;
+  }
+  .SOLDOC-graph-wrapper {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}

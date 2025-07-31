@@ -1,0 +1,117 @@
+/* 
+ * Nanum Square Web Fonts
+ * Copyright (c) 2010, NAVER Corporation (http://www.nhncorp.com) 
+ */
+
+@font-face {
+    font-family: 'Nanum Square';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://static.wehago.com/fonts/NanumSquare/NanumSquareR.eot);
+    src: local('Nanum Square Regular'),
+    local('NanumSquareR'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareR.woff2) format('woff2'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareR.woff) format('woff'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareR.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Nanum Square';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://static.wehago.com/fonts/NanumSquare/NanumSquareB.eot);
+    src: local('Nanum Square Bold'),
+    local('NanumSquareB'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareB.woff2) format('woff2'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareB.woff) format('woff'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareB.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'douzone';
+    src:
+        /* local('DOUZONEText10'), */
+            url('https://static.wehago.com/fonts/douzone/DOUZONEText10.woff2') format('woff2'),
+            url('https://static.wehago.com/fonts/douzone/DOUZONEText10.woff') format('woff');
+    font-weight: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'douzone';
+    src:
+        /* local('DOUZONEText30'), */
+            url('https://static.wehago.com/fonts/douzone/DOUZONEText30.woff2') format('woff2'),
+            url('https://static.wehago.com/fonts/douzone/DOUZONEText30.woff') format('woff');
+    font-weight: bold;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'douzone';
+    src:
+        /* local('DOUZONEText50'), */
+            url('https://static.wehago.com/fonts/douzone/DOUZONEText50.woff2') format('woff2'),
+            url('https://static.wehago.com/fonts/douzone/DOUZONEText50.woff') format('woff');
+    font-weight: 900;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'douzonetext50';
+    src:
+        /* local('DOUZONEText50'), */
+            url('https://static.wehago.com/fonts/douzone/DOUZONEText50.woff2') format('woff2'),
+            url('https://static.wehago.com/fonts/douzone/DOUZONEText50.woff') format('woff');
+    font-weight: 900;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'douzonetitle';
+    src:
+        /* local('DOUZONETitle30'), */
+            url('https://static.wehago.com/fonts/douzone/DOUZONETitle30.woff2') format('woff2'),
+            url('https://static.wehago.com/fonts/douzone/DOUZONETitle30.woff') format('woff');
+    font-weight: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'douzonetitle';
+    src:
+        /* local('DOUZONETitle50'), */
+            url('https://static.wehago.com/fonts/douzone/DOUZONETitle50.woff2') format('woff2'),
+            url('https://static.wehago.com/fonts/douzone/DOUZONETitle50.woff') format('woff');
+    font-weight: bold;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Nanum Square ko';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://static.wehago.com/fonts/NanumSquare/NanumSquareR.eot);
+    src: local('Nanum Square Regular'),
+    local('NanumSquareR'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareR.woff2) format('woff2'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareR.woff) format('woff'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareR.ttf) format('truetype');
+    unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+@font-face {
+    font-family: 'Nanum Square ko';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://static.wehago.com/fonts/NanumSquare/NanumSquareB.eot);
+    src: local('Nanum Square Bold'),
+    local('NanumSquareB'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareB.woff2) format('woff2'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareB.woff) format('woff'),
+    url(https://static.wehago.com/fonts/NanumSquare/NanumSquareB.ttf) format('truetype');
+    unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+0041-005A, U+0061-007A, U+0030-0039;
+}

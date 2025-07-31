@@ -1,0 +1,373 @@
+@charset "UTF-8";
+.diagn-apply {
+  &-root {
+  }
+  &-sec01 {
+    width: 100%;
+    height: 493px;
+    background: url(../../Common/image/crediview/aireport/diagn-apply01-bg01.png)
+      no-repeat center center;
+    padding: 30px 63px 0 97px;
+    overflow: hidden;
+    border-radius: 13px;
+    .flex-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      .left {
+        padding-top: 70px;
+        .tit-box {
+          .sm-tit01 {
+            display: block;
+            font-size: var(--font-18);
+            font-weight: 400;
+            color: #2c3748;
+          }
+          .lx-tit01 {
+            font-size: var(--font-36);
+            font-weight: 400;
+            color: #2c3748;
+            display: flex;
+            align-items: center;
+            span {
+              display: inline-block;
+              &.bold {
+                font-weight: 700;
+                display: inline-block;
+                padding-right: 5px;
+              }
+              &.gradient-txt {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                width: 46px;
+                height: 33px;
+                background: linear-gradient(
+                  118.64deg,
+                  #22d6ff -45.51%,
+                  #4f5bf6 43.3%,
+                  #8c2fff 105.02%
+                );
+                margin-left: 10px;
+                em {
+                  color: #fff;
+                  display: block;
+                  font-size: 23px;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+          .desc {
+            font-size: var(--font-16);
+            font-weight: 700;
+            line-height: 22px;
+            color: #222222;
+            padding: 30px 0;
+          }
+        }
+        .list-box {
+          li {
+            padding-bottom: 10px;
+            &:last-child {
+              padding-bottom: 0;
+            }
+            span {
+              display: block;
+              font-size: var(--font-13);
+              font-weight: 500;
+              color: #4e5262;
+              padding: 0 0 0 20px;
+              position: relative;
+              &::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                background: url(../../Common/image/crediview/aireport/diagn-apply01-bulit.png)
+                  no-repeat center center;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        .img {
+          width: 380px;
+          aspect-ratio: 1680 / 1844;
+          background: url(../../Common/image/crediview/aireport/diagn-apply01-img01.png)
+            no-repeat center center;
+          background-size: cover;
+          margin-top: 46px;
+        }
+      }
+    }
+  }
+  &-sec02 {
+    padding-top: 30px;
+    .btn-box {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 56px;
+      button {
+        width: 220px;
+        height: 48px;
+        background: linear-gradient(92.94deg, #486ff7 -0.51%, #8a5af6 102.16%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .btn-txt {
+          font-size: var(--font-15px);
+          font-weight: 700;
+          color: #fff;
+        }
+      }
+    }
+    .tit-box {
+      .larg-tit {
+        font-size: var(--font-24);
+        font-weight: 700;
+        color: #000000;
+        text-align: center;
+        position: relative;
+        padding: 20px 0;
+        .gradient-txt {
+          display: inline-block;
+          font-size: var(--font-24);
+          font-weight: 700;
+          background: linear-gradient(85.38deg, #0046ff -0.49%, #8e48ff 92.52%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+        }
+        &::before {
+          content: "";
+          width: 24px;
+          height: 2px;
+          background: #3b5dfb;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+      .desc {
+        font-size: var(--font-12);
+        font-weight: 400;
+        text-align: center;
+        color: #222222;
+        display: block;
+      }
+    }
+    .list-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 45px 0 16px 0;
+      li {
+        width: 25%;
+        background: #f7f8fc;
+        padding: 40px 32px;
+        border-radius: 12px;
+        .img {
+          height: 56px;
+        }
+
+        span {
+          display: block;
+          &.tit {
+            font-size: var(--font-16);
+            font-weight: 700;
+            color: #333333;
+            padding: 16px 0;
+          }
+          &.desc {
+            font-size: var(--font-12);
+            font-weight: 400;
+            color: #7b7b7b;
+          }
+        }
+      }
+    }
+  }
+  &-sec03 {
+    width: 100%;
+    height: 357px;
+    background: url(../../Common/image/crediview/aireport/diagn-apply01-bg03.png)
+      no-repeat center;
+    padding: 24px 40px 0px 50px;
+    position: relative;
+    .flex-box {
+      display: flex;
+      justify-content: space-between;
+      .left {
+        padding: 25px 0 0 0;
+        .desc {
+          font-size: var(--font-18);
+          font-weight: 700;
+          color: rgba(51, 51, 51, 0.6);
+          line-height: 26px;
+          padding-top: 35px;
+          position: relative;
+          em {
+            color: #333333;
+          }
+          &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            background: url(../../Common/image/crediview/aireport/diagn-apply01-img06.png)
+              no-repeat center;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+    .ps-txt-box {
+      position: absolute;
+      bottom: 60px;
+      left: 48px;
+      .txt-inner {
+        &:first-child {
+          padding: 0 0 14px 48px;
+        }
+        &:last-child {
+          padding: 0 0 0 28px;
+        }
+      }
+      p {
+        width: auto;
+        padding: 10px 20px;
+        background: #fff;
+        border-radius: 12px;
+        text-align: center;
+        font-size: var(--font-14);
+        font-weight: 700;
+        border: solid 1px #a5a5a538;
+        box-shadow: 2px 8px 20px 0px #00000014;
+        display: inline-block;
+
+        span {
+          display: inline-block;
+          &.high-txt {
+            color: #ff7272;
+          }
+          &.low-txt {
+            color: #506fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 등급산출 완료 배너(AI경영진단 신청버튼)
+// .ai-service-bn-wrap {
+//   width: 100%;
+//   height: 84px;
+//   background: url(../../Common/image/crediview/aireport/diagnosis-bn-bg.png)
+//     no-repeat center center;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding-right: 30px;
+//   position: relative;
+//   .txt {
+//     font-size: var(--font-19);
+//     font-weight: 400;
+//     color: #fff;
+//     padding: 0 0 0 180px;
+
+//     &::before {
+//       content: "";
+//       width: 162px;
+//       height: 84px;
+//       background: url(../../Common/image/crediview/aireport/diagnosis-bn-img01.png)
+//         no-repeat center center;
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//     }
+//   }
+//   .ai-report-btn {
+//     width: 145px;
+//     height: 39px;
+//     background: none;
+//     border-radius: 100px;
+//     border: solid 1px rgba(255, 255, 255, 0.4);
+//     position: relative;
+//     transition: ease 0.3s;
+//     &:hover {
+//       background: rgba(255, 255, 255, 0.2);
+//     }
+//     span {
+//       display: inline-block;
+//       font-size: var(--font-15);
+//       font-weight: 700;
+//       color: #fff;
+//       padding-right: 20px;
+
+//       &::before {
+//         content: "";
+//         width: 14px;
+//         height: 15px;
+//         background: url(../../Common/image/icon/ic_arrow_w_btn.png) no-repeat
+//           center center;
+//         position: absolute;
+//         top: 50%;
+//         right: 10px;
+//         transform: translate(0, -50%);
+//       }
+//     }
+//   }
+// }
+.ai-service-bn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .txt {
+    color: #8c8c8c;
+    font-size: var(--font-16);
+    font-weight: 400;
+    em {
+      font-weight: 700;
+    }
+  }
+  .ai-report-btn {
+    width: 129px;
+    height: 35px;
+    border-radius: 100px;
+    border: solid 1px #8c8c8c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin-left: 5px;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      background: rgba(140, 140, 140, 0.1);
+    }
+    span {
+      display: block;
+      text-align: center;
+      font-size: var(--font-14);
+      font-weight: 600;
+      color: #8c8c8c;
+    }
+    .SOLIcon-gt--r {
+      max-width: 1rem;
+      &::after {
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid #8c8c8c;
+        border-bottom: 2px solid #8c8c8c;
+      }
+    }
+  }
+}

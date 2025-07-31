@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Mobile/css/designsystem-m.css" />
+    <style>
+      .SOLHeader2-root.t--landing {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Header</h2>
+        <p class="comp-pagetitle-desc">Landing 및 로그인화면 header</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Header theme : landing</h3>
+
+          <header class="SOLHeader2-root t--landing">
+            <div class="SOLHeader-inner">
+              <h1 class="SOLHeader-logo">
+                <a href="#">
+                  <div class="logo">
+                    <span class="eng">Crediview</span>
+                    <span class="kr">크레디뷰</span>
+                  </div>
+                </a>
+              </h1>
+              <div class="SOLHeader-menu">
+                <div class="auth-btn-wrap">
+                  <a href="" class="join">
+                    <span>회원가입</span>
+                  </a>
+                  <a href="" class="login">
+                    <span>로그인</span>
+                  </a>
+                </div>
+                <a href="#n" class="menu-btn">헤더메뉴버튼</a>
+                <div class="SOL-mb-gnb">
+                  <div class="gnb-inner">
+                    <div class="gnb-h">
+                      <a href="#" class="gnb-logo">
+                        <span class="blind">crediview</span>
+                      </a>
+                      <div class="auth-btn-wrap logout">
+                        <a href="" class="join">
+                          <span>로그아웃</span>
+                        </a>
+                      </div>
+                      <span class="close-btn">
+                        <i class="blind">닫기</i>
+                      </span>
+                    </div>
+                    <ul class="gnb-menu">
+                      <li class="depth01">
+                        <a href="#">서비스 소개</a>
+                        <ul class="sub-menu depth02">
+                          <li><a href="#">신용평가 신청</a></li>
+                          <li><a href="#">신용평가등급확인서 제출</a></li>
+                          <li><a href="#">등급 산출 및 제출내역</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth01">
+                        <a href="#" class="ai-post"
+                          >AI경영진단보고서<span class="blind">Beta</span></a
+                        >
+                      </li>
+                      <li class="depth01">
+                        <a href="#">마이페이지</a>
+                        <ul class="sub-menu depth02">
+                          <li><a href="#">회사관리</a></li>
+                          <li><a href="#">인증서 관리</a></li>
+                          <li><a href="#">회원관리</a></li>
+                          <li><a href="#">내 정보 관리</a></li>
+                          <li><a href="#">정산관리</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth01">
+                        <a href="#">고객지원</a>
+                        <ul class="sub-menu depth02">
+                          <li><a href="#">공지사항</a></li>
+                          <li><a href="#">자주 묻는 질문</a></li>
+                          <li><a href="#">1:1 문의</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth01">
+                        <a href="#">서비스 소개</a>
+                        <ul class="sub-menu depth02">
+                          <li><a href="#">기업신용평가</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth01">
+                        <a href="#">회사 소개</a>
+                      </li>
+                    </ul>
+
+                    <!-- <div class="logout-box">
+                      <span class="logout-btn">
+                        <a href="#">로그아웃</a>
+                      </span>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Header theme : logout</h3>
+
+          <header class="SOLHeader2-root t--sub" style="z-index: 0">
+            <div class="SOLHeader-inner">
+              <h1 class="SOLHeader-logo">
+                <a href="#">
+                  <div class="logo">
+                    <span class="eng">Crediview</span>
+                    <span class="kr">크레디뷰</span>
+                  </div>
+                </a>
+              </h1>
+              <div class="SOLHeader-menu">
+                <div class="auth-btn-wrap">
+                  <a href="" class="join">
+                    <span>회원가입</span>
+                  </a>
+                  <a href="" class="login">
+                    <span>로그인</span>
+                  </a>
+                </div>
+                <a href="#n" class="menu-btn">헤더메뉴버튼</a>
+              </div>
+            </div>
+          </header>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Header theme : login</h3>
+
+          <header class="SOLHeader2-root t--sub" style="z-index: 0">
+            <div class="SOLHeader-inner">
+              <h1 class="SOLHeader-logo">
+                <a href="#">
+                  <div class="logo">
+                    <span class="eng">Crediview</span>
+                    <span class="kr">크레디뷰</span>
+                  </div>
+                </a>
+              </h1>
+              <div class="SOLHeader-menu">
+                <div class="auth-btn-wrap">
+                  <a href="" class="join">
+                    <span>회원가입</span>
+                  </a>
+                  <a href="" class="login">
+                    <span>로그인</span>
+                  </a>
+                </div>
+                <a href="#n" class="menu-btn">헤더메뉴버튼</a>
+                <div class="SOL-mb-gnb">
+                  <div class="gnb-inner">
+                    <div class="gnb-h">
+                      <a href="#" class="gnb-logo">
+                        <span class="blind">crediview</span>
+                      </a>
+                      <span class="close-btn">
+                        <i class="blind">닫기</i>
+                      </span>
+                    </div>
+                    <ul class="gnb-menu">
+                      <li class="depth01">
+                        <a href="#">서비스 소개</a>
+                        <ul class="sub-menu depth02">
+                          <li><a href="#">신용평가 신청</a></li>
+                          <li><a href="#">신용평가등급확인서 제출</a></li>
+                          <li><a href="#">등급 산출 및 제출내역</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth01">
+                        <a href="#" class="ai-post"
+                          >AI경영진단보고서<span class="blind">Beta</span></a
+                        >
+                      </li>
+                      <li class="depth01">
+                        <a href="#">마이페이지</a>
+                        <ul class="sub-menu depth02">
+                          <li><a href="#">회사관리</a></li>
+                          <li><a href="#">인증서 관리</a></li>
+                          <li><a href="#">회원관리</a></li>
+                          <li><a href="#">내 정보 관리</a></li>
+                          <li><a href="#">정산관리</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth01">
+                        <a href="#">고객지원</a>
+                        <ul class="sub-menu depth02">
+                          <li><a href="#">공지사항</a></li>
+                          <li><a href="#">자주 묻는 질문</a></li>
+                          <li><a href="#">1:1 문의</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth01">
+                        <a href="#">서비스 소개</a>
+                        <ul class="sub-menu depth02">
+                          <li><a href="#">기업신용평가</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth01">
+                        <a href="#">회사 소개</a>
+                      </li>
+                    </ul>
+
+                    <div class="logout-box">
+                      <span class="logout-btn">
+                        <a href="#">로그아웃</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      //gnb
+      document.addEventListener("DOMContentLoaded", function () {
+        const depth01Links = document.querySelectorAll(
+          ".gnb-menu .depth01 > a"
+        );
+
+        depth01Links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const subMenu = this.nextElementSibling;
+
+            document
+              .querySelectorAll(".gnb-menu .depth01 > a")
+              .forEach((otherLink) => {
+                if (otherLink !== this) {
+                  otherLink.classList.remove("on");
+                  const otherSubMenu = otherLink.nextElementSibling;
+                  if (otherSubMenu) {
+                    otherSubMenu.style.maxHeight = null;
+                  }
+                }
+              });
+
+            // 현재 메뉴 열기/닫기 및 on 클래스 토글
+            if (subMenu.style.maxHeight) {
+              subMenu.style.maxHeight = null;
+              this.classList.remove("on");
+            } else {
+              subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+              this.classList.add("on");
+            }
+          });
+        });
+
+        // 모든 .gnb-menu .depth01 요소를 선택
+        const depth01Items = document.querySelectorAll(".gnb-menu .depth01");
+
+        depth01Items.forEach((item) => {
+          const subMenu = item.querySelector(".sub-menu.depth02");
+          const link = item.querySelector("a");
+
+          if (!subMenu) {
+            // .sub-menu.depth02가 없으면
+            link.style.setProperty("--before-content", "none");
+            link.style.position = "relative";
+          }
+        });
+
+        const menuBtn = document.querySelector(".SOLHeader-menu .menu-btn");
+        const gnb = document.querySelector(".SOL-mb-gnb");
+        const closeBtn = document.querySelector(".gnb-h .close-btn");
+
+        menuBtn.addEventListener("click", function () {
+          gnb.classList.toggle("on");
+        });
+
+        closeBtn.addEventListener("click", function () {
+          gnb.classList.remove("on");
+        });
+      });
+    </script>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

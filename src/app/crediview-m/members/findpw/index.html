@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 서비스 비밀번호 찾기</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Mobile/css/crediview-m.css" />
+  </head>
+  <body>
+    <div class="members-root">
+      <div class="members-container">
+        <div class="members-loginwrap">
+          <div class="members-loginbox signup">
+            <div class="tit-close-wrap">
+              <div class="tit-close-box">
+                <span class="close-btn">
+                  <em class="blind">닫기</em>
+                </span>
+                <h3 class="title">비밀번호 찾기</h3>
+              </div>
+            </div>
+            <h3 class="signup-form-tit">비밀번호 찾기</h3>
+
+            <form method="post">
+              <div class="SOLForm-root">
+                <label class="SOLInput-root">
+                  <span class="SOLInput-label">이메일 주소</span>
+                  <div class="SOLInput-flex-box">
+                    <div class="SOLInput-box">
+                      <input
+                        type="text"
+                        placeholder="이메일 주소를 입력하세요."
+                        class="SOLInput-field"
+                      />
+                      <span class="SOLInput-wrap">
+                        <span class="SOLInput-wrap--hidden">
+                          <button
+                            type="button"
+                            class="SOLInput-btn SOLIcon-close"
+                          >
+                            <span class="blind">Del</span>
+                          </button>
+                        </span>
+                      </span>
+                    </div>
+                    <span class="SOLInput-wrap">
+                      <button type="button" class="SOLBtn-root w80">
+                        인증요청
+                      </button>
+                    </span>
+                  </div>
+                </label>
+                <label class="SOLInput-root">
+                  <span class="SOLInput-label">인증번호</span>
+                  <div class="SOLInput-flex-box">
+                    <div class="SOLInput-box">
+                      <input
+                        type="text"
+                        placeholder="이메일 주소를 입력하세요."
+                        class="SOLInput-field"
+                      />
+                      <span class="SOLInput-wrap">
+                        <span class="SOLInput-wrap--hidden">
+                          <button
+                            type="button"
+                            class="SOLInput-btn SOLIcon-close"
+                          >
+                            <span class="blind">Del</span>
+                          </button>
+                        </span>
+                      </span>
+                    </div>
+                    <span class="SOLInput-wrap">
+                      <button type="button" class="SOLBtn-root w80">
+                        인증
+                      </button>
+                    </span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="loginbox-action">
+                <!--활성화 클래스 : t--contained -->
+                <!--비활성화 클래스 : disabled -->
+                <button
+                  type="button"
+                  class="SOLBtn-root bottom s--xl t--contained"
+                >
+                  확인
+                </button>
+              </div>
+              <!-- 인증번호 성공 토스트 메세지 -->
+              <!-- <div class="SOLToast-root form-toast-type">
+                <div class="SOLToast-backdrop"></div>
+                <div class="SOLToast-box">
+                  <p class="SOLToast-icon">인증번호가 전송되었습니다.</p>
+                </div>
+              </div> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

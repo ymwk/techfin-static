@@ -1,0 +1,879 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>운영관리-등급신청내역</title>
+<script type="text/javascript" src="../resource/js/common.js" ></script>
+<script src="../resource/js/summernote/summernote-lite.js"></script>
+<script src="../resource/js/summernote/lang/summernote-ko-KR.js"></script>
+
+<link rel="stylesheet" href="../resource/css/summernote/summernote-lite.css">
+<link rel="stylesheet" href="../resource/css/popup.css">
+<style>
+	.flex-list{	
+		display: flex;
+		justify-content: flex-start;
+		flex-flow: wrap;
+		gap: 10px;
+		padding: 5px 0;
+	}
+
+	.flex-list div.filter-btn{
+		position: relative;
+	}
+
+	.flex-list div.filter-btn span{
+		background-color: #f5f5f5;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		padding: 2px 5px;
+		font-size: 12px;
+		color: #666;
+		cursor: pointer;
+	}
+
+	.flex-list div.filter-btn div.hover{
+		width: 180px;
+		display: none;
+		position: absolute;
+		background-color: #f5f5f5;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		padding: 5px;
+		font-size: 12px;
+		color: #666;
+		z-index: 1;
+		top:-40px;
+		left: 0;
+	}
+    .radio-box{
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .radio-box p {
+        display: flex;
+    }
+
+    .radio-box p label {
+        padding-left: 5px;
+        font-weight: bold;
+    }
+
+    .chk-box{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap:10px;
+    }
+
+    .chk-box p{
+        display: flex;
+        gap: 5px;
+    }
+
+    .calnder-box{
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+/* 팝업 미리보기 */
+.SOLAlert-root {
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.SOLAlert-root.s--sm .SOLModal-box {
+  min-width: 372px;
+}
+.SOLAlert-root.s--lg .SOLModal-box {
+  min-width: 800px;
+}
+
+.SOLAlert-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s;
+}
+.SOLAlert-backdrop.t--blur {
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+.SOLAlert-box {
+  position: relative;
+  max-height: calc(100vh - 80px);
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  animation: fadeIn 0.5s;
+  width: 380px;
+  padding: 40px 30px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  word-break: keep-all;
+}
+
+.SOLAlert-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+.SOLAlert-content {
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+ .SOLIcon-alert.c--error {
+
+  border: 2px solid rgb(252, 83, 86);
+  border-radius: 50%;
+}
+.SOLIcon-alert {
+  max-width: unset;
+}
+
+.SOLIcon-root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-style: normal;
+  width: 100%;
+  aspect-ratio: 1;
+  min-width: 1rem;
+  max-width: 2rem;
+}
+
+.SOLIcon-alert.c--error::after{
+  content: "";
+  position: absolute;
+  background-color: rgb(252, 83, 86);
+  inset: 0;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.c--error {
+  color: #fc5356 !important;
+}
+
+.SOLIcon-alert.c--error::-ms-ticks-after{
+  content: "";
+  position: absolute;
+  background-color: rgb(252, 83, 86);
+  inset: 0;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.SOLIcon-alert.c--warn .mark, .SOLIcon-alert.c--error .mark {
+  width: 2px;
+}
+
+.SOLIcon-alert.c--warn .mark path, .SOLIcon-alert.c--error .mark path {
+  fill: rgb(252, 83, 86);
+}
+
+.SOLAlert-action {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.SOLAlert-action .SOLBtn-root {
+  min-width: 90px;
+}
+
+.SOLBtn-root {
+  flex-shrink: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+  height: 38px;
+  padding: 0 1em;
+  border-radius: 4px;
+  border: 1px solid rgba(10, 43, 88, 0.18);
+  background-color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #222;
+  transition: color 0.2s, background-color 0.2s;
+}
+.SOLBtn-root:hover:not(:disabled, .disabled), .SOLBtn-root:focus {
+  background-color: rgba(77,124,254,0.1);
+}
+.SOLBtn-root:disabled, .SOLBtn-root.disabled {
+  background-color: rgba(77,124,254,0.1);
+  color: rgba(34, 34, 34, 0.2);
+  border-color: rgba(10, 43, 88, 0.1);
+  cursor: not-allowed;
+}
+.SOLBtn-root.t--contained {
+  background-color: #3b5dfb;
+  color: #fff;
+}
+.SOLBtn-root.t--contained:hover:not(:disabled, .disabled), .SOLBtn-root.t--contained:focus {
+  background-color: rgb(77, 124, 254);
+}
+.SOLBtn-root.t--contained:disabled, .SOLBtn-root.t--contained.disabled {
+  background-color: #a4b4e0;
+  border-color: rgba(10, 43, 88, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+.SOLBtn-root.t--outlined {
+  color: #3b5dfb;
+  border-color: currentColor;
+}
+.SOLBtn-root.t--outlined:disabled, .SOLBtn-root.t--outlined.disabled {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(59, 93, 251, 0.5);
+}
+
+.SOLAlert-msgbox {
+  text-align: left;
+  padding: 12px;
+  background-color: #f8f9fb;
+  line-height: 1.6;
+}
+</style>
+<script type="text/javascript" >
+
+$(document).ready(function(){	
+	
+	$("#btnSubmit").click(function(){
+		bofAlert("시스템 준비중입니다.")
+	});
+	
+	$("#btnRecent").click(function(){
+		bofAlert("시스템 준비중입니다.")
+	});
+	
+	$("#btn_list").click(function(){
+		scrollToTopOfElement("reqHisContainer");
+		$("#reqHisDetailViewArea").empty();
+		getReqHisGridData(1,"reqHisGridArea");
+	})
+	
+});
+
+/* function viewList(){
+	$("#reqHisDetailViewArea").empty();
+} */
+
+function getReqHisDetail(noReq){
+	var param = {
+			noReq : noReq
+	}
+	postAjax("/api/cbsvc/run/reqhis/detail", param, function(data){
+		var data = data.resultData;
+		var reqHisDetail = data.reqHisDetail;
+		reqHisDetail.amt_pay = formatCurrency(reqHisDetail.amt_pay) + ' 원'  
+		reqHisDetail.no_biz = formatBusinessNumber(reqHisDetail.no_biz);
+		reqHisDetail.no_corp = formatCorpNumber(reqHisDetail.no_corp);
+		reqHisDetail.da_open = formatDateString(reqHisDetail.da_open);
+		reqHisDetail.hp_dam = formatPhoneNumber(reqHisDetail.hp_dam);
+		setDataValue(reqHisDetail);
+	})  
+}
+
+/**
+ * 탭 조회
+ */
+/* function onTabActive(obj,id){ 
+	if(id == "submitHis"){
+		$("#hisDetailViewArea").empty();
+		openSubmitRecent('/cbsvc/run/submithis-detail');
+	}else if(id == "recentHis"){
+		$("#hisDetailViewArea").empty();
+		openSubmitRecent('/cbsvc/run/reqhis-recent');
+	}
+	
+} */
+
+function openSubmitRecent(url){ //계정관리 수정
+	Dcloud.showLoading();
+	$("#reqHisDetailViewArea").load(url, function(response, status, xhr){
+		console.log(status);
+		Dcloud.closeLoading();
+		
+		if(status === 'error'){
+			$("#divContents").load('/common/error_404', function(){});
+		}
+		
+	});
+}
+
+//필터 show/hide 기능
+$(document).ready(function() {
+    $('.filter-btn span').hover(
+        function() {
+            $(this).siblings('.hover').show();
+        },
+        function() {
+            $(this).siblings('.hover').hide();
+        }
+    );
+});
+
+// 팝업미리보기 레이어 팝업 show/hide
+$(document).ready(function() {
+  $('.common_round_btn').click(function() {
+    $('.review-popup-component').css('display', 'block');
+  });
+
+
+  $('.c-close').click(function() {
+    $('.review-popup-component').css('display', 'none');
+  });
+});
+
+
+
+
+</script>
+<head>
+<body>
+	<div class="pa_container">
+
+        
+
+
+		<!-- 컨텐츠 영역 -->
+		<div class="pa_content">
+            <div class="dialog_btnbx" style="text-align:right; margin-bottom: -9px;">
+				<div>
+					<div class="basic_title_bx" style="float: left; margin-left: 5px;">
+						<h3>상세 / 수정</h3>
+					</div>
+					<button class="LUX_basic_btn SAOverConfirm basic" style="width: 67px; height: 30px;  padding:0; font-size:13px;" id="btn_list">
+						<span>목록</span>
+					</button>
+					<button type="button" class="LUX_basic_btn SAOverConfirm basic2" style="height: 30px; width: 67px; font-size: 13px;" id="btn_save">
+						<span>저장</span>
+					</button>
+					<div>
+						<hr style="width: 100%; float: left;">
+					</div>
+				</div>
+			</div>
+
+			<div class="LUX_basic_tbl th_border">
+				<div style="margin-bottom: 35px;">
+					<table class="tblarea2" style="margin-right: 13px; width: 100%">
+						<colgroup>
+							<col style="width: 20%;">
+							<col style="width: 30%;">
+							<col style="width: 20%;">
+							<col style="width: 30%;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">사용유무</div>
+								</th>
+								<td class="cellft" colspan="3" style="padding:3px">
+									<div class="inbx">
+										<div class="radio-box">
+                                            <p style="">
+                                                <input type="radio" id="useY" name="use" value="Y" checked>
+                                                <label for="useY">사용</label>
+                                            </p>
+                                            <p>
+                                                <input type="radio" id="useN" name="use" value="N">
+                                                <label for="useN">미사용</label>
+                                            </p>
+                                        </div>
+									</div>
+								</td>
+								
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">서비스구분</div>
+								</th>
+								<td class="cellft" colspan="3" style="padding:3px">
+									<div class="inbx chk-box">
+                                        <p>
+                                            <input type="checkbox" name="chck" value="A" onclick="">
+                                            <label for="A">전체</label>
+                                        </p>
+                                        <p>
+                                            <input type="checkbox" name="chck" value="B" onclick="">
+                                            <label for="B">크레디뷰</label>
+                                        </p>
+                                    </div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">시작일시</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+                                    <div class="calnder-box">
+                                        <div class="LUX_basic_text inbx" style="width: auto !important;">
+                                            <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                                            <div class="inpbx" style="display: inline-block; width: 130px;">
+                                                <input type="text" id="ev_start" class="datepicker hasDatepicker" value="2025-02-10" style="width: 80px; display: inline" readonly=""><img class="ui-datepicker-trigger" src="/src/app/backoffice/resource/images/common/ic_calendar_w.png" alt="달력" title="달력">
+                                            </div>
+                                        </div>
+
+                                        <div class="LUX_basic_select">
+                                            <div class="LUX_pure_select" style="width: 70px;">
+                                                <select id="yn_active">
+                                                    <option value="active">09</option>
+                                                    <option value="active">10</option>
+                                                </select>
+                                                <span class="icon"> 
+                                                    <span class="sp_lux"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <span class="txt" style="display: inline-block; padding-top: 7px;">시</span>
+                                        <div class="LUX_basic_select">
+                                            <div class="LUX_pure_select" style="width: 70px;">
+                                                <select id="yn_active">
+                                                    <option value="active">09</option>
+                                                    <option value="active">10</option>
+                                                </select>
+                                                <span class="icon"> 
+                                                    <span class="sp_lux"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <span class="txt" style="display: inline-block; padding-top: 7px;">분</span>
+                                    </div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">종료일시</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+                                    <div class="calnder-box">
+                                        <div class="LUX_basic_text inbx" style="width: auto !important;">
+                                            <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                                            <div class="inpbx" style="display: inline-block; width: 130px;">
+                                                <input type="text" id="ev_start" class="datepicker hasDatepicker" value="2025-02-10" style="width: 80px; display: inline" readonly=""><img class="ui-datepicker-trigger" src="/src/app/backoffice/resource/images/common/ic_calendar_w.png" alt="달력" title="달력">
+                                            </div>
+                                        </div>
+
+                                        <div class="LUX_basic_select">
+                                            <div class="LUX_pure_select" style="width: 70px;">
+                                                <select id="yn_active">
+                                                    <option value="active">09</option>
+                                                    <option value="active">10</option>
+                                                </select>
+                                                <span class="icon"> 
+                                                    <span class="sp_lux"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <span class="txt" style="display: inline-block; padding-top: 7px;">시</span>
+                                        <div class="LUX_basic_select">
+                                            <div class="LUX_pure_select" style="width: 70px;">
+                                                <select id="yn_active">
+                                                    <option value="active">09</option>
+                                                    <option value="active">10</option>
+                                                </select>
+                                                <span class="icon"> 
+                                                    <span class="sp_lux"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <span class="txt" style="display: inline-block; padding-top: 7px;">분</span>
+                                    </div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">팝업타입</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx">
+										<div class="LUX_basic_select">
+                                            <div class="LUX_pure_select" style="width: 150px;">
+                                                <select id="yn_active">
+                                                    <option value="active">레이어팝업(self)</option>
+                                                    <option value="active">레이어팝업(blank)</option>
+                                                </select>
+                                                <span class="icon"> 
+                                                    <span class="sp_lux"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">팝업위치</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx">
+										<div class="LUX_basic_text" style="display: flex; gap: 10px;">
+                                            <div style="display: flex;">
+                                                <label style="display: inline-block; padding: 7px 5px 0 0; font-weight: bold;">화면위에서 0px</label>
+                                                <div class="inpbx" style="width: 80px;">
+                                                    <input type="text" id="text" placeholder="" value="0" autocomplete="off" style="text-align: right;"> 
+                                                </div>
+                                            </div>
+                                            <div style="display: flex;">
+                                                <label style="display: inline-block; padding: 7px 5px 0 0; font-weight: bold;">px | 화면 좌측에서</label>
+                                                <div class="inpbx" style="width: 80px;">
+                                                    <input type="text" id="text" placeholder="" value="0" autocomplete="off" style="text-align: right;">
+                                                </div>
+                                            </div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" rowspan="2" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">팝업크기</div>
+								</th>
+								<td class="cellft">
+									<div class="inbx">
+										<div class="LUX_basic_text">
+                                            <div class="radio-box">
+                                                <p style="">
+                                                    <input type="radio" id="useY" name="use" value="Y" checked>
+                                                    <label for="useY">400x600</label>
+                                                </p>
+                                                <p>
+                                                    <input type="radio" id="useN" name="use" value="N">
+                                                    <label for="useN">520x600</label>
+                                                </p>
+                                                <p>
+                                                    <input type="radio" id="useN" name="use" value="N">
+                                                    <label for="useN">800x600</label>
+                                                </p>
+                                                <p>
+                                                    <input type="radio" id="useN" name="use" value="N">
+                                                    <label for="useN">직접입력</label>
+                                                </p>
+                                            </div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">팝업노출설정</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx">
+										<div class="LUX_basic_text">
+                                            <div class="radio-box">
+                                                <p style="">
+                                                    <input type="radio" id="useY" name="use" value="Y" checked>
+                                                    <label for="useY">사용안함</label>
+                                                </p>
+                                                <p>
+                                                    <input type="radio" id="useN" name="use" value="N">
+                                                    <label for="useN">다시안보기</label>
+                                                </p>
+                                                <p>
+                                                    <input type="radio" id="useN" name="use" value="N">
+                                                    <label for="useN">오늘하루안보기</label>
+                                                </p>
+                                                <p>
+                                                    <input type="radio" id="useN" name="use" value="N">
+                                                    <label for="useN">일주일간 안보기</label>
+                                                </p>
+                                            </div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx">
+										<div class="LUX_basic_text" style="display: flex; gap: 10px;">
+                                            <div style="display: flex;">
+                                                <label style="display: inline-block; padding: 7px 5px 0 0; font-weight: bold;">가로 :</label>
+                                                <div class="inpbx" style="width: 80px;">
+                                                    <input type="text" id="text" placeholder="" value="400" autocomplete="off" style="text-align: right;"> 
+                                                </div>
+                                                <span style="display: inline-block; padding: 7px 0 0 5px;">px</span>
+                                            </div>
+                                            <span style="display: inline-block; padding: 7px 5px 0 5px;">/</span>
+                                            <div style="display: flex;">
+                                                <label style="display: inline-block; padding: 7px 5px 0 0; font-weight: bold;">세로 :</label>
+                                                <div class="inpbx" style="width: 80px;">
+                                                    <input type="text" id="text" placeholder="" value="600" autocomplete="off" style="text-align: right;">
+                                                </div>
+                                                <span style="display: inline-block; padding:7px 0 0 5px;">px</span>
+                                            </div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;"></div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id=""></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">노출페이지</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx">
+										<div class="LUX_basic_text">
+                                            <div class="radio-box">
+                                                <p style="">
+                                                    <input type="radio" id="useY" name="use" value="Y" checked>
+                                                    <label for="useY">메인페이지</label>
+                                                </p>
+                                                <p>
+                                                    <input type="radio" id="useN" name="use" value="N">
+                                                    <label for="useN">직접입력</label>
+                                                </p>
+                                                
+                                            </div>
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">직적입력 URL</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx">
+                                        <div class="LUX_basic_text">
+                                            <div class="inpbx" style="width: 100%;">
+                                                <input type="text" id="search" placeholder="https://" value="" autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+								</td>
+							</tr>
+                            <tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">제목</div>
+								</th>
+								<td class="cellft" colspan="3" style="padding:3px">
+									<div class="inbx">
+										<div class="LUX_basic_text">
+											<div id="nm_issued">시스템점검 안내 팝업 (12월 1주차)</div>
+										</div>
+									</div>
+								</td>
+								
+							</tr>
+                            <tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">내용</div>
+								</th>
+								<td class="cellft" colspan="3" style="padding:3px">
+									<div class="inbx">
+										<div class="LUX_basic_text">
+											editor
+										</div>
+									</div>
+								</td>
+							</tr>
+
+                            <tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">미리보기</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+                                    <div class="inbx">
+                                        <div class="dialog_btnbx" style="text-align: left; margin: 0;">
+                                            <button type="button" class="common_round_btn" style="width: 150px;">
+                                                <span>팝업 미리보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;"></div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" style="margin-left: -25px;">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="ty_mis_fs"></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+                            <tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">등록일시</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx">
+										<div class="LUX_basic_text">
+											YYYY-MM-DD hh:mm:ss
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">등록자</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx" >
+										<div class="LUX_basic_text">
+											<div class="inbx" id="ty_mis_fs">김테크(tech)</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+                            <tr>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">수정일시</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx">
+										<div class="LUX_basic_text">
+											YYYY-MM-DD hh:mm:ss
+										</div>
+									</div>
+								</td>
+								<th class="celcnt" scope="row" style="vertical-align: middle;">
+									<div class="inbx" style="text-align: left;">처리자</div>
+								</th>
+								<td class="cellft" style="padding:3px">
+									<div class="inbx">
+										<div class="LUX_basic_text">
+											<div class="inbx" id="ty_mis_fs">김더존(kim)</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- 팝업 미리보기 가로별 class : w520, w400 예시 : <div class="review-popup-component w520">, <div class="review-popup-component w400"> -->
+            <div class="review-popup-component">
+                <div class="review-popup-header">
+                    <h3 class="tit">
+                        제목이 들어가는 영역입니다 제목이 들어가는 영역입니다 제목이 들어가는 영역입니다 제목이 
+                    </h3>
+                    <span class="h-close-btn c-close">닫기</span>
+                </div>
+                <div class="review-popup-contents h-hidden">
+                    <p>
+                        안녕하세요<br/>
+                        2025년 4월 7일, 새로운 기업신용평가 크레디뷰의 공식 오픈을 안내드립니다.<br/><br/>
+    
+                        크레디뷰는 고객의 편의를 최우선의 가치로 여기며, 신용평가 업계의 공식을 새로 만들었습니다.<br/><br/>
+    
+                        - 조달청(차세대 나라장터) 자동등급제출<br/>
+                        - 기업신용평가 업계 최초 등급조회<br/>
+                        - 서류제출 없이 인증서등록으로 평가신청완료<br/>
+                        - 조달청(차세대 나라장터) 자동등급제출<br/>
+                        - 기업신용평가 업계 최초 등급조회<br/>
+                        - 서류제출 없이 인증서등록으로 평가신청완료<br/>
+                        - 조달청(차세대 나라장터) 자동등급제출<br/>
+                        - 기업신용평가 업계 최초 등급조회<br/><br/>
+    
+                        많은 이용 바랍니다.<br/>
+                        감사합니다      
+                    </p>
+                    <p>
+                        안녕하세요<br/>
+                        2025년 4월 7일, 새로운 기업신용평가 크레디뷰의 공식 오픈을 안내드립니다.<br/><br/>
+    
+                        크레디뷰는 고객의 편의를 최우선의 가치로 여기며, 신용평가 업계의 공식을 새로 만들었습니다.<br/><br/>
+    
+                        - 조달청(차세대 나라장터) 자동등급제출<br/>
+                        - 기업신용평가 업계 최초 등급조회<br/>
+                        - 서류제출 없이 인증서등록으로 평가신청완료<br/>
+                        - 조달청(차세대 나라장터) 자동등급제출<br/>
+                        - 기업신용평가 업계 최초 등급조회<br/>
+                        - 서류제출 없이 인증서등록으로 평가신청완료<br/>
+                        - 조달청(차세대 나라장터) 자동등급제출<br/>
+                        - 기업신용평가 업계 최초 등급조회<br/><br/>
+    
+                        많은 이용 바랍니다.<br/>
+                        감사합니다      
+                    </p>
+                    <p>
+                        안녕하세요<br/>
+                        2025년 4월 7일, 새로운 기업신용평가 크레디뷰의 공식 오픈을 안내드립니다.<br/><br/>
+    
+                        크레디뷰는 고객의 편의를 최우선의 가치로 여기며, 신용평가 업계의 공식을 새로 만들었습니다.<br/><br/>
+    
+                        - 조달청(차세대 나라장터) 자동등급제출<br/>
+                        - 기업신용평가 업계 최초 등급조회<br/>
+                        - 서류제출 없이 인증서등록으로 평가신청완료<br/>
+                        - 조달청(차세대 나라장터) 자동등급제출<br/>
+                        - 기업신용평가 업계 최초 등급조회<br/>
+                        - 서류제출 없이 인증서등록으로 평가신청완료<br/>
+                        - 조달청(차세대 나라장터) 자동등급제출<br/>
+                        - 기업신용평가 업계 최초 등급조회<br/><br/>
+    
+                        많은 이용 바랍니다.<br/>
+                        감사합니다      
+                    </p>
+                </div>
+    
+                <div class="skip-today-box">
+                    <div class="chk-box">
+                        <input type="checkbox" id="chk">
+                        <label for="chk">오늘 하루 보지 않기</label>
+                    </div>
+                    <span class="skip-btn-close c-close">닫기</span>
+                </div>
+            </div>
+
+			<!-- <div class="SOLAlert-root">
+				<div class="SOLAlert-backdrop"></div>
+				<div class="SOLAlert-box">
+				  <div class="SOLAlert-icon">
+				
+					<i class="SOLIcon-root SOLIcon-alert c--error">
+					  <svg viewBox="0 0 2 21" class="mark">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M1 0.5C1.55228 0.5 2 0.947715 2 1.5V15.2143C2 15.7666 1.55228 16.2143 1 16.2143C0.447716 16.2143 0 15.7666 0 15.2143V1.5C0 0.947715 0.447716 0.5 1 0.5ZM1 20.5C1.55228 20.5 2 20.0523 2 19.5C2 18.9477 1.55228 18.5 1 18.5C0.447716 18.5 0 18.9477 0 19.5C0 20.0523 0.447716 20.5 1 20.5Z"></path>
+					  </svg>
+					</i>
+				  </div>
+				  <div class="SOLAlert-content">
+					<p class="SOLText-desc">
+						<strong>[시스템 점검 안내]</strong><br/><br/>
+					  
+					</p>
+
+					<div class="SOLAlert-msgbox">
+						안정적인 서비스 지원을 위해 정기적인 서비스 점검이 진행되고
+					  있습니다.<br/>
+					  아래 일시에는 서비스 이용이 정상적으로 진행되지 않을 수 있습니다.<br/><br/>
+
+					  일시 : 2024년 12월 01일 6시 ~ 2024년 12월 01일 08시<br/>
+					  범위 : 서비스 전체
+					</div>
+				  </div>
+				  <div class="SOLAlert-action">
+					
+					<button type="button" class="SOLBtn-root t--contained">확인</button>
+				  </div>
+				</div>
+            </div> -->
+		</div>
+		
+	</div>
+</body>
+</html>

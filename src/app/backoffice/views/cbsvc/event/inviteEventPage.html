@@ -1,0 +1,2979 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi"
+    />
+
+    <!--  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/src/app/backoffice/resource/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/src/app/backoffice/resource/css/common.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/src/app/backoffice/resource/css/lux.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/src/app/backoffice/resource/css/pa.css"
+    />
+
+    <title>백오피스_신규가입결제현황_대시보드</title>
+  </head>
+  <body>
+    <div class="pa">
+      <div class="pa_content">
+        <div class="inviteEvent-wrap">
+          <div class="inviteEvent-list-box">
+            <div class="tit-box">
+              <h3 class="tit">초대자 목록 (24)</h3>
+            </div>
+
+            <div class="search-box">
+              <div class="LUX_basic_text" style="width: 82%">
+                <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                <div class="inpbx">
+                  <input
+                    type="text"
+                    id="input_terms"
+                    placeholder="검색어를 입력하세요."
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+              <button
+                type="button"
+                id="search_btn"
+                class="LUX_basic_btn SAOverConfirm basic2"
+                style="height: 30px; font-size: 14px"
+              >
+                <span>검색</span>
+              </button>
+              <div class="select-box">
+                <div class="LUX_basic_select" style="width: 100px">
+                  <div class="LUX_pure_select">
+                    <select id="sel_terms_status">
+                      <option value="">최신순</option>
+                      <option value="status_copy">최신순</option>
+                      <option value="status_modi">최신순</option>
+                      <option value="status_del">최신순</option>
+                    </select>
+                    <span class="icon">
+                      <span class="sp_lux"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="inviteEvent-list">
+              <div class="all-box">
+                <span>전체<em class="count">(24)</em></span>
+              </div>
+              <ul class="list-inner">
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">3</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">2</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">1</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">3</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">2</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">1</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">3</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">2</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">1</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">1</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">1</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">1</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">1</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">1</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">1</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="list-btn">
+                  <div class="box">
+                    <span class="num">1</span>
+                    <span class="title-box">
+                      <em class="name">김더존</em>
+                      <em class="code">CRE10B</em>
+                    </span>
+                  </div>
+                  <div class="contents-box">
+                    <dl>
+                      <dt class="blind"></dt>
+                      <dd>
+                        <span class="tit">생년월일</span>
+                        <span class="con">1999-01-01</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">휴대폰번호</span>
+                        <span class="con">010-1234-5678</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">코드생성일</span>
+                        <span class="con">2025-04-02</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대건수</span>
+                        <span class="con">20</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">성공건수</span>
+                        <span class="con">10</span>
+                      </dd>
+                      <dd>
+                        <span class="tit">초대링크</span>
+                        <span class="con"
+                          ><a href="https://crediview.co.kr/events/CRC02Z"
+                            >https://crediview.co.kr/events/CRC02Z</a
+                          ></span
+                        >
+                      </dd>
+                      <dd>
+                        <span class="tit">약관동의일시</span>
+                        <span class="con">2025-04-02 <em>16:11</em></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="inviteEvent-detail-box">
+            <div class="pa_container" id="alimSnsContainer">
+              <!-- 컨텐츠 영역 -->
+              <div class="pa_content">
+                <div
+                  class="content_inbx"
+                  id="gridContainer"
+                  style="margin-top: 5px; margin-bottom: 10px"
+                >
+                  <ul class="select_bx v2" style="padding: 10px">
+                    <li>
+                      <div class="content_inbx">
+                        <div class="basic_title_bx">
+                          <h3>조회</h3>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li
+                      style="margin-left: 10px; margin-top: 10px; width: 100%"
+                    >
+                      <strong class="tit">발송일시</strong>
+                      <div
+                        class="LUX_basic_select"
+                        style="float: left; width: 144px; margin-left: 8px"
+                      >
+                        <div class="LUX_pure_select" style="width: 144px">
+                          <select id="search_typ">
+                            <option value="">전체</option>
+                            <option value="search_typ_title">양식명</option>
+                            <option value="search_typ_no_biz">
+                              사업자등록번호
+                            </option>
+                            <option value="search_typ_nm_cop">기업명</option>
+                            <option value="search_typ_use">수신자명</option>
+                            <option value="search_typ_cd_sns">
+                              관리코드(개발)
+                            </option>
+                            <!-- <option value="search_typ_stat">발송상태</option> -->
+                          </select>
+                          <span class="icon">
+                            <span class="sp_lux"></span>
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="LUX_basic_date_gap date_gap_bx"
+                        style="margin-left: 6px"
+                      >
+                        <!-- dataPicker -->
+                        <div style="margin-left: 10px">
+                          <div class="LUX_basic_text">
+                            <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                            <div
+                              class="inpbx"
+                              style="display: inline-block; width: 130px"
+                            >
+                              <input
+                                type="text"
+                                id="search_from_date"
+                                class="datepicker hasDatepicker"
+                                style="width: 80px; display: inline"
+                                readonly=""
+                              /><img
+                                class="ui-datepicker-trigger"
+                                src="/resource/images/common/ic_calendar_w.png"
+                                alt="달력"
+                                title="달력"
+                              />
+                            </div>
+                            <strong>~</strong>
+                            &nbsp;
+                            <div
+                              class="inpbx"
+                              style="
+                                display: inline-block;
+                                width: 130px;
+                                margin-left: -8px;
+                              "
+                            >
+                              <input
+                                type="text"
+                                id="search_to_date"
+                                class="datepicker hasDatepicker"
+                                style="width: 80px; display: inline"
+                                readonly=""
+                              /><img
+                                class="ui-datepicker-trigger"
+                                src="/resource/images/common/ic_calendar_w.png"
+                                alt="달력"
+                                title="달력"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 개월 선택 버튼 -->
+                      <span
+                        class="LUX_basic_btngruop date_btn_bx"
+                        id="month_btn_group"
+                      >
+                        <button
+                          type="button"
+                          id="btn_1_month"
+                          class="LUX_basic_btn Default search_btn"
+                          style="left: 3px; width: 60px"
+                        >
+                          <span>1개월</span>
+                        </button>
+                        <button
+                          type="button"
+                          id="btn_6_month"
+                          class="LUX_basic_btn Default search_btn"
+                          style="left: 5px; width: 60px"
+                        >
+                          <span>6개월</span>
+                        </button>
+                        <button
+                          type="button"
+                          id="btn_12_month"
+                          class="LUX_basic_btn Default search_btn"
+                          style="left: 7px; width: 60px"
+                        >
+                          <span>12개월</span>
+                        </button>
+                        <button
+                          type="button"
+                          id="btn_all"
+                          class="LUX_basic_btn SAOverConfirm basic2 basic"
+                          style="left: 9px; width: 60px; margin-left: 3px"
+                        >
+                          <span>전체</span>
+                        </button>
+                      </span>
+                    </li>
+                    <li
+                      style="margin-left: 10px; width: 100%; margin-top: 10px"
+                    >
+                      <strong class="tit">검색조건</strong>
+                      <div
+                        class="LUX_basic_select"
+                        style="float: left; width: 144px; margin-left: 8px"
+                      >
+                        <div class="LUX_pure_select" style="width: 144px">
+                          <select id="search_typ">
+                            <option value="">전체</option>
+                            <option value="search_typ_title">양식명</option>
+                            <option value="search_typ_no_biz">
+                              사업자등록번호
+                            </option>
+                            <option value="search_typ_nm_cop">기업명</option>
+                            <option value="search_typ_use">수신자명</option>
+                            <option value="search_typ_cd_sns">
+                              관리코드(개발)
+                            </option>
+                            <!-- <option value="search_typ_stat">발송상태</option> -->
+                          </select>
+                          <span class="icon">
+                            <span class="sp_lux"></span>
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="LUX_basic_text"
+                        style="float: left; margin-left: 16px; width: 230px"
+                      >
+                        <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                        <div class="inpbx">
+                          <input
+                            type="text"
+                            id="search_text"
+                            placeholder="검색어를 입력하세요."
+                            autocomplete="off"
+                            style="margin-top: 3px; margin-left: 7px"
+                          />
+                          <span class="sp_lux"></span>
+                        </div>
+                      </div>
+
+                      <button
+                        type="button"
+                        id="btn_init"
+                        class="LUX_basic_btn Default basic search_btn"
+                        style="weight: 68px"
+                      >
+                        <span>초기화</span>
+                      </button>
+                      <button
+                        type="button"
+                        id="btn_search"
+                        class="LUX_basic_btn SAOverConfirm basic2"
+                        style="height: 30px; font-size: 14px; weight: 68px"
+                      >
+                        <span>검색</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="basic_title_bx"
+                  style="margin-top: 30px; margin-bottom: -10px"
+                >
+                  <div
+                    style="
+                      width: 100%;
+                      display: flex;
+                      justify-content: space-between;
+                    "
+                  >
+                    <div>
+                      <h3>초대현황</h3>
+                    </div>
+
+                    <button
+                      type="button"
+                      class="LUX_basic_btn Default basic btn_exel"
+                      style="float: right; margin-bottom: 8px"
+                      id="btn_excel"
+                    >
+                      <img
+                        src="/resource/imgs/factoring/excel.png"
+                        width="30"
+                        height="20"
+                        style="margin-top: 2px"
+                      />엑셀 내려받기
+                    </button>
+                  </div>
+                </div>
+                <ul class="invite-event-count-box">
+                  <li class="invite">
+                    <span class="tit">초대 건 수 :</span>
+                    <span class="count">20</span>
+                  </li>
+                  <li class="success">
+                    <span class="tit">성공 건 수 :</span>
+                    <span class="count">10</span>
+                  </li>
+                </ul>
+
+                <div class="table_area" style="margin-top: 10px">
+                  <div
+                    id="gridParentArea"
+                    class="grid_tbl_item"
+                    style="height: 450px"
+                  >
+                    <div
+                      class="ui-jqgrid ui-widget ui-widget-content ui-corner-all"
+                      id="gbox_alimSnsGridArea"
+                      dir="ltr"
+                    >
+                      <div
+                        class="ui-widget-overlay jqgrid-overlay"
+                        id="lui_alimSnsGridArea"
+                      ></div>
+                      <div
+                        class="loading ui-state-default ui-state-active"
+                        id="load_alimSnsGridArea"
+                        style="display: none"
+                      >
+                        Loading...
+                      </div>
+                      <div
+                        class="ui-jqgrid-view"
+                        role="grid"
+                        id="gview_alimSnsGridArea"
+                        style="width: 1665px"
+                      >
+                        <div
+                          class="ui-jqgrid-titlebar ui-jqgrid-caption ui-widget-header ui-corner-top ui-helper-clearfix"
+                          style="display: none"
+                        >
+                          <a
+                            role="link"
+                            class="ui-jqgrid-titlebar-close ui-corner-all HeaderButton"
+                            title="Toggle Expand Collapse Grid"
+                            style="right: 0px"
+                            ><span
+                              class="ui-icon ui-icon-circle-triangle-n"
+                            ></span></a
+                          ><span class="ui-jqgrid-title"></span>
+                        </div>
+                        <div
+                          class="ui-state-default ui-jqgrid-hdiv ui-corner-top"
+                          style="width: 1665px"
+                        >
+                          <div class="ui-jqgrid-hbox">
+                            <table
+                              class="ui-jqgrid-htable"
+                              style="width: 1647px"
+                              role="presentation"
+                              aria-labelledby="gbox_alimSnsGridArea"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                            >
+                              <thead>
+                                <tr class="ui-jqgrid-labels" role="row">
+                                  <th
+                                    id="alimSnsGridArea_no_row"
+                                    role="columnheader"
+                                    class="ui-state-default ui-th-column ui-th-ltr"
+                                    style="width: 67px"
+                                  >
+                                    <span
+                                      class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                      style="cursor: col-resize"
+                                      >&nbsp;</span
+                                    >
+                                    <div
+                                      id="jqgh_alimSnsGridArea_no_row"
+                                      class="ui-jqgrid-sortable"
+                                    >
+                                      번호<span
+                                        class="s-ico"
+                                        style="display: none"
+                                        ><span
+                                          sort="asc"
+                                          class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"
+                                        ></span
+                                        ><span
+                                          sort="desc"
+                                          class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"
+                                        ></span
+                                      ></span>
+                                    </div>
+                                  </th>
+                                  <th
+                                    id="alimSnsGridArea_nm_svc"
+                                    role="columnheader"
+                                    class="ui-state-default ui-th-column ui-th-ltr"
+                                    style="width: 4px; display: none"
+                                  >
+                                    <span
+                                      class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                      style="cursor: col-resize"
+                                      >&nbsp;</span
+                                    >
+                                    <div
+                                      id="jqgh_alimSnsGridArea_nm_svc"
+                                      class="ui-jqgrid-sortable"
+                                    >
+                                      서비스구분<span
+                                        class="s-ico"
+                                        style="display: none"
+                                        ><span
+                                          sort="asc"
+                                          class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"
+                                        ></span
+                                        ><span
+                                          sort="desc"
+                                          class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"
+                                        ></span
+                                      ></span>
+                                    </div>
+                                  </th>
+                                  <th
+                                    id="alimSnsGridArea_no_biz"
+                                    role="columnheader"
+                                    class="ui-state-default ui-th-column ui-th-ltr"
+                                    style="width: 167px"
+                                  >
+                                    <span
+                                      class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                      style="cursor: col-resize"
+                                      >&nbsp;</span
+                                    >
+                                    <div
+                                      id="jqgh_alimSnsGridArea_no_biz"
+                                      class="ui-jqgrid-sortable"
+                                    >
+                                      사업자등록번호<span
+                                        class="s-ico"
+                                        style="display: none"
+                                        ><span
+                                          sort="asc"
+                                          class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"
+                                        ></span
+                                        ><span
+                                          sort="desc"
+                                          class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"
+                                        ></span
+                                      ></span>
+                                    </div>
+                                  </th>
+                                  <th
+                                    id="alimSnsGridArea_nm_company"
+                                    role="columnheader"
+                                    class="ui-state-default ui-th-column ui-th-ltr"
+                                    style="width: 167px"
+                                  >
+                                    <span
+                                      class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                      style="cursor: col-resize"
+                                      >&nbsp;</span
+                                    >
+                                    <div
+                                      id="jqgh_alimSnsGridArea_nm_company"
+                                      class="ui-jqgrid-sortable"
+                                    >
+                                      기업명<span
+                                        class="s-ico"
+                                        style="display: none"
+                                        ><span
+                                          sort="asc"
+                                          class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"
+                                        ></span
+                                        ><span
+                                          sort="desc"
+                                          class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"
+                                        ></span
+                                      ></span>
+                                    </div>
+                                  </th>
+                                  <th
+                                    id="alimSnsGridArea_nm_cst_group"
+                                    role="columnheader"
+                                    class="ui-state-default ui-th-column ui-th-ltr"
+                                    style="width: 167px"
+                                  >
+                                    <span
+                                      class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                      style="cursor: col-resize"
+                                      >&nbsp;</span
+                                    >
+                                    <div
+                                      id="jqgh_alimSnsGridArea_nm_cst_group"
+                                      class="ui-jqgrid-sortable"
+                                    >
+                                      수신자명<span
+                                        class="s-ico"
+                                        style="display: none"
+                                        ><span
+                                          sort="asc"
+                                          class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"
+                                        ></span
+                                        ><span
+                                          sort="desc"
+                                          class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"
+                                        ></span
+                                      ></span>
+                                    </div>
+                                  </th>
+                                  <th
+                                    id="alimSnsGridArea_cd_form_sns"
+                                    role="columnheader"
+                                    class="ui-state-default ui-th-column ui-th-ltr"
+                                    style="width: 134px"
+                                  >
+                                    <span
+                                      class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                      style="cursor: col-resize"
+                                      >&nbsp;</span
+                                    >
+                                    <div
+                                      id="jqgh_alimSnsGridArea_cd_form_sns"
+                                      class="ui-jqgrid-sortable"
+                                    >
+                                      관리코드(개발)<span
+                                        class="s-ico"
+                                        style="display: none"
+                                        ><span
+                                          sort="asc"
+                                          class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"
+                                        ></span
+                                        ><span
+                                          sort="desc"
+                                          class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"
+                                        ></span
+                                      ></span>
+                                    </div>
+                                  </th>
+                                  <th
+                                    id="alimSnsGridArea_title_form_sns"
+                                    role="columnheader"
+                                    class="ui-state-default ui-th-column ui-th-ltr"
+                                    style="width: 334px"
+                                  >
+                                    <span
+                                      class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                      style="cursor: col-resize"
+                                      >&nbsp;</span
+                                    >
+                                    <div
+                                      id="jqgh_alimSnsGridArea_title_form_sns"
+                                      class="ui-jqgrid-sortable"
+                                    >
+                                      양식명<span
+                                        class="s-ico"
+                                        style="display: none"
+                                        ><span
+                                          sort="asc"
+                                          class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"
+                                        ></span
+                                        ><span
+                                          sort="desc"
+                                          class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"
+                                        ></span
+                                      ></span>
+                                    </div>
+                                  </th>
+                                  <th
+                                    id="alimSnsGridArea_dt_trans"
+                                    role="columnheader"
+                                    class="ui-state-default ui-th-column ui-th-ltr"
+                                    style="width: 134px"
+                                  >
+                                    <span
+                                      class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                      style="cursor: col-resize"
+                                      >&nbsp;</span
+                                    >
+                                    <div
+                                      id="jqgh_alimSnsGridArea_dt_trans"
+                                      class="ui-jqgrid-sortable"
+                                    >
+                                      발송일시<span
+                                        class="s-ico"
+                                        style="display: none"
+                                        ><span
+                                          sort="asc"
+                                          class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"
+                                        ></span
+                                        ><span
+                                          sort="desc"
+                                          class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"
+                                        ></span
+                                      ></span>
+                                    </div>
+                                  </th>
+                                  <th
+                                    id="alimSnsGridArea_detail-view"
+                                    role="columnheader"
+                                    class="ui-state-default ui-th-column ui-th-ltr"
+                                    style="width: 100px"
+                                  >
+                                    <span
+                                      class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                      style="cursor: col-resize"
+                                      >&nbsp;</span
+                                    >
+                                    <div
+                                      id="jqgh_alimSnsGridArea_detail-view"
+                                      class="ui-jqgrid-sortable"
+                                    >
+                                      상세<span
+                                        class="s-ico"
+                                        style="display: none"
+                                        ><span
+                                          sort="asc"
+                                          class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"
+                                        ></span
+                                        ><span
+                                          sort="desc"
+                                          class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"
+                                        ></span
+                                      ></span>
+                                    </div>
+                                  </th>
+                                  <th
+                                    id="alimSnsGridArea_cd_result"
+                                    role="columnheader"
+                                    class="ui-state-default ui-th-column ui-th-ltr"
+                                    style="width: 332px"
+                                  >
+                                    <span
+                                      class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                      style="cursor: col-resize"
+                                      >&nbsp;</span
+                                    >
+                                    <div
+                                      id="jqgh_alimSnsGridArea_cd_result"
+                                      class="ui-jqgrid-sortable"
+                                    >
+                                      발송상태<span
+                                        class="s-ico"
+                                        style="display: none"
+                                        ><span
+                                          sort="asc"
+                                          class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"
+                                        ></span
+                                        ><span
+                                          sort="desc"
+                                          class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"
+                                        ></span
+                                      ></span>
+                                    </div>
+                                  </th>
+                                </tr>
+                              </thead>
+                            </table>
+                          </div>
+                        </div>
+                        <div
+                          class="ui-jqgrid-bdiv"
+                          style="height: 450px; width: 1665px"
+                        >
+                          <div style="position: relative">
+                            <div></div>
+                            <table
+                              id="alimSnsGridArea"
+                              tabindex="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              role="presentation"
+                              aria-multiselectable="false"
+                              aria-labelledby="gbox_alimSnsGridArea"
+                              class="ui-jqgrid-btable"
+                              style="width: 1647px"
+                            >
+                              <tbody>
+                                <tr
+                                  class="jqgfirstrow"
+                                  role="row"
+                                  style="height: auto"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="height: 0px; width: 67px"
+                                  ></td>
+                                  <td
+                                    role="gridcell"
+                                    style="
+                                      height: 0px;
+                                      width: 4px;
+                                      display: none;
+                                    "
+                                  ></td>
+                                  <td
+                                    role="gridcell"
+                                    style="height: 0px; width: 167px"
+                                  ></td>
+                                  <td
+                                    role="gridcell"
+                                    style="height: 0px; width: 167px"
+                                  ></td>
+                                  <td
+                                    role="gridcell"
+                                    style="height: 0px; width: 167px"
+                                  ></td>
+                                  <td
+                                    role="gridcell"
+                                    style="height: 0px; width: 134px"
+                                  ></td>
+                                  <td
+                                    role="gridcell"
+                                    style="height: 0px; width: 334px"
+                                  ></td>
+                                  <td
+                                    role="gridcell"
+                                    style="height: 0px; width: 134px"
+                                  ></td>
+                                  <td
+                                    role="gridcell"
+                                    style="height: 0px; width: 100px"
+                                  ></td>
+                                  <td
+                                    role="gridcell"
+                                    style="height: 0px; width: 332px"
+                                  ></td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="1"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="685"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    685
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="1148669490"
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    1148669490
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="주식회사더존비앤에프"
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    주식회사더존비앤에프
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="장재원"
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    장재원
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E003"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E003
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 신용평가 신청 결과 확인 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 신용평가 신청 결과 확인 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-29 13:57"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-29 13:57
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1205')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="2"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="684"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    684
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="1148669490"
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    1148669490
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="주식회사더존비앤에프"
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    주식회사더존비앤에프
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="장재원"
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    장재원
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E006"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E006
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 신용평가등급확인서 제출 완료 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 신용평가등급확인서 제출 완료 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-29 10:21"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-29 10:21
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1204')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="3"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="683"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    683
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2208843130"
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    2208843130
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="주식회사더존비앤에프"
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    주식회사더존비앤에프
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="권진혁"
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    권진혁
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E019"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E019
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 1:1 이용문의 등록 완료"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 1:1 이용문의 등록 완료
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 14:16"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 14:16
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1196')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="4"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="682"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    682
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="null외 1명"
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    null외 1명
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E001"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E001
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 이메일 인증번호 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 이메일 인증번호 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 13:55"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 13:55
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1195')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="5"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="681"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    681
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E001"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E001
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 이메일 인증번호 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 이메일 인증번호 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 13:36"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 13:36
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1193')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="6"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="680"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    680
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E001"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E001
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 이메일 인증번호 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 이메일 인증번호 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 13:24"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 13:24
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1192')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="7"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="679"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    679
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E001"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E001
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 이메일 인증번호 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 이메일 인증번호 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 13:16"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 13:16
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1191')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="8"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="678"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    678
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E001"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E001
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 이메일 인증번호 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 이메일 인증번호 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 13:13"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 13:13
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1190')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="9"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="677"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    677
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E001"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E001
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 이메일 인증번호 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 이메일 인증번호 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 13:02"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 13:02
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1189')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="10"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="676"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    676
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E001"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E001
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 이메일 인증번호 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 이메일 인증번호 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 12:55"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 12:55
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1188')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="11"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="675"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    675
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E001"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E001
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 이메일 인증번호 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 이메일 인증번호 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 10:58"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 10:58
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1187')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="12"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="674"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    674
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="1148669490"
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    1148669490
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="주식회사더존비앤에프"
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    주식회사더존비앤에프
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="정재우외 9명"
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    정재우외 9명
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E014"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E014
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 임시회원 승인 요청 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 임시회원 승인 요청 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 10:57"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 10:57
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1186')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="13"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="673"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    673
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="1148669490"
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    1148669490
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="주식회사더존비앤에프"
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    주식회사더존비앤에프
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="김규민"
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    김규민
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E002"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E002
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 회원가입 완료 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 회원가입 완료 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 10:57"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 10:57
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1176')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="14"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="672"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    672
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E001"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E001
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 이메일 인증번호 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 이메일 인증번호 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 10:56"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 10:56
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1175')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                                <tr
+                                  role="row"
+                                  id="15"
+                                  tabindex="-1"
+                                  class="ui-widget-content jqgrow ui-row-ltr"
+                                >
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="671"
+                                    aria-describedby="alimSnsGridArea_no_row"
+                                  >
+                                    671
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center; display: none"
+                                    title="기업CB"
+                                    aria-describedby="alimSnsGridArea_nm_svc"
+                                  >
+                                    기업CB
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_no_biz"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_company"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title=""
+                                    aria-describedby="alimSnsGridArea_nm_cst_group"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="E001"
+                                    aria-describedby="alimSnsGridArea_cd_form_sns"
+                                  >
+                                    E001
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="[크레디뷰] 이메일 인증번호 안내"
+                                    aria-describedby="alimSnsGridArea_title_form_sns"
+                                  >
+                                    [크레디뷰] 이메일 인증번호 안내
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="2025-04-28 10:52"
+                                    aria-describedby="alimSnsGridArea_dt_trans"
+                                  >
+                                    2025-04-28 10:52
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: center"
+                                    title="조회"
+                                    aria-describedby="alimSnsGridArea_detail-view"
+                                  >
+                                    <button
+                                      onclick="openHistoryDetailPopup('1174')"
+                                      class="LUX_basic_btn SAOverConfirm basic2"
+                                    >
+                                      조회
+                                    </button>
+                                  </td>
+                                  <td
+                                    role="gridcell"
+                                    style="text-align: left"
+                                    title="성공"
+                                    aria-describedby="alimSnsGridArea_cd_result"
+                                  >
+                                    성공
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ui-jqgrid-resize-mark"
+                        id="rs_malimSnsGridArea"
+                      >
+                        &nbsp;
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="alimSnsPagingArea"
+                    style="margin-top: 40px; margin-bottom: 10px"
+                  >
+                    <div class="common_new_pagination">
+                      <div class="pagein">
+                        <strong class="num on">1</strong
+                        ><a
+                          href="javascript:void(0);"
+                          class="num"
+                          onclick="getAlimSnsData(2,'alimSnsGridArea')"
+                          >2</a
+                        ><a
+                          href="javascript:void(0);"
+                          class="num"
+                          onclick="getAlimSnsData(3,'alimSnsGridArea')"
+                          >3</a
+                        ><a
+                          href="javascript:void(0);"
+                          class="num"
+                          onclick="getAlimSnsData(4,'alimSnsGridArea')"
+                          >4</a
+                        ><a
+                          href="javascript:void(0);"
+                          class="num"
+                          onclick="getAlimSnsData(5,'alimSnsGridArea')"
+                          >5</a
+                        ><a
+                          href="javascript:void(0);"
+                          class="num"
+                          onclick="getAlimSnsData(6,'alimSnsGridArea')"
+                          >6</a
+                        ><a
+                          href="javascript:void(0);"
+                          class="num"
+                          onclick="getAlimSnsData(7,'alimSnsGridArea')"
+                          >7</a
+                        ><a
+                          href="javascript:void(0);"
+                          class="num"
+                          onclick="getAlimSnsData(8,'alimSnsGridArea')"
+                          >8</a
+                        ><a
+                          href="javascript:void(0);"
+                          class="num"
+                          onclick="getAlimSnsData(9,'alimSnsGridArea')"
+                          >9</a
+                        ><a
+                          href="javascript:void(0);"
+                          class="num"
+                          onclick="getAlimSnsData(10,'alimSnsGridArea')"
+                          >10</a
+                        ><button
+                          onclick="getAlimSnsData('11', 'alimSnsGridArea')"
+                          class="btn btn_next"
+                        >
+                          <span class="blindItem">다음페이지로</span></button
+                        ><button
+                          type="button"
+                          navid="end"
+                          class="btn btn2 btn_next"
+                          onclick="getAlimSnsData('46', 'alimSnsGridArea')"
+                        >
+                          <span class="blindItem">마지막페이지</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="alimSmsViewArea"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".list-btn").on("click", function (e) {
+          if ($(e.target).is("a")) {
+            return;
+          }
+          $(".list-btn")
+            .not(this)
+            .removeClass("on")
+            .find(".contents-box")
+            .slideUp(100);
+
+          $(this).find(".contents-box").slideToggle(100);
+          $(this).toggleClass("on");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,7929 @@
+@charset "UTF-8";
+.LUX_splitbtn .dropdown_menu li a {
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+.sp_lux {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../imgs/common/sp_lux02.png) 0 0 no-repeat;
+  transform: rotate(180deg);
+  line-height: 100em;
+  vertical-align: top;
+  width: 12px;
+  height: 7px;
+  right: 15px;
+}
+.sp_snb {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../imgs/common/sp_snb.png) 0 0 no-repeat;
+  line-height: 100em;
+  vertical-align: top;
+}
+.guide_lst li,
+.guide_p {
+  position: relative;
+  padding: 1px 0 0 7px;
+  font-size: 11px;
+  font-family: douzone !important;
+  line-height: 15px;
+  color: #8d8d8d;
+  letter-spacing: -0.5px;
+}
+.guide_lst li:after,
+.guide_p:after {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: #8d8d8d;
+  content: "";
+}
+.LUXct_center {
+  text-align: left;
+}
+.LUXct_center .LUXct_in {
+  display: inline-block;
+}
+.LUXct_center .LUXct_in:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUXmenu_lft {
+  display: inline-block;
+  float: left;
+}
+.LUXmenu_lft > div {
+  display: inline-block;
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.LUXmenu_rgt {
+  display: inline-block;
+  float: right;
+}
+.LUXmenu_rgt > div {
+  display: inline-block;
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.clrbx {
+  clear: both;
+  height: 0;
+}
+.clrbx:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.cw .clrulbx > li:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.fltlft {
+  display: inline-block;
+  float: left;
+}
+.fltrgt {
+  display: inline-block;
+  float: right;
+}
+.overbx {
+  overflow: hidden;
+}
+.distbl {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.distbl > li {
+  display: table-cell;
+}
+.ulflt:after,
+.ulfltrgt:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.ulflt > li,
+.ulfltrgt > li {
+  display: inline-block;
+  float: left;
+}
+.ulflt.lastfltr > li:last-child,
+.ulfltrgt > li:last-child {
+  display: inline-block;
+  float: right;
+}
+.checkbox_new {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+.checkbox_new input {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  z-index: -10;
+  width: 13px;
+  height: 13px;
+}
+.checkbox_new input:checked + .check_icon svg {
+  display: none;
+}
+.checkbox_new input:checked + .check_icon .check {
+  display: inline-block;
+}
+.checkbox_new .check_icon {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 14px;
+  height: 14px;
+}
+.checkbox_new .check_icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -7px;
+  margin-left: -7px;
+}
+.checkbox_new .check_icon svg.check {
+  display: none;
+}
+.checkbox_new label {
+  display: inline-block;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  vertical-align: top;
+}
+.checkbox_new .label_text {
+  margin-left: 6px;
+}
+.checkbox_new.no_label label {
+  width: 14px;
+  height: 14px;
+}
+.checkbox_new.no_label .img_box {
+  position: static;
+}
+.checkbox_new.no_label .label_text {
+  position: absolute !important;
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+}
+.LUX_basic_btn {
+  display: inline-block;
+  width: auto;
+  position: relative;
+  border: 0 none;
+  background: 0 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: 0;
+}
+.LUX_basic_btn.basic {
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  color: #4a4a4a;
+}
+.LUX_basic_btn.hover {
+  border: 1px solid #8c8c8c;
+  background: #fff;
+  color: #4a4a4a;
+}
+.LUX_basic_btn.basic2 {
+  border: 1px solid #1c90fb;
+  background: #1c90fb;
+  color: #fff;
+}
+.LUX_basic_btn.hover2 {
+  border: 1px solid #006dd2;
+  background: #006dd2;
+  color: #fff;
+}
+.LUX_basic_btn.hover2_v {
+  border: 1px solid #0d5598;
+  background: #0d5598;
+  color: #fff;
+}
+.LUX_basic_btn.basic3 {
+  border: 1px solid #b5b5b5;
+  background: 0 0;
+  color: #dedede;
+}
+.LUX_basic_btn.hover3 {
+  border: 1px solid #3b4455;
+  background: #3b4455;
+  color: #dedede;
+}
+.LUX_basic_btn.basic4 {
+  border: 1px solid #666;
+  background: #666;
+  color: #fff;
+}
+.LUX_basic_btn.disable {
+  border: 1px solid #e0e0e0;
+  background: #f2f2f2;
+  color: #8d8d8d;
+  cursor: default;
+}
+.LUX_basic_btn.Image {
+  width: 27px;
+  height: 27px;
+  padding: 0;
+}
+a.LUX_basic_btn {
+  text-decoration: none;
+}
+.LUX_basic_btn.Confirm {
+  height: 37px;
+  font-size: 16px;
+}
+a.LUX_basic_btn.Confirm {
+  padding: 0 20px;
+  line-height: 37px;
+}
+button.LUX_basic_btn.Confirm {
+  padding: 1px 20px 0;
+}
+.LUX_basic_btn.SAOverConfirm {
+  height: 32px;
+  font-size: 15px;
+}
+a.LUX_basic_btn.SAOverConfirm {
+  padding: 0 20px;
+  line-height: 32px;
+}
+button.LUX_basic_btn.SAOverConfirm {
+  padding: 1px 20px 0;
+}
+.LUX_basic_btn.SAOverConfirm2 {
+  height: 32px;
+}
+a.LUX_basic_btn.SAOverConfirm2 {
+  padding: 0 10px;
+  font-size: 15px;
+  line-height: 32px;
+}
+button.LUX_basic_btn.SAOverConfirm2 {
+  padding: 1px 10px 0;
+  font-size: 14px;
+}
+.LUX_basic_btn.Default {
+  height: 27px;
+  font-size: 13px;
+  font-family: douzone !important;
+  letter-spacing: -0.5px;
+}
+a.LUX_basic_btn.Default {
+  padding: 0 10px;
+  line-height: 27px;
+}
+button.LUX_basic_btn.Default {
+  padding: 2px 10px 0;
+}
+.LUX_basic_btn.Default2 {
+  height: 27px;
+  font-size: 13px;
+  font-family: douzone !important;
+  letter-spacing: -0.5px;
+}
+a.LUX_basic_btn.Default2 {
+  padding: 0 16px;
+  line-height: 27px;
+}
+button.LUX_basic_btn.Default2 {
+  padding: 1px 16px 0;
+}
+.LUX_basic_btn.Small {
+  height: 20px;
+  font-size: 11px;
+  font-family: douzone !important;
+  letter-spacing: -0.5px;
+}
+a.LUX_basic_btn.Small {
+  padding: 0 8px;
+  line-height: 20px;
+}
+button.LUX_basic_btn.Small {
+  padding: 2px 8px 0;
+}
+.LUX_basic_btn.Small2 {
+  min-width: 42px;
+  height: 23px;
+  font-size: 11px;
+  font-family: douzone !important;
+  letter-spacing: -0.5px;
+}
+a.LUX_basic_btn.Small2 {
+  padding: 0 8px;
+  line-height: 20px;
+}
+button.LUX_basic_btn.Small2 {
+  padding: 2px 8px 0;
+}
+.LUX_basic_btn.SAOverDefault {
+  height: 25px;
+  font-size: 13px;
+  font-family: douzone !important;
+  letter-spacing: -0.5px;
+}
+a.LUX_basic_btn.SAOverDefault {
+  padding: 0 12px;
+  line-height: 25px;
+}
+button.LUX_basic_btn.SAOverDefault {
+  padding: 1px 12px 0;
+}
+a.LUX_basic_btn.Image {
+  line-height: 27px;
+}
+.LUX_basic_btn.Rounded {
+  border-radius: 15px;
+}
+.LUX_basic_btn.btn_more {
+  color: #8d8d8d;
+}
+.LUX_basic_btn.btn_more .sp_lux {
+  width: 3px;
+  height: 5px;
+  margin-top: 7px;
+  background-position: -250px -250px;
+}
+.LUX_basic_btngruop {
+  margin-left: 1px;
+  letter-spacing: -4px;
+}
+.LUX_basic_btngruop .LUX_basic_btn {
+  letter-spacing: 0;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+.LUX_basic_btngruop .LUX_basic_btn.basic2 {
+  border: 1px solid #0072dc;
+}
+.LUX_basic_btngruop .LUX_basic_btn.basic2 + .LUX_basic_btn {
+  margin-left: 0;
+}
+.LUX_basic_btngruop .LUX_basic_btn + .LUX_basic_btn {
+  margin-left: -1px;
+}
+.LUX_splitbtn {
+  position: relative;
+}
+.LUX_splitbtn .btngroup {
+  clear: both;
+  overflow: hidden;
+}
+.LUX_splitbtn .LUX_basic_btn {
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  color: #4a4a4a;
+  float: left;
+  line-height: 32px;
+  height: 32px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.LUX_splitbtn .LUX_basic_btn .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -4px;
+  width: 7px;
+  height: 4px;
+  background-position: -261px -307px;
+}
+.LUX_splitbtn .LUX_basic_btn + .LUX_basic_btn {
+  border-left: 0;
+  padding: 0;
+  width: 22px;
+}
+.LUX_splitbtn.hover .LUX_basic_btn,
+.LUX_splitbtn:hover .LUX_basic_btn {
+  border-color: #8c8c8c;
+}
+.LUX_splitbtn.click .LUX_basic_btn {
+  border-color: #8c8c8c;
+  background: #f5f5f5;
+}
+.LUX_splitbtn.click .dropdown_menu {
+  display: block;
+}
+.LUX_splitbtn.vblue .LUX_basic_btn {
+  border: 1px solid #1c90fb;
+  background: #1c90fb;
+  color: #fff;
+}
+.LUX_splitbtn.vblue .LUX_basic_btn:first-of-type {
+  border-right: 1px solid #0e7ee6;
+}
+.LUX_splitbtn.vblue .LUX_basic_btn .sp_lux {
+  background-position: -280px -307px;
+}
+.LUX_splitbtn.vblue.hover .LUX_basic_btn,
+.LUX_splitbtn.vblue:hover .LUX_basic_btn {
+  border-color: #1177d5;
+}
+.LUX_splitbtn.vblue.click .LUX_basic_btn {
+  border-color: #006dd2;
+  background: #006dd2;
+}
+.LUX_splitbtn.size_m .LUX_basic_btn {
+  height: 27px;
+  line-height: 27px;
+  font-size: 12px;
+}
+.LUX_splitbtn.size_m .LUX_basic_btn + .LUX_basic_btn {
+  width: 16px;
+}
+.LUX_splitbtn.size_s .LUX_basic_btn {
+  height: 20px;
+  line-height: 20px;
+  font-size: 11px;
+}
+.LUX_splitbtn.size_s .LUX_basic_btn + .LUX_basic_btn {
+  width: 14px;
+}
+.LUX_splitbtn.size_m .LUX_basic_btn,
+.LUX_splitbtn.size_s .LUX_basic_btn {
+  padding: 0 8px;
+  font-family: douzone !important;
+}
+.LUX_splitbtn.size_m .LUX_basic_btn .sp_lux,
+.LUX_splitbtn.size_s .LUX_basic_btn .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -3px;
+  width: 5px;
+  height: 3px;
+  background-position: -299px -307px;
+}
+.LUX_splitbtn.size_m.vblue .LUX_basic_btn .sp_lux,
+.LUX_splitbtn.size_s.vblue .LUX_basic_btn .sp_lux {
+  background-position: -316px -307px;
+}
+.LUX_splitbtn .dropdown_menu {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid #a3a3a3;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 110px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.LUX_splitbtn .dropdown_menu li a {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  color: #4a4a4a;
+  text-decoration: none;
+  font-family: douzone !important;
+  background: #fff;
+  padding: 6px 7px;
+  box-sizing: border-box;
+}
+.LUX_splitbtn .dropdown_menu li a:hover {
+  background: #f5f5f5;
+}
+.LUX_basic_switch {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  line-height: 20px;
+  vertical-align: top;
+  cursor: pointer;
+}
+.LUX_basic_switch input {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  z-index: -10;
+  width: 13px;
+  height: 13px;
+  background: 0 0;
+}
+.LUX_basic_switch .sp_lux {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+.LUX_basic_switch label {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding-left: 20px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+.LUX_basic_switch .LUXlabelnone label {
+  overflow: hidden;
+  width: 14px;
+  height: 20px;
+  padding: 0;
+  text-indent: -9999px;
+}
+.LUX_basic_switch .LUXckbx .sp_lux {
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -8px;
+  background-position: 0 0;
+}
+.LUX_basic_switch.switchon .LUXckbx .sp_lux {
+  background-position: -25px 0;
+}
+.LUX_basic_switch.disabled .LUXckbx .sp_lux {
+  background-position: -50px 0;
+}
+.LUX_basic_switch.disabledcked .LUXckbx .sp_lux {
+  background-position: -75px 0;
+}
+.LUX_basic_switch.half_disabledcked .LUXckbx .sp_lux {
+  background-position: 0 -75px;
+}
+.LUX_basic_switch.half_switchon .LUXckbx .sp_lux {
+  background-position: -25px -75px;
+}
+.LUX_basic_switch .LUXrabx .sp_lux {
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -8px;
+  background-position: 0 -25px;
+}
+.LUX_basic_switch.switchon .LUXrabx .sp_lux {
+  background-position: -25px -25px;
+}
+.LUX_basic_switch.disabled .LUXrabx .sp_lux {
+  background-position: -50px -25px;
+}
+.LUX_basic_switch.disabledcked .LUXrabx .sp_lux {
+  background-position: -75px -25px;
+}
+.LUX_basic_switch .LUXstarbx {
+  display: inline-block;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+}
+.LUX_basic_switch .LUXstarbx .sp_lux {
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  background-position: 0 -50px;
+}
+.LUX_basic_switch .LUXstarbx label {
+  padding-left: 30px;
+}
+.LUX_basic_switch.switchon .LUXstarbx .sp_lux {
+  background-position: -25px -50px;
+}
+.LUX_basic_switch.disabled .LUXstarbx .sp_lux {
+  background-position: -50px -50px;
+}
+.LUX_basic_switch .LUXonoffbx {
+  display: inline-block;
+  overflow: hidden;
+  width: 54px;
+  height: 23px;
+  vertical-align: top;
+}
+.LUX_basic_switch .LUXonoffbx label {
+  padding-left: 54px;
+}
+.LUX_basic_switch .LUXonoffbx .sp_lux {
+  top: 0;
+  width: 54px;
+  height: 23px;
+  background-position: -125px -50px;
+}
+.LUX_basic_switch.switchon .LUXonoffbx .sp_lux {
+  background-position: -125px -75px;
+}
+.LUX_basic_switch.disabled .LUXonoffbx .sp_lux {
+  background-position: -125px -100px;
+}
+.LUX_basic_switch.disabledcked .LUXonoffbx .sp_lux {
+  background-position: -125px -125px;
+}
+.LUX_basic_switch input[type="checkbox"] + .sp_lux {
+  background-position: 0 0;
+}
+.LUX_basic_switch input[type="checkbox"].focus + .sp_lux {
+  background-position: 0 -486px;
+}
+.LUX_basic_switch input[type="checkbox"]:checked + .sp_lux {
+  background-position: -25px 0;
+}
+.LUX_basic_switch input[type="checkbox"].focus:checked + .sp_lux {
+  background-position: -25px -486px;
+}
+.LUX_basic_switch.disabled input[type="checkbox"] + .sp_lux,
+.LUX_basic_switch.disabled input[type="checkbox"]:disabled + .sp_lux {
+  background-position: -50px 0;
+}
+.LUX_basic_switch.disabledcked input[type="checkbox"]:checked + .sp_lux {
+  background-position: -75px 0;
+}
+.LUX_basic_switch.half_disabledcked input[type="checkbox"] + .sp_lux,
+.LUX_basic_switch.half_disabledcked input[type="checkbox"]:checked + .sp_lux {
+  background-position: 0 -75px;
+}
+.LUX_basic_switch.half_switchon input[type="checkbox"] + .sp_lux {
+  background-position: 0 0;
+}
+.LUX_basic_switch.half_switchon input[type="checkbox"]:checked + .sp_lux {
+  background-position: -25px -75px;
+}
+.LUX_basic_switch.half_switchon input[type="checkbox"].focus:checked + .sp_lux {
+  background-position: -50px -486px;
+}
+.LUX_basic_switch input[type="radio"] + .sp_lux {
+  background-position: 0 -25px;
+}
+.LUX_basic_switch input[type="radio"].focus + .sp_lux {
+  background-position: 0 -509px;
+}
+.LUX_basic_switch input[type="radio"]:checked + .sp_lux {
+  background-position: -25px -25px;
+}
+.LUX_basic_switch input[type="radio"].focus:checked + .sp_lux {
+  background-position: -25px -509px;
+}
+.LUX_basic_switch.disabled input[type="radio"] + .sp_lux {
+  background-position: -50px -25px;
+}
+.LUX_basic_switch.disabledcked input[type="radio"] + .sp_lux {
+  background-position: -75px -25px;
+}
+.LUX_basic_switch .LUXstarbx input[type="checkbox"] + .sp_lux {
+  background-position: 0 -50px;
+}
+.LUX_basic_switch .LUXstarbx input[type="checkbox"]:checked + .sp_lux {
+  background-position: -25px -50px;
+}
+.LUX_basic_switch.switchon .LUXstarbx input[type="checkbox"] + .sp_lux {
+  background-position: -25px -50px;
+}
+.LUX_basic_switch .LUXonoffbx input[type="checkbox"] + .sp_lux {
+  background-position: -125px -50px;
+}
+.LUX_basic_switch .LUXonoffbx input[type="checkbox"]:checked + .sp_lux {
+  background-position: -125px -75px;
+}
+.LUX_basic_switch.switchon .LUXonoffbx input[type="checkbox"] + .sp_lux {
+  background-position: -125px -75px;
+}
+.LUX_basic_switch.disabled .LUXonoffbx input[type="checkbox"] + .sp_lux {
+  background-position: -125px -100px;
+}
+.LUX_basic_switch.disabledcked .LUXonoffbx input[type="checkbox"] + .sp_lux {
+  background-position: -125px -125px;
+}
+.LUX_basic_tbl table {
+  width: 100%;
+  border: 0;
+  border-collapse: separate;
+  border-top: 2px solid #646464;
+  border-bottom: 1px solid #e5e5e5;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+.LUX_basic_tbl table.bdbt {
+  border-bottom: 1px solid #646464;
+}
+.LUX_basic_tbl th {
+  font-size: 13px;
+}
+.LUX_basic_tbl thead th {
+  padding: 6px 0;
+  background: #f7f7f7;
+}
+.LUX_basic_tbl td {
+  padding: 6px 0 5px;
+  border-top: 1px solid #e5e5e5;
+  font-size: 13px;
+  font-weight: 200;
+  color: #666;
+  font-family: douzone !important;
+}
+.LUX_basic_tbl tr:first-child td {
+  border-top: 1px solid #e5e5e5;
+}
+.LUX_basic_tbl .cellft {
+  text-align: left !important;
+}
+.LUX_basic_tbl .celcnt {
+  text-align: center !important;
+}
+.LUX_basic_tbl .celrgt {
+  text-align: right !important;
+}
+.LUX_basic_tbl .celvat {
+  vertical-align: top !important;
+}
+.LUX_basic_tbl .celvam {
+  vertical-align: middle !important;
+}
+.LUX_basic_tbl .active td {
+  background: #f2f9ff;
+}
+.LUX_basic_tbl .hover td {
+  background: #f2f9ff;
+}
+.LUX_basic_tbl .disabled td {
+  color: #ccc;
+}
+.LUX_basic_tbl
+  .active
+  .LUX_basic_switch
+  input[type="checkbox"]:checked
+  + .sp_lux {
+  background-position: -25px 0;
+}
+.LUX_basic_tbl
+  .disabled
+  .LUX_basic_switch
+  input[type="checkbox"]:disabled
+  + .sp_lux {
+  background-position: -50px 0;
+}
+.LUX_basic_tbl .tbl_tit {
+  position: relative;
+  min-height: 22px;
+  padding: 5px 0;
+}
+.LUX_basic_tbl .tbl_tit h2 {
+  font-size: 15px;
+  line-height: 22px;
+  color: #000;
+  vertical-align: top;
+}
+.LUX_basic_tbl .tbl_tit h2 span {
+  display: inline-block;
+  margin: 0 0 0 6px;
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 22px;
+  color: #666;
+  vertical-align: top;
+}
+.LUX_basic_tbl .tbl_tit h2 .num {
+  display: inline-block;
+  margin: 0 0 0 6px;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 22px;
+  color: #1c90fb;
+  vertical-align: top;
+}
+.LUX_basic_tbl .tbl_tit p {
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+  vertical-align: top;
+}
+.LUX_basic_tbl .tbl_tit .tbl_tit_info {
+  display: inline-block;
+  margin: 2px 0 0 10px;
+  padding: 1px 0 0 10px;
+  border-left: 1px solid #e5e5e5;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4a4a4a;
+  vertical-align: top;
+}
+.LUX_basic_tbl .tbl_tit .tblinfo {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  font-size: 12px;
+}
+.LUX_basic_tbl .tbl_tit .tblinfo .sp_must {
+  margin-top: 6px;
+}
+.LUX_basic_tbl .sp_must {
+  width: 7px;
+  height: 7px;
+  margin: 3px 3px 0 0;
+  background-position: -25px -150px;
+}
+.LUX_basic_tbl .tbl_tit .btnbx {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+.LUX_basic_tbl .tbl_tit .btnbx .btn {
+  display: inline-block;
+}
+.LUX_basic_tbl .tbl_tit .btnbx > p {
+  margin-top: 4px;
+  font-size: 12px;
+}
+.LUX_basic_tbl .btn_data {
+  position: relative;
+  padding-right: 11px;
+  width: auto;
+  height: 27px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  white-space: nowrap;
+}
+.LUX_basic_tbl .btn_data .sp_lux {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin: -1px 0 0;
+  width: 6px;
+  height: 3px;
+  background-position: -75px -250px;
+}
+.LUX_basic_tbl .btn_data.up {
+  color: #1c90fb;
+}
+.LUX_basic_tbl .btn_data.up .sp_lux {
+  background-position: -90px -250px;
+}
+.LUX_basic_tbl .tblarea .inbx {
+  padding: 0 3px;
+}
+.LUX_basic_tbl .text {
+  vertical-align: -4px;
+}
+.LUX_basic_tbl .tblarea td:first-child .LUX_basic_switch,
+.LUX_basic_tbl .tblarea th:first-child .LUX_basic_switch {
+  width: 14px;
+  height: 27px;
+  margin: 0;
+}
+.LUX_basic_tbl .tblarea .LUX_basic_switch,
+.LUX_basic_tbl .tblarea th .LUX_basic_switch {
+  line-height: 27px;
+}
+.LUX_basic_tbl .tblarea2 th {
+  padding: 9px 0;
+  border: 1px solid #e5e5e5;
+  border-width: 1px 1px 0 0;
+  background-color: #f7f7f7;
+  font-weight: 200;
+  line-height: 18px;
+  text-align: right;
+  vertical-align: top;
+}
+.LUX_basic_tbl .tblarea2 tr:first-child td,
+.LUX_basic_tbl .tblarea2 tr:first-child th {
+  border-top: 0;
+}
+.LUX_basic_tbl .tblarea2 th .inbx {
+  position: relative;
+  padding: 4px 16px 3px;
+}
+.LUX_basic_tbl .tblarea2 th .LUX_basic_select {
+  margin: -4px 0 -3px;
+}
+.LUX_basic_tbl .tblarea2 th .inbx > .sp_lux {
+  width: 7px;
+  height: 7px;
+  margin: 5px 5px 0 0;
+  background-position: -25px -150px;
+}
+.LUX_basic_tbl .tblarea2 th .inbx > .sp_lux.blue {
+  background-position: -25px -161px;
+}
+.LUX_basic_tbl .tblarea2 th .inbx p {
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #fc5356;
+  letter-spacing: -0.5px;
+}
+.LUX_basic_tbl .tblarea2 td .inbx {
+  padding: 0 16px;
+}
+.LUX_basic_tbl .tbl_scrall {
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 490px;
+}
+.LUX_basic_tbl .tbl_scrall table {
+  border-top: 0;
+}
+.LUX_basic_tbl tbody tr:first-child td {
+  border-top: 0;
+}
+.LUX_basic_tbl .tblarea td {
+  border-left: 0;
+}
+.LUX_basic_tbl .tbl_tit .btnbx:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_tbl .tbl_tit .btnbx .LUX_basic_submit {
+  float: left;
+  width: 176px;
+  margin-left: 4px;
+}
+.LUX_basic_tbl .tbl_tit .btnbx .LUX_basic_btn {
+  float: left;
+  margin-left: 4px;
+}
+.LUX_basic_tbl .tbl_tit .btnbx .LUX_basic_popover {
+  float: left;
+}
+.LUX_basic_tbl .tbl_tit .btnbx .LUX_basic_popover .resultbx {
+  right: 0;
+  left: auto;
+}
+.LUX_basic_tbl .inbx:after,
+.LUX_basic_tbl .inbx_bank:after,
+.LUX_basic_tbl .inbx_default:after,
+.LUX_basic_tbl .inbx_email:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_tbl .inbx_value {
+  overflow: hidden;
+  padding: 4px 0 3px;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.LUX_basic_tbl .inbx_value2 {
+  padding: 6px 0 2px;
+  line-height: 16px;
+}
+.LUX_basic_tbl .inbx_name {
+  display: inline-block;
+  position: relative;
+  padding: 4px 0 3px;
+  line-height: 20px;
+}
+.LUX_basic_tbl .inbx_name:after {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  vertical-align: top;
+  content: "";
+}
+.LUX_basic_tbl .inbx_name.on:after {
+  background: #ff7800;
+}
+.LUX_basic_tbl .inbx_name.off:after {
+  background: #d4d4d4;
+}
+.LUX_basic_tbl .inbx_name.ing:after {
+  background: #1fc47c;
+}
+.LUX_basic_tbl.tblarea3 table {
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+.LUX_basic_tbl.tblarea3 table thead th {
+  background: 0 0;
+}
+.LUX_basic_tbl.tblarea3 table tbody tr:first-of-type td {
+  border-top: 1px solid #e5e5e5;
+}
+.LUX_basic_tbl .input_section + .input_section {
+  margin-top: 4px;
+}
+.inbx_email {
+  float: left;
+}
+.inbx_email + .LUX_basic_btn {
+  float: left;
+}
+.inbx_email .LUX_basic_text:first-child {
+  float: left;
+  width: 34%;
+  max-width: 176px;
+}
+.inbx_email .sign {
+  display: inline-block;
+  float: left;
+  width: 6%;
+  max-width: 19px;
+  line-height: 27px;
+  font-size: 13px;
+  color: #4a4a4a;
+  text-align: center;
+}
+.inbx_email .sign + .LUX_basic_text {
+  float: left;
+  width: 24%;
+  max-width: 100px;
+}
+.inbx_email .LUX_basic_select,
+.inbx_email .LUX_pure_select {
+  float: left;
+  width: 34%;
+  max-width: 115px;
+  margin: 0 0 0 4px;
+}
+.LUX_basic_tbl .inbx_bank .LUX_basic_select {
+  float: left;
+  width: 24%;
+  max-width: 115px;
+}
+.LUX_basic_tbl .inbx_bank .LUX_basic_text {
+  float: left;
+  width: 44%;
+  max-width: 161px;
+  margin-left: 4px;
+}
+.LUX_basic_tbl .inbx_bank .LUX_basic_text + .LUX_basic_text {
+  width: 29%;
+  max-width: 130px;
+}
+.LUX_basic_tbl .inbx_default {
+  float: left;
+  margin-right: 4px;
+}
+.LUX_basic_tbl .inbx_default > .inbx_value {
+  float: left;
+  margin-right: 8px;
+}
+.LUX_basic_tbl .inbx_default > .LUX_basic_select,
+.LUX_basic_tbl .inbx_default > .LUX_basic_text {
+  float: left;
+  width: 176px;
+  margin-right: 4px;
+}
+.LUX_basic_tbl .inbx_default > .LUX_basic_submit {
+  float: left;
+  width: 221px;
+  margin-right: 4px;
+}
+.LUX_basic_tbl .inbx_default > .LUX_basic_switch {
+  float: left;
+  margin-right: 20px;
+  line-height: 27px;
+}
+.LUX_basic_tbl .inbx_default > .LUX_basic_switch.onoff {
+  top: 2px;
+}
+.LUX_basic_tbl .inbx_default > .LUX_basic_switch label {
+  padding-left: 18px;
+  line-height: 27px;
+}
+.LUX_basic_tbl .inbx_default > .LUX_basic_btn {
+  float: left;
+  margin-right: 4px;
+}
+.LUX_basic_tbl .inbx_default > .LUX_basic_date,
+.LUX_basic_tbl .inbx_default > .LUX_basic_time {
+  float: left;
+  margin-right: 10px;
+}
+.LUX_basic_tbl .inbx_default + .guide_p {
+  float: left;
+  margin: 5px 0 0 2px;
+}
+.LUX_basic_tbl .inbx_default + .guide_lst {
+  clear: both;
+  padding-top: 10px;
+}
+.LUX_basic_tbl .inbx_full:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_tbl .inbx_full + .inbx_full {
+  margin-top: 4px;
+}
+.LUX_basic_tbl .inbx_full > .LUX_basic_text {
+  float: left;
+  width: 80%;
+  max-width: 414px;
+  margin-right: 4px;
+}
+.LUX_basic_tbl .inbx_full > .LUX_basic_btn {
+  float: left;
+  margin-right: 4px;
+}
+.LUX_basic_tbl .inbx_full > .LUX_basic_submit,
+.LUX_basic_tbl .inbx_full > .LUX_basic_textarea {
+  float: left;
+  width: 80%;
+  max-width: 414px;
+}
+.LUX_basic_tbl .inbx_full2 + .inbx_full2 {
+  margin-top: 4px;
+}
+.LUX_basic_tbl .inbx_full2 > .LUX_basic_text,
+.LUX_basic_tbl .inbx_full2 > .LUX_pure_select {
+  width: 100%;
+}
+.LUX_basic_tbl .inbx_enroll_img {
+  overflow: hidden;
+  float: left;
+  width: 65px;
+  height: 65px;
+  margin: 7px 20px 0 0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  line-height: 66px;
+  vertical-align: middle;
+}
+.LUX_basic_tbl .inbx_enroll_img img {
+  width: 100%;
+  height: 100%;
+}
+.LUX_basic_tbl .inbx_enroll_img2 {
+  overflow: hidden;
+  float: left;
+  width: 155px;
+  height: 80px;
+  margin: 7px 20px 0 0;
+  border: 1px solid #ccc;
+  line-height: 80px;
+  text-align: center;
+}
+.LUX_basic_tbl .inbx_enroll_img2 img {
+  vertical-align: middle;
+}
+.LUX_basic_tbl .inbx_enroll_info {
+  float: left;
+  margin: 7px 0;
+}
+.LUX_basic_tbl .inbx_enroll_info .guide_lst {
+  margin-bottom: 7px;
+}
+.LUX_basic_tbl .addcell td,
+.LUX_basic_tbl .addcell th {
+  padding: 0 0 9px;
+  border-top: 0;
+}
+.LUX_basic_tbl .addcell .inbx {
+  margin-top: -2px;
+}
+.tbl_accordion .tbl_tit {
+  margin-top: 20px;
+  border-bottom: 2px solid #646464;
+}
+.tbl_accordion .tbl_tit .btn_arr {
+  display: inline-block;
+}
+.tbl_accordion .tbl_tit .btn_arr .sp_lux {
+  width: 14px;
+  height: 8px;
+  margin-top: 3px;
+  background-position: 0 -250px;
+}
+.tbl_accordion .open .tbl_tit {
+  border-bottom: 0;
+}
+.tbl_accordion .open .tbl_tit .btn_arr .sp_lux {
+  background-position: -25px -250px;
+}
+.tbl_accordion table {
+  display: none;
+}
+.tbl_accordion .open table {
+  display: table;
+}
+.LUX_basic_rnb {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+.LUX_basic_rnb .dimmed {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1100;
+  background: #000;
+  opacity: 0.3;
+}
+.LUX_basic_rnb .rnb {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: -442px;
+  bottom: 0;
+  z-index: 1110;
+  width: 442px;
+  background: #fff;
+  word-break: break-all;
+  -webkit-transition: right 0.25s;
+  transition: right 0.25s;
+}
+.LUX_basic_rnb .rnbtit {
+  position: absolute;
+  top: 0;
+  right: 26px;
+  left: 26px;
+  z-index: 10;
+  height: 50px;
+  border-bottom: 1px solid #626262;
+  word-break: break-all;
+}
+.LUX_basic_rnb .rnbtit h1 {
+  margin-top: 2px;
+  font-size: 20px;
+  line-height: 48px;
+  color: #4a4a4a;
+}
+.LUX_basic_rnb .rnbtit .num {
+  display: inline-block;
+  margin: 1px 0 0 5px;
+  color: #46abff;
+  vertical-align: top;
+}
+.LUX_basic_rnb .rnbtit .btnbx {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.LUX_basic_rnb .rnbtit .btnbx .btn_clr {
+  width: 50px;
+  height: 50px;
+  margin-right: -16px;
+}
+.LUX_basic_rnb .rnbtit .btnbx .btn_clr .sp_lux {
+  width: 13px;
+  height: 13px;
+  background-position: -140px -275px;
+}
+.LUX_basic_rnb .rnbbtn {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 10px 26px;
+  background: #f2f2f2;
+  text-align: center;
+  word-break: break-all;
+}
+.LUX_basic_rnb .rnbbtn:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_rnb .rnbin {
+  overflow: auto;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+  bottom: 57px;
+  padding: 0 26px 20px;
+  word-break: break-all;
+}
+.LUX_basic_rnb .rnbin > div:first-child {
+  border-top: 0;
+}
+.LUX_basic_rnb .LUX_basic_tabs {
+  text-align: left;
+}
+.LUX_basic_rnb .LUX_basic_tabs.bdline_cnt {
+  margin: 0 26px;
+  border-bottom: 1px solid #626262;
+}
+.LUX_basic_rnb .LUX_basic_tabs.bdline_cnt .tabs_lst a {
+  margin-top: 2px;
+  padding: 0 18px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #8d8d8d;
+}
+.LUX_basic_rnb .LUX_basic_tabs.bdline_cnt .tabs_lst .num {
+  margin-left: 4px;
+  color: #8d8d8d;
+}
+.LUX_basic_rnb .LUX_basic_tabs.bdline_cnt .active a {
+  font-weight: 700;
+  color: #00a2ff;
+}
+.LUX_basic_rnb .LUX_basic_tabs.bdline_cnt .active a .num {
+  color: #00a2ff;
+}
+.LUX_basic_rnb .LUX_basic_tabs.bdline_cnt .btnbx {
+  position: absolute;
+  top: 0;
+  right: 26px;
+}
+.LUX_basic_rnb .LUX_basic_tabs.bdline_cnt .btnbx .btn_clr {
+  width: 50px;
+  height: 50px;
+  margin-right: -16px;
+}
+.LUX_basic_rnb .LUX_basic_tabs.bdline_cnt .btnbx .btn_clr .sp_lux {
+  width: 13px;
+  height: 13px;
+  background-position: -140px -275px;
+}
+.LUX_basic_rnb.open_rnb .rnb {
+  right: 0;
+}
+.LUX_basic_rnb.open_rnb .dimmed {
+  display: block;
+}
+.co .LUX_basic_rnb .rnbin.group_info + .rnbbtn button {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.LUX_basic_btn .sp_map {
+  width: 22px;
+  height: 22px;
+  background-position: -250px -150px;
+}
+.LUX_searchfield .LUX_basic_text {
+  position: relative;
+}
+.LUX_searchfield .LUX_basic_pageable .LUX_basic_btn {
+  right: -60px;
+  left: inherit;
+}
+.LUX_searchfield .LUX_basic_pageable .btn_prve {
+  right: -30px;
+}
+.LUX_searchfield .count_text {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  font-size: 11px;
+  line-height: 18px;
+  margin-top: -9px;
+}
+.LUX_searchfield .count_text > span {
+  color: #1c90fb;
+}
+.LUX_searchfield .LUX_basic_text .inpbx {
+  padding-right: 70px;
+}
+.LUX_searchfield .LUX_basic_text .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 27px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_searchfield .LUX_basic_text.disabled .sp_lux {
+  display: inline-block;
+}
+.LUX_searchfield .LUX_basic_text .inpbx .sp_lux {
+  width: 16px;
+  height: 14px;
+  background-position: -100px 0;
+}
+.LUX_searchfield .LUX_basic_text .inpbx.on .sp_lux {
+  background-position: -125px 0;
+}
+.LUX_searchfield.disabled .LUX_basic_text:hover .inpbx .sp_lux {
+  background-position: -100px 0;
+}
+.LUX_searchfield.disabled .LUX_basic_text .inpbx {
+  border-color: #dbdbdb;
+  background: #f3f3f3;
+}
+.LUX_searchfield.disabled .LUX_basic_text .inpbx input {
+  color: #8d8d8d;
+}
+.LUX_searchfield.disabled .LUX_basic_text .inpbx .btn {
+  cursor: default;
+}
+.LUX_searchfield.disabled .count_text > span {
+  color: #8d8d8d;
+}
+.LUX_searchfield.pgbtn {
+  position: relative;
+}
+.LUX_searchfield.pgbtn .LUX_basic_text {
+  padding-right: 60px;
+}
+.LUX_searchfield.pgbtn .pagebtn {
+  position: absolute;
+  top: 0;
+  right: 30px;
+}
+.LUX_searchfield.pgbtn .pagebtn .sp_lux {
+  width: 9px;
+  height: 11px;
+  background-position: -251px -275px;
+}
+.LUX_searchfield.pgbtn .pagebtn + .pagebtn {
+  right: 0;
+}
+.LUX_searchfield.pgbtn .pagebtn + .pagebtn .sp_lux {
+  background-position: -265px -275px;
+}
+.LUX_basic_select {
+  position: relative;
+}
+.LUX_basic_select .inpbx {
+  display: block;
+  height: 22px;
+  padding: 6px 24px 0 6px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  line-height: 22px;
+}
+.LUX_basic_select .inpbx input {
+  display: block;
+  border: 0;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #000;
+  letter-spacing: -0.5px;
+  outline: 0;
+}
+.LUX_basic_select .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 27px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_basic_select .btn .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -2px;
+  width: 8px;
+  height: 4px;
+  background-position: -50px -50px;
+}
+.LUX_basic_select .placeholder {
+  position: absolute;
+  top: -1px;
+  left: 1px;
+  padding: 6px 20px 0 6px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 22px;
+  color: #8d8d8d;
+  letter-spacing: -0.5px;
+}
+.LUX_basic_select .placeholder.text_black {
+  font-weight: 400;
+  color: #1a1a1a;
+  cursor: default;
+}
+.LUX_basic_select .inpbx:hover .placeholder {
+  display: none;
+}
+.LUX_basic_select .inpbx:hover .placeholder.text_black {
+  display: block;
+}
+.LUX_basic_select .searchbx {
+  overflow: hidden;
+  position: relative;
+}
+.LUX_basic_select .monthbx {
+  position: relative;
+}
+.LUX_basic_select .searchbx .inpbx input {
+  width: 100%;
+}
+.LUX_basic_select .monthbx {
+  width: 76px;
+}
+.LUX_basic_select .monthbx .inpbx input {
+  float: left;
+  width: 60%;
+}
+.LUX_basic_select .monthbx .inpbx input + input {
+  width: 40%;
+}
+.LUX_basic_select .monthbx .inpbx input:disabled {
+  color: #8d8d8d;
+}
+.LUX_basic_select .resultbx {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  background: #fff;
+}
+.LUX_basic_select:hover .searchbx .sp_lux {
+  background-position: -75px -50px;
+}
+.LUX_basic_select:hover .inpbx {
+  border-color: #58adfc;
+}
+.LUX_basic_select:hover .resultbx {
+  display: block;
+}
+.LUX_basic_select .result_scrall {
+  overflow: auto;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+  box-shadow: 1px 1px 1px #ececec;
+}
+.LUX_basic_select .result_lst a {
+  display: block;
+  position: relative;
+  padding: 2px 6px 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #4a4a4a;
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-decoration: none;
+}
+.LUX_basic_select .result_lst a:hover {
+  background: #f5f5f5;
+}
+.LUX_basic_select .result_lst a span {
+  color: #1c90fb;
+}
+.LUX_basic_select .result_lst a .none {
+  margin-right: 3px;
+  color: #8d8d8d;
+}
+.LUX_basic_select .result_lst a.icona {
+  padding-left: 25px;
+}
+.LUX_basic_select .result_lst a.icona img {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  margin-top: -7px;
+}
+.LUX_basic_select .color_label {
+  position: absolute;
+  top: -1px;
+  left: 1px;
+  padding: 6px 20px 0 26px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 22px;
+  color: #000;
+  letter-spacing: -0.5px;
+  cursor: default;
+}
+.LUX_basic_select .color_label:before {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  margin-top: -7px;
+  background: #000;
+  content: "";
+}
+.LUX_basic_select .color_label.blue:before {
+  background: #1f74ff;
+}
+.LUX_basic_select .resultbx .color_label {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.LUX_basic_select.disabled .inpbx {
+  background: #f3f3f3;
+}
+.LUX_basic_select.disabled .inpbx .placeholder {
+  color: #8d8d8d;
+}
+.LUX_basic_select.disabled .btn .sp_lux {
+  background-position: -225px -285px;
+}
+.LUX_basic_select.disabled:hover .inpbx {
+  border-color: #dbdbdb;
+}
+.LUX_basic_select.disabled:hover .resultbx {
+  display: none;
+}
+.LUX_pure_select {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 176px;
+  height: 29px;
+  padding: 9px 0 0 7px;
+  border: 1px solid #dbdbdb;
+  vertical-align: top;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.LUX_pure_select:hover {
+  border-color: #58adfc;
+}
+.LUX_pure_select select {
+  display: block;
+  width: 100%;
+  margin: -4px 0 0;
+  padding: 0;
+  border: 0 none;
+  background: #fff;
+  font-size: 13px;
+  color: #4a4a4a;
+  vertical-align: top;
+  -webkit-appearance: none;
+  outline: 0;
+  box-sizing: border-box;
+}
+.LUX_pure_select .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  border: 1px solid transparent;
+  border-left: 0 none;
+  background: #fff;
+  pointer-events: none;
+  border-radius: 4px;
+}
+.LUX_pure_select .sp_lux {
+  width: 10px;
+  height: 5px;
+  margin: 10px 0 0 9px;
+  background-position: -50px -50px;
+}
+.LUX_selectcolorfield .searchbx .inpbx {
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 22px;
+  color: #000;
+  letter-spacing: -0.5px;
+  cursor: default;
+  padding: 3px 24px;
+}
+.LUX_selectcolorfield .searchbx .inpbx .select_text {
+  display: inline-block;
+  padding-top: 1px;
+}
+.LUX_selectcolorfield.nofield .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 27px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_selectcolorfield.nofield .searchbx {
+  width: 43px;
+}
+.LUX_selectcolorfield.nofield .searchbx .inpbx {
+  padding-left: 0;
+}
+.LUX_selectcolorfield.nofield .searchbx .btn > span {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -2px;
+  left: inherit;
+  margin-left: 0;
+}
+.LUX_selectcolorfield .result_scrall {
+  overflow-y: auto;
+  background: #fff;
+}
+.LUX_selectcolorfield .result_scrall a {
+  position: relative;
+  display: block;
+  padding: 3px 6px 1px 32px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #4a4a4a;
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-decoration: none;
+}
+.LUX_selectcolorfield .result_scrall a:hover {
+  background: #f5f5f5;
+}
+.LUX_selectcolorfield .resultbx {
+  padding: 0;
+}
+.LUX_selectcolorfield .select_color {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+}
+.LUX_smart_compelete {
+  position: relative;
+}
+.LUX_smart_compelete .searchbx {
+  position: relative;
+}
+.LUX_smart_compelete .searchbx .inpbx {
+  display: block;
+  height: 22px;
+  padding: 6px 24px 0 6px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  line-height: 22px;
+}
+.LUX_smart_compelete.noicon .searchbx .inpbx {
+  padding-right: 6px;
+}
+.LUX_smart_compelete .searchbx .inpbx input {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #000;
+  letter-spacing: -0.5px;
+  outline: 0;
+}
+.LUX_smart_compelete .searchbx .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 27px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_smart_compelete .searchbx .btn .sp_lux {
+  width: 16px;
+  height: 14px;
+  background-position: -100px 0;
+}
+.LUX_smart_compelete .searchbx .placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 24px 0 7px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #8d8d8d;
+  letter-spacing: -0.5px;
+}
+.LUX_smart_compelete.noicon .searchbx .placeholder {
+  padding-right: 6px;
+}
+.LUX_smart_compelete .searchbx .inpbx:hover .placeholder {
+  display: none;
+}
+.LUX_smart_compelete .resultbx {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+  box-shadow: 1px 1px 1px #ececec;
+  box-sizing: border-box;
+}
+.LUX_smart_compelete .resultbx span {
+  font-size: 13px;
+  line-height: 20px;
+}
+.LUX_smart_compelete .resultbx .result_lst li {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+}
+.LUX_smart_compelete:hover .searchbx .sp_lux {
+  background-position: -125px 0;
+}
+.LUX_smart_compelete:hover .inpbx {
+  border-color: #58adfc;
+}
+.LUX_smart_compelete:hover .resultbx {
+  display: block;
+}
+.LUX_smart_compelete .result_scrall {
+  overflow: auto;
+}
+.LUX_smart_compelete .result_scrallin {
+  zoom: 1;
+}
+.LUX_smart_compelete .result_lst a {
+  clear: both;
+  overflow: hidden;
+  display: block;
+  padding: 3px 6px 1px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #4a4a4a;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+}
+.LUX_smart_compelete .result_lst a:hover {
+  background: #e9f5ff;
+}
+.LUX_smart_compelete .result_lst i {
+  color: #1c90fb;
+  font-style: normal;
+}
+.LUX_smart_compelete .list_header {
+  border-bottom: 1px solid #dbdbdb;
+}
+.LUX_smart_compelete .list_header .check_item {
+  padding: 3px 6px 1px;
+  clear: both;
+  overflow: hidden;
+}
+.LUX_smart_compelete .list_header .check_item:hover {
+  background: #f5f5f5;
+}
+.LUX_smart_compelete .list_header em {
+  color: #1c90fb;
+}
+.LUX_smart_compelete .list_header .addbtn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #1c90fb;
+  line-height: 32px;
+}
+.LUX_smart_compelete .list_header .addbtn .sp_lux {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.LUX_smart_compelete .list_header .addbtn span {
+  vertical-align: -1px;
+}
+.LUX_smart_compelete .list_header.v2 {
+  background: #f5f5f5;
+}
+.LUX_smart_compelete .list_header.v2 .addbtn {
+  line-height: 23px;
+  color: #4a4a4a;
+  text-align: left;
+  padding: 0 6px;
+}
+.LUX_smart_compelete.type2 .resultbx .result_lst {
+  overflow-y: auto;
+}
+.LUX_smart_compelete.type2 .resultbx .result_lst li {
+  padding: 3px 6px 1px;
+}
+.LUX_smart_compelete.type2 .resultbx .result_lst li.active {
+  background: #e9f5ff;
+}
+.LUX_smart_compelete.type2 .resultbx .result_lst li.active:hover {
+  background: #e9f5ff;
+}
+.LUX_smart_compelete.type2 .resultbx .result_lst li:hover {
+  background: #f5f5f5;
+}
+.LUX_smart_compelete.type2 .resultbx .LUX_basic_switch label {
+  width: 100%;
+  vertical-align: top;
+  text-align: left;
+  box-sizing: border-box;
+}
+.LUX_smart_compelete .btn_area {
+  text-align: center;
+  background: #faf9f9;
+  padding: 6px 0;
+  border-top: 1px solid #dbdbdb;
+}
+.LUX_smart_compelete .btn_area .LUX_basic_btn + .LUX_basic_btn {
+  margin-left: 2px;
+}
+.LUX_smart_compelete .left_section {
+  float: left;
+  width: 60%;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+.LUX_smart_compelete .right_section {
+  float: right;
+  width: 40%;
+  text-align: right;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+.LUX_smart_compelete.hovergrey .result_lst a:hover {
+  background: #f5f5f5;
+}
+.LUX_smart_compelete .info_title {
+  margin: 0 10px;
+  line-height: 28px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.LUX_smart_compelete.type3 .resultbx .result_lst a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.LUX_smart_compelete.type3 .resultbx .result_lst + .result_lst {
+  border-top: 1px solid #a3a3a3;
+}
+.LUX_smart_compelete.v2 a {
+  line-height: 17px;
+}
+.LUX_smart_compelete .profile_pic {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  margin-top: -16px;
+}
+.LUX_smart_compelete .profile_pic > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+.LUX_smart_compelete .left_info {
+  padding-left: 39px;
+  line-height: 16px;
+}
+.LUX_smart_compelete.type4 .left_section {
+  width: 70%;
+}
+.LUX_smart_compelete.type4 .right_section {
+  width: 30%;
+  line-height: 16px;
+}
+.LUX_smart_compelete.type4 a {
+  padding-top: 18px;
+  padding-bottom: 15px;
+}
+.LUX_smart_compelete.type4.v2 a {
+  padding-top: 10px;
+  padding-bottom: 7px;
+}
+.LUX_smart_compelete.type4 li + li {
+  border-top: 1px solid #f5f5f5;
+}
+.LUX_smart_compelete .item {
+  float: left;
+  overflow: hidden;
+}
+.LUX_smart_compelete .item + .item {
+  margin-left: 20px;
+}
+.LUX_smart_select {
+  position: relative;
+}
+.LUX_smart_select .inpbx {
+  display: block;
+  height: 22px;
+  padding: 6px 24px 0 6px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  line-height: 22px;
+}
+.LUX_smart_select .inpbx input {
+  display: block;
+  height: 22px;
+  padding: 6px 24px 0 6px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  line-height: 22px;
+}
+.LUX_smart_select .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 27px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_smart_select .btn .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -2px;
+  width: 8px;
+  height: 4px;
+  background-position: -50px -50px;
+}
+.LUX_smart_select .placeholder {
+  position: absolute;
+  top: -1px;
+  left: 1px;
+  padding: 6px 20px 0 6px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 22px;
+  color: #8d8d8d;
+  letter-spacing: -0.5px;
+}
+.LUX_smart_select .placeholder.text_black {
+  font-weight: 400;
+  color: #1a1a1a;
+  cursor: default;
+}
+.LUX_smart_select .inpbx:hover .placeholder {
+  display: none;
+}
+.LUX_smart_select .inpbx:hover .placeholder.text_black {
+  display: block;
+}
+.LUX_smart_select .searchbx {
+  overflow: hidden;
+  position: relative;
+}
+.LUX_basic_select .monthbx {
+  position: relative;
+}
+.LUX_smart_select .searchbx .inpbx input {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #000;
+  letter-spacing: -0.5px;
+  outline: 0;
+}
+.LUX_smart_select .monthbx {
+  width: 76px;
+}
+.LUX_smart_select .monthbx .inpbx input {
+  float: left;
+  width: 60%;
+}
+.LUX_smart_select .monthbx .inpbx input + input {
+  width: 40%;
+}
+.LUX_smart_select .monthbx .inpbx input:disabled {
+  color: #8d8d8d;
+}
+.LUX_smart_select .resultbx {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+  box-shadow: 1px 1px 1px #ececec;
+  box-sizing: border-box;
+}
+.LUX_smart_select .resultbx span {
+  font-size: 13px;
+  line-height: 20px;
+}
+.LUX_smart_select .resultbx .result_lst li {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+}
+.LUX_smart_select:hover .searchbx .sp_lux {
+  background-position: -75px -50px;
+}
+.LUX_smart_select:hover .inpbx {
+  border-color: #58adfc;
+}
+.LUX_smart_select:hover .resultbx {
+  display: block;
+}
+.LUX_smart_select .result_scrall {
+  overflow: auto;
+}
+.LUX_smart_select .result_scrallin {
+  zoom: 1;
+}
+.LUX_smart_select .result_lst a {
+  clear: both;
+  overflow: hidden;
+  display: block;
+  padding: 3px 6px 1px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #4a4a4a;
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-decoration: none;
+}
+.LUX_smart_select .result_lst a:hover {
+  background: #e9f5ff;
+}
+.LUX_smart_select .result_lst i {
+  color: #1c90fb;
+  font-style: normal;
+}
+.LUX_smart_select .list_header .check_item {
+  padding: 3px 6px 1px;
+  clear: both;
+  overflow: hidden;
+}
+.LUX_smart_select .list_header .check_item:hover {
+  background: #f5f5f5;
+}
+.LUX_smart_select .list_header em {
+  color: #1c90fb;
+}
+.LUX_smart_select.type2 .resultbx .result_lst {
+  overflow-y: auto;
+}
+.LUX_smart_select.type2 .resultbx .result_lst li {
+  padding: 3px 6px 1px;
+}
+.LUX_smart_select.type2 .resultbx .result_lst li.active {
+  background: #e9f5ff;
+}
+.LUX_smart_select.type2 .resultbx .result_lst li.active:hover {
+  background: #e9f5ff;
+}
+.LUX_smart_select.type2 .resultbx .result_lst li:hover {
+  background: #f5f5f5;
+}
+.LUX_smart_select.type2 .resultbx .LUX_basic_switch label {
+  width: 100%;
+  vertical-align: top;
+  text-align: left;
+  box-sizing: border-box;
+}
+.LUX_smart_select .btn_area {
+  text-align: center;
+  background: #faf9f9;
+  padding: 6px 0;
+  border-top: 1px solid #dbdbdb;
+}
+.LUX_smart_select .btn_area .LUX_basic_btn + .LUX_basic_btn {
+  margin-left: 2px;
+}
+.LUX_smart_select .list_header .addbtn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: #4a4a4a;
+  line-height: 24px;
+  padding: 0 6px;
+  font-weight: 700;
+}
+.LUX_smart_select .list_header .addbtn:hover {
+  background: #e9f5ff;
+}
+.LUX_smart_select .list_header .addbtn .sp_lux {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.LUX_smart_select .list_header .addbtn span {
+  vertical-align: -1px;
+}
+.LUX_smart_select .left_section {
+  float: left;
+  width: 60%;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+.LUX_smart_select .right_section {
+  float: right;
+  width: 40%;
+  text-align: right;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+.LUX_smart_select.hovergrey .result_lst a:hover {
+  background: #f5f5f5;
+}
+.LUX_smart_select .info_title {
+  margin: 0 10px;
+  line-height: 28px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.LUX_smart_select.type3 .resultbx .result_lst a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.LUX_smart_select.type3 .resultbx .result_lst + .result_lst {
+  border-top: 1px solid #a3a3a3;
+}
+.LUX_smart_select.v2 a {
+  line-height: 17px;
+}
+.LUX_smart_select .profile_pic {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  margin-top: -16px;
+}
+.LUX_smart_select .profile_pic > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+.LUX_smart_select .left_info {
+  padding-left: 39px;
+  line-height: 16px;
+}
+.LUX_smart_select.type4 .left_section {
+  width: 70%;
+}
+.LUX_smart_select.type4 .right_section {
+  width: 30%;
+  line-height: 16px;
+}
+.LUX_smart_select.type4 a {
+  padding-top: 18px;
+  padding-bottom: 15px;
+}
+.LUX_smart_select.type4.v2 a {
+  padding-top: 10px;
+  padding-bottom: 7px;
+}
+.LUX_smart_select.type4 li + li {
+  border-top: 1px solid #f5f5f5;
+}
+.LUX_basic_snb {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  bottom: 0;
+  width: 199px;
+  border-right: 1px solid #d9d9d9;
+  background-color: #fff;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin {
+  top: 60px;
+  bottom: 440px;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu {
+  padding: 6px 0;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu li {
+  position: relative;
+  padding: 3px 0;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu li > a {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  max-width: 100%;
+  padding: 7px 43px 7px 20px;
+  color: #000;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu li > a .sp_snb.ico_dummy {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  margin-right: 4px;
+  background-position: 0 -3px;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu li .LUX_basic_badge,
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu li .number {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu li .LUX_basic_badge {
+  padding: 1px 4px;
+  font-size: 10px;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu li .LUX_basic_badge.blue {
+  padding: 2px 4px 0;
+  -webkit-padding-before: 1px;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu li .number {
+  color: #1c90fb;
+  font-size: 13px;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu li.active a {
+  color: #1c90fb;
+  background: #e9f5ff;
+}
+.LUX_basic_snb.snb_v2
+  .LUX_basic_snbin
+  .snbsub_menu
+  li:focus:not(.hover-none)
+  > a,
+.LUX_basic_snb.snb_v2
+  .LUX_basic_snbin
+  .snbsub_menu
+  li:hover:not(.hover-none)
+  > a {
+  background: #e9f5ff;
+}
+.LUX_basic_snb.snb_v2
+  .LUX_basic_snbin
+  .snbsub_menu
+  li.is_badge
+  .LUX_basic_badge {
+  display: block;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu li.is_num .number {
+  display: block;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu .r_btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu .depth2 {
+  padding: 3px 0;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu .depth2 li a {
+  padding-left: 34px;
+  font-size: 13px;
+}
+.LUX_basic_snb.snb_v2 .LUX_basic_snbin .snbsub_menu .depth2 li a .sp_snb {
+  width: 10px;
+  height: 13px;
+  background-position: -120px -4px;
+}
+.LUX_basic_snb.snb_v2 .snb_group .group_box .LUX_basic_badge,
+.LUX_basic_snb.snb_v2 .snb_group .group_box .number {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 12px;
+}
+.LUX_basic_snb.snb_v2 .snb_group .group_box .number {
+  top: 7px;
+  color: #1c90fb;
+  font-size: 13px;
+}
+.LUX_basic_snb.snb_v2 .snb_group .group_box.depth1:not(.group_box_set) {
+  padding: 0 50px 0 63px;
+}
+.LUX_basic_snb.snb_v2 .snb_group .group_box.select,
+.LUX_basic_snb.snb_v2 .snb_group .group_box:focus,
+.LUX_basic_snb.snb_v2 .snb_group .group_box:hover {
+  background: #e9f5ff;
+}
+.LUX_basic_snb.snb_v2 .snb_group .group_box.is_badge,
+.LUX_basic_snb.snb_v2 .snb_group .group_box.is_num {
+  padding: 0 40px 0 43px;
+}
+.LUX_basic_snb.snb_v2 .snb_group .group_box.is_badge .text,
+.LUX_basic_snb.snb_v2 .snb_group .group_box.is_num .text {
+  padding: 0;
+}
+.LUX_basic_snb.snb_v2 .snb_group .group_box.is_badge .LUX_basic_badge {
+  display: block;
+}
+.LUX_basic_snb.snb_v2 .snb_group .group_box.is_num .number {
+  display: block;
+  line-height: normal;
+}
+.LUX_basic_snb.snb_v2 .snb_group .group_box:hover.is_badge .text,
+.LUX_basic_snb.snb_v2 .snb_group .group_box:hover.is_num .text {
+  padding-right: 0 !important;
+}
+.LUX_basic_snb.snb_v2 .bottom_btn {
+  height: auto;
+  background: #f7f7f7;
+}
+.LUX_basic_snb.snb_v2 .bottom_btn li {
+  display: block;
+  position: relative;
+  margin: 4px 0;
+}
+.LUX_basic_snb.snb_v2 .bottom_btn li.is_trash > .LUX_basic_btn {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  margin-top: -7px;
+}
+.LUX_basic_snb.snb_v2 .bottom_btn li > a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  padding: 7px 40px;
+  font-size: 14px;
+  text-align: left;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.LUX_basic_snb.snb_v2 .bottom_btn li > a:hover {
+  background: #dff0ff;
+}
+.LUX_basic_snb.snb_v2 .bottom_btn li > a .sp_snb {
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  width: 16px;
+  height: 16px;
+}
+.LUX_basic_snb.snb_v2 .bottom_btn li > a .sp_snb.ico_contacts {
+  top: 6px;
+}
+.LUX_basic_snb.snb_v2 .bottom_btn li > .LUX_basic_btn {
+  display: none;
+  line-height: 16px;
+}
+.LUX_basic_snb.snb_v2 .ico_settings {
+  background-position: 0 -151px;
+}
+.LUX_basic_snb.snb_v2 .ico_svc {
+  background-position: -25px -151px;
+}
+.LUX_basic_snb.snb_v2 .ico_contacts {
+  background-position: -50px -151px;
+}
+.LUX_basic_snb.snb_v2 .ico_records {
+  background-position: -75px -151px;
+}
+.LUX_basic_snb.snb_v2 .ico_spam {
+  background-position: -99px -151px;
+}
+.LUX_basic_snb.snb_v2 .ico_garbage {
+  background-position: -123px -151px;
+}
+.LUX_basic_snb.snb_v2 .ico_trash {
+  width: 11px;
+  height: 13px;
+  background-position: -147px -151px;
+}
+.LUX_basic_snbin {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 40px;
+  width: 199px;
+}
+.LUX_basic_snbin.no_bottom {
+  bottom: 0;
+}
+.is_actionbar .LUX_basic_snb {
+  bottom: 56px;
+}
+.LUX_basic_snb .sp_snb {
+  width: 20px;
+  height: 20px;
+}
+.LUX_basic_snb .snb_btn_area {
+  padding: 11px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.LUX_basic_snb .snb_btn_area .LUX_basic_btn {
+  width: 100%;
+  border-radius: 2px;
+}
+.LUX_basic_snb .snb_group .title_area {
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f1f6f9;
+}
+.LUX_basic_snb .snb_group .title_area .btn_area {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  height: 20px;
+  margin-top: -10px;
+}
+.LUX_basic_snb .snb_group .title {
+  display: block;
+  height: 34px;
+  padding: 0 20px;
+  line-height: 34px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.LUX_basic_snb .snb_group .title .num,
+.LUX_basic_snb .snb_group .title .number {
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 13px;
+  color: #1c90fb;
+}
+.LUX_basic_snb .snb_group .add_group,
+.LUX_basic_snb .snb_group .search_group {
+  float: left;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_basic_snb .snb_group .add_group .sp_snb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: -180px 0;
+}
+.LUX_basic_snb .snb_group .add_group.set .sp_lux {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+  background-position: 0 -150px;
+}
+.LUX_basic_snb .snb_group .search_group .sp_snb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: -90px -60px;
+}
+.LUX_basic_snb .snb_group:last-child .snb_group_list {
+  border-bottom: 0;
+}
+.LUX_basic_snb .snb_group_list {
+  padding: 7px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.LUX_basic_snb .group_box {
+  position: relative;
+  height: 26px;
+  margin: 4px 0;
+  font-size: 13px;
+  line-height: 26px;
+}
+.LUX_basic_snb .group_box .text .sp_snb {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -10px;
+  background-position: 0 0;
+}
+.LUX_basic_snb .group_box .text .share_ico {
+  width: 17px;
+  background-position: -30px 0;
+}
+.LUX_basic_snb .group_box .text .all_ico {
+  background-position: -120px -30px;
+}
+.LUX_basic_snb .group_box .text .fave_ico {
+  background-position: -150px -30px;
+}
+.LUX_basic_snb .group_box .text .group_ico {
+  background-position: -60px 0;
+}
+.LUX_basic_snb .group_box .text .secure_ico {
+  background-position: -90px 0;
+}
+.LUX_basic_snb .group_box .text .company_ico {
+  background-position: 0 -60px;
+}
+.LUX_basic_snb .group_box .text .user_ico {
+  background-position: -30px -60px;
+}
+.LUX_basic_snb .group_box .text .no_user_ico {
+  background-position: -60px -60px;
+}
+.LUX_basic_snb .group_box .text .clock_ico {
+  background-position: -180px -30px;
+}
+.LUX_basic_snb .group_box.select,
+.LUX_basic_snb .group_box:hover {
+  background-color: #e9f5ff;
+}
+.LUX_basic_snb .group_box.select .text,
+.LUX_basic_snb .group_box:hover .text {
+  color: #1c90fb;
+}
+.LUX_basic_snb .group_box .LUX_basic_badge {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  margin-top: -7px;
+}
+.LUX_basic_snb .group_box .text {
+  display: block;
+  height: 100%;
+  padding: 0 12px 0 43px;
+}
+.LUX_basic_snb .group_box .text > em {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.LUX_basic_snb .group_box.is_badge .text {
+  padding-right: 40px;
+}
+.LUX_basic_snb .user_group .group_box .btn_edit {
+  display: none;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_basic_snb .user_group .group_box .btn_edit .sp_snb {
+  background-position: -90px -30px;
+}
+.LUX_basic_snb.sub_ca .user_group .group_box .btn_del {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_basic_snb .user_group .group_box .btn_del .sp_snb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 14px;
+  margin-top: -7px;
+  margin-left: -7px;
+  background-position: -30px -127px;
+}
+.LUX_basic_snb .user_group .group_box .edit_list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 12px;
+  z-index: 10;
+  background-color: #fff;
+}
+.LUX_basic_snb .user_group .group_box .edit_list ul {
+  border: 1px solid #d9d9d9;
+}
+.LUX_basic_snb .user_group .group_box .edit_list a {
+  display: block;
+  height: 24px;
+  padding: 0 8px;
+  font-size: 13px;
+  line-height: 24px;
+  text-decoration: none;
+}
+.LUX_basic_snb .user_group .group_box .edit_list a:hover {
+  background-color: #f6f6f6;
+}
+.LUX_basic_snb .user_group .group_box:hover .btn_edit {
+  display: block;
+}
+.LUX_basic_snb .user_group .title .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  width: 8px;
+  height: 4px;
+  margin-top: -2px;
+  background-position: -50px -50px;
+}
+.LUX_basic_snb .user_group .title.fold .sp_lux {
+  left: 10px;
+  background-position: -175px -225px;
+  height: 8px;
+  margin-top: -4px;
+}
+.LUX_basic_snb .user_group .title .text {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+.LUX_basic_snb .user_group .group_box.select,
+.LUX_basic_snb .user_group .group_box:hover {
+  background-color: #f6f6f6;
+}
+.LUX_basic_snb .user_group .group_box.select .text,
+.LUX_basic_snb .user_group .group_box:hover .text {
+  color: #1a1a1a;
+}
+.LUX_basic_snb .user_group .group_box:hover .LUX_basic_badge,
+.LUX_basic_snb .user_group .group_box:hover .number {
+  right: 25px;
+}
+.LUX_basic_snb .user_group .group_box:hover .text {
+  padding-right: 25px;
+}
+.LUX_basic_snb .user_group .group_box.is_badge:hover .text {
+  padding-right: 48px;
+}
+.LUX_basic_snb .user_group .group_box .text_edit {
+  display: none;
+}
+.LUX_basic_snb .user_group .group_box.depth1 .text {
+  padding-left: 63px;
+}
+.LUX_basic_snb .user_group .group_box.depth1 .text .sp_snb {
+  left: 28px;
+  width: 30px;
+  background-position: -120px 0;
+}
+.LUX_basic_snb .user_group .LUX_basic_text .inpbx {
+  padding-top: 5px;
+}
+.LUX_basic_snb .user_group .btn_group_set {
+  display: none;
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  line-height: 16px;
+}
+.LUX_basic_snb .user_group .btn_group_set .LUX_basic_btn {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
+}
+.LUX_basic_snb .user_group .btn_group_set .btn_com .sp_snb {
+  background-position: 0 -30px;
+}
+.LUX_basic_snb .user_group .btn_group_set .btn_del .sp_snb {
+  background-position: -32px -32px;
+}
+.LUX_basic_snb .user_group .group_box_set {
+  background-color: #f6f6f6;
+}
+.LUX_basic_snb .user_group .group_box_set .text_edit {
+  display: block;
+  padding-right: 50px;
+}
+.LUX_basic_snb .user_group .group_box_set .btn_edit,
+.LUX_basic_snb .user_group .group_box_set a.text {
+  display: none;
+}
+.LUX_basic_snb .user_group .group_box_set:hover .btn_edit {
+  display: none;
+}
+.LUX_basic_snb .user_group .group_box_set:hover .text_edit {
+  padding-right: 50px;
+}
+.LUX_basic_snb .user_group .group_box_set .btn_group_set {
+  display: block;
+}
+.LUX_basic_snb .user_group .LUX_basic_text {
+  padding-top: 2px;
+}
+.LUX_basic_snb .user_group .LUX_basic_text .inpbx {
+  padding-top: 1px;
+}
+.LUX_basic_snb .user_group .LUX_basic_text .inpbx .placeholder {
+  padding-top: 1px;
+}
+.LUX_basic_snb .user_group .LUX_basic_text .inpbx input {
+  margin-top: 2px;
+}
+.LUX_basic_snb .user_group .LUX_basic_text .inpbx .sp_lux {
+  top: 3px;
+}
+.LUX_basic_snb .user_group .move_group {
+  position: absolute;
+  width: 100px;
+}
+.LUX_basic_snb .user_group .move_group .text {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  max-width: 100%;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.LUX_basic_snb .user_group .move_group:hover .text {
+  padding-right: 5px;
+}
+.LUX_basic_snb .user_group .depth1.move_group .text {
+  padding-left: 5px;
+}
+.LUX_basic_snb .user_group .move_group .text .sp_snb {
+  display: none;
+}
+.LUX_basic_snb .user_group .move_group:hover {
+  background: 0 0;
+}
+.LUX_basic_snb .user_group .move_group:hover .btn_edit {
+  display: none;
+}
+.LUX_basic_snb .user_group .unable .text:before {
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background: url(/imgs/common/sp_snb.png) -60px -30px no-repeat;
+  line-height: 100em;
+  vertical-align: top;
+  content: "";
+}
+.LUX_basic_snb .company_group {
+  background-color: #f8fbff;
+}
+.LUX_basic_snb .company_group .title_area {
+  background-color: #e8f1fb;
+}
+.LUX_basic_snb .company_group .title_area .title {
+  padding: 0 34px 0 42px;
+}
+.LUX_basic_snb .company_group .title_area .title.is_num .text {
+  max-width: 83px;
+}
+.LUX_basic_snb .company_group .reservation {
+  background-color: #f8fbff;
+  border-bottom-color: #dbe5f2;
+}
+.LUX_basic_snb .company_group .calendar_ico,
+.LUX_basic_snb .company_group .company_ico2 {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 14px;
+  height: 14px;
+  background-position: -151px -63px;
+}
+.LUX_basic_snb .company_group .company_ico2 {
+  background-position: -122px -63px;
+}
+.LUX_basic_snb .snb_customer {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.LUX_basic_snb .snb_customer .LUX_basic_btn {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0 20px 0 43px;
+  background: #e9f5ff;
+  font-size: 14px;
+  color: #1c90fb;
+  text-align: left;
+}
+.LUX_basic_snb .snb_customer .svgbx {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+}
+.LUX_basic_snb .bottom_btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  background: #fff;
+}
+.LUX_basic_snb .bottom_btn .LUX_basic_btn {
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 40px;
+}
+.LUX_basic_snb .bottom_btn .svgbx {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  vertical-align: top;
+}
+.LUX_basic_snb .bottom_btn .etc_text {
+  margin: 0 5px;
+  color: #e5e5e5;
+  vertical-align: middle;
+}
+.LUX_basic_snb .user_group .move_group .text .color_box {
+  display: none;
+}
+.LUX_basic_snb .group_box.is_share .text {
+  padding-right: 25px;
+}
+.LUX_basic_snb .group_box.is_share .text > em {
+  position: relative;
+  padding-right: 22px;
+}
+.LUX_basic_snb .group_box.is_share:hover .text {
+  padding-right: 43px;
+}
+.LUX_basic_snb.sub_ca .group_box .text .share_ico {
+  left: inherit;
+  right: 0;
+  background-position: -30px 0;
+}
+.LUX_basic_snb.sub_ca .color_box {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  left: 20px;
+  width: 14px;
+  height: 14px;
+}
+.LUX_basic_snb.snb_co .group_box.select .text,
+.LUX_basic_snb.snb_co .group_box:not(.unable):hover .text {
+  color: #1c90fb;
+}
+.LUX_basic_snb.snb_co .user_group .group_box.select,
+.LUX_basic_snb.snb_co .user_group .group_box:not(.unable):hover {
+  background-color: #e9f5ff;
+}
+.LUX_basic_snb.snb_co .snb_btn_area2 {
+  height: 62px;
+  padding: 13px 0 0;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  text-align: center;
+}
+.LUX_basic_snb.snb_co .snb_btn_area2 button {
+  padding: 0 11px;
+  font-size: 13px;
+  font-family: douzone !important;
+  font-weight: 100;
+  color: #6b6b6b;
+  cursor: pointer;
+}
+.LUX_basic_snb.snb_co .snb_btn_area2 button.on,
+.LUX_basic_snb.snb_co .snb_btn_area2 button:hover {
+  color: #1c90fb;
+}
+.LUX_basic_snb.snb_co .snb_btn_area2 .sp_snb {
+  display: block;
+  margin: 0 auto 3px;
+  width: 21px;
+  height: 23px;
+}
+.LUX_basic_snb.snb_co .snb_btn_area2 .talk .sp_snb {
+  background-position: 0 -90px;
+}
+.LUX_basic_snb.snb_co .snb_btn_area2 .messege .sp_snb {
+  background-position: -30px -90px;
+}
+.LUX_basic_snb.snb_co .snb_btn_area2 .organization .sp_snb {
+  background-position: -60px -90px;
+}
+.LUX_basic_snb.snb_co .snb_btn_area2 .talk.on .sp_snb,
+.LUX_basic_snb.snb_co .snb_btn_area2 .talk:hover .sp_snb {
+  background-position: -90px -90px;
+}
+.LUX_basic_snb.snb_co .snb_btn_area2 .messege.on .sp_snb,
+.LUX_basic_snb.snb_co .snb_btn_area2 .messege:hover .sp_snb {
+  background-position: -120px -90px;
+}
+.LUX_basic_snb.snb_co .snb_btn_area2 .organization.on .sp_snb,
+.LUX_basic_snb.snb_co .snb_btn_area2 .organization:hover .sp_snb {
+  background-position: -150px -90px;
+}
+.LUX_basic_accodion {
+  position: relative;
+  border-bottom: 1px solid #4b4b4b;
+}
+.LUX_basic_accodion:first-child > li {
+  border-top: 1px solid #4b4b4b;
+}
+.LUX_basic_accodion .lnk_text {
+  position: relative;
+  width: 100%;
+  padding: 15px 20px 14px 7px;
+  font-size: 15px;
+  text-align: left;
+  color: #4a4a4a;
+}
+.LUX_basic_accodion .lnk_text .sp_accodion {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  width: 12px;
+  height: 6px;
+  margin-top: -3px;
+  background-position: -275px -260px;
+}
+.LUX_basic_accodion .accodion_content {
+  display: none;
+  padding: 0 12px;
+}
+.LUX_basic_accodion .content_area {
+  padding: 12px 0;
+}
+.LUX_basic_accodion .lnk_text.active {
+  color: #000;
+  font-weight: 700;
+}
+.LUX_basic_accodion .lnk_text.active .sp_accodion {
+  background-position: -275px -250px;
+}
+.LUX_basic_accodion .lnk_text.active + .accodion_content {
+  display: block;
+  border-top: 1px solid #bebebe;
+}
+.LUX_basic_accodion .accodion_content {
+  background: #fafafa;
+}
+.LUX_basic_accodion .accodion_content > li > .lnk_text {
+  padding: 13px 10px 12px 3px;
+  border-top: 1px solid #bebebe;
+  font-size: 14px;
+}
+.LUX_basic_accodion .accodion_content > li > .lnk_text .sp_accodion {
+  right: 0;
+  width: 10px;
+  height: 5px;
+  margin-top: -2px;
+  background-position: -275px -285px;
+}
+.LUX_basic_accodion .accodion_content > li > .lnk_text.active .sp_accodion {
+  background-position: -275px -275px;
+}
+.LUX_basic_accodion .accodion_content > li > ul {
+  padding: 6px 10px 9px;
+  font-size: 12px;
+}
+.LUX_basic_accodion .accodion_content > li > ul .lnk_text {
+  padding: 3px 0 2px 11px;
+  border-top: 0 none;
+  color: #4a4a4a;
+  font-size: 13px;
+  font-family: douzone !important;
+}
+.LUX_basic_accodion .accodion_content > li > ul > li {
+  margin-top: 3px;
+}
+.LUX_basic_accodion .accodion_content > li > ul > li > .lnk_text .sp_accodion {
+  left: 0;
+  width: 4px;
+  height: 4px;
+  margin-top: -4px;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px 1px;
+  background: 0 0;
+}
+.LUX_basic_accodion .accodion_content > li > ul > li > .lnk_text.active {
+  font-weight: 400;
+  color: #1c90fb;
+}
+.LUX_basic_accodion.sao_theme {
+  position: relative;
+  border: 0 none;
+}
+.LUX_basic_accodion.sao_theme .lnk_text {
+  position: relative;
+  width: 100%;
+  font-size: 13px;
+  text-align: left;
+  font-family: douzone !important;
+  border-bottom: 1px solid transparent;
+}
+.LUX_basic_accodion.sao_theme .lnk_text .sp_accodion {
+  position: absolute;
+}
+.LUX_basic_accodion.sao_theme .accodion_title {
+  position: relative;
+}
+.LUX_basic_accodion.sao_theme .accodion_title .lnk_text {
+  padding: 14px 21px 12px 32px;
+  font-weight: 700;
+}
+.LUX_basic_accodion.sao_theme .accodion_title .lnk_text.hasbtn {
+  padding-right: 78px;
+}
+.LUX_basic_accodion.sao_theme .accodion_title .lnk_text .sp_accodion {
+  right: 10px;
+  width: 11px;
+  height: 6px;
+  margin-top: -3px;
+  background-position: -225px -260px;
+}
+.LUX_basic_accodion.sao_theme .accodion_content {
+  display: none;
+  padding: 0;
+}
+.LUX_basic_accodion.sao_theme .accodion_title.open .lnk_text {
+  border-color: #bebebe;
+}
+.LUX_basic_accodion.sao_theme .accodion_title.open .lnk_text .sp_accodion {
+  background-position: -25px -250px;
+}
+.LUX_basic_accodion.sao_theme .accodion_title.open + .accodion_content {
+  display: block;
+}
+.LUX_basic_accodion.sao_theme .accodion_content > ul > li > .lnk_text {
+  padding: 9px 10px 8px 14px;
+  border-bottom: 1px solid #dcdbdc;
+}
+.LUX_basic_accodion.sao_theme .accodion_content > ul > li.open > .lnk_text {
+  background: #e9f5ff;
+}
+.LUX_basic_accodion.sao_theme .accodion_content > ul > li.focus > .lnk_text {
+  background: #e6f3ff;
+}
+.LUX_basic_accodion.sao_theme
+  .accodion_content
+  > ul
+  > li.has_sub
+  > .lnk_text
+  .sp_accodion {
+  top: 15px;
+  right: 10px;
+  width: 8px;
+  height: 4px;
+  background-position: -225px -285px;
+}
+.LUX_basic_accodion.sao_theme
+  .accodion_content
+  > ul
+  > li.has_sub.open
+  > .lnk_text
+  .sp_accodion {
+  background-position: -225px -275px;
+}
+.LUX_basic_accodion.sao_theme
+  .accodion_content
+  > ul
+  > li:last-of-type
+  > .lnk_text:not(.open) {
+  border-bottom: 0;
+}
+.LUX_basic_accodion.sao_theme
+  .accodion_content
+  > ul
+  > li.open:last-of-type
+  > .lnk_text {
+  border-bottom: 1px solid #dcdbdc;
+}
+.LUX_basic_accodion.sao_theme .accodion_content > ul > li:last-of-type ul {
+  border-bottom: 0;
+}
+.LUX_basic_accodion.sao_theme .accodion_content > ul > li .list_more_wrap {
+  display: none;
+}
+.LUX_basic_accodion.sao_theme .accodion_content > ul > li .list_2depth {
+  padding: 10px 0 2px;
+}
+.LUX_basic_accodion.sao_theme .accodion_content > ul > li .list_2depth button {
+  color: #4a4a4a;
+  font-size: 13px;
+  font-family: douzone !important;
+}
+.LUX_basic_accodion.sao_theme .accodion_content > ul > li.open .list_more_wrap {
+  display: block;
+}
+.LUX_basic_accodion.sao_theme .accodion_content > ul > li .list_2depth {
+  background: #fcfcfc;
+}
+.LUX_basic_accodion.sao_theme
+  .accodion_content
+  > ul
+  > li
+  .list_2depth
+  > li
+  + li {
+  margin-top: 7px;
+}
+.LUX_basic_accodion.sao_theme
+  .accodion_content
+  > ul
+  > li
+  .list_2depth
+  > li
+  > .lnk_text {
+  padding: 0 10px 2px 22px;
+}
+.LUX_basic_accodion.sao_theme
+  .accodion_content
+  > ul
+  > li
+  .list_2depth
+  > li
+  > .lnk_text
+  .sp_accodion {
+  top: 50%;
+  margin-top: -4px;
+  left: 14px;
+  width: 3px;
+  height: 3px;
+  background: #585858;
+}
+.LUX_basic_accodion.sao_theme
+  .accodion_content
+  > ul
+  > li
+  .list_2depth
+  > li
+  > ul
+  > li
+  > .lnk_text {
+  padding: 0 10px 0 24px;
+}
+.LUX_basic_accodion.sao_theme
+  .accodion_content
+  > ul
+  > li
+  .list_2depth
+  > li
+  > ul
+  > li
+  > .lnk_text
+  .sp_accodion {
+  top: 50%;
+  margin-top: -2px;
+  left: 16px;
+  width: 5px;
+  height: 1px;
+  background: #585858;
+}
+.LUX_basic_accodion.sao_theme
+  .accodion_content
+  .has_sub.open
+  + .has_sub
+  > .lnk_text {
+  border-top: 1px solid #dcdbdc;
+}
+.LUX_basic_accodion.sao_theme .accodion_area {
+  position: relative;
+  margin-bottom: 6px;
+  border: 1px solid #bebebe;
+  background: #fff;
+}
+.LUX_basic_accodion.sao_theme .has_sub .lnk_text.active {
+  font-weight: 200;
+}
+.LUX_basic_accodion.sao_theme .svg_info {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  text-align: center;
+}
+.LUX_basic_accodion.sao_theme .accodion_content {
+  background: 0 0;
+}
+.LUX_basic_accodion.sao_theme .accodion_title .btnbx {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  z-index: 10;
+  margin-top: -10px;
+}
+.LUX_basic_btn.saobtn_new_window {
+  width: 20px;
+  height: 20px;
+}
+.LUX_basic_btn.saobtn_new_window .sp_lux {
+  width: 13px;
+  height: 13px;
+  background-position: -331px -237px;
+}
+.LUX_basic_actionbar {
+  padding: 12px 0;
+  background: #50596c;
+}
+.LUX_basic_actionbar.type2 .actionbar_btn {
+  float: left;
+  margin-top: 5px;
+  padding-left: 78px;
+}
+.LUX_basic_actionbar .actionbar_info {
+  display: block;
+  float: left;
+  min-width: 230px;
+  padding: 8px 30px 0 78px;
+  white-space: nowrap;
+}
+.LUX_basic_actionbar .actionbar_info .selinfo {
+  font-size: 14px;
+  color: #fff;
+}
+.LUX_basic_actionbar .actionbar_info .bar {
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  margin: 0 10px;
+  background: #fff;
+  vertical-align: top;
+}
+.LUX_basic_actionbar .actionbar_info .cominfo {
+  font-size: 14px;
+  color: #1ae0ed;
+}
+.LUX_basic_actionbar .actionbar_info .LUX_basic_switch {
+  font-size: 14px;
+}
+.LUX_basic_actionbar .actionbar_info .LUX_basic_switch label {
+  font-size: 14px;
+}
+.LUX_basic_actionbar .actionbar_btn {
+  float: right;
+  padding: 0 15px 0 0;
+  text-align: right;
+}
+.LUX_basic_actionbar:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_actionbar .actionbar_btnlst {
+  margin-top: -5px;
+}
+.LUX_basic_actionbar .actionbar_btnlst:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_actionbar .actionbar_btnlst > li {
+  float: left;
+  margin: 5px 0 0 4px;
+}
+.LUX_basic_actionbar .LUX_basic_btn .sp_lux {
+  width: 11px;
+  height: 7px;
+  margin: 13px -10px 0 10px;
+  background-position: -25px -225px;
+}
+.LUX_basic_actionbar .LUX_basic_btn.SAOverConfirm2 .sp_lux {
+  margin-right: -5px;
+}
+.LUX_basic_actionbar .LUX_basic_btn .sp_lux.revert {
+  margin-top: 4px;
+  background-position: 0 -225px;
+}
+.LUX_basic_actionbar .LUX_basic_btn.basic2:hover {
+  border: 1px solid #0d5598;
+  background: #0d5598;
+  color: #fff;
+}
+.LUX_basic_actionbar .LUX_basic_btn.basic3:hover {
+  border: 1px solid #3b4455;
+  background: #3b4455;
+  color: #dedede;
+}
+.LUX_basic_actionbar .LUX_basic_btn:hover .sp_lux {
+  background-position: 0 -225px;
+}
+.LUX_basic_actionbar .btn_menulst .btn_menu .txt {
+  display: none;
+}
+.LUX_basic_actionbar .actionbar_persist {
+  float: right;
+}
+.LUX_basic_actionbar .actionbar_persist .btn_menu {
+  width: 37px;
+  height: 37px;
+  border: 1px solid #5c6986;
+  background: #5c6986;
+}
+.LUX_basic_actionbar .actionbar_persist .btn_menu .sp_lux {
+  width: 4px;
+  height: 15px;
+  margin: 5px 0;
+  background-position: -75px -225px;
+}
+.LUX_basic_actionbar .actionbar_persist .btn_menu:hover {
+  border-color: #3b4455;
+  background: #3b4455;
+}
+.LUX_basic_actionbar .actionbar_btnarea {
+  float: right;
+  margin-right: 5px;
+}
+.LUX_basic_actionbar .actionbar_btnarea .btn_allmenu {
+  display: none;
+}
+.btn_menulst {
+  position: relative;
+}
+.btn_menulst .menubx {
+  position: relative;
+}
+.btn_menulst .menudepth {
+  display: none;
+  position: absolute;
+  top: auto;
+  right: 0;
+  left: auto;
+  bottom: 100%;
+  z-index: 20;
+  width: auto;
+  background: #fff;
+  box-shadow: none;
+}
+.btn_menulst .menubx:hover + .menudepth {
+  display: block;
+}
+.btn_menulst .menudepth {
+  display: block;
+  min-width: 136px;
+  width: 100%;
+}
+.btn_menulst .menudepth_scrall {
+  overflow: auto;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+}
+.btn_menulst .menudepth_scrallin {
+  overflow: hidden;
+  zoom: 1;
+}
+.btn_menulst .menudepth_lst .LUX_basic_btn {
+  width: 100%;
+  height: 25px;
+  border: 0;
+  background: #fff;
+  font-size: 13px;
+  line-height: 25px;
+  color: #4a4a4a;
+}
+.btn_menulst .menudepth_lst .LUX_basic_btn:hover {
+  border: 0;
+  background: #f5f5f5;
+  color: #4a4a4a;
+}
+.btn_menulst .menudepth_lst li:first-child .LUX_basic_btn {
+  border-top: 0;
+}
+.btn_menulst .menudepth {
+  display: none;
+}
+.btn_menulst:hover .menudepth {
+  display: block;
+}
+@media (min-width: 0) and (max-width: 1024px) {
+  .LUX_basic_actionbar .actionbar_btnarea {
+    position: relative;
+  }
+  .LUX_basic_actionbar .actionbar_btnarea .btn_allmenu {
+    display: block;
+  }
+  .LUX_basic_actionbar .actionbar_btnarea .actionbar_btnlst {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    width: 130px;
+    border: 1px solid #a3a3a3;
+  }
+  .LUX_basic_actionbar .actionbar_btnarea .actionbar_btnlst .LUX_basic_btn {
+    width: 100%;
+    border: 0 none;
+    border-top: 1px solid #ccc;
+    background: #fff;
+    font-size: 13px;
+    color: #000;
+    height: 25px;
+    line-height: 25px;
+  }
+  .LUX_basic_actionbar
+    .actionbar_btnarea
+    .actionbar_btnlst
+    .LUX_basic_btn:hover {
+    background: #f5f5f5;
+  }
+  .LUX_basic_actionbar
+    .actionbar_btnarea
+    .actionbar_btnlst
+    li:first-child
+    .LUX_basic_btn {
+    border-top: 0;
+  }
+  .LUX_basic_actionbar .actionbar_btnarea .menudepth_lst .LUX_basic_btn {
+    width: 100%;
+    height: 25px;
+    border: 0 none;
+    background: #fff;
+    font-size: 13px;
+    line-height: 25px;
+    color: #4a4a4a;
+  }
+  .LUX_basic_actionbar .actionbar_btnarea .menudepth_lst .LUX_basic_btn:hover {
+    background: #f5f5f5;
+  }
+  .LUX_basic_actionbar .actionbar_btnarea.active .actionbar_btnlst,
+  .LUX_basic_actionbar .actionbar_btnarea:hover .actionbar_btnlst {
+    display: block;
+  }
+  .LUX_basic_actionbar .actionbar_btnlst {
+    margin-top: 0;
+  }
+  .LUX_basic_actionbar .actionbar_btnlst > li {
+    float: none;
+    margin: 0;
+  }
+  .LUX_basic_actionbar .btn_menulst .menudepth {
+    right: 100%;
+    bottom: -1px;
+    width: 136px;
+  }
+  .LUX_basic_actionbar .btn_menulst .menubx .sp_lux {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 7px;
+    height: 11px;
+    margin: -5px 0 0;
+    background-position: -50px -225px;
+  }
+  .LUX_basic_actionbar .btn_menulst .btn_menu .txt {
+    display: block;
+    font-size: 16px;
+  }
+  .actionbar_btnarea .actionbar_btnlst {
+    display: none;
+  }
+  .actionbar_btnarea:hover + .actionbar_btnlst {
+    display: block;
+  }
+  .btn_menulst .menudepth {
+    display: none;
+  }
+  .btn_menulst:hover .menudepth {
+    display: block;
+  }
+}
+.LUX_basic_colorpicker {
+  display: inline-block;
+  position: relative;
+}
+.LUX_basic_colorpicker .colorbx {
+  position: relative;
+  width: 43px;
+}
+.LUX_basic_colorpicker .colorbx:hover + .resultbx {
+  display: block;
+}
+.LUX_basic_colorpicker .colorbx .inpbx {
+  display: block;
+  height: 22px;
+  padding: 5px 19px 1px 6px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  line-height: 22px;
+}
+.LUX_basic_colorpicker .pick_color {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  color: #000;
+  text-indent: -100em;
+  vertical-align: top;
+}
+.LUX_basic_colorpicker .colorbx .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 27px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_basic_colorpicker .colorbx .btn > span {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -2px;
+}
+.LUX_basic_colorpicker:hover .inpbx {
+  border-color: #58adfc;
+}
+.LUX_basic_colorpicker .resultbx {
+  display: block;
+  position: relative;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  margin-top: 2px;
+  padding: 5px 5px 0;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+}
+.LUX_basic_colorpicker .colorbx + .resultbx {
+  display: none;
+  z-index: 100;
+  position: absolute;
+}
+.LUX_basic_colorpicker .colorbx_set {
+  overflow: hidden;
+  position: relative;
+}
+.LUX_basic_colorpicker .colorbx_set ul {
+  overflow: hidden;
+  clear: both;
+}
+.LUX_basic_colorpicker .colorbx_set ul li {
+  float: left;
+  overflow: hidden;
+  height: 16px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.LUX_basic_colorpicker .colorbx_set ul li > span {
+  position: relative;
+  overflow: hidden;
+}
+.LUX_basic_colorpicker .colorbx_set ul li:first-child {
+  margin-left: 0;
+}
+.LUX_basic_colorpicker .colorbx_set ul li input {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  z-index: -10;
+  width: 13px;
+  height: 13px;
+  background: 0 0;
+}
+.LUX_basic_colorpicker .colorbx_set ul li input:checked + svg {
+  display: inline-block !important;
+}
+.LUX_basic_colorpicker .colorbx_set ul li label:hover:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border: 1px solid #58adfc;
+  content: "";
+  box-sizing: border-box;
+}
+.LUX_basic_colorpicker .colorbx_set ul li svg {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -6px;
+}
+.LUX_basic_colorpicker .colorbx_set.vertical {
+  width: 122px;
+}
+.LUX_basic_colorpicker .colorbx_set.vertical ul li:nth-child(6n + 1) {
+  clear: both;
+  margin-left: 0;
+}
+.LUX_basic_colorpicker .colorbx_set.calendar_color_pick {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+.LUX_filezone .attachments_bx {
+  overflow: hidden;
+  position: relative;
+  height: 160px;
+  border: 1px solid #dbdbdb;
+  font-size: 13px;
+  color: #4a4a4a;
+  text-align: center;
+}
+.LUX_filezone .attachments_bx .file_upload_area {
+  margin: 26px 0 21px;
+}
+.LUX_filezone .attachments_bx .file_upload_area .LUX_basic_btn {
+  width: 58px;
+  height: 58px;
+}
+.LUX_filezone
+  .attachments_bx
+  .file_upload_area
+  .LUX_basic_btn
+  + .LUX_basic_btn {
+  margin-left: 10px;
+}
+.LUX_filezone .attachments_bx.file_attach {
+  color: #64cfe6;
+}
+.LUX_filezone .attachments_bx.file_attach p {
+  overflow: hidden;
+  position: relative;
+  margin-top: 34px;
+  padding-top: 80px;
+}
+.LUX_filezone .attachments_bx.file_attach p .sp_lux {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -33px;
+}
+.LUX_filezone .attachments_list {
+  overflow: hidden;
+  position: relative;
+  margin-top: 4px;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+}
+.LUX_filezone .attachments_list li {
+  position: relative;
+  padding-right: 35px;
+}
+.LUX_filezone .attachments_list li + li {
+  margin-top: 10px;
+}
+.LUX_filezone .attachments_list li p {
+  font-size: 13px;
+  color: #818181;
+}
+.LUX_filezone .attachments_list li .btn_group {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.LUX_filezone .attachments_list li .btn_group .LUX_basic_btn {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+}
+.LUX_filezone .attachments_list li .btn_group .LUX_basic_btn + .LUX_basic_btn {
+  margin-left: 8px;
+}
+.LUX_filezone.full {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+  background: rgba(255, 255, 255, 0.8);
+}
+.LUX_filezone.full .attachments_bx {
+  height: 100%;
+  border: 0;
+}
+.LUX_filezone.full .attachments_bx.file_attach p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -48px;
+  margin-left: -86px;
+}
+.LUX_filezone .dp_none {
+  display: none !important;
+}
+.LUX_basic_code .inpbx,
+.LUX_basic_submit .searchbx .inpbx,
+.LUX_basic_text .inpbx {
+  height: 22px;
+  padding: 6px 26px 0 6px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  line-height: 22px;
+  border-radius: 4px;
+}
+.LUX_basic_code {
+  position: relative;
+}
+.LUX_basic_code .inpbx {
+  position: relative;
+}
+.LUX_basic_code .inpbx input {
+  display: block;
+  width: 100%;
+  border: 0 none;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #1a1a1a;
+  letter-spacing: 0;
+  vertical-align: top;
+  outline: 0;
+}
+.LUX_basic_code .inpbx .placeholder {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 4px 0 0 6px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 22px;
+  color: #8d8d8d;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+.LUX_basic_code .info {
+  display: none;
+  margin: 5px 0 0 5px;
+  font-size: 13px;
+  font-family: douzone !important;
+  letter-spacing: -0.5px;
+}
+.LUX_basic_code > .LUX_basic_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 27px;
+}
+.LUX_basic_code > .LUX_basic_btn .sp_lux {
+  width: 14px;
+  height: 14px;
+  background-position: -175px -275px;
+}
+.LUX_basic_submit {
+  position: relative;
+}
+.LUX_basic_submit .searchbx {
+  position: relative;
+}
+.LUX_basic_submit .searchbx .inpbx {
+  display: block;
+}
+.LUX_basic_submit .searchbx .inpbx input {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #000;
+  letter-spacing: 0;
+  outline: 0;
+}
+.LUX_basic_submit .searchbx .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 27px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_basic_submit .searchbx .btn .sp_lux {
+  width: 16px;
+  height: 14px;
+  background-position: -100px 0;
+}
+.LUX_basic_submit .searchbx .placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 24px 0 7px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #8d8d8d;
+  letter-spacing: -0.5px;
+}
+.LUX_basic_submit .searchbx .inpbx:hover .placeholder {
+  display: none;
+}
+.LUX_basic_submit .resultbx {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  background: #fff;
+}
+.LUX_basic_submit:hover .searchbx .sp_lux {
+  background-position: -125px 0;
+}
+.LUX_basic_submit:hover .inpbx {
+  border-color: #58adfc;
+}
+.LUX_basic_submit:hover .resultbx {
+  display: block;
+}
+.LUX_basic_submit .result_scrall {
+  overflow: auto;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+  box-shadow: 1px 1px 1px #ececec;
+}
+.LUX_basic_submit .result_scrallin {
+  zoom: 1;
+}
+.LUX_basic_submit .result_lst a {
+  display: block;
+  padding: 2px 6px 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #4a4a4a;
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-decoration: none;
+}
+.LUX_basic_submit .result_lst a:hover {
+  background: #f5f5f5;
+}
+.LUX_basic_submit .result_lst a span {
+  color: #1c90fb;
+}
+.LUX_basic_text .inpbx {
+  position: relative;
+  padding: 4px 6px 0;
+  border-radius: 4px;
+}
+.LUX_basic_text .inpbx input {
+  display: block;
+  width: 100%;
+  border: 0 none;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #1a1a1a;
+  letter-spacing: 0;
+  vertical-align: top;
+  outline: 0;
+}
+.LUX_basic_text .inpbx .sp_lux {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  width: 16px;
+  height: 14px;
+  pointer-events: none;
+  margin-top: -8px;
+}
+.LUX_basic_text .inpbx .placeholder {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 4px 6px 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 22px;
+  color: #8d8d8d;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+.LUX_basic_text .inpbx .placeholder.text_black {
+  color: #1a1a1a;
+}
+.LUX_basic_text .info {
+  display: none;
+  margin: 6px 0 0 5px;
+  font-size: 13px;
+  font-family: douzone !important;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+.LUX_basic_text .sp_lux {
+  background-position: 30px 30px;
+}
+.LUX_basic_text .on {
+  border-color: #58adfc;
+}
+.LUX_basic_text .on .sp_lux {
+  background-position: -100px -75px;
+}
+.LUX_basic_text .on .placeholder {
+  display: none;
+}
+.LUX_basic_text.accurate .inpbx {
+  padding-right: 24px;
+  border-color: #8fe1bd;
+}
+.LUX_basic_text.accurate .info {
+  display: block;
+  color: #8fe1bd;
+}
+.LUX_basic_text.accurate .sp_lux {
+  background-position: -100px -25px;
+}
+.LUX_basic_text.error .inpbx {
+  padding-right: 24px;
+  border-color: #fc5356;
+}
+.LUX_basic_text.error .info {
+  display: block;
+  color: #fc5356;
+}
+.LUX_basic_text.error .sp_lux {
+  background-position: -125px -25px;
+}
+.LUX_basic_text.warning .inpbx {
+  padding-right: 24px;
+  border-color: #febc2c;
+}
+.LUX_basic_text.warning .info {
+  display: block;
+  color: #febc2c;
+}
+.LUX_basic_text.warning .sp_lux {
+  background-position: -150px -25px;
+}
+.LUX_basic_text.disabled .inpbx {
+  border-color: #d9d9d9;
+  background: #f3f3f3;
+}
+.LUX_basic_text.disabled .inpbx input {
+  color: #8d8d8d;
+}
+.LUX_basic_text.disabled .sp_lux {
+  display: none;
+}
+.LUX_basic_text.editing .sp_lux {
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background-position: -100px -50px;
+}
+.LUX_basic_text.password .inpbx {
+  padding-right: 24px;
+}
+.LUX_basic_text.password .info {
+  display: block;
+  color: #8d8d8d;
+}
+.LUX_basic_text.password .sp_lux {
+  background-position: -100px -75px;
+}
+.LUX_basic_text input[type="password"] + .sp_lux {
+  background-position: -100px -75px;
+}
+.LUX_basic_text.inswitch .inpbx {
+  padding-right: 24px;
+}
+.LUX_basic_text.inswitch .LUX_basic_switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.LUX_basic_text.maskcase {
+  display: inline-block;
+}
+.LUX_basic_text.maskcase .inpbx {
+  letter-spacing: -4px;
+}
+.LUX_basic_text.maskcase .inpbx input {
+  display: inline-block;
+  width: auto;
+  letter-spacing: 1px;
+}
+.LUX_basic_text.maskcase .sp_lux {
+  display: none;
+}
+.LUX_basic_text.maskcase .dash {
+  display: inline-block;
+  width: 8px;
+  color: transparent;
+  letter-spacing: 1px;
+  vertical-align: top;
+  line-height: 14px;
+}
+.LUX_basic_text.maskcase .on .dash {
+  color: #1a1a1a;
+}
+.LUX_basic_text.maskcase input[type="password"] {
+  letter-spacing: -3px;
+  text-indent: -2px;
+}
+.LUX_basic_text.maskcase .placeholder {
+  letter-spacing: -0.5px;
+}
+.LUX_basic_text.maskcase .inpbx:hover .dash {
+  display: inline-block;
+}
+.LUX_basic_text.maskcase .inpbx:hover .placeholder {
+  display: none;
+}
+.LUX_basic_textarea .inpbx {
+  position: relative;
+}
+.LUX_basic_textarea .inpbx textarea {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  padding: 5px 6px;
+  border: 0 none;
+  border: 1px solid #dbdbdb;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #1a1a1a;
+  letter-spacing: 0;
+  vertical-align: top;
+  box-sizing: border-box;
+  outline: 0;
+  resize: none;
+}
+.LUX_basic_textarea .inpbx .placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 7px 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #8d8d8d;
+  letter-spacing: -0.5px;
+}
+.LUX_basic_textarea.on textarea,
+.LUX_basic_textarea:hover textarea {
+  border-color: #58adfc;
+}
+.LUX_basic_textarea.disabled textarea {
+  border-color: #dbdbdb;
+  background: #fafafa;
+}
+.LUXLabel {
+  display: inline-block;
+  height: 22px;
+  padding: 1px 6px 0;
+  border-radius: 10px;
+  line-height: 20px;
+  font-size: 13px;
+  font-family: douzone !important;
+  vertical-align: top;
+}
+.LUX_basic_label {
+  display: inline-block;
+  height: 20px;
+  padding: 1px 10px 0;
+  border-radius: 10px;
+  line-height: 21px;
+  font-size: 13px;
+  vertical-align: top;
+}
+.LUX_basic_label.small {
+  font-size: 11px;
+  height: 17px;
+  line-height: 18px;
+}
+.LUX_linear_chart .chart_box {
+  display: table;
+  width: 100%;
+  height: 22px;
+  background-color: #f3f3f3;
+}
+.LUX_linear_chart .chart_item {
+  overflow: hidden;
+  display: table-cell;
+  position: relative;
+  height: 100%;
+  padding-left: 5px;
+  font-size: 13px;
+  color: #fff;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.LUX_linear_chart .chart_item.hover {
+  box-shadow: 2px 2px 5px 0 rgba(7, 7, 7, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.LUX_linear_chart .chart_lesend_name {
+  display: block;
+  white-space: nowrap;
+  line-height: 14px;
+}
+.LUX_linear_chart .chart_box_v2 {
+  height: 43px;
+  table-layout: fixed;
+}
+.LUX_linear_chart .chart_box_v2 .chart_item {
+  padding-left: 8px;
+  text-align: left;
+}
+.LUX_linear_chart .chart_box_v2 .chart_item strong {
+  font-size: 18px;
+}
+.LUX_linear_chart .chart_box_v3 {
+  height: 43px;
+  table-layout: fixed;
+}
+.LUX_linear_chart .chart_box_v3 .chart_item {
+  padding-left: 8px;
+  text-align: left;
+}
+.LUX_linear_chart .chart_box_v3 .chart_item .chart_item_cont {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1px;
+  height: 14px;
+}
+.LUX_linear_chart .chart_box_v3 .chart_item .chart_lesend_name {
+  float: left;
+  padding-right: 5px;
+}
+.LUX_linear_chart .chart_box_v3 .chart_item strong {
+  font-size: 14px;
+  white-space: nowrap;
+  font-family: douzone !important;
+}
+.LUX_linear_chart .chart_box_v3 .chart_item strong span {
+  font-weight: 400;
+}
+.LUX_linear_chart .chart_box_v3 .chart_percent {
+  float: right;
+  font-size: 13px;
+  padding-right: 6px;
+  font-family: douzone !important;
+}
+.LUX_linear_chart .chart_lesend {
+  margin-top: 14px;
+}
+.LUX_linear_chart .chart_lesend ul {
+  overflow: hidden;
+}
+.LUX_linear_chart .chart_lesend li {
+  float: left;
+  margin-right: 20px;
+  font-size: 11px;
+  color: #4a4a4a;
+}
+.LUX_linear_chart .chart_lesend .chart_lesend_ico {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  vertical-align: top;
+}
+.LUX_linear_chart .chart_lesend.top {
+  margin: 0 0 12px;
+}
+.LUX_linear_chart .chart_scale {
+  display: table;
+  position: relative;
+  width: 100%;
+  margin-top: 3px;
+}
+.LUX_linear_chart .chart_scale_item {
+  display: table-cell;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-size: 11px;
+  color: #858585;
+  text-align: right;
+}
+.LUX_linear_chart .chart_scale.item2 .chart_scale_item {
+  width: 50%;
+}
+.LUX_linear_chart .chart_scale.item3 .chart_scale_item {
+  width: 33.33%;
+}
+.LUX_linear_chart .chart_scale.item4 .chart_scale_item {
+  width: 25%;
+}
+.LUX_linear_chart .chart_scale.item5 .chart_scale_item {
+  width: 20%;
+}
+.LUX_linear_chart .chart_scale.item6 .chart_scale_item {
+  width: 12.5%;
+}
+.LUX_linear_chart .chart_scale .bar {
+  display: inline-block;
+  width: 1px;
+  height: 6px;
+  background-color: #d8d8d8;
+  vertical-align: top;
+}
+.LUX_linear_chart .chart_scale .num {
+  display: block;
+  margin: -6px -1px 0 0;
+}
+.LUX_linear_chart .chart_scale_item.first {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+}
+.LUX_linear_chart .chart_scale_item.first .num {
+  margin: -6px 0 0 -4px;
+}
+.LUX_basic_menu {
+  display: block;
+  background: #fff;
+}
+.LUX_basic_menu .menu_scrall {
+  overflow: auto;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+  box-shadow: 1px 1px 1px #ececec;
+}
+.LUX_basic_menu .menu_lst button {
+  display: block;
+  width: 100%;
+  padding: 2px 26px 0 6px;
+  border: 0 none;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 22px;
+  color: #4a4a4a;
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+}
+.LUX_basic_menu .menu_lst button:hover {
+  background: #f5f5f5;
+}
+.LUX_basic_menu .menu_lst a {
+  display: block;
+  padding: 2px 26px 0 6px;
+  border: 0 none;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 22px;
+  color: #4a4a4a;
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.LUX_basic_menu .menu_lst a:hover {
+  background: #f5f5f5;
+}
+.LUX_basic_menu .depth {
+  position: relative;
+}
+.LUX_basic_menu .depth .sp_lux {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 4px;
+  height: 8px;
+  margin-top: -4px;
+  background-position: -175px -225px;
+}
+.LUX_basic_menu .menuck {
+  position: relative;
+}
+.LUX_basic_menu .menuck .sp_lux {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  background-position: -150px -225px;
+}
+.LUX_basic_menu .LUX_basic_switch {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  line-height: 22px;
+  vertical-align: top;
+  cursor: pointer;
+}
+.LUX_basic_menu .LUX_basic_switch .sp_lux {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+.LUX_basic_menu .LUX_basic_switch input {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  z-index: -10;
+  width: 13px;
+  height: 13px;
+  background: 0 0;
+}
+.LUX_basic_menu .LUX_basic_switch label {
+  display: block;
+  position: relative;
+  z-index: 10;
+  padding: 2px 26px 0 6px;
+  line-height: 22px;
+  color: #4a4a4a;
+  cursor: pointer;
+}
+.LUX_basic_menu .LUX_basic_switch .LUXckbx {
+  display: block;
+}
+.LUX_basic_menu .LUX_basic_switch .LUXckbx:hover {
+  background: #f5f5f5;
+}
+.LUX_basic_menu .LUX_basic_switch .LUXckbx .sp_lux {
+  top: 50%;
+  right: 6px;
+  left: auto;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  background-position: 100% 100%;
+}
+.LUX_basic_menu .LUX_basic_switch.switchon .LUXckbx .sp_lux {
+  background-position: -150px -225px;
+}
+.LUX_basic_menu .LUX_basic_switch.switchon label {
+  color: #1c90fb;
+}
+.LUX_basic_menu .LUX_basic_switch input[type="checkbox"]:checked + .sp_lux {
+  background-position: -150px -225px;
+}
+.LUX_basic_popover {
+  position: relative;
+}
+.LUX_basic_popover .popoverbx {
+  position: relative;
+}
+.LUX_basic_popover .resultbx {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  min-width: 88px;
+  background: #fff;
+}
+.LUX_basic_popover:hover .resultbx {
+  display: block;
+}
+.LUX_basic_popover .result_scrall {
+  overflow: auto;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  box-shadow: 1px 1px 1px #ececec;
+}
+.LUX_basic_popover .result_lst a {
+  display: block;
+  padding: 4px 6px 3px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #4a4a4a;
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-decoration: none;
+}
+.LUX_basic_popover .result_lst a:hover {
+  background: #e5f3ff;
+}
+.LUX_basic_popover .result_lst a span {
+  color: #1c90fb;
+}
+.LUX_basic_popover2 {
+  display: inline-block;
+  position: absolute;
+  padding: 18px 19px 16px;
+  border: 1px solid #c9cac9;
+  background-color: #fff;
+  color: #4a4a4a;
+  font-family: douzone !important;
+  z-index: 2000;
+}
+.LUX_basic_popover2 .popover_title {
+  margin-right: 20px;
+  font-size: 14px;
+}
+.LUX_basic_popover2 .popover_content {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.LUX_basic_popover2 .popover_content > p {
+  margin-top: 5px;
+}
+.LUX_basic_popover2 .popover_content > p:first-child {
+  margin-top: 0;
+}
+.LUX_basic_popover2 .btn_close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+}
+.LUX_basic_popover2 .btn_close .LUX_basic_btn > span {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.LUX_basic_popover2.top {
+  margin-bottom: 5px;
+}
+.LUX_basic_popover2.bottom {
+  margin-top: 5px;
+}
+.LUX_basic_popover2.left {
+  margin-right: 5px;
+}
+.LUX_basic_popover2.right {
+  margin-left: 5px;
+}
+.LUX_basic_popover2.no_edge:before {
+  display: none;
+}
+.LUX_basic_popover2:before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+}
+.LUX_basic_popover2.top:before {
+  top: 100%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -4px;
+  box-shadow: 1px 1px 0 0 #c9cac9;
+}
+.LUX_basic_popover2.bottom:before {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: -5px;
+  margin-left: -4px;
+  box-shadow: -1px -1px 0 0 #c9cac9;
+}
+.LUX_basic_popover2.left:before {
+  left: 100%;
+  top: 50%;
+  margin-top: -4px;
+  margin-left: -5px;
+  box-shadow: 1px -1px 0 0 #c9cac9;
+}
+.LUX_basic_popover2.right:before {
+  right: 100%;
+  top: 50%;
+  margin-top: -4px;
+  margin-right: -5px;
+  box-shadow: -1px 1px 0 0 #c9cac9;
+}
+.LUX_basic_popover2.bottom.bottom_left:before,
+.LUX_basic_popover2.top.top_left:before {
+  left: 10px;
+  margin-left: 0;
+}
+.LUX_basic_popover2.bottom.bottom_right:before,
+.LUX_basic_popover2.top.top_right:before {
+  left: auto;
+  right: 10px;
+  margin-left: 0;
+}
+.LUX_basic_profile {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  margin-bottom: 10px;
+  border: 1px solid #a6a6a6;
+  background: #fff;
+}
+.LUX_basic_profile.profile_open {
+  display: block;
+}
+.LUX_basic_profile .sp_arrow {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 28px;
+  height: 10px;
+  background-position: -75px -275px;
+}
+.LUX_basic_profile .profile {
+  position: relative;
+  padding: 15px 10px 15px 100px;
+  background: #f7f7f7;
+  text-align: left;
+  vertical-align: middle;
+  word-break: break-all;
+}
+.LUX_basic_profile .profile .imgbx {
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+}
+.LUX_basic_profile .profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.LUX_basic_profile .profile .namebx {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+.LUX_basic_profile .profile .namebx strong {
+  display: inline-block;
+  margin-right: 5px;
+}
+.LUX_basic_profile .profile .namebx .sp_lux {
+  width: 48px;
+  height: 18px;
+  margin-left: 5px;
+}
+.LUX_basic_profile .profile .namebx .sp_ing {
+  background-position: -331px -25px;
+}
+.LUX_basic_profile .profile .namebx .sp_offline {
+  background-position: -331px 0;
+}
+.LUX_basic_profile .profile_info li {
+  display: inline-block;
+  width: 100%;
+  height: 56px;
+  padding: 10px 15px;
+  border-top: 1px solid #f0f0f0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+.LUX_basic_profile .profile_info li:after {
+  display: inline-block;
+  height: 100%;
+  margin: 0 -4px;
+  letter-spacing: -5px;
+  vertical-align: middle;
+  content: "";
+}
+.LUX_basic_profile .profile_info li .inbx:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0;
+  border-radius: 18px;
+  background: #f1f9ff;
+  content: "";
+}
+.LUX_basic_profile .profile_info li .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 10;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 7px;
+}
+.LUX_basic_profile .profile_info .inbx {
+  display: inline-block;
+  position: relative;
+  padding-left: 42px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 16px;
+  color: #000;
+  letter-spacing: -1px;
+  vertical-align: middle;
+}
+.LUX_basic_profile .profile_info .inbx .svgbx {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 36px;
+  height: 30px;
+  margin: -18px 0 0;
+  padding-top: 6px;
+  border-radius: 18px;
+  background: #f1f9ff;
+  text-align: center;
+}
+.LUX_basic_profile .profile_info .sp_tree {
+  background-position: -250px 0;
+}
+.LUX_basic_profile .profile_info .sp_mail {
+  background-position: -200px -100px;
+}
+.LUX_basic_profile .profile_info .sp_tell {
+  background-position: -300px -150px;
+}
+.LUX_basic_profile .profile_info .sp_todo {
+  background-position: -200px -200px;
+}
+.LUX_progress {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+.LUX_progress .dimmed {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1100;
+  background: #000;
+  opacity: 0.6;
+}
+.LUX_progress .progress_wrap_tbl {
+  display: table;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.LUX_progress .progress_wrap_tblcel {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.LUX_progress .progress_wrap {
+  display: inline-block;
+  position: relative;
+  z-index: 1200;
+}
+.LUX_progress .progress_txt {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.LUX_progress .progress_txtin {
+  display: inline-block;
+  vertical-align: middle;
+  color: #1c90fb;
+}
+.LUX_progress .txtbx {
+  display: block;
+  font-size: 20px;
+}
+.LUX_progress .txtbx strong {
+  display: inline-block;
+  font-size: 36px;
+}
+.LUX_progress .autoht {
+  display: inline-block;
+  margin: 0 -4px;
+  width: 1px;
+  height: 100%;
+  vertical-align: middle;
+  letter-spacing: -5px;
+}
+.LUX_progress .btmtxt {
+  position: absolute;
+  top: 100%;
+  left: -15%;
+  right: -15%;
+  margin: 15px 0 0;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 14px;
+}
+.LUX_stepper {
+  position: relative;
+}
+.LUX_stepper .LUX_basic_text .inpbx {
+  padding-right: 20px;
+}
+.LUX_stepper .step_btngroup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  clear: both;
+  overflow: hidden;
+  width: 15px;
+}
+.LUX_stepper .step_btngroup .LUX_basic_btn {
+  float: left;
+  width: 15px;
+  height: 13px;
+}
+.LUX_stepper .step_btngroup .LUX_basic_btn + .LUX_basic_btn {
+  margin-top: 1px;
+}
+.LUX_stepper .step_btngroup .LUX_basic_btn .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -4px;
+  width: 8px;
+  height: 4px;
+  background-position: -75px -60px;
+}
+.LUX_stepper .step_btngroup .LUX_basic_btn + .LUX_basic_btn .sp_lux {
+  background-position: -50px -60px;
+}
+.LUX_stepper .step_btngroup .LUX_basic_btn.disable .sp_lux {
+  background-position: -226px -275px;
+}
+.LUX_stepper .step_btngroup .LUX_basic_btn + .LUX_basic_btn.disable .sp_lux {
+  background-position: -226px -286px;
+}
+.LUX_basic_page {
+  text-align: center;
+}
+.LUX_basic_page .pagein {
+  display: inline-block;
+  font-size: 13px;
+  vertical-align: top;
+}
+.LUX_basic_page .pagein:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_page .btn {
+  display: inline-block;
+  float: left;
+  position: relative;
+  width: 21px;
+  height: 21px;
+  border: 0 none;
+  background: 0 0;
+  font-weight: 200;
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: 0;
+}
+.LUX_basic_page .btn .sp_lux {
+  width: 21px;
+  height: 21px;
+}
+.LUX_basic_page .btn_prev {
+  margin: 0 8px 0 3px;
+}
+.LUX_basic_page .btn_next {
+  margin: 0 3px 0 8px;
+}
+.LUX_basic_page span.btn_prev .sp_lux {
+  background-position: 0 -100px;
+}
+.LUX_basic_page span.btn_next .sp_lux {
+  background-position: -25px -100px;
+}
+.LUX_basic_page button.btn_prev .sp_lux {
+  background-position: 0 -125px;
+}
+.LUX_basic_page button.btn_next .sp_lux {
+  background-position: -25px -125px;
+}
+.LUX_basic_page .num {
+  display: inline-block;
+  float: left;
+  min-width: 15px;
+  height: 21px;
+  padding: 0 3px;
+  line-height: 22px;
+  font-weight: 200;
+  color: #4a4a4a;
+  text-align: center;
+  text-decoration: none;
+}
+.LUX_basic_page strong.num {
+  color: #1c90fb;
+}
+.LUX_basic_page .num.on,
+.LUX_basic_page .num:hover {
+  background: #1c90fb;
+  color: #fff;
+}
+.LUX_basic_page strong.num:hover {
+  background: #1c90fb;
+  color: #fff;
+}
+.LUX_basic_pageable {
+  position: relative;
+  padding: 0 60px 0 86px;
+}
+.LUX_basic_pageable .LUX_basic_btn {
+  position: absolute;
+  top: 0;
+}
+.LUX_basic_pageable .btn_fisrt {
+  left: 0;
+}
+.LUX_basic_pageable .btn_fisrt .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 11px;
+  margin: -6px 0 0 -4px;
+  background-position: -300px -260px;
+}
+.LUX_basic_pageable .btn_fisrt:hover .sp_lux {
+  background-position: -300px -275px;
+}
+.LUX_basic_pageable .btn_prve {
+  left: 30px;
+}
+.LUX_basic_pageable .btn_prve .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 11px;
+  margin: -6px 0 0 -4px;
+  background-position: -250px -260px;
+}
+.LUX_basic_pageable .btn_prve:hover .sp_lux {
+  background-position: -250px -275px;
+}
+.LUX_basic_pageable .btn_popover {
+  left: 60px;
+  border-right: 0 none;
+}
+.LUX_basic_pageable .btn_next {
+  right: 30px;
+}
+.LUX_basic_pageable .btn_next .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 11px;
+  margin: -6px 0 0 -4px;
+  background-position: -263px -260px;
+}
+.LUX_basic_pageable .btn_next:hover .sp_lux {
+  background-position: -263px -275px;
+}
+.LUX_basic_pageable .btn_last {
+  right: 0;
+}
+.LUX_basic_pageable .btn_last .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 11px;
+  margin: -6px 0 0 -4px;
+  background-position: -313px -260px;
+}
+.LUX_basic_pageable .btn_last:hover .sp_lux {
+  background-position: -313px -275px;
+}
+.LUX_basic_pageable .LUX_pure_select {
+  border-left: 0 none;
+  border-radius: 4px;
+}
+.LUX_basic_tabs {
+  text-align: center;
+}
+.LUX_basic_tabs .tabsin {
+  display: inline-block;
+  vertical-align: top;
+}
+.LUX_basic_tabs .tabs_lst {
+  font-size: 13px;
+  vertical-align: top;
+  zoom: 1;
+}
+.LUX_basic_tabs .tabs_lst:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_tabs .tabs_lst .num {
+  color: #1c90fb;
+  margin-left: 4px;
+}
+.LUX_basic_tabs .tabs_lst > li {
+  display: inline-block;
+  float: left;
+}
+.LUX_basic_tabs .tabs_lst a {
+  text-decoration: none;
+  vertical-align: top;
+}
+.LUX_basic_tabs .tabs_lst a > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.LUX_basic_tabs .tabs_lst .active a,
+.LUX_basic_tabs .tabs_lst li:hover a {
+  position: relative;
+  z-index: 10;
+}
+.LUX_basic_tabs .tabs_lst button {
+  border: 0 none;
+  background: 0 0;
+  vertical-align: top;
+  outline: 0;
+  cursor: pointer;
+}
+.LUX_basic_tabs .tabs_lst button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.LUX_basic_tabs .tabs_lst .active button,
+.LUX_basic_tabs .tabs_lst li:hover button {
+  position: relative;
+  z-index: 10;
+}
+.bgfull {
+  background: #1c90fb;
+  text-align: right;
+}
+.bgfull .tabs_lst > li > a {
+  display: inline-block;
+  float: left;
+  height: 48px;
+  padding: 0 30px;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 48px;
+  color: #cbe5ff;
+  text-align: center;
+}
+.bgfull .tabs_lst > .active > a {
+  background: #1078e4;
+  font-weight: 400;
+  color: #fff;
+}
+.bgfull .tabs_lst > li:hover > a {
+  background: #1078e4;
+  font-weight: 400;
+  color: #fff;
+}
+.bgfull .tabs_lst > li > button {
+  display: inline-block;
+  float: left;
+  height: 46px;
+  padding: 0 30px;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 46px;
+  color: #cbe5ff;
+  text-align: center;
+}
+.bgfull .tabs_lst > .active > button,
+.bgfull .tabs_lst > li:hover > button {
+  background: #1078e4;
+  font-weight: 400;
+  color: #fff;
+}
+.bdline_cnt {
+  border-bottom: 1px solid #9e9e9e;
+}
+.bdline_cnt .tabs_lst a {
+  display: inline-block;
+  float: left;
+  position: relative;
+  bottom: -1px;
+  padding: 0 20px;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  line-height: 32px;
+  color: #535353;
+}
+.bdline_cnt .tabs_lst a:after {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  bottom: 8px;
+  width: 1px;
+  background: #e5e5e5;
+  content: "";
+}
+.bdline_cnt .tabs_lst li:first-child a:after {
+  display: none;
+}
+.bdline_cnt .tabs_lst li:hover a {
+  border-color: #00a2ff;
+  color: #2e2e2e;
+}
+.bdline_cnt .tabs_lst .active a {
+  border-color: #00a2ff;
+  color: #2e2e2e;
+}
+.bdline_cnt .tabs_lst button {
+  display: inline-block;
+  float: left;
+  position: relative;
+  bottom: -1px;
+  padding: 0 20px;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  line-height: 32px;
+  color: #535353;
+}
+.bdline_cnt .tabs_lst button:after {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  bottom: 8px;
+  width: 1px;
+  background: #e5e5e5;
+  content: "";
+}
+.bdline_cnt .tabs_lst li:first-child button:after {
+  display: none;
+}
+.bdline_cnt .tabs_lst li:hover button {
+  border-color: #00a2ff;
+  color: #2e2e2e;
+}
+.bdline_cnt .tabs_lst .active button {
+  border-color: #00a2ff;
+  color: #2e2e2e;
+}
+.sao_main_tab {
+  border-bottom: 1px solid #9e9e9e;
+  text-align: left;
+}
+.sao_main_tab .tabs_lst a {
+  display: inline-block;
+  float: left;
+  position: relative;
+  bottom: -1px;
+  padding: 0 16px;
+  border-bottom: 4px solid transparent;
+  font-size: 15px;
+  line-height: 35px;
+  color: #8d8d8d;
+}
+.sao_main_tab .tabs_lst a:after {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  bottom: 10px;
+  width: 1px;
+  background: #e5e5e5;
+  content: "";
+}
+.sao_main_tab .tabs_lst li:first-child a:after {
+  display: none;
+}
+.sao_main_tab .tabs_lst li:hover a {
+  border-color: #1c90fb;
+  color: #2e2e2e;
+}
+.sao_main_tab .tabs_lst .active a {
+  border-color: #1c90fb;
+  color: #2e2e2e;
+}
+.sao_main_tab .tabs_lst .active2 a {
+  color: #00bfff;
+}
+.sao_main_tab .tabs_lst button {
+  display: inline-block;
+  float: left;
+  position: relative;
+  bottom: -1px;
+  padding: 0 16px;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  line-height: 36px;
+  color: #535353;
+}
+.sao_main_tab .tabs_lst button:after {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  bottom: 10px;
+  width: 1px;
+  background: #e5e5e5;
+  content: "";
+}
+.sao_main_tab .tabs_lst li:first-child button:after {
+  display: none;
+}
+.sao_main_tab .tabs_lst li:hover button {
+  border-color: #00a2ff;
+  color: #2e2e2e;
+}
+.sao_main_tab .tabs_lst .active button {
+  border-color: #00a2ff;
+  color: #2e2e2e;
+}
+.sao_sub_tab {
+  padding-left: 1px;
+  text-align: left;
+}
+.sao_sub_tab .tabs_lst a {
+  display: inline-block;
+  float: left;
+  width: auto;
+  height: 28px;
+  margin-left: -1px;
+  padding: 0 16px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  font-size: 13px;
+  line-height: 28px;
+  color: #4a4a4a;
+  box-sizing: border-box;
+}
+.sao_sub_tab .tabs_lst a:hover {
+  position: relative;
+  z-index: 1;
+  border: 1px solid #2896fb;
+  background: #38a0ff;
+  color: #fff;
+}
+.sao_sub_tab .tabs_lst .active a {
+  position: relative;
+  z-index: 1;
+  border: 1px solid #2896fb;
+  background: #38a0ff;
+  color: #fff;
+}
+.sao_sub_tab .tabs_lst button {
+  display: inline-block;
+  float: left;
+  width: auto;
+  height: 28px;
+  margin-left: -1px;
+  padding: 0 16px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  font-size: 13px;
+  line-height: 28px;
+  color: #4a4a4a;
+}
+.sao_sub_tab .tabs_lst button:hover {
+  position: relative;
+  z-index: 1;
+  border: 1px solid #2896fb;
+  background: #38a0ff;
+  color: #fff;
+}
+.sao_sub_tab .tabs_lst .active button {
+  position: relative;
+  z-index: 1;
+  border: 1px solid #2896fb;
+  background: #38a0ff;
+  color: #fff;
+}
+.sao_sub_tab .tabs_lst li:hover .num {
+  color: #fff;
+}
+.bdline_full {
+  border-bottom: 1px solid #9e9e9e;
+  text-align: center;
+}
+.bdline_full .tabsin {
+  display: block;
+}
+.bdline_full .tabs_lst li {
+  width: 25%;
+}
+.bdline_full .tabs_lst a {
+  display: block;
+  position: relative;
+  bottom: -1px;
+  width: 100%;
+  padding: 0;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  line-height: 32px;
+  color: #535353;
+}
+.bdline_full .tabs_lst a:after {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  bottom: 8px;
+  width: 1px;
+  background: #e5e5e5;
+  content: "";
+}
+.bdline_full .tabs_lst li:first-child a:after {
+  display: none;
+}
+.bdline_full .tabs_lst li:hover a {
+  border-color: #00a2ff;
+  color: #2e2e2e;
+}
+.bdline_full .tabs_lst .active a {
+  border-color: #00a2ff;
+  color: #2e2e2e;
+}
+.bdline_full .tabs_lst button {
+  display: block;
+  position: relative;
+  bottom: -1px;
+  width: 100%;
+  padding: 0;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
+  line-height: 32px;
+  color: #535353;
+}
+.bdline_full .tabs_lst button:after {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  bottom: 10px;
+  width: 1px;
+  background: #e5e5e5;
+  content: "";
+}
+.bdline_full .tabs_lst li:first-child button:after {
+  display: none;
+}
+.bdline_full .tabs_lst li:hover button {
+  border-color: #00a2ff;
+  color: #2e2e2e;
+}
+.bdline_full .tabs_lst .active button {
+  border-color: #00a2ff;
+  color: #2e2e2e;
+}
+.shadow .tabs_lst .active a {
+  box-shadow: 2px -2px 7px rgba(0, 0, 0, 0.3);
+}
+.LUX_basic_tagfield {
+  position: relative;
+}
+.LUX_basic_tagfield .field_wrap {
+  border: 1px solid #d9d9d9;
+  padding: 10px 10px 8px;
+}
+.LUX_basic_tagfield .field_wrap.focus {
+  border-color: #74aacf;
+}
+.LUX_basic_tagfield .field_wrap.warning {
+  border-color: #fc5356;
+}
+.LUX_basic_tagfield ul {
+  clear: both;
+}
+.LUX_basic_tagfield ul li {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+.LUX_basic_tagfield .guide_text {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #828282;
+}
+.LUX_basic_tagfield .guide_text.warning {
+  color: #fc5356;
+}
+.LUX_basic_tagfield.notag .field_wrap {
+  padding-bottom: 10px;
+}
+.LUX_basic_tagfield.notag li {
+  float: none;
+}
+.LUX_basic_tagfield.notag .notag_text {
+  position: relative;
+  text-align: center;
+  height: 21px;
+  line-height: 24px;
+}
+.LUX_basic_tagfield.notag .notag_text > p {
+  position: relative;
+  color: #a1a1a1;
+  font-size: 13px;
+  font-family: douzone !important;
+}
+.LUX_basic_tagfield.notag .notag_text > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.LUX_basic_tagfield .LUX_basic_submit .inpbx {
+  padding: 5px 6px 0;
+  border: 0;
+  height: 16px;
+}
+.LUX_basic_tagfield .LUX_basic_tag {
+  margin: 0 4px 2px 0;
+}
+.LUX_basic_tagfield .LUX_basic_submit {
+  margin: 0 4px 2px 0;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+.LUX_basic_tagfield.scrolled:after {
+  position: absolute;
+  top: 11px;
+  right: 1px;
+  width: 8px;
+  height: 27px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, rgba(255, 255, 255, 0)),
+    color-stop(100%, #fff)
+  );
+  content: "";
+}
+.LUX_basic_tagfield.scrolled .field_wrap {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.LUX_basic_tag {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+}
+.LUX_basic_tag .tag_name {
+  display: inline-block;
+  padding: 5px 10px 3px;
+  background: #696969;
+  font-size: 13px;
+  font-weight: 200;
+  color: #fff;
+  border-radius: 2px;
+}
+.LUX_basic_tag.modify .tag_name {
+  padding-right: 27px;
+}
+.LUX_basic_tag button {
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  width: 24px;
+  height: 28px;
+  margin-top: -14px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_basic_tag svg {
+  margin-top: 3px;
+}
+.LUX_basic_time {
+  position: relative;
+}
+.LUX_basic_time .timebx {
+  position: relative;
+  width: 99px;
+}
+.LUX_basic_time .timebx .inpbx {
+  display: block;
+  height: 22px;
+  padding: 6px 24px 0 29px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  line-height: 22px;
+}
+.LUX_basic_time .timebx .inpbx input {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #000;
+  letter-spacing: -0.5px;
+  outline: 0;
+}
+.LUX_basic_time .timebx .LUX_basic_switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 27px;
+  cursor: pointer;
+}
+.LUX_basic_time .timebx .LUX_basic_switch label {
+  display: inline-block;
+  padding: 5px 0 0 6px;
+}
+.LUX_basic_time .timebx .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 27px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_basic_time .timebx .btn .sp_lux {
+  width: 16px;
+  height: 14px;
+  background-position: -150px 0;
+}
+.LUX_basic_time .resultbx {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background: #fff;
+}
+.LUX_basic_time.active .inpbx,
+.LUX_basic_time:hover .inpbx {
+  border-color: #58adfc;
+}
+.LUX_basic_time.active .resultbx,
+.LUX_basic_time:hover .resultbx {
+  display: block;
+}
+.LUX_basic_time .result_scrall {
+  overflow: auto;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+  box-shadow: 1px 1px 2px #ececec;
+}
+.LUX_basic_time .result_scrallin {
+  zoom: 1;
+}
+.LUX_basic_time .result_lst a {
+  display: block;
+  padding: 2px 6px 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  color: #4a4a4a;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+.LUX_basic_time .result_lst a em {
+  display: inline-block;
+  min-width: 8px;
+  font-style: normal;
+  text-align: center;
+}
+.LUX_basic_time .result_lst a:hover {
+  background: #f5f5f5;
+}
+.LUX_basic_time .result_lst a span {
+  color: #1c90fb;
+}
+.LUX_basic_date {
+  position: relative;
+}
+.LUX_basic_date .datebx {
+  position: relative;
+  width: 115px;
+}
+.LUX_basic_date .datebx .inpbx {
+  display: block;
+  height: 22px;
+  padding: 6px 24px 0 6px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  line-height: 22px;
+  border-radius: 4px;
+}
+.LUX_basic_date .datebx .inpbx input {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: 0 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #000;
+  outline: 0;
+}
+.LUX_basic_date .datebx .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 27px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_basic_date .datebx .btn .sp_lux {
+  width: 16px;
+  height: 14px;
+  margin-top: 1px;
+  background-position: -175px 0;
+}
+.LUX_basic_date.active .LUX_calendar,
+.LUX_basic_date:hover .LUX_calendar {
+  display: block;
+}
+.LUX_basic_date.active .datebx .inpbx,
+.LUX_basic_date:hover .datebx .inpbx {
+  border-color: #1c90fb;
+}
+.LUX_calendar {
+  display: none;
+  position: absolute;
+  z-index: 80;
+  width: 216px;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+  box-shadow: 1px 1px 1px #ececec;
+}
+.LUX_calendar .date_select {
+  position: relative;
+  height: 40px;
+  background: #fafafa;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: top;
+}
+.LUX_calendar .date_select .btn {
+  position: absolute;
+  top: 8px;
+  width: 23px;
+  height: 23px;
+  border: 1px solid transparent;
+  background: 0 0;
+  line-height: 23px;
+  text-align: center;
+}
+.LUX_calendar .date_select .btn:hover {
+  border-color: #ccc;
+}
+.LUX_calendar .date_select .btn:hover .sp_lux {
+  opacity: 1;
+}
+.LUX_calendar .date_select .btn .sp_lux {
+  width: 10px;
+  height: 9px;
+  margin-top: 6px;
+  opacity: 0.5;
+}
+.LUX_calendar .date_select .btn_prev_year {
+  left: 15px;
+}
+.LUX_calendar .date_select .btn_prev_year .sp_lux {
+  background-position: -50px -100px;
+}
+.LUX_calendar .date_select .btn_prev_mon {
+  left: 40px;
+}
+.LUX_calendar .date_select .btn_prev_mon .sp_lux {
+  background-position: -50px -75px;
+}
+.LUX_calendar .date_select .date_day_title {
+  font-family: tahoma, sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+.LUX_calendar .date_select .btn_next_mon {
+  right: 40px;
+}
+.LUX_calendar .date_select .btn_next_mon .sp_lux {
+  background-position: -75px -75px;
+}
+.LUX_calendar .date_select .btn_next_year {
+  right: 15px;
+}
+.LUX_calendar .date_select .btn_next_year .sp_lux {
+  background-position: -75px -100px;
+}
+.LUX_calendar .date_tbl {
+  padding: 10px;
+}
+.LUX_calendar .date_tbl table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0;
+  text-align: center;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+.LUX_calendar .date_tbl td,
+.LUX_calendar .date_tbl th,
+.LUX_calendar .date_tbl tr:first-child td {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border: 0 none !important;
+  background: 0 0;
+  border-spacing: 0;
+}
+.LUX_calendar .date_tbl .date_week {
+  height: 21px;
+  padding: 0;
+  border: 0 none;
+  background: 0 0;
+  font-size: 11px;
+  font-family: douzone !important;
+  color: #8d8d8d;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+.LUX_calendar .date_tbl .date_day button {
+  display: block;
+  width: 28px;
+  height: 21px;
+  border: 1px solid transparent;
+  background: 0 0;
+  color: #4a4a4a;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  cursor: pointer;
+  outline: 0;
+  font-size: 11px;
+}
+.LUX_calendar .date_tbl .date_day button span {
+  font-size: 13px;
+  font-family: douzone !important;
+}
+.LUX_calendar .date_tbl .date_day button:hover {
+  border-color: #ccc;
+}
+.LUX_calendar .date_tbl .date_day_sun button {
+  color: red;
+}
+.LUX_calendar .date_tbl .date_day_holiday button {
+  color: red;
+}
+.LUX_calendar .date_tbl .date_day_holiday button:hover {
+  color: red;
+}
+.LUX_calendar .date_tbl .date_day_prev_mon button {
+  color: #c2c2c2;
+}
+.LUX_calendar .date_day_next_mon button {
+  color: #c2c2c2;
+}
+.LUX_calendar .date_tbl .date_day_today button {
+  background: #f0f0f0;
+}
+.LUX_calendar .date_tbl .date_day_selected button {
+  background: #1c90fb;
+  color: #fff;
+}
+.LUX_calendar .date_tbl .date_day_selected button:hover {
+  border-color: #0072dc;
+}
+.LUX_calendar .date_tbl .date_day_gap button {
+  background: #e9f5ff;
+}
+.LUX_calendar .select_area {
+  clear: both;
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+  white-space: nowrap;
+}
+.LUX_calendar .select_area .btn {
+  display: inline-block;
+  position: relative;
+  height: 21px;
+  padding: 1px 6px 0;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  font-size: 11px;
+  font-family: douzone !important;
+  font-weight: 200;
+  color: #4a4a4a;
+  letter-spacing: -0.5px;
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: 0;
+}
+.LUX_calendar .select_area .btn_group {
+  display: inline-block;
+}
+.LUX_calendar .select_area .btn_group .btn {
+  margin: 0 5px;
+}
+.LUX_calendar .select_area .btn_group2 {
+  float: right;
+}
+.LUX_calendar .select_area .btn_group2 .btn {
+  margin: -1px 0 0 -1px;
+}
+.LUX_calendar .select_area .solar_area {
+  display: inline-block;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #999;
+  letter-spacing: -0.5px;
+}
+.LUX_calendar .select_area .solar_area span {
+  margin: 0 3px 0 0;
+}
+.LUX_basic_date_gap .date_gap {
+  display: inline-block;
+  float: left;
+  margin-right: 12px;
+}
+.LUX_basic_date_gap .dash {
+  float: left;
+  max-width: 14px;
+  width: 6%;
+  line-height: 27px;
+  font-size: 13px;
+  text-align: center;
+}
+.LUX_basic_date_gap .LUX_basic_date {
+  float: left;
+}
+.LUX_basic_date_gap .LUX_calendar {
+  width: 429px;
+}
+.LUX_basic_date_gap .LUX_date_day_bx {
+  float: left;
+  width: 50%;
+}
+.LUX_basic_date_gap .LUX_date_day_bx + .LUX_date_day_bx {
+  position: relative;
+}
+.LUX_basic_date_gap .LUX_date_day_bx + .LUX_date_day_bx:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 1px;
+  background: #e0e0e0;
+  content: "";
+}
+.LUX_basic_date_gap .LUX_date_complex {
+  padding: 8px 10px 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.LUX_basic_date_gap .LUX_date_complex button {
+  float: left;
+  margin-top: 2px;
+  padding: 1px 0 0;
+}
+.LUX_basic_date_gap .LUX_date_complex button + button {
+  margin-left: 2px;
+}
+.LUX_basic_date_gap .LUX_date_complex > div {
+  overflow: hidden;
+}
+.LUX_basic_date_gap .LUX_date_complex .date_complex button {
+  width: 13.4%;
+}
+.LUX_basic_date_gap .LUX_date_complex .date_complex button:first-child {
+  width: 13.5%;
+}
+.LUX_basic_date_gap .LUX_date_complex .date_complex button:last-child {
+  width: 16.5%;
+}
+.LUX_basic_date_gap .LUX_date_complex .date_complex2 button {
+  float: left;
+  width: 16.2%;
+}
+.LUX_basic_date_gap .LUX_date_complex .date_complex2 button:last-child {
+  float: left;
+  width: 16.5%;
+}
+.LUX_basic_date_gap .LUX_date_complex .date_complex3 {
+  position: relative;
+  padding-left: 1px;
+}
+.LUX_basic_date_gap .LUX_date_complex .date_complex3:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: calc(34px * 6);
+  height: 3px;
+  margin-top: -3px;
+  background: #1c90fb;
+  content: "";
+}
+.LUX_basic_date_gap .LUX_date_complex .date_complex3 button {
+  width: 35px;
+  margin-left: -1px;
+}
+.LUX_basic_date_gap.wide {
+  position: relative;
+}
+.LUX_basic_date_gap.wide .LUX_basic_date {
+  float: none;
+}
+.LUX_basic_date_gap.wide .date_gap {
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 7px;
+  margin: 0;
+}
+.LUX_basic_date_gap.wide .dash + .date_gap {
+  padding-right: 0;
+  padding-left: 7px;
+}
+.LUX_basic_date_gap.wide .dash {
+  float: none;
+  max-width: auto;
+  width: 14px;
+  position: absolute;
+  left: 50%;
+  margin-left: -7px;
+}
+.LUX_basic_date_gap.wide .datebx {
+  width: 100%;
+}
+.LUX_smart_calendar .LUX_calendar {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 0;
+  box-shadow: none;
+}
+.LUX_smart_calendar .LUX_calendar .date_tbl {
+  padding-left: 8px;
+}
+.LUX_smart_calendar .LUX_calendar .date_tbl .date_day button {
+  position: relative;
+}
+.LUX_smart_calendar .LUX_calendar .date_tbl colgroup col {
+  width: 27px !important;
+}
+.LUX_smart_calendar .LUX_calendar .date_tbl .date_day_check button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 0;
+  border-color: transparent #00b4b7 transparent transparent;
+}
+.LUX_smart_calendar .LUX_calendar .date_select .btn_next_year,
+.LUX_smart_calendar .LUX_calendar .date_select .btn_prev_year {
+  display: none;
+}
+.LUX_mini_calendar .LUX_calendar {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 0;
+  box-shadow: none;
+}
+.LUX_mini_calendar .LUX_calendar .date_tbl.check_all td {
+  background: #f0f0f0;
+}
+.LUX_mini_calendar .LUX_calendar .date_tbl .check_week td,
+.LUX_mini_calendar .LUX_calendar .date_tbl .check_week th {
+  background: #f0f0f0;
+}
+.LUX_mini_calendar .LUX_calendar .date_tbl .date_day button {
+  position: relative;
+  width: 25px;
+}
+.LUX_mini_calendar .LUX_calendar .date_tbl table {
+  table-layout: auto;
+}
+.LUX_mini_calendar .LUX_calendar .date_tbl colgroup col {
+  width: 27px !important;
+}
+.LUX_mini_calendar .LUX_calendar .date_tbl .today_check button {
+  border-color: #ccc;
+}
+.LUX_mini_calendar .LUX_calendar .date_tbl .date_day_check button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 0;
+  border-color: transparent #00b4b7 transparent transparent;
+}
+.LUX_mini_calendar .LUX_calendar .date_tbl .date_day_selected button {
+  border-color: transparent;
+}
+.LUX_basic_tooltip {
+  position: relative;
+  display: inline-block;
+}
+.LUX_basic_tooltip .tooltip_msg {
+  position: absolute;
+  width: 60px;
+  padding: 9px 10px;
+  border: 1px solid #1b1b1b;
+  background-color: #303030;
+  color: #fff;
+  font-family: douzone !important;
+  font-size: 13px;
+  z-index: 2000;
+}
+.LUX_basic_tooltip .tooltip_msg.top {
+  margin-bottom: 5px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -41px;
+}
+.LUX_basic_tooltip .tooltip_msg.bottom {
+  margin-top: 5px;
+  top: 100%;
+  left: 50%;
+  margin-left: -41px;
+}
+.LUX_basic_tooltip .tooltip_msg.left {
+  margin-right: 5px;
+  right: 100%;
+  top: 50%;
+  margin-top: -17px;
+}
+.LUX_basic_tooltip .tooltip_msg.right {
+  margin-left: 5px;
+  left: 100%;
+  top: 50%;
+  margin-top: -17px;
+}
+.LUX_basic_tooltip .tooltip_msg:before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #303030;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+}
+.LUX_basic_tooltip .tooltip_msg.top:before {
+  top: 100%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -4px;
+  box-shadow: 1px 1px 0 0 #1b1b1b;
+}
+.LUX_basic_tooltip .tooltip_msg.bottom:before {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: -5px;
+  margin-left: -4px;
+  box-shadow: -1px -1px 0 0 #1b1b1b;
+}
+.LUX_basic_tooltip .tooltip_msg.left:before {
+  left: 100%;
+  top: 50%;
+  margin-top: -4px;
+  margin-left: -5px;
+  box-shadow: 1px -1px 0 0 #1b1b1b;
+}
+.LUX_basic_tooltip .tooltip_msg.right:before {
+  right: 100%;
+  top: 50%;
+  margin-top: -4px;
+  margin-right: -5px;
+  box-shadow: -1px 1px 0 0 #1b1b1b;
+}
+.LUX_basic_tooltip .tooltip_msg.bottom.bottom_left:before,
+.LUX_basic_tooltip .tooltip_msg.top.top_left:before {
+  left: 10px;
+  margin-left: 0;
+}
+.LUX_basic_tooltip .tooltip_msg.bottom.bottom_right:before,
+.LUX_basic_tooltip .tooltip_msg.top.top_right:before {
+  left: auto;
+  right: 10px;
+  margin-left: 0;
+}
+.LUX_basic_tooltip .tooltip_msg.white {
+  border-color: #c9cac9;
+  background-color: #fff;
+  color: #4a4a4a;
+}
+.LUX_basic_tooltip .tooltip_msg.white:before {
+  background-color: #fff;
+}
+.LUX_basic_tooltip .tooltip_msg.white.top:before {
+  box-shadow: 1px 1px 0 0 #c9cac9;
+}
+.LUX_basic_tooltip .tooltip_msg.white.bottom:before {
+  box-shadow: -1px -1px 0 0 #c9cac9;
+}
+.LUX_basic_tooltip .tooltip_msg.white.left:before {
+  box-shadow: 1px -1px 0 0 #c9cac9;
+}
+.LUX_basic_tooltip .tooltip_msg.white.right:before {
+  box-shadow: -1px 1px 0 0 #c9cac9;
+}
+.LUX_basic_tooltip .tooltip_title {
+  font-size: 14px;
+}
+.LUX_basic_tooltip .tooltip_content {
+  margin-top: 10px;
+}
+.LUX_basic_tooltip.with_title .tooltip_msg {
+  left: 0;
+  width: 265px;
+  margin-left: 0;
+}
+.LUX_basic_tooltip.with_title .tooltip_msg.top:before {
+  left: 0;
+  margin-left: 15px;
+}
+.LUX_basic_treeview_wrap {
+  position: relative;
+  min-width: 622px;
+  margin-top: 25px;
+  padding-left: 290px;
+}
+.LUX_basic_treeview_wrap .LUX_basic_treeview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2 {
+  margin-top: 0;
+  padding-left: 0;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2 .LUX_basic_treeview {
+  position: static;
+  top: auto;
+  left: auto;
+  float: left;
+  width: 280px;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_lst.chart_setmord
+  .chart_wrap {
+  max-height: calc(100% - 38px);
+  height: 100%;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_wrap {
+  overflow-y: auto;
+  position: relative;
+  height: calc(100% - 185px);
+  max-height: 485px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_tit {
+  position: relative;
+  height: auto;
+  margin-top: 10px;
+  padding-left: 20px;
+  border-bottom: 0;
+  background: 0 0;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_tit
+  .sp_lux {
+  overflow: visible;
+  margin-top: 0;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_tit
+  .sp_lux:before {
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  top: 3px;
+  left: 9px;
+  width: 7px;
+  height: 13px;
+  background: url(/imgs/common/sp_lux.png) -50px -125px no-repeat;
+  line-height: 100em;
+  vertical-align: top;
+  cursor: pointer;
+  content: "";
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_tit
+  .num {
+  margin-left: 4px;
+  color: #1c90fb;
+  font-size: 12px;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_tit.chart_open
+  .sp_lux:before {
+  transform: rotate(90deg);
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_set
+  .bar {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background: #b9b9b9;
+  margin: 0 4px;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_tree {
+  overflow: visible;
+  height: auto;
+  margin-bottom: 15px;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_tree.code_view
+  .treebx.treebx_select
+  .code {
+  color: #1fc47c;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_tree.code_view
+  .treebx.treebx_select
+  .code.not_linked {
+  color: #fc5356;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .txtset {
+  padding-right: 0;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .txtset
+  .inpbx {
+  border: 1px solid #1c90fb;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .treein
+  .num {
+  color: #00b4ff;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .treebx_select {
+  background: #e9f5ff;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .treebx_select
+  .txt {
+  color: #000;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .treebx_select
+  .num {
+  color: #00b4ff;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .treebx_open.treebx_select
+  .treein
+  > .sp_lux {
+  background-position: -90px -125px;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .treebx_one.treebx_undefined
+  .treein
+  > .sp_lux {
+  background-position: -177px -250px;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .chart_member {
+  height: 140px;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .memberbx {
+  color: #000;
+  cursor: pointer;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .memberbx
+  .name {
+  font-size: 13px;
+  font-family: douzone !important;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .memberbx_select {
+  background: #e9f5ff;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview
+  .memberin
+  .btn_profile
+  .sp_lux {
+  background-position: -63px -275px;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview.step_1
+  .chart_lst.chart_setmord
+  .chart_wrap {
+  max-height: 100%;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2
+  .LUX_basic_treeview.step_2
+  .chart_wrap {
+  height: 100%;
+  max-height: 100%;
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2 .LUX_basic_tbl {
+  float: right;
+  width: calc(100% - 295px);
+}
+.LUX_basic_treeview_wrap.LUX_basic_treeview_wrap_v2 .group_admin {
+  top: 0;
+}
+.LUX_basic_treeview .treeview_tit {
+  position: relative;
+  padding: 5px 0;
+}
+.LUX_basic_treeview .treeview_tit > h2 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000;
+  vertical-align: top;
+}
+.LUX_basic_treeview .treeview_tit > p {
+  font-weight: 200;
+  font-size: 14px;
+  color: #000;
+}
+.LUX_basic_treeview .treeview_tit .btnbx {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+.LUX_basic_treeview .chart_lst {
+  height: 530px;
+  border: 1px solid #9e9e9e;
+  font-size: 13px;
+  border-radius: 6px;
+}
+.LUX_basic_treeview .chart_lst .LUX_basic_switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.LUX_basic_treeview .chart_lst .LUX_basic_switch .sp_lux {
+  left: 10px;
+}
+.LUX_basic_treeview .chart_lst .LUX_basic_switch label {
+  display: block;
+}
+.LUX_basic_treeview .chart_lst + .btnarea {
+  margin-top: 10px;
+  text-align: center;
+}
+.LUX_basic_treeview .chart_tit {
+  height: 40px;
+  padding: 1px 10px 0;
+  border-bottom: 1px solid #e1e1e1;
+  background: #eef8fd;
+  font-size: 16px;
+  line-height: 41px;
+  font-weight: 700;
+}
+.LUX_basic_treeview .chart_tit .sp_lux {
+  width: 18px;
+  height: 17px;
+  margin-top: 11px;
+  background-position: -100px -100px;
+  margin-right: 4px;
+}
+.LUX_basic_treeview .chart_tit .LUX_basic_badge {
+  float: right;
+  margin-top: 11px;
+}
+.LUX_basic_treeview .chart_set {
+  padding: 7px 0;
+  border-bottom: 1px solid #e1e1e1;
+  background: #f7f7f7;
+  text-align: center;
+}
+.LUX_basic_treeview .chart_tree {
+  overflow: auto;
+  position: relative;
+  height: 343px;
+}
+.LUX_basic_treeview .treebx {
+  position: relative;
+  height: 22px;
+  margin: 5px 0;
+  padding: 0 5px 0 10px;
+  line-height: 22px;
+  cursor: pointer;
+}
+.LUX_basic_treeview .treein {
+  position: relative;
+  padding-left: 32px;
+}
+.LUX_basic_treeview .treein:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_treeview .treein > .sp_lux {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 27px;
+  height: 13px;
+  background-position: -50px -125px;
+}
+.LUX_basic_treeview .treein .txt {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  max-width: 95%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.LUX_basic_treeview .treein .num {
+  float: right;
+  margin: 1px 0 0 4px;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #44dcd3;
+}
+.LUX_basic_treeview .treein .btnset {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+.LUX_basic_treeview .treein .btnset .LUX_basic_btn {
+  width: 16px;
+  height: 22px;
+}
+.LUX_basic_treeview .treein .btnset .LUX_basic_btn .sp_lux {
+  width: 16px;
+  height: 16px;
+}
+.LUX_basic_treeview .treein .btnset .btn_com .sp_lux {
+  background-position: 0 -275px;
+}
+.LUX_basic_treeview .treein .btnset .btn_del .sp_lux {
+  background-position: -25px -275px;
+}
+.LUX_basic_treeview .treein .code {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #1fc47c;
+  font-size: 13px;
+  line-height: 23px;
+  text-decoration: none;
+}
+.LUX_basic_treeview .treein .code.not_linked {
+  color: #fc5356;
+  font-size: 11px;
+}
+.LUX_basic_treeview .txtset {
+  display: none;
+  padding-right: 45px;
+}
+.LUX_basic_treeview .txtset .inpbx {
+  display: block;
+  padding: 3px 5px 2px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+.LUX_basic_treeview .txtset .inpbx input {
+  display: block;
+  width: 100%;
+  border: 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #666;
+  letter-spacing: -0.5px;
+  vertical-align: top;
+  outline: 0;
+}
+.LUX_basic_treeview .treebx_set .txt {
+  display: none;
+}
+.LUX_basic_treeview .treebx_set .txtset {
+  display: block;
+}
+.LUX_basic_treeview .treebx_select {
+  background: #00a2ff;
+}
+.LUX_basic_treeview .treebx_select .num,
+.LUX_basic_treeview .treebx_select .txt {
+  color: #fff;
+}
+.LUX_basic_treeview .treebx_select .treein > .sp_lux {
+  background-position: -100px -250px;
+}
+.LUX_basic_treeview .treebx_select_top {
+  background: #f7f7f7;
+}
+.LUX_basic_treeview .treebx_open .treein > .sp_lux {
+  background-position: -90px -125px;
+}
+.LUX_basic_treeview .treebx_open.treebx_select .treein > .sp_lux {
+  background-position: -140px -250px;
+}
+.LUX_basic_treeview .treebx_one .treein > .sp_lux {
+  background-position: -90px -150px;
+}
+.LUX_basic_treeview .chart_lst .LUX_basic_switch,
+.LUX_basic_treeview .chart_lst .chart_set {
+  display: none;
+}
+.LUX_basic_treeview .chart_ckmord .LUX_basic_switch {
+  display: block;
+}
+.LUX_basic_treeview .chart_ckmord .treebx {
+  padding-left: 10px;
+}
+.LUX_basic_treeview .chart_ckmord .memberbx {
+  padding-left: 20px;
+}
+.LUX_basic_treeview .chart_setmord .chart_code,
+.LUX_basic_treeview .chart_setmord .chart_member,
+.LUX_basic_treeview .chart_setmord .chart_search {
+  display: none;
+}
+.LUX_basic_treeview .chart_setmord .chart_tree {
+  height: 445px;
+}
+.LUX_basic_treeview .chart_setmord .chart_set {
+  display: block;
+}
+.LUX_basic_treeview .treein_depth0 {
+  margin-left: 0;
+}
+.LUX_basic_treeview .treein_depth1 {
+  margin-left: 12px;
+}
+.LUX_basic_treeview .treein_depth2 {
+  margin-left: 24px;
+}
+.LUX_basic_treeview .treein_depth3 {
+  margin-left: 36px;
+}
+.LUX_basic_treeview .treein_depth4 {
+  margin-left: 48px;
+}
+.LUX_basic_treeview .treein_depth5 {
+  margin-left: 60px;
+}
+.LUX_basic_treeview .treein_depth6 {
+  margin-left: 72px;
+}
+.LUX_basic_treeview .treein_depth7 {
+  margin-left: 84px;
+}
+.LUX_basic_treeview .treein_depth8 {
+  margin-left: 96px;
+}
+.LUX_basic_treeview .treeposition {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+}
+.LUX_basic_treeview .treeposition .txt {
+  z-index: 10;
+  padding: 1px 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+.LUX_basic_treeview .treeposition:after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  border-top: 1px solid #00a2ff;
+  content: "";
+}
+.LUX_basic_treeview .treeposition:before {
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  margin-top: -7px;
+  border: 8px solid transparent;
+  border-left: 8px solid #00a2ff;
+  content: "";
+}
+.LUX_basic_treeview .treeposition .sp_lux {
+  display: none;
+}
+.LUX_basic_treeview .chart_tree.code_view .treebx .code {
+  display: inline-block;
+}
+.LUX_basic_treeview .chart_tree.code_view .treebx.treebx_select .code {
+  color: #fff;
+}
+.LUX_basic_treeview .chart_tree.code_view .treebx:not(.treebx_set) .treein {
+  padding-right: 38px;
+}
+.LUX_basic_treeview .chart_member {
+  overflow: auto;
+  height: 100px;
+  padding: 3px 0;
+  border-top: 1px solid #e1e1e1;
+}
+.LUX_basic_treeview .memberbx {
+  position: relative;
+  height: 22px;
+  margin: 5px 0;
+  padding: 0 20px 0 10px;
+  line-height: 22px;
+  cursor: pointer;
+}
+.LUX_basic_treeview .memberbx .LUX_basic_btn {
+  display: none;
+}
+.LUX_basic_treeview .memberbx_select {
+  background: #00a2ff;
+  color: #fff;
+}
+.LUX_basic_treeview .memberbx_select .LUX_basic_btn {
+  display: block;
+}
+.LUX_basic_treeview .memberbx .name {
+  float: left;
+  font-size: 13px;
+}
+.LUX_basic_treeview .memberbx .name .sp_lux {
+  width: 13px;
+  height: 14px;
+  margin: 3px 5px 0 0;
+  background-position: -50px -150px;
+}
+.LUX_basic_treeview .memberin .btn_profile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+}
+.LUX_basic_treeview .memberin .btn_profile .sp_lux {
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  right: 8px;
+  width: 3px;
+  height: 13px;
+  background-position: -50px -275px;
+}
+.LUX_basic_treeview .memberin .elpbx {
+  overflow: hidden;
+  padding: 0 0 0 5px;
+  font-size: 13px;
+  font-family: douzone !important;
+  letter-spacing: -0.5px;
+  vertical-align: top;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.LUX_basic_treeview .chart_search {
+  padding: 5px 10px;
+  border-top: 1px solid #e1e1e1;
+}
+.LUX_basic_treeview .chart_lst_v2 {
+  height: 228px;
+}
+.LUX_basic_treeview .chart_lst_v2 + .chart_lst_v2 {
+  margin-top: -2px;
+}
+.LUX_basic_treeview .chart_lst_v2 .chart_tree {
+  height: 186px;
+}
+.LUX_basic_treeview .chart_code {
+  padding: 8px 10px;
+  background: #f7f7f7;
+  border-top: 1px solid #e1e1e1;
+}
+.LUX_basic_treeview .chart_code .txt_wrap {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  line-height: 21px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.LUX_basic_treeview .chart_code .txt_wrap:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.LUX_basic_treeview .chart_code .code_remain {
+  float: right;
+  margin-left: 4px;
+  color: #1c90fb;
+  font-size: 12px;
+}
+.LUX_basic_treeview_wrap .LUX_basic_tbl {
+  overflow: hidden;
+  overflow-x: auto;
+  min-width: 622px;
+}
+.LUX_basic_treeview_wrap .LUX_basic_tbl .tbl_scrall {
+  overflow-y: auto;
+  min-width: 622px;
+  height: 488px;
+  border-bottom: 1px solid #9e9e9e;
+}
+.LUX_basic_treeview_wrap .tblarea td,
+.LUX_basic_treeview_wrap .tblarea th {
+  text-align: center;
+}
+.LUX_basic_treeview_wrap .tblarea thead th {
+  padding: 7px 0 6px;
+}
+.LUX_basic_treeview_wrap .group_cell_1 {
+  width: 25px;
+}
+.LUX_basic_treeview_wrap .group_cell_2,
+.LUX_basic_treeview_wrap .group_cell_3 {
+  width: 70px;
+}
+.LUX_basic_treeview_wrap .group_cell_4 {
+  width: 45px;
+}
+.LUX_basic_treeview_wrap .group_cell_5 {
+  width: 50px;
+}
+.LUX_basic_treeview_wrap .group_cell_6 {
+  width: 90px;
+}
+.LUX_basic_treeview_wrap .group_cell_7,
+.LUX_basic_treeview_wrap .group_cell_8 {
+  width: 100px;
+}
+.LUX_basic_treeview_wrap .group_cell_9 {
+  width: 70px;
+}
+.LUX_basic_treeview_wrap .group_admin {
+  overflow: auto;
+  position: absolute;
+  top: -26px;
+  right: -30px;
+  bottom: 0;
+  width: 0;
+  margin-left: 10px;
+  background: #fff;
+  -webkit-transition: width 0.25s;
+  transition: width 0.25s;
+}
+.LUX_basic_treeview_wrap .group_admin .rnb {
+  width: 510px;
+  height: 100%;
+  word-break: break-all;
+}
+.LUX_basic_treeview_wrap .group_admin .rnbtit {
+  position: relative;
+  min-height: 22px;
+  margin: 25px 10px 0;
+  padding: 5px 0;
+  word-break: break-all;
+}
+.LUX_basic_treeview_wrap .group_admin .rnbtit h2 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000;
+  vertical-align: top;
+}
+.LUX_basic_treeview_wrap .group_admin .rnbtit .btnbx {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+.LUX_basic_treeview_wrap .group_admin .rnbin {
+  padding: 0 10px;
+  word-break: break-all;
+}
+.LUX_basic_treeview_wrap .group_admin .rnbbtn {
+  padding: 10px 0 20px;
+  text-align: center;
+  word-break: break-all;
+}
+.LUX_basic_treeview_wrap.rnbopen {
+  min-width: 140px;
+  padding-right: 492px;
+  -webkit-transition: padding 0.25s;
+  transition: padding 0.25s;
+}
+.LUX_basic_treeview_wrap.rnbopen .group_admin {
+  width: 511px;
+  border: 1px solid #ccc;
+  border-right: 0 none;
+}
+.LUX_basic_treeview_wrap.rnbopen .LUX_basic_tbl,
+.LUX_basic_treeview_wrap.rnbopen .tbl_scrall {
+  min-width: 140px;
+}
+.LUX_basic_treeview_wrap.rnbopen .LUX_basic_tbl .tbl_tit .btnbx {
+  display: none;
+}
+.LUX_basic_treeview_wrap .sch_text {
+  color: #da47ff;
+}
+.LUX_basic_treeview_wrap .tooltip {
+  position: relative;
+  cursor: pointer;
+}
+.LUX_basic_treeview_wrap .tooltip_txt {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  padding: 15px 10px;
+  background: rgba(0, 0, 0, 0.8);
+  font-family: douzone !important;
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.LUX_basic_treeview_wrap .tooltip_txt:after {
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  border: 3px solid transparent;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.8);
+  content: "";
+}
+.LUX_basic_treeview_wrap .tooltip:hover .tooltip_txt {
+  display: block;
+}
+.LUX_basic_treeview_wrap .group_cell_1,
+.LUX_basic_treeview_wrap .group_cell_2,
+.LUX_basic_treeview_wrap .group_cell_3,
+.LUX_basic_treeview_wrap .group_cell_4,
+.LUX_basic_treeview_wrap .group_cell_5,
+.LUX_basic_treeview_wrap .group_cell_6,
+.LUX_basic_treeview_wrap .group_cell_7,
+.LUX_basic_treeview_wrap .group_cell_8,
+.LUX_basic_treeview_wrap .group_cell_9 {
+  -webkit-transition: width 0.25s;
+  transition: width 0.25s;
+}
+.LUX_basic_treeview_wrap.rnbopen .group_cell_1,
+.LUX_basic_treeview_wrap.rnbopen .group_cell_2,
+.LUX_basic_treeview_wrap.rnbopen .group_cell_3,
+.LUX_basic_treeview_wrap.rnbopen .group_cell_4,
+.LUX_basic_treeview_wrap.rnbopen .group_cell_5,
+.LUX_basic_treeview_wrap.rnbopen .group_cell_6,
+.LUX_basic_treeview_wrap.rnbopen .group_cell_7,
+.LUX_basic_treeview_wrap.rnbopen .group_cell_8,
+.LUX_basic_treeview_wrap.rnbopen .group_cell_9 {
+  overflow: hidden;
+}
+.LUX_basic_treeview_wrap.rnbopen .tooltip:hover .tooltip_txt {
+  display: none;
+}
+@media (min-width: 0) and (max-width: 1540px) {
+  .LUX_basic_treeview_wrap.rnbopen .group_cell_9 {
+    width: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 1440px) {
+  .LUX_basic_treeview_wrap.rnbopen .group_cell_8 {
+    width: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 1340px) {
+  .LUX_basic_treeview_wrap.rnbopen .group_cell_7 {
+    width: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 1240px) {
+  .LUX_basic_treeview_wrap.rnbopen .group_cell_6 {
+    width: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 1140px) {
+  .LUX_basic_treeview_wrap.rnbopen .group_cell_5 {
+    width: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 1100px) {
+  .LUX_basic_treeview_wrap.rnbopen .group_cell_4 {
+    width: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 1050px) {
+  .LUX_basic_treeview_wrap.rnbopen .group_cell_1 {
+    width: 0;
+  }
+}
+.LUX_basic_badge {
+  display: inline-block;
+  font-weight: 200;
+  color: #fff;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.LUX_basic_badge.red {
+  background: #fc5356;
+}
+.LUX_basic_badge.blue {
+  background: #1c90fb;
+}
+.LUX_basic_badge.trans {
+  background: rgba(0, 0, 0, 0.4);
+}
+.LUX_basic_badge.small {
+  min-width: 13px;
+  padding: 1px 3px 0;
+  border-radius: 10px;
+  font-size: 10px;
+  line-height: 12px;
+}
+.LUX_basic_badge.big {
+  min-width: 18px;
+  padding: 3px 8px 0;
+  border-radius: 12px;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 14px;
+  letter-spacing: -0.5px;
+}
+.LUX_basic_badgebx {
+  position: relative;
+  display: inline-block;
+}
+.LUX_basic_badgebx .LUX_basic_badge {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.LUX_basic_badgebx .LUX_basic_badge.small {
+  margin: -7px 0 0 -10px;
+}
+.LUX_basic_badgebx .LUX_basic_badge.big {
+  margin: -12px 0 0 -15px;
+}
+.LUX_popupchecklist {
+  position: relative;
+}
+.LUX_popupchecklist .list_scroll {
+  border: 0;
+  height: 114px;
+  overflow: auto;
+  background: #fff;
+  padding: 5px;
+  border-bottom: 1px solid #e9e9e9;
+}
+.LUX_popupchecklist .list_scroll li {
+  position: relative;
+}
+.LUX_popupchecklist .list_scroll li .checkbox_new {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.LUX_popupchecklist .list_scroll li .checkbox_new label {
+  line-height: 23px;
+}
+.LUX_popupchecklist .list_scroll li .input_text {
+  display: block;
+  padding-left: 20px;
+  font-size: 13px;
+  font-family: douzone !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  line-height: 24px;
+}
+.LUX_popupchecklist .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 27px;
+  border: 0 none;
+  background: 0 0;
+  cursor: pointer;
+}
+.LUX_popupchecklist .btn .sp_lux {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -2px;
+  width: 8px;
+  height: 4px;
+  background-position: -50px -50px;
+}
+.LUX_popupchecklist .box_group {
+  border: 1px solid #e9e9e9;
+  border-radius: 6px;
+}
+.LUX_popupchecklist .box_group .LUX_basic_menu .menu_scrall {
+  border: 0;
+  height: 125px;
+}
+.LUX_popupchecklist .box_group .inp_wrap {
+  position: relative;
+  padding: 5px;
+  border-bottom: 1px solid #e9e9e9;
+}
+.LUX_popupchecklist .box_group .inp_wrap .LUX_basic_text {
+  padding-right: 47px;
+}
+.LUX_popupchecklist .box_group .inp_wrap .LUX_basic_btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.LUX_popupchecklist .box_group .btnbx {
+  padding: 5px 0;
+  text-align: center;
+  background: #faf9f9;
+  border-radius: 6px;
+}
+.LUX_popupchecklist .list_header {
+  border: 1px solid #e9e9e9;
+  border-bottom: 0;
+}
+.LUX_popupchecklist .list_header .check_item {
+  padding: 6px;
+  clear: both;
+  overflow: hidden;
+  font-size: 13px;
+  font-family: douzone !important;
+}
+.LUX_popupchecklist .list_header em {
+  color: #1c90fb;
+}
+.LUX_basic_ct {
+  position: absolute;
+}
+.LUX_basic_flt {
+  float: left;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+.LUX_basic_flt:last-child {
+  float: right;
+}
+.LUX_basic_inscrall {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.LUX_color_checkbox {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+.LUX_color_checkbox input {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  z-index: -10;
+  width: 13px;
+  height: 13px;
+}
+.LUX_color_checkbox input:checked + label svg {
+  display: block;
+}
+.LUX_color_checkbox .img_box {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+}
+.LUX_color_checkbox .img_box svg {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -6px;
+}
+.LUX_color_checkbox label {
+  display: inline-block;
+  font-size: 13px;
+  font-family: douzone !important;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  vertical-align: top;
+  line-height: 20px;
+}
+.LUX_color_checkbox .label_text {
+  margin-left: 6px;
+}
+.LUX_color_checkbox.no_label label {
+  width: 14px;
+  height: 14px;
+}
+.LUX_color_checkbox.no_label .img_box {
+  top: 0;
+}
+.LUX_color_checkbox.no_label .label_text {
+  position: absolute !important;
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+}
+.LUX_color_checkbox .focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #1c90fb;
+}
+.LUX_viewer .dimmed {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  background: #000;
+  opacity: 0.6;
+}
+.LUX_viewer .viewer_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1200;
+  min-width: 1024px;
+  overflow: hidden;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+.LUX_viewer .viewer_wrap .viewer_head {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  background: #2f313a;
+  text-align: left;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+.LUX_viewer .viewer_wrap .viewer_head h1 {
+  display: inline-block;
+  font-family: douzone !important;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 55px;
+  height: 100%;
+  padding-right: 145px;
+  width: 50%;
+  box-sizing: border-box;
+}
+.LUX_viewer .viewer_wrap .viewer_head h1 .title_filename {
+  position: relative;
+  max-width: 100%;
+  padding-right: 80px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.LUX_viewer .viewer_wrap .viewer_head h1 .page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #acacac;
+  line-height: 56px;
+}
+.LUX_viewer .viewer_wrap .viewer_head h1 .page em {
+  color: #fff;
+  font-weight: 700;
+}
+.LUX_viewer .viewer_wrap .viewer_head .btn_clr {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+}
+.LUX_viewer .viewer_wrap .viewer_head .btn_clr .sp_lux {
+  width: 14px;
+  height: 14px;
+  background-position: -361px -55px;
+}
+.LUX_viewer .viewer_wrap .viewer_head .btngroup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  margin-left: -140px;
+  margin-top: -16px;
+  text-align: center;
+}
+.LUX_viewer .viewer_wrap .viewer_head .btngroup .LUX_basic_btn {
+  padding: 1px 18px 0;
+  height: 32px;
+  font-size: 14px;
+  color: #dbdbdb;
+  border: 1px solid #686868;
+  background: #2f313a;
+}
+.LUX_viewer .viewer_wrap .viewer_head .btngroup .LUX_basic_btn.dropdown {
+  padding: 1px 17px 0 14px;
+}
+.LUX_viewer
+  .viewer_wrap
+  .viewer_head
+  .btngroup
+  .LUX_basic_btn.dropdown
+  .sp_lux {
+  width: 3px;
+  height: 15px;
+  background-position: -361px -74px;
+}
+.LUX_viewer .viewer_wrap .viewer_head .btngroup .btn_dropdown {
+  display: inline-block;
+}
+.LUX_viewer .viewer_wrap .viewer_head .btngroup .btn_dropdown .dropdown_menu {
+  display: none;
+  position: absolute;
+  border: 1px solid #a3a3a3;
+  width: 95px;
+}
+.LUX_viewer
+  .viewer_wrap
+  .viewer_head
+  .btngroup
+  .btn_dropdown
+  .dropdown_menu.on {
+  display: block;
+}
+.LUX_viewer
+  .viewer_wrap
+  .viewer_head
+  .btngroup
+  .btn_dropdown
+  .dropdown_menu
+  button {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: #fff;
+  font-size: 13px;
+  font-family: douzone !important;
+  height: 24px;
+  line-height: 24px;
+  color: #000;
+  padding: 1px 10px 0;
+}
+.LUX_viewer
+  .viewer_wrap
+  .viewer_head
+  .btngroup
+  .btn_dropdown
+  .dropdown_menu
+  button:hover {
+  background: #f5f5f5;
+}
+.LUX_viewer .viewer_wrap .viewer_contents {
+  overflow-y: auto;
+  height: 100%;
+  padding: 68px 0 115px;
+  box-sizing: border-box;
+}
+.LUX_viewer .viewer_wrap .viewer_contents .contents_page {
+  margin: 0 auto;
+  width: 100%;
+}
+.LUX_viewer .viewer_wrap .viewer_contents .contents_page + .contents_page {
+  margin-top: 10px;
+}
+.LUX_viewer .viewer_wrap .viewer_btngroup {
+  position: fixed;
+  top: 50%;
+  left: 24px;
+  height: 100px;
+  margin-top: -50px;
+}
+.LUX_viewer .viewer_wrap .viewer_btngroup li {
+  position: relative;
+}
+.LUX_viewer .viewer_wrap .viewer_btngroup li:hover .hover_text {
+  width: 100px !important;
+  height: inherit !important;
+  overflow: inherit !important;
+  clip: auto !important;
+  margin-top: -6px !important;
+  left: 100%;
+  top: 50%;
+  text-align: left;
+  padding-left: 7px;
+  font-size: 13px;
+  font-family: douzone !important;
+  color: #e5e5e5;
+  box-sizing: border-box;
+}
+.LUX_viewer .viewer_wrap .viewer_btngroup li + li {
+  margin-top: 2px;
+}
+.LUX_viewer .viewer_wrap .viewer_btngroup button {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #949494;
+  background: #646060;
+}
+.LUX_viewer .viewer_wrap .viewer_btngroup button .sp_lux {
+  width: 18px;
+  height: 18px;
+}
+.LUX_viewer .viewer_wrap .viewer_btngroup button.zoom_p .sp_lux {
+  background-position: -355px -99px;
+}
+.LUX_viewer .viewer_wrap .viewer_btngroup button.zoom_m .sp_lux {
+  background-position: -355px -127px;
+}
+.LUX_viewer .viewer_wrap .viewer_btngroup button.zoom_w .sp_lux {
+  background-position: -382px -99px;
+}
+.LUX_viewer .viewer_wrap .viewer_btngroup button:hover {
+  background: #454343;
+}
+.LUX_viewer .viewer_wrap.rnd_open {
+  padding-right: 400px;
+  width: auto;
+}
+.LUX_viewer .viewer_wrap.rnd_open + .rnd_wrap {
+  display: block;
+}
+.LUX_viewer .rnd_wrap {
+  display: none;
+  z-index: 1200;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background: #fff;
+}
+.LUX_spinner {
+  position: relative;
+}
+.LUX_spinner .spinner {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+.LUX_spinner .spinner svg {
+  animation: loading_rotate 1.5s linear infinite;
+  -webkit-animation: loading_rotate 1.5s linear infinite;
+  height: 100%;
+  width: 100%;
+}
+.LUX_spinner .spinner circle {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: loading_dash 1.5s ease-in-out infinite 0s;
+  -webkit-animation: loading_dash 1.5s ease-in-out infinite 0s;
+  stroke-linecap: round;
+  fill: none;
+  stroke-width: 3;
+  stroke: #00bcd4;
+}
+.LUX_spinner .spinner_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -10px;
+  width: 50px;
+  font-size: 13px;
+  color: #00bcd4;
+  line-height: 18px;
+  font-weight: 700;
+}
+@keyframes loading_rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading_dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}
+.LUX_basic_tbl.showlabel .tblarea td:first-child .LUX_basic_switch,
+.LUX_basic_tbl.showlabel .tblarea th:first-child .LUX_basic_switch {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+.LUX_basic_tbl.showlabel .LUX_basic_switch label.ellipsis {
+  width: 80px;
+  vertical-align: top;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  vertical-align: -8px;
+}
+.LUX_basic_tbl .inbx .wgtnormal {
+  font-weight: 400;
+}
+.LUX_basic_actionbar .selinfo > em {
+  color: #1ae0ed;
+}
+.LUX_basic_btn.tightpadding {
+  padding: 0 15px !important;
+}
+.LUX_basic_code.icondown .LUX_basic_btn .sp_lux {
+  width: 8px;
+  height: 4px;
+  margin-top: 5px;
+  background-position: -50px -60px;
+}
+.LUX_basic_code.icondown.active .LUX_basic_btn .sp_lux {
+  background-position: -75px -60px;
+}
+.LUX_basic_tbl thead .second th {
+  border-top: 1px solid #e5e5e5;
+  background: #fff;
+  font-weight: 400;
+}
+.LUX_basic_tbl.noborder .tblarea td {
+  border-top: 0;
+}
+.LUX_basic_tbl.noborder .tblarea tfoot td {
+  border-top: 1px solid #e5e5e5;
+}
+.LUX_basic_tbl.inpadding td,
+.LUX_basic_tbl.inpadding th {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.LUX_basic_tbl.inpadding8 .tblarea2 td .inbx {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.LUX_basic_tbl.padding6 table td {
+  padding: 6px 0 !important;
+}
+.LUX_basic_tbl .tblarea2.tblarea2_v2 {
+  border-top: 1px solid #646464;
+}
+.LUX_basic_tbl .tblarea2.tblarea2_v2 th {
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 13px;
+  border-right: 0;
+  background: #f7f7f7;
+  text-align: left;
+  color: #4a4a4a;
+  vertical-align: middle;
+}
+.LUX_basic_tbl .tblarea2.tblarea2_v2 td {
+  color: #000;
+}
+.LUX_basic_tbl .tblarea2.tblarea2_v2 .inbx_value {
+  padding: 4px 0;
+}
+.LUX_basic_tbl .tblarea2.tblarea2_v3 th {
+  padding-left: 0;
+  padding-right: 0;
+  border-right: 1px solid #e5e5e5;
+}
+.LUX_basic_tbl .tblarea2.tblarea2_v3 thead > tr > th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 20px;
+}
+.LUX_basic_tbl .tblarea2.tblarea2_v3 td:last-child,
+.LUX_basic_tbl .tblarea2.tblarea2_v3 thead > tr > th:last-child {
+  border-right: 0;
+}
+.LUX_basic_tbl .tblarea2.tblarea2_v3 td {
+  border-right: 1px solid #e5e5e5;
+}
+.LUX_basic_tbl .no_elipsis {
+  white-space: normal;
+}
+.LUX_basic_tbl.always_bt_border {
+  position: relative;
+}
+.LUX_basic_tbl.always_bt_border:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+.LUX_basic_tbl.minwidth .tbl_scrall {
+  min-width: 870px;
+}
+.LUX_basic_tbl.bordered2 td,
+.LUX_basic_tbl.bordered2 th {
+  border-right: 1px solid #e5e5e5;
+}
+.LUX_basic_tbl.bordered2 td:last-of-type,
+.LUX_basic_tbl.bordered2 th:last-of-type {
+  border-right: 0;
+}
+.LUX_basic_tbl.bordered2 td,
+.LUX_basic_tbl.bordered2 th {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.LUX_basic_tbl.bordered2 tbody tr:first-child td {
+  border-top: 1px solid #e5e5e5;
+}
+.LUX_basic_tbl .celblue {
+  background: #f0f6fa !important;
+}
+.LUX_basic_tbl .celsum {
+  background: #e0f2ff !important;
+}
+.LUX_basic_tbl.bordered table {
+  border-left: 1px solid #e5e5e5;
+  border-bottom: 0;
+}
+.LUX_basic_tbl.bordered td,
+.LUX_basic_tbl.bordered th {
+  border: 1px solid #e5e5e5;
+  border-width: 0 1px 1px 0;
+}
+.LUX_basic_tbl.bordered_v2 td,
+.LUX_basic_tbl.bordered_v2 th {
+  border-width: 1px 1px 0 0;
+}
+.LUX_basic_tbl.bordered_v2 td:first-child,
+.LUX_basic_tbl.bordered_v2 th:first-child {
+  border-left: 0;
+}
+.LUX_basic_tbl.bordered_v2 thead th {
+  border-top: 0;
+}
+.LUX_basic_tbl.bordered_v2 td:last-child,
+.LUX_basic_tbl.bordered_v2 th:last-child {
+  border-right: 0;
+}
+.LUX_basic_tbl.bordered {
+  position: relative;
+}
+.LUX_basic_tbl.bordered .tblarea td,
+.LUX_basic_tbl.bordered .tblarea th {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+.LUX_basic_tbl.bordered:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+.LUX_basic_tbl.bordered.notafter:after {
+  display: none;
+}
+.LUX_basic_tbl.thin td {
+  height: 27px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.LUX_basic_tbl.thin thead th {
+  height: 27px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.LUX_basic_tbl.topbd1 table {
+  border-top-width: 1px;
+}
+.LUX_basic_tbl.th13 thead th {
+  font-size: 13px !important;
+}
+.LUX_basic_tbl.th12 th {
+  font-size: 12px !important;
+}
+.LUX_basic_tbl.th11 th {
+  font-size: 11px !important;
+}
+.LUX_basic_tbl.td11 td {
+  font-size: 11px !important;
+}
+.LUX_basic_tbl.lh18 td,
+.LUX_basic_tbl.lh18 th {
+  line-height: 18px !important;
+}
+.LUX_basic_tbl.ex_paymanage_table .tblarea {
+  border: 0;
+}
+.LUX_basic_tbl.ex_paymanage_table th {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  height: 40px;
+  border-top: 1px solid #e1e1e1;
+  padding: 0;
+}
+.LUX_basic_tbl.ex_paymanage_table td {
+  font-size: 13px;
+  text-align: center;
+  height: 40px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0;
+  border-top: 0;
+}
+.LUX_basic_tbl.ex_paymanage_table td.bcolor {
+  color: #1c90fb;
+  font-weight: 700;
+}
+.LUX_basic_tbl.ex_paymanage_table tr:first-child td {
+  border-top: 0;
+}
+.LUX_basic_tbl.ex_payinfo_table .tblarea2 {
+  border: 2px solid #c7d7e4;
+}
+.LUX_basic_tbl.ex_payinfo_table th {
+  background: #eef5fb;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+.LUX_basic_tbl.ex_payinfo_table td {
+  padding: 0 11px;
+}
+.LUX_basic_tbl.ex_payinfo_table .linktext {
+  color: #0071e5;
+  text-decoration: underline;
+}
+.LUX_basic_tbl.ex_payinfo_table .linktext + .incellbtn {
+  margin-left: 10px;
+}
+.LUX_basic_tbl.ex_payinfo_table .incellbtn {
+  vertical-align: middle;
+}
+.LUX_basic_tbl.ex_refund_table .tblarea2 {
+  border-top: 0;
+}
+.LUX_basic_tbl.ex_refund_table .tblarea2 th {
+  padding: 11px 0;
+  border-right: 0;
+}
+.LUX_basic_tbl.ex_refund_table .tblarea2 th .inbx {
+  padding: 0 17px;
+  text-align: left;
+  font-size: 13px;
+  color: #4a4a4a;
+  font-family: douzone !important;
+  vertical-align: middle;
+  font-weight: 700;
+}
+.LUX_basic_tbl.ex_refund_table .tblarea2 td .inbx {
+  font-size: 13px;
+  color: #000;
+  padding: 0 18px;
+  vertical-align: middle;
+}
+.LUX_basic_tbl.ex_refund_table .tblarea2 a.inbx {
+  display: inline-block;
+  color: #1c90fb;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.LUX_basic_tbl.ex_refund_table .tblarea2 .inbx > span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.LUX_basic_tbl.ex_refund_table .tblarea2 .inbx.input_textarea {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.LUX_basic_select.noborder .searchbx {
+  font-size: 14px;
+}
+.LUX_basic_select.noborder .searchbx .placeholder {
+  font-size: 14px;
+}
+.LUX_basic_select.noborder .inpbx {
+  border: 0;
+}
+.LUX_basic_select.ft14 .searchbx {
+  font-size: 14px;
+}
+.LUX_basic_select.ft14 .searchbx .placeholder {
+  font-size: 14px;
+}
+.LUX_basic_text.password2 .inpbx {
+  border-color: #1c90fb;
+  background: #1c90fb;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.LUX_basic_text.password2 .inpbx .placeholder {
+  top: 4px;
+  text-align: center;
+  color: #8ec8fd;
+}
+.LUX_basic_text.password2 .inpbx input {
+  text-align: center;
+  color: #fff;
+}
+.LUX_basic_btn.saobtn {
+  min-width: 100px;
+  height: 32px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 32px;
+}
+.LUX_basic_btn.fix42 {
+  min-width: 42px;
+  padding: 0 !important;
+}
+.LUX_basic_tagfield.samll .field_wrap {
+  border-color: #e0e0e0;
+  padding: 1px 2px;
+}
+.LUX_basic_tagfield.samll .field_wrap .tag_name {
+  background: #f5f5f5;
+  color: #000;
+  padding: 6px 25px 4px 10px;
+  vertical-align: top;
+}
+.LUX_basic_tagfield.samll .field_wrap .LUX_basic_tag {
+  margin: 0 4px 0 0;
+}
+.LUX_basic_tbl .sub_info {
+  font-size: 11px;
+  color: #b1b1b1;
+}
+.LUX_basic_text.nobd .inpbx {
+  border: 0;
+}
+.LUX_basic_accodion.sao_theme.sao_theme2 .list_more_wrap button {
+  height: 100%;
+  border: 0;
+  text-align: left;
+}
+.LUX_basic_accodion.sao_theme.sao_theme2 .list_more_wrap button + button {
+  border-top: 1px solid #d3d3d3;
+}
+.LUX_basic_accodion.sao_theme.sao_theme2 .accodion_area {
+  margin-bottom: 0;
+}
+.LUX_basic_accodion.sao_theme.sao_theme2 .accodion_area + .accodion_area {
+  border-top: 0;
+}
+.LUX_basic_accodion.sao_theme.sao_theme2 .accodion_title.nochild button {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+.LUX_basic_accodion.sao_theme.sao_theme2 .accodion_title.nochild.open button {
+  border-bottom: 0;
+}
+.LUX_basic_btn {
+  border-radius: 4px;
+}
+
+.toggleButton {
+  display: block;
+  position: relative;
+  width: 62px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 60px;
+  transition: background 0.4s;
+  cursor: pointer;
+  border: max(2px, 0.1em) solid #ff0000;
+}
+.toggleButton:after {
+  content: "";
+  position: absolute;
+  left: 1.5px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  transform: translateY(-50%);
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+  background: #ff0000;
+}
+.toggleButton:before {
+  content: "미사용";
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s;
+  color: #ff0000;
+}
+#toggle_chk:checked + .toggleButton {
+  border: max(2px, 0.1em) solid #0080ff;
+}
+#toggle_chk:checked + .toggleButton:after {
+  left: calc(100% - 20px);
+  background-color: #0080ff;
+}
+#toggle_chk:checked + .toggleButton:before {
+  content: "사용";
+  color: #0080ff;
+  left: 15px;
+}
+/*# sourceMappingURL=../maps/lux.css.map */

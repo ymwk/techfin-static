@@ -1,0 +1,105 @@
+.SOLTitle {
+  &-t1,
+  &-t2,
+  &-t3,
+  &-t4 {
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--fc-default);
+
+    em {
+      color: var(--c-active);
+    }
+    small {
+      font-weight: 400;
+    }
+    .msg {
+      padding-left: 0.4em;
+      font-size: var(--font-14);
+      color: var(--fc-gray2);
+    }
+  }
+
+  &-t1 {
+    font-size: var(--font-24);
+  }
+  &-t2 {
+    font-size: var(--font-20);
+  }
+  &-t3 {
+    font-size: var(--font-18);
+    &.left {
+      text-align: left;
+    }
+    &.mgt40 {
+      margin-top: 40px;
+    }
+    &.pdb25 {
+      padding-bottom: 25px;
+    }
+  }
+  &-t4 {
+    font-size: var(--font-16);
+  }
+}
+
+.SOLText-body {
+  font-size: var(--font-16);
+  line-height: 1.6;
+  color: var(--fc-default);
+}
+
+.SOLText-desc {
+  font-size: var(--font-14);
+  line-height: 1.5;
+  color: var(--fc-default);
+  &.small {
+    font-size: var(--font-13);
+  }
+  &.pd-t-b-30 {
+    padding: 30px 0px;
+  }
+  &.mg-b-10 {
+    margin-bottom: 10px;
+  }
+}
+
+.SOLText-caption {
+  font-size: var(--font-16);
+  line-height: 1.5;
+  color: var(--fc-gray2);
+}
+
+.SOLText-note {
+  font-size: var(--font-13);
+  line-height: 1.5;
+  color: var(--fc-gray1);
+  &.center {
+    text-align: center;
+  }
+}
+
+.SOLText--em {
+  font-weight: 700 !important;
+}
+.SOLText--require {
+  &::after {
+    content: "*";
+    color: var(--c-error);
+  }
+}
+
+.a--left {
+  text-align: left !important;
+}
+.a--right {
+  text-align: right !important;
+}
+
+.SOLText-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  line-height: 1;
+}

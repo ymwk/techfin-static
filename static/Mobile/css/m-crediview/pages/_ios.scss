@@ -1,0 +1,10 @@
+@supports (-webkit-touch-callout: none) {
+  //회원가입
+  .members-container .members-loginbox.signup .SOLForm-root {
+    max-height: calc(100dvh - 350px);
+  }
+
+  .SOLTermAgreement-contents {
+    max-height: calc(100vh - 245px);
+  }
+}

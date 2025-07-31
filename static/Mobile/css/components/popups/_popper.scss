@@ -1,0 +1,218 @@
+// .SOLPopper-root {  }
+
+.SOLPopper-notify {
+  &:hover {
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  &-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+    padding-right: 16px;
+    max-height: 550px;
+    overflow-y: scroll;
+    font-weight: 500;
+  }
+
+  &-tit {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: var(--font-16);
+
+    em {
+      padding-left: 6px;
+      color: var(--c-active);
+    }
+
+    button {
+      margin-left: auto;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-height: 3em;
+      padding: 16px;
+      border: 1px solid var(--tb-border);
+      border-radius: 8px;
+      transition: border-color 0.3s;
+
+      &:hover {
+        border-color: rgba(10, 43, 88, 0.3);
+      }
+    }
+
+    .t--service {
+      padding-left: 60px;
+      background: url(../../Common/image/icon/ic_noti_service.svg) no-repeat
+        15px center / 36px;
+    }
+
+    .t--mypage {
+      padding-left: 60px;
+      background: url(../../Common/image/icon/ic_noti_my.svg) no-repeat 15px
+        center / 36px;
+    }
+
+    .t--customer {
+      padding-left: 60px;
+      background: url(../../Common/image/icon/ic_noti_cs.svg) no-repeat 15px
+        center / 36px;
+    }
+
+    .t--download {
+      padding-left: 60px;
+      background: url(../../Common/image/icon/ic_noti_down.svg) no-repeat 15px
+        center / 36px;
+    }
+
+    .t--promo {
+      padding-left: 60px;
+      background: url(../../Common/image/icon/ic_noti_promo.svg) no-repeat 15px
+        center / 36px;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: #bbbbbd;
+
+    button:hover {
+      color: var(--fc-default);
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+
+    small {
+      padding-left: 0.8em;
+      font-size: var(--font-12);
+      color: var(--fc-gray2);
+      font-weight: 400;
+    }
+  }
+
+  &-body {
+    display: flex;
+    font-size: var(--font-12);
+    line-height: 1.4;
+    font-weight: 500;
+
+    &:not(.st--open) {
+      .desc {
+        @include ellipsis;
+      }
+    }
+
+    &.st--open {
+      display: block;
+
+      .desc,
+      .btn {
+        display: inline;
+      }
+    }
+
+    .btn {
+      color: var(--c-active);
+      white-space: nowrap;
+      padding-left: 0.4em;
+    }
+  }
+}
+
+.SOLPopper-list {
+  text-align: left;
+  border-radius: 10px;
+  overflow: hidden;
+
+  & > li {
+    &:not(:first-of-type) {
+      border-top: 1px solid var(--tb-border);
+    }
+
+    button,
+    a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 6px 12px;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: var(--bc-hover);
+      }
+    }
+  }
+
+  &.SOLPopper-box {
+    padding: 0;
+  }
+}
+
+.SOLPopper-position {
+  z-index: 1000;
+  position: absolute;
+  visibility: hidden;
+  max-width: calc(100vw - 10px);
+
+  &.open {
+    visibility: visible;
+  }
+}
+
+.SOLPopper-box {
+  position: relative;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #d9dce1;
+  background-color: #fff;
+  box-shadow: 0 3px 12px rgba(55, 29, 110, 0.07);
+  color: #222;
+  font-size: var(--font-12);
+  font-weight: 500;
+  line-height: 1.4;
+
+  &.absolute {
+    position: absolute;
+    margin-top: 0px;
+    width: auto;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  &.show {
+    visibility: visible;
+  }
+}

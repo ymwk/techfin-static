@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home Page</title>
+  </head>
+
+  <body>
+    <div style="padding: 50px">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          padding: 50px;
+          border: 1px solid #e5e5e5;
+          border-radius: 8px;
+        "
+      >
+        <h3 style="font-size: 18px">백오피스 퍼블리싱 화면 목록</h3>
+        <ul
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 20px;
+            list-style: circle;
+          "
+        >
+          <li>
+            <a onclick="moveUrl('./views/cbsvc/client/biz.html');" href="#"
+              >크레디뷰 > 사업자관리</a
+            >
+            <br />
+          </li>
+          <li>
+            <a
+              onclick="moveUrl('./views/cbsvc/client/biz-detail.html');"
+              href="#"
+              >크레디뷰 > 사업자관리 상세</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="moveUrl('./views/cbsvc/run/reqhis-detail.html');"
+              href="#"
+              >크레디뷰 > 운영관리 > 등급신청내역 상세</a
+            >
+          </li>
+          <li>
+            <a onclick="moveUrl('./views/cbsvc/notice/email.html');" href="#"
+              >크레디뷰 > 알림/통지 > 발송양식관리 > 이메일</a
+            >
+          </li>
+          <li>
+            <a onclick="moveUrl('./views/cbsvc/notice/sms.html');" href="#"
+              >크레디뷰 > 알림/통지 > 발송양식관리 > sms</a
+            >
+          </li>
+          <li>
+            <a onclick="moveUrl('./views/cbsvc/notice/popup.html');" href="#"
+              >크레디뷰 > 알림/통지 > 발송양식관리 > 조회 팝업</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="moveUrl('./views/cbsvc/notice/popup-admin.html');"
+              href="#"
+              >크레디뷰 > 팝업관리 > 상세/수정 팝업</a
+            >
+          </li>
+          <li>
+            <a onclick="moveUrl('./views/doc.html');" href="#"
+              >운영관리 > 등급신청내역 > 신용평가등급확인서 팝업</a
+            >
+          </li>
+          <li>
+            <a onclick="moveUrl('./views/cbsvc/dashboard/main.html');" href="#"
+              >크레디뷰 > 플랫폼 관리(공통) > 신규가입 및 결제현황</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="moveUrl('./views/cbsvc/event/inviteEventPage.html');"
+              href="#"
+              >크레디뷰 > 플랫폼 관리(공통) > 이벤트관리 > 회원초대이벤트 >
+              초대내역</a
+            >
+          </li>
+          <li>
+            <a onclick="moveUrl('./views/cbsvc/gradeapp/index.html');" href="#"
+              >크레디뷰 > 운영관리 > 등급신청내역</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

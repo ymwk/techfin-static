@@ -1,0 +1,83 @@
+.tit-close-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  &.mgb44 {
+    margin-bottom: 44px;
+  }
+  .tit-close-box {
+    width: 360px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    //padding-bottom: 44px;
+    .close-btn {
+      width: 15px;
+      height: 15px;
+      background: url("../../Common/image/icon/mb/ic_gnb_closebtn.png")
+        no-repeat center;
+      background-size: 15px;
+      cursor: pointer;
+      display: block;
+    }
+    .title {
+      font-size: var(--font-15);
+      font-weight: 500;
+      padding: 2px 0 0 10px;
+    }
+  }
+}
+
+.SOLTermAgreement {
+  &-root {
+    //min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+  }
+  &-wrap {
+    width: 360px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px 0px;
+    z-index: 10;
+    position: absolute;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  &-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  &-contents {
+    overflow-y: auto;
+    height: calc(100dvh - 165px);
+    color: #404252;
+    padding: 0 20px;
+    // word-break: keep-all;
+    word-break: break-all;
+    text-align: justify;
+    scrollbar-width: none;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE, Edge */
+
+    h2 {
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 2em;
+    }
+    p {
+      margin: 0 0;
+    }
+  }
+}
+
+.action-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 0 20px;
+}

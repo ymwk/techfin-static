@@ -1,0 +1,125 @@
+@mixin desktop {
+  @media screen and (min-width: 1270px) {
+    @content;
+  }
+}
+
+@mixin desktop-min {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop-min-type02 {
+  @media screen and (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1269px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile-type02 {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile-type360 {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin mobile-type-min360 {
+  @media screen and (min-width: 360px) {
+    @content;
+  }
+}
+
+@mixin ellipsis($lines: 1) {
+  @if ($lines==1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin popBox {
+  position: relative;
+  max-height: calc(100vh - 80px);
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  animation: fadeIn 0.5s;
+}
+
+@mixin backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s;
+
+  &.t--blur {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+  }
+}
+
+@mixin formBox {
+  position: relative;
+  font-size: var(--font-14);
+  width: 100%;
+  height: var(--form-h);
+
+  padding: 0 var(--form-pd);
+  border: 1px solid var(--form-c-border);
+  border-radius: var(--form-round);
+  background-color: #fff;
+  transition: border-color 0.2s;
+  color: var(--fc-default);
+  text-align: left;
+}
+
+@mixin formStyle {
+  @include formBox;
+
+  &:disabled {
+    background-color: var(--form-c-bg-dis);
+    color: var(--form-c-text-dis);
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: var(--form-c-border-h);
+  }
+  &:hover:not(:read-only) {
+    border-color: var(--form-c-border-h);
+  }
+
+  &:focus,
+  &:hover:focus {
+    border-color: var(--c-active);
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: var(--form-c-text-dis);
+    opacity: 1;
+  }
+}

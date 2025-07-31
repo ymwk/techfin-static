@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Css Partials Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Web/css/designsystem.css" />
+  </head>
+  <body>
+    <div class="index-root">
+      <header class="index-header">
+        <h1>크레디뷰 Css Partials Guide</h1>
+      </header>
+      <div class="index-container">
+        <dl class="partial-dir">
+          <dt>static</dt>
+          <dd>
+            css
+            <ul>
+              <li class="file">
+                designsystem.scss<span
+                  >: scss파일 import (선언 순서에 따라 우선순위 바뀌므로
+                  주의)</span
+                >
+                <p>
+                  designsystem.css<span class="noti"
+                    >: 디자인 시스템용 컴파일 최종 결과물</span
+                  >
+                </p>
+              </li>
+              <li class="file">
+                crediview.scss<span
+                  >: 크레디뷰 서비스 scss파일 import (선언 순서에 따라 우선순위
+                  바뀌므로 주의)</span
+                >
+                <p>
+                  crediview.css<span class="noti"
+                    >: 크레디뷰 서비스 컴파일 최종 결과물</span
+                  >
+                </p>
+              </li>
+              <li>base<span>: 공통 스타일 디렉토리</span></li>
+              <li>
+                components<span>: 컴포넌트용 스타일 개별 저장 디렉토리</span>
+                <ul>
+                  <li>buttons</li>
+                  <li>etc</li>
+                  <li>icons</li>
+                  <li>inputs</li>
+                  <li>modals</li>
+                  <li>popups</li>
+                  <li>selects</li>
+                  <li>styles</li>
+                  <li>tabs</li>
+                </ul>
+              </li>
+              <li>designsystem<span>: 디자인시스템용 스타일 디렉토리</span></li>
+              <li>
+                partials<span
+                  >: Header, footer, Sidebar 등 레이아웃 스타일 디렉토리</span
+                >
+              </li>
+              <li>vendors<span>: 라이브러리 스타일 모음</span></li>
+              <li>
+                crediview<span>: 크레디뷰 서비스 스타일 디렉토리</span>
+                <ul>
+                  <li>
+                    pages<span
+                      >: 크레디뷰 서비스 상세페이지 스타일 디렉토리</span
+                    >
+                    <ul>
+                      <li>_board.scss<span>: 게시판 style</span></li>
+                      <li>_box.scss<span>: wrapper 및 box style</span></li>
+                      <li>
+                        _card.scss<span
+                          >: 인증서 card, 등급 산출내역 card style</span
+                        >
+                      </li>
+                      <li>_common.scss<span>: 기타 공통 style</span></li>
+                      <li>
+                        _console.scss<span>: 콘솔 서비스 화면 공통 style</span>
+                      </li>
+                      <li>_doc.scss<span>: 신용평가등급확인서 style</span></li>
+                      <li>
+                        _guide.scss<span
+                          >: 신용평가체계 안내 및 개인정보처리방침 style</span
+                        >
+                      </li>
+                      <li>
+                        _members.scss<span
+                          >: 로그인 및 회원가입페이지 style</span
+                        >
+                      </li>
+                      <li>
+                        _service.scss<span>: 기업신용평가 메뉴 style</span>
+                      </li>
+                      <li>_table.scss<span>: table 및 관련 style</span></li>
+                      <li>_welcome.scss<span>: 웰컴페이지 style</span></li>
+                    </ul>
+                  </li>
+                  <li>
+                    landing<span
+                      >: 크레디뷰 서비스 랜딩페이지 스타일 디렉토리</span
+                    >
+                    <ul>
+                      <li>_index.scss<span>: 랜딩페이지 layout style</span></li>
+                      <li>
+                        _section.scss<span>: 랜딩페이지 섹션별 style</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </dd>
+          <dd>font</dd>
+          <dd>
+            image
+            <ul>
+              <li>icon</li>
+              <li>img</li>
+              <li>
+                svg<span>(svg코드만 사용하여 실제로 import하지는 않음)</span>
+              </li>
+              <li>
+                crediview<span>: 크레디뷰 서비스 이미지 디렉토리</span>
+                <ul>
+                  <li>background</li>
+                  <li>conditions</li>
+                  <li>doc</li>
+                  <li>email</li>
+                  <li>landing</li>
+                  <li>logo</li>
+                  <li>video</li>
+                </ul>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </body>
+</html>

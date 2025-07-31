@@ -1,0 +1,386 @@
+.SOLTable-data {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  th,
+  td {
+    height: 64px;
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-top: 1px solid var(--tb-border);
+    border-bottom: 1px solid var(--tb-border);
+    //word-break: keep-all;
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  tbody th {
+    width: 140px;
+    background-color: var(--tb-bg);
+    font-weight: normal;
+    text-align: left;
+  }
+
+  td > span + span {
+    margin-left: 4px;
+  }
+
+  caption {
+    font-size: var(--font-18);
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+
+  &.t--result {
+    border-top: 1px double #c9cbce;
+    border-bottom: 1px double #c9cbce;
+
+    th {
+      background-color: var(--bc-hover);
+    }
+
+    tfoot {
+      th,
+      td {
+        font-weight: 700;
+        font-size: var(--font-16);
+      }
+    }
+  }
+
+  &.t--credit {
+    border-top: 1px double #c9cbce;
+  }
+
+  &.toggle {
+    td {
+      .toggle-btn {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        &:before {
+          content: "";
+          width: 25px;
+          height: 25px;
+          background: url("../../Common/image/icon/ic_arrow_btn.png") no-repeat
+            center center;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: rotate(90deg);
+          transition: ease-in-out 0.4s;
+        }
+        &.active {
+          &:before {
+            content: "";
+            transform: rotate(-90deg);
+          }
+        }
+      }
+      .innder-contents {
+        display: none;
+        position: relative;
+        &.active {
+          display: block;
+          padding: 20px 0 0 0;
+        }
+      }
+    }
+    &.mgt15 {
+      margin-top: 15px;
+    }
+  }
+
+  .service-result-list {
+    li {
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.SOLTable-list {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  &.height-sm {
+    td {
+      height: 36px;
+    }
+  }
+
+  &.l--auto {
+    table-layout: auto;
+  }
+
+  &.b--ver {
+    border-right: 0 hidden;
+    border-left: 0 hidden;
+
+    tbody td,
+    tfoot td {
+      border: 1px solid var(--tb-border);
+    }
+  }
+
+  &.t--board {
+    tbody tr {
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: var(--bc-hover);
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      .a--left {
+        padding: 0 0.5em;
+      }
+    }
+
+    .date {
+      color: var(--fc-gray2);
+    }
+  }
+
+  th,
+  td {
+    height: 56px;
+    padding: 9px 10px;
+    vertical-align: middle;
+    border-top: 1px solid var(--tb-border);
+    border-bottom: 1px solid var(--tb-border);
+    text-align: center;
+    line-height: 1.43;
+  }
+
+  td.left {
+    text-align: left;
+  }
+
+  thead th {
+    position: relative;
+    height: 46px;
+    padding: 5px;
+    background-color: var(--tb-bg);
+    border-color: #e2e2e2;
+
+    &:not(:first-of-type)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 16px;
+      margin-top: -8px;
+      border-left: 1px solid #e2e2e2;
+    }
+  }
+
+  thead tr:not(:first-of-type) th {
+    font-weight: normal;
+  }
+
+  tfoot td {
+    background-color: var(--tb-bg);
+    font-weight: 700;
+  }
+
+  .SOLTable-th-span {
+    border-left: 1px solid var(--tb-border);
+    &::after {
+      content: none !important;
+    }
+  }
+
+  td.a--left {
+    padding-left: 1.4em;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  tr {
+    &.disabled {
+      td {
+        background: #f7f8fa;
+        span {
+          color: var(--c-disabled);
+        }
+        em {
+          color: var(--c-disabled);
+        }
+        .flex-c {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          &.pd-l {
+            padding-left: 46px;
+          }
+        }
+      }
+      .diagnosis-state {
+        color: #fff;
+      }
+    }
+    td {
+      .grade {
+        display: inline-block;
+        background: #f5f7f9;
+        border-radius: 4px;
+        padding: 5px 10px;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+          background: #e8eeff;
+        }
+        &:active {
+          background: #506fff;
+          color: #fff;
+        }
+        &.process {
+          background: #506fff;
+          color: #fff;
+        }
+      }
+      .diagnosis-state {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 16px;
+        font-size: var(--font-12);
+        font-weight: 700;
+        color: #fff;
+        &.process {
+          background: #506fff;
+        }
+        &.complete {
+          background: #1eb98b;
+        }
+        &.failed {
+          background: #ced4da;
+        }
+      }
+    }
+  }
+
+  &.dropdown-wrap {
+    overflow: hidden;
+    tr.on {
+      border: solid 1px #3b5dfb;
+      position: relative;
+      td {
+        background: #e8eeff;
+        border-top: solid 1px #3b5dfb;
+        border-bottom: solid 1px #3b5dfb;
+        &::before {
+          content: "";
+          width: 1920px;
+          height: 1px;
+          background: #3b5dfb;
+          position: absolute;
+          top: -1px;
+          left: -10px;
+        }
+      }
+      .dropdown-btn {
+        transform: rotate(-90deg);
+      }
+    }
+    .dropdown-btn-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .dropdown-btn {
+        display: inline-block;
+        width: 14px;
+        height: 15px;
+        background: url("../../Common/image/icon/ic_arrow_btn.png") no-repeat
+          center center;
+        transform: rotate(90deg);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    .dropdown-content {
+      display: none;
+      transition: max-height 0.3s ease-in-out;
+      &.active {
+        display: table-row;
+        max-height: 300px;
+        td {
+          border: solid 1px #3b5dfb;
+          border-top: none;
+          background: #f9fbff;
+        }
+      }
+    }
+  }
+}
+
+.SOLTable-empty {
+  padding: 54px 0;
+  border-bottom: 1px solid var(--tb-border);
+}
+
+.SOLTable-small {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--tb-border);
+  border-radius: 6px;
+  background-color: #fff;
+
+  caption {
+    font-weight: 400;
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 0.7em;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid var(--tb-border);
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    width: 120px;
+    padding: 10px;
+    font-weight: 400;
+    background-color: #eff3fc;
+  }
+
+  .SOLInput-box {
+    height: 2em;
+  }
+
+  & + & {
+    margin-top: 24px;
+  }
+}
+
+.SOLTable-wrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+
+  .SOLTable-list {
+    border-collapse: separate;
+
+    thead th {
+      z-index: 1;
+      position: sticky;
+      top: 0;
+    }
+
+    tbody td {
+      border-top: 0;
+    }
+  }
+}

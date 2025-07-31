@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <title>크레디뷰 신용평가체계</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="Description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Classification" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:" content="크레디뷰" />
+    <meta property="og:image" content="/og_crediview.jpg" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="웹사이트주소" />
+    <meta property="al:web:url" content="웹사이트주소" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="웹사이트주소" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/Mobile/css/crediview-m.css" />
+  </head>
+  <body>
+    <div class="console-root">
+      <header class="SOLHeader-root">
+        <div class="SOLHeader-inner">
+          <h1 class="SOLHeader-logo">
+            <a href="/src/app/crediview/landing">
+              <div class="logo">
+                <span class="eng">Crediview</span>
+                <span class="kr">크레디뷰</span>
+              </div>
+            </a>
+          </h1>
+          <div class="SOLHeader-global">
+            <a
+              href="/src/app/crediview/members/signup/index.html"
+              class="SOLHeader-global-link"
+              >회원가입</a
+            >
+            <a
+              href="/src/app/crediview/members/login/index.html"
+              class="SOLHeader-global-btn"
+              >로그인</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <div class="console-container">
+        <div class="console-inner">
+          <div class="console-content">
+            <div class="console-">
+              <h2 class="SOL-t1">신용평가체계</h2>
+            </div>
+
+            <div class="console-main">
+              <!-- console-header -->
+              <div class="console-header">
+                <div class="console-header-option">
+                  <div class="SOLCombobox-root" style="width: 200px">
+                    <button
+                      type="button"
+                      class="SOLCombobox-button"
+                      onclick="combobox(this)"
+                    >
+                      시행일 : 2024-07-01
+                    </button>
+                    <div class="SOLCombobox-option">
+                      <ul>
+                        <li>
+                          <a href="/src/app/crediview/common/privacy.html"
+                            >시행일 : 2024-07-01</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guide-body">
+                <h3 class="SOL-t3">1. 기업신용평가체계 개요</h3>
+
+                <h4 class="SOL-t4">(1) 기업신용등급의 정의 및 목적</h4>
+                <div class="guide-desc">
+                  <p>
+                    기업신용등급이란 기업의 향후 1년 내 부도 가능성을 평가하고
+                    그 상대적인 위험 수준을 서열화 하여 일정한 형식의
+                    기호(AAA~D)로 표기한 지표를 의미합니다.
+                  </p>
+                  <p>
+                    당사는 기업 규모, 기업이 속한 산업 및 업종 등에 관계없이
+                    동일 신용등급에 대해 동일한 수준의 부도율을 정의 및 관리하고
+                    있으며, 기업신용등급 부여를 위한 신용평가모형 개발 및 운영
+                    시 일관된 부도 정의를 적용하고 있습니다.
+                  </p>
+                  <p>당사가 준용하고 있는 부도의 정의는 아래와 같습니다.</p>
+                  <ul>
+                    <li>
+                      <p>
+                        ① 차주가 해당 은행에 부담하는 상당한 수준의 여신에
+                        대해서 90일 이상 연체한 경우
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        ② 보유 담보물의 처분과 같은 상환 청구 조치를 취하지
+                        않으면 차주로부터 채무를 일부라도 상환 받지 못할 것으로
+                        판단되는 경우
+                      </p>
+                    </li>
+                  </ul>
+                  <p>
+                    당사의 기업신용등급은 개별 기업의 전반적인 신용 위험을
+                    평가한 차주 등급(issuer rating)을 의미하며, 개별 채권의
+                    특성과 이에 따른 원리금 회수 가능성을 평가하는
+                    등급(issue-specific rating)과는 차이가 있습니다.
+                  </p>
+                  <p>
+                    당사의 기업신용등급은 AAA~D까지 총 10개로 구분되며, “+”, “-“
+                    등 의 기호를 활용하여 등급 세분화를 진행할 수 있습니다.
+                  </p>
+                  <p>당사 기업신용등급별 정의는 다음과 같습니다.</p>
+
+                  <table class="SOLTable-list l--auto">
+                    <caption>
+                      [기업신용등급 정의]
+                    </caption>
+                    <colgroup>
+                      <col style="width: 20%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>신용등급</th>
+                        <th>정의</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>AAA</td>
+                        <td class="a--left">
+                          상거래를 위한 신용도가 최우량하며, 환경변화에 따른
+                          위험이 거의 없음
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>AA</td>
+                        <td class="a--left">
+                          상거래를 위한 신용도가 우량하며, 환경변화에 대한
+                          적절한 대응력 보유
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>A</td>
+                        <td class="a--left">
+                          상거래를 위한 신용도가 양호하며, 환경변화에 대한
+                          대응력이 상위 등급 대비 열위
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>BBB</td>
+                        <td class="a--left">
+                          상거래를 위한 신용도가 양호하나, 경제여건 및
+                          환경악화에 따른 거래 안정성 저하 가능성 내포
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>BB</td>
+                        <td class="a--left">
+                          상거래를 위한 신용도가 보통이며, 경제여건 및
+                          환경악화에 따른 거래 안정성 저하 가능성 높음
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>B</td>
+                        <td class="a--left">
+                          상거래를 위한 신용도가 보통이며, 경제여건 및
+                          환경악화에 따른 거래 안정성의 상당한 저하 우려
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>CCC</td>
+                        <td class="a--left">
+                          상거래를 위한 신용도가 보통 이하이며, 거래 안정성이
+                          저하되어 주의 필요
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>CC</td>
+                        <td class="a--left">
+                          상거래를 위한 신용도가 매우 낮으며, 거래 안정성이 매우
+                          낮음
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>C</td>
+                        <td class="a--left">
+                          상거래를 위한 신용도가 최하위 수준이며, 거래 안정성에
+                          높은 위험 존재
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>D</td>
+                        <td class="a--left">
+                          상거래 불능 혹은 이에 준하는 상태
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>R</td>
+                        <td class="a--left">
+                          2년 미만의 결산재무제표 보유 및 합병 등 경영상태
+                          변화로 인해 신용등급 부여 유보
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h4 class="SOL-t4">(2) 기업신용등급 활용 현황</h4>
+                <div class="guide-desc">
+                  <p>
+                    기업신용등급은 금융 여신거래 및 공공기관 주관 입찰 참여,
+                    거래처 및 협력업체 등록과 같이 기업의 신용도와
+                    신용거래능력에 기반한 의사결정이 필요한 다양한 분야에 활용
+                    됩니다.
+                  </p>
+
+                  <table class="SOLTable-list l--auto">
+                    <colgroup>
+                      <col style="width: 20%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>활용 분야</th>
+                        <th>활용 예시</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>금융기관</td>
+                        <td class="a--left">
+                          기업 대출을 위한 여신심사 등에 참고 지표로 활용
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>공공기관</td>
+                        <td class="a--left">
+                          조달청 등 공공기관 입찰, 인허가 등을 위한
+                          경영상태평가시 참고 지표로 활용
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>일반기업</td>
+                        <td class="a--left">
+                          거래처 및 협력업체 등록 및 각종 상거래 활동 과정에서
+                          신용평가에 활용
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h4 class="SOL-t4">(3) 평가 기초 정보의 수집/관리</h4>
+                <div class="guide-desc">
+                  <p>
+                    당사는 기업신용평가 시 기업이 당사에 직접 제출한 정보와 회계
+                    ERP 프로그램을 통해 축적하고 있는 방대한 규모의 실시간 회계
+                    정보를 활용하고 있으며, 해당 정보 외에 자체적으로 수집한
+                    기업 정보를 추가로 활용하고 있습니다.
+                  </p>
+                  <p>
+                    또한, 신용정보법 제18조 제2항 및 신용정보업감독규정 제19조에
+                    의거하여 수집된 정보의 활용 및 보존기간을 지정해 신용평가
+                    과정에서 발생 할 수 있는 불이익을 사전에 방지하고 있습니다.
+                  </p>
+
+                  <table class="SOLTable-list l--auto b--ver">
+                    <colgroup>
+                      <col style="width: 20%" />
+                      <col style="width: 20%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th colspan="2">구분</th>
+                        <th>정의</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="2">기업 직접 제출</td>
+                        <td class="a--left">
+                          재무제표, 사업자등록증 등 기업이 직접 당사로 제출한
+                          정보
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">ERP 회계 프로그램</td>
+                        <td class="a--left">
+                          기업의 회계연도에 발생한 실시간 회계 정보, 인사 정보
+                        </td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">자체 수집</td>
+                        <td>한국신용정보원</td>
+                        <td class="a--left">
+                          기업신용공여정보, 신용도판단정보 및 공공정보
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>기타</td>
+                        <td class="a--left">
+                          OPEN API(국세청 휴·폐업 등), 기업 관련 스크래핑 정보
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 class="SOL-t3">2. 주요 평가요소</h3>
+
+                <h4 class="SOL-t4">(1) 주요 평가요소</h4>
+                <div class="guide-desc">
+                  <p>
+                    당사 기업신용평가모형은 결산 재무제표에 기반한 재무 모형과
+                    회계 ERP 프로그램의 실시간 회계 정보 및 한국신용정보원의
+                    기업신용공여정보가 중심이 되는 계량 비재무 모형으로
+                    구성되며, 각 모형 별 주요 평가 요소는 다음과 같습니다.
+                  </p>
+
+                  <table class="SOLTable-list l--auto b--ver">
+                    <caption>
+                      [재무 모형 평가요소]
+                    </caption>
+                    <colgroup>
+                      <col style="width: 20%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>평가요소</th>
+                        <th>설명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>성장성</td>
+                        <td class="a--left">총자산 증가율 등</td>
+                      </tr>
+                      <tr>
+                        <td>수익성</td>
+                        <td class="a--left">총 자본순이익률 등</td>
+                      </tr>
+                      <tr>
+                        <td>안정성</td>
+                        <td class="a--left">자기자본비율 등</td>
+                      </tr>
+                      <tr>
+                        <td>활동성</td>
+                        <td class="a--left">총자본 회전율 등</td>
+                      </tr>
+                      <tr>
+                        <td>유동성</td>
+                        <td class="a--left">유동비율 등</td>
+                      </tr>
+                      <tr>
+                        <td>부채상환능력</td>
+                        <td class="a--left">금융비용/매출액 등</td>
+                      </tr>
+                      <tr>
+                        <td>규모</td>
+                        <td class="a--left">종업원수 증가율 등</td>
+                      </tr>
+                      <tr>
+                        <td>생산성</td>
+                        <td class="a--left">종업원 1인당 영업이익 등</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <table class="SOLTable-list l--auto b--ver">
+                    <caption>
+                      [계량 비재무 모형 평가요소]
+                    </caption>
+                    <colgroup>
+                      <col style="width: 20%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>평가요소</th>
+                        <th>설명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>기업 개황</td>
+                        <td class="a--left">
+                          업력(설립일로부터 기간), 사업장 소유 현황
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>가동 능력</td>
+                        <td class="a--left">
+                          기업, 기업 소유 공장의 가동 능력
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>거래 안정성</td>
+                        <td class="a--left">
+                          기업과 매출·매입처 사이 거래 지속성
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>경영 신뢰성</td>
+                        <td class="a--left">기업 경영의 투명성 및 신뢰성</td>
+                      </tr>
+                      <tr>
+                        <td>성장성</td>
+                        <td class="a--left">
+                          기업의 매출/매입과 관련 지표 및 성장 정도
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>인사</td>
+                        <td class="a--left">기업의 인적자원 관리 능력</td>
+                      </tr>
+                      <tr>
+                        <td>재무 유동성</td>
+                        <td class="a--left">기업의 현금 유동성</td>
+                      </tr>
+                      <tr>
+                        <td>지급 능력</td>
+                        <td class="a--left">기업의 자금 지급 능력</td>
+                      </tr>
+                      <tr>
+                        <td>채무이행능력</td>
+                        <td class="a--left">기업의 금융 비용 상환 능력</td>
+                      </tr>
+                      <tr>
+                        <td>기업신용공여정보</td>
+                        <td class="a--left">
+                          기업 대출 개설 현황, 상환 이력 등
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>신용도판단정보</td>
+                        <td class="a--left">
+                          연체, 대위변제·대지급, 관련인, 금융질서문란정보 등
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>공공정보</td>
+                        <td class="a--left">
+                          기업회생정보, 세금·과태료 체납, 산재·고용보험료·임금
+                          체납 등
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h4 class="SOL-t4">(2) 반영 비중</h4>
+                <div class="guide-desc">
+                  <p>
+                    재무 모형과 계량 비재무 모형에서 산출된 스코어를 기반으로
+                    기업 규모(매출액 기반)에 따라 차등 가중결합하여 최종
+                    스코어를 산출합니다.<br />
+                    각 경우에서 결합 가중치는 사전 설계된 결합 시나리오를
+                    기반으로 시뮬레이션을 통해 모형 변별력이 극대화 되는
+                    조합으로 설정하였습니다.
+                  </p>
+
+                  <table class="SOLTable-list b--ver">
+                    <caption>
+                      [기업 규모별 가중치 비중]
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>구분</th>
+                        <th>재무 모형</th>
+                        <th>계량 비재무 모형</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>법인(대)</td>
+                        <td>30%</td>
+                        <td>70%</td>
+                      </tr>
+                      <tr>
+                        <td>법인(소)</td>
+                        <td>20%</td>
+                        <td>80%</td>
+                      </tr>
+                      <tr>
+                        <td>개인</td>
+                        <td>20%</td>
+                        <td>80%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p class="footnote">
+                    주) 법인(대)는 매출액이 20억 이상인 외감기업 및 중기업을
+                    의미.
+                  </p>
+                </div>
+
+                <h4 class="SOL-t4">(3) 반영 기간</h4>
+                <div class="guide-desc">
+                  <p>
+                    재무 모형에서 재무제표는 최근 3개년 분을 활용하며, 일부
+                    평가시 최대 5개년까지 활용할 수 있습니다.
+                  </p>
+                  <p>
+                    계량 비재무 모형의 경우, 회계 ERP 프로그램의 실시간 회계
+                    정보는 해당 정보 활용에 관한 동의가 완료된 건에 한해 최대
+                    3개년분의 정보를 활용하고 그 외 기타 신용정보는 관련 법령에
+                    따라 활용합니다.
+                  </p>
+
+                  <table class="SOLTable-list b--ver">
+                    <caption>
+                      [계량 비재무 모형 평가요소]
+                    </caption>
+                    <colgroup>
+                      <col style="width: 20%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>평가요소</th>
+                        <th>설명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>재무 모형</td>
+                        <td class="a--left">최근 3개년 결산 재무제표 활용</td>
+                      </tr>
+                      <tr>
+                        <td>계량 비재무 모형</td>
+                        <td class="a--left">
+                          신용정보법 제 18조 제 2항에 명시된 활용 및 보존기간에
+                          따라 활용
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 class="SOL-t3">3. 기업신용평가모형의 성능지표</h3>
+
+                <h4 class="SOL-t4">(1) 평가모형의 변별력 지표</h4>
+                <div class="guide-desc">
+                  <p>
+                    평가모형의 변별력 지표는 기업의 향후 부도 가능성을 얼마나
+                    정확하게 예측하는 지를 통계적 기법을 활용해 수치화한 것을
+                    의미하며, 당사 모형은 변별력 지표의 적정 기준치를 충족하고
+                    있습니다.
+                  </p>
+
+                  <table class="SOLTable-list b--ver">
+                    <caption>
+                      [당사 변별력 지표]
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>변별력 지표</th>
+                        <th>적정 기준치</th>
+                        <th>당사 모형</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>K-S 통계량</td>
+                        <td>20 이상</td>
+                        <td>충족</td>
+                      </tr>
+                      <tr>
+                        <td>AR</td>
+                        <td>30 이상</td>
+                        <td>충족</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h4 class="SOL-t4">(2) 평가모형의 안정성 지표</h4>
+                <div class="guide-desc">
+                  <p>
+                    평가모형의 안정성 지표란 모형의 등급 분포가 개발시점 대비
+                    비교시점에서 얼마나 안정적으로 유지되고 있는 지를 통계적
+                    기법을 활용해 수치화 한 것을 의미하며, 당사 모형은 안정성
+                    지표의 적정 기준치를 충족하고 있습니다.
+                  </p>
+
+                  <table class="SOLTable-list b--ver">
+                    <caption>
+                      [당사 안정성 지표]
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>안정성 지표</th>
+                        <th>적정 기준치</th>
+                        <th>당사 모형</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>PSI</td>
+                        <td>0.25 미만</td>
+                        <td>충족</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h4 class="SOL-t4">(3) 개발인력의 적정성</h4>
+                <div class="guide-desc">
+                  <p>
+                    신용정보법 시행령 제6조는 신용정보회사 설립요건으로
+                    ‘신용정보업무(신용상태 평가/신용정보 분석)에 종사한 경력이
+                    있는 사람이 10명 이상 포함될 것’을 규정하고 있으며 당사는
+                    해당 요건을 충족하고 있습니다.
+                  </p>
+
+                  <ul class="guide-list">
+                    <li>
+                      <p>① 기업신용평가모형 개발 인력</p>
+                      <ul>
+                        <li>
+                          - 기업신용등급 개발 및 기획 인력 : 7명 (공인 회계사
+                          포함)
+                        </li>
+                        <li>- 기업신용평가 및 재무분석 전문 인력 : 4명</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p>② 해당 종사 인원의 경력</p>
+                      <ul>
+                        <li>- 해당 경력 3년 이상 인력 : 10명 (91%)</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <h3 class="SOL-t3">
+                  4. 기업신용평가모형의 모니터링 및 유지 보수
+                </h3>
+
+                <h4 class="SOL-t4">(1) 모니터링</h4>
+                <div class="guide-desc">
+                  <p>
+                    당사는 모형의 변별력 및 안정성에 대한 주기적인 검증(최소 연
+                    1회)을 진행하고 있으며, 모형에 영향을 줄 수 있는 외부
+                    환경변화 등이 발생 했을 시 수시 검증을 진행할 수 있습니다.
+                  </p>
+                </div>
+
+                <h4 class="SOL-t4">(2) 유지 보수</h4>
+                <div class="guide-desc">
+                  <p>
+                    당사는 모니터링 결과 모형의 변별력 및 안정성이 저하 되었다고
+                    판단 시 모형 재개발을 진행하며, 개선된 모형을 적용하여
+                    신용등급을 산출할 수 있습니다.
+                  </p>
+                  <p>
+                    당사는 유지 보수시 신용평가모형 개발 및 운용 경험 보유 인력,
+                    기업신용평가 업무 경험 보유 인력, IT 인력 등이 공동으로
+                    참여하여 수행합니다.
+                  </p>
+                </div>
+
+                <h3 class="SOL-t3">5. 기업신용등급 관련 통계자료</h3>
+                <div class="guide-desc">
+                  <table class="SOLTable-list b--ver">
+                    <caption>
+                      [등급별 구성비]
+                    </caption>
+                    <colgroup>
+                      <col style="width: 20%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>기업신용등급</th>
+                        <th>구성비</th>
+                      </tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                        <td>합계</td>
+                        <td>100%</td>
+                      </tr>
+                    </tfoot>
+                    <tbody>
+                      <tr>
+                        <td>AAA</td>
+                        <td>1.08%</td>
+                      </tr>
+                      <tr>
+                        <td>AA</td>
+                        <td>8.11%</td>
+                      </tr>
+                      <tr>
+                        <td>A</td>
+                        <td>12.77%</td>
+                      </tr>
+                      <tr>
+                        <td>BBB</td>
+                        <td>16.36%</td>
+                      </tr>
+                      <tr>
+                        <td>BB</td>
+                        <td>16.14%</td>
+                      </tr>
+                      <tr>
+                        <td>B</td>
+                        <td>14.36%</td>
+                      </tr>
+                      <tr>
+                        <td>CCC</td>
+                        <td>10.94%</td>
+                      </tr>
+                      <tr>
+                        <td>CC</td>
+                        <td>8.64%</td>
+                      </tr>
+                      <tr>
+                        <td>C</td>
+                        <td>6.68%</td>
+                      </tr>
+                      <tr>
+                        <td>D</td>
+                        <td>4.92%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <ul class="footnote">
+                    <li>주1) 모형 개발 당시 통계자료</li>
+                    <li>
+                      주2) 당사의 기업신용등급제공업 본 허가일은 2024.5.29일로
+                      현재 관찰기간 미도래
+                    </li>
+                    <li>
+                      주3) 실제 평가기업을 대상으로 한 통계자료는 충분한 기간
+                      경과 후 공시 예정
+                    </li>
+                  </ul>
+                </div>
+
+                <h3 class="SOL-t3">6. 기업신용평가체계 공시 연혁</h3>
+                <div class="guide-desc">
+                  <table class="SOLTable-list b--ver">
+                    <colgroup>
+                      <col style="width: 20%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>일자</th>
+                        <th>내용</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2024.7.1</td>
+                        <td class="a--left">
+                          ㈜테크핀레이팅스 기업신용평가체계 안내 개시
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 class="SOL-t3">
+                  [참고] 기업신용평가모형 성능지표 산출 원리
+                </h3>
+
+                <h4 class="SOL-t4">
+                  (1) K-S 통계량 (Kolmogorov-Smirnov Statistics)
+                </h4>
+                <div class="guide-desc">
+                  <p>
+                    K-S 통계량이란 정상 차주와 부도 차주의 누적 분포의 차이를
+                    나타내는 지표로, 모형이 정상 차주와 부도 차주를 얼마나 잘
+                    구별해내는 지를 측정하며 그 값이 클수록 모형의 변별력이
+                    우수함을 의미합니다.
+                  </p>
+                  <p>
+                    두 집단의 평가 점수(등급)의 누적 분포를 도출하여 그 차이를
+                    비교하고, 그 차이의 최댓값을 K-S 통계량으로 정의합니다.
+                  </p>
+                  <div class="guide-img">
+                    <img
+                      src="/static/image/crediview/conditions/conditions_01.jpg"
+                      alt="Kolmogorov-Smirnov Statistics"
+                    />
+                  </div>
+                </div>
+
+                <h4 class="SOL-t4">(2) AR (Accuracy Ratio)</h4>
+                <div class="guide-desc">
+                  <p>
+                    AR은 CAP(Cumulative Accuracy Profile) 곡선을 통해 산출되는
+                    지표로, 모형의 전체적인 변별력을 측정합니다.
+                  </p>
+                  <p>
+                    CAP 곡선은 전체 차주의 누적 구성비에 대한 부도 차주의 누적
+                    구성비의 그래프이며, CAP 곡선과 임의의 모형(Random Model)
+                    사이의 면적(B)을 분자로 하고, 두 모형 사이 면적(A+B)을
+                    분모로 하여 AR을 산출합니다.
+                  </p>
+                  <p>
+                    AR은 0~1의 값을 가지며, 1에 가까울수록 모형의 변별력이
+                    우수하다고 판단합니다.
+                  </p>
+                  <div class="guide-img">
+                    <img
+                      src="/static/image/crediview/conditions/conditions_02.jpg"
+                      alt="Accuracy Ratio"
+                    />
+                  </div>
+                </div>
+
+                <h4 class="SOL-t4">(3) PSI (Population Stability Index)</h4>
+                <div class="guide-desc">
+                  <p>
+                    PSI는 모형의 안정성을 나타내는 지수로, 개발 시점 대비 현재
+                    시점에서 등급간 구성비가 얼마나 변동 되었는지 지 그 차이를
+                    측정합니다.
+                  </p>
+                  <p>
+                    PSI가 작을수록 신용등급별 차주의 구성비가 개발 시점과
+                    유사하다고 판단하며, 모형의 안정성이 유지되고 있음을
+                    의미합니다.
+                  </p>
+                  <div class="guide-img">
+                    <img
+                      src="/static/image/crediview/conditions/conditions_04.jpg"
+                      alt="PSI 계산공식"
+                    />
+                  </div>
+
+                  <table class="SOLTable-list b--ver s--sm">
+                    <caption>
+                      [예제] PSI 산출
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>신용등급</th>
+                        <th>개발시점</th>
+                        <th>현재시점</th>
+                        <th>개발시점 구성비(D)</th>
+                        <th>현재시점 구성비(V)</th>
+                        <th>구성비 차이(V-D)</th>
+                        <th>Ln(V/D)</th>
+                        <th>PSI</th>
+                      </tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                        <td>합계</td>
+                        <td>850</td>
+                        <td>860</td>
+                        <td>100.0%</td>
+                        <td>100.0%</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.1010</td>
+                      </tr>
+                    </tfoot>
+                    <tbody>
+                      <tr>
+                        <td>A</td>
+                        <td>100</td>
+                        <td>200</td>
+                        <td>11.8%</td>
+                        <td>23.3%</td>
+                        <td>11.5%</td>
+                        <td>0.6815</td>
+                        <td>0.0783</td>
+                      </tr>
+                      <tr>
+                        <td>B</td>
+                        <td>700</td>
+                        <td>600</td>
+                        <td>82.4%</td>
+                        <td>69.8%</td>
+                        <td>-12.6%</td>
+                        <td>-0.1658</td>
+                        <td>0.0209</td>
+                      </tr>
+                      <tr>
+                        <td>C</td>
+                        <td>50</td>
+                        <td>60</td>
+                        <td>5.9%</td>
+                        <td>7.0%</td>
+                        <td>1.1%</td>
+                        <td>0.1706</td>
+                        <td>0.0019</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p class="footnote">PSI=0.1010</p>
+                </div>
+              </div>
+              <!-- guide-body -->
+            </div>
+            <!-- console-main -->
+          </div>
+          <!-- console-content -->
+        </div>
+        <!-- console-inner -->
+      </div>
+      <!-- console-container -->
+
+      <footer class="SOLFooter-root">
+        <nav class="SOLFooter-nav">
+          <ul class="SOLFooter-nav-menu">
+            <li>
+              <a href="#서비스 소개">서비스 소개</a>
+              <ul>
+                <li><a href="#기업신용평가">기업신용평가</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/src/app/crediview/service/register">기업신용평가</a>
+              <ul>
+                <li>
+                  <a href="/src/app/crediview/service/register"
+                    >신용평가 신청</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/app/crediview/service/submit"
+                    >신용평가등급확인서 제출</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/app/crediview/service/result"
+                    >등급 산출 및 제출내역</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#회사소개"
+                >AI경영진단보고서<span class="label"
+                  ><span class="beta">Beta</span></span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#회사소개">회사소개</a>
+            </li>
+            <li>
+              <a href="#다운로드센터">다운로드센터</a>
+            </li>
+            <li>
+              <a href="/src/app/crediview/cs/notice">고객지원</a>
+              <ul>
+                <li><a href="/src/app/crediview/cs/notice">공지사항</a></li>
+                <li><a href="/src/app/crediview/cs/faq">자주 묻는 질문</a></li>
+                <li><a href="/src/app/crediview/cs/inquiry">1:1 문의</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <hr class="SOLFooter-line" />
+
+        <div class="SOLFooter-container">
+          <div class="SOLFooter-content">
+            <div class="SOLFooter-logo">
+              <img
+                src="/static/image/crediview/logo/logo_techpin_bk.png"
+                alt="Techfin ratings"
+              />
+            </div>
+            <div class="SOLFooter-menu">
+              <a href="/src/app/crediview/common/conditions.html"
+                >신용평가체계</a
+              >
+              <a href="/src/app/crediview/common/privacy.html"
+                ><em>개인정보처리방침</em></a
+              >
+            </div>
+            <div class="SOLFooter-utils">
+              <div class="SOLFooter-social">
+                <a href="#blog"
+                  ><img src="/static/image/icon/ic_sns_blog.svg" alt="blog"
+                /></a>
+                <a href="#kakao"
+                  ><img src="/static/image/icon/ic_sns_kakao.svg" alt="kakao"
+                /></a>
+                <a href="#facebook"
+                  ><img
+                    src="/static/image/icon/ic_sns_facebook.svg"
+                    alt="facebook"
+                /></a>
+                <a href="#youtube"
+                  ><img
+                    src="/static/image/icon/ic_sns_youtube.svg"
+                    alt="youtube"
+                /></a>
+              </div>
+              <div class="SOLFooter-dropbox">
+                <div class="SOLFooter-dropbox-inner">
+                  <button type="button" class="SOLFooter-dropbox-btn">
+                    Family Site
+                  </button>
+                  <ul>
+                    <li>
+                      <a href="https://techfinratings.com" target="_blank"
+                        >Techfin ratings</a
+                      >
+                    </li>
+                    <li><a href="" target="_blank">WEHAGO</a></li>
+                    <li><a href="" target="_blank">Amaranth 10</a></li>
+                    <li><a href="" target="_blank">OmniEsol</a></li>
+                    <li>
+                      <a href="" target="_blank">매출채권팩토링 플랫폼</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- SOLFooter-utils end -->
+          </div>
+
+          <div class="SOLFooter-address">
+            <p class="line">
+              <span>(주)테크핀레이팅스</span>
+              <span>대표 : 옥형석</span>
+              <span>사업자등록번호 : 370-88-02545</span>
+              <span>통신판매업신고 : 2024-서울중구-1794</span>
+            </p>
+            <p class="line">
+              <span>대표전화 : 02-1688-5000</span>
+              <span>이메일 : support@techfinratings.com</span>
+            </p>
+            <p class="copyright">
+              Copyright©Techfinratings Co,. Ltd All Rights Reserved.
+            </p>
+          </div>
+        </div>
+        <!-- SOLFooter-container end -->
+      </footer>
+    </div>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

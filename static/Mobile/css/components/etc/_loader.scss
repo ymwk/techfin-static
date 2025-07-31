@@ -1,0 +1,13 @@
+.SOLLoader-root {
+    z-index: 9999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: '';
+        @include backdrop;
+    }
+}

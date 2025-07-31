@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>크레디뷰 서비스</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/crediview.css">
+</head>
+<body>
+  <!-- Modal start -->
+  <div class="SOLModal-root s--sm">
+    <div class="SOLModal-backdrop"></div>
+    <div class="SOLModal-box">
+      <div class="SOLModal-title">
+        <h3 class="SOLTitle-t2">회원탈퇴 사유 선택</h3>
+        <span class="SOLModal-title-desc">회원탈퇴 사유를 선택해 주세요. (중복 선택 가능)</span>
+        <div class="SOLModal-close">
+          <button type="button" class="SOLIconBtn-root">
+            <i class="SOLIcon-root SOLIcon-close"></i>
+            <span class="blind">Close</span>
+          </button>
+        </div>
+        
+      </div>
+      <div class="SOLModal-content">
+        <ul class="SOLModal-terms-list h--sm">
+            <li class="box-panel">
+              <div class="SOLCheck-root t--terms">
+                <label class="SOLCheck-label">
+                  <input type="checkbox" name="">
+                  <span>필요성이 없음 (기업신용 등급 조회가 필요 없거나, 활용 빈도가 낮아짐)</span>
+                </label>
+              </div>
+              <button type="button" class="SOLIconBtn-root"></button>
+            </li>
+            <li class="box-panel">
+                <div class="SOLCheck-root t--terms">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="">
+                    <span>비용 부담  (서비스 비용이 부담스러움)</span>
+                  </label>
+                </div>
+                <button type="button" class="SOLIconBtn-root"></button>
+            </li>
+            <li class="box-panel">
+                <div class="SOLCheck-root t--terms">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="">
+                    <span>서비스 오류 (기능이 제대로 작동하지 않거나, 에러가 자주 발생함)</span>
+                  </label>
+                </div>
+                <button type="button" class="SOLIconBtn-root"></button>
+            </li>
+            <li class="box-panel">
+                <div class="SOLCheck-root t--terms">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="">
+                    <span>정보 신뢰도 문제  (제공되는 신용등급 정보를 신뢰할 수 없음)</span>
+                  </label>
+                </div>
+                <button type="button" class="SOLIconBtn-root"></button>
+            </li>
+            <li class="box-panel">
+                <div class="SOLCheck-root t--terms">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="">
+                    <span>고객지원 불만 (문의 응대가 느리거나, 해결되지 않는 문제가 있음)</span>
+                  </label>
+                </div>
+                <button type="button" class="SOLIconBtn-root"></button>
+            </li>
+            <li class="box-panel">
+                <div class="SOLCheck-root t--terms">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="">
+                    <span>보안 및 개인정보 문제 (데이터 보호에 대한 우려)</span>
+                  </label>
+                </div>
+                <button type="button" class="SOLIconBtn-root"></button>
+            </li>
+            <li class="box-panel">
+                <div class="SOLCheck-root t--terms">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="">
+                    <span>직접 입력</span>
+                  </label>
+                </div>
+                <button type="button" class="SOLIconBtn-root"></button>
+            </li>
+            
+        </ul>
+
+        <div class="comp-fbox">
+            <div class="SOLTextarea-root">
+                <textarea placeholder="기타사유를 입력하세요." class="SOLTextarea_field"></textarea>
+                <div class="SOLInput-byte s--between mgt5">
+                    <p class="SOLInput-msg c--error">내용을 입력해주세요.</p>
+                    <span class="SOLInput-byte--count">
+                      <i>0</i>
+                      <i>/</i>
+                      <i>2000</i>
+                      <i>byte</i>
+                    </span>
+                  </div>
+            </div>
+        </div>
+      </div>
+      <div class="SOLModal-action">
+        <button type="button" class="SOLBtn-root s--lg t--outlined">취소</button>
+        <button type="button" class="SOLBtn-root s--lg t--contained" disabled>다음</button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+</body>
+</html>

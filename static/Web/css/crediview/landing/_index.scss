@@ -1,0 +1,166 @@
+@mixin title($size: 36px) {
+  font-size: $size;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.landing {
+  &-root {
+    min-width: var(--max-w);
+
+    .text-active {
+      background-image: var(--gra);
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &-container {
+    flex-grow: 1;
+    color: #242a30;
+    letter-spacing: -0.4px;
+  }
+
+  &-section-inner {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  // top button
+  &-topper {
+    z-index: 9;
+    position: sticky;
+    right: 0;
+    bottom: 0;
+    &-wrap {
+      position: absolute;
+      bottom: 96px;
+      right: 32px;
+      transition: transform 0.3s ease-in-out;
+    }
+    &-list {
+      border-radius: 8px;
+      border: solid 1px #ebebeb;
+      background-color: #fff;
+      padding: 16px 0;
+      margin-bottom: 16px;
+      li {
+        &:first-child {
+          a {
+            padding: 0px 0;
+            padding-bottom: 20px;
+          }
+        }
+
+        &:nth-child(2) {
+          a {
+            padding-top: 20px;
+          }
+        }
+
+        &:nth-child(3) {
+          a {
+            padding-bottom: 0px;
+          }
+        }
+
+        &:last-child {
+          a {
+            padding-bottom: 0px;
+            padding-top: 0px;
+          }
+        }
+        a {
+          display: block;
+          padding: 24px 10px;
+          transition: ease-in-out 0.3s;
+          &.guide {
+            .img {
+              width: 19px;
+              height: 19px;
+              margin: 0 auto;
+              background: url("../../Common/image/crediview/landing/quick-ico05.png")
+                no-repeat center;
+            }
+            &:hover {
+              .img {
+                width: 19px;
+                height: 19px;
+                background: url("../../Common/image/crediview/landing/quick-ico05-on.png")
+                  no-repeat center;
+              }
+            }
+          }
+
+          &.company {
+            .img {
+              width: 25px;
+              height: 24px;
+              margin: 0 auto;
+              background: url("../../Common/image/crediview/landing/quick-ico01.png")
+                no-repeat center;
+            }
+            &:hover {
+              .img {
+                width: 25px;
+                height: 24px;
+                margin: 0 auto;
+                background: url("../../Common/image/crediview/landing/quick-ico01-on.png")
+                  no-repeat center;
+              }
+            }
+          }
+
+          &.certificate {
+            .img {
+              width: 25px;
+              height: 24px;
+              margin: 0 auto;
+              background: url("../../Common/image/crediview/landing/quick-ico06.png")
+                no-repeat center;
+            }
+            &:hover {
+              .img {
+                width: 25px;
+                height: 24px;
+                margin: 0 auto;
+                background: url("../../Common/image/crediview/landing/quick-ico06-on.png")
+                  no-repeat center;
+              }
+            }
+          }
+
+          span {
+            display: block;
+            font-size: var(--font-12);
+            color: var(--fc-default);
+            font-weight: 400;
+            text-align: center;
+            padding: 4px 0 0 0;
+          }
+        }
+      }
+    }
+    .event-bn {
+      margin-bottom: 12px;
+    }
+  }
+
+  &-topBtn {
+    width: 56px;
+    height: 56px;
+    background: url("../../Common/image/crediview/landing/ic-quick-top-normal.png")
+      no-repeat center;
+    transition: color 0.2s, bottom 0.4s;
+    display: none;
+    transition: ease-in-out 0.3s;
+    margin: 0 auto;
+    &:hover {
+      background: url("../../Common/image/crediview/landing/ic-quick-top-hover.png")
+        no-repeat center;
+    }
+  }
+}
