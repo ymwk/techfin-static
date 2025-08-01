@@ -1,121 +1,126 @@
-// .console {
-//   &-root {
-//     min-height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-//     min-width: var(--min-w);
-//     .SOLHeader-root {
-//       position: fixed;
-//       top: 0;
-//       left: 0;
-//     }
-//   }
-//   &-container {
-//     flex-grow: 1;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//   }
+.console-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: var(--min-w);
+  max-width: var(--max-w);
+  margin: 0 auto;
+  background-color: #fff;
+  
+  // .SOLHeader-root {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  // }
+}
 
-//   &-inner {
-//     position: relative;
-//     flex: 1;
-//     display: flex;
-//     gap: var(--side-gap);
-//     width: 100%;
-//     max-width: var(--max-w);
-//     padding: 140px 0 160px;
-//   }
+@media screen and (min-width: 721px) {
+  .console-root {
+    &::before,
+    &::after {
+      content: '';
+      position: fixed;
+      z-index: 99999;
+      inset: 0;
+      width: 100%;
+      max-width: var(--max-w);
+      min-width: var(--min-w);
+      margin: 0 auto;  
+      background-color: #f5f5f5;
+      transform: translateX(100%);
+    }
 
-//   &-content {
-//     flex-grow: 1;
-//   }
+    &::before {
+      transform: translateX(-100%);
+    }
+  }  
+}
 
-//   &-title {
-//     display: flex;
-//     align-items: flex-start;
-//     height: 48px;
-//     margin-bottom: 40px;
-//     border-bottom: 1px solid #777;
+.console-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-//     .SOLTitle-t1 {
-//       line-height: 1;
-//     }
-//   }
-// }
+.console-inner {
+  position: relative;
+  flex: 1;
+  display: flex;
+  gap: var(--side-gap);
+  width: 100%;
+  padding-left: var(--spc-w);
+  padding-right: var(--spc-w);
+}
 
-// .console-section {
-//   margin-top: 40px;
-// }
+.console-content {
+  flex-grow: 1;
+}
 
-// .console-header {
-//   display: flex;
-//   align-items: center;
-//   height: 49px;
-//   padding-bottom: 11px;
+.console-title {
+  display: flex;
+  align-items: flex-start;
+  height: 48px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #777;
 
-//   &-option {
-//     display: flex;
-//     align-items: center;
-//     gap: 8px;
-//     margin-left: auto;
-//     color: var(--fc-gray1);
-//     font-size: var(--font-13);
-
-//     .date {
-//       padding: 0 8px;
-//     }
-//   }
-// }
-
-// .console-bottom {
-//   .SOLTitle-t2 {
-//     margin-top: 30px;
-//   }
-// }
-
-// .console-footer {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 10px;
-//   margin-top: 80px;
-
-//   .SOLBtn-root {
-//     flex-grow: 1;
-//     max-width: 200px;
-//   }
-// }
-
-// .console-line {
-//   margin: 40px 0;
-//   border-top: 1px solid var(--tb-border);
-// }
-
-// .console-add {
-//   margin: 10px 0;
-
-//   .SOLTextBtn-root {
-//     color: inherit;
-//   }
-// }
-
-// @include tablet {
-//   .console-inner {
-//     max-width: 100%;
-//     padding-left: var(--spc-w);
-//     padding-right: var(--spc-w);
-//   }
-// }
-
-.console {
-  &-root {
+  .SOLTitle-t1 {
+    line-height: 1;
   }
+}
 
-  &-container {
+.console-section {
+  margin-top: 40px;
+}
+
+.console-header {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  padding-bottom: 11px;
+
+  &-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    color: var(--fc-gray1);
+    font-size: var(--font-13);
+
+    .date {
+      padding: 0 8px;
+    }
   }
+}
 
-  &-inner {
-    padding: 24px 20px;
+.console-bottom {
+  .SOLTitle-t2 {
+    margin-top: 30px;
+  }
+}
+
+.console-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 80px;
+
+  .SOLBtn-root {
+    flex-grow: 1;
+    max-width: 200px;
+  }
+}
+
+.console-line {
+  margin: 40px 0;
+  border-top: 1px solid var(--tb-border);
+}
+
+.console-add {
+  margin: 10px 0;
+
+  .SOLTextBtn-root {
+    color: inherit;
   }
 }

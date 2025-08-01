@@ -23,37 +23,101 @@
 </head>
 <body>
   <div class="console-root">
-    <header class="SOLHeader2-root">
+    <header class="SOLHeader-root">
       <div class="SOLHeader-inner">
-        <h1 class="SOLHeader-logo">
-          <a href="/src/app/crediview/landing">
-            <div class="logo">
-              <span class="eng">Crediview</span>
-              <span class="kr">크레디뷰</span>
-            </div>
-          </a>
-        </h1>
-        <nav class="SOLHeader-nav">
-          
-        </nav>
+        <div class="SOLHeader-title">
+          <button type="button" class="SOLIconBtn-root">
+            <i class="SOLIcon-root SOLIcon-gt--l s--xl"></i>
+            <span class="blind">Prev</span>
+          </button>
+          <h2 class="SOLHeader-title-text">Page title</h2>
+        </div>
+
         <div class="SOLHeader-global">
-          <div class="SOLHeader-global-user">
-            <a href="#" class="SOLHeader-global-profile">
-              <!-- Avata -->
-              <span class="SOLSvg-root SOLSvg-avata">
-                <svg viewBox="0 0 16 16">
-                  <path d="M15 16.002H1C0.734784 16.002 0.48043 15.8966 0.292893 15.7091C0.105357 15.5215 0 15.2672 0 15.002V14.002C0 13.182 0.52 12.002 3 11.002C4.59657 10.3829 6.28815 10.0446 8 10.002C9.71185 10.0446 11.4034 10.3829 13 11.002C15.478 11.996 16 13.181 16 14.002V15.002C16 15.2672 15.8946 15.5215 15.7071 15.7091C15.5196 15.8966 15.2652 16.002 15 16.002ZM8 8.00196C7.20887 8.00196 6.43552 7.76736 5.77772 7.32783C5.11992 6.88831 4.60723 6.26359 4.30448 5.53269C4.00173 4.80178 3.92252 3.99752 4.07686 3.22159C4.2312 2.44567 4.61216 1.73294 5.17157 1.17353C5.73098 0.614118 6.44371 0.233155 7.21964 0.0788138C7.99556 -0.0755271 8.79983 0.00368625 9.53073 0.306437C10.2616 0.609187 10.8864 1.12188 11.3259 1.77967C11.7654 2.43747 12 3.21083 12 4.00196C12 5.06282 11.5786 6.08024 10.8284 6.83038C10.0783 7.58053 9.06087 8.00196 8 8.00196Z"></path>
-                </svg>
-              </span>
-              <span>kimtech@techfinratings.com</span>
-            </a>
-          </div>
-          <button type="button" class="SOLHeader-global-btn">로그아웃</button>
+          <button type="button" class="SOLIconBtn-root SOLHeader-menuBtn">
+            <i class="SOLIcon-root SOLIcon-hamburger"></i>
+            <span class="blind">전체메뉴 보기</span>
+          </button>
+
+          <nav class="SOLHeader-nav">
+            <h3 class="blind">전체메뉴</h3>
+            <div class="SOLHeader-nav-header">
+              <h1 class="SOLHeader-logo">
+                <a href="#">
+                  <div class="logo">
+                    <span class="eng">Crediview</span>
+                  </div>
+                </a>
+              </h1>
+
+              <div class="SOLHeader-global">
+                <button type="button" class="SOLIconBtn-root SOLHeader-closeBtn">
+                  <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+                  <span class="blind">전체메뉴 닫기</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 전체메뉴 start -->
+            <div class="SOL-mb-gnb">
+              <ul class="gnb-menu">
+                <li class="depth01">
+                  <a href="#">기업신용평가</a>
+                  <ul class="sub-menu depth02">
+                    <li><a href="#" class="on">기업신용평가 소개</a></li>
+                    <li><a href="#">신용평가 신청</a></li>
+                    <li><a href="#">신용평가등급확인서 제출</a></li>
+                    <li><a href="#">등급 산출 및 제출내역</a></li>
+                  </ul>
+                </li>
+                <li class="depth01">
+                  <a href="#" class="ai-post">AI경영진단보고서<span class="blind">Open</span></a>
+                  <ul class="sub-menu depth02">
+                    <li><a href="#">AI경영진단보고서 소개</a></li>
+                    <li><a href="#">경영진단 신청</a></li>
+                    <li><a href="#">진단내역</a></li>
+                  </ul>
+                </li>
+                <li class="depth01">
+                  <a href="#">마이페이지</a>
+                  <ul class="sub-menu depth02">
+                    <li><a href="#">회사관리</a></li>
+                    <li><a href="#">인증서 관리</a></li>
+                    <li><a href="#">회원관리</a></li>
+                    <li><a href="#">내 정보 관리</a></li>
+                    <li><a href="#">정산관리</a></li>
+                  </ul>
+                </li>
+                <li class="depth01">
+                  <a href="#">진본 확인 서비스</a>
+                </li>
+                <li class="depth01">
+                  <a href="#">고객지원</a>
+                  <ul class="sub-menu depth02">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                    <li><a href="#">1:1 문의</a></li>
+                  </ul>
+                </li>
+                <li class="depth01">
+                  <a href="#">회사 소개</a>
+                </li>
+              </ul>
+            </div>
+            <!-- 전체메뉴 end -->
+
+            <div class="logout-box">
+              <button type="button" class="SOLBtn-root w--full">
+                로그아웃
+              </button>
+            </div>
+
+          </nav>
         </div>
       </div>
     </header>
      
-    <div class="console-container">
+    <div class="console-container" style="height: 200vh">
       
     </div><!-- console-container -->
   </div>

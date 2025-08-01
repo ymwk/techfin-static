@@ -113,9 +113,3 @@ hr {
   display: flex;
   flex-direction: column;
 }
-
-@include mobile {
-  html, body {
-    // font-size: 20px;
-  }
-}

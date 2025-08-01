@@ -158,3 +158,61 @@ terms.forEach((item) => {
     }
   })
 });
+
+// 전체메뉴
+document.addEventListener('DOMContentLoaded', function () {
+  const depth01Links = document.querySelectorAll('.gnb-menu .depth01 > a');
+
+  depth01Links.forEach((link) => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const subMenu = this.nextElementSibling;
+
+      document.querySelectorAll('.gnb-menu .depth01 > a').forEach((otherLink) => {
+        if (otherLink !== this) {
+          otherLink.classList.remove('on');
+          const otherSubMenu = otherLink.nextElementSibling;
+          if (otherSubMenu) {
+            otherSubMenu.style.maxHeight = null;
+          }
+        }
+      });
+
+      // 현재 메뉴 열기/닫기 및 on 클래스 토글
+      if (subMenu.style.maxHeight) {
+        subMenu.style.maxHeight = null;
+        this.classList.remove('on');
+      } else {
+        subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+        this.classList.add('on');
+      }
+    });
+  });
+
+  // 모든 .gnb-menu .depth01 요소를 선택
+  const depth01Items = document.querySelectorAll('.gnb-menu .depth01');
+
+  depth01Items.forEach((item) => {
+    const subMenu = item.querySelector('.sub-menu.depth02');
+    const link = item.querySelector('a');
+
+    if (!subMenu) {
+      // .sub-menu.depth02가 없으면
+      link.style.setProperty('--before-content', 'none');
+      link.style.position = 'relative';
+    }
+  });
+
+  const menuBtn = document.querySelector('.SOLHeader-menuBtn');
+  const gnb = document.querySelector('.SOLHeader-nav');
+  const closeBtn = document.querySelector('.SOLHeader-closeBtn');
+
+  menuBtn.addEventListener('click', function () {
+    gnb.classList.add('open');
+  });
+
+  closeBtn.addEventListener('click', function () {
+    gnb.classList.remove('open');
+  });
+});

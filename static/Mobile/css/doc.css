@@ -401,9 +401,9 @@ textarea {
   --form-c-border-h: rgb(10, 43, 88, 0.3);
   --form-c-bg-dis: #f5f5f5;
   --form-c-text-dis: rgba(34, 34, 34, 0.2);
-  --max-w: 1200px;
-  --min-w: 1200px;
-  --spc-w: 35px;
+  --max-w: 720px;
+  --min-w: 360px;
+  --spc-w: 20px;
   --side-w: 220px;
   --side-gap: 40px;
   --max-w-ld: 1102px;
@@ -428,6 +428,7 @@ textarea {
   --font-32: 2.29rem;
   --font-34: 2.43rem;
   --font-36: 2.57rem;
+  --font-42: 3rem;
   --font-50: 3.57rem;
   --font-60: 4.29rem;
   --font-80: 5.71rem;
@@ -440,11 +441,7 @@ textarea {
     #8c2fff 100%
   );
   --header-bg: #3d58c9;
-}
-@media screen and (max-width: 767px) {
-  :root {
-    --spc-w: 5vw;
-  }
+  --header-h: 56px;
 }
 
 html, body, div, span, applet, object, iframe,

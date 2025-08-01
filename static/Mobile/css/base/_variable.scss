@@ -29,9 +29,9 @@
   --form-c-text-dis: rgba(34, 34, 34, 0.2);
 
   // console
-  --max-w: 1200px;
-  --min-w: 1200px;
-  --spc-w: 35px;
+  --max-w: 720px;
+  --min-w: 360px;
+  --spc-w: 20px;
   --side-w: 220px;
   --side-gap: 40px;
   --max-w-ld: 1102px;
@@ -58,6 +58,7 @@
   --font-32: 2.29rem;
   --font-34: 2.43rem;
   --font-36: 2.57rem;
+  --font-42: 3rem;
   --font-50: 3.57rem;
   --font-60: 4.29rem;
   --font-80: 5.71rem;
@@ -72,17 +73,5 @@
     #8c2fff 100%
   );
   --header-bg: #3d58c9;
-
-  @include desktop-min {
-    // --min-w: 768px
-  }
-
-  @include tablet {
-    // --side-w: 180px;
-    // --side-gap: 20px;
-  }
-
-  @include mobile {
-    --spc-w: 5vw;
-  }
+  --header-h: 56px;
 }
