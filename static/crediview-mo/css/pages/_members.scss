@@ -1,0 +1,493 @@
+.no-touch-action {
+  overflow: hidden;
+  touch-action: none;
+}
+.members {
+  &-root {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  &-container {
+    // flex-grow: 1;
+    // display: flex;
+    // justify-content: center;
+
+    .members-loginbox {
+      display: flex;
+      flex-direction: column;
+      height: calc(var(--vh, 1vh) * 100);
+      min-height: calc(var(--vh, 1vh) * 100);
+      overflow-y: hidden;
+      padding: 20px 0px;
+      &.signup {
+        .SOLForm-root {
+          margin-top: 20px;
+          flex: 1;
+          max-height: calc(var(--vh, 1vh) * 100 - 156px);
+          min-height: calc(var(--vh, 1vh) * 100 - 156px);
+          overflow-y: auto;
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE, Edge */
+
+          &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari */
+          }
+          .SOLStepper-root {
+            padding: 20px 10px;
+            margin: 0 0px;
+          }
+          .SOLInput-root {
+            padding: 0 24px;
+          }
+
+          .signup-form-tit {
+            padding-bottom: 20px;
+          }
+          .loginbox-terms-list {
+            padding: 0 24px;
+          }
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+      }
+      &.login {
+        justify-content: center;
+        form {
+          .SOLForm-root {
+            margin-top: 60px;
+            padding: 0 24px;
+          }
+        }
+      }
+      .signup-title-box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 0 0 20px;
+        .close-btn {
+          width: 15px;
+          height: 15px;
+          background: url("../../Common/image/icon/mb/ic_gnb_closebtn.png")
+            no-repeat center;
+          background-size: 15px;
+          cursor: pointer;
+        }
+        .signup-title {
+          font-size: var(--font-15);
+          font-weight: 500;
+          padding: 2px 0 0 10px;
+        }
+      }
+      .signup-form-tit {
+        font-size: var(--font-22);
+        font-weight: 700;
+        color: #1d2129;
+        padding: 24px 0 0 24px;
+      }
+    }
+  }
+
+  &-loginwrap {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    position: relative;
+    .prev-btn {
+      width: 14px;
+      height: 15px;
+      background: url(../../Common/image/icon/ic_arrow_btn.png) no-repeat;
+      transform: rotate(180deg);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1;
+    }
+  }
+
+  &-loginbox {
+    position: relative;
+    width: 100%;
+    width: 100%;
+    padding: 75px 20px;
+    border-radius: 12px;
+    overflow-x: hidden;
+
+    .loginbox-nav {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .loginbox-title {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      .crediview-member-logo {
+        width: 187px;
+        height: 31px;
+        background: url("../../Common/image/crediview/logo/mb/member-crediview-logo.png")
+          no-repeat center;
+        margin: 0 auto;
+      }
+      .SOLText-desc {
+        font-size: var(--font-16);
+        font-weight: 500;
+      }
+    }
+
+    .loginbox-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 58px;
+
+      &-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .reset-txt {
+        display: inline-block;
+        text-align: center;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .loginbox-action {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0 24px;
+      position: absolute;
+      bottom: 20px;
+      transition: bottom 0.3s ease;
+      width: 100%;
+      &.ps-static {
+        position: static;
+      }
+      // 키보드 올라왔을 때 대응
+      @at-root body.keyboard-open #{&} {
+        position: static;
+        margin-top: 20px;
+      }
+
+      .SOLBtn-root {
+        //flex: 1 1 0;
+      }
+    }
+
+    .loginbox-util {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0 20px 0;
+      .SOLCheck-root {
+        font-size: var(--font-13);
+
+        input[type="checkbox"] {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+
+    .loginbox-bottom {
+      display: flex;
+      justify-content: center;
+      padding: 30px 0;
+      a {
+        color: var(--c-active);
+        text-decoration: underline;
+        display: inline-block;
+        font-weight: 500;
+      }
+    }
+
+    .SOLCaption-root {
+      margin: 35px 0 0 0;
+
+      .SOLCaption-title {
+        padding: 0px 0px 8px 0px;
+        border-bottom: 1px solid #e6e8eb;
+      }
+    }
+
+    .loginbox-menu {
+      display: flex;
+      justify-content: flex-start;
+
+      li {
+        display: flex;
+        align-items: center;
+        height: 10px;
+
+        &:not(:first-of-type) {
+          border-left: 1px solid #d9d9d9;
+        }
+      }
+
+      a {
+        line-height: 24px;
+        padding: 0 3px;
+        color: inherit;
+        font-size: var(--font-13);
+      }
+    }
+
+    .SOLInput-label:not(.t--empty) {
+      margin-top: 10px;
+    }
+
+    .loginbox-terms {
+      margin-top: 20px;
+
+      &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        height: 54px;
+
+        .loginbox-terms-btn {
+          margin-right: auto;
+        }
+      }
+
+      &-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &-box {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 16px 24px;
+        margin-top: 4px;
+        background-color: var(--c-bg);
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .name {
+          font-size: var(--font-13);
+          color: var(--fc-gray1);
+
+          &::before {
+            content: "· ";
+          }
+        }
+      }
+    }
+
+    .loginbox-terms-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      & > li {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 16px;
+        //border: 1px solid var(--tb-border);
+        border-radius: 8px;
+
+        &.loginbox-terms-all {
+          border: 1px solid var(--tb-border);
+          padding: 10px 18px 10px 18px;
+          margin-top: 20px;
+          span {
+            font-size: var(--font-16);
+            font-weight: 700;
+          }
+        }
+      }
+
+      em {
+        font-weight: normal;
+        color: var(--c-active);
+      }
+    }
+
+    .loginbox-detail {
+      padding: 16px 24px;
+      background-color: var(--c-bg);
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+      }
+
+      .name {
+        position: relative;
+        display: inline-block;
+        padding-left: 0.6em;
+        font-size: var(--font-13);
+        color: var(--fc-gray1);
+
+        &::before {
+          content: "·";
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.SOLTerms-root {
+  padding: 24px;
+  overflow-y: auto;
+  max-height: calc(100vh - 165px);
+  color: #404252;
+  word-break: keep-all;
+  text-align: justify;
+  scrollbar-width: none;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE, Edge */
+  &.mgt20 {
+    margin-top: 20px;
+  }
+  h2 {
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 2em;
+  }
+  h3 {
+    font-weight: 500;
+    color: #222;
+    margin-top: 2em;
+  }
+  p {
+    margin: 1em 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 6px solid var(--c-bg);
+    border-radius: 18px;
+    background-color: #dcdbdf;
+  }
+}
+
+.SOLTerms-individual-root {
+  width: 100%;
+  background-color: var(--c-bg);
+  padding: 25px 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  ul.list {
+    padding: 5px 0;
+    li {
+      font-size: 15px;
+      font-weight: 600;
+      color: #404252;
+      position: relative;
+      padding: 0 0 0 10px;
+      &:before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background-color: var(--fc-default);
+        position: absolute;
+        top: 6px;
+        left: 0;
+      }
+    }
+  }
+
+  ul.list-num {
+    padding: 0 0 0 10px;
+    li {
+      font-size: 14px;
+      font-weight: 400;
+      color: #404252;
+      padding-bottom: 5px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.SOLInput-flex-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .SOLInput-wrap {
+    .SOLBtn-root:disabled,
+    .SOLBtn-root.disabled {
+      background: #fff;
+    }
+    .SOLBtn-root.w80 {
+      width: 80px;
+    }
+    .SOLBtn-root.w66 {
+      width: 66px;
+    }
+    .SOLBtn-root.w60 {
+      width: 60px;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) {
+  // .members-loginbox {
+  //   height: calc(var(--vh, 1vh) * 100);
+  //   min-height: 150px;
+  // }
+
+  // .members-loginbox.signup .SOLForm-root {
+  //   max-height: calc(var(--vh, 1vh) * 100 - 250px);
+  //   min-height: 150px;
+  // }
+
+  .members-loginbox {
+    min-height: auto;
+  }
+  .SOLForm-root {
+    min-height: auto;
+  }
+
+  .members-container .members-loginbox.signup form {
+    overflow-y: scroll;
+    max-height: calc(var(--vh, 1vh) * 100);
+    min-height: 100px;
+  }
+  .members-loginbox .loginbox-action {
+    @at-root body.keyboard-open #{&} {
+      position: static;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+  }
+}
+
+// @include mobile-type02 {
+//   .members-loginwrap {
+//     width: 100%;
+//   }
+//   .members-loginbox {
+//     width: 100%;
+//   }
+// }

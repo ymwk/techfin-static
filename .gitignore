@@ -1,2 +1,6 @@
 src/app/designsystem/
 static/Common/
+static/Web/
+static/Mobile/
+src/app/creadiview/
+src/app/creadiview-m/
