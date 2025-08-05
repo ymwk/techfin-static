@@ -5,14 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &.s--sm .SOLModal-box {
-    min-width: 372px;
-  }
-
-  &.s--lg .SOLModal-box {
-    min-width: 800px;
-  }
+  max-width: var(--max-w);
+  margin: 0 auto;
 }
 
 .SOLAlert-backdrop {
@@ -21,18 +15,12 @@
 
 .SOLAlert-box {
   @include popBox;
-  width: 312px;
-  min-height: 258px;
-  padding: 40px 30px;
+  padding: 32px 20px 20px;
   overflow: auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   word-break: keep-all;
-  &.s--sm {
-    width: 360px;
-    padding: 30px 20px;
-  }
 }
 
 .SOLAlert-icon {
@@ -71,12 +59,8 @@
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
-
-  .SOLBtn-root {
-    min-width: 90px;
-  }
+  padding-top: 16px
 }
 
 .SOLAlert-msgbox {

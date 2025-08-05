@@ -15,22 +15,29 @@
           <i class="SOLIcon-root SOLIcon-close s--lg"></i>
           <span class="blind">취소</span>
         </button>
-        <h2 class="SOLTitle-t2">아이디(이메일 주소) 찾기</h2>
+        <h2 class="SOLTitle-t2">비밀번호 찾기</h2>
       </div>
 
       <form method="post">
         <div class="members-container">
           <div class="members-loginbox">
             <div class="box-msg">
-              <p class="msg-noti">회원 가입 시 입력한 사업자등록번호와 이름으로 본인인증을 진행해주세요.</p>
+              <p class="msg-noti">
+                가입하신 이메일로 인증번호 메일이 전송됩니다.<br />시간 내에 인증번호를 입력해주세요.
+              </p>
             </div>
 
             <div class="loginbox-inputs">
               <label class="SOLInput-root">
-                <span class="SOLInput-label">사업자등록번호</span>
+                <span class="SOLInput-label">이메일 주소</span>
                 <div class="SOLInput-fbox">
                   <div class="SOLInput-box">
-                    <input type="text" placeholder="사업자등록번호를 입력하세요." class="SOLInput-field" />
+                    <input
+                      type="text"
+                      placeholder="이메일 주소를 입력하세요."
+                      value="email@email.com"
+                      class="SOLInput-field"
+                    />
                     <span class="SOLInput-wrap">
                       <span class="SOLInput-wrap--hidden">
                         <button type="button" class="SOLInput-btn SOLIcon-close">
@@ -39,17 +46,26 @@
                       </span>
                     </span>
                   </div>
-                  <button type="button" class="SOLBtn-root" disabled>확인</button>
+                  <button type="button" class="SOLBtn-root">재요청</button>
                 </div>
               </label>
 
-              <label class="SOLInput-root">
-                <span class="SOLInput-label">이름</span>
+              <label class="SOLInput-root c--error">
+                <span class="SOLInput-label">인증번호 입력</span>
                 <div class="SOLInput-fbox">
                   <div class="SOLInput-box">
-                    <input type="text" placeholder="이름을 입력하세요." class="SOLInput-field" disabled />
+                    <input type="text" placeholder="인증번호를 입력하세요." value="111222" class="SOLInput-field" />
+                    <span class="SOLInput-wrap">
+                      <span class="SOLInput-wrap--hidden">
+                        <button type="button" class="SOLInput-btn SOLIcon-close">
+                          <span class="blind">Del</span>
+                        </button>
+                      </span>
+                      <span class="SOLInput-count">02:00</span>
+                    </span>
                   </div>
                 </div>
+                <p class="SOLInput-msg">인증번호가 일치하지 않습니다.</p>
               </label>
             </div>
             <!-- loginbox-inputs -->

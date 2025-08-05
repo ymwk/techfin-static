@@ -283,7 +283,7 @@
   position: relative;
   padding: 20px 0;
   border-top: 1px dotted rgba(0, 0, 0, 0.2);
-  max-width: 720px;
+  max-width: 360px;
 }
 .comp-inner-root .style-guide-section {
   position: relative;
@@ -376,8 +376,7 @@
 }
 .comp-fbox {
   display: flex;
-  align-items: center;
-  gap: 4px;
+  gap: 10px;
 }
 .comp-fbox + .comp-fbox {
   margin-top: 24px;
@@ -393,7 +392,7 @@
 .comp-cbox {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 20px;
 }
 .comp-code {
   z-index: 999;

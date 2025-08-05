@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - Button</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/designsystem.css" />
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Button</h2>
+        <p class="comp-pagetitle-desc">공통 버튼 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Default Size Button [40px]</h3>
+          <div class="comp-fbox">
+            <button type="button" class="SOLBtn-root">Default</button>
+            <button type="button" class="SOLBtn-root" disabled="true">
+              Disabled
+            </button>
+          </div>
+
+          <div class="comp-fbox">
+            <!-- Contained Button -->
+            <button type="button" class="SOLBtn-root t--contained">
+              Contained
+            </button>
+            <button
+              type="button"
+              class="SOLBtn-root t--contained"
+              disabled="true"
+            >
+              Disabled
+            </button>
+          </div>
+
+          <div class="comp-fbox">
+            <!-- Outlined button -->
+            <button type="button" class="SOLBtn-root t--outlined">
+              Outlined
+            </button>
+            <button
+              type="button"
+              class="SOLBtn-root t--outlined"
+              disabled="true"
+            >
+              Disabled
+            </button>
+          </div>
+
+          <div class="comp-fbox"
+              style="
+                background-color: #acacac;
+                padding: 20px;
+              "
+            >
+              <button type="button" class="SOLBtn-root t--inverse">
+                Inverse
+              </button>
+              <button
+                type="button"
+                class="SOLBtn-root t--inverse"
+                disabled="true"
+              >
+                Button disabled
+              </button>
+            </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Large Size Button [48px]</h3>
+          <div class="comp-fbox">
+            <button type="button" class="SOLBtn-root s--lg">Button</button>
+            <button type="button" class="SOLBtn-root s--lg" disabled="true">
+              Disabled
+            </button>
+          </div>
+          <div class="comp-fbox">
+            <!-- Contained Large Button -->
+            <button type="button" class="SOLBtn-root t--contained s--lg">
+              Contained
+            </button>
+            <button
+              type="button"
+              class="SOLBtn-root t--contained s--lg"
+              disabled="true"
+            >
+              Disabled
+            </button>
+          </div>
+          <div class="comp-fbox">
+            <!-- Outlined Large button -->
+            <button type="button" class="SOLBtn-root t--outlined s--lg">
+              Outlined
+            </button>
+            <button
+              type="button"
+              class="SOLBtn-root t--outlined s--lg"
+              disabled="true"
+            >
+              Disabled
+            </button>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Small Size Button [30px]</h3>
+          <div class="comp-fbox">
+            <button type="button" class="SOLBtn-root s--sm">Button</button>
+            <button type="button" class="SOLBtn-root s--sm" disabled="true">
+              Button disabled
+            </button>
+          </div>
+          <div class="comp-fbox">
+            <!-- Contained Small Button -->
+            <button type="button" class="SOLBtn-root t--contained s--sm">
+              Contained
+            </button>
+            <button
+              type="button"
+              class="SOLBtn-root t--contained s--sm"
+              disabled="true"
+            >
+              Button disabled
+            </button>
+          </div>
+          <div class="comp-fbox">
+            <!-- Outlined Small button -->
+            <button type="button" class="SOLBtn-root t--outlined s--sm">
+              Outlined
+            </button>
+            <button
+              type="button"
+              class="SOLBtn-root t--outlined s--sm"
+              disabled="true"
+            >
+              Button disabled
+            </button>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Bottom Button</h3>
+          <div class="comp-fbox">
+            <button type="button" class="SOLBtn-root w--full">
+              더보기 (1/20)
+              <i class="SOLIcon-root SOLIcon-gt--d"></i>
+            </button>
+          </div>
+          <div class="comp-fbox">
+            <button type="button" class="SOLBtn-root t--contained s--lg w--full">
+              다음
+            </button>
+          </div>
+          <div class="comp-fbox">
+            <button type="button" class="SOLBtn-root t--outlined s--lg w--btm">이전</button>
+            <button type="button" class="SOLBtn-root t--contained s--lg w--btm">다음</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

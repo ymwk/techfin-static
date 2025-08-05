@@ -15,39 +15,59 @@
           <i class="SOLIcon-root SOLIcon-close s--lg"></i>
           <span class="blind">취소</span>
         </button>
-        <h2 class="SOLTitle-t2">아이디(이메일 주소) 찾기</h2>
+        <h2 class="SOLTitle-t2">비밀번호 재설정</h2>
       </div>
 
       <form method="post">
         <div class="members-container">
           <div class="members-loginbox">
             <div class="box-msg">
-              <p class="msg-noti">회원 가입 시 입력한 사업자등록번호와 이름으로 본인인증을 진행해주세요.</p>
+              <ul class="msg-noti">
+                <li>비밀번호는 8자리 이상 영문자로 입력하세요.</li>
+                <li>안전한 비밀번호로 내 정보를 보호하세요.</li>
+              </ul>
             </div>
 
             <div class="loginbox-inputs">
               <label class="SOLInput-root">
-                <span class="SOLInput-label">사업자등록번호</span>
+                <span class="SOLInput-label">새 비밀번호</span>
                 <div class="SOLInput-fbox">
                   <div class="SOLInput-box">
-                    <input type="text" placeholder="사업자등록번호를 입력하세요." class="SOLInput-field" />
+                    <input type="password" placeholder="새 비밀번호를 입력하세요." class="SOLInput-field" />
                     <span class="SOLInput-wrap">
                       <span class="SOLInput-wrap--hidden">
                         <button type="button" class="SOLInput-btn SOLIcon-close">
                           <span class="blind">Del</span>
                         </button>
+                        <button type="button" class="SOLInput-btn SOLIcon-view">
+                          <span class="blind">View</span>
+                        </button>
                       </span>
                     </span>
                   </div>
-                  <button type="button" class="SOLBtn-root" disabled>확인</button>
                 </div>
               </label>
 
               <label class="SOLInput-root">
-                <span class="SOLInput-label">이름</span>
+                <span class="SOLInput-label">비밀번호 확인</span>
                 <div class="SOLInput-fbox">
                   <div class="SOLInput-box">
-                    <input type="text" placeholder="이름을 입력하세요." class="SOLInput-field" disabled />
+                    <input
+                      type="password"
+                      placeholder="새 비밀번호를 다시 입력하세요."
+                      class="SOLInput-field"
+                      disabled
+                    />
+                    <span class="SOLInput-wrap">
+                      <span class="SOLInput-wrap--hidden">
+                        <button type="button" class="SOLInput-btn SOLIcon-close">
+                          <span class="blind">Del</span>
+                        </button>
+                        <button type="button" class="SOLInput-btn SOLIcon-view">
+                          <span class="blind">View</span>
+                        </button>
+                      </span>
+                    </span>
                   </div>
                 </div>
               </label>
@@ -59,7 +79,7 @@
         <!-- members-container -->
 
         <div class="members-footer">
-          <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>확인</button>
+          <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>비밀번호 변경</button>
         </div>
       </form>
     </div>

@@ -335,7 +335,7 @@
       position: relative;
       padding: 20px 0;
       border-top: 1px dotted rgba(0, 0, 0, 0.2);
-      max-width: 720px;
+      max-width: 360px;
     }
     .style-guide-section {
       position: relative;
@@ -437,8 +437,7 @@
 
   &-fbox {
     display: flex;
-    align-items: center;
-    gap: 4px;
+    gap: 10px;
 
     & + & {
       margin-top: 24px;
@@ -458,7 +457,7 @@
   &-cbox {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 20px;
   }
 
   // 코드보기

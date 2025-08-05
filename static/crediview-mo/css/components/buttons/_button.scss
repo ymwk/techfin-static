@@ -10,20 +10,23 @@
   border: 1px solid rgba(10, 43, 88, 0.18);
   background-color: #fff;
   font-size: var(--font-14);
+  font-weight: 500;
   white-space: nowrap;
   color: var(--fc-default);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: color 0.2s, background-color 0.2s;
 
   &:focus, &:active {
-    background-color: var(--bc-hover);
+    background-color: var(--form-c-bg-dis);
+
   }
 
   &:disabled,
   &.disabled {
-    background-color: var(--form-c-bg-dis);
+    background-color: transparent;
     color: rgba(55, 56, 60, 0.28);
     border-color: rgba(112, 115, 124, 0.28);
-    cursor: not-allowed;
+    box-shadow: none;
   }
 
   // type
@@ -31,6 +34,8 @@
     &--contained {
       background-color: var(--c-active);
       color: #fff;
+      border: 0;
+      box-shadow: none;
 
       &:focus, &:active {
         background-color: #365ecd;
@@ -42,7 +47,6 @@
       &:disabled,
       &.disabled {
         background-color: #f4f4f5;
-        border-color: rgba(10, 43, 88, 0.1);
         color: rgba(55, 56, 60, 0.28);
       }
     }
@@ -50,11 +54,13 @@
     &--outlined {
       color: var(--c-active);
       border-color: currentColor;
+      box-shadow: none;
 
       &:disabled,
       &.disabled {
-        background-color: rgba(255, 255, 255, 0.5);
-        color: rgba(59, 93, 251, 0.5);
+        background-color: transparent;
+        border: 1px solid rgba(10, 43, 88, 0.1);
+        color: rgba(55, 56, 60, 0.28);
       }
 
       &:focus, &:active {
@@ -88,30 +94,23 @@
   &.s {
     &--lg {
       height: 48px;
-      font-size: var(--font-15);
-    }
-
-    &--xl {
-      height: 56px;
       font-size: var(--font-16);
-      font-weight: 700;
     }
 
     &--sm {
-      height: 28px;
+      height: 30px;
       padding: 0 10px;
-      font-size: var(--font-12);
-    }
-
-    &--xs {
-      height: 24px;
-      padding: 0 8px;
-      font-size: var(--font-12);
+      font-size: var(--font-13);
     }
   }
 
+  //width`
   &.w {
-    &--full { width: 100% }
+    &--full {
+      flex: 1;
+      &:only-child { width: 100% }
+    }
+    &--btm { min-width: 156px}
   }
 
   &.bottom {
@@ -140,8 +139,8 @@
   align-items: center;
   gap: 0.4em;
   height: 2rem;
-  min-width: 44px;
-  min-height: 44px;
+  min-width: 40px;
+  min-height: 40px;
   padding: 0 0.5em;
   border-radius: var(--form-round);
   border: 0;

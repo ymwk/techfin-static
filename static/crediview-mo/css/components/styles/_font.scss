@@ -3,7 +3,6 @@
   &-t2,
   &-t3,
   &-t4 {
-    font-weight: 700;
     line-height: 1.6;
     color: var(--fc-default);
 
@@ -21,16 +20,20 @@
   }
 
   &-t1 {
-    font-size: var(--font-24);
+    font-size: var(--font-22);
+    font-weight: 700;
   }
   &-t2 {
-    font-size: var(--font-20);
+    font-size: var(--font-18);
+    font-weight: 600;
   }
   &-t3 {
     font-size: var(--font-18);
+    font-weight: 700;
   }
   &-t4 {
     font-size: var(--font-16);
+    font-weight: 600;
   }
 }
 
