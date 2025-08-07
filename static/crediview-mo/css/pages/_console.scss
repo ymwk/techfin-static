@@ -1,5 +1,6 @@
 .console-root {
-  min-height: 100vh;
+  height: 100vh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -9,50 +10,61 @@
   background-color: #fff;
 }
 
-// desktop에서 접속시 양쪽 회색 배경
-@media screen and (min-width: 721px) {
-  .console-root {
-    &::before,
-    &::after {
-      content: '';
-      position: fixed;
-      z-index: 99999;
-      inset: 0;
-      width: 100%;
-      max-width: var(--max-w);
-      min-width: var(--min-w);
-      margin: 0 auto;  
-      background-color: #f5f5f5;
-      transform: translateX(100%);
-    }
-
-    &::before {
-      transform: translateX(-100%);
-    }
-  }  
-}
-
 .console-container {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  overflow-y: auto
+  padding-top: var(--header-h)
 }
 
 .console-inner {
+  flex-grow: 1;
   position: relative;
-  flex: 1;
-  display: flex;
-  gap: var(--side-gap);
-  width: 100%;
-  padding-left: var(--spc-w);
-  padding-right: var(--spc-w);
+  padding: 24px var(--spc-w) 0;
 }
 
-.console-content {
-  flex-grow: 1;
+.console-footer {
+  z-index: 99;
+  position: sticky;
+  bottom: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 20px 20px 34px;
+  background-color: #fff;
+
+  .SOLBtn-root {
+    position: relative
+  }
 }
+
+.footer-topBtn {
+  position: absolute;
+  bottom: 40px;
+  right: var(--spc-w);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #D7D7D7;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+  color: #8B8B8B;
+  opacity: 0;
+  overflow: hidden;
+  transition: bottom .2s, opacity .2s;
+
+  &.show {
+    opacity: 1;
+    bottom: 100%;
+  }
+}
+// .console-content {
+  
+// }
 
 .console-title {
   display: flex;
@@ -67,7 +79,14 @@
 }
 
 .console-section {
-  margin-top: 40px;
+  margin-top: 24px;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 30px
 }
 
 .console-header {
@@ -93,19 +112,6 @@
 .console-bottom {
   .SOLTitle-t2 {
     margin-top: 30px;
-  }
-}
-
-.console-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 80px;
-
-  .SOLBtn-root {
-    flex-grow: 1;
-    max-width: 200px;
   }
 }
 

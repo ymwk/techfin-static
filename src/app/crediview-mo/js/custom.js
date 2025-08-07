@@ -218,10 +218,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // scroll header
 const header = document.querySelector('.SOLHeader-root');
+// top button
+const topBtn = document.querySelector('.footer-topBtn');
 let beforeScrollY = window.scrollY || 0;
 
 window.addEventListener('scroll', function () {
   let currentScrollY = window.scrollY;
   header.classList.toggle('sticky', beforeScrollY < currentScrollY);
   beforeScrollY = currentScrollY;
+
+  topBtn.classList.toggle('show', 100 < currentScrollY);  
 });

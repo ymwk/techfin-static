@@ -104,10 +104,10 @@
     }
   }
 
-  //width`
+  //width
   &.w {
     &--full {
-      flex: 1;
+      flex: 1 0 auto;
       &:only-child { width: 100% }
     }
     &--btm { min-width: 156px}

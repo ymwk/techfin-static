@@ -86,14 +86,6 @@
       margin-left: 2px;
     }
   }
-  .SOLIcon {
-    &-gt--u,
-    &-gt--r,
-    &-gt--d,
-    &-gt--l {
-      
-    }
-  }
   &-chk {
     background-color: var(--c-success) !important;
     &::after {
@@ -246,6 +238,25 @@
       left: 50%;
       transform: translate(-50%, -50%) rotate(90deg);
       margin-top: -1px;
+    }
+
+    &.s--sm {
+      font-size: var(--font-14);
+      font-weight: 600;
+    }
+  }
+
+  &-arr--t {
+    font-size: var(--font-24);
+    font-weight: 300;
+
+    &::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      margin-left: -1px;
     }
 
     &.s--sm {

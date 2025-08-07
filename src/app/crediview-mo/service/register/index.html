@@ -1,118 +1,279 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="referrer" content="always">
-  <title>크레디뷰</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <link rel="stylesheet" href="/static/crediview-mo/css/crediview.css" />
-</head>
-<body>
-  <div class="console-root">
-    <header class="SOLHeader-root">
-      <div class="SOLHeader-inner">
-        <div class="SOLHeader-title">
-          <button type="button" class="SOLIconBtn-root">
-            <i class="SOLIcon-root SOLIcon-gt--l s--xl"></i>
-            <span class="blind">Prev</span>
-          </button>
-          <h2 class="SOLHeader-title-text">Page title</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <title>크레디뷰</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/crediview.css" />
+  </head>
+  <body>
+    <div class="console-root">
+      <header class="SOLHeader-root">
+        <div class="SOLHeader-inner">
+          <div class="SOLHeader-title">
+            <button type="button" class="SOLIconBtn-root">
+              <i class="SOLIcon-root SOLIcon-gt--l s--xl"></i>
+              <span class="blind">Prev</span>
+            </button>
+            <h2 class="SOLHeader-title-text">신용평가 신청</h2>
+          </div>
+
+          <div class="SOLHeader-global">
+            <button type="button" class="SOLIconBtn-root SOLHeader-menuBtn">
+              <i class="SOLIcon-root SOLIcon-hamburger"></i>
+              <span class="blind">전체메뉴 보기</span>
+            </button>
+
+            <nav class="SOLHeader-nav">
+              <h3 class="blind">전체메뉴</h3>
+              <div class="SOLHeader-nav-header">
+                <h1 class="SOLHeader-logo">
+                  <a href="#">
+                    <div class="logo">
+                      <span class="eng">Crediview</span>
+                    </div>
+                  </a>
+                </h1>
+
+                <div class="SOLHeader-global">
+                  <button type="button" class="SOLIconBtn-root SOLHeader-closeBtn">
+                    <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+                    <span class="blind">전체메뉴 닫기</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 전체메뉴 start -->
+              <div class="SOL-mb-gnb">
+                <ul class="gnb-menu">
+                  <li class="depth01">
+                    <a href="#">기업신용평가</a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#" class="on">기업신용평가 소개</a></li>
+                      <li><a href="#">신용평가 신청</a></li>
+                      <li><a href="#">신용평가등급확인서 제출</a></li>
+                      <li><a href="#">등급 산출 및 제출내역</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#" class="ai-post">AI경영진단보고서<span class="blind">Open</span></a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#">AI경영진단보고서 소개</a></li>
+                      <li><a href="#">경영진단 신청</a></li>
+                      <li><a href="#">진단내역</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">마이페이지</a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#">회사관리</a></li>
+                      <li><a href="#">인증서 관리</a></li>
+                      <li><a href="#">회원관리</a></li>
+                      <li><a href="#">내 정보 관리</a></li>
+                      <li><a href="#">정산관리</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">진본 확인 서비스</a>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">고객지원</a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#">공지사항</a></li>
+                      <li><a href="#">자주 묻는 질문</a></li>
+                      <li><a href="#">1:1 문의</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">회사 소개</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- 전체메뉴 end -->
+
+              <div class="logout-box">
+                <button type="button" class="SOLBtn-root w--full">로그아웃</button>
+              </div>
+            </nav>
+          </div>
         </div>
+      </header>
 
-        <div class="SOLHeader-global">
-          <button type="button" class="SOLIconBtn-root SOLHeader-menuBtn">
-            <i class="SOLIcon-root SOLIcon-hamburger"></i>
-            <span class="blind">전체메뉴 보기</span>
-          </button>
+      <div class="console-container">
+        <div class="console-inner">
 
-          <nav class="SOLHeader-nav">
-            <h3 class="blind">전체메뉴</h3>
-            <div class="SOLHeader-nav-header">
-              <h1 class="SOLHeader-logo">
-                <a href="#">
-                  <div class="logo">
-                    <span class="eng">Crediview</span>
-                  </div>
-                </a>
-              </h1>
+          <!-- 서비스 프로세스 -->
+          <section class="service-guide js-accordian-root">
+            <div class="service-guide-title">
+              <h3 class="SOLTitle-t5">서비스 프로세스</h3>
+              <button type="button" class="SOLAccordian-btn js-accordian-btn">
+                <span class="SOLAccordian-arr">
+                  <i class="SOLIcon-root SOLIcon-gt--d"></i>
+                </span>
+              </button>
+            </div>
+            <ol class="service-guide-step SOLAccordian-body js-accordian-body">
+              <li>
+                <p class="tit">신용평가 신청</p>
+                <p>최초 기업 홈택스 연동하고 기업신용등급 신청</p>
+              </li>
+              <li>
+                <p class="tit">신용평가등급 확인
+                  <span class="service-guide-label">무료</span>
+                </p>
+                <p>신용등급 무료로 즉시 조회 가능</p>
+              </li>
+              <li>
+                <p class="tit">신용평가등급확인서 발급                  
+                  <span class="service-guide-label c--primary">유료</span>
+                </p>
+                <p>무료 등급 확인 후 결제 시 등급확인서 즉시 발급 완료</p>
+              </li>
+              <li>
+                <p class="tit">기관 제출
+                  <span class="service-guide-label">무료</span>
+                </p>
+                <p>PDF 다운로드 제출하거나 조달청 자동전송</p>
+              </li>
+            </ol>
+          </section>
 
-              <div class="SOLHeader-global">
-                <button type="button" class="SOLIconBtn-root SOLHeader-closeBtn">
-                  <i class="SOLIcon-root SOLIcon-close s--lg"></i>
-                  <span class="blind">전체메뉴 닫기</span>
+          <section class="console-section">
+            <ul class="SOLStepper-root t--service">
+              <li class="active"><span class="tit">이용약관 동의</span></li>
+              <li><span class="tit">신청서 작성</span></li>
+              <li><span class="tit">신용평가</span></li>
+            </ul>
+
+            <div class="section-header">
+              <h3 class="SOLTitle-headline">서비스 이용을 위해 <br>이용약관에 동의해 주세요.</h3>
+              <p class="SOLText-note">서비스 이용을 위해서 꼭 필요한 사항입니다.</p>
+            </div>
+
+            <div class="service-terms">
+              <div class="service-terms-header">
+                <div class="SOLCheck-root t--terms s--lg">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span>
+                      <em>약관에 모두 동의</em>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="service-terms-item">
+                <div class="SOLCheck-root t--terms-md">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span>
+                      <span class="c--require">[필수]</span>
+                      개인정보 수집 및 이용에 관한 동의
+                    </span>
+                  </label>
+                </div>
+
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                  <span class="blind">이용약관 팝업 열기</span>
+                </button>
+              </div>
+
+              <div class="service-terms-item">
+                <div class="SOLCheck-root t--terms-md">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span>
+                      <span class="c--require">[필수]</span>
+                      기업정보 수집·활용·제3자 제공 동의
+                    </span>
+                  </label>
+                </div>
+
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                  <span class="blind">이용약관 팝업 열기</span>
+                </button>
+              </div>
+
+              <div class="service-terms-item">
+                <div class="SOLCheck-root t--terms-md">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span>
+                      <span class="c--require">[필수]</span>
+                      크레디뷰 서비스 이용약관
+                    </span>
+                  </label>
+                </div>
+
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                  <span class="blind">이용약관 팝업 열기</span>
+                </button>
+              </div>
+
+              <div class="service-terms-item">
+                <div class="SOLCheck-root t--terms-md">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span><span class="c--disabled">[선택]</span>
+                      기업정보 수집 · 활용 · 제3자 제공
+                    </span>
+                  </label>
+                </div>
+
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                  <span class="blind">이용약관 팝업 열기</span>
                 </button>
               </div>
             </div>
+          </section>
 
-            <!-- 전체메뉴 start -->
-            <div class="SOL-mb-gnb">
-              <ul class="gnb-menu">
-                <li class="depth01">
-                  <a href="#">기업신용평가</a>
-                  <ul class="sub-menu depth02">
-                    <li><a href="#" class="on">기업신용평가 소개</a></li>
-                    <li><a href="#">신용평가 신청</a></li>
-                    <li><a href="#">신용평가등급확인서 제출</a></li>
-                    <li><a href="#">등급 산출 및 제출내역</a></li>
-                  </ul>
-                </li>
-                <li class="depth01">
-                  <a href="#" class="ai-post">AI경영진단보고서<span class="blind">Open</span></a>
-                  <ul class="sub-menu depth02">
-                    <li><a href="#">AI경영진단보고서 소개</a></li>
-                    <li><a href="#">경영진단 신청</a></li>
-                    <li><a href="#">진단내역</a></li>
-                  </ul>
-                </li>
-                <li class="depth01">
-                  <a href="#">마이페이지</a>
-                  <ul class="sub-menu depth02">
-                    <li><a href="#">회사관리</a></li>
-                    <li><a href="#">인증서 관리</a></li>
-                    <li><a href="#">회원관리</a></li>
-                    <li><a href="#">내 정보 관리</a></li>
-                    <li><a href="#">정산관리</a></li>
-                  </ul>
-                </li>
-                <li class="depth01">
-                  <a href="#">진본 확인 서비스</a>
-                </li>
-                <li class="depth01">
-                  <a href="#">고객지원</a>
-                  <ul class="sub-menu depth02">
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">자주 묻는 질문</a></li>
-                    <li><a href="#">1:1 문의</a></li>
-                  </ul>
-                </li>
-                <li class="depth01">
-                  <a href="#">회사 소개</a>
-                </li>
-              </ul>
-            </div>
-            <!-- 전체메뉴 end -->
-
-            <div class="logout-box">
-              <button type="button" class="SOLBtn-root w--full">
-                로그아웃
-              </button>
+          <section class="console-section">
+            <h3 class="SOLTitle-t3">유의사항</h3>
+            <div class="box-msg">
+              <div class="msg-terms">
+                <p><em>당사 신용평가시스템은 국세청 신고자료,<br>
+                  회계프로그램의 기장정보를 근거로 산출됩니다.<br>
+                  이에 따라, 아래의 경우<br>
+                  신용등급이 산출되지 않을 수 있습니다.
+                </em></p>
+                <ul>
+                  <li>1. 금융기관, 비영리단체, 공공기관인 경우</li>
+                  <li>2. 신고 자료와 기장 정보가 부족한 경우</li>
+                  <li>3. 인증서가 미등록 되거나 유효기간이 만료된 경우</li>
+                </ul>
+              </div>
             </div>
 
-          </nav>
+            <div class="SOLCheck-root t--terms-md">
+              <label class="SOLCheck-label">
+                <input type="checkbox" name="" />
+                <span><span class="c--require">[필수]</span> 유의사항을 확인했습니다.</span>
+              </label>
+            </div>
+          </section>
+
         </div>
       </div>
-    </header>
-     
-    <div class="console-container">
-      <div style="height: 200vh"></div>
-    </div><!-- console-container -->
-  </div>
 
-  <!-- component js -->
-  <script src="/src/app/designsystem/js/popper.min.js"></script>
-  <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
-  <script src="/src/app/crediview-mo/js/custom.js"></script>
+      <div class="console-footer">
+        <a class="footer-topBtn" href="#top">
+          <i class="SOLIcon-root SOLIcon-arr--t"></i>
+          <span class="blind">Scroll to Top</span>
+        </a>
+        <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>다음</button>
+      </div>
+      <!-- console-container -->
+    </div>
 
-</body>
+    <!-- component js -->
+    <script src="/src/app/crediview-mo/js/popper.min.js"></script>
+    <script src="/src/app/crediview-mo/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/crediview-mo/js/custom.js"></script>
+  </body>
 </html>

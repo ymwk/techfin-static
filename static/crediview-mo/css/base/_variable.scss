@@ -1,6 +1,7 @@
 :root {
   // color
-  --fc-default: #222;
+  color: #1D2129;
+  --fc-default: #1D2129;
   --fc-gray1: #7b7b7b;
   --fc-gray2: #9b9ba0;
   --fc-rating: #1e479f;
@@ -29,7 +30,7 @@
   --form-c-text-dis: rgba(34, 34, 34, 0.3);
 
   // console
-  --max-w: 720px;
+  --max-w: unset; /*720px;*/
   --min-w: 360px;
   --spc-w: 20px;
   --side-w: 220px;
@@ -38,6 +39,7 @@
   --max-w-auto: auto;
 
   //font size
+  font-size: 14px;
   --font-14: 1rem;
   --font-9: 0.64rem;
   --font-11: 0.79rem;

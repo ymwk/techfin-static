@@ -10,7 +10,7 @@
   }
 
   &.s--lg {
-    font-size: var(--font-16);
+    font-size: var(--font-15);
     line-height: 24px;
 
     .SOLCheck-label {
@@ -32,10 +32,107 @@
     font-size: var(--font-13);
   }
 
+  &.t--terms {
+     [type="checkbox"] {
+        border-radius: 50%;
+     }
+  }
+
+  &.t--terms-md {
+    .SOLCheck-label {
+      font-size: var(--font-15);
+      line-height: 24px;
+
+      [type="checkbox"] {
+        width: 24px;
+        height: 24px;
+        border: 0;
+        background-color: transparent;
+
+        &::after {
+          width: 8px;
+          height: 13px;
+        }
+        &:checked {          
+          &::after {
+            border-color: var(--c-component)
+          }
+        }
+      }
+    }
+  }
+
   .SOLText-note {
     display: block;
   }
 }
+
+.SOLCheck-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  [type="checkbox"] {
+    appearance: none;
+    flex-shrink: 0;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #bbbbbd;
+    border-radius: 3px;
+    background-color: #fff;
+    color: var(--c-disabled);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 6px;
+      height: 9px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      margin-top: -1px;
+      border-radius: 1px;
+    }
+
+    &:checked {
+      border-color: transparent;
+      background-color: var(--c-component);
+      &::after {
+        color: #fff;
+      }
+
+      &:disabled {
+        background-color: var(--c-disabled) !important;
+      }
+    }
+
+    &:hover,
+    &:hover + span {
+      cursor: pointer;
+    }
+
+    &:disabled,
+    &:disabled + span {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    &:disabled {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.SOLAccordian-item .SOLCheck-root.t--terms-md .SOLCheck-label {
+  font-size: var(--font-14)
+}
+    
+
+
 // agreement-type01
 .agreement-type01 {
   .SOLCheck-label {
@@ -82,69 +179,9 @@ table .SOLCheck-root {
   display: inline-flex;
 }
 
-.members-loginbox,
-.SOLCheck-root.t--terms {
+.members-loginbox {
   input[type="checkbox"] {
     background-color: #fff;
   }
 }
 
-.SOLCheck-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  [type="checkbox"] {
-    appearance: none;
-    flex-shrink: 0;
-    position: relative;
-    width: 18px;
-    height: 18px;
-    border: 1px solid rgba(10, 43, 88, 0.1);
-    border-radius: 3px;
-    background-color: var(--c-bg);
-    color: var(--c-disabled);
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(45deg);
-      width: 6px;
-      height: 9px;
-      border-right: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
-      margin-top: -1px;
-      border-radius: 1px;
-    }
-
-    &:checked {
-      border-color: transparent;
-      background-color: var(--c-component) !important;
-      &::after {
-        color: #fff;
-      }
-
-      &:disabled {
-        background-color: var(--c-disabled) !important;
-      }
-    }
-
-    &:hover,
-    &:hover + span {
-      cursor: pointer;
-    }
-
-    &:disabled,
-    &:disabled + span {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
-
-    &:disabled {
-      background-color: #f5f5f5;
-    }
-  }
-}

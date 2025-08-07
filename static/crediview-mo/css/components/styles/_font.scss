@@ -28,12 +28,21 @@
     font-weight: 600;
   }
   &-t3 {
-    font-size: var(--font-18);
+    font-size: var(--font-16);
     font-weight: 700;
   }
   &-t4 {
     font-size: var(--font-16);
     font-weight: 600;
+  }
+  &-t5 {
+    font-size: var(--font-14);
+    font-weight: 700;
+  }
+  &-headline {
+    font-size: var(--font-22);
+    font-weight: 700;
+    line-height: 1.45;
   }
 }
 

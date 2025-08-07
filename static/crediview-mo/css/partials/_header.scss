@@ -11,9 +11,9 @@
   min-width: var(--min-w);
   white-space: nowrap;
 
-  &.t--landing  {
+  &.t--landing {
     .SOLHeader-inner {
-      color: #353C49;
+      color: #353c49;
       background: transparent;
     }
 
@@ -25,7 +25,7 @@
   }
 
   &.sticky .SOLHeader-inner {
-    top: -56px
+    top: -56px;
   }
 }
 
@@ -39,9 +39,9 @@
   width: 100%;
   height: var(--header-h);
   padding: 0 calc(var(--spc-w) - 10px);
-  background: linear-gradient(92.1deg, #638CFF -1.83%, #2456DA 100%);
+  background: linear-gradient(92.1deg, #638cff -1.83%, #2456da 100%);
   color: #fff;
-  transition: top .2s ease-out
+  transition: top 0.2s ease-out;
 }
 
 .SOLHeader-logo {
@@ -53,7 +53,7 @@
 
   a {
     color: inherit;
-    padding: 1em 0
+    padding: 1em 0;
   }
 
   .logo {
@@ -68,7 +68,6 @@
       height: 100%;
       background: url(../../Common/image/crediview/logo/bi_crediview.svg) no-repeat left center / contain;
       animation: logoSwap 10s ease infinite;
-
     }
     .kr {
       position: absolute;
@@ -79,7 +78,9 @@
     }
   }
 
-  svg { fill: currentColor }
+  svg {
+    fill: currentColor;
+  }
 }
 
 .SOLHeader-global {
@@ -89,25 +90,31 @@
   margin-left: auto;
   font-size: var(--font-13);
 
-  a, button {
-    color: inherit
+  a,
+  button {
+    color: inherit;
   }
 
   &-alarm {
     width: 24px;
     height: 24px;
-  }  
+  }
 
-  a, button {
+  a,
+  button {
     color: inherit;
 
     .SOLSvg-root {
-      color: rgba(255,255,255,0.5);
-      transition: color .3s;
+      color: rgba(255, 255, 255, 0.5);
+      transition: color 0.3s;
     }
 
-    svg { fill: currentColor }
-    &:hover .SOLSvg-root { color: rgba(255,255,255,1) }
+    svg {
+      fill: currentColor;
+    }
+    &:hover .SOLSvg-root {
+      color: rgba(255, 255, 255, 1);
+    }
   }
 }
 
@@ -116,18 +123,18 @@
   align-items: center;
   height: 30px;
   padding: 0 10px;
-  border: 1px solid #0A2B582E;
+  border: 1px solid #0a2b582e;
   border-radius: 30px;
-  font-weight: 500
+  font-weight: 500;
 }
 
 .SOLHeader-title {
   display: flex;
   align-items: center;
   font-size: var(--font-18);
-  
+
   .SOLHeader-title-text {
-    font-weight: 400
+    font-weight: 400;
   }
 }
 
@@ -137,6 +144,7 @@
   position: fixed;
   inset: 0;
   height: 100vh;
+  height: 100svh;
   min-width: var(--min-w);
   max-width: var(--max-w);
   margin: 0 auto;
@@ -145,7 +153,7 @@
   background-color: #fff;
   transform: translateX(100%);
   transition: transform 0.5s var(--ease);
-  color: #353C49;
+  color: #353c49;
 
   &.open {
     transform: translateX(0);
@@ -158,7 +166,9 @@
 
   .SOLHeader-logo {
     padding-left: 0;
-    .logo .eng { animation: none }
+    .logo .eng {
+      animation: none;
+    }
   }
 }
 
@@ -175,7 +185,7 @@
 .SOL-mb-gnb {
   flex-grow: 1;
   overflow-y: auto;
-  border-top: 8px solid #F0F2F4
+  border-top: 8px solid #f0f2f4;
 }
 
 // 전체메뉴 리스트
@@ -200,22 +210,24 @@
 
   & > li {
     padding: 10px var(--spc-w) 10px calc(var(--spc-w) + 10px);
-    border-bottom: 1px solid #E6E8EB;
+    border-bottom: 1px solid #e6e8eb;
     font-size: var(--font-17);
     font-weight: 700;
 
-    &:not(:has(.depth02)) > a::before { content: none }
+    &:not(:has(.depth02)) > a::before {
+      content: none;
+    }
 
     > a {
       position: relative;
       height: 40px;
 
       &.on::before {
-        rotate: -135deg
+        rotate: -135deg;
       }
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         right: 2px;
@@ -227,8 +239,8 @@
         translate: -50% -50%;
         rotate: 45deg;
         margin-left: -1px;
-        opacity: .8;
-        transition: rotate .2s;
+        opacity: 0.8;
+        transition: rotate 0.2s;
       }
     }
   }
@@ -236,18 +248,22 @@
   .sub-menu.depth02 {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .2s var(--ease);
+    transition: max-height 0.2s var(--ease);
 
     & > li {
       font-size: var(--font-15);
       font-weight: 400;
 
-      &:first-of-type { margin-top: 10px }
+      &:first-of-type {
+        margin-top: 10px;
+      }
     }
     a {
       height: 42px;
 
-      &.on { color: #3B5DFB }
+      &.on {
+        color: #3b5dfb;
+      }
     }
   }
 }
@@ -255,5 +271,7 @@
 .logout-box {
   padding: 20px;
 
-  .SOLBtn-root { height: 44px }
+  .SOLBtn-root {
+    height: 44px;
+  }
 }

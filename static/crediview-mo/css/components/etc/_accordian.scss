@@ -1,7 +1,7 @@
 .SOLAccordian-root {
   border: 1px solid var(--tb-border);
   border-radius: 8px;
-  padding: 12px 24px;
+  padding: 16px;
 
   ::-webkit-scrollbar {
     width: 18px;
@@ -100,18 +100,13 @@
 }
 
 .SOLAccordian-header {
-  padding-top: 12px;
-  padding-bottom: 18px;
-  margin-bottom: 12px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
   border-bottom: 1px solid var(--tb-border);
 }
 
 .SOLAccordian-item {
-  padding: 12px 0;
-
-  &:not(:last-child) {
-    border-bottom: 1px solid var(--c-bg);
-  }
+  padding: 6px 0;
 
   &.st--open {
     &:not(:last-child) {
@@ -139,6 +134,7 @@
   display: inline-block;
   margin-left: auto;
   transition: transform 0.2s;
+  color: #95989B
 }
 
 .SOLAccordian-body {
