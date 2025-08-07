@@ -19,8 +19,18 @@
 
 .console-inner {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding: 24px var(--spc-w) 0;
+}
+
+.console-gap {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 24px
 }
 
 .console-footer {
@@ -31,17 +41,18 @@
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  padding: 20px 20px 34px;
+  padding: 0 20px;
   background-color: #fff;
 
   .SOLBtn-root {
-    position: relative
+    position: relative;
+    margin: 20px 0 34px
   }
 }
 
 .footer-topBtn {
   position: absolute;
-  bottom: 40px;
+  top: 0;
   right: var(--spc-w);
   display: inline-flex;
   align-items: center;
@@ -55,11 +66,11 @@
   color: #8B8B8B;
   opacity: 0;
   overflow: hidden;
-  transition: bottom .2s, opacity .2s;
+  transition: top .2s, opacity .2s;
 
   &.show {
     opacity: 1;
-    bottom: 100%;
+    top: -40px
   }
 }
 // .console-content {
@@ -78,15 +89,11 @@
   }
 }
 
-.console-section {
-  margin-top: 24px;
-}
-
-.section-header {
+.service-header {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 30px
+  margin-bottom: 6px
 }
 
 .console-header {
@@ -107,6 +114,29 @@
       padding: 0 8px;
     }
   }
+}
+
+.console-section-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 11px;
+  color: var(--fc-gray2);
+  font-size: var(--font-12);
+
+  .desc {
+    width: 100%;
+    line-height: 1.5;
+  }
+}
+
+.section-header-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+
+  .SOLIconBtn-root { margin: -15px -12px }
 }
 
 .console-bottom {

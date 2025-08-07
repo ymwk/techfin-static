@@ -71,10 +71,12 @@
   &.t--service {
     gap: 6px;
     justify-content: flex-end;
-    padding: 16px 0;
+    padding: 0;
+    margin-bottom: 20px;
     color: var(--font-default);
     background-color: unset;
     counter-reset: index;
+    margin-top: 0;
 
     & > li {
       position: static;

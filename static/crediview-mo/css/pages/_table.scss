@@ -1,0 +1,17 @@
+.SOLTable-list {
+  width: 100%;
+
+  th {
+    width: 100px;
+    height: 28px;
+    padding: 4px 20px 4px 0;
+    font-size: var(--font-13);
+    color: var(--fc-gray2);
+    font-weight: 400;
+    text-align: left;
+  }
+
+  td {
+    font-size: var(--font-14);
+  }
+}

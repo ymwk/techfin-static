@@ -382,7 +382,7 @@ textarea {
 :root {
   color: #1D2129;
   --fc-default: #1D2129;
-  --fc-gray1: #7b7b7b;
+  --fc-gray1: #8C8C99;
   --fc-gray2: #9b9ba0;
   --fc-rating: #1e479f;
   --c-component: #265cf0;
@@ -3996,10 +3996,12 @@ table .SOLCheck-root {
 .SOLStepper-root.t--service {
   gap: 6px;
   justify-content: flex-end;
-  padding: 16px 0;
+  padding: 0;
+  margin-bottom: 20px;
   color: var(--font-default);
   background-color: unset;
   counter-reset: index;
+  margin-top: 0;
 }
 .SOLStepper-root.t--service > li {
   position: static;
@@ -5744,8 +5746,8 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   font-weight: 700;
 }
 
-.box-msg:has(.msg-terms) {
-  margin: 16px 0 24px;
+.mb-24 {
+  margin-bottom: 24px;
 }
 
 .console-root, .members-root {
@@ -5769,8 +5771,18 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 
 .console-inner {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding: 24px var(--spc-w) 0;
+}
+
+.console-gap {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 24px;
 }
 
 .console-footer, .members-footer {
@@ -5781,16 +5793,17 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  padding: 20px 20px 34px;
+  padding: 0 20px;
   background-color: #fff;
 }
 .console-footer .SOLBtn-root, .members-footer .SOLBtn-root {
   position: relative;
+  margin: 20px 0 34px;
 }
 
 .footer-topBtn {
   position: absolute;
-  bottom: 40px;
+  top: 0;
   right: var(--spc-w);
   display: inline-flex;
   align-items: center;
@@ -5804,11 +5817,11 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   color: #8B8B8B;
   opacity: 0;
   overflow: hidden;
-  transition: bottom 0.2s, opacity 0.2s;
+  transition: top 0.2s, opacity 0.2s;
 }
 .footer-topBtn.show {
   opacity: 1;
-  bottom: 100%;
+  top: -40px;
 }
 
 .console-title {
@@ -5822,15 +5835,11 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   line-height: 1;
 }
 
-.console-section {
-  margin-top: 24px;
-}
-
-.section-header {
+.service-header {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 30px;
+  margin-bottom: 6px;
 }
 
 .console-header {
@@ -5851,6 +5860,29 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   padding: 0 8px;
 }
 
+.console-section-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 11px;
+  color: var(--fc-gray2);
+  font-size: var(--font-12);
+}
+.console-section-header .desc {
+  width: 100%;
+  line-height: 1.5;
+}
+
+.section-header-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+.section-header-option .SOLIconBtn-root {
+  margin: -15px -12px;
+}
+
 .console-bottom .SOLTitle-t2 {
   margin-top: 30px;
 }
@@ -5865,6 +5897,22 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 }
 .console-add .SOLTextBtn-root {
   color: inherit;
+}
+
+.SOLTable-list {
+  width: 100%;
+}
+.SOLTable-list th {
+  width: 100px;
+  height: 28px;
+  padding: 4px 20px 4px 0;
+  font-size: var(--font-13);
+  color: var(--fc-gray2);
+  font-weight: 400;
+  text-align: left;
+}
+.SOLTable-list td {
+  font-size: var(--font-14);
 }
 
 .no-touch-action {
@@ -5923,13 +5971,14 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   overflow: hidden;
   border-radius: 8px;
   background-color: var(--c-bg);
+  margin-bottom: 12px;
 }
 .service-guide-title {
   display: flex;
   align-items: center;
   height: 48px;
   padding: 0 24px;
-  background-color: #F0F2F5;
+  background-color: #f0f2f5;
 }
 .service-guide.st--open .SOLAccordian-body {
   max-height: 350px;
@@ -6026,11 +6075,13 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 }
 
 .service-result {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding-top: 10vh;
+  padding-bottom: 15vh;
 }
 
 .service-result-desc {
@@ -6073,7 +6124,8 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: url(../../Common/image/img/bg_service_progress.png) no-repeat center top/274px;
+  padding-top: 220px;
+  background: url(/static/crediview-mo/image/img/bg_service_progress.png) no-repeat center top/325px;
 }
 .service-result-progress .progress {
   position: relative;
@@ -6092,106 +6144,15 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   height: 100%;
   border-radius: 10px;
   background: linear-gradient(to right, #506fff, #a241ff);
-  animation: progressbar 2s infinite ease-in-out;
 }
-.service-result-progress .value-default {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  border-radius: 10px;
-  background: linear-gradient(to right, #506fff, #a241ff);
-}
-.service-result-progress .value-default.w-5 {
-  width: 5%;
-}
-.service-result-progress .value-default.w-10 {
-  width: 10%;
-}
-.service-result-progress .value-default.w-30 {
-  width: 30%;
-}
-.service-result-progress .value-default.w-50 {
-  width: 50%;
-}
-.service-result-progress .value-default.w-60 {
-  width: 60%;
-}
-.service-result-progress .value-default.w-70 {
-  width: 70%;
-}
-.service-result-progress .value-default.w-80 {
-  width: 80%;
-}
-.service-result-progress .value-default.w-90 {
-  width: 90%;
-}
-.service-result-progress .value-default.w-100 {
-  width: 100%;
-}
-.service-result-progress .percent-num {
+.service-result-progress .count {
   padding-top: 10px;
-  display: block;
+  font-weight: 500;
 }
-.service-result-progress .loading-bar {
-  width: 49px;
-  height: 49px;
-  background: url(../../Common/image/svg/ic_loading.svg) no-repeat center center;
-  animation: spin 4s linear infinite;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.service-result-img {
-  position: relative;
-  width: 140px;
-  height: 136px;
-  margin-top: 53px;
-  background: url(../../Common/image/img/img_service_progress.svg) no-repeat center top;
-}
-.service-result-img.type02 {
-  background: url(../../Common/image/img/img_service_step05.svg) no-repeat center top;
-  background-position: 50% 50%;
-}
-.service-result-img .search {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  animation: spin 2s infinite ease-in-out;
-  transform-origin: 50% 15px;
-}
-.service-result-img .search > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: spin-reverse 2s infinite ease-in-out;
-}
-.service-result-img .search > div::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  left: 32px;
-  width: 23px;
-  height: 22px;
-  background: url(../../Common/image/img/img_search_handle.svg) no-repeat left top;
-}
-.service-result-img .search > div::after {
-  content: "";
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  border: 5px solid #5b6192;
-  border-radius: 50%;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-  background: linear-gradient(158.95deg, rgba(255, 255, 255, 0.1) 13.91%, rgba(210, 247, 255, 0.1) 122.3%);
+.service-result-progress .msg {
+  margin-top: 20px;
+  font-size: var(--font-12);
+  color: var(--c-active);
 }
 
 .service-result-card {
@@ -6741,7 +6702,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   font-size: var(--font-16);
 }
 .service-terms-item .SOLIconBtn-root {
-  color: #95989B;
+  color: #95989b;
 }
 .service-terms-item .SOLIconBtn-root:focus, .service-terms-item .SOLIconBtn-root:active {
   color: inherit;

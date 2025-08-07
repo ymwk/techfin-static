@@ -3,13 +3,14 @@
   overflow: hidden;
   border-radius: 8px;
   background-color: var(--c-bg);
+  margin-bottom: 12px;
 
   &-title {
     display: flex;
     align-items: center;
     height: 48px;
     padding: 0 24px;
-    background-color: #F0F2F5;
+    background-color: #f0f2f5;
   }
 
   &.st--open .SOLAccordian-body {
@@ -33,7 +34,7 @@
     top: 30px;
     bottom: 30px;
     left: 48px;
-    border-left: 2px dotted #dbdbdb
+    border-left: 2px dotted #dbdbdb;
   }
 
   & > li {
@@ -52,7 +53,7 @@
     word-break: keep-all;
 
     &::before {
-      content: "";
+      content: '';
       z-index: 1;
       position: absolute;
       left: 0;
@@ -89,7 +90,7 @@
       color: var(--fc-default);
       &::before {
         counter-increment: index;
-        content: "0"counter(index)".";
+        content: '0' counter(index) '.';
       }
     }
   }
@@ -118,11 +119,13 @@
 }
 
 .service-result {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding-top: 10vh
+  padding-bottom: 15vh
 }
 
 .service-result-desc {
@@ -141,19 +144,7 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .service-result {
-
   .console-footer {
     margin-top: 24px;
     &.mgt0 {
@@ -170,8 +161,6 @@
   }
 }
 
-
-
 .service-result-title {
   display: flex;
   justify-content: space-between;
@@ -185,8 +174,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: url(../../Common/image/img/bg_service_progress.png) no-repeat
-    center top / 274px;
+  padding-top: 220px;
+  background: url(/static/crediview-mo/image/img/bg_service_progress.png) no-repeat center top / 325px;
 
   .progress {
     position: relative;
@@ -206,127 +195,20 @@
     height: 100%;
     border-radius: 10px;
     background: linear-gradient(to right, #506fff, #a241ff);
-    animation: progressbar 2s infinite ease-in-out;
+    // animation: progressbar 2s infinite ease-in-out;
   }
 
-  .value-default {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    border-radius: 10px;
-    background: linear-gradient(to right, #506fff, #a241ff);
-    //animation: progressbar 2s infinite ease-in-out;
-    &.w-5 {
-      width: 5%;
-    }
-    &.w-10 {
-      width: 10%;
-    }
-    &.w-30 {
-      width: 30%;
-    }
-    &.w-50 {
-      width: 50%;
-    }
-    &.w-60 {
-      width: 60%;
-    }
-    &.w-70 {
-      width: 70%;
-    }
-    &.w-80 {
-      width: 80%;
-    }
-    &.w-90 {
-      width: 90%;
-    }
-    &.w-100 {
-      width: 100%;
-    }
-  }
-
-  .percent-num {
+  .count {
     padding-top: 10px;
-    display: block;
+    font-weight: 500;
   }
 
-  .loading-bar {
-    width: 49px;
-    height: 49px;
-    background: url(../../Common/image/svg/ic_loading.svg) no-repeat center
-      center;
-    animation: spin 4s linear infinite;
-  }
-
-  // 로딩아이콘 시계방향 회전 애니메이션 정의
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  .msg {
+    margin-top: 20px;
+    font-size: var(--font-12);
+    color: var(--c-active)
   }
 }
-
-.service-result-img {
-  position: relative;
-  width: 140px;
-  height: 136px;
-  margin-top: 53px;
-  background: url(../../Common/image/img/img_service_progress.svg) no-repeat
-    center top;
-  &.type02 {
-    background: url(../../Common/image/img/img_service_step05.svg) no-repeat
-      center top;
-    background-position: 50% 50%;
-  }
-
-  .search {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    animation: spin 2s infinite ease-in-out;
-    transform-origin: 50% 15px;
-
-    & > div {
-      position: absolute;
-      top: 0;
-      left: 0;
-      animation: spin-reverse 2s infinite ease-in-out;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 30px;
-        left: 32px;
-        width: 23px;
-        height: 22px;
-        background: url(../../Common/image/img/img_search_handle.svg) no-repeat
-          left top;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 42px;
-        height: 42px;
-        border: 5px solid #5b6192;
-        border-radius: 50%;
-        backdrop-filter: blur(2px);
-        background: linear-gradient(
-          158.95deg,
-          rgba(255, 255, 255, 0.1) 13.91%,
-          rgba(210, 247, 255, 0.1) 122.3%
-        );
-      }
-    }
-  }
-}
-
-
 
 .service-result-card {
   width: 100%;
@@ -346,8 +228,7 @@
   border: 3px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px 16px 0 0;
   border-bottom: 0;
-  background: url("../../Common/image/crediview/background/bg_service_card.png")
-    no-repeat center -3px / calc(100% + 6px);
+  background: url('../../Common/image/crediview/background/bg_service_card.png') no-repeat center -3px / calc(100% + 6px);
   color: #fff;
 
   .tit {
@@ -539,7 +420,7 @@
     transform: translateX(-50%);
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 100%;
       left: 50%;
@@ -679,9 +560,8 @@
     display: inline-block;
     padding: 2px 0 0 25px;
     &::before {
-      content: "";
-      background: url("../../Common/image/icon/ic_info.svg") no-repeat center
-        center;
+      content: '';
+      background: url('../../Common/image/icon/ic_info.svg') no-repeat center center;
       width: 20px;
       height: 20px;
       border: solid 1px #0a2b582e;
@@ -824,7 +704,7 @@
     transition: border-color 0.2s;
 
     &::before {
-      content: "";
+      content: '';
       height: 140px;
       background: #f2f5ff no-repeat center top;
     }
@@ -916,14 +796,16 @@
 .service-terms {
   border: 1px solid var(--tb-border);
   border-radius: 8px;
-  padding: 16px 16px 6px
+  padding: 16px 16px 6px;
 }
 
 .service-terms-header {
   padding-bottom: 16px;
   margin-bottom: 6px;
   border-bottom: 1px solid var(--tb-border);
-  .t--terms-md .SOLCheck-label { font-size: var(--font-16) }
+  .t--terms-md .SOLCheck-label {
+    font-size: var(--font-16);
+  }
 }
 
 .service-terms-item {
@@ -934,10 +816,15 @@
   font-size: var(--font-16);
 
   .SOLIconBtn-root {
-    color: #95989B;
-    &:focus, &:active { color: inherit }
+    color: #95989b;
+    &:focus,
+    &:active {
+      color: inherit;
+    }
   }
-  .t--terms-md .SOLCheck-label { font-size: var(--font-14) }
+  .t--terms-md .SOLCheck-label {
+    font-size: var(--font-14);
+  }
 }
 
 .service-terms-title {
