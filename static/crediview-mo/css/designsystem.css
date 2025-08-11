@@ -38,10 +38,21 @@
 .index-pagelist {
   padding: 10px;
 }
+.index-pagelist .ing::after {
+  content: "진행중";
+  display: inline-block;
+  padding: 4px 8px;
+  margin-left: 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  background-color: #fb1cb1;
+  color: #fff;
+}
 .index-pagelist a {
   display: inline-flex;
   align-items: center;
   transition: color 0.2s;
+  color: #000;
 }
 .index-pagelist a:hover {
   color: #fb1cb1;
@@ -52,6 +63,9 @@
   flex-wrap: wrap;
   padding: 10px;
   font-size: 14px;
+}
+.index-pagelist li.hr {
+  border-color: #222;
 }
 .index-pagelist > li::before {
   content: "";
@@ -68,6 +82,10 @@
 .index-pagelist ul {
   width: 100%;
   padding-top: 10px;
+}
+.index-pagelist ul a {
+  font-size: 0.9em;
+  color: #777;
 }
 .index-pagelist ul li {
   padding-top: 5px;
@@ -102,18 +120,29 @@
   margin-left: 10px;
   opacity: 0.5;
 }
-.index-pop::before {
-  content: "popup";
+.index-pop::before, .index-toast::before, .index-snack::before {
+  content: "";
   height: 12px;
   line-height: 12px;
   margin-right: 5px;
   font-size: 9px;
   font-weight: 700;
   text-transform: uppercase;
-  background-color: #222;
   color: #fff;
   padding: 0 3px;
   border-radius: 2px;
+}
+.index-pop::before {
+  content: "popup";
+  background-color: #222;
+}
+.index-toast::before {
+  content: "toast";
+  background-color: #3B5DFB;
+}
+.index-snack::before {
+  content: "snackbar";
+  background-color: #7299E7;
 }
 .index-table {
   width: 100%;

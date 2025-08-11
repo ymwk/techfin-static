@@ -1,6 +1,8 @@
 .SOLSelectGroup-root {
   display: flex;
+  flex-direction: column;
   gap: 8px;
+  margin-bottom: 6px;
 
   &.t--min {
     .SOLSelectGroup-label {
@@ -28,8 +30,9 @@
   gap: 18px;
   padding: 16px;
   border: 1px solid var(--tb-border);
-  border-radius: 8px;
+  border-radius: 12px;
   line-height: 1.5;
+  font-size: var(--font-13);
   transition: border-color 0.2s;
 
   input[type="radio"] {
@@ -91,10 +94,10 @@
 
   .ico {
     flex-shrink: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: var(--bc-hover) no-repeat center center / 80%;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #F6F8FA no-repeat center center / contain;
   }
 
   .ico-card {

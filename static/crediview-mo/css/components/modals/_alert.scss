@@ -53,99 +53,45 @@
   .SOLTitle-t4 {
     margin-bottom: 5px;
   }
+
+  .SOLTable-small.t--list {
+    th, td {
+      font-size: var(--font-12)
+    }
+    td { width: 80% }
+  }
 }
 
 .SOLAlert-action {
-  flex: 0 0 auto;
+  flex: 1 0 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding-top: 16px
+  padding-top: 16px;
 }
 
 .SOLAlert-msgbox {
   text-align: center;
   padding: 12px;
+  border-radius: 6px;;
   background-color: var(--c-bg);
   line-height: 1.6;
-  &.mgt15 {
-    margin-top: 15px;
-  }
-  &-title {
-    font-size: var(--font-16);
-    font-weight: 700;
-    color: #404252;
-    padding-bottom: 5px;
-  }
+  font-size: var(--font-12);
 
-  &-text {
-    font-size: var(--font-14);
-    font-weight: 400;
-    color: #404252;
-  }
-  &.left {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
     text-align: left;
   }
-  &.bd-radius {
-    border-radius: 8px;
-  }
-  .kepp-in-mind {
-    h5.title {
-      font-size: var(--font-14);
-      font-weight: 700;
-      color: #4e5262;
-      padding: 0 0 11px 28px;
-      border-bottom: solid 1px #e6e8eb;
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 20px;
-        height: 20px;
-        background: url(../../Common/image/icon/ic_info.svg) no-repeat center;
-        border: solid 1px #0a2b582e;
-        border-radius: 50%;
-      }
-    }
-    ul.list {
-      padding: 0px 0 0 0;
-      li {
-        position: relative;
-        padding: 0 0 0 20px;
-        &::before {
-          content: "";
-          position: absolute;
-          left: 10px;
-          top: 10px;
-          width: 2px;
-          height: 2px;
-          background: #0a2b58;
-          border-radius: 50%;
-        }
-        span.tit {
-          display: inline-block;
-          width: 110px;
-        }
-        span.con {
-          display: inline-block;
-          width: 100%;
-        }
-      }
-    }
-    div.flex-box {
-      display: flex;
-      justify-content: space-between;
-      &.bd-bt-line {
-        border-bottom: solid 1px #bebebe;
-      }
-      .SOLIcon-gt--r {
-        &::after {
-          width: 8px;
-          height: 8px;
-        }
-      }
+
+  li {
+    padding-left: 1em;
+    text-indent: -0.5em;
+    line-height: 1.4;
+    &::before {
+      content: '· ';
     }
   }
 }

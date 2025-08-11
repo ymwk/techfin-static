@@ -14,7 +14,8 @@
 
 @mixin popBox {
   position: relative;
-  width: calc(100% - 48px);
+  width: calc(100% - var(--spc-w) * 2);
+  max-width: 768px;
   max-height: calc(100vh - 80px);
   background-color: #fff;
   border-radius: 16px;

@@ -1,0 +1,100 @@
+.SOLSnackbar-root {
+  z-index: 1000;
+  position: fixed;
+  inset: auto 0 0;
+
+  &.h--max {
+    .SOLSnackbar-box {
+      min-height: 90svh
+    }
+  }
+}
+
+.SOLSnackbar-backdrop {
+  @include backdrop;
+  position: fixed;
+  inset: 0;
+}
+
+.SOLSnackbar-box {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100svh;
+  background-color: #fff;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0px -2px 12px 0px rgba(0, 0, 0, 0.07);
+  word-break: keep-all;
+  animation: snackIn 0.8s 0.2s var(--ease) both;
+  overflow-y: auto;
+}
+
+.SOLSnackbar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px var(--spc-w);
+  border-radius: 16px 16px 0 0;
+  background-color: #fff;
+  font-size: var(--font-12);
+  color: var(--fc-gray2);
+
+  &.center { text-align: center }
+
+  .SOLSnackbar-title {
+    font-size: var(--font-18);
+    font-weight: 700;
+    color: var(--fc-default)
+  }
+}
+
+.SOLSnackbar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px var(--spc-w);
+  background-color: #fff;
+}
+
+.SOLSnackbar-bg {
+  background-color: rgb(245, 247, 250);
+}
+
+.SOLSnackbar-body {
+  flex-grow: 1;
+  .SOLSnackbar-section:first-child { padding-top: 0 }
+}
+
+.SOLSnackbar-footer {
+  @extend .console-footer;
+  margin-top: 0 !important;
+}
+
+.SOLSnackbar-bg .SOLSnackbar-footer {
+  background: linear-gradient(to top, rgba(245,247,250,1) 82px, rgba(245,247,250,0));
+}
+
+.SOLSnackbar-footer-btns {
+  @extend .console-footer-btns;
+}
+
+.SOLSnackbar-msgbox {
+  @extend .SOLAlert-msgbox;
+
+  .SOLTable-small.t--list {
+    th {
+      color: #404252;
+    }
+    td {
+      text-align: right;
+    }
+  }
+}
+
+.service-snack-coupon {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}

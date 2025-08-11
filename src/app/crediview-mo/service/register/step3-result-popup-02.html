@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 서비스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/designsystem.css" />
+  </head>
+  <body>
+    <!-- Confirm start -->
+    <div class="SOLAlert-root">
+      <div class="SOLAlert-backdrop"></div>
+      <div class="SOLAlert-box">
+        <div class="SOLAlert-icon">
+          <!-- error icon -->
+          <i class="SOLIcon-root SOLIcon-alert c--error"></i>
+        </div>
+        <div class="SOLAlert-content">
+          <p class="SOLTitle-t4">
+            신용평가등급확인서 폐기<br>
+            (조달청 자동 제출 미동의)
+          </p>
+          <p class="SOLText-desc small">
+            확인서 폐기를 진행하시려면 <br>유의사항 확인 및 동의가 필요합니다.
+          </p>
+          <div class="SOLAlert-msgbox">
+            <ul>
+              <li>확인서 폐기는 취소 불가하며 결제한 금액은 환불되지 않습니다.</li>
+              <li>폐기된 확인서는 복구가 불가하며 필요하신 경우 신규 발급을 하여야 합니다.</li>
+              <li>확인서 신규 발급 시 다시 기업신용평가를 신청하여 등급 산출을 하여야 합니다.</li>
+              <li>다시 등급 산출할 경우 결과는 이전과 다를 수 있습니다.</li>
+            </ul>
+          </div>
+
+          <div class="SOLCheck-root t--terms s--lg">
+            <label class="SOLCheck-label">
+              <input type="checkbox" name="" />
+              <span>
+                위 내용을 확인하였으며, <br>발급된 확인서가 폐기됨을 동의합니다. 
+              </span>
+            </label>
+          </div>
+
+        </div>
+        <div class="SOLAlert-action">
+          <button type="button" class="SOLBtn-root t--outlined w--full">
+            취소
+          </button>
+          <button type="button" class="SOLBtn-root t--contained w--full">
+            폐기
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Confirm end -->
+  </body>
+</html>

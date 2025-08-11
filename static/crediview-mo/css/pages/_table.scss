@@ -1,10 +1,11 @@
-.SOLTable-list {
+.SOLTable-small {
   width: 100%;
 
   th {
     width: 100px;
     height: 28px;
     padding: 4px 20px 4px 0;
+    vertical-align: middle;
     font-size: var(--font-13);
     color: var(--fc-gray2);
     font-weight: 400;
@@ -12,6 +13,23 @@
   }
 
   td {
+    height: 28px;
+    vertical-align: middle;
     font-size: var(--font-14);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  em { color: var(--c-active) }
+
+  &.t--list {
+    th {
+      padding-left: 8px;
+      &::before {
+        content: '·';
+        padding-right: 4px
+      }
+    }
+    td { padding-right: 8px }
   }
 }

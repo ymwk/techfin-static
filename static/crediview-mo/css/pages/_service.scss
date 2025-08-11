@@ -1,4 +1,11 @@
 // 신용평가 신청
+.service-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
 .service-guide {
   overflow: hidden;
   border-radius: 8px;
@@ -123,9 +130,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   text-align: center;
-  padding-bottom: 15vh
+  // padding-bottom: 15vh;
+  padding-top: 24px
 }
 
 .service-result-desc {
@@ -176,6 +184,11 @@
   width: 100%;
   padding-top: 220px;
   background: url(/static/crediview-mo/image/img/bg_service_progress.png) no-repeat center top / 325px;
+
+  &.t--issue {
+    background-image: url(/static/crediview-mo/image/img/bg_issue_progress.png);
+    background-size: 326px
+   }
 
   .progress {
     position: relative;
@@ -282,80 +295,163 @@
 }
 
 .service-result-msg {
-  width: 100%;
-  padding: 0.6em;
-  border: 1px solid currentColor;
-  font-size: var(--font-16);
-  margin-top: 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 12px var(--spc-w);
+  text-align: center;
+
+  .notice-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: -2px 0;
+  }
+
+  small {
+    font-size: var(--font-12);
+  }
+
+  &.c--error {
+    background-color: rgba(252, 83, 86, 0.7);
+    color: #fff !important;
+  }
+
+  &.c--confirm {
+    background-color: rgba(61, 95, 255, 0.7);
+    color: #fff;
+  }
 }
 
-.service-result-summary {
+.service-result-rating {
   display: flex;
-  gap: 24px;
-  margin-top: 24px;
+  justify-content: center;
+  align-items: center;
+  padding: 28px;
+  background-color: #F2F3F7;
 
-  & > * {
-    flex: 1;
-  }
+  .rating {
+    font-size: var(--font-42);
+    color: var(--fc-rating);
+    font-weight: 700;
+    margin-top: -0.1em;
 
-  .result-box {
-    border: 1px solid #dde4f1;
-    border-radius: 6px;
-    overflow: hidden;
-
-    table {
-      border: 0 hidden;
+    &.c--disabled {
+      opacity: 0.3;
+    }
+    &.s--sm {
+      font-size: var(--font-60);
+      line-height: 1.5;
     }
   }
 
-  .result-rating {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #001a4f;
-    font-size: var(--font-18);
+  .msg {
+    font-size: var(--font-30);
+    font-weight: 700
+  }
+}
 
-    .rating {
-      font-size: var(--font-80);
-      color: var(--fc-rating);
-      font-weight: 700;
-      margin-top: -0.1em;
+.service-result-paper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 222px;
+  height: 144px;
+  border: 9px solid #fff;
+  background: #fff url(/static/crediview-mo/image/img/img_rating_border.svg) no-repeat left top / 100% 100%;
+  box-shadow: 3px 6px 8px 0px #14193A0F;
+  line-height: 1;
 
-      &.c--disabled {
-        opacity: 0.3;
-      }
-      &.s--sm {
-        font-size: var(--font-60);
-        line-height: 1.5;
-      }
-    }
+  &.t--mark::after {
+    content: '';
+    position: absolute;
+    bottom: -19px;
+    right: -21px;
+    width: 47px;
+    height: 70px;
+    background: url(/static/crediview-mo/image/img/img_rating_mark.svg) no-repeat left top / contain;
+  }
+
+  &.t--disabled {
+    color: var(--c-disabled);
+
+    .company, .rating { color: inherit }
+  }
+
+  .tit {
+    font-size: var(--font-12);
+    font-weight: 700;
+  }
+
+  .company {
+    color: #243F64;
+    font-size: var(--font-11)
+  }
+}
+
+.service-result-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+
+  .SOLTable-small {
+    min-width: 300px;
+    white-space: nowrap;
+
+    th { padding-right: 50px }
   }
 }
 
 .service-result-limit {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  gap: 0.25em;
+  align-items: center;
+  gap: 10px;
   margin-top: 48px;
   font-size: var(--font-16);
-  &.block {
-    flex-flow: wrap;
-    & > div:first-child {
-      width: 100%;
-      padding-bottom: 10px;
-    }
-  }
-
-  .desc {
-    width: 100%;
-    &:not(:first-child) {
-      margin-top: 12px;
-    }
-  }
+  text-align: center;
 
   .import-txt {
     color: var(--c-error);
+  }
+
+  .countbox {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+    color: var(--fc-gray2);
+    font-size: var(--font-13);
+  }
+
+  .timebox {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: rgba(77, 124, 254, 0.1);
+    color: var(--c-active);
+    font-weight: 700;
+  }
+
+  .desc {
+    color: var(--fc-gray2);
+    font-size: var(--font-13);
+    line-height: 1.4
+  }
+  
+  .desc2 {
+    font-size: var(--font-14);
+    padding: 0.5em 0
   }
 }
 
@@ -366,11 +462,8 @@
 .result-graph-box {
   display: flex;
   flex-direction: column;
-  padding: 20px 40px;
-  margin-top: 8px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: rgba(212, 205, 199, 0.3);
+  margin: 24px 0 8px;
+  gap: 24px;
 
   .desc {
     margin-top: 8px;
@@ -382,17 +475,19 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  max-width: 490px;
 }
 
 .result-graph-canvas {
   position: relative;
-  flex-grow: 1;
   margin-bottom: -1px;
 
   img,
   svg {
     display: block;
     width: 100%;
+    height: 126px;
+    margin-bottom: -5px
   }
 }
 
@@ -408,13 +503,13 @@
     justify-content: center;
     align-items: center;
     min-width: 70px;
-    height: 50px;
+    height: 32px;
     padding: 0 12px;
     border-radius: 7px;
-    background-color: #fff;
-    font-size: var(--font-24);
+    background-color: #182A50;
+    font-size: var(--font-16);
     font-weight: 700;
-    color: var(--fc-rating);
+    color: #fff;
     line-height: 1.1;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transform: translateX(-50%);
@@ -425,8 +520,8 @@
       top: 100%;
       left: 50%;
       border-style: solid;
-      border-color: #fff transparent transparent transparent;
-      border-width: 8px 5px;
+      border-color: #182A50 transparent transparent transparent;
+      border-width: 5px 4px;
       transform: translateX(-50%);
     }
 
@@ -446,15 +541,16 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    font-size: var(--font-17);
+    font-size: var(--font-12);
+    color: var(--fc-gray2);
 
     .bar {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 30px;
+      height: 28px;
       color: #fff;
-      font-size: var(--font-14);
+      font-size: var(--font-13);
     }
 
     .legend {
@@ -462,6 +558,7 @@
       justify-content: space-between;
       padding: 0 2px;
       line-height: 1.82;
+      padding-top: 6px
     }
 
     &:first-of-type .bar {
@@ -493,7 +590,7 @@
 // 신용평가 신청 - 결제
 .service-payment {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 24px;
 }
 
@@ -504,13 +601,12 @@
 .service-payment-summary {
   display: flex;
   gap: 16px;
-  padding: 24px;
 
   .text {
     flex-grow: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     gap: 8px;
     font-size: var(--font-16);
 
@@ -523,11 +619,24 @@
       font-size: var(--font-18);
     }
     del {
-      padding-left: 0.3em;
-      font-size: var(--font-14);
+      padding-left: 0.5em;
       color: var(--fc-gray2);
     }
   }
+}
+
+.service-payment-list {
+  transform: translateY(16px);
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid var(--tb-border)
+  }
+
+  .SOLIcon-root { width: 1em }
 }
 
 .service-payment-coupon {
@@ -595,17 +704,13 @@
 
 // payment result
 .service-payment-result {
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  align-items: unset;
-  width: 260px;
 }
 
 .service-payment-order {
   display: flex;
   flex-direction: column;
-  padding: 30px 24px 24px;
 }
 
 .service-payment-price {
@@ -620,14 +725,19 @@
   }
 
   .item-total {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid var(--tb-border);
-    font-size: var(--font-16);
+    margin-top: 8px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--tb-border);
+    font-size: var(--font-14);
+    line-height: 1.4;
 
     .value {
-      font-size: var(--font-24);
+      font-size: var(--font-15);
+
+      em { font-size: var(--font-18) }
     }
+
+    .name em { font-size: var(--font-16) }
   }
   .item-discount {
     color: var(--c-error);
@@ -640,12 +750,19 @@
 .service-payment-foot {
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  gap: 12px;
   background-color: var(--c-bg);
   border-radius: 0 0 7px 7px;
+  padding: 16px var(--spc-w);
 
-  .SOLBtn-root {
-    font-weight: 600;
+  .SOLCheck-root .SOLCheck-label {
+    font-size: var(--font-14);
+    line-height: 1.4;
+    color: #404252
+  }
+
+  .service-terms-item {
+    margin: -12px 0
   }
 }
 
@@ -793,14 +910,15 @@
   }
 }
 
+// 약관리스트박스
 .service-terms {
   border: 1px solid var(--tb-border);
   border-radius: 8px;
-  padding: 16px 16px 6px;
+  padding: 0 16px;
 }
 
 .service-terms-header {
-  padding-bottom: 16px;
+  padding: 16px 0;
   margin-bottom: 6px;
   border-bottom: 1px solid var(--tb-border);
   .t--terms-md .SOLCheck-label {
@@ -825,6 +943,14 @@
   .t--terms-md .SOLCheck-label {
     font-size: var(--font-14);
   }
+
+  .SOLIconBtn-root:last-child {
+    margin-right: -6px
+  }
+
+  &:last-child:not(:only-child) {
+    margin-bottom: 6px
+  }
 }
 
 .service-terms-title {
@@ -835,4 +961,70 @@
   font-size: var(--font-16);
 }
 
-// SOLCheck-root t--terms-md
+.service-coupon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 100px 20px 20px;
+    border: 1px solid var(--tb-border);
+    border-radius: 12px;
+    background-color: #fff;
+
+    .name {
+      font-size: var(--font-15);
+      font-weight: 700;
+    }
+
+    .date {
+      font-size: var(--font-12);
+      color: var(--fc-gray1)
+    }
+
+    .label {
+      position: absolute;
+      inset: 0 0 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 82px;
+      padding-top: 22px;
+      border-left: 1px dashed var(--tb-border);
+      color: var(--c-active);
+      font-size: var(--font-13);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 9px;
+        height: 14px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        margin-top: -14px;
+        border-radius: 1px;
+      }
+    }
+  }
+
+  .active {
+    border-color: var(--c-component);
+    box-shadow: 0px 3px 12px 0px rgba(55, 29, 110, 0.07);
+  }
+
+  .disabled {
+    border-color: transparent;
+    .name, .date { opacity: 0.4 }
+    .label {
+      filter: grayscale(100%);
+      color: rgba(34,34,34,0.3);
+    }
+  }
+}

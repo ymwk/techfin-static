@@ -357,6 +357,28 @@
     &::before { transform: translate(-50%, calc(-50% - 7px)) }
     &::after { transform: translate(-50%, calc(-50% + 7px)) }
   }
+
+  &-notice {
+    width: 24px;
+    height: 24px;
+    background: url(/static/crediview-mo/image/icon/ic_notice_w.svg) no-repeat center center
+  }
+
+  &-add {
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 13px;
+      height: 1px;
+      background-color: currentColor;
+      opacity: 0.8;
+    }
+    &::after {
+      rotate: 90deg
+    }
+  }
 }
 
 .SOLBtn-root {
@@ -437,12 +459,22 @@
 
   &.c--success,
   &.c--error,
-  &.c--active {
+  &.c--active,
+  &.c--warn {
     width: 40px;
     height: 40px;
   }
 
   &.c--active {
     background: url(/static/crediview-mo/image/icon/ic_alert_active.svg) no-repeat center center / cover;
+  }
+  &.c--warn {
+    background: url(/static/crediview-mo/image/icon/ic_alert_warn.svg) no-repeat center center / cover;
+  }
+  &.c--error {
+    background: url(/static/crediview-mo/image/icon/ic_alert_error.svg) no-repeat center center / cover;
+  }
+  &.c--success {
+    background: url(/static/crediview-mo/image/icon/ic_alert_success.svg) no-repeat center center / cover;
   }
 }

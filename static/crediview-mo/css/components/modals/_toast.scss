@@ -1,52 +1,26 @@
 .SOLToast-root {
-  z-index: 9999;
+  z-index: 1000;
   position: fixed;
-  inset: 0;
+  inset: auto var(--spc-w) 34px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column-reverse;
   align-items: center;
+  justify-content: flex-end;
   gap: 24px;
-  &.bottom-position {
-    justify-content: flex-end;
-    .SOLToast-box {
-      margin-bottom: 20px;
-    }
-  }
-
-  &.p--fixed {
-    position: absolute;
-    inset: unset;
-
-    .SOLToast-box {
-      box-shadow: unset;
-    }
-  }
-  &.form-toast-type {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: 20px !important;
-    left: 50% !important;
-    transform: translate(-50%, 0);
-    display: block;
-    .SOLToast-box {
-      width: 309px;
-      min-height: 56px;
-      border-radius: 2px;
-    }
-  }
 }
 
 .SOLToast-backdrop {
   @include backdrop;
+  position: fixed;
+  inset: 0;
 }
 
 .SOLToast-box {
   position: relative;
   display: flex;
   gap: 24px;
-  min-width: 100px;
+  width: 100%;
+  max-width: 768px;
   min-height: 52px;
   padding: 14px 24px;
   background-color: #283556;

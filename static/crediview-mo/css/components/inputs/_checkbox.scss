@@ -5,6 +5,7 @@
   min-height: 2em;
   line-height: 18px;
   font-size: var(--font-14);
+  text-align: left;
   &.mgt-15 {
     margin-top: 15px;
   }
@@ -69,7 +70,7 @@
 
 .SOLCheck-label {
   display: inline-flex;
-  align-items: center;
+  // align-items: center;
   gap: 6px;
 
   [type="checkbox"] {
@@ -129,6 +130,12 @@
 
 .SOLAccordian-item .SOLCheck-root.t--terms-md .SOLCheck-label {
   font-size: var(--font-14)
+}
+
+.SOLAlert-root .SOLCheck-root.t--terms .SOLCheck-label {
+  align-items: center;
+  font-size: var(--font-13);
+  line-height: 1.4
 }
     
 

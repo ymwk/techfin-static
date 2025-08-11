@@ -44,10 +44,24 @@
   &-pagelist {
     padding: 10px;
 
+    .ing {
+      &::after {
+        content: '진행중';
+        display: inline-block;
+        padding: 4px 8px;
+        margin-left: 10px;
+        border-radius: 12px;
+        font-size: 11px;
+        background-color: #fb1cb1;
+        color: #fff;
+      }
+    }
+
     a {
       display: inline-flex;
       align-items: center;
       transition: color 0.2s;
+      color: #000;
 
       &:hover {
         color: #fb1cb1;
@@ -60,11 +74,13 @@
       flex-wrap: wrap;
       padding: 10px;
       font-size: 14px;
+
+      &.hr { border-color: #222 }
     }
 
     & > li {
       &::before {
-        content: "";
+        content: '';
         width: 4px;
         height: 4px;
         border-radius: 50%;
@@ -82,13 +98,18 @@
       width: 100%;
       padding-top: 10px;
 
+      a {
+        font-size: 0.9em;
+        color: #777;
+      }
+
       li {
         padding-top: 5px;
         padding-bottom: 5px;
         border-top: 1px dotted rgba(0, 0, 0, 0.1);
 
         &::before {
-          content: "";
+          content: '';
           width: 7px;
           height: 7px;
           border-left: 2px solid currentColor;
@@ -122,19 +143,42 @@
     opacity: 0.5;
   }
 
-  &-pop {
+  &-pop,
+  &-toast,
+  &-snack {
     &::before {
-      content: "popup";
+      content: '';
       height: 12px;
       line-height: 12px;
       margin-right: 5px;
       font-size: 9px;
       font-weight: 700;
       text-transform: uppercase;
-      background-color: #222;
       color: #fff;
       padding: 0 3px;
       border-radius: 2px;
+    }
+  }
+
+
+  &-pop {
+    &::before {
+      content: 'popup';
+      background-color: #222;
+    }
+  }
+
+  &-toast {
+    &::before {
+      content: 'toast';
+      background-color: #3B5DFB;
+    }
+  }
+
+  &-snack {
+    &::before {
+      content: 'snackbar';
+      background-color: #7299E7;
     }
   }
 
@@ -150,7 +194,7 @@
       vertical-align: middle;
 
       &::before {
-        content: "●";
+        content: '●';
         font-size: 0.5em;
         vertical-align: middle;
         padding-right: 0.8em;
@@ -282,7 +326,7 @@
       }
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         left: 0;
@@ -300,7 +344,7 @@
 
     .up {
       &::after {
-        content: "up";
+        content: 'up';
         position: absolute;
         top: 50%;
         right: 0;
@@ -375,7 +419,7 @@
             &.txt-ps {
               position: relative;
               &::before {
-                content: "CTA";
+                content: 'CTA';
                 font-size: var(--font-14);
                 font-weight: 400;
                 color: #7b7b7b;
@@ -385,13 +429,13 @@
               &.default-txt {
                 position: relative;
                 &::before {
-                  content: "DEFAULT";
+                  content: 'DEFAULT';
                 }
               }
               &.ouline-txt {
                 position: relative;
                 &::before {
-                  content: "OUTLINE";
+                  content: 'OUTLINE';
                 }
               }
             }
@@ -511,7 +555,7 @@
       color: #fff;
 
       &::after {
-        content: "×";
+        content: '×';
         font-size: 30px;
         font-weight: 100;
         // content: "→";
@@ -558,7 +602,7 @@
     line-height: 1.6em;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 2em;
       bottom: 0;
@@ -570,7 +614,7 @@
       position: relative;
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 8px;
         bottom: 13px;
@@ -586,7 +630,7 @@
       padding-left: 1em;
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: calc(1em - 9px);
         left: 4px;

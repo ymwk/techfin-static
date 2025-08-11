@@ -5,6 +5,7 @@
   align-items: center;
   gap: 0.4em;
   height: var(--form-h);
+  min-height: var(--form-h);
   padding: 0 var(--form-pd);
   border-radius: var(--form-round);
   border: 1px solid rgba(10, 43, 88, 0.18);
@@ -94,11 +95,13 @@
   &.s {
     &--lg {
       height: 48px;
+      min-height: 48px;
       font-size: var(--font-16);
     }
 
     &--sm {
       height: 30px;
+      min-height: 30px;
       padding: 0 10px;
       font-size: var(--font-13);
     }
@@ -107,10 +110,11 @@
   //width
   &.w {
     &--full {
-      flex: 1 0 auto;
-      &:only-child { width: 100% }
+      width: 100%;
+      flex: 1 1
+      // &:only-child { width: 100% }
     }
-    &--btm { min-width: 156px}
+    &--grow { flex: 1 0 auto }
   }
 
   &.bottom {
