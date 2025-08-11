@@ -2860,9 +2860,15 @@ button.swiper-pagination-bullet {
   display: flex;
   align-items: center;
   gap: 20px;
+  text-align: left;
 }
 .SOLRadio-root .SOLTitle-t3 {
   min-width: 130px;
+}
+.SOLRadio-root.t--column {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .SOLRadio-label {
@@ -3449,13 +3455,21 @@ table .SOLCheck-root {
   gap: 8px;
   margin-bottom: 6px;
 }
+.SOLSelectGroup-root.t--min {
+  flex-direction: row;
+}
 .SOLSelectGroup-root.t--min .SOLSelectGroup-label {
-  gap: 10px;
+  flex-direction: column;
+  gap: 0;
+  text-align: center;
 }
 .SOLSelectGroup-root.t--min .SOLSelectGroup-label input[type=radio] {
   position: absolute;
   opacity: 0;
   z-index: -1;
+}
+.SOLSelectGroup-root.t--min .SOLSelectGroup-label .SOLTitle-t4 {
+  font-size: var(--font-16);
 }
 .SOLSelectGroup-root .SOLCombobox-root {
   width: unset;
@@ -3528,7 +3542,7 @@ table .SOLCheck-root {
   width: 48px;
   height: 48px;
   border-radius: 8px;
-  background: #F6F8FA no-repeat center center/contain;
+  background: no-repeat center center/contain;
 }
 .SOLSelectGroup-label .ico-card {
   background-image: url(../../Common/image/img/img_ic_card.svg);
@@ -4869,6 +4883,12 @@ table .SOLCheck-root {
 .SOLSnackbar-root.h--max .SOLSnackbar-box {
   min-height: 90svh;
 }
+.SOLSnackbar-root.c--bg .SOLSnackbar-box {
+  background-color: rgb(245, 247, 250);
+}
+.SOLSnackbar-root.c--bg .SOLSnackbar-footer {
+  background: linear-gradient(to top, rgb(245, 247, 250) 82px, rgba(245, 247, 250, 0));
+}
 
 .SOLSnackbar-backdrop {
   position: absolute;
@@ -4896,10 +4916,10 @@ table .SOLCheck-root {
   box-shadow: 0px -2px 12px 0px rgba(0, 0, 0, 0.07);
   word-break: keep-all;
   animation: snackIn 0.8s 0.2s var(--ease) both;
-  overflow-y: auto;
 }
 
 .SOLSnackbar-header {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -4923,28 +4943,30 @@ table .SOLCheck-root {
   flex-direction: column;
   gap: 8px;
   padding: 24px var(--spc-w);
-  background-color: #fff;
 }
-
-.SOLSnackbar-bg {
-  background-color: rgb(245, 247, 250);
+.SOLSnackbar-section:not(.SOLSnackbar-bg) {
+  background-color: #fff;
 }
 
 .SOLSnackbar-body {
   flex-grow: 1;
+  overflow-y: auto;
 }
 .SOLSnackbar-body .SOLSnackbar-section:first-child {
   padding-top: 0;
+}
+.SOLSnackbar-body .hr-comm {
+  width: calc(100% - var(--spc-w) * 2);
+  margin: 0 auto;
 }
 
 .SOLSnackbar-footer {
   margin-top: 0 !important;
 }
 
-.SOLSnackbar-bg .SOLSnackbar-footer {
-  background: linear-gradient(to top, rgb(245, 247, 250) 82px, rgba(245, 247, 250, 0));
+.SOLSnackbar-msgbox {
+  padding: 0 24px;
 }
-
 .SOLSnackbar-msgbox .SOLTable-small.t--list th {
   color: #404252;
 }
@@ -4952,10 +4974,39 @@ table .SOLCheck-root {
   text-align: right;
 }
 
+.SOLSnackbar-msgbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-14);
+  padding: 6px 0;
+}
+
+.SOLSnackbar-msgbox-body {
+  display: flex;
+  flex-direction: column;
+}
+.SOLSnackbar-msgbox-body .SOLTable-small {
+  margin: 20px 0;
+}
+.SOLSnackbar-msgbox-body .hr-comm {
+  width: 100%;
+}
+
+.js-accordian-root.st--open .SOLSnackbar-msgbox-body {
+  max-height: 500px;
+}
+
 .service-snack-coupon {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.service-snackbar-account {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .SOLPopper-notify:hover ::-webkit-scrollbar-thumb {
