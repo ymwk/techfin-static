@@ -122,3 +122,13 @@
     .tit { display: none }
   }
 }
+
+
+.stepper-label {
+  display: block;
+  font-size: var(--font-12);
+  font-weight: 500;
+  color: var(--c-active);
+  margin-bottom: 20px;
+  font-weight: 700;
+}

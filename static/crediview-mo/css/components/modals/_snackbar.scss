@@ -99,7 +99,9 @@
 
 .SOLSnackbar-msgbox {
   @extend .SOLAlert-msgbox;
-  padding: 0 24px;  
+  padding: 12px 24px;
+
+  &.js-accordian-root { padding: 0 18px }
 
   .SOLTable-small.t--list {
     th {
@@ -109,6 +111,8 @@
       text-align: right;
     }
   }
+
+  & + & { margin-top: -10px }
 }
 
 .SOLSnackbar-msgbox-header {
@@ -116,7 +120,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: var(--font-14);
-  padding: 6px 0;  
+  padding: 7px 0
 }
 
 .SOLSnackbar-msgbox-body {

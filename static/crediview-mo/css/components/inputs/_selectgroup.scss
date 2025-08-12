@@ -9,7 +9,7 @@
 
     .SOLSelectGroup-label {
       flex-direction: column;
-      gap: 0;
+      gap: 3px;
       text-align: center;
 
       input[type="radio"] {
@@ -19,8 +19,11 @@
       }
 
       .SOLTitle-t4 {
-        font-size: var(--font-16)
+        font-size: var(--font-16);
+        line-height: 1.4
       }
+
+      .label { gap: 6px }
     }
   }
 
@@ -42,6 +45,7 @@
   line-height: 1.5;
   font-size: var(--font-13);
   transition: border-color 0.2s;
+  word-break: keep-all;
 
   input[type="radio"] {
     appearance: none;

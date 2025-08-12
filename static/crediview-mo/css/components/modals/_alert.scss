@@ -94,6 +94,21 @@
       content: '· ';
     }
   }
+
+  .msg-expdate {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    color: var(--fc-gray1);
+    font-size: var(--font-13);
+
+    em {
+      color: var(--c-error);
+      font-size: var(--font-14)
+    }
+  }
+
+  .SOLTitle-t4 { padding: 6px 0 8px }
 }
 
 .SOLAlert-msgbox-list {

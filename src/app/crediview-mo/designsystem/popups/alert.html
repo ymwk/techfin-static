@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - Modal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/designsystem.css" />
+    <style>
+      .SOLAlert-root {
+        position: relative;
+        padding: 20px 0
+      }
+    </style>
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Confirm/Alert popup</h2>
+        <p class="comp-pagetitle-desc">모달 팝업 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">Code View</button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Confirm</h3>
+          <!-- Confirm start -->
+          <div class="SOLAlert-root">
+            <div class="SOLAlert-backdrop"></div>
+            <div class="SOLAlert-box">
+              <div class="SOLAlert-icon">
+                <!-- error icon -->
+                <i class="SOLIcon-root SOLIcon-alert c--active"></i>
+              </div>
+              <div class="SOLAlert-content">
+                <div class="SOLAlert-msgbox">
+                  <p class="SOLAlert-msgbox-title">기업신용평가를 시작합니다.</p>
+                  <p class="SOLAlert-msgbox-text">
+                    화면을 벗어나도 기업신용평가는 계속 진행되며<br />
+                    완료시, 등록하신 휴대폰 번호로 알려드립니다.
+                  </p>
+                </div>
+              </div>
+              <div class="SOLAlert-action">
+                <button type="button" class="SOLBtn-root t--contained w--full">확인</button>
+              </div>
+            </div>
+          </div>
+          <!-- Confirm end -->
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Alert</h3>
+            <!-- Alert start -->
+            <div class="SOLAlert-root">
+              <div class="SOLAlert-backdrop"></div>
+              <div class="SOLAlert-box">
+                <div class="SOLAlert-icon">
+                  <!-- error icon -->
+                  <i class="SOLIcon-root SOLIcon-alert c--warn"></i>
+                </div>
+                <div class="SOLAlert-content">
+                  <p>지금 신용평가 등급 확인서를 <br />발급(결제) 하시겠습니까?</p>
+                  <p class="SOLText-desc small">확인서 제출은 발급(결제) 후 가능하며 <br />유효기간은 1년입니다.</p>
+                </div>
+                <div class="SOLAlert-action">
+                  <button type="button" class="SOLBtn-root t--outlined w--full">취소</button>
+                  <button type="button" class="SOLBtn-root t--contained w--full">진행</button>
+                </div>
+              </div>
+            </div>
+            <!-- Alert end -->
+          </div>
+        </section>
+        
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

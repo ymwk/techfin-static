@@ -35,15 +35,15 @@
   padding: 0 20px;
   background: linear-gradient(to top, rgba(255,255,255,1) 82px, rgba(255,255,255,0));
 
-  .console-footer-btns {
-    position: relative;
-    display: flex;
-    gap: 8px;
-    margin: 20px 0 34px;
-  }
-
   .SOLBtn-root { font-weight: 700 }
   .SOLBtn-root.t--contained { font-weight: 600 }
+}
+
+.console-footer-btns {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  margin: 20px 0 34px;
 }
 
 .footer-topBtn {
