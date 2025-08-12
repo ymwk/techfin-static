@@ -5046,6 +5046,65 @@ table .SOLCheck-root {
   gap: 24px;
 }
 
+.no-touch-action {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.SOLMembers-root {
+  z-index: 997;
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+}
+.SOLMembers-root form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.SOLMembers-header {
+  z-index: 99;
+  position: fixed;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  height: var(--header-h);
+  padding-left: calc(var(--spc-w) - 10px);
+  padding-right: var(--spc-w);
+  background-color: #fff;
+}
+.SOLMembers-header .SOLTitle-t2 {
+  line-height: 1;
+  transform: translateY(2px);
+}
+
+.SOLMembers-container {
+  padding: calc(var(--header-h) + 16px) var(--spc-w) 0;
+}
+
+.loginbox-wrap {
+  position: relative;
+}
+.loginbox-wrap .service-result {
+  padding-top: 48px;
+}
+
+.loginbox-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.loginbox-inputs:not(:first-child) {
+  margin-top: 30px;
+}
+
+.loginbox-inputs-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .SOLPopper-notify:hover ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -5964,7 +6023,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   margin-bottom: 24px;
 }
 
-.console-root, .members-root {
+.console-root, .SOLMembers-root {
   height: 100vh;
   height: 100svh;
   display: flex;
@@ -5976,7 +6035,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   background-color: #fff;
 }
 
-.console-container, .members-container {
+.console-container, .SOLMembers-container {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -5990,7 +6049,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   padding: 24px var(--spc-w);
 }
 
-.console-footer, .members-footer, .SOLSnackbar-footer {
+.console-footer, .SOLSnackbar-footer, .SOLMembers-footer {
   z-index: 99;
   position: sticky;
   bottom: 0;
@@ -6001,14 +6060,14 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   padding: 0 20px;
   background: linear-gradient(to top, rgb(255, 255, 255) 82px, rgba(255, 255, 255, 0));
 }
-.console-footer .SOLBtn-root, .members-footer .SOLBtn-root, .SOLSnackbar-footer .SOLBtn-root {
+.console-footer .SOLBtn-root, .SOLSnackbar-footer .SOLBtn-root, .SOLMembers-footer .SOLBtn-root {
   font-weight: 700;
 }
-.console-footer .SOLBtn-root.t--contained, .members-footer .SOLBtn-root.t--contained, .SOLSnackbar-footer .SOLBtn-root.t--contained {
+.console-footer .SOLBtn-root.t--contained, .SOLSnackbar-footer .SOLBtn-root.t--contained, .SOLMembers-footer .SOLBtn-root.t--contained {
   font-weight: 600;
 }
 
-.console-footer-btns, .members-footer-btns, .SOLSnackbar-footer-btns {
+.console-footer-btns, .SOLSnackbar-footer-btns, .SOLMembers-footer .footer-btns {
   position: relative;
   display: flex;
   gap: 8px;
@@ -6145,65 +6204,6 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 }
 .SOLTable-small.t--list td {
   padding-right: 8px;
-}
-
-.no-touch-action {
-  overflow: hidden;
-  touch-action: none;
-}
-
-.members-root {
-  z-index: 997;
-  position: fixed;
-  inset: 0;
-  overflow-y: auto;
-}
-.members-root form {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.members-header {
-  z-index: 99;
-  position: fixed;
-  inset: 0 0 auto;
-  display: flex;
-  align-items: center;
-  height: var(--header-h);
-  padding-left: calc(var(--spc-w) - 10px);
-  padding-right: var(--spc-w);
-  background-color: #fff;
-}
-.members-header .SOLTitle-t2 {
-  line-height: 1;
-  transform: translateY(2px);
-}
-
-.members-container {
-  padding: calc(var(--header-h) + 16px) var(--spc-w) 0;
-}
-
-.members-loginbox {
-  position: relative;
-}
-.members-loginbox .service-result {
-  padding-top: 48px;
-}
-
-.loginbox-inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.loginbox-inputs:not(:first-child) {
-  margin-top: 30px;
-}
-
-.loginbox-inputs-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .service-header {
@@ -6344,10 +6344,10 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   color: var(--fc-default);
 }
 
-.service-result .console-footer, .service-result .SOLSnackbar-footer, .service-result .members-footer {
+.service-result .console-footer, .service-result .SOLSnackbar-footer, .service-result .SOLMembers-footer {
   margin-top: 24px;
 }
-.service-result .console-footer.mgt0, .service-result .mgt0.SOLSnackbar-footer, .service-result .mgt0.members-footer {
+.service-result .console-footer.mgt0, .service-result .mgt0.SOLSnackbar-footer, .service-result .mgt0.SOLMembers-footer {
   margin-top: 0px;
 }
 .service-result .service-result-desc .apply-ratings {
@@ -6969,7 +6969,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   margin-top: 40px;
   text-align: center;
 }
-.service-section .console-footer, .service-section .SOLSnackbar-footer, .service-section .members-footer {
+.service-section .console-footer, .service-section .SOLSnackbar-footer, .service-section .SOLMembers-footer {
   margin-top: 40px;
 }
 .service-section .wrapper-desc {

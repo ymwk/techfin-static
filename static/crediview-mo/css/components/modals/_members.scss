@@ -3,7 +3,7 @@
   touch-action: none;
 }
 
-.members-root {
+.SOLMembers-root {
   @extend .console-root;
   z-index: 997;
   position: fixed;
@@ -18,7 +18,7 @@
   }
 }
 
-.members-header {
+.SOLMembers-header {
   z-index: 99;
   position: fixed;
   inset: 0 0 auto;
@@ -35,21 +35,21 @@
   }
 }
 
-.members-container {
+.SOLMembers-container {
   @extend .console-container;
   padding: calc(var(--header-h) + 16px) var(--spc-w) 0;
   // overflow-y: auto;
 }
 
-.members-footer {
+.SOLMembers-footer {
   @extend .console-footer;
+
+  .footer-btns {
+    @extend .console-footer-btns;
+  }
 }
 
-.members-footer-btns {
-  @extend .console-footer-btns;
-}
-
-.members-loginbox {
+.loginbox-wrap {
   position: relative;
 
   .service-result {
