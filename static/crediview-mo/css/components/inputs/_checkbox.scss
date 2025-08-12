@@ -18,7 +18,7 @@
     .SOLCheck-label {
       gap: 10px;
 
-      [type="checkbox"] {
+      [type='checkbox'] {
         width: 24px;
         height: 24px;
 
@@ -35,9 +35,9 @@
   }
 
   &.t--terms {
-     [type="checkbox"] {
-        border-radius: 50%;
-     }
+    [type='checkbox'] {
+      border-radius: 50%;
+    }
   }
 
   &.t--terms-md {
@@ -45,7 +45,7 @@
       font-size: var(--font-15);
       line-height: 24px;
 
-      [type="checkbox"] {
+      [type='checkbox'] {
         width: 24px;
         height: 24px;
         border: 0;
@@ -55,9 +55,9 @@
           width: 8px;
           height: 13px;
         }
-        &:checked {          
+        &:checked {
           &::after {
-            border-color: var(--c-component)
+            border-color: var(--c-component);
           }
         }
       }
@@ -74,7 +74,7 @@
   // align-items: center;
   gap: 6px;
 
-  [type="checkbox"] {
+  [type='checkbox'] {
     appearance: none;
     flex-shrink: 0;
     position: relative;
@@ -87,7 +87,7 @@
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -130,21 +130,19 @@
 }
 
 .SOLAccordian-item .SOLCheck-root.t--terms-md .SOLCheck-label {
-  font-size: var(--font-14)
+  font-size: var(--font-14);
 }
 
 .SOLAlert-root .SOLCheck-root.t--terms .SOLCheck-label {
   align-items: center;
   font-size: var(--font-13);
-  line-height: 1.4
+  line-height: 1.4;
 }
-    
-
 
 // agreement-type01
 .agreement-type01 {
   .SOLCheck-label {
-    [type="checkbox"] {
+    [type='checkbox'] {
       border-radius: 100%;
       background-color: #fff;
       &::after {
@@ -152,7 +150,7 @@
         border-bottom: 2px solid #bbbbbd;
       }
     }
-    [type="checkbox"]:checked {
+    [type='checkbox']:checked {
       border: none;
       &::after {
         border-right: 2px solid #fff;
@@ -164,7 +162,7 @@
 // agreement-type02
 .agreement-type02 {
   .SOLCheck-label {
-    [type="checkbox"] {
+    [type='checkbox'] {
       border: none;
       background-color: #fff;
       &::after {
@@ -172,7 +170,7 @@
         border-bottom: 2px solid #bbbbbd;
       }
     }
-    [type="checkbox"]:checked {
+    [type='checkbox']:checked {
       background-color: #fff !important;
       border: none;
       &::after {
@@ -187,9 +185,8 @@ table .SOLCheck-root {
   display: inline-flex;
 }
 
-.members-loginbox {
-  input[type="checkbox"] {
+.loginbox-wrap {
+  input[type='checkbox'] {
     background-color: #fff;
   }
 }
-

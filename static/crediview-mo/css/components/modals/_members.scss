@@ -16,6 +16,10 @@
     flex-direction: column;
     // overflow: hidden
   }
+
+  .SOLMembers-container {
+    padding: calc(var(--header-h) + 16px) var(--spc-w) 0;
+  }
 }
 
 .SOLMembers-header {
@@ -37,8 +41,6 @@
 
 .SOLMembers-container {
   @extend .console-container;
-  padding: calc(var(--header-h) + 16px) var(--spc-w) 0;
-  // overflow-y: auto;
 }
 
 .SOLMembers-footer {

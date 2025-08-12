@@ -3073,7 +3073,7 @@ table .SOLCheck-root {
   display: inline-flex;
 }
 
-.members-loginbox input[type=checkbox] {
+.loginbox-wrap input[type=checkbox] {
   background-color: #fff;
 }
 
@@ -5062,6 +5062,9 @@ table .SOLCheck-root {
   display: flex;
   flex-direction: column;
 }
+.SOLMembers-root .SOLMembers-container {
+  padding: calc(var(--header-h) + 16px) var(--spc-w) 0;
+}
 
 .SOLMembers-header {
   z-index: 99;
@@ -5077,10 +5080,6 @@ table .SOLCheck-root {
 .SOLMembers-header .SOLTitle-t2 {
   line-height: 1;
   transform: translateY(2px);
-}
-
-.SOLMembers-container {
-  padding: calc(var(--header-h) + 16px) var(--spc-w) 0;
 }
 
 .loginbox-wrap {
