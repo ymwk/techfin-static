@@ -7,6 +7,8 @@
   line-height: 18px;
   font-size: var(--font-14);
   text-align: left;
+  word-break: keep-all;
+
   &.mgt-15 {
     margin-top: 15px;
   }
@@ -38,6 +40,10 @@
     [type='checkbox'] {
       border-radius: 50%;
     }
+
+    .SOLCheck-label {
+      align-items: center;
+    }
   }
 
   &.t--terms-md {
@@ -64,12 +70,45 @@
     }
   }
 
+  &.service-public-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    border-top: 0;
+
+    .list-item {
+      width: 100%;
+      border: 0;
+      padding-left: 62px;
+      background-position-x: var(--spc-w)
+    }
+
+    .tit { font-weight: 500 }
+
+    .SOLCheck-label {
+      width: 100%;
+
+      &:has([type='checkbox']:checked) {
+        background-color: #F7F8FA;
+      }
+    }
+
+    [type='checkbox'] {
+      position: absolute;
+      top: 50%;
+      right: var(--spc-w);
+      transform: translateY(-50%)
+    }
+  }
+
   .SOLText-note {
     display: block;
   }
 }
 
 .SOLCheck-label {
+  position: relative;
   display: inline-flex;
   // align-items: center;
   gap: 6px;

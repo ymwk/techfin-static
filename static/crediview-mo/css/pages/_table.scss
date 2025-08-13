@@ -10,6 +10,7 @@
     color: var(--fc-gray2);
     font-weight: 400;
     text-align: left;
+    white-space: nowrap;
   }
 
   td {
@@ -21,6 +22,8 @@
   }
 
   em { color: var(--c-active) }
+
+  .SOLIconBtn-root { min-height: 28px }
 
   &.t--list {
     th {

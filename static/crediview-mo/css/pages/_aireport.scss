@@ -1,0 +1,32 @@
+.index-footer {
+  padding: 35px var(--spc-w) 52px;
+  background-color: #1A1A1B;
+  color: #7B7B7B;
+  font-size: var(--font-12)
+}
+
+.section-ai {
+  height: 100vh;
+  height: 100svh;
+
+  &:nth-child(3) {
+    background: linear-gradient(180deg, #F4F6FF 21.62%, #E4EDFF 105.25%);
+  }
+}
+
+.ai-intro {
+  height: calc(100vh - var(--header-h));
+  height: calc(100svh - var(--header-h));
+  background: url(../image/ai/bg_ai_intro.png) no-repeat center center / cover
+}
+
+.index-topBtn {  
+  position: sticky;
+  bottom: 0;
+  
+  .footer-topBtn {
+    @extend .footer-topBtn;
+    top: auto !important;
+    bottom: 30px;    
+  }
+}

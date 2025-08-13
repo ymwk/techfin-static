@@ -55,7 +55,19 @@
   .SOLSnackbar-title {
     font-size: var(--font-18);
     font-weight: 700;
-    color: var(--fc-default)
+    color: var(--fc-default);
+
+    em {
+      color: var(--c-active)
+    }
+  }
+
+  .note {
+    position: absolute;
+    top: 50%;
+    right: var(--spc-w);
+    transform: translateY(-50%);
+    font-size: var(--font-13)
   }
   
   // &::before {

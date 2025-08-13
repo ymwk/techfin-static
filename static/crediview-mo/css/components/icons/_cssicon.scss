@@ -17,7 +17,7 @@
   &-gt--d,
   &-gt--l {
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -56,7 +56,7 @@
 
   &-gt--r.c-gray {
     &::after {
-      content: "";
+      content: '';
       border-right: 2px solid #95989b;
       border-bottom: 2px solid #95989b;
     }
@@ -89,7 +89,7 @@
   &-chk {
     background-color: var(--c-success) !important;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -106,28 +106,28 @@
   &-err {
     background-color: var(--c-error) !important;
     &::after {
-      content: "!";
+      content: '!';
     }
   }
 
   &-warn {
     background-color: var(--c-warn) !important;
     &::after {
-      content: "!";
+      content: '!';
     }
   }
 
   &-cancel {
     background-color: var(--fc-default) !important;
     &::after {
-      content: "!";
+      content: '!';
     }
   }
 
   &-wait {
     background-color: var(--c-active) !important;
     &::after {
-      content: "···";
+      content: '···';
       margin-top: -2px;
     }
   }
@@ -137,7 +137,7 @@
     font-weight: 100;
 
     &::after {
-      content: "×";
+      content: '×';
       position: absolute;
       top: 45%;
       left: 50%;
@@ -155,7 +155,7 @@
 
     &.s--lg {
       font-size: var(--font-36);
-      font-weight: 200
+      font-weight: 200;
     }
   }
 
@@ -164,21 +164,20 @@
     background-color: transparent;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
       height: 100%;
-      background: url(../../Common/image/icon/ic_eye.svg) no-repeat center
-        center / contain;
+      background: url(../../Common/image/icon/ic_eye.svg) no-repeat center center / contain;
     }
   }
 
   &-view--off {
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -194,7 +193,7 @@
     font-weight: 300;
 
     &::after {
-      content: "→";
+      content: '→';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -213,7 +212,7 @@
     font-weight: 300;
 
     &::after {
-      content: "→";
+      content: '→';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -232,7 +231,7 @@
     font-weight: 300;
 
     &::after {
-      content: "→";
+      content: '→';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -251,7 +250,7 @@
     font-weight: 300;
 
     &::after {
-      content: "→";
+      content: '→';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -269,7 +268,7 @@
     font-size: var(--font-20);
     font-weight: 300;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 80%;
       left: 50%;
@@ -277,11 +276,10 @@
       margin-top: -1px;
       width: 17px;
       height: 10px;
-      background: url(../../Common/image/icon/ic_dwn_scroll.png) no-repeat
-        center center;
+      background: url(../../Common/image/icon/ic_dwn_scroll.png) no-repeat center center;
     }
     &::before {
-      content: "Scroll";
+      content: 'Scroll';
       font-size: 12px;
       font-weight: 500;
       color: #fff;
@@ -299,7 +297,7 @@
     min-height: unset;
 
     &::after {
-      content: "";
+      content: '';
       border-style: solid;
       border-color: currentColor transparent transparent transparent;
       border-width: 5px 5px;
@@ -312,7 +310,7 @@
     text-align: center;
     overflow: hidden;
     &::after {
-      content: "…";
+      content: '…';
       font-size: var(--font-20);
       text-align: center;
       transform: rotate(90deg) translateY(-0.3em);
@@ -331,7 +329,7 @@
 
   &-alarm {
     width: 22px;
-    background: url(/static/crediview-mo/image/icon/ic_alarm.svg) no-repeat center center / contain;
+    background: url(../image/icon/ic_alarm.svg) no-repeat center center / contain;
   }
 
   &-hamburger {
@@ -351,22 +349,27 @@
       height: 2px;
       border-radius: 2px;
       background-color: currentColor;
-      transition: transform .2s
+      transition: transform 0.2s;
     }
 
-    &::before { transform: translate(-50%, calc(-50% - 7px)) }
-    &::after { transform: translate(-50%, calc(-50% + 7px)) }
+    &::before {
+      transform: translate(-50%, calc(-50% - 7px));
+    }
+    &::after {
+      transform: translate(-50%, calc(-50% + 7px));
+    }
   }
 
   &-notice {
     width: 24px;
     height: 24px;
-    background: url(/static/crediview-mo/image/icon/ic_notice_w.svg) no-repeat center center
+    background: url(../image/icon/ic_notice_w.svg) no-repeat center center;
   }
 
   &-add {
-    &::before, &::after {
-      content: "";
+    &::before,
+    &::after {
+      content: '';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -376,7 +379,7 @@
       opacity: 0.8;
     }
     &::after {
-      rotate: 90deg
+      rotate: 90deg;
     }
   }
 }
@@ -421,7 +424,7 @@
   animation: refresh 1s linear infinite;
 
   &::before {
-    content: "";
+    content: '';
     box-sizing: border-box;
     position: absolute;
     inset: 0px;
@@ -466,15 +469,15 @@
   }
 
   &.c--active {
-    background: url(/static/crediview-mo/image/icon/ic_alert_active.svg) no-repeat center center / cover;
+    background: url(../image/icon/ic_alert_active.svg) no-repeat center center / cover;
   }
   &.c--warn {
-    background: url(/static/crediview-mo/image/icon/ic_alert_warn.svg) no-repeat center center / cover;
+    background: url(../image/icon/ic_alert_warn.svg) no-repeat center center / cover;
   }
   &.c--error {
-    background: url(/static/crediview-mo/image/icon/ic_alert_error.svg) no-repeat center center / cover;
+    background: url(../image/icon/ic_alert_error.svg) no-repeat center center / cover;
   }
   &.c--success {
-    background: url(/static/crediview-mo/image/icon/ic_alert_success.svg) no-repeat center center / cover;
+    background: url(../image/icon/ic_alert_success.svg) no-repeat center center / cover;
   }
 }

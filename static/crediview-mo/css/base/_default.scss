@@ -114,4 +114,11 @@ hr {
   flex-direction: column;
 }
 
-html { scroll-behavior: smooth }
+// html { scroll-behavior: smooth }
+
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}

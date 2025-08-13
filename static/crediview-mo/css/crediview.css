@@ -804,8 +804,11 @@ hr {
   flex-direction: column;
 }
 
-html {
-  scroll-behavior: smooth;
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  overflow: hidden;
 }
 
 /**
@@ -2160,7 +2163,7 @@ button.swiper-pagination-bullet {
 }
 .SOLIcon-alarm {
   width: 22px;
-  background: url(/static/crediview-mo/image/icon/ic_alarm.svg) no-repeat center center/contain;
+  background: url(../image/icon/ic_alarm.svg) no-repeat center center/contain;
 }
 .SOLIcon-hamburger {
   width: 20px;
@@ -2189,7 +2192,7 @@ button.swiper-pagination-bullet {
 .SOLIcon-notice {
   width: 24px;
   height: 24px;
-  background: url(/static/crediview-mo/image/icon/ic_notice_w.svg) no-repeat center center;
+  background: url(../image/icon/ic_notice_w.svg) no-repeat center center;
 }
 .SOLIcon-add::before, .SOLIcon-add::after {
   content: "";
@@ -2269,16 +2272,16 @@ button.swiper-pagination-bullet {
   height: 40px;
 }
 .SOLIcon-alert.c--active {
-  background: url(/static/crediview-mo/image/icon/ic_alert_active.svg) no-repeat center center/cover;
+  background: url(../image/icon/ic_alert_active.svg) no-repeat center center/cover;
 }
 .SOLIcon-alert.c--warn {
-  background: url(/static/crediview-mo/image/icon/ic_alert_warn.svg) no-repeat center center/cover;
+  background: url(../image/icon/ic_alert_warn.svg) no-repeat center center/cover;
 }
 .SOLIcon-alert.c--error {
-  background: url(/static/crediview-mo/image/icon/ic_alert_error.svg) no-repeat center center/cover;
+  background: url(../image/icon/ic_alert_error.svg) no-repeat center center/cover;
 }
 .SOLIcon-alert.c--success {
-  background: url(/static/crediview-mo/image/icon/ic_alert_success.svg) no-repeat center center/cover;
+  background: url(../image/icon/ic_alert_success.svg) no-repeat center center/cover;
 }
 
 .SOLSvg-root {
@@ -2928,6 +2931,7 @@ button.swiper-pagination-bullet {
   line-height: 18px;
   font-size: var(--font-14);
   text-align: left;
+  word-break: keep-all;
 }
 .SOLCheck-root.mgt-15 {
   margin-top: 15px;
@@ -2953,6 +2957,9 @@ button.swiper-pagination-bullet {
 .SOLCheck-root.t--terms [type=checkbox] {
   border-radius: 50%;
 }
+.SOLCheck-root.t--terms .SOLCheck-label {
+  align-items: center;
+}
 .SOLCheck-root.t--terms-md .SOLCheck-label {
   font-size: var(--font-15);
   line-height: 24px;
@@ -2970,11 +2977,40 @@ button.swiper-pagination-bullet {
 .SOLCheck-root.t--terms-md .SOLCheck-label [type=checkbox]:checked::after {
   border-color: var(--c-component);
 }
+.SOLCheck-root.service-public-list {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+  border-top: 0;
+}
+.SOLCheck-root.service-public-list .list-item {
+  width: 100%;
+  border: 0;
+  padding-left: 62px;
+  background-position-x: var(--spc-w);
+}
+.SOLCheck-root.service-public-list .tit {
+  font-weight: 500;
+}
+.SOLCheck-root.service-public-list .SOLCheck-label {
+  width: 100%;
+}
+.SOLCheck-root.service-public-list .SOLCheck-label:has([type=checkbox]:checked) {
+  background-color: #F7F8FA;
+}
+.SOLCheck-root.service-public-list [type=checkbox] {
+  position: absolute;
+  top: 50%;
+  right: var(--spc-w);
+  transform: translateY(-50%);
+}
 .SOLCheck-root .SOLText-note {
   display: block;
 }
 
 .SOLCheck-label {
+  position: relative;
   display: inline-flex;
   gap: 6px;
 }
@@ -4112,6 +4148,53 @@ table .SOLCheck-root {
 .SOLStepper-root.t--service .tit {
   display: none;
 }
+.SOLStepper-root.t--submit {
+  gap: 28px;
+  padding: 0;
+  margin-bottom: 20px;
+  color: var(--font-default);
+  background-color: unset;
+  counter-reset: index;
+  margin-top: 0;
+  font-size: var(--font-13);
+}
+.SOLStepper-root.t--submit > li {
+  flex: unset;
+  flex-direction: row;
+  gap: 4px;
+  white-space: nowrap;
+  text-align: left;
+}
+.SOLStepper-root.t--submit > li::before {
+  counter-increment: index;
+  content: counter(index);
+  width: 16px;
+  height: 16px;
+  background: #D9D9D9 !important;
+  color: var(--fc-gray2);
+  font-size: 10px;
+  color: #fff !important;
+  font-weight: 600;
+}
+.SOLStepper-root.t--submit > li:not(:first-of-type)::after {
+  top: 50%;
+  left: -18px;
+  right: unset;
+  margin-top: -4px;
+  width: 7px;
+  height: 7px;
+  border-top: 0;
+  border-right: 1px solid rgba(17, 17, 17, 0.3);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.3);
+  transform: rotate(-45deg);
+}
+.SOLStepper-root.t--submit > li.active {
+  color: var(--c-active);
+}
+.SOLStepper-root.t--submit > li.active::before {
+  font-weight: 400;
+  background: var(--c-component) !important;
+}
 
 .stepper-label {
   display: block;
@@ -4968,6 +5051,16 @@ table .SOLCheck-root {
   font-weight: 700;
   color: var(--fc-default);
 }
+.SOLSnackbar-header .SOLSnackbar-title em {
+  color: var(--c-active);
+}
+.SOLSnackbar-header .note {
+  position: absolute;
+  top: 50%;
+  right: var(--spc-w);
+  transform: translateY(-50%);
+  font-size: var(--font-13);
+}
 
 .SOLSnackbar-section {
   display: flex;
@@ -5051,22 +5144,22 @@ table .SOLCheck-root {
   touch-action: none;
 }
 
-.SOLMembers-root {
+.SOLFullpage-root {
   z-index: 997;
   position: fixed;
   inset: 0;
   overflow-y: auto;
 }
-.SOLMembers-root form {
+.SOLFullpage-root form {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
-.SOLMembers-root .SOLMembers-container {
+.SOLFullpage-root .SOLFullpage-container {
   padding: calc(var(--header-h) + 16px) var(--spc-w) 0;
 }
 
-.SOLMembers-header {
+.SOLFullpage-header {
   z-index: 99;
   position: fixed;
   inset: 0 0 auto;
@@ -5077,7 +5170,7 @@ table .SOLCheck-root {
   padding-right: var(--spc-w);
   background-color: #fff;
 }
-.SOLMembers-header .SOLTitle-t2 {
+.SOLFullpage-header .SOLTitle-t2 {
   line-height: 1;
   transform: translateY(2px);
 }
@@ -5436,6 +5529,15 @@ table .SOLCheck-root {
 .SOLHeader-root.t--landing.light .SOLHeader-inner {
   color: #fff;
 }
+.SOLHeader-root.t--landing.light .SOLHeader-logo .logo:not(.SOLHeader-nav .logo) .eng {
+  background-image: url(../../Common/image/crediview/logo/bi_crediview_w.svg);
+}
+.SOLHeader-root.t--landing.light .SOLHeader-logo .logo:not(.SOLHeader-nav .logo) .kr {
+  background-image: url(../../Common/image/crediview/logo/bi_crediview_w_kr.svg);
+}
+.SOLHeader-root.t--landing.light .SOLHeader-global-link {
+  border-color: rgba(255, 255, 255, 0.2);
+}
 .SOLHeader-root.sticky .SOLHeader-inner {
   top: -56px;
 }
@@ -5596,6 +5698,9 @@ table .SOLCheck-root {
   display: flex;
   align-items: center;
 }
+.gnb-menu a.on {
+  color: #3b5dfb;
+}
 .gnb-menu .ai-post {
   gap: 8px;
 }
@@ -5603,7 +5708,7 @@ table .SOLCheck-root {
   content: "";
   width: 47px;
   height: 24px;
-  background: url(/static/crediview-mo/image/icon/ic_nav_open.svg) no-repeat left top;
+  background: url(../image/icon/ic_nav_open.svg) no-repeat left top;
 }
 .gnb-menu > li {
   padding: 10px var(--spc-w) 10px calc(var(--spc-w) + 10px);
@@ -5652,9 +5757,6 @@ table .SOLCheck-root {
 .gnb-menu .sub-menu.depth02 a {
   height: 42px;
 }
-.gnb-menu .sub-menu.depth02 a.on {
-  color: #3b5dfb;
-}
 
 .logout-box {
   padding: 20px;
@@ -5663,136 +5765,147 @@ table .SOLCheck-root {
   height: 44px;
 }
 
-footer.SOLFooter-root {
+.SOLFooter-root {
+  position: relative;
   padding: 35px 0;
 }
-footer.SOLFooter-root.t--dark {
+.SOLFooter-root.t--dark {
   background-color: #1a1a1b;
   color: #7b7b7b;
 }
-footer.SOLFooter-root .SOLFooter-inner {
-  width: 360px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-footer.SOLFooter-root .inquery-for-use span {
-  display: block;
-}
-footer.SOLFooter-root .inquery-for-use .tit {
-  font-size: 15px;
-  font-weight: 600;
-  color: #a6a6a6;
-}
-footer.SOLFooter-root .inquery-for-use .inquery-number {
-  font-size: 21px;
-  font-weight: 600;
-  color: #a6a6a6;
-  padding-top: 5px;
-}
-footer.SOLFooter-root .inquery-for-use .inquery-for-list {
-  padding: 10px 0 26px 0;
+.SOLFooter-root .inquery-for-use {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
   border-bottom: solid 1px rgba(186, 186, 186, 0.2);
 }
-footer.SOLFooter-root .inquery-for-use .inquery-for-list li {
+.SOLFooter-root .inquery-for-use .tit {
+  font-size: var(--font-15);
+  font-weight: 600;
+  color: #a6a6a6;
+}
+.SOLFooter-root .inquery-for-use .inquery-number {
+  font-size: var(--font-21);
+  font-weight: 600;
+  color: #a6a6a6;
+}
+.SOLFooter-root .inquery-for-list {
+  padding-top: 5px;
+}
+.SOLFooter-root .inquery-for-list li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-bottom: 5px;
 }
-footer.SOLFooter-root .inquery-for-use .inquery-for-list li .title {
-  width: 75px;
-  font-size: 13px;
+.SOLFooter-root .inquery-for-list li .title {
+  min-width: 75px;
+  font-size: var(--font-13);
   font-weight: 500;
   color: #7b7b7b;
-  padding: 0 0 0 16px;
+  padding: 0 16px;
   position: relative;
 }
-footer.SOLFooter-root .inquery-for-use .inquery-for-list li .title::before {
+.SOLFooter-root .inquery-for-list li .title::before {
   content: "";
   width: 14px;
   height: 14px;
-  background: url("../../Common/image/icon/mb/ic_time.png") no-repeat;
+  background: url("../image/icon/ic_time.svg") no-repeat;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
+  margin-top: -7px;
 }
-footer.SOLFooter-root .inquery-for-use .inquery-for-list li:last-child {
-  padding-bottom: 0px;
-}
-footer.SOLFooter-root .inquery-for-use .inquery-for-list li:last-child .title::before {
-  background: url("../../Common/image/icon/mb/ic_email.png") no-repeat;
-}
-footer.SOLFooter-root .inquery-for-use .inquery-for-list li .txt {
-  font-size: 13px;
+.SOLFooter-root .inquery-for-list li .txt {
+  font-size: var(--font-13);
   font-weight: 400;
   color: #7b7b7b;
 }
-footer.SOLFooter-root .SOLFooter-utils {
-  padding-top: 25px;
+
+.SOLFooter-inner {
+  padding: 0 var(--spc-w);
 }
-footer.SOLFooter-root .SOLFooter-utils .person-info a {
+
+.SOLFooter-utils {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.SOLFooter-utils .person-info {
   font-size: 13px;
   font-weight: 400;
   color: #7b7b7b;
-  display: inline-block;
-  padding-right: 10px;
+  margin-left: -10px;
+}
+.SOLFooter-utils .person-info a {
   position: relative;
+  display: inline-block;
+  padding: 10px 10px 10px 11px;
+  color: inherit;
 }
-footer.SOLFooter-root .SOLFooter-utils .person-info a::before {
+.SOLFooter-utils .person-info a:not(:first-child)::before {
   content: "";
   width: 1px;
   height: 13px;
-  background-color: #bababa;
+  background-color: currentColor;
   position: absolute;
-  top: 1px;
-  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  opacity: 0.8;
 }
-footer.SOLFooter-root .SOLFooter-utils .person-info a:nth-child(2) {
-  font-weight: 700;
-  padding: 0 0 0 5px;
+.SOLFooter-utils .sns-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
 }
-footer.SOLFooter-root .SOLFooter-utils .person-info a:nth-child(2)::before {
-  content: none;
+.SOLFooter-utils .sns-link .sns-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 185px;
+  padding-right: 24px;
 }
-footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox {
-  --drop-h: 38px;
+.SOLFooter-utils .sns-link .sns-list li a {
+  display: inline-block;
+}
+.SOLFooter-utils .sns-link .sns-list li a img {
+  max-width: 100%;
+}
+.SOLFooter-utils .sns-link .pc-v {
+  font-size: var(--font-14);
+  font-weight: 400;
+  color: #9e9e9e;
+  padding: 10px 0 10px 18px;
+  position: relative;
+  margin-left: auto;
+  margin-right: 20px;
+  background: url(../image/icon/ic_desktop.svg) no-repeat left center;
+}
+.SOLFooter-utils .sns-link .pc-v:before {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background-color: currentColor;
+  position: absolute;
+  top: 50%;
+  left: -21px;
+  transform: translateY(-50%);
+  opacity: 0.3;
+}
+
+.SOLFooter-dropbox {
+  --drop-h: 40px;
   z-index: 0;
   position: relative;
-  width: 242px;
+  height: var(--drop-h);
   font-size: var(--font-14);
-  margin: 17px 0;
 }
-footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox .SOLFooter-dropbox-inner {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border: solid 1px rgba(219, 219, 219, 0.2);
-  border-radius: 6px;
-  background-color: #1a1a1b;
-  color: #4b4e53;
-  transition: color 0.2s, background-color 0.2s, max-height 0.2s ease-in-out;
-}
-footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox .SOLFooter-dropbox-inner:hover {
-  background-color: #f0f0f0;
-}
-footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox .SOLFooter-dropbox-inner ul {
-  display: none;
-  transition: ease-in-out 0.2s;
-}
-footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox .SOLFooter-dropbox-inner.on ul {
-  display: block;
-}
-footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox .SOLFooter-dropbox-inner.on .SOLFooter-dropbox-btn::after {
-  content: "";
-  transform: rotate(-133deg);
-  margin-top: 0px;
-}
-footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox a {
+.SOLFooter-dropbox a {
   display: flex;
   align-items: center;
   padding: 0 16px;
@@ -5800,10 +5913,10 @@ footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox a {
   color: inherit;
   transition: background-color 0.2s;
 }
-footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox a:hover {
+.SOLFooter-dropbox a:hover {
   background-color: #ebebeb;
 }
-footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox-btn {
+.SOLFooter-dropbox .SOLFooter-dropbox-btn {
   position: relative;
   flex-shrink: 0;
   order: 2;
@@ -5813,7 +5926,7 @@ footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox-btn {
   text-align: left;
   color: inherit;
 }
-footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox-btn::after {
+.SOLFooter-dropbox .SOLFooter-dropbox-btn::after {
   content: "";
   position: absolute;
   right: 16px;
@@ -5826,84 +5939,72 @@ footer.SOLFooter-root .SOLFooter-utils .SOLFooter-dropbox-btn::after {
   transform: rotate(45deg);
   transition: transform 0.3s ease-in-out;
 }
-footer.SOLFooter-root .SOLFooter-utils .sns-link {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 10px;
+.SOLFooter-dropbox.on .SOLFooter-dropbox-inner {
+  max-height: 300px;
+  background-color: #f0f0f0;
 }
-footer.SOLFooter-root .SOLFooter-utils .sns-link .sns-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 185px;
-  padding-right: 24px;
+.SOLFooter-dropbox.on .SOLFooter-dropbox-inner .SOLFooter-dropbox-btn::after {
+  opacity: 0.5;
+  transform: rotate(-135deg);
 }
-footer.SOLFooter-root .SOLFooter-utils .sns-link .sns-list li a {
-  display: inline-block;
-}
-footer.SOLFooter-root .SOLFooter-utils .sns-link .sns-list li a img {
-  max-width: 100%;
-}
-footer.SOLFooter-root .SOLFooter-utils .sns-link .pc-v {
-  font-size: var(--font-14);
-  font-weight: 400;
-  color: #9e9e9e;
-  padding: 0 0 0 24px;
-  position: relative;
-}
-footer.SOLFooter-root .SOLFooter-utils .sns-link .pc-v:before {
-  content: "";
-  width: 1px;
-  height: 16px;
-  background-color: #bababa;
+
+.SOLFooter-dropbox-inner {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
+  width: 100%;
+  max-height: var(--drop-h);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: solid 1px rgba(219, 219, 219, 0.2);
+  border-radius: 6px;
+  background-color: #1a1a1b;
+  color: #4b4e53;
+  transition: color 0.2s, background-color 0.2s, max-height 0.2s ease-in-out;
 }
-footer.SOLFooter-root .SOLFooter-bottom {
+
+.SOLFooter-bottom {
   padding-top: 32px;
 }
-footer.SOLFooter-root .SOLFooter-bottom .footer-logo {
+.SOLFooter-bottom .footer-logo {
   width: 148px;
   height: 25px;
   background: url(../../Common/image/crediview/logo/logo_techpin_w.png) no-repeat;
   background-size: 148px;
   margin-bottom: 14px;
 }
-footer.SOLFooter-root .SOLFooter-bottom .footer-logo img {
-  width: 148px;
-  height: 26px;
-}
-footer.SOLFooter-root .SOLFooter-bottom .SOLFooter-address p {
+.SOLFooter-bottom .SOLFooter-address p {
   font-size: 12px;
   font-weight: 400;
   padding-bottom: 6px;
 }
-footer.SOLFooter-root .SOLFooter-bottom .SOLFooter-address p.copyright {
+.SOLFooter-bottom .SOLFooter-address p.copyright {
   padding-top: 28px;
 }
-footer.SOLFooter-root.t--white {
+
+.SOLFooter-root.t--white {
   background-color: #fff;
   color: #7b7b7b;
 }
-footer.SOLFooter-root.t--white .inquery-for-use .tit {
+.SOLFooter-root.t--white .inquery-for-use .tit {
   color: #4b4e53;
 }
-footer.SOLFooter-root.t--white .inquery-for-use .inquery-number {
+.SOLFooter-root.t--white .inquery-for-use .inquery-number {
   color: #4b4e53;
 }
-footer.SOLFooter-root.t--white .inquery-for-use .inquery-for-list {
+.SOLFooter-root.t--white .inquery-for-use .inquery-for-list {
   border-bottom: solid 1px #dbdbdb;
 }
-footer.SOLFooter-root.t--white .SOLFooter-utils .person-info a {
+.SOLFooter-root.t--white .SOLFooter-utils .person-info a {
   color: #4b4e53;
 }
-footer.SOLFooter-root.t--white .SOLFooter-utils .SOLFooter-dropbox .SOLFooter-dropbox-inner {
+.SOLFooter-root.t--white .SOLFooter-utils .SOLFooter-dropbox .SOLFooter-dropbox-inner {
   border: solid 1px #4b4e53;
   background-color: #fff;
 }
-footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
+.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   width: 148px;
   height: 26px;
   background: url(../../Common/image/crediview/logo/foot_logo_white.png) no-repeat;
@@ -5930,6 +6031,15 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 }
 .box-msg .title em {
   color: var(--c-active);
+}
+.box-msg .SOLIconBtn-root {
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 0;
+}
+.box-msg .SOLIconBtn-root .SOLIcon-root {
+  color: #95989b;
+  margin-top: -1px;
 }
 
 .box-err {
@@ -5971,17 +6081,22 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   color: #8c8c99;
 }
 
-.msg-noti {
+.msg-noti, .msg-err {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 24px;
   padding-left: 32px;
-  background: url(/static/crediview-mo/image/icon/ic_msg_noti.svg) no-repeat left center;
+  background: url(../image/icon/ic_msg_noti.svg) no-repeat left center;
 }
-.msg-noti li::before {
+.msg-noti li::before, .msg-err li::before {
   content: "·";
   padding-right: 0.4em;
+}
+
+.msg-err {
+  color: var(--c-error);
+  background: url(../image/icon/ic_msg_err.svg) no-repeat left center;
 }
 
 .msg-terms {
@@ -6004,6 +6119,11 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 .hr-comm {
   border: 0;
   border-top: 1px solid rgba(101, 112, 144, 0.1);
+  margin: 12px 0;
+}
+
+.section-outer > .hr-comm {
+  margin: 0;
 }
 
 .mt-g2 {
@@ -6022,7 +6142,37 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   margin-bottom: 24px;
 }
 
-.console-root, .SOLMembers-root {
+.index-footer {
+  padding: 35px var(--spc-w) 52px;
+  background-color: #1A1A1B;
+  color: #7B7B7B;
+  font-size: var(--font-12);
+}
+
+.section-ai {
+  height: 100vh;
+  height: 100svh;
+}
+.section-ai:nth-child(3) {
+  background: linear-gradient(180deg, #F4F6FF 21.62%, #E4EDFF 105.25%);
+}
+
+.ai-intro {
+  height: calc(100vh - var(--header-h));
+  height: calc(100svh - var(--header-h));
+  background: url(../image/ai/bg_ai_intro.png) no-repeat center center/cover;
+}
+
+.index-topBtn {
+  position: sticky;
+  bottom: 0;
+}
+.index-topBtn .footer-topBtn {
+  top: auto !important;
+  bottom: 30px;
+}
+
+.console-root, .SOLFullpage-root {
   height: 100vh;
   height: 100svh;
   display: flex;
@@ -6034,7 +6184,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   background-color: #fff;
 }
 
-.console-container, .SOLMembers-container {
+.console-container, .SOLFullpage-container {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -6048,7 +6198,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   padding: 24px var(--spc-w);
 }
 
-.console-footer, .SOLSnackbar-footer, .SOLMembers-footer {
+.console-footer, .SOLSnackbar-footer, .SOLFullpage-footer {
   z-index: 99;
   position: sticky;
   bottom: 0;
@@ -6059,21 +6209,21 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   padding: 0 20px;
   background: linear-gradient(to top, rgb(255, 255, 255) 82px, rgba(255, 255, 255, 0));
 }
-.console-footer .SOLBtn-root, .SOLSnackbar-footer .SOLBtn-root, .SOLMembers-footer .SOLBtn-root {
+.console-footer .SOLBtn-root, .SOLSnackbar-footer .SOLBtn-root, .SOLFullpage-footer .SOLBtn-root {
   font-weight: 700;
 }
-.console-footer .SOLBtn-root.t--contained, .SOLSnackbar-footer .SOLBtn-root.t--contained, .SOLMembers-footer .SOLBtn-root.t--contained {
+.console-footer .SOLBtn-root.t--contained, .SOLSnackbar-footer .SOLBtn-root.t--contained, .SOLFullpage-footer .SOLBtn-root.t--contained {
   font-weight: 600;
 }
 
-.console-footer-btns, .SOLSnackbar-footer-btns, .SOLMembers-footer .footer-btns {
+.console-footer-btns, .SOLSnackbar-footer-btns, .SOLFullpage-footer .footer-btns {
   position: relative;
   display: flex;
   gap: 8px;
   margin: 20px 0 34px;
 }
 
-.footer-topBtn {
+.footer-topBtn, .index-topBtn .footer-topBtn {
   position: absolute;
   top: 0;
   right: var(--spc-w);
@@ -6183,6 +6333,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   color: var(--fc-gray2);
   font-weight: 400;
   text-align: left;
+  white-space: nowrap;
 }
 .SOLTable-small td {
   height: 28px;
@@ -6193,6 +6344,9 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 }
 .SOLTable-small em {
   color: var(--c-active);
+}
+.SOLTable-small .SOLIconBtn-root {
+  min-height: 28px;
 }
 .SOLTable-small.t--list th {
   padding-left: 8px;
@@ -6276,16 +6430,16 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   background: #fff no-repeat center center/40px;
 }
 .service-guide-step > li:first-of-type::before {
-  background-image: url(/static/crediview-mo/image/img/img_service_step01.svg);
+  background-image: url(../image/img/img_service_step01.svg);
 }
 .service-guide-step > li:nth-of-type(2)::before {
-  background-image: url(/static/crediview-mo/image/img/img_service_step02.svg);
+  background-image: url(../image/img/img_service_step02.svg);
 }
 .service-guide-step > li:nth-of-type(3)::before {
-  background-image: url(/static/crediview-mo/image/img/img_service_step03.svg);
+  background-image: url(../image/img/img_service_step03.svg);
 }
 .service-guide-step > li:nth-of-type(4)::before {
-  background-image: url(/static/crediview-mo/image/img/img_service_step04_2.svg);
+  background-image: url(../image/img/img_service_step04_2.svg);
 }
 .service-guide-step > li .tit {
   display: flex;
@@ -6343,10 +6497,10 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   color: var(--fc-default);
 }
 
-.service-result .console-footer, .service-result .SOLSnackbar-footer, .service-result .SOLMembers-footer {
+.service-result .console-footer, .service-result .SOLSnackbar-footer, .service-result .SOLFullpage-footer {
   margin-top: 24px;
 }
-.service-result .console-footer.mgt0, .service-result .mgt0.SOLSnackbar-footer, .service-result .mgt0.SOLMembers-footer {
+.service-result .console-footer.mgt0, .service-result .mgt0.SOLSnackbar-footer, .service-result .mgt0.SOLFullpage-footer {
   margin-top: 0px;
 }
 .service-result .service-result-desc .apply-ratings {
@@ -6369,11 +6523,14 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   align-items: center;
   width: 100%;
   padding-top: 220px;
-  background: url(/static/crediview-mo/image/img/bg_service_progress.png) no-repeat center top/325px;
+  background: url(../image/img/bg_service_progress.png) no-repeat center top/325px;
 }
 .service-result-progress.t--issue {
-  background-image: url(/static/crediview-mo/image/img/bg_issue_progress.png);
+  background-image: url(../image/img/bg_issue_progress.png);
   background-size: 326px;
+}
+.service-result-progress.t--submit {
+  background-image: url(../image/img/bg_submit_progress.png);
 }
 .service-result-progress .progress {
   position: relative;
@@ -6503,7 +6660,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   justify-content: center;
   align-items: center;
   padding: 28px;
-  background-color: #F2F3F7;
+  background-color: #f2f3f7;
 }
 .service-result-rating .rating {
   font-size: var(--font-42);
@@ -6533,7 +6690,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   width: 222px;
   height: 144px;
   border: 9px solid #fff;
-  background: #fff url(/static/crediview-mo/image/img/img_rating_border.svg) no-repeat left top/100% 100%;
+  background: #fff url(../image/img/img_rating_border.svg) no-repeat left top/100% 100%;
   box-shadow: 3px 6px 8px 0px rgba(20, 25, 58, 0.0588235294);
   line-height: 1;
 }
@@ -6544,12 +6701,13 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   right: -21px;
   width: 47px;
   height: 70px;
-  background: url(/static/crediview-mo/image/img/img_rating_mark.svg) no-repeat left top/contain;
+  background: url(../image/img/img_rating_mark.svg) no-repeat left top/contain;
 }
 .service-result-paper.t--disabled {
   color: var(--c-disabled);
 }
-.service-result-paper.t--disabled .company, .service-result-paper.t--disabled .rating {
+.service-result-paper.t--disabled .company,
+.service-result-paper.t--disabled .rating {
   color: inherit;
 }
 .service-result-paper .tit {
@@ -6557,7 +6715,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   font-weight: 700;
 }
 .service-result-paper .company {
-  color: #243F64;
+  color: #243f64;
   font-size: var(--font-11);
 }
 
@@ -6584,10 +6742,14 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   gap: 10px;
   margin-top: 48px;
   font-size: var(--font-16);
+  line-height: 1.4;
   text-align: center;
 }
 .service-result-limit .import-txt {
   color: var(--c-error);
+}
+.service-result-limit .active-txt {
+  color: var(--c-active);
 }
 .service-result-limit .countbox {
   display: flex;
@@ -6615,6 +6777,10 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 .service-result-limit .desc2 {
   font-size: var(--font-14);
   padding: 0.5em 0;
+}
+
+.hr-comm + .service-result-limit {
+  margin-top: 8px;
 }
 
 .service-result-graph {
@@ -6666,7 +6832,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   height: 32px;
   padding: 0 12px;
   border-radius: 7px;
-  background-color: #182A50;
+  background-color: #182a50;
   font-size: var(--font-16);
   font-weight: 700;
   color: #fff;
@@ -6680,7 +6846,7 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
   top: 100%;
   left: 50%;
   border-style: solid;
-  border-color: #182A50 transparent transparent transparent;
+  border-color: #182a50 transparent transparent transparent;
   border-width: 5px 4px;
   transform: translateX(-50%);
 }
@@ -6920,7 +7086,9 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 
 .service-reception {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 .service-reception > li {
   flex: 1;
@@ -6934,41 +7102,48 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 .service-reception > li.item-own .service-reception-btn::before {
   background-image: url(../../Common/image/img/img_reception_own.svg);
 }
-.service-reception > li:only-of-type {
-  max-width: calc(50% - 5px);
-}
 .service-reception-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  position: relative;
   overflow: hidden;
   width: 100%;
+  padding-left: 115px;
   border: 1px solid var(--tb-border);
   border-radius: 8px;
   color: var(--fc-gray1);
   font-size: var(--font-13);
-  line-height: 1.5;
-  text-align: center;
+  line-height: 1.3;
+  text-align: left;
   transition: border-color 0.2s;
 }
 .service-reception-btn::before {
   content: "";
-  height: 140px;
-  background: #f2f5ff no-repeat center top;
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 115px;
+  background: #f2f5ff no-repeat center top/115px;
 }
 .service-reception-btn:focus, .service-reception-btn.t--active {
   border-color: var(--c-active);
   box-shadow: 0 3px 12px rgba(55, 29, 110, 0.07);
 }
 .service-reception-btn .wrapper-desc {
-  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 20px;
+}
+
+.service-inner-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .service-section {
   margin-top: 40px;
   text-align: center;
 }
-.service-section .console-footer, .service-section .SOLSnackbar-footer, .service-section .SOLMembers-footer {
+.service-section .console-footer, .service-section .SOLSnackbar-footer, .service-section .SOLFullpage-footer {
   margin-top: 40px;
 }
 .service-section .wrapper-desc {
@@ -7126,10 +7301,54 @@ footer.SOLFooter-root.t--white .SOLFooter-bottom .footer-logo {
 .service-coupon-list .disabled {
   border-color: transparent;
 }
-.service-coupon-list .disabled .name, .service-coupon-list .disabled .date {
+.service-coupon-list .disabled .name,
+.service-coupon-list .disabled .date {
   opacity: 0.4;
 }
 .service-coupon-list .disabled .label {
   filter: grayscale(100%);
   color: rgba(34, 34, 34, 0.3);
+}
+
+.service-public-list {
+  border-top: 1px solid var(--tb-border);
+}
+.service-public-list .list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: 1px solid var(--tb-border);
+  padding: 16px 0 16px 52px;
+  word-break: keep-all;
+  background: url(../image/icon/ic_build.svg) no-repeat 12px center;
+}
+.service-public-list .code {
+  font-size: var(--font-12);
+  color: var(--fc-gray2);
+}
+
+.box-msg .service-public-list {
+  border-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.box-msg .service-public-list .list-item {
+  gap: 3px;
+  padding: 0;
+  border-bottom: 0;
+  background: unset;
+  font-size: var(--font-14);
+}
+
+.SOLSnackbar-root .service-public-list {
+  border-top: 0;
+}
+.SOLSnackbar-root .service-public-list .list-item {
+  border-bottom-color: #F4F4F4;
+  padding-left: 40px;
+  background-position-x: left;
+}
+.SOLSnackbar-root .service-public-list .list-item:last-child {
+  border-bottom: 0;
 }

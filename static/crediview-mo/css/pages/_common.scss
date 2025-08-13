@@ -16,7 +16,20 @@
     color: #404252;
     font-weight: 700;
 
-    em { color: var(--c-active) }
+    em {
+      color: var(--c-active);
+    }
+  }
+
+  .SOLIconBtn-root {
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 0;
+
+    .SOLIcon-root {
+      color: #95989b;
+      margin-top: -1px
+    }
   }
 }
 
@@ -66,12 +79,18 @@
   justify-content: center;
   min-height: 24px;
   padding-left: 32px;
-  background: url(/static/crediview-mo/image/icon/ic_msg_noti.svg) no-repeat left center;
+  background: url(../image/icon/ic_msg_noti.svg) no-repeat left center;
 
   li::before {
     content: '·';
     padding-right: 0.4em;
   }
+}
+
+.msg-err {
+  @extend .msg-noti;
+  color: var(--c-error);
+  background: url(../image/icon/ic_msg_err.svg) no-repeat left center;
 }
 
 .msg-terms {
@@ -93,12 +112,23 @@
 
 .hr-comm {
   border: 0;
-  border-top: 1px solid rgba(101, 112, 144, 0.1)
+  border-top: 1px solid rgba(101, 112, 144, 0.1);
+  margin: 12px 0;
 }
 
-// 8배수
-.mt-g2 { margin-top: 16px }
-.mt-g3 { margin-top: 24px }
+.section-outer > .hr-comm { margin: 0 }
 
-.mb-g2 { margin-bottom: 16px }
-.mb-g3 { margin-bottom: 24px }
+// 8배수
+.mt-g2 {
+  margin-top: 16px;
+}
+.mt-g3 {
+  margin-top: 24px;
+}
+
+.mb-g2 {
+  margin-bottom: 16px;
+}
+.mb-g3 {
+  margin-bottom: 24px;
+}

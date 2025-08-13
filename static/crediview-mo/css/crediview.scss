@@ -42,7 +42,7 @@
 @import "components/modals/alert";
 @import "components/modals/toast";
 @import "components/modals/snackbar";
-@import "components/modals/members";
+@import "components/modals/fullpage";
 @import "components/popups/popper";
 @import "components/tabs/tab";
 @import "components/tabs/filter";
@@ -53,6 +53,7 @@
 
 // 페이지
 @import 'pages/common';
+@import 'pages/aireport';
 @import 'pages/console';
 @import 'pages/table';
 @import 'pages/service';

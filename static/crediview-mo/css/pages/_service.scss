@@ -74,19 +74,19 @@
     }
 
     &:first-of-type::before {
-      background-image: url(/static/crediview-mo/image/img/img_service_step01.svg);
+      background-image: url(../image/img/img_service_step01.svg);
     }
 
     &:nth-of-type(2)::before {
-      background-image: url(/static/crediview-mo/image/img/img_service_step02.svg);
+      background-image: url(../image/img/img_service_step02.svg);
     }
 
     &:nth-of-type(3)::before {
-      background-image: url(/static/crediview-mo/image/img/img_service_step03.svg);
+      background-image: url(../image/img/img_service_step03.svg);
     }
 
     &:nth-of-type(4)::before {
-      background-image: url(/static/crediview-mo/image/img/img_service_step04_2.svg);
+      background-image: url(../image/img/img_service_step04_2.svg);
     }
 
     .tit {
@@ -133,7 +133,7 @@
   // justify-content: center;
   text-align: center;
   // padding-bottom: 15vh;
-  padding-top: 24px
+  padding-top: 24px;
 }
 
 .service-result-desc {
@@ -183,12 +183,15 @@
   align-items: center;
   width: 100%;
   padding-top: 220px;
-  background: url(/static/crediview-mo/image/img/bg_service_progress.png) no-repeat center top / 325px;
+  background: url(../image/img/bg_service_progress.png) no-repeat center top / 325px;
 
   &.t--issue {
-    background-image: url(/static/crediview-mo/image/img/bg_issue_progress.png);
-    background-size: 326px
-   }
+    background-image: url(../image/img/bg_issue_progress.png);
+    background-size: 326px;
+  }
+  &.t--submit {
+    background-image: url(../image/img/bg_submit_progress.png);
+  }
 
   .progress {
     position: relative;
@@ -219,7 +222,7 @@
   .msg {
     margin-top: 20px;
     font-size: var(--font-12);
-    color: var(--c-active)
+    color: var(--c-active);
   }
 }
 
@@ -330,7 +333,7 @@
   justify-content: center;
   align-items: center;
   padding: 28px;
-  background-color: #F2F3F7;
+  background-color: #f2f3f7;
 
   .rating {
     font-size: var(--font-42);
@@ -349,7 +352,7 @@
 
   .msg {
     font-size: var(--font-30);
-    font-weight: 700
+    font-weight: 700;
   }
 }
 
@@ -363,8 +366,8 @@
   width: 222px;
   height: 144px;
   border: 9px solid #fff;
-  background: #fff url(/static/crediview-mo/image/img/img_rating_border.svg) no-repeat left top / 100% 100%;
-  box-shadow: 3px 6px 8px 0px #14193A0F;
+  background: #fff url(../image/img/img_rating_border.svg) no-repeat left top / 100% 100%;
+  box-shadow: 3px 6px 8px 0px #14193a0f;
   line-height: 1;
 
   &.t--mark::after {
@@ -374,13 +377,16 @@
     right: -21px;
     width: 47px;
     height: 70px;
-    background: url(/static/crediview-mo/image/img/img_rating_mark.svg) no-repeat left top / contain;
+    background: url(../image/img/img_rating_mark.svg) no-repeat left top / contain;
   }
 
   &.t--disabled {
     color: var(--c-disabled);
 
-    .company, .rating { color: inherit }
+    .company,
+    .rating {
+      color: inherit;
+    }
   }
 
   .tit {
@@ -389,8 +395,8 @@
   }
 
   .company {
-    color: #243F64;
-    font-size: var(--font-11)
+    color: #243f64;
+    font-size: var(--font-11);
   }
 }
 
@@ -404,7 +410,9 @@
     min-width: 300px;
     white-space: nowrap;
 
-    th { padding-right: 50px }
+    th {
+      padding-right: 50px;
+    }
   }
 }
 
@@ -417,10 +425,15 @@
   gap: 10px;
   margin-top: 48px;
   font-size: var(--font-16);
+  line-height: 1.4;
   text-align: center;
 
   .import-txt {
     color: var(--c-error);
+  }
+
+  .active-txt {
+    color: var(--c-active);
   }
 
   .countbox {
@@ -446,13 +459,17 @@
   .desc {
     color: var(--fc-gray2);
     font-size: var(--font-13);
-    line-height: 1.4
+    line-height: 1.4;
   }
-  
+
   .desc2 {
     font-size: var(--font-14);
-    padding: 0.5em 0
+    padding: 0.5em 0;
   }
+}
+
+.hr-comm + .service-result-limit {
+  margin-top: 8px;
 }
 
 .service-result-graph {
@@ -487,7 +504,7 @@
     display: block;
     width: 100%;
     height: 126px;
-    margin-bottom: -5px
+    margin-bottom: -5px;
   }
 }
 
@@ -506,7 +523,7 @@
     height: 32px;
     padding: 0 12px;
     border-radius: 7px;
-    background-color: #182A50;
+    background-color: #182a50;
     font-size: var(--font-16);
     font-weight: 700;
     color: #fff;
@@ -520,7 +537,7 @@
       top: 100%;
       left: 50%;
       border-style: solid;
-      border-color: #182A50 transparent transparent transparent;
+      border-color: #182a50 transparent transparent transparent;
       border-width: 5px 4px;
       transform: translateX(-50%);
     }
@@ -558,7 +575,7 @@
       justify-content: space-between;
       padding: 0 2px;
       line-height: 1.82;
-      padding-top: 6px
+      padding-top: 6px;
     }
 
     &:first-of-type .bar {
@@ -633,10 +650,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
-    border-top: 1px solid var(--tb-border)
+    border-top: 1px solid var(--tb-border);
   }
 
-  .SOLIcon-root { width: 1em }
+  .SOLIcon-root {
+    width: 1em;
+  }
 }
 
 .service-payment-coupon {
@@ -734,10 +753,14 @@
     .value {
       font-size: var(--font-15);
 
-      em { font-size: var(--font-18) }
+      em {
+        font-size: var(--font-18);
+      }
     }
 
-    .name em { font-size: var(--font-16) }
+    .name em {
+      font-size: var(--font-16);
+    }
   }
   .item-discount {
     color: var(--c-error);
@@ -758,11 +781,11 @@
   .SOLCheck-root .SOLCheck-label {
     font-size: var(--font-14);
     line-height: 1.4;
-    color: #404252
+    color: #404252;
   }
 
   .service-terms-item {
-    margin: -12px 0
+    margin: -12px 0;
   }
 }
 
@@ -784,7 +807,9 @@
 // 신용평가등급확인서 제출
 .service-reception {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
 
   & > li {
     flex: 1;
@@ -800,30 +825,27 @@
     &.item-own .service-reception-btn::before {
       background-image: url(../../Common/image/img/img_reception_own.svg);
     }
-
-    &:only-of-type {
-      max-width: calc(50% - 5px);
-    }
   }
 
   &-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    position: relative;
     overflow: hidden;
     width: 100%;
+    padding-left: 115px;
     border: 1px solid var(--tb-border);
     border-radius: 8px;
     color: var(--fc-gray1);
     font-size: var(--font-13);
-    line-height: 1.5;
-    text-align: center;
+    line-height: 1.3;
+    text-align: left;
     transition: border-color 0.2s;
 
     &::before {
       content: '';
-      height: 140px;
-      background: #f2f5ff no-repeat center top;
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 115px;
+      background: #f2f5ff no-repeat center top / 115px;
     }
 
     &:focus,
@@ -833,9 +855,18 @@
     }
 
     .wrapper-desc {
-      padding: 32px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 16px 20px;
     }
   }
+}
+
+.service-inner-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .service-section {
@@ -945,11 +976,11 @@
   }
 
   .SOLIconBtn-root:last-child {
-    margin-right: -6px
+    margin-right: -6px;
   }
 
   &:last-child:not(:only-child) {
-    margin-bottom: 6px
+    margin-bottom: 6px;
   }
 }
 
@@ -983,7 +1014,7 @@
 
     .date {
       font-size: var(--font-12);
-      color: var(--fc-gray1)
+      color: var(--fc-gray1);
     }
 
     .label {
@@ -999,7 +1030,7 @@
       font-size: var(--font-13);
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         left: 50%;
@@ -1021,10 +1052,59 @@
 
   .disabled {
     border-color: transparent;
-    .name, .date { opacity: 0.4 }
+    .name,
+    .date {
+      opacity: 0.4;
+    }
     .label {
       filter: grayscale(100%);
-      color: rgba(34,34,34,0.3);
+      color: rgba(34, 34, 34, 0.3);
+    }
+  }
+}
+
+.service-public-list {
+  border-top: 1px solid var(--tb-border);
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-bottom: 1px solid var(--tb-border);
+    padding: 16px 0 16px 52px;
+    word-break: keep-all;
+    background: url(../image/icon/ic_build.svg) no-repeat 12px center;
+  }
+
+  .code {
+    font-size: var(--font-12);
+    color: var(--fc-gray2);
+  }
+}
+
+.box-msg .service-public-list {
+  border-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  .list-item {
+    gap: 3px;
+    padding: 0;
+    border-bottom: 0;
+    background: unset;
+    font-size: var(--font-14)
+  }
+}
+
+.SOLSnackbar-root .service-public-list {
+  border-top: 0;
+
+  .list-item {
+    border-bottom-color: #F4F4F4;
+    padding-left: 40px;
+    background-position-x: left;
+    &:last-child {
+      border-bottom: 0
     }
   }
 }

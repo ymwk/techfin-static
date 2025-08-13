@@ -103,40 +103,43 @@
 
       <div class="console-container">
         <div class="section-outer">
-          <section class="console-section">
-            <span class="stepper-label">제출처 선택</span>
-
-            <div class="service-header">
-              <h3 class="SOLTitle-headline">제출처를 선택해 주세요.</h3>
+          <div class="service-result">
+            <img src="/static/crediview-mo/image/img/img_check_monitor.svg" class="service-result-icon" alt="아이콘" />
+            <div class="service-result-desc">
+              <p class="title">확인서를 오프라인 기관에 <br>전달하여 제출을 완료해주세요.</p>
             </div>
-          </section>
+          </div>
+          <!-- //service-result -->
 
           <section class="console-section">
-            <ul class="service-reception">
-              <li class="item-public">
-                <button type="button" class="service-reception-btn" data-target="publicCont">
-                  <div class="wrapper-desc">
-                    <h4 class="SOLTitle-t4">공공기관 제출용</h4>
-                    <p>조달청 적격심사 및 공공기관 입찰 <br />참여를 위한 평가확인서</p>
-                  </div>
-                </button>
-              </li>
-            </ul>
+            <div class="console-section-header">
+              <h4 class="SOLTitle-t3">출력 후 직접 제출</h4>
+            </div>
+
+            <div class="box-msg mb-g2">
+              <table class="SOLTable-small">
+                <tbody>
+                  <tr>
+                    <th>제출처</th>
+                    <td>
+                      <button type="button" class="SOLIconBtn-root">
+                        <span>조달청 나라장터 외 2건</span>
+                        <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="msg-err mb-g2">위 기관은 출력된 확인서를 직접 전달하여야 제출이 완료됩니다.</p>
+
+            <button type="button" class="SOLBtn-root w--full">확인서 보기</button>
           </section>
         </div>
+        <!-- section-outer -->
       </div>
       <!-- //console-container -->
-
-      <div class="console-footer">
-        <a class="footer-topBtn" href="#top">
-          <i class="SOLIcon-root SOLIcon-arr--t"></i>
-          <span class="blind">Scroll to Top</span>
-        </a>
-        <div class="console-footer-btns">
-          <!-- <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>다음</button> -->
-          <a href="issue-own.html" class="SOLBtn-root t--contained s--lg w--full disabled">다음</a>
-        </div>
-      </div>
     </div>
 
     <!-- component js -->

@@ -1,284 +1,288 @@
-footer.SOLFooter-root {
+.SOLFooter-root {
+  position: relative;
   padding: 35px 0;
+
   &.t--dark {
     background-color: #1a1a1b;
     color: #7b7b7b;
   }
 
-  .SOLFooter-inner {
-    width: 360px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
   .inquery-for-use {
-    span {
-      display: block;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #bababa33;
+
     .tit {
-      font-size: 15px;
+      font-size: var(--font-15);
       font-weight: 600;
       color: #a6a6a6;
     }
     .inquery-number {
-      font-size: 21px;
+      font-size: var(--font-21);
       font-weight: 600;
       color: #a6a6a6;
-      padding-top: 5px;
-    }
-    .inquery-for-list {
-      padding: 10px 0 26px 0;
-      border-bottom: solid 1px #bababa33;
-      li {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding-bottom: 5px;
-        .title {
-          width: 75px;
-          font-size: 13px;
-          font-weight: 500;
-          color: #7b7b7b;
-          padding: 0 0 0 16px;
-          position: relative;
-          &::before {
-            content: "";
-            width: 14px;
-            height: 14px;
-            background: url("../../Common/image/icon/mb/ic_time.png") no-repeat;
-            position: absolute;
-            top: 0;
-            left: 0;
-          }
-        }
-        &:last-child {
-          padding-bottom: 0px;
-          .title {
-            &::before {
-              background: url("../../Common/image/icon/mb/ic_email.png")
-                no-repeat;
-            }
-          }
-        }
-        .txt {
-          font-size: 13px;
-          font-weight: 400;
-          color: #7b7b7b;
-        }
-      }
     }
   }
 
-  .SOLFooter-utils {
-    padding-top: 25px;
-    .person-info {
-      a {
-        font-size: 13px;
-        font-weight: 400;
-        color: #7b7b7b;
-        display: inline-block;
-        padding-right: 10px;
-        position: relative;
-        &::before {
-          content: "";
-          width: 1px;
-          height: 13px;
-          background-color: #bababa;
-          position: absolute;
-          top: 1px;
-          right: 0;
-        }
-        &:nth-child(2) {
-          font-weight: 700;
-          padding: 0 0 0 5px;
-          &::before {
-            content: none;
-          }
-        }
-      }
-    }
+  .inquery-for-list {
+    padding-top: 5px;
 
-    .SOLFooter-dropbox {
-      --drop-h: 38px;
-      z-index: 0;
-      position: relative;
-      width: 242px;
-      font-size: var(--font-14);
-      margin: 17px 0;
-
-      .SOLFooter-dropbox-inner {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        border: solid 1px rgba(219, 219, 219, 0.2);
-        border-radius: 6px;
-        background-color: #1a1a1b;
-        color: #4b4e53;
-        transition: color 0.2s, background-color 0.2s,
-          max-height 0.2s ease-in-out;
-
-        &:hover {
-          background-color: #f0f0f0;
-        }
-        ul {
-          display: none;
-          transition: ease-in-out 0.2s;
-        }
-        &.on {
-          ul {
-            display: block;
-          }
-          .SOLFooter-dropbox-btn {
-            &::after {
-              content: "";
-              transform: rotate(-133deg);
-              margin-top: 0px;
-            }
-          }
-        }
-      }
-
-      a {
-        display: flex;
-        align-items: center;
-        padding: 0 16px;
-        height: 39px;
-        color: inherit;
-        transition: background-color 0.2s;
-
-        &:hover {
-          background-color: #ebebeb;
-        }
-      }
-
-      &-btn {
-        position: relative;
-        flex-shrink: 0;
-        order: 2;
-        width: 100%;
-        padding: 0 16px;
-        height: var(--drop-h);
-        text-align: left;
-        color: inherit;
-
-        &::after {
-          content: "";
-          position: absolute;
-          right: 16px;
-          top: 50%;
-          width: 8px;
-          height: 8px;
-          margin-top: -6px;
-          border-right: 1px solid currentColor;
-          border-bottom: 1px solid currentColor;
-          transform: rotate(45deg);
-          transition: transform 0.3s ease-in-out;
-        }
-      }
-    }
-    .sns-link {
+    li {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding-top: 10px;
-      .sns-list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 185px;
-        padding-right: 24px;
-        li {
-          a {
-            display: inline-block;
-            img {
-              max-width: 100%;
-            }
-          }
-        }
-      }
-      .pc-v {
-        font-size: var(--font-14);
-        font-weight: 400;
-        color: #9e9e9e;
-        padding: 0 0 0 24px;
+      padding-bottom: 5px;
+      .title {
+        min-width: 75px;
+        font-size: var(--font-13);
+        font-weight: 500;
+        color: #7b7b7b;
+        padding: 0 16px;
         position: relative;
-        &:before {
-          content: "";
-          width: 1px;
-          height: 16px;
-          background-color: #bababa;
+
+        &::before {
+          content: '';
+          width: 14px;
+          height: 14px;
+          background: url('../image/icon/ic_time.svg') no-repeat;
           position: absolute;
-          top: 0;
+          top: 50%;
           left: 0;
+          margin-top: -7px;
         }
       }
-    }
-  }
-  .SOLFooter-bottom {
-    padding-top: 32px;
-    .footer-logo {
-      width: 148px;
-      height: 25px;
-      background: url(../../Common/image/crediview/logo/logo_techpin_w.png)
-        no-repeat;
-      background-size: 148px;
-      margin-bottom: 14px;
-      img {
-        width: 148px;
-        height: 26px;
-      }
-    }
-    .SOLFooter-address {
-      p {
-        font-size: 12px;
+      // &:last-child {
+      //   .title {
+      //     &::before {
+      //       background: url('../../Common/image/icon/mb/ic_email.png') no-repeat;
+      //     }
+      //   }
+      // }
+      .txt {
+        font-size: var(--font-13);
         font-weight: 400;
-        padding-bottom: 6px;
-        &.copyright {
-          padding-top: 28px;
-        }
-      }
-    }
-  }
-  //   서브디자인
-  &.t--white {
-    background-color: #fff;
-    color: #7b7b7b;
-    .inquery-for-use {
-      .tit {
-        color: #4b4e53;
-      }
-      .inquery-number {
-        color: #4b4e53;
-      }
-      .inquery-for-list {
-        border-bottom: solid 1px #dbdbdb;
-      }
-    }
-    .SOLFooter-utils {
-      .person-info {
-        a {
-          color: #4b4e53;
-        }
-      }
-      .SOLFooter-dropbox {
-        .SOLFooter-dropbox-inner {
-          border: solid 1px #4b4e53;
-          background-color: #fff;
-        }
-      }
-    }
-    .SOLFooter-bottom {
-      .footer-logo {
-        width: 148px;
-        height: 26px;
-        background: url(../../Common/image/crediview/logo/foot_logo_white.png)
-          no-repeat;
-        background-size: 148px;
+        color: #7b7b7b;
       }
     }
   }
 }
+
+.SOLFooter-inner {
+  padding: 0 var(--spc-w);
+}
+
+.SOLFooter-utils {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  .person-info {
+    font-size: 13px;
+    font-weight: 400;
+    color: #7b7b7b;
+    margin-left: -10px;
+
+    a {
+      position: relative;
+      display: inline-block;
+      padding: 10px 10px 10px 11px;
+      color: inherit;
+
+      &:not(:first-child)::before {
+        content: '';
+        width: 1px;
+        height: 13px;
+        background-color: currentColor;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .sns-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    .sns-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 185px;
+      padding-right: 24px;
+      li {
+        a {
+          display: inline-block;
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    .pc-v {
+      font-size: var(--font-14);
+      font-weight: 400;
+      color: #9e9e9e;
+      padding: 10px 0 10px 18px;
+      position: relative;
+      margin-left: auto;
+      margin-right: 20px;
+      background: url(../image/icon/ic_desktop.svg) no-repeat left center;
+
+      &:before {
+        content: '';
+        width: 1px;
+        height: 16px;
+        background-color: currentColor;
+        position: absolute;
+        top: 50%;
+        left: -21px;
+        transform: translateY(-50%);
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.SOLFooter-dropbox {
+  --drop-h: 40px;
+  z-index: 0;
+  position: relative;
+  height: var(--drop-h);
+  font-size: var(--font-14);
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 39px;
+    color: inherit;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+  }
+
+  .SOLFooter-dropbox-btn {
+    position: relative;
+    flex-shrink: 0;
+    order: 2;
+    width: 100%;
+    padding: 0 16px;
+    height: var(--drop-h);
+    text-align: left;
+    color: inherit;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      margin-top: -6px;
+      border-right: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &.on .SOLFooter-dropbox-inner {
+    max-height: 300px;
+    background-color: #f0f0f0;
+
+    .SOLFooter-dropbox-btn {
+      &::after {
+        opacity: 0.5;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}
+
+.SOLFooter-dropbox-inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: var(--drop-h);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: solid 1px rgba(219, 219, 219, 0.2);
+  border-radius: 6px;
+  background-color: #1a1a1b;
+  color: #4b4e53;
+  transition: color 0.2s, background-color 0.2s, max-height 0.2s ease-in-out;
+}
+
+.SOLFooter-bottom {
+  padding-top: 32px;
+  .footer-logo {
+    width: 148px;
+    height: 25px;
+    background: url(../../Common/image/crediview/logo/logo_techpin_w.png) no-repeat;
+    background-size: 148px;
+    margin-bottom: 14px;
+  }
+  .SOLFooter-address {
+    p {
+      font-size: 12px;
+      font-weight: 400;
+      padding-bottom: 6px;
+      &.copyright {
+        padding-top: 28px;
+      }
+    }
+  }
+}
+
+//   서브디자인
+.SOLFooter-root.t--white {
+  background-color: #fff;
+  color: #7b7b7b;
+  .inquery-for-use {
+    .tit {
+      color: #4b4e53;
+    }
+    .inquery-number {
+      color: #4b4e53;
+    }
+    .inquery-for-list {
+      border-bottom: solid 1px #dbdbdb;
+    }
+  }
+  .SOLFooter-utils {
+    .person-info {
+      a {
+        color: #4b4e53;
+      }
+    }
+    .SOLFooter-dropbox {
+      .SOLFooter-dropbox-inner {
+        border: solid 1px #4b4e53;
+        background-color: #fff;
+      }
+    }
+  }
+  .SOLFooter-bottom {
+    .footer-logo {
+      width: 148px;
+      height: 26px;
+      background: url(../../Common/image/crediview/logo/foot_logo_white.png) no-repeat;
+      background-size: 148px;
+    }
+  }
+}
+

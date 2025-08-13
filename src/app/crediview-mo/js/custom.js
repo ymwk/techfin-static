@@ -1,11 +1,11 @@
 // Tooltip
 const toolip = tippy(document.querySelectorAll('[data-trigger="tooltip"]'), {
-  placement: "bottom-start",
+  placement: 'bottom-start',
   arrow: false,
   allowHTML: true,
   interactive: true,
-  trigger: "click",
-  theme: "light-border",
+  trigger: 'click',
+  theme: 'light-border',
   maxWidth: 500,
   content(reference) {
     let template = reference.nextElementSibling;
@@ -15,12 +15,12 @@ const toolip = tippy(document.querySelectorAll('[data-trigger="tooltip"]'), {
 
 // popover
 const popover = tippy(document.querySelectorAll('[data-trigger="popover"]'), {
-  placement: "bottom",
+  placement: 'bottom',
   arrow: false,
   allowHTML: true,
   interactive: true,
-  trigger: "click",
-  theme: "notify",
+  trigger: 'click',
+  theme: 'notify',
   maxWidth: 500,
   content(reference) {
     // const id = reference.getAttribute("data-template");
@@ -32,12 +32,12 @@ const popover = tippy(document.querySelectorAll('[data-trigger="popover"]'), {
 
 // popmenu
 const popmenu = tippy(document.querySelectorAll('[data-trigger="popmenu"]'), {
-  placement: "right",
+  placement: 'right',
   arrow: false,
   allowHTML: true,
   interactive: true,
-  trigger: "click",
-  theme: "popmenu",
+  trigger: 'click',
+  theme: 'popmenu',
   maxWidth: 150,
   content(reference) {
     let template = reference.nextElementSibling;
@@ -46,41 +46,41 @@ const popmenu = tippy(document.querySelectorAll('[data-trigger="popmenu"]'), {
 });
 
 // tab
-const tabRoot = document.querySelectorAll(".SOLTab-root");
+const tabRoot = document.querySelectorAll('.SOLTab-root');
 
 tabRoot.forEach((item) => {
-  const tabBtn = item.querySelectorAll(".SOLTab-btn");
-  const tabCont = item.querySelectorAll(".SOLTab-content");
+  const tabBtn = item.querySelectorAll('.SOLTab-btn');
+  const tabCont = item.querySelectorAll('.SOLTab-content');
 
   tabBtn.forEach((btn, index) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener('click', (e) => {
       tabCont.forEach((content) => {
-        content.classList.remove("st--active");
+        content.classList.remove('st--active');
       });
 
       tabBtn.forEach((content) => {
-        content.classList.remove("st--active");
+        content.classList.remove('st--active');
       });
 
-      tabBtn[index].classList.add("st--active");
-      tabCont[index].classList.add("st--active");
+      tabBtn[index].classList.add('st--active');
+      tabCont[index].classList.add('st--active');
     });
   });
 });
 
 // filter
-const filter = document.querySelectorAll(".SOLFilter-root");
+const filter = document.querySelectorAll('.SOLFilter-root');
 
 filter.forEach((item) => {
-  const tabBtn = item.querySelectorAll(".SOLFilter-btn");
+  const tabBtn = item.querySelectorAll('.SOLFilter-btn');
 
   tabBtn.forEach((btn, index) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener('click', (e) => {
       tabBtn.forEach((content) => {
-        content.classList.remove("st--active");
+        content.classList.remove('st--active');
       });
 
-      tabBtn[index].classList.add("st--active");
+      tabBtn[index].classList.add('st--active');
     });
   });
 
@@ -90,7 +90,7 @@ filter.forEach((item) => {
 
 // file change
 function fileChange(el) {
-  el.parentNode.querySelector(".SOLFile-name").textContent = el.files[0].name;
+  el.parentNode.querySelector('.SOLFile-name').textContent = el.files[0].name;
 }
 
 // combobox
@@ -121,39 +121,39 @@ function fileChange(el) {
 // }
 
 function combobox(el) {
-  const option = el.nextElementSibling.querySelectorAll("li");
+  const option = el.nextElementSibling.querySelectorAll('li');
 
   option.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener('click', (e) => {
       el.innerText = btn.innerText;
     });
   });
 }
 
 // SNB
-const lnbItem = document.querySelectorAll(".SOLSidebar-lnb-item");
+const lnbItem = document.querySelectorAll('.SOLSidebar-lnb-item');
 
 lnbItem.forEach((btn, index) => {
-  btn.addEventListener("click", (e) => {
+  btn.addEventListener('click', (e) => {
     lnbItem.forEach((content) => {
-      content.classList.remove("st--open");
+      content.classList.remove('st--open');
     });
 
-    lnbItem[index].classList.add("st--open");
+    lnbItem[index].classList.add('st--open');
   });
 });
 
 // Accordian
-const terms = document.querySelectorAll(".js-accordian-root");
+const terms = document.querySelectorAll('.js-accordian-root');
 
 terms.forEach((item) => {
-  const btn = item.querySelector(".js-accordian-btn");
+  const btn = item.querySelector('.js-accordian-btn');
 
-  btn.addEventListener("click", (e) => {
-    if (item.classList.contains("st--open")) {
-      item.classList.remove("st--open");
+  btn.addEventListener('click', (e) => {
+    if (item.classList.contains('st--open')) {
+      item.classList.remove('st--open');
     } else {
-      item.classList.add("st--open");
+      item.classList.add('st--open');
     }
   });
 });
@@ -206,26 +206,47 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuBtn = document.querySelector('.SOLHeader-menuBtn');
   const gnb = document.querySelector('.SOLHeader-nav');
   const closeBtn = document.querySelector('.SOLHeader-closeBtn');
+  let currentY = window.scrollY || 0;
 
   menuBtn.addEventListener('click', function () {
+    currentY = window.scrollY;
     gnb.classList.add('open');
+
+    // 전체메뉴 오픈시 body class 추가
+    document.body.classList.add('fixed');
+    // body 위치 고정
+    document.body.style.cssText = `top: -${currentY}px`;
   });
 
   closeBtn.addEventListener('click', function () {
+    const scrollY = document.body.style.top;
     gnb.classList.remove('open');
+
+    document.body.classList.remove('fixed');
+    document.body.style.cssText = '';
+    window.scrollTo({
+      top: parseInt(scrollY || '0', 10) * -1,
+    });
   });
-});
 
-// scroll header
-const header = document.querySelector('.SOLHeader-root');
-// top button
-const topBtn = document.querySelector('.footer-topBtn');
-let beforeScrollY = window.scrollY || 0;
+  // scroll header
+  const header = document.querySelector('.SOLHeader-root');
+  // top button
+  const topBtn = document.querySelector('.footer-topBtn');
+  let beforeScrollY = window.scrollY || 0;
 
-window.addEventListener('scroll', function () {
-  let currentScrollY = window.scrollY;
-  header.classList.toggle('sticky', beforeScrollY < currentScrollY && 50 < currentScrollY);
-  beforeScrollY = currentScrollY;
+  window.addEventListener('scroll', function () {
+    let currentScrollY = window.scrollY;
+    header.classList.toggle('sticky', beforeScrollY < currentScrollY && 50 < currentScrollY);
+    beforeScrollY = currentScrollY;
 
-  topBtn.classList.toggle('show', 100 < currentScrollY);
+    topBtn.classList.toggle('show', 100 < currentScrollY);
+  });
+
+  topBtn.addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
 });

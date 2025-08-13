@@ -3,7 +3,7 @@
   touch-action: none;
 }
 
-.SOLMembers-root {
+.SOLFullpage-root {
   @extend .console-root;
   z-index: 997;
   position: fixed;
@@ -17,12 +17,12 @@
     // overflow: hidden
   }
 
-  .SOLMembers-container {
+  .SOLFullpage-container {
     padding: calc(var(--header-h) + 16px) var(--spc-w) 0;
   }
 }
 
-.SOLMembers-header {
+.SOLFullpage-header {
   z-index: 99;
   position: fixed;
   inset: 0 0 auto;
@@ -39,11 +39,11 @@
   }
 }
 
-.SOLMembers-container {
+.SOLFullpage-container {
   @extend .console-container;
 }
 
-.SOLMembers-footer {
+.SOLFullpage-footer {
   @extend .console-footer;
 
   .footer-btns {
