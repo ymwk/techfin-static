@@ -330,9 +330,9 @@
 
 .service-result-rating {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 28px;
+  align-items: center;  
   background-color: #f2f3f7;
 
   .rating {
@@ -354,6 +354,21 @@
     font-size: var(--font-30);
     font-weight: 700;
   }
+
+  .titbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 11px;
+    line-height: 1.3;
+
+    &.c--error {
+      color: #fff !important;
+      background-color: #FD8789;
+    }
+  }
 }
 
 .service-result-paper {
@@ -365,6 +380,7 @@
   gap: 10px;
   width: 222px;
   height: 144px;
+  margin: 28px;
   border: 9px solid #fff;
   background: #fff url(../image/img/img_rating_border.svg) no-repeat left top / 100% 100%;
   box-shadow: 3px 6px 8px 0px #14193a0f;
@@ -402,6 +418,7 @@
 
 .service-result-box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 30px;
@@ -413,6 +430,16 @@
     th {
       padding-right: 50px;
     }
+  }
+}
+
+.SOLFullpage-root .service-result-box {
+  padding-left: 42px;
+  padding-right: 42px;
+
+  .SOLTable-small th {
+    padding-right: 20px;
+    min-width: 110px
   }
 }
 

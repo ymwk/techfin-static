@@ -1,0 +1,308 @@
+// .SOLRatingCard-root: 등급 산출내역 카드
+// .SOLCard-root: 제출내역 카드
+
+.SOLRatingCard-root,
+.SOLCard-root {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px var(--spc-w) 24px;
+}
+
+.SOLRatingCard-item,
+.SOLCard-item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  .SOLLabel-root {
+    margin-top: 5px
+  }
+
+  &.c--disabled {
+    .SOLRatingCard-date,
+    .SOLCard-date {
+      opacity: 1;
+    }
+    .SOLRatingCard-title,
+    .SOLCard-title {
+      .label {
+        color: currentColor;
+        opacity: .8;
+      }
+    }
+    .SOLRatingCard-detail,
+    .SOLCard-detail {
+      .name {
+        opacity: 1
+      }
+    }
+    .SOLRatingCard-body,
+    .SOLCard-body {
+      background: #F8F8F8;
+      &::before { content: none }
+    }
+  }
+}
+
+.SOLCard-item.t--submit {
+  .SOLLabel-root {
+    background-color: rgb(3, 29, 18, 0.4);
+    color: #73ffc4 !important;
+    font-weight: 500;
+    &.c--active {
+      color: #73FFC4;
+      &::before {
+        content: none
+      }
+    }
+  }
+
+  .SOLCard-title .label {
+    color: currentColor;
+    opacity: .6;
+  }
+
+  .SOLCard-body {
+    background: linear-gradient(153.58deg, #398bfd 0.66%, #a241ff 125.96%);
+    color: #fff;
+  }
+
+  .SOLCard-action {
+    border: 1px solid rgba(24, 30, 43, 0.1);
+    border-top: 0
+  }
+}
+
+.SOLRatingCard-title,
+.SOLCard-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  .label {
+    font-size: var(--font-11);
+    font-weight: 600;
+    color: rgba(36, 63, 100, 0.6);
+  }
+
+  &-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .SOLIconBtn-root {
+      margin-right: -0.6em;
+      height: 100%;
+    }
+  }
+}
+
+.SOLRatingCard-title {
+  padding: 0 10px
+}
+
+.SOLRatingCard-body,
+.SOLCard-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px 22px 12px;
+  border: 1px solid rgba(24, 30, 43, 0.1);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background: #f1f5ff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../image/img/bg_card.png) no-repeat center center / cover;
+  }
+}
+
+.SOLCard-body { padding: 24px 32px 12px }
+
+.SOLRatingCard-detail {
+  position: relative;
+  display: flex;
+  background: rgba(255, 255, 255, 0.76);
+  border-radius: 8px;
+  padding: 8px 0;
+
+  & > li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border-left: 1px solid rgba(24, 30, 43, 0.05);
+  }
+
+  .name {
+    font-size: var(--font-11);
+    opacity: 0.5;
+  }
+
+  .value {
+    font-size: var(--font-12);
+    font-weight: 600;
+  }
+}
+
+.SOLCard-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 0 6px;
+
+  & > li {
+    display: flex;
+    gap: 8px;
+    border-left: 1px solid rgba(24, 30, 43, 0.05);
+  }
+
+  .name {
+    font-size: var(--font-12);
+    opacity: 0.5;
+  }
+
+  .value {
+    font-size: var(--font-13);
+    font-weight: 600;
+  }
+}
+
+.SOLRatingCard-grade {
+  font-size: var(--font-28);
+  font-weight: 700;
+
+  small {
+    font-size: var(--font-20);
+  }
+
+  .grade {
+    color: #1e479f;
+  }
+
+  .txt {
+    font-size: var(--font-22);
+  }
+}
+
+.SOLRatingCard-date,
+.SOLCard-date {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: var(--font-10);
+  opacity: 0.6;
+}
+
+.SOLRatingCard-action,
+.SOLCard-action {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid rgba(24, 30, 43, 0.1);
+  border-top: 0;
+  font-size: var(--font-12);
+
+  a {
+    text-decoration: underline;
+  }
+
+  .SOLPopper-root {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    color: #000;
+
+    .SOLIconBtn-root {
+      width: 48px;
+      height: 100%;
+    }
+  }
+
+  &-option {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+.SOLRatingCard-btn,
+.SOLCard-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  color: #1d2129;
+
+  .label {
+    font-size: var(--font-14);
+    font-weight: 700;
+  }
+
+  .date {
+    font-size: var(--font-12);
+    color: var(--fc-gray2);
+  }
+}
+
+.SOLRatingCard-empty {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10vh;
+  gap: 12px;
+  font-size: var(--font-14);
+  text-align: center;
+  line-height: 1.7;
+
+  &::before {
+    content: '';
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #F2F5FF url(../image/img/img_empty_card.svg) no-repeat center center;
+  }
+
+  &-action {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  &.ic--ing::before {
+    background-image: url(../image/img/img_empty_search.svg);
+  }
+
+  &.ic--upload::before {
+    background-image: url(../image/img/img_empty_upload.svg);
+  }
+
+  .SOLBtn-root {
+    padding: 0 42px;
+    margin-top: 12px
+  }
+}
+
+.card-category {
+  padding: 10px var(--spc-w);
+  background-color: #f3f5f7;
+  font-size: var(--font-12);
+  color: #5d6677;
+  font-weight: 500;
+}

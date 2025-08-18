@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <title>크레디뷰</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/crediview.css" />
+  </head>
+  <body>
+    <div class="SOLFullpage-root">
+      <div class="SOLFullpage-header">
+        <h2 class="SOLTitle-t2">신용평가등급확인서 제출에 관한 동의</h2>
+        <button type="button" class="SOLIconBtn-root">
+          <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+          <span class="blind">닫기</span>
+        </button>
+      </div>
+
+      <div class="SOLFullpage-container">
+        <div class="section-outer">
+          <div class="SOLTerms-root">
+            <h3>1. 기업신용평가체계 개요</h3>
+            <h4>(1) 기업신용평가의 정의 및 목적</h4>
+            <p>기업신용평가이란 기업의 향후 1년 내 부도 가능성을 평가하고 그 상대적인 위험 수준을 서열화 하여 일정한 형식의 기호(AAA~D)로 표기한 지표를 의미합니다.당사는 기업 규모, 기업이 속한 산업 및 업종 등에 관계없이 동일 신용등급에 대해 동일한 수준의 부도율을 정의 및 관리하고 있으며, 기업신용평가 부여를 위한 신용평가모형 개발 및 운영 시 일관된 부도 정의를 적용하고 있습니다.당사가 준용하고 있는 부도의 정의는 아래와 같습니다.</p>
+            <ul>
+              <li>① 차주가 해당 은행에 부담하는 상당한 수준의 여신에 대해서 90일 이상 연체한 경우</li>
+              <li>② 보유 담보물의 처분과 같은 상환 청구 조치를 취하지 않으면 차주로부터 채무를 일부라도 상환 받지 못할 것으로 판단되는 경우</li>
+            </ul>
+            <p>당사의 기업신용평가은 개별 기업의 전반적인 신용 위험을 평가한 차주 등급(issuer rating)을 의미하며, 개별 채권의 특성과 이에 따른 원리금 회수 가능성을 평가하는 등급(issue-specific rating)과는 차이가 있습니다.</p>
+            <p>당사의 기업신용평가은 AAA~D까지 총 10개로 구분되며, “+”, “-“ 등 의 기호를 활용하여 등급 세분화를 진행할 수 있습니다.당사 기업신용평가별 정의는 다음과 같습니다.</p>
+          </div>
+        </div>
+      </div>
+      <!-- SOLFullpage-container -->
+
+      <div class="SOLFullpage-footer">
+        <div class="footer-btns">
+          <button type="button" class="SOLBtn-root t--contained s--lg w--full">동의</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const popRoot = document.querySelector('.SOLFullpage-root');
+        const popBar = document.querySelector('.SOLFullpage-progress-bar');
+        const popHeight = popRoot.scrollHeight - popRoot.clientHeight;
+
+        popRoot.addEventListener('scroll', function () {
+          let popScrolltop = popRoot.scrollTop;
+          let popBarWidth = Math.round(popScrolltop / popHeight * 100);
+          popBar.style.cssText = `width: ${popBarWidth}%`;
+        });
+      });
+      
+    </script>
+  </body>
+</html>

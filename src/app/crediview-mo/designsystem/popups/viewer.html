@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - Modal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/designsystem.css" />
+    <style>
+      .SOLDOC-root {
+        --root: 2.9px;
+      }
+      .SOLViewer-root {
+        position: relative !important;
+        height: 620px !important;
+        inset: unset !important;
+      }
+
+      .SOLViewer-header {
+        position: sticky !important;
+      }
+
+      .SOLViewer-root .SOLViewer-container {padding-top:0}
+    </style>
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Viewer Popup</h2>
+        <p class="comp-pagetitle-desc">Viewer popup 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">Code View</button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">신용평가등급확인서</h3>
+
+          <div style="border: 1px solid #999">
+            <!-- SOLViewer-root start -->
+            <div class="SOLViewer-root">
+              <div class="SOLViewer-header">
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+                  <span class="blind">닫기</span>
+                </button>
+                <h2 class="SOLTitle-t2">신용평가등급확인서</h2>
+
+                <div class="option">
+                  <button type="button" class="SOLIconBtn-root">
+                    <i class="SOLIcon-root SOLIcon-download"></i>
+                    <span class="blind">다운로드</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="SOLViewer-container">
+                <!-- doc start -->
+                <div class="SOLDOC-root">
+                  <div class="SOLDOC-lead">
+                    <span class="use">공공기관 제출용</span>
+                    <span class="num">TR-RATE-241231-0001</span>
+                  </div>
+
+                  <div class="SOLDOC-header">
+                    <h1 class="SOLDOC-title">신용평가등급확인서</h1>
+                    <span class="SOLDOC-rating">AAA</span>
+                    <span>크레디뷰</span>
+                  </div>
+
+                  <div class="SOLDOC-body">
+                    <section>
+                      <h2 class="SOLDOC-title-sub">신용평가등급 분포도</h2>
+                      <div class="SOLDOC-graph-box">
+                        <div class="SOLDOC-graph-wrapper">
+                          <div class="SOLDOC-graph-canvas">
+                            <img src="/static/Common/image/crediview/doc/doc_graph.svg" alt="분포도" />
+                            <div class="SOLDOC-graph-tag" style="left: 5%">
+                              <span class="tag">AAA</span>
+                            </div>
+                          </div>
+                          <ul class="SOLDOC-graph-legend">
+                            <li>
+                              <div class="bar">매우양호</div>
+                              <div class="legend">
+                                <span>AAA</span>
+                                <span>A-</span>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="bar">양호</div>
+                              <div class="legend">
+                                <span>BBB+</span>
+                                <span>BBB-</span>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="bar">보통이상</div>
+                              <div class="legend">
+                                <span>BB</span>
+                                <span>BB-</span>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="bar">보통</div>
+                              <div class="legend">
+                                <span>B+</span>
+                                <span>B-</span>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="bar">미흡</div>
+                              <div class="legend">
+                                <span>CCC+</span>
+                                <span>C</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <p class="desc">'AA'부터 'CCC'까지는 등급 내 우열에 따라 '+' 또는 '-'를 부가합니다.</p>
+                      </div>
+                    </section>
+
+                    <section>
+                      <h2 class="SOLDOC-title-sub">회사 개요</h2>
+                      <table class="SOLDOC-table" title="회사 개요">
+                        <tbody>
+                          <tr>
+                            <th>기업명</th>
+                            <td>테크핀비즈온</td>
+                            <th>대표자명</th>
+                            <td>김테크</td>
+                          </tr>
+                          <tr>
+                            <th>사업자등록번호</th>
+                            <td>123-45-67890</td>
+                            <th>설립일자</th>
+                            <td>2009-12-25</td>
+                          </tr>
+                          <tr>
+                            <th>주소</th>
+                            <td colspan="3">서울특별시 비즈구 비즈로 300</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </section>
+
+                    <section>
+                      <h2 class="SOLDOC-title-sub">등급</h2>
+                      <table class="SOLDOC-table" title="등급">
+                        <tbody>
+                          <tr>
+                            <th>신용평가 등급</th>
+                            <td>BBB+</td>
+                            <th>등급 산출일</th>
+                            <td>2024-05-15</td>
+                          </tr>
+                          <tr>
+                            <th>등급 유효기간</th>
+                            <td>2025-05-15</td>
+                            <th>제출용도</th>
+                            <td>공공기관 제출용</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </section>
+
+                    <div class="SOLDOC-company">
+                      <span>주식회사 테크핀레이팅스</span>
+                    </div>
+                  </div>
+
+                  <div class="SOLDOC-foot">
+                    <div class="qr-wrapper">
+                      <div class="qr"><img src="/static/Common/image/crediview/doc/doc_qr.png" alt="qr image"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- doc end -->
+              </div>
+              <!-- SOLViewer-container -->
+            </div>
+            <!-- SOLViewer-root -->
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

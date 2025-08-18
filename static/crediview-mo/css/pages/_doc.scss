@@ -1,0 +1,360 @@
+.SOLDOC-root {
+  --root: 0.77vw;
+
+  position: relative;
+  width: calc(var(--root) * 123.8);
+  // aspect-ratio: 21 / 29.7;
+  aspect-ratio: 21 / 27.7;
+  padding: calc(var(--root) * 14.5) calc(var(--root) * 10) calc(var(--root) * 7);
+  background: #fff url(../../Common/image/crediview/doc/doc_paper.png) no-repeat left top / 100%;
+  box-shadow: 0px 6px 8px 0px rgba(20, 25, 58, 0.1);
+  border: 0.28px solid rgba(185, 185, 185, 0.6);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--root) * 72);
+    height: calc(var(--root) * 88.8);
+    background-image: url(../../Common/image/crediview/doc/doc_pattern2.png),
+      url(../../Common/image/crediview/doc/doc_pattern2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: calc(var(--root) * 10);
+    right: 0;
+    width: calc(var(--root) * 33.4);
+    height: calc(var(--root) * 56.5);
+    background-image: url(../../Common/image/crediview/doc/doc_pattern1.png),
+      url(../../Common/image/crediview/doc/doc_pattern1.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.SOLDOC-lead {
+  position: absolute;
+  top: calc(var(--root) * 7);
+  left: calc(var(--root) * 10);
+  right: calc(var(--root) * 10);
+  display: flex;
+  justify-content: space-between;
+  height: calc(var(--root) * 5);
+  margin-bottom: calc(var(--root) * 4.4);
+
+  .use {
+    display: inline-flex;
+    align-items: center;
+    padding: calc(var(--root) * 2.7);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: calc(var(--root) * 2.8)
+  }
+
+  .num {
+    display: inline-flex;
+    align-items: center;
+    font-size: calc(var(--root) * 2.8);
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.SOLDOC-foot {
+  position: absolute;
+  bottom: calc(var(--root) * 9.6);
+  left: calc(var(--root) * 10);
+  right: calc(var(--root) * 10);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: calc(var(--root) * 1.6);
+  line-height: 1.25;
+
+  .qr-wrapper {
+    display: flex;
+    gap: var(--root);
+    align-items: flex-end;
+    text-align: right;
+    margin-left: auto
+  }
+
+  .qr {
+    width: calc(var(--root) * 9.7);
+    height: calc(var(--root) * 9.7);
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.SOLDOC-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(var(--root) * 2);
+  font-size: calc(var(--root) * 3.5);
+  color: #001a4f;
+}
+
+.SOLDOC-title {
+  font-size: calc(var(--root) * 5.4);
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+}
+
+.SOLDOC-title-sub {
+  margin-bottom: calc(var(--root) * 0.8);
+  font-size: calc(var(--root) * 2.8);
+  line-height: 1.82;
+  font-weight: 700;
+}
+
+.SOLDOC-rating {
+  font-size: calc(var(--root) * 17);
+  color: #1e479f;
+  font-weight: 700;
+  text-align: center;
+}
+
+.SOLDOC-body {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--root) * 1.6);
+  margin-top: calc(var(--root) * 2.4);
+}
+
+.SOLDOC-desc-list {
+  margin-top: calc(var(--root) * 0.8 * -1);
+  font-size: calc(var(--root) * 1.7);
+  line-height: 1.82;
+  word-break: keep-all;
+
+  & > li {
+    position: relative;
+    padding-left: calc(var(--root) * 1.1);
+    counter-increment: number 1;
+
+    &::before {
+      content: counter(number) '.';
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.SOLDOC-company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--root) * 0.8);
+  font-size: calc(var(--root) * 4);
+  padding-top: calc(var(--root) * 6);
+  
+
+  .stamp {
+    height: calc(var(--root) * 7.7);
+
+    img {
+      max-height: 100%;
+    }
+  }
+}
+
+.SOLDOC-graph-box {
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--root) * 3) calc(var(--root) * 5) calc(var(--root) * 2);
+  border: 1px solid #ccc;
+  border-radius: var(--root);
+  background-color: rgba(212, 205, 199, 0.3);
+
+  .desc {
+    margin-top: auto;
+    font-size: calc(var(--root) * 1.6);
+  }
+}
+
+.SOLDOC-graph-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.SOLDOC-graph-canvas {
+  position: relative;
+  margin-bottom: -1px;
+
+  img,
+  svg {
+    display: block;
+    width: 100%;
+  }
+}
+
+.SOLDOC-graph-tag {
+  position: absolute;
+  bottom: calc(var(--root) * 2);
+
+  .tag {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: calc(var(--root) * 7);
+    height: calc(var(--root) * 5);
+    padding: 0 calc(var(--root) * 2);
+    border-radius: calc(var(--root) * 0.7);
+    background-color: #fff;
+    font-size: calc(var(--root) * 2.4);
+    font-weight: 700;
+    color: #1e479f;
+    line-height: 1.1;
+    box-shadow: 0 calc(var(--root) * 0.4) var(--root) rgba(0, 0, 0, 0.15);
+    transform: translateX(-50%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      border-style: solid;
+      border-color: #fff transparent transparent transparent;
+      border-width: var(--root) calc(var(--root) * 0.7);
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.SOLDOC-graph-legend {
+  display: flex;
+  margin-bottom: calc(var(--root) * 0.8);
+
+  & > li {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(var(--root) * 2);
+
+    .bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(var(--root) * 3);
+      color: #fff;
+      font-size: calc(var(--root) * 1.4);
+    }
+
+    .legend {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0.2em;
+      line-height: 1.82;
+    }
+
+    &:first-of-type .bar {
+      border-top-left-radius: calc(var(--root) * 3);
+      border-bottom-left-radius: calc(var(--root) * 3);
+      background-color: #182a50;
+    }
+
+    &:nth-child(2) .bar {
+      background-color: #3f598a;
+    }
+
+    &:nth-child(3) .bar {
+      background-color: #617cb2;
+    }
+
+    &:nth-child(4) .bar {
+      background-color: #7299e7;
+    }
+
+    &:nth-child(5) .bar {
+      border-top-right-radius: calc(var(--root) * 3);
+      border-bottom-right-radius: calc(var(--root) * 3);
+      background-color: #ff976e;
+    }
+  }
+}
+
+.SOLDOC-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-top: 1px solid #ababab;
+  font-size: calc(var(--root) * 2);
+
+  caption {
+    @extend .SOLDOC-title-sub;
+    display: flex;
+  }
+
+  th {
+    width: calc(var(--root) * 17);
+    background-color: rgba(212, 205, 199, 0.5);
+    font-weight: normal;
+    text-align: left;
+  }
+
+  th,
+  td {
+    height: calc(var(--root) * 2.7);
+    padding: calc(var(--root) * 0.8) calc(var(--root) * 2);
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media print {
+  html,
+  body {
+    font-size: 0.571vh !important;
+  }
+  .doc-root {
+    padding-top: 0;
+    justify-content: center;
+    gap: 0;
+  }
+  .doc-header {
+    display: none;
+  }
+  .SOLDOC-root {
+    padding: 14.5rem 8rem 7rem;
+    border: 0;
+    box-shadow: none;
+  }
+  .SOLDOC-lead {
+    top: 5.5rem;
+    left: 8rem;
+    right: 8rem;
+  }
+
+  .SOLDOC-foot {
+    bottom: 8rem;
+    left: 8rem;
+    right: 8rem;
+  }
+
+  .SOLDOC-graph-wrapper {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}

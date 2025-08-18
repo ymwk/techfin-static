@@ -382,6 +382,12 @@
       rotate: 90deg;
     }
   }
+
+  &-download {
+    width: 24px;
+    height: 28px;
+    background: url(../image/icon/ic_download_w.svg) no-repeat center bottom;
+  }
 }
 
 .SOLBtn-root {

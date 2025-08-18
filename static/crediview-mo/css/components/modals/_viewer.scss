@@ -1,0 +1,56 @@
+.SOLViewer-root {
+  @extend .console-root;
+  z-index: 997;
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+
+  .SOLViewer-container {
+    padding: calc(var(--header-h) + 20px) 0 20px;
+  }
+}
+
+.SOLViewer-header {
+  flex-shrink: 0;
+  z-index: 99;
+  position: fixed;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  height: var(--header-h);
+  padding-left: calc(var(--spc-w) - 10px);
+  padding-right: var(--spc-w);
+  background-color: #000;
+  color: #fff;
+
+  .SOLTitle-t2 {
+    line-height: 1;
+    transform: translateY(2px);
+    color: inherit;
+    font-weight: 500
+  }
+
+  .SOLIcon-close {
+    font-weight: 100
+  }
+
+  .option {
+    margin-left: auto;
+    margin-right: -6px;
+  }
+}
+
+.SOLViewer-container {
+  @extend .console-container;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F3F7;
+}
+
+.SOLViewer-footer {
+  @extend .console-footer;
+
+  .footer-btns {
+    @extend .console-footer-btns;
+  }
+}

@@ -1,58 +1,81 @@
 .SOLTab-root {
-    
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  .section-outer {
+    flex-grow: 1;
+
+    .service-result-rating {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .service-result-box {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
 }
 
 .SOLTab-menu {
-    display: flex;
-    gap: 32px;
-    border-bottom: 1px solid var(--tb-border)
+  flex-shrink: 0;
+  display: flex;
+  gap: 32px;
+  padding: 20px var(--spc-w) 0;
+  border-bottom: 1px solid var(--tb-border);
 }
 
 .SOLTab-btn {
-    position: relative;
-    height: 48px;
-    padding-bottom: 6px;
-    font-size: var(--font-18);
-    color: var(--fc-gray2);
-    font-weight: 700;
-    transition: border-color .3s, color .3s;
+  position: relative;
+  height: 46px;
+  padding-bottom: 6px;
+  font-size: var(--font-17);
+  color: var(--fc-gray2);
+  font-weight: 700;
+  transition: border-color 0.3s, color 0.3s;
 
-    &:not(:first-child) {
-        margin-left: -1px;
-    }
+  &:not(:first-child) {
+    margin-left: -1px;
+  }
 
-    &.st--active {
-        z-index: 1;
-        color: #222;
-
-        &::after {
-            width: 100%
-        }
-    }
+  &.st--active {
+    z-index: 1;
+    color: #222;
 
     &::after {
-        content: '';
-        position: absolute;
-        bottom: -1px;
-        left: 50%;
-        width: 0;
-        border-bottom: 2px solid currentColor;
-        transform: translateX(-50%);
-        transition: width .3s var(--ease)
-
+      width: 100%;
     }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    border-bottom: 2px solid currentColor;
+    transform: translateX(-50%);
+    transition: width 0.3s var(--ease);
+  }
 }
 
-.SOLTab-container { margin-top: 30px }
+.SOLTab-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
 .SOLTab-content {
-    overflow: hidden;
-    height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 0;
 
-    &.st--active {
-        height: auto;
-        overflow: visible
-    }
-
-    .SOLFilter-root { margin-top: 0 }
+  &.st--active {
+    flex-grow: 1;
+    height: auto;
+    overflow: visible;
+  }
 }

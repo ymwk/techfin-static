@@ -232,5 +232,16 @@
     &--sm {
       font-size: var(--font-12);
     }
+
+    &--lg {
+      font-size: var(--font-15);
+      text-decoration: none;
+    }
   }
+
+  &.w--full {
+    width: 100%
+  }
+
+  em { font-weight: 600 }
 }

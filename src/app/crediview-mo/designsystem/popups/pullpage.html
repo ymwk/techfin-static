@@ -13,8 +13,10 @@
       }
 
       .SOLFullpage-header {
-        position: absolute !important;
+        position: sticky !important;
       }
+
+      .SOLFullpage-root .SOLFullpage-container {padding-top:0}
     </style>
   </head>
   <body>
@@ -27,21 +29,23 @@
 
       <div id="compContents">
         <section class="comp-section">
-          <h3 class="comp-objtitle">popup layout</h3>
+          <h3 class="comp-objtitle">ID/PW 변경 팝업</h3>
 
           <div style="border: 1px solid #999">
+            <!-- SOLFullpage-root start -->
             <div class="SOLFullpage-root">
               <div class="SOLFullpage-header">
+                <h2 class="SOLTitle-t2">비밀번호 재설정</h2>
                 <button type="button" class="SOLIconBtn-root">
                   <i class="SOLIcon-root SOLIcon-close s--lg"></i>
                   <span class="blind">닫기</span>
                 </button>
-                <h2 class="SOLTitle-t2">비밀번호 재설정</h2>
               </div>
               <!-- //SOLFullpage-header -->
 
               <form method="post">
                 <div class="SOLFullpage-container">
+                  <!-- contents start -->
                   <div class="loginbox-wrap">
                     <div class="box-msg">
                       <ul class="msg-noti">
@@ -97,6 +101,7 @@
                     <!-- loginbox-inputs -->
                   </div>
                   <!-- loginbox-wrap -->
+                  <!-- contents end -->
                 </div>
                 <!-- //SOLFullpage-container -->
 
@@ -107,6 +112,111 @@
                 </div>
               </form>
             </div>
+            <!-- SOLFullpage-root end -->
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">신용평가서비스 팝업</h3>
+
+          <div style="border: 1px solid #999">
+            <!-- SOLFullpage-root start -->
+            <div class="SOLFullpage-root">
+              <div class="SOLFullpage-header">
+                <h2 class="SOLTitle-t2">등급산출 상세정보</h2>
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+                  <span class="blind">닫기</span>
+                </button>
+              </div>
+              <!-- //SOLFullpage-header -->
+
+              <div class="SOLFullpage-container">
+                <!-- contents start -->
+                <div class="service-result-msg c--confirm">
+                  <p>발급일 기준 3일후 확인서가 자동 제출됩니다.</p>
+                </div>
+
+                <div class="service-result-summary">
+                  <div class="service-result-rating">
+                    <div class="service-result-paper t--mark">
+                      <span class="tit">신용평가등급</span>
+                      <span class="rating">AAA</span>
+                      <span class="company">테크핀비즈온</span>
+                    </div>
+                  </div>
+
+                  <div class="service-result-box">
+                    <table class="SOLTable-small">
+                      <tbody>
+                        <tr>
+                          <th>관리번호</th>
+                          <td>DR2408300001</td>
+                        </tr>
+                        <tr>
+                          <th>신용평가 신청일</th>
+                          <td>2024-10-15</td>
+                        </tr>
+                        <tr>
+                          <th>상태</th>
+                          <td><span class="c--active">확인서 발급완료</span></td>
+                        </tr>
+                        <tr>
+                          <th>결제일</th>
+                          <td>2024-05-15</td>
+                        </tr>
+                        <tr>
+                          <th>결제상태</th>
+                          <td>결제완료</td>
+                        </tr>
+                        <tr>
+                          <th>결제 만료일</th>
+                          <td>-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <hr class="hr-comm" />
+
+                    <table class="SOLTable-small">
+                      <tbody>
+                        <tr>
+                          <th>상품명</th>
+                          <td>신용평가등급확인서</td>
+                        </tr>
+                        <tr>
+                          <th>발급번호</th>
+                          <td>TR-RATE-241231-001</td>
+                        </tr>
+                        <tr>
+                          <th>신용평가등급</th>
+                          <td>BBB+</td>
+                        </tr>
+                        <tr>
+                          <th>등급산출일</th>
+                          <td>2024-05-15</td>
+                        </tr>
+                        <tr>
+                          <th>등급유효기간</th>
+                          <td>2024-05-15</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //service-result-box -->
+                </div>
+                <!-- //service-result-summary -->
+                <!-- contents end -->
+              </div>
+              <!-- SOLFullpage-container -->
+
+              <div class="SOLFullpage-footer">
+                <div class="footer-btns">
+                  <button type="button" class="SOLBtn-root t--contained s--lg w--full">확인</button>
+                </div>
+              </div>
+            </div>
+            <!-- SOLFullpage-root end -->
           </div>
         </section>
       </div>

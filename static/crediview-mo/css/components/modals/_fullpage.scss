@@ -18,24 +18,31 @@
   }
 
   .SOLFullpage-container {
-    padding: calc(var(--header-h) + 16px) var(--spc-w) 0;
+    padding-top: var(--header-h);
   }
 }
 
 .SOLFullpage-header {
+  flex-shrink: 0;
   z-index: 99;
   position: fixed;
   inset: 0 0 auto;
   display: flex;
   align-items: center;
   height: var(--header-h);
-  padding-left: calc(var(--spc-w) - 10px);
-  padding-right: var(--spc-w);
+  padding: 0 var(--spc-w);
   background-color: #fff;
 
   .SOLTitle-t2 {
     line-height: 1;
     transform: translateY(2px);
+  }
+
+  .SOLIconBtn-root {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px
   }
 }
 
@@ -53,9 +60,10 @@
 
 .loginbox-wrap {
   position: relative;
+  padding: 16px var(--spc-w) 0;
 
   .service-result {
-    padding-top: 48px;
+    padding-top: 65px;
   }
 }
 
@@ -73,4 +81,59 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.SOLFullpage-progress {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-color: #F8FAFA;
+  display: flex;
+  align-items: stretch;
+}
+
+.SOLFullpage-progress-bar {
+  background-color: var(--c-component);
+  transition: width .2s;
+}
+
+.SOLTerms-root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  font-size: var(--font-15);
+  line-height: 1.4;
+
+  h3:not(:first-of-type) { margin-top: 1em }
+  h4 {
+    font-weight: 500
+  }
+
+  small { font-size: var(--font-12) }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 10px solid #F8F9FA;
+    background-color: #F8F9FA;
+    font-size: var(--font-14);
+    font-weight: 500;
+
+    th {
+      width: 30%;
+      min-width: 110px;
+      padding: 0 10px;
+      font-size: var(--font-13);
+      color: #9B9BA0;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    td {
+      padding: 5px
+    }
+  }
 }

@@ -1,0 +1,19 @@
+.mypage-menulist {
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0;
+    font-size: var(--font-15)
+  }
+
+  .SOLIconBtn-root { font-size: inherit }
+
+  .SOLIcon-root {
+    width: 1em;
+  }
+
+  .disabled {
+    color: var(--fc-gray2)
+  }
+}

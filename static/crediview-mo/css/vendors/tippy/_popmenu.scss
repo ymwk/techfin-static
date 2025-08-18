@@ -13,6 +13,7 @@ $transparent-darker: rgba(0, 8, 16, 0.2);
   color: #222;
   box-shadow: 0 3px 12px rgba(55,29,110,0.07);
   border-radius: 10px;
+  white-space: nowrap;
 
   > .#{$namespace-prefix}-backdrop {
     background-color: $color;
@@ -150,5 +151,9 @@ $transparent-darker: rgba(0, 8, 16, 0.2);
     padding: 0;
     font-size: var(--font-12);
     font-weight: 500;
+  }
+
+  .SOLPopper-list > li button {
+    justify-content: center;
   }
 }
