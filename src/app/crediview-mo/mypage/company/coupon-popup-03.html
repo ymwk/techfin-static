@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <title>크레디뷰</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/crediview.css" />
+  </head>
+  <body>
+    <div class="SOLFullpage-root">
+      <div class="SOLFullpage-header">
+        <h2 class="SOLTitle-t2">쿠폰 상세정보</h2>
+        <button type="button" class="SOLIconBtn-root">
+          <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+          <span class="blind">닫기</span>
+        </button>
+      </div>
+
+      <div class="SOLFullpage-container">
+        <div class="section-outer">
+          <section class="console-section">
+            <div class="box-result mb-g2">
+              <div class="box-result-title">
+                <h2 class="SOLTitle-t3">신용평가등급 무료 조회 이용권</h2>
+              </div>
+              <table class="SOLTable-small t--coupon">
+                <tbody>
+                  <tr>
+                    <th>쿠폰번호</th>
+                    <td>D50400901W</td>
+                  </tr>
+                  <tr>
+                    <th>제공혜택</th>
+                    <td>확인서 발급 할인</td>
+                  </tr>
+                  <tr>
+                    <th>할인률</th>
+                    <td>법인사업자 52%/ 개인사업자 60%</td>
+                  </tr>
+                  <tr>
+                    <th>사용기한</th>
+                    <td>2025년 7월 1일 09:00 부터 <br />2025년 12월 30일 12:59 까지</td>
+                  </tr>
+                  <tr>
+                    <th>상태</th>
+                    <td><span class="SOLLabel-root c--active t--contained r--edge s--small">사용가능</span></td>
+                  </tr>
+                  <tr>
+                    <th>사용자</th>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th>사용일시</th>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="box-msg">
+              <div class="msg-noti">
+                <ul>
+                  <li>사업자등록번호 기준으로 1개당 1회 사용 가능</li>
+                  <li>사용 시 쿠폰은 1개만 적용됩니다.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- //section-outer -->
+      </div>
+      <!-- SOLFullpage-container -->
+
+      <div class="SOLFullpage-footer">
+        <div class="footer-btns">
+          <button type="button" class="SOLBtn-root t--contained s--lg w--full">확인 </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const popRoot = document.querySelector('.SOLFullpage-root');
+        const popBar = document.querySelector('.SOLFullpage-progress-bar');
+        const popHeight = popRoot.scrollHeight - popRoot.clientHeight;
+
+        popRoot.addEventListener('scroll', function () {
+          let popScrolltop = popRoot.scrollTop;
+          let popBarWidth = Math.round((popScrolltop / popHeight) * 100);
+          popBar.style.cssText = `width: ${popBarWidth}%`;
+        });
+      });
+    </script>
+  </body>
+</html>

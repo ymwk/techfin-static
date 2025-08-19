@@ -1,7 +1,7 @@
 .SOLFilter-root {
-  display: flex;
-  gap: 8px;
-  margin: 16px var(--spc-w);
+  // display: flex;
+  // gap: 8px;
+  // margin: 16px var(--spc-w);
 
   &.s--lg {
     margin-bottom: 20px;
@@ -29,20 +29,24 @@
 }
 
 .SOLFilter-swiper {
-  position: relative;
-  flex-grow: 1;
-  overflow: hidden;
-  display: flex;
-  transition: flex 0.2s;
+  // position: relative;
+  // flex-grow: 1;
+  // overflow: hidden;
+  // display: flex;
+  // transition: flex 0.2s;
+  margin: 0;
+  padding: 16px var(--spc-w);
+  
 
   &.p--end {
     justify-content: flex-end;
   }
+  .swiper-slide { width: auto }
 }
 
 .SOLFilter-wrap {
-  display: flex;
-  gap: 8px;
+  // display: flex;
+  // gap: 8px;
 }
 
 .SOLFilter-btn {

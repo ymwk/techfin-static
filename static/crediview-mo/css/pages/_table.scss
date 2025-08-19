@@ -19,6 +19,7 @@
     font-size: var(--font-14);
     font-weight: 600;
     text-align: left;
+    line-height: 1.5;
   }
 
   em { color: var(--c-active) }
@@ -34,5 +35,10 @@
       }
     }
     td { padding-right: 8px }
+  }
+
+  &.t--coupon td {
+    padding: 8px 0;
+    font-weight: 500
   }
 }

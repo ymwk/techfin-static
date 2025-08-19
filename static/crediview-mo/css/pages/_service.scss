@@ -1029,7 +1029,8 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    padding: 20px 100px 20px 20px;
+    // padding: 20px 100px 20px 20px; 사용가능여부 삭제
+    padding: 20px;
     border: 1px solid var(--tb-border);
     border-radius: 12px;
     background-color: #fff;
@@ -1122,6 +1123,7 @@
     font-size: var(--font-14)
   }
 }
+
 
 .SOLSnackbar-root .service-public-list {
   border-top: 0;

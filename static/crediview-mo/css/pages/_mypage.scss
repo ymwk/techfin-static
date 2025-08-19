@@ -4,16 +4,122 @@
     justify-content: space-between;
     align-items: center;
     padding: 3px 0;
-    font-size: var(--font-15)
+    font-size: var(--font-15);
   }
 
-  .SOLIconBtn-root { font-size: inherit }
+  .SOLIconBtn-root {
+    font-size: inherit;
+  }
 
   .SOLIcon-root {
     width: 1em;
   }
 
   .disabled {
-    color: var(--fc-gray2)
+    color: var(--fc-gray2);
+  }
+}
+
+.mypage-coupon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--font-16);
+
+  li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    border: 1px solid var(--tb-border);
+    border-radius: 12px;
+    background-color: #fff;
+
+    .sort {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: var(--font-12);
+    }
+
+    .date {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 10px 0 -3px;
+      border-top: 1px dashed var(--tb-border);
+      padding-top: 16px;
+      font-size: var(--font-12);
+      color: var(--fc-gray1);
+
+      & > * {
+        display: inline-flex;
+        align-items: center;
+        height: 10px;
+        &:not(:first-child) {
+          padding-left: 8px;
+          border-left: 1px solid #d8dbe2;
+        }
+      }
+    }
+
+    .title {
+      position: relative;
+      font-weight: 700
+    }
+
+    .SOLIconBtn-root {
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      width: 60px;
+      height: 60px;
+      transform: translateY(-50%);
+      color: #95989B
+    }
+  }
+
+  .disabled {
+    border-color: transparent;
+    
+    .date, .sort { opacity: 0.5 }
+    .title { color: rgba(34,34,34,0.4) }
+    .SOLLabel-root { background-color: #929292 }
+  }
+}
+
+.mypage-terms-list {
+  margin-bottom: 10px;
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-top: 1px solid var(--tb-border);
+    padding: 22px 0;
+    word-break: keep-all;
+  }
+
+  .code {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--font-12);
+    color: var(--fc-gray2);
+
+    & > * {
+      display: inline-flex;
+      align-items: center;
+      height: 10px;
+      &:not(:first-child) {
+        padding-left: 8px;
+        border-left: 1px solid #d8dbe2;
+      }
+    }
+  }
+
+  .tit {
+    font-size: var(--font-15);
+    font-weight: 700
   }
 }

@@ -28,7 +28,7 @@
 
     .SOLIcon-root {
       color: #95989b;
-      margin-top: -1px
+      margin-top: -1px;
     }
   }
 }
@@ -60,6 +60,12 @@
   align-items: flex-start;
   gap: 10px;
   margin-bottom: 18px;
+}
+
+.box-result-title {
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+  border-bottom: 1px dashed var(--tb-border);
 }
 
 .msg-warn {
@@ -124,7 +130,9 @@
   margin: 12px 0;
 }
 
-.section-outer > .hr-comm { margin: 0 }
+.section-outer > .hr-comm {
+  margin: 0;
+}
 
 // 8배수
 .mt-g2 {
@@ -139,4 +147,11 @@
 }
 .mb-g3 {
   margin-bottom: 24px;
+}
+
+.gap-g1 {
+  gap: 8px;
+}
+.gap-g4 {
+  gap: 36px !important;
 }

@@ -355,19 +355,12 @@
 
               <!-- filter -->
               <div class="SOLFilter-root">
-                <div class="SOLFilter-swiper">
-                  <div class="SOLFilter-wrap">
-                    <button type="button" class="SOLFilter-btn st--active">전체 4</button>
-                    <button type="button" class="SOLFilter-btn">공공기관 제출용 1</button>
-                    <button type="button" class="SOLFilter-btn">민간기업 제출용 3</button>
+                <div class="SOLFilter-swiper swiper">
+                  <div class="SOLFilter-wrap swiper-wrapper">
+                    <button type="button" class="SOLFilter-btn swiper-slide">전체 4</button>
+                    <button type="button" class="SOLFilter-btn swiper-slide">공공기관 제출용 1</button>
+                    <button type="button" class="SOLFilter-btn swiper-slide">민간기업 제출용 3</button>
                   </div>
-                </div>
-
-                <div class="SOLFilter-navi">
-                  <button type="button" class="SOLFilter-navi-btn">
-                    <i class="SOLIcon-root SOLIcon-gt--r s--sm"></i>
-                    <span class="blind">next</span>
-                  </button>
                 </div>
               </div>
               <!-- filter end -->
@@ -568,5 +561,13 @@
     <script src="/src/app/crediview-mo/js/popper.min.js"></script>
     <script src="/src/app/crediview-mo/js/tippy-bundle.umd.js"></script>
     <script src="/src/app/crediview-mo/js/custom.js"></script>
+    <script src="/static/crediview-mo/vendors/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.SOLFilter-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+      });
+    </script>
   </body>
 </html>

@@ -27,22 +27,42 @@
   &.t--contained {
     border: 0;
     color: #fff !important;
+    font-weight: 500;
     background-color: #ced4da;
 
     &::before {
       content: none;
     }
 
-    &.c--success {
-      background-color: var(--c-success);
-    }
+    &.c--success { background-color: var(--c-success) !important }
+    &.c--active { background-color: var(--c-active) !important }
+    &.c--error { background-color: var(--c-error) !important }
+    &.c--warn { background-color: var(--c-warn) !important }
+    &.c--normal { background-color: #243F64 !important }
+    &.c--em { background-color: #506FFF !important }
   }
 
   &.t--outlined {
-    min-width: unset;
-    border-radius: 4px;
     border: 1px solid currentColor;
 
     &::before { content: none }
+  }
+
+  &.r--edge {
+    min-width: unset;
+    height: 22px;
+    border-radius: 4px;
+  }
+
+  &.s--small {
+    min-width: 43px !important;
+    height: 18px;
+    padding: 0 4px;
+    font-size: var(--font-10);
+
+    &:not(.r--edge) {
+      padding: 0 8px;
+      font-size: var(--font-11);
+    }
   }
 }

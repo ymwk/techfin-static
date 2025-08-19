@@ -8,13 +8,20 @@
   max-width: var(--max-w);
   margin: 0 auto;
   background-color: #fff;
+
+  form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden
+  }
 }
 
 .console-container {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding-top: var(--header-h)
+  padding-top: var(--header-h);
 }
 
 .console-inner {
@@ -33,10 +40,14 @@
   flex-direction: column;
   margin-top: 40px;
   padding: 0 20px;
-  background: linear-gradient(to top, rgba(255,255,255,1) 82px, rgba(255,255,255,0));
+  background: linear-gradient(to top, rgba(255, 255, 255, 1) 82px, rgba(255, 255, 255, 0));
 
-  .SOLBtn-root { font-weight: 700 }
-  .SOLBtn-root.t--contained { font-weight: 600 }
+  .SOLBtn-root {
+    font-weight: 700;
+  }
+  .SOLBtn-root.t--contained {
+    font-weight: 600;
+  }
 }
 
 .console-footer-btns {
@@ -55,23 +66,33 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 1px solid #D7D7D7;
+  border: 1px solid #d7d7d7;
   border-radius: 50%;
   background-color: #fff;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
-  color: #8B8B8B;
+  color: #8b8b8b;
   opacity: 0;
   overflow: hidden;
-  transition: top .2s, opacity .2s;
+  transition: top 0.2s, opacity 0.2s;
 
   &.show {
     opacity: 1;
-    top: -40px
+    top: -40px;
   }
 }
-// .console-content {
-  
-// }
+
+.console-footer {
+  &:not(:has(.console-footer-btns)) {
+    .footer-topBtn {
+      top: auto;
+      bottom: 20px;
+
+      &.show {
+        top: auto;
+      }
+    }
+  }
+}
 
 .console-title {
   display: flex;
@@ -105,6 +126,17 @@
   }
 }
 
+.console-section {
+  &[class*='gap-'] {
+    display: flex;
+    flex-direction: column;
+
+    & > .console-section-header {
+      padding-bottom: 3px;
+    }
+  }
+}
+
 .console-section-header {
   display: flex;
   align-items: center;
@@ -127,7 +159,9 @@
   color: var(--fc-gray2);
   font-size: var(--font-12);
 
-  .SOLIconBtn-root { margin: -15px -12px }
+  .SOLIconBtn-root {
+    margin: -15px -12px;
+  }
 }
 
 .console-bottom {
@@ -153,5 +187,10 @@
   display: flex;
   flex-direction: column;
   padding: 24px var(--spc-w);
-  gap: 24px
+  gap: 24px;
+
+  &.c--bg {
+    flex-grow: 1;
+    background-color: #f5f7fa;
+  }
 }

@@ -90,6 +90,7 @@
   background-color: var(--c-bg);
   line-height: 1.6;
   font-size: var(--font-12);
+  color: #000;
 
   ul {
     display: flex;
@@ -99,7 +100,7 @@
   }
 
   li {
-    padding-left: 1em;
+    padding: 1px 0 1px 1em;
     text-indent: -0.5em;
     line-height: 1.4;
     &::before {
@@ -108,8 +109,11 @@
   }
 
   .name {
+    display: inline-block;
+    min-width: 50px;
     color: var(--fc-gray2);
-    padding-right: 10px
+    padding-right: 10px;
+    text-indent: 0;
   }
 
   .msg-expdate {

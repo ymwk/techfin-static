@@ -3,21 +3,23 @@
 
 .SOLRatingCard-root,
 .SOLCard-root {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 16px var(--spc-w) 24px;
+  padding: var(--spc-w) var(--spc-w) 24px;
+
+  .content-empty {
+    padding: 50px 0;
+  }
 }
 
 .SOLRatingCard-item,
 .SOLCard-item {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
 
   .SOLLabel-root {
-    margin-top: 5px
+    margin-top: 5px;
   }
 
   &.c--disabled {
@@ -29,19 +31,21 @@
     .SOLCard-title {
       .label {
         color: currentColor;
-        opacity: .8;
+        opacity: 0.8;
       }
     }
     .SOLRatingCard-detail,
     .SOLCard-detail {
       .name {
-        opacity: 1
+        opacity: 1;
       }
     }
     .SOLRatingCard-body,
     .SOLCard-body {
-      background: #F8F8F8;
-      &::before { content: none }
+      background: #f8f8f8;
+      &::before {
+        content: none;
+      }
     }
   }
 }
@@ -52,16 +56,16 @@
     color: #73ffc4 !important;
     font-weight: 500;
     &.c--active {
-      color: #73FFC4;
+      color: #73ffc4;
       &::before {
-        content: none
+        content: none;
       }
     }
   }
 
   .SOLCard-title .label {
     color: currentColor;
-    opacity: .6;
+    opacity: 0.6;
   }
 
   .SOLCard-body {
@@ -71,7 +75,7 @@
 
   .SOLCard-action {
     border: 1px solid rgba(24, 30, 43, 0.1);
-    border-top: 0
+    border-top: 0;
   }
 }
 
@@ -101,7 +105,7 @@
 }
 
 .SOLRatingCard-title {
-  padding: 0 10px
+  padding: 0 10px;
 }
 
 .SOLRatingCard-body,
@@ -124,7 +128,9 @@
   }
 }
 
-.SOLCard-body { padding: 24px 32px 12px }
+.SOLCard-body {
+  padding: 24px 32px 12px;
+}
 
 .SOLRatingCard-detail {
   position: relative;
@@ -260,7 +266,7 @@
   }
 }
 
-.SOLRatingCard-empty {
+.content-empty {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -277,7 +283,7 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background: #F2F5FF url(../image/img/img_empty_card.svg) no-repeat center center;
+    background: #f2f5ff url(../image/img/img_empty_card.svg) no-repeat center center;
   }
 
   &-action {
@@ -293,10 +299,19 @@
     background-image: url(../image/img/img_empty_upload.svg);
   }
 
+  &.ic--cert::before {
+    background-image: url(../image/img/img_empty_cert.svg);
+  }
+
   .SOLBtn-root {
     padding: 0 42px;
-    margin-top: 12px
+    margin-top: 12px;
   }
+}
+
+.SOLCard-empty {
+  flex-grow: 1;
+  padding: 50px 20px;
 }
 
 .card-category {
@@ -305,4 +320,106 @@
   font-size: var(--font-12);
   color: #5d6677;
   font-weight: 500;
+}
+
+// 인증서 카드
+.SOLCertCard-root {
+  .content-empty {
+    padding: 50px 0;
+  }
+
+  &:not(:has([class*='swiper-'])) {
+    padding: var(--spc-w) var(--spc-w) 24px;
+  }
+}
+
+.SOLCertCard-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid rgba(24, 30, 43, 0.1);
+  box-shadow: 0px 2px 4px 0px rgba(20, 25, 58, 0.06);
+
+  &.c--disabled {
+    box-shadow: none;
+    .SOLCertCard-body {
+      background-color: #f6f6f6;
+    }
+    .SOLCertCard-logo {
+      opacity: 0.4;
+    }
+  }
+
+  .SOLCard-detail .name {
+    min-width: 50px;
+  }
+}
+
+.SOLCertCard-body {
+  position: relative;
+  padding: 30px 24px 20px;
+  border-radius: 10px 10px 0 0;
+  background-color: #f1f6fd;
+}
+
+.SOLCertCard-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 70px;
+}
+
+.SOLCertCard-title {
+  margin-bottom: 16px;
+  font-size: var(--font-21);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.SOLCertCard-action {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: 56px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  font-size: var(--font-13);
+
+  .name {
+    font-size: var(--font-12);
+    color: var(--fc-gray2);
+  }
+  .date {
+    font-weight: 700;
+  }
+}
+
+.swiper-card {
+  margin: 0;
+  padding: var(--spc-w) var(--spc-w) 0;
+
+  .swiper-wrapper {
+    flex-grow: 1;
+    width: unset;
+    height: unset;
+  }
+
+  .swiper-pagination {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background-color: #171719;
+    opacity: 0.16;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #353c49;
+  }
 }

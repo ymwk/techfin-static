@@ -5,17 +5,10 @@
 
 .SOLFullpage-root {
   @extend .console-root;
-  z-index: 997;
+  z-index: 1003;
   position: fixed;
   inset: 0;
   overflow-y: auto;
-
-  form {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    // overflow: hidden
-  }
 
   .SOLFullpage-container {
     padding-top: var(--header-h);
@@ -42,7 +35,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 12px
+    right: 12px;
   }
 }
 
@@ -55,6 +48,17 @@
 
   .footer-btns {
     @extend .console-footer-btns;
+  }
+
+  &:not(:has(.footer-btns)) {
+    .footer-topBtn {
+      top: auto;
+      bottom: 20px;
+
+      &.show {
+        top: auto;
+      }
+    }
   }
 }
 
@@ -89,14 +93,14 @@
   left: 0;
   right: 0;
   height: 6px;
-  background-color: #F8FAFA;
+  background-color: #f8fafa;
   display: flex;
   align-items: stretch;
 }
 
 .SOLFullpage-progress-bar {
   background-color: var(--c-component);
-  transition: width .2s;
+  transition: width 0.2s;
 }
 
 .SOLTerms-root {
@@ -106,19 +110,23 @@
   font-size: var(--font-15);
   line-height: 1.4;
 
-  h3:not(:first-of-type) { margin-top: 1em }
+  h3:not(:first-of-type) {
+    margin-top: 1em;
+  }
   h4 {
-    font-weight: 500
+    font-weight: 500;
   }
 
-  small { font-size: var(--font-12) }
+  small {
+    font-size: var(--font-12);
+  }
 
   table {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
-    border: 10px solid #F8F9FA;
-    background-color: #F8F9FA;
+    border: 10px solid #f8f9fa;
+    background-color: #f8f9fa;
     font-size: var(--font-14);
     font-weight: 500;
 
@@ -127,13 +135,13 @@
       min-width: 110px;
       padding: 0 10px;
       font-size: var(--font-13);
-      color: #9B9BA0;
+      color: #9b9ba0;
       font-weight: 400;
       text-align: left;
     }
 
     td {
-      padding: 5px
+      padding: 5px;
     }
   }
 }
