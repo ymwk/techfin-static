@@ -3,18 +3,14 @@
   display: flex;
   flex-direction: column;
 
-  .section-outer {
-    flex-grow: 1;
+  .service-result-rating {
+    border-radius: 10px;
+    overflow: hidden;
+  }
 
-    .service-result-rating {
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .service-result-box {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
+  .service-result-box {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -68,6 +64,7 @@
 }
 
 .SOLTab-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -78,4 +75,10 @@
     height: auto;
     overflow: visible;
   }
+}
+
+.SOLTab-inner {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }

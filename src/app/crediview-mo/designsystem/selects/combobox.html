@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - Input</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/designsystem.css" />
+
+    <style>
+      .SOLSnackbar-root {
+        position: relative;
+        height: 500px;
+      }
+      .SOLSnackbar-backdrop {
+        position: absolute !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Combo-box</h2>
+        <p class="comp-pagetitle-desc">셀렉트박스 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">Code View</button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Default</h3>
+          <div class="comp-cbox">
+            <div class="SOLCombobox-root">
+              <button type="button" class="SOLCombobox-button">선택된 옵션</button>
+            </div>
+
+            <div class="SOLSnackbar-root">
+              <div class="SOLSnackbar-backdrop"></div>
+              <div class="SOLSnackbar-box">
+                <div class="SOLSnackbar-header">
+                  <h3 class="SOLSnackbar-title">변경할 회원등급 선택</h3>
+                </div>
+                <div class="SOLSnackbar-body">
+                  <div class="SOLRadio-root t--list">
+                    <label class="SOLRadio-label">
+                      <input type="radio" name="selectGroup" />
+                      <span>마스터 관리자</span>
+                    </label>
+                    <label class="SOLRadio-label">
+                      <input type="radio" name="selectGroup" />
+                      <span>일반관리자</span>
+                    </label>
+                    <label class="SOLRadio-label">
+                      <input type="radio" name="selectGroup" />
+                      <span>일반회원</span>
+                    </label>
+                    <label class="SOLRadio-label">
+                      <input type="radio" name="selectGroup" />
+                      <span>임시회원</span>
+                    </label>
+                  </div>
+                </div>
+                <!-- //SOLSnackbar-body -->
+              </div>
+              <!-- //SOLSnackbar-box -->
+            </div>
+            <!-- //SOLSnackbar-root -->
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

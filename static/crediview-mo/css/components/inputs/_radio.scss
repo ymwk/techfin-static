@@ -12,7 +12,7 @@
   &.t--column {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px
+    gap: 12px;
   }
 }
 
@@ -55,11 +55,6 @@
       }
     }
 
-    &:hover,
-    &:hover + span {
-      cursor: pointer;
-    }
-
     &:disabled,
     &:disabled + span {
       opacity: 0.7;
@@ -68,6 +63,58 @@
 
     &:disabled {
       background-color: #f5f5f5;
+    }
+  }
+}
+
+.SOLRadio-root.t--list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0;
+  margin-bottom: 48px;
+
+  [type='radio'] {
+    position: absolute;
+    top: 50%;
+    right: var(--spc-w);
+    transform: translateY(-50%);
+    border: 0;
+    background: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 9px;
+      height: 14px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      border-radius: 1px;
+      margin-top: -1px;
+      color: transparent;
+      transition: color .2s;
+    }
+
+    &:checked {
+      border: 0;
+      &::after {color: var(--c-active) }
+    }
+  }
+
+  .SOLRadio-label {
+    position: relative;
+    width: 100%;
+    padding: 16px var(--spc-w);
+    font-size: var(--font-15);
+    font-weight: 500;
+    transition: background-color 0.2s;
+
+    &:has([type='radio']:checked) {
+      background-color: #f7f8fa;
     }
   }
 }

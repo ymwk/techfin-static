@@ -519,7 +519,9 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 490px;
+  margin: 0 auto
 }
 
 .result-graph-canvas {
@@ -530,7 +532,7 @@
   svg {
     display: block;
     width: 100%;
-    height: 126px;
+    // height: 126px;
     margin-bottom: -5px;
   }
 }

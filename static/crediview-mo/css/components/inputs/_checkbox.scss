@@ -2,11 +2,12 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  text-align: left;
   flex-wrap: wrap;
+  
   min-height: 2em;
   line-height: 18px;
   font-size: var(--font-14);
-  text-align: left;
   word-break: keep-all;
 
   .SOLText-note { display: block }
@@ -156,11 +157,6 @@
       &:disabled {
         background-color: var(--c-disabled) !important;
       }
-    }
-
-    &:hover,
-    &:hover + span {
-      cursor: pointer;
     }
 
     &:disabled,

@@ -17,9 +17,9 @@
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: color 0.2s, background-color 0.2s;
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     background-color: var(--form-c-bg-dis);
-
   }
 
   &:disabled,
@@ -38,7 +38,8 @@
       border: 0;
       box-shadow: none;
 
-      &:focus, &:active {
+      &:focus,
+      &:active {
         background-color: #365ecd;
       }
       &.focus {
@@ -64,7 +65,8 @@
         color: rgba(55, 56, 60, 0.28);
       }
 
-      &:focus, &:active {
+      &:focus,
+      &:active {
         background-color: var(--bc-hover);
       }
     }
@@ -74,7 +76,8 @@
       background-color: transparent;
       color: #fff;
 
-      &:focus, &:active {
+      &:focus,
+      &:active {
         background-color: rgba(255, 255, 255, 0.05);
       }
 
@@ -111,10 +114,12 @@
   &.w {
     &--full {
       width: 100%;
-      flex: 1 1
+      flex: 1 1;
       // &:only-child { width: 100% }
     }
-    &--grow { flex: 1 0 auto }
+    &--grow {
+      flex: 1 0 auto;
+    }
   }
 
   &.bottom {
@@ -125,7 +130,7 @@
     position: relative;
     padding: 0 1em 0 34px;
     &::before {
-      content: "+";
+      content: '+';
       font-size: var(--font-28);
       font-weight: 100;
       position: absolute;
@@ -169,7 +174,8 @@
     }
   }
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     color: var(--fc-default);
   }
 
@@ -198,8 +204,10 @@
   color: var(--fc-gray1);
   transition: color 0.2s, background-color 0.2s;
   white-space: nowrap;
+  font-weight: 500;
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     color: var(--fc-default);
     background-color: rgba(0, 0, 0, 0.04);
   }
@@ -213,7 +221,8 @@
     &--action {
       color: var(--c-active);
 
-      &:focus, &:active {
+      &:focus,
+      &:active {
         color: var(--c-active);
         background-color: var(--bc-hover);
       }
@@ -221,7 +230,8 @@
     &--inverse {
       color: #fff;
 
-      &:focus, &:active {
+      &:focus,
+      &:active {
         color: #fff;
         background-color: rgba(255, 255, 255, 0.5);
       }
@@ -240,8 +250,16 @@
   }
 
   &.w--full {
-    width: 100%
+    width: 100%;
   }
 
-  em { font-weight: 600 }
+  &.s--noline {
+    font-size: var(--font-12);
+    text-decoration: none;
+    font-weight: 600
+  }
+
+  em {
+    font-weight: 600;
+  }
 }

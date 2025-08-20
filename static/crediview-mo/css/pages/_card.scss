@@ -266,49 +266,6 @@
   }
 }
 
-.content-empty {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10vh;
-  gap: 12px;
-  font-size: var(--font-14);
-  text-align: center;
-  line-height: 1.7;
-
-  &::before {
-    content: '';
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: #f2f5ff url(../image/img/img_empty_card.svg) no-repeat center center;
-  }
-
-  &-action {
-    margin-top: auto;
-    text-align: center;
-  }
-
-  &.ic--ing::before {
-    background-image: url(../image/img/img_empty_search.svg);
-  }
-
-  &.ic--upload::before {
-    background-image: url(../image/img/img_empty_upload.svg);
-  }
-
-  &.ic--cert::before {
-    background-image: url(../image/img/img_empty_cert.svg);
-  }
-
-  .SOLBtn-root {
-    padding: 0 42px;
-    margin-top: 12px;
-  }
-}
-
 .SOLCard-empty {
   flex-grow: 1;
   padding: 50px 20px;

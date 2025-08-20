@@ -1,7 +1,6 @@
 .SOLFilter-root {
-  // display: flex;
-  // gap: 8px;
-  // margin: 16px var(--spc-w);
+  display: flex;
+  gap: 8px;
 
   &.s--lg {
     margin-bottom: 20px;
@@ -29,31 +28,36 @@
 }
 
 .SOLFilter-swiper {
-  // position: relative;
-  // flex-grow: 1;
-  // overflow: hidden;
-  // display: flex;
-  // transition: flex 0.2s;
+  flex-grow: 1;
   margin: 0;
   padding: 16px var(--spc-w);
-  
 
   &.p--end {
     justify-content: flex-end;
   }
-  .swiper-slide { width: auto }
-}
 
-.SOLFilter-wrap {
-  // display: flex;
-  // gap: 8px;
+  &:not(.swiper) {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    transition: flex 0.2s;
+
+    .SOLFilter-wrap {
+      display: flex;
+      gap: 8px;
+    }
+  }
+  .swiper-slide {
+    width: auto;
+  }
 }
 
 .SOLFilter-btn {
   height: 32px;
   padding: 5px 12px;
   border-radius: 2em;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   font-size: var(--font-13);
   line-height: 1.2;
   color: var(--fc-gray2);
@@ -74,6 +78,7 @@
   display: flex;
   gap: 4px;
   margin-left: auto;
+  padding: 16px var(--spc-w) 16px 0;
 }
 
 .SOLFilter-navi-btn {

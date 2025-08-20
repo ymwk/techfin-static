@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - Tab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/designsystem.css" />
+    <style>
+      .SOLTab-root {
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Tabmenu</h2>
+        <p class="comp-pagetitle-desc">탭메뉴 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">Code View</button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Default</h3>
+
+          <div class="SOLTab-root">
+            <div class="SOLTab-menu">
+              <button type="button" class="SOLTab-btn st--active">메뉴 1</button>
+              <button type="button" class="SOLTab-btn">메뉴 2</button>
+              <button type="button" class="SOLTab-btn">메뉴 3</button>
+            </div>
+
+            <div class="SOLTab-container">
+              <section class="SOLTab-content st--active">
+                <h3 class="blind">메뉴 1</h3>
+                <div class="SOLTab-inner">
+                  <div class="section-outer">Default</div>
+                </div>
+              </section>
+
+              <section class="SOLTab-content">
+                <h3 class="blind">메뉴 2</h3>
+                <div class="SOLTab-inner">
+                  <div class="section-outer">하단 버튼이 있을때</div>
+                </div>
+                <div class="console-footer">
+                  <button class="footer-topBtn">
+                    <i class="SOLIcon-root SOLIcon-arr--t"></i>
+                    <span class="blind">Scroll to Top</span>
+                  </button>
+                  <div class="console-footer-btns">
+                    <button type="button" class="SOLBtn-root t--outlined s--lg w--full">확인</button>
+                  </div>
+                </div>
+              </section>
+
+              <section class="SOLTab-content">
+                <h3 class="blind">메뉴 3</h3>
+                <div class="SOLTab-inner">
+                  <!-- filter -->
+                  <div class="SOLFilter-root">
+                    <div class="SOLFilter-swiper">
+                      <div class="SOLFilter-wrap">
+                        <button type="button" class="SOLFilter-btn swiper-slide st--active">전체 40</button>
+                        <button type="button" class="SOLFilter-btn swiper-slide">마스터관리자 1</button>
+                        <button type="button" class="SOLFilter-btn swiper-slide">일반관리자 3</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- filter end -->
+
+                  <div class="section-outer">Filter가 있을때</div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

@@ -1,25 +1,29 @@
 .SOLSelect-root {
-    position: relative;
-    width: 100%;
-    min-width: 70px;
-    background-color: #fff;
+  position: relative;
+  width: 100%;
+  min-width: 70px;
+  background-color: #fff;
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 14px;
-        border-style: solid;
-        border-color: currentColor transparent transparent;
-        border-width: 6px 5px;
-        margin-top: -3px;
-        border-radius: 2px;
-    }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    border-style: solid;
+    border-color: currentColor transparent transparent;
+    border-width: 6px 5px;
+    margin-top: -3px;
+    border-radius: 2px;
+  }
 }
 
 .SOLSelect-select {
-    z-index: 1;
-    @include formStyle;
-    appearance: none;
-    background-color: transparent;
+  z-index: 1;
+  @include formStyle;
+  appearance: none;
+  background-color: transparent;
+
+  &:disabled {
+    color: var(--fc-default);
+  }
 }
