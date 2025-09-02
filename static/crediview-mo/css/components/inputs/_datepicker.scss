@@ -12,6 +12,10 @@
     background: url(../../Common/image/icon/ic_calendar.svg) no-repeat right
       10px center / 16px;
   }
+
+  .SOLInput-box:has(.SOLInput-field:read-only) {
+    background-color: #fff;
+  }
 }
 
 .SOLDatepicker-popper {
@@ -26,13 +30,9 @@
 
 .SOLDatepicker-box {
   position: relative;
-  padding: 24px 24px 0;
-  margin-top: 5px;
-  border-radius: 10px;
-  border: 1px solid rgba(10, 43, 88, 0.1);
-  background-color: #fff;
-  box-shadow: 0 3px 12px rgba(55, 29, 110, 0.07);
+  padding: 0 24px;
   color: #222;
+  margin-bottom: 24px
 }
 
 .SOLDatepicker-action {
@@ -77,6 +77,7 @@
     width: 26px;
     height: 26px;
     border-radius: 10px;
+    margin: 0 -8px;
 
     &:not(:disabled):hover {
       background-color: var(--bc-hover);
@@ -120,6 +121,8 @@
 }
 
 .SOLDatepicker-days {
+  padding: 8px 0;
+
   &:has(.t--end) {
     .SOLDatepicker-item {
       &:not(.t--disabled) {

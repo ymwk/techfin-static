@@ -102,10 +102,9 @@
       </header>
 
       <div class="console-container">
-        <div class="swiper swiper-card">
-          <ul class="SOLCertCard-root swiper-wrapper">
-            <!-- swiper-slide -->
-            <li class="SOLCertCard-item swiper-slide">
+        <div class="section-outer">
+          <ul class="SOLCertCard-root">
+            <li class="SOLCertCard-item">
               <div class="SOLCertCard-body">
                 <div class="SOLCertCard-logo">
                   <img src="/static/crediview-mo/image/logo/logo_hometax.svg" alt="홈택스 로고" />
@@ -134,73 +133,8 @@
               </div>
               <!-- //SOLCard-action -->
             </li>
-
-            <!-- swiper-slide -->
-            <li class="SOLCertCard-item c--disabled swiper-slide">
-              <div class="SOLCertCard-body">
-                <div class="SOLCertCard-logo">
-                  <img src="/static/crediview-mo/image/logo/logo_hometax.svg" alt="홈택스 로고" />
-                </div>
-                <div class="SOLCertCard-title">
-                  <span class="txt">법인용<br />국세청 홈택스 인증서</span>
-                </div>
-                <!-- //SOLCard-title -->
-                <ul class="SOLCard-detail">
-                  <li>
-                    <span class="name">발급기관</span>
-                    <span class="value">발급기관명</span>
-                  </li>
-                  <li>
-                    <span class="name">발급일</span>
-                    <span class="value">2025.08.30</span>
-                  </li>
-                </ul>
-              </div>
-              <!-- //SOLCard-body -->
-
-              <div class="SOLCertCard-action">
-                <span class="name">유효기간</span>
-                <span class="date">2025.10.31</span>
-                <span class="SOLLabel-root c--error t--contained s--sm">기간만료</span>
-              </div>
-              <!-- //SOLCard-action -->
-            </li>
-
-            <!-- swiper-slide -->
-            <li class="SOLCertCard-item c--disabled swiper-slide">
-              <div class="SOLCertCard-body">
-                <div class="SOLCertCard-logo">
-                  <img src="/static/crediview-mo/image/logo/logo_hometax.svg" alt="홈택스 로고" />
-                </div>
-                <div class="SOLCertCard-title">
-                  <span class="txt">법인용<br />국세청 홈택스 인증서</span>
-                </div>
-                <!-- //SOLCard-title -->
-                <ul class="SOLCard-detail">
-                  <li>
-                    <span class="name">발급기관</span>
-                    <span class="value">발급기관명</span>
-                  </li>
-                  <li>
-                    <span class="name">발급일</span>
-                    <span class="value">2025.08.30</span>
-                  </li>
-                </ul>
-              </div>
-              <!-- //SOLCard-body -->
-
-              <div class="SOLCertCard-action">
-                <span class="name">유효기간</span>
-                <span class="date">2025.10.31</span>
-                <span class="SOLLabel-root c--error t--contained s--sm">기간만료</span>
-              </div>
-              <!-- //SOLCard-action -->
-            </li>
           </ul>
-          <div class="swiper-pagination"></div>
-        </div>
 
-        <div class="section-outer">
           <div class="box-msg">
             <p class="msg-noti">인증서 삭제, 재등록은 데스크탑(PC) 에서 가능합니다.</p>
           </div>
@@ -213,16 +147,5 @@
     <script src="/src/app/crediview-mo/js/popper.min.js"></script>
     <script src="/src/app/crediview-mo/js/tippy-bundle.umd.js"></script>
     <script src="/src/app/crediview-mo/js/custom.js"></script>
-    <script src="/static/crediview-mo/vendors/swiper-bundle.min.js"></script>
-
-    <script>
-      const swiper = new Swiper('.swiper-card', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      });
-    </script>
   </body>
 </html>

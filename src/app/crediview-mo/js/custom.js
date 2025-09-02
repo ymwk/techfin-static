@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
     header.classList.toggle('sticky', beforeScrollY < currentScrollY && 50 < currentScrollY);
     beforeScrollY = currentScrollY;
 
-    topBtn.classList.toggle('show', 100 < currentScrollY);
+    topBtn.classList.toggle('show', 20 < currentScrollY);
   });
 
   topBtn.addEventListener('click', function () {

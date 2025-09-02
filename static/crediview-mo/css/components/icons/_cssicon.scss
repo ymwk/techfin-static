@@ -16,6 +16,7 @@
   &-gt--r,
   &-gt--d,
   &-gt--l {
+    width: 20px;
     &::after {
       content: '';
       position: absolute;
@@ -52,6 +53,10 @@
       border-bottom-width: 2px;
       border-radius: 1px;
     }
+
+    & + & {
+      margin-left: -20px
+    }
   }
 
   &-gt--r.c-gray {
@@ -77,7 +82,7 @@
   &-gt--d {
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
-      margin-top: -1px;
+      margin-top: -2px;
     }
   }
   &-gt--l {
@@ -328,8 +333,28 @@
   }
 
   &-alarm {
-    width: 22px;
-    background: url(../image/icon/ic_alarm.svg) no-repeat center center / contain;
+    width: 24px;
+    background: url(../image/icon/ic_bell.svg) no-repeat center center / contain;
+  }
+
+  &-lock {
+    width: 24px;
+    background: url(../image/icon/ic_lock.svg) no-repeat center center / contain;
+  }
+
+  &-list {
+    width: 24px;
+    background: url(../image/icon/ic_list.svg) no-repeat center center / contain;
+  }
+
+  &-align {
+    width: 18px;
+    background: url(../image/icon/ic_align.svg) no-repeat center center;
+  }
+
+  &-refresh {
+    width: 18px;
+    background: url(../image/icon/ic_refresh.svg) no-repeat center center;
   }
 
   &-hamburger {
@@ -387,6 +412,11 @@
     width: 24px;
     height: 28px;
     background: url(../image/icon/ic_download_w.svg) no-repeat center bottom;
+  }  
+
+  &-edit {
+    width: 18px;
+    background: url(../image/icon/ic_edit.svg) no-repeat center center;
   }
 }
 

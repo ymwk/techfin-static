@@ -43,7 +43,10 @@
     font-size: var(--font-22);
     font-weight: 700;
     line-height: 1.45;
-    color: var(--fc-default)
+    color: var(--fc-default);
+    small {
+      font-weight: 400;
+    }
   }
 }
 
@@ -60,7 +63,7 @@
 
   &.small {
     font-size: var(--font-13);
-    color: var(--fc-gray2)
+    color: var(--fc-gray2);
   }
 }
 
@@ -81,7 +84,7 @@
 }
 .SOLText--require {
   &::after {
-    content: "*";
+    content: '*';
     color: var(--c-error);
   }
 }

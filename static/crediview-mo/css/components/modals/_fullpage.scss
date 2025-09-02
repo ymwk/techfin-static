@@ -43,6 +43,10 @@
   @extend .console-container;
 }
 
+.SOLFullpage-contents {
+  padding: 0 var(--spc-w);
+}
+
 .SOLFullpage-footer {
   @extend .console-footer;
 

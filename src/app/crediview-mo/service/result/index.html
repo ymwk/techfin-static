@@ -17,7 +17,7 @@
               <i class="SOLIcon-root SOLIcon-gt--l s--xl"></i>
               <span class="blind">Prev</span>
             </button>
-            <h2 class="SOLHeader-title-text">신용평가 신청</h2>
+            <h2 class="SOLHeader-title-text">등급 산출 및 제출내역</h2>
           </div>
 
           <div class="SOLHeader-global">
@@ -161,14 +161,26 @@
             <!-- 신용평가등급 tab end -->
 
             <!-- 등급 산출내역 -->
-            <section class="SOLTab-content">
+            <section class="SOLTab-content st--active">
               <h3 class="blind">등급 산출내역</h3>
               <div class="SOLTab-inner">
-                <h4 class="card-category">2025년 8월</h4>
+                <div class="SOLAlign-root">
+                  <span class="result">검색결과 <em>8</em>건</span>
+                  <div class="SOLAlign-utils">
+                    <span>6개월</span>
+                    <button type="button" class="SOLIconBtn-root">
+                      <i class="SOLIcon-root SOLIcon-align"></i>
+                      <span class="blind">상세조회</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //SOLAlign-root -->
+
+                <h4 class="card-category">2025년 8월<span class="utils">4건</span></h4>
                 <ul class="SOLRatingCard-root">
                   <li class="SOLRatingCard-item">
                     <div class="SOLRatingCard-body">
-                      <div class="SOLRatingCard-date">신청일시 2025-08-10 15:30</div>
+                      <div class="SOLRatingCard-date">신청일 2025-08-10</div>
                       <div class="SOLRatingCard-title">
                         <span class="label">신용평가등급</span>
                         <div class="SOLRatingCard-title-option">
@@ -176,102 +188,11 @@
                           <span class="SOLLabel-root c--active">평가진행</span>
                         </div>
                       </div>
+                      <!-- //SOLRatingCard-title -->
 
                       <ul class="SOLRatingCard-detail">
                         <li>
-                          <span class="name">등급 산정일</span>
-                          <span class="value">-</span>
-                        </li>
-                        <li>
-                          <span class="name">등급 유효기간</span>
-                          <span class="value">-</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="SOLRatingCard-action">
-                      <button type="submit" class="SOLRatingCard-btn">
-                        <span class="label">취소</span>
-                      </button>
-
-                      <div class="SOLPopper-root">
-                        <button type="button" class="SOLIconBtn-root" data-trigger="popmenu">
-                          <i class="SOLIcon-root SOLIcon-more"></i>
-                        </button>
-                        <ul class="SOLPopper-list">
-                          <li><button type="button">상세정보</button></li>
-                          <li>
-                            <button type="button"><span class="c--error">삭제</span></button>
-                          </li>
-                        </ul>
-                      </div>
-                      <!-- //SOLPopper-root -->
-                    </div>
-                    <!-- //SOLRatingCard-action -->
-                  </li>
-
-                  <li class="SOLRatingCard-item">
-                    <div class="SOLRatingCard-body">
-                      <div class="SOLRatingCard-date">신청일시 2025-08-10 15:30</div>
-                      <div class="SOLRatingCard-title">
-                        <span class="label">신용평가등급</span>
-                        <div class="SOLRatingCard-title-option">
-                          <div class="SOLRatingCard-grade"><span class="grade">AAA</span></div>
-                          <span class="SOLLabel-root c--success">등급확인</span>
-                        </div>
-                      </div>
-
-                      <ul class="SOLRatingCard-detail">
-                        <li>
-                          <span class="name">등급 산정일</span>
-                          <span class="value">2024-06-30</span>
-                        </li>
-                        <li>
-                          <span class="name">등급 유효기간</span>
-                          <span class="value">-</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="SOLRatingCard-action">
-                      <button type="submit" class="SOLRatingCard-btn">
-                        <span class="label c--active">결제</span>
-                        <span class="date">25-08-31까지 결제 가능</span>
-                      </button>
-
-                      <div class="SOLPopper-root">
-                        <button type="button" class="SOLIconBtn-root" data-trigger="popmenu">
-                          <i class="SOLIcon-root SOLIcon-more"></i>
-                        </button>
-                        <ul class="SOLPopper-list">
-                          <li><button type="button">상세정보</button></li>
-                          <li>
-                            <button type="button"><span class="c--error">삭제</span></button>
-                          </li>
-                        </ul>
-                      </div>
-                      <!-- //SOLPopper-root -->
-                    </div>
-                    <!-- //SOLRatingCard-action -->
-                  </li>
-                </ul>
-
-                <h4 class="card-category">2025년 7월</h4>
-                <ul class="SOLRatingCard-root">
-                  <li class="SOLRatingCard-item">
-                    <div class="SOLRatingCard-body">
-                      <div class="SOLRatingCard-date">신청일시 2025-08-10 15:30</div>
-                      <div class="SOLRatingCard-title">
-                        <span class="label">신용평가등급</span>
-                        <div class="SOLRatingCard-title-option">
-                          <div class="SOLRatingCard-grade"><span class="txt">등급 산출중</span></div>
-                          <span class="SOLLabel-root c--active">평가진행</span>
-                        </div>
-                      </div>
-
-                      <ul class="SOLRatingCard-detail">
-                        <li>
-                          <span class="name">등급 산정일</span>
+                          <span class="name">등급 산출일</span>
                           <span class="value">-</span>
                         </li>
                         <li>
@@ -286,37 +207,94 @@
                       <button type="submit" class="SOLRatingCard-btn">
                         <span class="label">취소</span>
                       </button>
+                    </div>
+                    <!-- //SOLRatingCard-action -->
+                  </li>
 
-                      <div class="SOLPopper-root">
-                        <button type="button" class="SOLIconBtn-root" data-trigger="popmenu">
-                          <i class="SOLIcon-root SOLIcon-more"></i>
-                        </button>
-                        <ul class="SOLPopper-list">
-                          <li><button type="button">상세정보</button></li>
-                          <li>
-                            <button type="button"><span class="c--error">삭제</span></button>
-                          </li>
-                        </ul>
+                  <li class="SOLRatingCard-item c--disabled">
+                    <div class="SOLRatingCard-body">
+                      <div class="SOLRatingCard-date">신청일 2025-08-10</div>
+                      <div class="SOLRatingCard-title">
+                        <span class="label">신용평가등급</span>
+                        <div class="SOLRatingCard-title-option">
+                          <div class="SOLRatingCard-grade"><span class="txt">등급 산출불가</span></div>
+                          <span class="SOLLabel-root c--disabled">등급 산출불가</span>
+                        </div>
                       </div>
-                      <!-- //SOLPopper-root -->
+                      <!-- //SOLRatingCard-title -->
+
+                      <ul class="SOLRatingCard-detail">
+                        <li>
+                          <span class="name">등급 산출일</span>
+                          <span class="value">-</span>
+                        </li>
+                        <li>
+                          <span class="name">등급 유효기간</span>
+                          <span class="value">-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //SOLRatingCard-body -->
+
+                    <div class="SOLRatingCard-action">
+                      <span>재무제표 또는 회계 데이터가 불충분합니다.</span>
+                    </div>
+                    <!-- //SOLRatingCard-action -->
+                  </li>
+
+                  <li class="SOLRatingCard-item c--disabled">
+                    <div class="SOLRatingCard-body">
+                      <div class="SOLRatingCard-date">신청일 2025-08-10</div>
+                      <div class="SOLRatingCard-title">
+                        <span class="label">신용평가등급</span>
+                        <div class="SOLRatingCard-title-option">
+                          <div class="SOLRatingCard-grade"><span class="txt">등급 산출불가</span></div>
+                          <span class="SOLLabel-root c--disabled">등급 산출불가</span>
+                        </div>
+                      </div>
+                      <!-- //SOLRatingCard-title -->
+
+                      <ul class="SOLRatingCard-detail">
+                        <li>
+                          <span class="name">등급 산출일</span>
+                          <span class="value">-</span>
+                        </li>
+                        <li>
+                          <span class="name">등급 유효기간</span>
+                          <span class="value">-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //SOLRatingCard-body -->
+
+                    <div class="SOLRatingCard-action">
+                      <span>기타 사유로 인해 등급 산출이 불가합니다.</span>
                     </div>
                     <!-- //SOLRatingCard-action -->
                   </li>
 
                   <li class="SOLRatingCard-item">
                     <div class="SOLRatingCard-body">
-                      <div class="SOLRatingCard-date">신청일시 2025-08-10 15:30</div>
+                      <div class="SOLRatingCard-date">신청일 2025-08-10</div>
                       <div class="SOLRatingCard-title">
                         <span class="label">신용평가등급</span>
                         <div class="SOLRatingCard-title-option">
                           <div class="SOLRatingCard-grade"><span class="grade">AAA</span></div>
                           <span class="SOLLabel-root c--success">등급확인</span>
+
+                          <div class="SOLCard-title-detail">
+                            <button type="button" class="SOLIconBtn-root t--card">
+                              <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                              <span class="blind">상세보기</span>
+                            </button>
+                          </div>
                         </div>
                       </div>
+                      <!-- //SOLRatingCard-title -->
 
                       <ul class="SOLRatingCard-detail">
                         <li>
-                          <span class="name">등급 산정일</span>
+                          <span class="name">등급 산출일</span>
                           <span class="value">2024-06-30</span>
                         </li>
                         <li>
@@ -325,30 +303,143 @@
                         </li>
                       </ul>
                     </div>
+                    <!-- //SOLRatingCard-body -->
 
                     <div class="SOLRatingCard-action">
                       <button type="submit" class="SOLRatingCard-btn">
                         <span class="label c--active">결제</span>
                         <span class="date">25-08-31까지 결제 가능</span>
                       </button>
-
-                      <div class="SOLPopper-root">
-                        <button type="button" class="SOLIconBtn-root" data-trigger="popmenu">
-                          <i class="SOLIcon-root SOLIcon-more"></i>
-                        </button>
-                        <ul class="SOLPopper-list">
-                          <li><button type="button">상세정보</button></li>
-                          <li>
-                            <button type="button"><span class="c--error">삭제</span></button>
-                          </li>
-                        </ul>
-                      </div>
-                      <!-- //SOLPopper-root -->
                     </div>
                     <!-- //SOLRatingCard-action -->
                   </li>
                 </ul>
+
+                <h4 class="card-category">2025년 7월</h4>
+                <ul class="SOLRatingCard-root">
+                  <li class="SOLRatingCard-item c--disabled">
+                    <div class="SOLRatingCard-body">
+                      <div class="SOLRatingCard-date">신청일 2025-08-10</div>
+                      <div class="SOLRatingCard-title">
+                        <span class="label">신용평가등급</span>
+                        <div class="SOLRatingCard-title-option">
+                          <div class="SOLRatingCard-grade"><span class="grade">BBB+</span></div>
+                          <span class="SOLLabel-root c--disabled">결제 기한만료</span>
+
+                          <div class="SOLCard-title-detail">
+                            <button type="button" class="SOLIconBtn-root t--card">
+                              <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                              <span class="blind">상세보기</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //SOLRatingCard-title -->
+
+                      <ul class="SOLRatingCard-detail">
+                        <li>
+                          <span class="name">등급 산출일</span>
+                          <span class="value">2024-06-30</span>
+                        </li>
+                        <li>
+                          <span class="name">등급 유효기간</span>
+                          <span class="value">-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //SOLRatingCard-body -->
+
+                    <div class="SOLRatingCard-action">
+                      <span>결제기한이 만료되어 결제가 불가합니다.</span>
+                    </div>
+                    <!-- //SOLRatingCard-action -->
+                  </li>
+
+                  <li class="SOLRatingCard-item c--disabled">
+                    <div class="SOLRatingCard-body">
+                      <div class="SOLRatingCard-date">신청일 2025-08-10</div>
+                      <div class="SOLRatingCard-title">
+                        <span class="label">신용평가등급</span>
+                        <div class="SOLRatingCard-title-option">
+                          <div class="SOLRatingCard-grade"><span class="grade">C</span></div>
+                          <span class="SOLLabel-root c--disabled">등급 사용불가</span>
+
+                          <div class="SOLCard-title-detail">
+                            <button type="button" class="SOLIconBtn-root t--card">
+                              <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                              <span class="blind">상세보기</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //SOLRatingCard-title -->
+
+                      <ul class="SOLRatingCard-detail">
+                        <li>
+                          <span class="name">등급 산출일</span>
+                          <span class="value">2024-06-30</span>
+                        </li>
+                        <li>
+                          <span class="name">등급 유효기간</span>
+                          <span class="value">-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //SOLRatingCard-body -->
+
+                    <div class="SOLRatingCard-action">
+                      <span>등급을 재산출하여 결제가 불가합니다.</span>
+                    </div>
+                    <!-- //SOLRatingCard-action -->
+                  </li>
+
+                  <li class="SOLRatingCard-item c--disabled">
+                    <div class="SOLRatingCard-body">
+                      <div class="SOLRatingCard-date">신청일 2025-08-10</div>
+                      <div class="SOLRatingCard-title">
+                        <span class="label">신용평가등급</span>
+                        <div class="SOLRatingCard-title-option">
+                          <div class="SOLRatingCard-grade"><span class="grade">C</span></div>
+                          <span class="SOLLabel-root c--disabled">등급 사용불가</span>
+
+                          <div class="SOLCard-title-detail">
+                            <button type="button" class="SOLIconBtn-root t--card">
+                              <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                              <span class="blind">상세보기</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //SOLRatingCard-title -->
+
+                      <ul class="SOLRatingCard-detail">
+                        <li>
+                          <span class="name">등급 산출일</span>
+                          <span class="value">2024-06-30</span>
+                        </li>
+                        <li>
+                          <span class="name">등급 유효기간</span>
+                          <span class="value">-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //SOLRatingCard-body -->
+
+                    <div class="SOLRatingCard-action">
+                      <span>기타 사유로 등급 사용이 불가합니다.</span>
+                    </div>
+                    <!-- //SOLRatingCard-action -->
+                  </li>
+                </ul>
+
+                <div class="SOLTab-btns">
+                  <button type="button" class="SOLBtn-root w--full">
+                    더보기
+                    <i class="SOLIcon-root SOLIcon-gt--d s--sm"></i>
+                  </button>
+                </div>
               </div>
+              <!-- //SOLTab-inner -->
             </section>
             <!-- 등급 산출내역 tab end -->
 
@@ -356,6 +447,16 @@
             <section class="SOLTab-content">
               <h3 class="blind">제출내역</h3>
               <div class="SOLTab-inner">
+                <div class="SOLAlign-root">
+                  <div class="SOLAlign-utils">
+                    <span>최신순</span>
+                    <button type="button" class="SOLIconBtn-root">
+                      <i class="SOLIcon-root SOLIcon-align"></i>
+                      <span class="blind">상세조회</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="mb-g2--m"></div>
                 <!-- filter -->
                 <div class="SOLFilter-root">
                   <div class="SOLFilter-swiper swiper">
@@ -368,27 +469,35 @@
                 </div>
                 <!-- filter end -->
 
-                <h4 class="card-category">2025년 8월</h4>
+                <h4 class="card-category">2025년 8월<span class="utils">4건</span></h4>
                 <ul class="SOLCard-root">
                   <li class="SOLCard-item t--submit">
                     <div class="SOLCard-body">
-                      <div class="SOLCard-date">신청일시 2025-08-10 15:30</div>
+                      <div class="SOLCard-date">제출일 2025-08-10</div>
+
                       <div class="SOLCard-title">
                         <span class="label">제출처</span>
                         <div class="SOLCard-title-option">
                           <div class="SOLRatingCard-grade"><span class="txt">조달청(나라장터)</span></div>
                           <span class="SOLLabel-root c--active">제출완료</span>
+                          <div class="SOLCard-title-detail">
+                            <button type="button" class="SOLIconBtn-root t--card">
+                              <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                              <span class="blind">상세보기</span>
+                            </button>
+                          </div>
                         </div>
                       </div>
                       <!-- //SOLCard-title -->
+
                       <ul class="SOLCard-detail">
                         <li>
                           <span class="name">신용평가등급</span>
                           <span class="value">AA</span>
                         </li>
                         <li>
-                          <span class="name">제출일시</span>
-                          <span class="value">08-30 15:30</span>
+                          <span class="name">제출번호</span>
+                          <span class="value">SD24083AA001</span>
                         </li>
                       </ul>
                     </div>
@@ -398,26 +507,14 @@
                       <button type="submit" class="SOLCard-btn">
                         <span class="label">확인서 조회</span>
                       </button>
-
-                      <div class="SOLPopper-root">
-                        <button type="button" class="SOLIconBtn-root" data-trigger="popmenu">
-                          <i class="SOLIcon-root SOLIcon-more"></i>
-                        </button>
-                        <ul class="SOLPopper-list">
-                          <li><button type="button">상세정보</button></li>
-                          <li>
-                            <button type="button"><span class="c--error">삭제</span></button>
-                          </li>
-                        </ul>
-                      </div>
-                      <!-- //SOLPopper-root -->
                     </div>
                     <!-- //SOLCard-action -->
                   </li>
 
                   <li class="SOLCard-item">
                     <div class="SOLCard-body">
-                      <div class="SOLCard-date">신청일시 2025-08-10 15:30</div>
+                      <div class="SOLCard-date">제출일 2025-08-10</div>
+
                       <div class="SOLCard-title">
                         <span class="label">제출처</span>
                         <div class="SOLCard-title-option">
@@ -433,7 +530,7 @@
                           <span class="value">AA</span>
                         </li>
                         <li>
-                          <span class="name">제출일시</span>
+                          <span class="name">제출번호</span>
                           <span class="value">-</span>
                         </li>
                       </ul>
@@ -444,31 +541,25 @@
                       <button type="submit" class="SOLCard-btn">
                         <span class="label">확인서 조회</span>
                       </button>
-
-                      <div class="SOLPopper-root">
-                        <button type="button" class="SOLIconBtn-root" data-trigger="popmenu">
-                          <i class="SOLIcon-root SOLIcon-more"></i>
-                        </button>
-                        <ul class="SOLPopper-list">
-                          <li><button type="button">상세정보</button></li>
-                          <li>
-                            <button type="button"><span class="c--error">삭제</span></button>
-                          </li>
-                        </ul>
-                      </div>
-                      <!-- //SOLPopper-root -->
                     </div>
                     <!-- //SOLCard-action -->
                   </li>
 
                   <li class="SOLCard-item c--disabled">
                     <div class="SOLCard-body">
-                      <div class="SOLCard-date">신청일시 2025-08-10 15:30</div>
+                      <div class="SOLCard-date">제출일 2025-08-10</div>
+
                       <div class="SOLCard-title">
                         <span class="label">제출처</span>
                         <div class="SOLCard-title-option">
                           <div class="SOLRatingCard-grade"><span class="txt">조달청(나라장터)</span></div>
                           <span class="SOLLabel-root c--disabled">제출취소</span>
+                          <div class="SOLCard-title-detail">
+                            <button type="button" class="SOLIconBtn-root t--card">
+                              <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                              <span class="blind">상세보기</span>
+                            </button>
+                          </div>
                         </div>
                       </div>
                       <!-- //SOLCard-title -->
@@ -479,8 +570,8 @@
                           <span class="value">AA</span>
                         </li>
                         <li>
-                          <span class="name">제출일시</span>
-                          <span class="value">-</span>
+                          <span class="name">제출번호</span>
+                          <span class="value"><del>SD24083AA001</del></span>
                         </li>
                       </ul>
                     </div>
@@ -488,31 +579,25 @@
 
                     <div class="SOLCard-action">
                       <span>신용평가등급확인서 제출이 취소되었습니다.</span>
-
-                      <div class="SOLPopper-root">
-                        <button type="button" class="SOLIconBtn-root" data-trigger="popmenu">
-                          <i class="SOLIcon-root SOLIcon-more"></i>
-                        </button>
-                        <ul class="SOLPopper-list">
-                          <li><button type="button">상세정보</button></li>
-                          <li>
-                            <button type="button"><span class="c--error">삭제</span></button>
-                          </li>
-                        </ul>
-                      </div>
-                      <!-- //SOLPopper-root -->
                     </div>
                     <!-- //SOLCard-action -->
                   </li>
 
                   <li class="SOLCard-item">
                     <div class="SOLCard-body">
-                      <div class="SOLCard-date">신청일시 2025-08-10 15:30</div>
+                      <div class="SOLCard-date">제출일 2025-08-10</div>
+
                       <div class="SOLCard-title">
                         <span class="label">제출처</span>
                         <div class="SOLCard-title-option">
                           <div class="SOLRatingCard-grade"><span class="txt">조달청(나라장터)</span></div>
                           <span class="SOLLabel-root c--error">제출실패</span>
+                          <div class="SOLCard-title-detail">
+                            <button type="button" class="SOLIconBtn-root t--card">
+                              <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                              <span class="blind">상세보기</span>
+                            </button>
+                          </div>
                         </div>
                       </div>
                       <!-- //SOLCard-title -->
@@ -523,7 +608,7 @@
                           <span class="value">AA</span>
                         </li>
                         <li>
-                          <span class="name">제출일시</span>
+                          <span class="name">제출번호</span>
                           <span class="value">-</span>
                         </li>
                       </ul>
@@ -534,23 +619,127 @@
                       <button type="submit" class="SOLCard-btn c--active">
                         <span class="label">재시도</span>
                       </button>
+                    </div>
+                    <!-- //SOLCard-action -->
+                  </li>
 
-                      <div class="SOLPopper-root">
-                        <button type="button" class="SOLIconBtn-root" data-trigger="popmenu">
-                          <i class="SOLIcon-root SOLIcon-more"></i>
-                        </button>
-                        <ul class="SOLPopper-list">
-                          <li><button type="button">상세정보</button></li>
-                          <li>
-                            <button type="button"><span class="c--error">삭제</span></button>
-                          </li>
-                        </ul>
+                  <li class="SOLCard-item">
+                    <div class="SOLCard-body">
+                      <div class="SOLCard-date">제출일 2025-08-10</div>
+                      <div class="SOLCard-title">
+                        <span class="label">제출처</span>
+                        <div class="SOLCard-title-option">
+                          <div class="SOLRatingCard-grade"><span class="txt">조달청(나라장터)</span></div>
+                          <span class="SOLLabel-root c--error">제출실패</span>
+                          <div class="SOLCard-title-detail">
+                            <button type="button" class="SOLIconBtn-root t--card">
+                              <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                              <span class="blind">상세보기</span>
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                      <!-- //SOLPopper-root -->
+                      <!-- //SOLCard-title -->
+
+                      <ul class="SOLCard-detail">
+                        <li>
+                          <span class="name">신용평가등급</span>
+                          <span class="value">AA</span>
+                        </li>
+                        <li>
+                          <span class="name">제출번호</span>
+                          <span class="value">-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //SOLCard-body -->
+
+                    <div class="SOLCard-action">
+                      <button type="submit" class="SOLCard-btn c--active">
+                        <span class="label">재시도</span>
+                      </button>
+                    </div>
+                    <!-- //SOLCard-action -->
+                  </li>
+
+                  <li class="SOLCard-item t--submit">
+                    <div class="SOLCard-body">
+                      <div class="SOLCard-date">제출일 2025-08-10</div>
+                      <div class="SOLCard-title">
+                        <span class="label">제출처</span>
+                        <div class="SOLCard-title-option">
+                          <div class="SOLRatingCard-grade"><span class="txt">조달청(나라장터)</span></div>
+                          <span class="SOLLabel-root c--active">제출완료</span>
+                          <div class="SOLCard-title-detail">
+                            <button type="button" class="SOLIconBtn-root t--card">
+                              <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                              <span class="blind">상세보기</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //SOLCard-title -->
+                      <ul class="SOLCard-detail">
+                        <li>
+                          <span class="name">신용평가등급</span>
+                          <span class="value">AA</span>
+                        </li>
+                        <li>
+                          <span class="name">제출번호</span>
+                          <span class="value">SD24083AA001</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //SOLCard-body -->
+
+                    <div class="SOLCard-action">
+                      <button type="submit" class="SOLCard-btn">
+                        <span class="label">확인서 조회</span>
+                      </button>
+                    </div>
+                    <!-- //SOLCard-action -->
+                  </li>
+
+                  <li class="SOLCard-item">
+                    <div class="SOLCard-body">
+                      <div class="SOLCard-date">제출일 2025-08-10</div>
+                      <div class="SOLCard-title">
+                        <span class="label">제출처</span>
+                        <div class="SOLCard-title-option">
+                          <div class="SOLRatingCard-grade"><span class="txt">테크핀레이팅스</span></div>
+                          <span class="SOLLabel-root c--active">제출진행</span>
+                        </div>
+                      </div>
+                      <!-- //SOLCard-title -->
+
+                      <ul class="SOLCard-detail">
+                        <li>
+                          <span class="name">신용평가등급</span>
+                          <span class="value">AA</span>
+                        </li>
+                        <li>
+                          <span class="name">제출번호</span>
+                          <span class="value">-</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //SOLCard-body -->
+
+                    <div class="SOLCard-action">
+                      <button type="submit" class="SOLCard-btn">
+                        <span class="label">확인서 조회</span>
+                      </button>
                     </div>
                     <!-- //SOLCard-action -->
                   </li>
                 </ul>
+
+                <div class="SOLTab-btns">
+                  <button type="button" class="SOLBtn-root w--full">
+                    더보기
+                    <i class="SOLIcon-root SOLIcon-gt--d s--sm"></i>
+                  </button>
+                </div>
               </div>
             </section>
             <!-- 제출내역 tab end -->

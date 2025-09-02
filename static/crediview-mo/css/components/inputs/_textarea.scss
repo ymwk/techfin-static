@@ -1,20 +1,21 @@
 .SOLTextarea-root {
-    width: 100%;
-    font-size: var(--font-14);
-    line-height: 1.4;
-
-    .SOLTextarea_field {
-        height: 100%;
-    }
-
-    .SOLTextarea_field.error {
-        border:solid 1px var(--c-error);
-    }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: var(--font-14);
+  line-height: 1.4;
+  height: 7em;
+  max-height: 4.2em;
+  overflow: hidden;
 }
 
-.SOLTextarea_field {
-    display: block;
-    resize: vertical;
-    @include formStyle;
-    padding: var(--form-pd);
+.SOLTextarea-field {
+  flex-grow: 1;
+  display: block;
+  resize: none;
+  @include formStyle;
+  padding: 8px var(--form-pd);
+  &.c--error {
+    border-color: var(--c-error);
+  }
 }

@@ -4,115 +4,10 @@
   gap: 20px;
   text-align: left;
   flex-wrap: wrap;
-  
   min-height: 2em;
   line-height: 18px;
   font-size: var(--font-14);
   word-break: keep-all;
-
-  .SOLText-note { display: block }
-
-  &.mgt-15 {
-    margin-top: 15px;
-  }
-
-  &.s--lg {
-    font-size: var(--font-15);
-    line-height: 24px;
-
-    .SOLCheck-label {
-      gap: 10px;
-
-      [type='checkbox'] {
-        width: 24px;
-        height: 24px;
-
-        &::after {
-          width: 8px;
-          height: 11px;
-        }
-      }
-    }
-  }
-
-  &.s--sm {
-    font-size: var(--font-13);
-  }
-
-  &.t--terms {
-    [type='checkbox'] {
-      border-radius: 50%;
-    }
-
-    .SOLCheck-label {
-      align-items: center;
-    }
-
-    &.s--lg  { font-size: var(--font-14) }
-  }
-
-  &.t--terms-md {
-    .SOLCheck-label {
-      font-size: var(--font-15);
-      line-height: 24px;
-
-      [type='checkbox'] {
-        width: 24px;
-        height: 24px;
-        border: 0;
-        background-color: transparent;
-
-        &::after {
-          width: 8px;
-          height: 13px;
-        }
-        &:checked {
-          &::after {
-            border-color: var(--c-component);
-          }
-        }
-      }
-    }
-  }
-
-  &.t--list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 0;
-    font-size: var(--font-15);
-
-    .list-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .tit { font-weight: 500 }
-    .code {
-      font-size: var(--font-12);
-      color: var(--fc-gray2);
-    }
-
-    .SOLCheck-label {
-      width: 100%;
-      padding: 16px 0 16px 52px;
-      word-break: keep-all;
-      background: url(../image/icon/ic_build.svg) no-repeat 18px center;
-
-      &:has([type='checkbox']:checked) {
-        background-color: #F7F8FA;
-      }
-    }
-
-    [type='checkbox'] {
-      position: absolute;
-      top: 50%;
-      right: var(--spc-w);
-      transform: translateY(-50%)
-    }
-  }
 }
 
 .SOLCheck-label {
@@ -167,6 +62,175 @@
 
     &:disabled {
       background-color: #f5f5f5;
+    }
+  }
+}
+
+.SOLCheck-root {
+  .SOLText-note {
+    display: block;
+  }
+
+  &.s--lg {
+    font-size: var(--font-15);
+    line-height: 24px;
+
+    .SOLCheck-label {
+      gap: 10px;
+
+      [type='checkbox'] {
+        width: 24px;
+        height: 24px;
+
+        &::after {
+          width: 8px;
+          height: 11px;
+        }
+      }
+    }
+  }
+
+  &.s--sm {
+    font-size: var(--font-13);
+  }
+
+  &.t--terms {
+    [type='checkbox'] {
+      border-radius: 50%;
+    }
+
+    .SOLCheck-label {
+      align-items: center;
+    }
+
+    &.s--lg {
+      font-size: var(--font-14);
+    }
+  }
+
+  &.t--terms-md {
+    .SOLCheck-label {
+      font-size: var(--font-15);
+      line-height: 24px;
+
+      [type='checkbox'] {
+        width: 24px;
+        height: 24px;
+        border: 0;
+        background-color: transparent;
+
+        &::after {
+          width: 8px;
+          height: 13px;
+        }
+        &:checked {
+          &::after {
+            border-color: var(--c-component);
+          }
+        }
+      }
+    }
+  }
+
+  &.t--list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0;
+    font-size: var(--font-15);
+
+    .list-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .tit {
+      font-weight: 500;
+    }
+    .code {
+      font-size: var(--font-12);
+      color: var(--fc-gray2);
+    }
+
+    .SOLCheck-label {
+      width: 100%;
+      padding: 16px 0 16px 52px;
+      word-break: keep-all;
+      background: url(../image/icon/ic_build.svg) no-repeat 18px center;
+
+      &:has([type='checkbox']:checked) {
+        background-color: #f7f8fa;
+      }
+    }
+
+    [type='checkbox'] {
+      position: absolute;
+      top: 50%;
+      right: var(--spc-w);
+      transform: translateY(-50%);
+    }
+  }
+
+  &.t--break {
+    gap: 8px;
+
+    [type='checkbox'] {
+      border: 0;
+      background: none;
+      margin-right: 12px;
+
+      &::after {
+        width: 8px;
+        height: 13px;
+      }
+      &:checked {
+        background-color: transparent;
+        &::after {
+          border-color: var(--c-component);
+        }
+      }
+    }
+
+    .SOLCheck-label {
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+      width: 100%;
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      background-color: #f8f9fa;
+      transition: border-color 0.2s, background-color 0.2s;
+
+      &:has([type='checkbox']:checked) {
+        border-color: var(--c-component);
+        background-color: rgba(59, 93, 251, 0.05);
+        .SOLTextarea-root {
+          max-height: calc(4.2em + 16px + 12px); // 3line + vertical padding
+        }
+      }
+
+      .SOLTextarea-root {
+        max-height: 0;
+        transition: max-height 0.2s;
+      }
+
+      .SOLTextarea-field {
+        margin-top: 12px;
+      }
+    }
+
+    .list-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .desc {
+      font-size: var(--font-12);
+      color: var(--fc-gray2);
     }
   }
 }

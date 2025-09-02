@@ -53,6 +53,10 @@
 @mixin formStyle {
   @include formBox;
 
+  &:not(button):read-only {
+    background-color: var(--form-c-bg-dis);
+  }
+
   &:disabled {
     background-color: var(--form-c-bg-dis);
     color: var(--form-c-text-dis);

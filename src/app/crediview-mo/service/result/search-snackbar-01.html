@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <title>크레디뷰</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/crediview.css" />
+  </head>
+  <body>
+    <div class="SOLFullpage-root">
+      <div class="SOLFullpage-header">
+        <h2 class="SOLTitle-t2">상세조회</h2>
+        <button type="button" class="SOLIconBtn-root">
+          <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+          <span class="blind">닫기</span>
+        </button>
+      </div>
+
+      <div class="SOLFullpage-container">
+        <div class="SOLFullpage-contents">
+          <div class="search-wrapper">
+            <span class="label">신청일</span>
+            <div class="SOLGroupBtn-root">
+              <button type="button">1개월</button>
+              <button type="button">6개월</button>
+              <button type="button">12개월</button>
+              <button type="button" class="st--active">직접입력</button>
+            </div>
+
+            <div class="SOLDatepicker-root">
+              <div class="SOLSearchbox-inputs">
+                <label class="SOLInput-root">
+                  <div class="SOLInput-box">
+                    <input type="text" title="검색시작일자" value="2022-07-15" class="SOLInput-field" readonly />
+                  </div>
+                </label>
+                <span>~</span>
+                <label class="SOLInput-root">
+                  <div class="SOLInput-box">
+                    <input type="text" title="검색종료일자" value="2023-01-15" class="SOLInput-field" readonly />
+                  </div>
+                </label>
+              </div>
+            </div>
+            <!-- //SOLDatepicker-root -->
+          </div>
+          <!-- //search-wrapper -->
+        </div>
+        <!-- //SOLFullpage-contents -->
+      </div>
+      <!-- SOLFullpage-container -->
+
+      <div class="SOLFullpage-footer">
+        <div class="footer-btns">
+          <button type="button" class="SOLBtn-root t--outlined s--lg w--full">초기화</button>
+          <button type="button" class="SOLBtn-root t--contained s--lg w--full">검색</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 날짜 선택 start -->
+    <div class="SOLSnackbar-root">
+      <div class="SOLSnackbar-backdrop"></div>
+      <div class="SOLSnackbar-box">
+        <div class="SOLSnackbar-close">
+          <button type="button" class="SOLIconBtn-root">
+            <i class="SOLIcon-root SOLIcon-close"></i>
+            <span class="blind">닫기</span>
+          </button>
+        </div>
+        <div class="SOLSnackbar-header">
+          <h3 class="SOLSnackbar-title">시작일 선택</h3>
+        </div>
+
+        <div class="SOLSnackbar-body">
+          <div class="SOLDatepicker-box">
+            <div class="SOLDatepicker-cont">
+              <div class="SOLDatepicker-section">
+                <div class="SOLDatepicker-month">
+                  <span>2024.12</span>
+                  <div class="SOLDatepicker-month-prev">
+                    <button type="button" class="SOLIconBtn-root">
+                      <i class="SOLIcon-root SOLIcon-gt--l"></i>
+                      <i class="SOLIcon-root SOLIcon-gt--l"></i>
+                      <span class="blind">이전해</span>
+                    </button>
+                    <button type="button" class="SOLIconBtn-root">
+                      <i class="SOLIcon-root SOLIcon-gt--l"></i>
+                      <span class="blind">이전달</span>
+                    </button>
+                  </div>
+
+                  <div class="SOLDatepicker-month-next">
+                    <button type="button" class="SOLIconBtn-root">
+                      <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                      <span class="blind">다음달</span>
+                    </button>
+                    <button type="button" class="SOLIconBtn-root">
+                      <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                      <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                      <span class="blind">다음해</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="SOLDatepicker-calendar">
+                  <div class="SOLDatepicker-week">
+                    <span class="SOLDatepicker-item">일</span>
+                    <span class="SOLDatepicker-item">월</span>
+                    <span class="SOLDatepicker-item">화</span>
+                    <span class="SOLDatepicker-item">수</span>
+                    <span class="SOLDatepicker-item">목</span>
+                    <span class="SOLDatepicker-item">금</span>
+                    <span class="SOLDatepicker-item">토</span>
+                  </div>
+                  <div class="SOLDatepicker-days">
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">1</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">2</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">3</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">4</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">5</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">6</button></span>
+                    <span class="SOLDatepicker-item">
+                      <button type="button" class="SOLDatepicker-btn t--selected">7</button>
+                    </span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">8</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">9</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">10</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">11</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">12</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">13</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">14</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">15</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">16</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">17</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">18</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">19</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">20</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">21</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">22</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">23</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">24</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">25</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">26</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">27</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">28</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">29</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">30</button></span>
+                    <span class="SOLDatepicker-item"><button type="button" class="SOLDatepicker-btn">31</button></span>
+                    <span class="SOLDatepicker-item t--disabled">
+                      <button type="button" class="SOLDatepicker-btn">1</button>
+                    </span>
+                    <span class="SOLDatepicker-item t--disabled">
+                      <button type="button" class="SOLDatepicker-btn">2</button>
+                    </span>
+                    <span class="SOLDatepicker-item t--disabled">
+                      <button type="button" class="SOLDatepicker-btn">3</button>
+                    </span>
+                    <span class="SOLDatepicker-item t--disabled">
+                      <button type="button" class="SOLDatepicker-btn">4</button>
+                    </span>
+                  </div>
+                </div>
+                <!-- //SOLDatepicker-calendar -->
+              </div>
+              <!-- //SOLDatepicker-section -->
+            </div>
+            <!-- //SOLDatepicker-cont -->
+          </div>
+          <!-- //SOLDatepicker-box -->
+        </div>
+        <!-- //SOLSnackbar-body -->
+
+        <div class="SOLSnackbar-footer">
+          <div class="SOLSnackbar-footer-btns">
+            <button type="button" class="SOLBtn-root t--contained s--lg w--full">2024년 12월 15일 선택</button>
+          </div>
+        </div>
+        <!-- //SOLSnackbar-footer -->
+      </div>
+      <!-- //SOLSnackbar-box -->
+    </div>
+    <!-- //SOLSnackbar-root -->
+  </body>
+</html>

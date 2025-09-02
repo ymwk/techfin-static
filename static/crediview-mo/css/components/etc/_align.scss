@@ -1,0 +1,22 @@
+.SOLAlign-root {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px 5px var(--spc-w);
+  font-size: 13px;
+  font-weight: 500;
+
+  .result {
+    font-size: var(--font-14);
+    font-weight: 700;
+
+    em {
+      color: var(--c-active);
+    }
+  }
+}
+
+.SOLAlign-utils {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}

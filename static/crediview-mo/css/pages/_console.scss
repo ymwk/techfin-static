@@ -18,6 +18,7 @@
 }
 
 .console-container {
+  position: relative;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -38,7 +39,7 @@
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  // margin-top: 40px;
   padding: 0 20px;
   background: linear-gradient(to top, rgba(255, 255, 255, 1) 82px, rgba(255, 255, 255, 0));
 
@@ -47,6 +48,10 @@
   }
   .SOLBtn-root.t--contained {
     font-weight: 600;
+  }
+
+  &:has(.footer-topBtn) {
+    margin-top: 40px;
   }
 }
 
@@ -193,6 +198,20 @@
     flex-grow: 1;
     background-color: #f5f7fa;
   }
+  &.c--bg-last {
+    flex-grow: 1;
+    background-color: #f5f7fa;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 100% 0 auto;
+      height: 40px;
+      background-color: #f5f7fa;
+    }
+  }
 
-  &.s--full { flex-grow: 1 }
+  &.s--full {
+    flex-grow: 1;
+  }
 }

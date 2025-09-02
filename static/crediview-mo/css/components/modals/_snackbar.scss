@@ -80,6 +80,14 @@
   // }
 }
 
+.SOLSnackbar-close {
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--fc-default)
+}
+
 .SOLSnackbar-section {
   display: flex;
   flex-direction: column;

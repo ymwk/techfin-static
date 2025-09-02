@@ -18,10 +18,6 @@
   display: flex;
   flex-direction: column;
 
-  .SOLLabel-root {
-    margin-top: 5px;
-  }
-
   &.c--disabled {
     .SOLRatingCard-date,
     .SOLCard-date {
@@ -46,6 +42,10 @@
       &::before {
         content: none;
       }
+    }
+
+    .SOLRatingCard-grade .grade {
+      color: inherit;
     }
   }
 }
@@ -100,6 +100,10 @@
     .SOLIconBtn-root {
       margin-right: -0.6em;
       height: 100%;
+    }
+
+    .SOLCard-title-detail {
+      margin-left: auto;
     }
   }
 }
@@ -183,6 +187,8 @@
 }
 
 .SOLRatingCard-grade {
+  display: inline-flex;
+  align-items: center;
   font-size: var(--font-28);
   font-weight: 700;
 
@@ -196,6 +202,7 @@
 
   .txt {
     font-size: var(--font-22);
+    line-height: 1em
   }
 }
 
@@ -272,11 +279,17 @@
 }
 
 .card-category {
+  display: flex;
+  align-items: center;
   padding: 10px var(--spc-w);
   background-color: #f3f5f7;
   font-size: var(--font-12);
   color: #5d6677;
   font-weight: 500;
+
+  .utils {
+    margin-left: auto;
+  }
 }
 
 // 인증서 카드
@@ -285,9 +298,9 @@
     padding: 50px 0;
   }
 
-  &:not(:has([class*='swiper-'])) {
-    padding: var(--spc-w) var(--spc-w) 24px;
-  }
+  // &:not(:has([class*='swiper-'])) {
+  //   padding: var(--spc-w) var(--spc-w) 24px;
+  // }
 }
 
 .SOLCertCard-item {
