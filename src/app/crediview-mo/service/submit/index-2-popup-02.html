@@ -41,20 +41,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const popRoot = document.querySelector('.SOLFullpage-root');
-        const popBar = document.querySelector('.SOLFullpage-progress-bar');
-        const popHeight = popRoot.scrollHeight - popRoot.clientHeight;
-
-        popRoot.addEventListener('scroll', function () {
-          let popScrolltop = popRoot.scrollTop;
-          let popBarWidth = Math.round(popScrolltop / popHeight * 100);
-          popBar.style.cssText = `width: ${popBarWidth}%`;
-        });
-      });
-      
-    </script>
   </body>
 </html>

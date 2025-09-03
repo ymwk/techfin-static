@@ -44,6 +44,44 @@
   }
 }
 
+.box-msg-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 30px;
+  padding-bottom: 8px;
+  box-sizing: content-box;
+
+  .SOLAccordian-btn {
+    padding: 0;
+  }
+}
+
+.box-msg-body {
+  display: flex;
+  flex-direction: column;
+
+  .SOLTable-small {
+    td {
+      font-weight: 500;
+    }
+  }
+
+  .hr-comm.s--sm {
+    margin-bottom: 12px;
+  }
+}
+
+.js-accordian-root {
+  .box-msg-header {
+    padding-bottom: 0;
+  }
+
+  .hr-comm.s--sm {
+    margin-top: 12px;
+  }
+}
+
 .box-err {
   display: flex;
   flex-direction: column;
@@ -74,6 +112,30 @@
 }
 
 .box-result-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .name {
+    font-weight: 500;
+    font-size: var(--font-16);
+  }
+  .price {
+    font-weight: 700;
+    font-size: var(--font-22);
+  }
+
+  .SOLBtn-root {
+    margin-top: 15px;
+  }
+
+  small {
+    color: var(--fc-gray2);
+    font-size: var(--font-13);
+  }
+}
+
+.box-result:has(.SOLTable-small) .box-result-title {
   padding-bottom: 16px;
   margin-bottom: 18px;
   border-bottom: 1px dashed var(--tb-border);
@@ -165,6 +227,13 @@
   }
 }
 
+.msg-small {
+  font-size: var(--font-12);
+  color: var(--fc-gray2);
+  text-indent: -10px;
+  padding-left: 12px;
+}
+
 .hr-service {
   border: 0;
   border-top: 8px solid #f0f2f4;
@@ -174,6 +243,10 @@
   border: 0;
   border-top: 1px solid rgba(101, 112, 144, 0.1);
   margin: 12px 0;
+
+  &.s--sm {
+    margin: 0;
+  }
 }
 
 .section-outer > .hr-comm {
@@ -224,7 +297,7 @@
 
   &.ic--noresult::before {
     background-image: url(../image/img/img_empty_result.svg);
-    background-position: 60% 60%
+    background-position: 60% 60%;
   }
 
   &.ic--none {

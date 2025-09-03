@@ -23,7 +23,7 @@
           <section class="console-section">
             <div class="box-result mb-g2">
               <div class="box-result-title">
-                <h2 class="SOLTitle-t3">신용평가등급 무료 조회 이용권</h2>
+                <h3 class="SOLTitle-t3">신용평가등급 무료 조회 이용권</h3>
               </div>
               <table class="SOLTable-small t--coupon">
                 <tbody>
@@ -81,19 +81,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const popRoot = document.querySelector('.SOLFullpage-root');
-        const popBar = document.querySelector('.SOLFullpage-progress-bar');
-        const popHeight = popRoot.scrollHeight - popRoot.clientHeight;
-
-        popRoot.addEventListener('scroll', function () {
-          let popScrolltop = popRoot.scrollTop;
-          let popBarWidth = Math.round((popScrolltop / popHeight) * 100);
-          popBar.style.cssText = `width: ${popBarWidth}%`;
-        });
-      });
-    </script>
   </body>
 </html>

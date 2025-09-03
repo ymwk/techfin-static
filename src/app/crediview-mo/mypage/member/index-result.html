@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <title>크레디뷰</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/crediview.css" />
+  </head>
+  <body>
+    <div class="console-root">
+      <header class="SOLHeader-root">
+        <div class="SOLHeader-inner">
+          <div class="SOLHeader-title">
+            <button type="button" class="SOLIconBtn-root">
+              <i class="SOLIcon-root SOLIcon-gt--l s--xl"></i>
+              <span class="blind">Prev</span>
+            </button>
+            <h2 class="SOLHeader-title-text">회원관리</h2>
+          </div>
+
+          <div class="SOLHeader-global">
+            <button type="button" class="SOLIconBtn-root SOLHeader-menuBtn">
+              <i class="SOLIcon-root SOLIcon-hamburger"></i>
+              <span class="blind">전체메뉴 보기</span>
+            </button>
+
+            <nav class="SOLHeader-nav">
+              <h3 class="blind">전체메뉴</h3>
+              <div class="SOLHeader-nav-header">
+                <h1 class="SOLHeader-logo">
+                  <a href="#">
+                    <div class="logo">
+                      <span class="eng">Crediview</span>
+                    </div>
+                  </a>
+                </h1>
+
+                <div class="SOLHeader-global">
+                  <button type="button" class="SOLIconBtn-root SOLHeader-closeBtn">
+                    <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+                    <span class="blind">전체메뉴 닫기</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 전체메뉴 start -->
+              <div class="SOL-mb-gnb">
+                <ul class="gnb-menu">
+                  <li class="depth01">
+                    <a href="#">기업신용평가</a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#" class="on">기업신용평가 소개</a></li>
+                      <li><a href="#">신용평가 신청</a></li>
+                      <li><a href="#">신용평가등급확인서 제출</a></li>
+                      <li><a href="#">등급 산출 및 제출내역</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#" class="ai-post">AI경영진단보고서<span class="blind">Open</span></a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#">AI경영진단보고서 소개</a></li>
+                      <li><a href="#">경영진단 신청</a></li>
+                      <li><a href="#">진단내역</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">마이페이지</a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#">회사관리</a></li>
+                      <li><a href="#">인증서 관리</a></li>
+                      <li><a href="#">회원관리</a></li>
+                      <li><a href="#">내 정보 관리</a></li>
+                      <li><a href="#">정산관리</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">진본 확인 서비스</a>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">고객지원</a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#">공지사항</a></li>
+                      <li><a href="#">자주 묻는 질문</a></li>
+                      <li><a href="#">1:1 문의</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">회사 소개</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- 전체메뉴 end -->
+
+              <div class="logout-box">
+                <button type="button" class="SOLBtn-root w--full">로그아웃</button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <div class="console-container">
+        <div class="SOLTab-root">
+          <div class="SOLTab-menu">
+            <button type="button" class="SOLTab-btn st--active">회원 등급</button>
+            <button type="button" class="SOLTab-btn">회원 초대</button>
+          </div>
+
+          <div class="SOLTab-container">
+            <!-- 회원등급 -->
+            <section class="SOLTab-content st--active">
+              <h3 class="blind">회원등급</h3>
+              <div class="SOLTab-inner">
+                <div class="SOLAlign-root">
+                  <span class="result">검색결과 <em>8</em>건</span>
+                  <div class="SOLAlign-utils">
+                    <span>2024-08-01 ~ 2025-08-02</span>
+                    <button type="button" class="SOLIconBtn-root">
+                      <i class="SOLIcon-root SOLIcon-align"></i>
+                      <span class="blind">상세조회</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //SOLAlign-root -->
+                <div class="mb-g2--m"></div>
+                <!-- filter -->
+                <div class="SOLFilter-root">
+                  <div class="SOLFilter-swiper swiper">
+                    <div class="SOLFilter-wrap swiper-wrapper">
+                      <button type="button" class="SOLFilter-btn swiper-slide st--active">전체 40</button>
+                      <button type="button" class="SOLFilter-btn swiper-slide">마스터관리자 1</button>
+                      <button type="button" class="SOLFilter-btn swiper-slide">일반관리자 3</button>
+                      <button type="button" class="SOLFilter-btn swiper-slide">일반회원 30</button>
+                      <button type="button" class="SOLFilter-btn swiper-slide">임시회원 6</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- filter end -->
+
+                <hr class="hr-service" />
+
+                <div class="section-outer">
+                  <div class="box-msg">
+                    <div class="msg-btn">
+                      <p class="msg-noti">등급변경 대기중인 임시회원 5명</p>
+                      <button type="button" class="SOLTextBtn-root c--active">바로가기</button>
+                    </div>
+                  </div>
+
+                  <ul class="mypage-member-list">
+                    <li class="list-item">
+                      <span class="tit">김테크</span>
+                      <table class="SOLTable-small">
+                        <tbody>
+                          <tr>
+                            <th>소속부서</th>
+                            <td>소속부서</td>
+                          </tr>
+                          <tr>
+                            <th>이메일 주소</th>
+                            <td>kimtech@techfinratings.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="SOLCombobox-root">
+                        <button type="button" class="SOLCombobox-button" disabled>마스터관리자</button>
+                      </div>
+                    </li>
+
+                    <li class="list-item">
+                      <span class="tit">김테크</span>
+                      <table class="SOLTable-small">
+                        <tbody>
+                          <tr>
+                            <th>소속부서</th>
+                            <td>소속부서</td>
+                          </tr>
+                          <tr>
+                            <th>이메일 주소</th>
+                            <td>kimtech@techfinratings.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="SOLCombobox-root">
+                        <button type="button" class="SOLCombobox-button">일반관리자</button>
+                      </div>
+                    </li>
+
+                    <li class="list-item">
+                      <span class="tit">김테크</span>
+                      <table class="SOLTable-small">
+                        <tbody>
+                          <tr>
+                            <th>소속부서</th>
+                            <td>소속부서</td>
+                          </tr>
+                          <tr>
+                            <th>이메일 주소</th>
+                            <td>kimtech@techfinratings.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="SOLCombobox-root">
+                        <button type="button" class="SOLCombobox-button">일반회원</button>
+                      </div>
+                    </li>
+
+                    <li class="list-item">
+                      <span class="tit">김테크</span>
+                      <table class="SOLTable-small">
+                        <tbody>
+                          <tr>
+                            <th>소속부서</th>
+                            <td>소속부서</td>
+                          </tr>
+                          <tr>
+                            <th>이메일 주소</th>
+                            <td>kimtech@techfinratings.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="SOLCombobox-root">
+                        <button type="button" class="SOLCombobox-button">일반회원</button>
+                      </div>
+                    </li>
+
+                    <li class="list-item">
+                      <span class="tit">김테크</span>
+                      <table class="SOLTable-small">
+                        <tbody>
+                          <tr>
+                            <th>소속부서</th>
+                            <td>소속부서</td>
+                          </tr>
+                          <tr>
+                            <th>이메일 주소</th>
+                            <td>kimtech@techfinratings.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="SOLCombobox-root">
+                        <button type="button" class="SOLCombobox-button">일반회원</button>
+                      </div>
+                    </li>
+
+                    <li class="list-item">
+                      <span class="tit">김테크</span>
+                      <table class="SOLTable-small">
+                        <tbody>
+                          <tr>
+                            <th>소속부서</th>
+                            <td>소속부서</td>
+                          </tr>
+                          <tr>
+                            <th>이메일 주소</th>
+                            <td>kimtech@techfinratings.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="SOLCombobox-root">
+                        <button type="button" class="SOLCombobox-button">일반회원</button>
+                      </div>
+                    </li>
+
+                    <li class="list-item">
+                      <span class="tit">김테크</span>
+                      <table class="SOLTable-small">
+                        <tbody>
+                          <tr>
+                            <th>소속부서</th>
+                            <td>소속부서</td>
+                          </tr>
+                          <tr>
+                            <th>이메일 주소</th>
+                            <td>kimtech@techfinratings.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="SOLCombobox-root">
+                        <button type="button" class="SOLCombobox-button">일반회원</button>
+                      </div>
+                    </li>
+
+                    <li class="list-item">
+                      <span class="tit">김테크</span>
+                      <table class="SOLTable-small">
+                        <tbody>
+                          <tr>
+                            <th>소속부서</th>
+                            <td>소속부서</td>
+                          </tr>
+                          <tr>
+                            <th>이메일 주소</th>
+                            <td>kimtech@techfinratings.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="SOLCombobox-root">
+                        <button type="button" class="SOLCombobox-button">일반회원</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //section-outer -->
+              </div>
+              <!-- //SOLTab-inner -->
+
+              <div class="console-footer">
+                <button class="footer-topBtn">
+                  <i class="SOLIcon-root SOLIcon-arr--t"></i>
+                  <span class="blind">Scroll to Top</span>
+                </button>
+                <div class="console-footer-btns">
+                  <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>변경 저장 (10)</button>
+                </div>
+              </div>
+            </section>
+            <!-- 회원등급 tab end -->
+
+            <!-- 회원초대 -->
+            <section class="SOLTab-content">
+              <h3 class="blind">회원 초대</h3>
+              <div class="SOLTab-inner">
+                <div class="SOLAlign-root">
+                  <span class="result">검색결과 <em>8</em>건</span>
+                  <div class="SOLAlign-utils">
+                    <span>2024-08-01 ~ 2025-08-02</span>
+                    <button type="button" class="SOLIconBtn-root">
+                      <i class="SOLIcon-root SOLIcon-align"></i>
+                      <span class="blind">상세조회</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //SOLAlign-root -->
+                <div class="mb-g2--m"></div>
+
+                <!-- filter -->
+                <div class="SOLFilter-root">
+                  <div class="SOLFilter-swiper swiper">
+                    <div class="SOLFilter-wrap swiper-wrapper">
+                      <button type="button" class="SOLFilter-btn swiper-slide st--active">전체 10</button>
+                      <button type="button" class="SOLFilter-btn swiper-slide">가입대기 1</button>
+                      <button type="button" class="SOLFilter-btn swiper-slide">만료·취소 2</button>
+                      <button type="button" class="SOLFilter-btn swiper-slide">가입완료 7</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- filter end -->
+
+                <h4 class="card-category">2025년 6월 26일 (목)</h4>
+
+                <div class="section-outer">
+                  <ul class="mypage-member-list">
+                    <li class="list-item">
+                      <span class="SOLLabel-root c--active s--md">가입대기</span>
+                      <span class="time">15:30:30</span>
+                      <span>kimtech10@techfinratings.com</span>
+
+                      <div class="list-btns">
+                        <button type="button" class="SOLBtn-root w--full">재발송</button>
+                        <button type="button" class="SOLBtn-root w--full">초대 취소</button>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <span class="SOLLabel-root c--error s--md">초대취소</span>
+                      <span class="time">15:30:30</span>
+                      <span>kimtech10@techfinratings.com</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //section-outer -->
+
+                <h4 class="card-category">2025년 6월 25일 (수)</h4>
+
+                <div class="section-outer">
+                  <ul class="mypage-member-list">
+                    <li class="list-item">
+                      <span class="SOLLabel-root c--error s--md">기한만료</span>
+                      <span class="time">15:30:30</span>
+                      <span>kimtech10@techfinratings.com</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //section-outer -->
+
+                <h4 class="card-category">2025년 6월 24일 (화)</h4>
+
+                <div class="section-outer">
+                  <ul class="mypage-member-list">
+                    <li class="list-item">
+                      <span class="SOLLabel-root c--success s--md">가입완료</span>
+                      <span class="time">15:30:30</span>
+                      <span>kimtech10@techfinratings.com</span>
+                    </li>
+                    <li class="list-item">
+                      <span class="SOLLabel-root c--success s--md">가입완료</span>
+                      <span class="time">15:30:30</span>
+                      <span>kimtech10@techfinratings.com</span>
+                    </li>
+                    <li class="list-item">
+                      <span class="SOLLabel-root c--success s--md">가입완료</span>
+                      <span class="time">15:30:30</span>
+                      <span>kimtech10@techfinratings.com</span>
+                    </li>
+                    <li class="list-item">
+                      <span class="SOLLabel-root c--success s--md">가입완료</span>
+                      <span class="time">15:30:30</span>
+                      <span>kimtech10@techfinratings.com</span>
+                    </li>
+                    <li class="list-item">
+                      <span class="SOLLabel-root c--success s--md">가입완료</span>
+                      <span class="time">15:30:30</span>
+                      <span>kimtech10@techfinratings.com</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //section-outer -->
+              </div>
+              <!-- //SOLTab-inner -->
+
+              <div class="console-footer">
+                <button class="footer-topBtn">
+                  <i class="SOLIcon-root SOLIcon-arr--t"></i>
+                  <span class="blind">Scroll to Top</span>
+                </button>
+                <div class="console-footer-btns">
+                  <button type="button" class="SOLBtn-root t--contained s--lg w--full">초대하기</button>
+                </div>
+              </div>
+            </section>
+            <!-- 회원초대 tab end -->
+          </div>
+        </div>
+        <!-- SOLTab-root -->
+      </div>
+      <!-- //console-container -->
+    </div>
+
+    <!-- component js -->
+    <script src="/src/app/crediview-mo/js/popper.min.js"></script>
+    <script src="/src/app/crediview-mo/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/crediview-mo/js/custom.js"></script>
+    <script src="/static/crediview-mo/vendors/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.SOLFilter-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+      });
+    </script>
+  </body>
+</html>

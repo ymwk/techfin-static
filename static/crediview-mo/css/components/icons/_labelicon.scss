@@ -24,6 +24,10 @@
     opacity: 0.1;
   }
 
+  &.c--warn {
+    color: #ed9213 !important;
+  }
+
   &.t--contained {
     border: 0;
     color: #fff !important;
@@ -81,6 +85,6 @@
   }
 
   &.s--md {
-    height: 22px
+    height: 22px;
   }
 }

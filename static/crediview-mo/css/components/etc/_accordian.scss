@@ -131,7 +131,8 @@
 }
 
 .SOLAccordian-arr {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-left: auto;
   transition: transform 0.2s;
   color: #95989B
@@ -142,8 +143,7 @@
   border-radius: 8px;
   background-color: var(--c-bg);
   color: #404252;
-  word-break: keep-all;
-  transition: max-height 0.2s;
+  word-break: keep-all;  
 }
 
 .SOLAccordian-box {
@@ -164,6 +164,7 @@
 .js-accordian-body {
   overflow: hidden;
   max-height: 0;
+  transition: max-height 0.2s;
 
   .SOLSearchbox-root {
     flex: 1;

@@ -148,7 +148,8 @@
   flex-direction: column;
 
   .SOLTable-small {
-    margin: 20px 0
+    margin: 20px 0;
+    td { text-align: left }
   }
 
   .hr-comm { width: 100% }

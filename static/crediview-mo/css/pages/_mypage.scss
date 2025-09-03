@@ -23,7 +23,7 @@
   .label {
     display: inline-flex;
     align-items: center;
-    gap: 8px
+    gap: 8px;
   }
 }
 
@@ -160,7 +160,7 @@
 
   .SOLLabel-root {
     position: absolute;
-    top: -2px;
+    // top: -2px;
     right: 0;
   }
 
@@ -180,15 +180,38 @@
 
   .SOLTable-small th,
   .SOLTable-small td {
-    height: 20px;
+    height: 24px;
     padding: 0;
-    font-weight: 400;
+  }
+
+  .SOLTable-small td {
+    font-weight: 500;
   }
 
   .list-btns {
     display: flex;
     gap: 8px;
     margin-top: 12px;
+  }
+
+  .list-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+    border-left: 1px solid var(--tb-border);
+
+    .SOLTable-small th {
+      width: auto;
+      padding: 0 12px;
+    }
+    .SOLTable-small td {
+      width: 90%;
+      font-size: var(--font-13)
+    }
+    .SOLIconBtn-root {
+      height: 30px;
+      align-self: flex-start;
+    }
   }
 }
 
@@ -215,6 +238,39 @@
 
   .SOLIconBtn-root {
     min-height: 30px;
+  }
+}
+
+.mypage-switchlist {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mypage-accountlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: -6px 0;
+  min-height: 30px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:first-of-type) {
+      padding-top: 12px;
+      margin-top: 12px;
+      border-top: 1px solid var(--tb-border)
+    }
+  }
+
+  .utils {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: var(--font-13);
   }
 }
 

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <title>크레디뷰</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/crediview.css" />
+  </head>
+  <body>
+    <div class="SOLFullpage-root">
+      <div class="SOLFullpage-header">
+        <h2 class="SOLTitle-t2">결제 상세정보</h2>
+        <button type="button" class="SOLIconBtn-root">
+          <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+          <span class="blind">닫기</span>
+        </button>
+      </div>
+
+      <div class="SOLFullpage-container">
+        <div class="section-outer">
+          <section class="console-section">
+            <div class="box-result mb-g2">
+              <div class="box-result-title">
+                <h3 class="name">신용평가등급확인서</h3>
+                <em class="price"><del>100,000원</del></em>
+                <button type="button" class="SOLBtn-root w--full">매출전표</button>
+              </div>
+              <table class="SOLTable-small t--account">
+                <tbody>
+                  <tr>
+                    <th>결제일시</th>
+                    <td>2024-09-25 15:14:13</td>
+                  </tr>
+                  <tr>
+                    <th>결제상태</th>
+                    <td><em class="c--error">결제취소 (2024-02-05 10:12:13)</em></td>
+                  </tr>
+                  <tr>
+                    <th>결제수단</th>
+                    <td>가상계좌</td>
+                  </tr>
+                  <tr>
+                    <th>입금계좌</th>
+                    <td>1234-56-673-145 더존은행</td>
+                  </tr>
+                  <tr>
+                    <th>입금자명</th>
+                    <td>김디뷰</td>
+                  </tr>
+                  <tr>
+                    <th>상품금액</th>
+                    <td>120,000원</td>
+                  </tr>
+                  <tr>
+                    <th>할인금액</th>
+                    <td>(할인쿠폰) -20,000원</td>
+                  </tr>
+                  <tr>
+                    <th>결제금액</th>
+                    <td>
+                      <em><del>100,000원</del></em>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="box-msg js-accordian-root st--open">
+              <div class="box-msg-header">
+                <h5 class="title">주문정보</h5>
+                <button type="button" class="SOLAccordian-btn js-accordian-btn">
+                  <span class="SOLAccordian-arr">
+                    <i class="SOLIcon-root SOLIcon-gt--d"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="box-msg-body js-accordian-body">
+                <hr class="hr-comm s--sm" />
+                <table class="SOLTable-small t--mypage">
+                  <tbody>
+                    <tr>
+                      <th>상품명</th>
+                      <td>신용평가등급확인서</td>
+                    </tr>
+                    <tr>
+                      <th>주문자명</th>
+                      <td>김테크</td>
+                    </tr>
+                    <tr>
+                      <th>관리번호</th>
+                      <td>CV2411110001</td>
+                    </tr>
+                    <tr>
+                      <th>휴대폰번호</th>
+                      <td>010-1234-5678</td>
+                    </tr>
+                    <tr>
+                      <th>주문자 ID</th>
+                      <td>tech@techfinratings.com</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //box-msg -->
+          </section>
+        </div>
+        <!-- //section-outer -->
+      </div>
+      <!-- SOLFullpage-container -->
+    </div>
+
+    <script src="/src/app/crediview-mo/js/popper.min.js"></script>
+    <script src="/src/app/crediview-mo/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/crediview-mo/js/custom.js"></script>
+  </body>
+</html>
