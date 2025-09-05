@@ -1,0 +1,165 @@
+.SOLBoard-root {
+  word-break: keep-all;
+}
+
+.SOLBoard-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.SOLBoard-header-title {
+  font-size: var(--font-22);
+  line-height: 1.4
+}
+
+.SOLBoard-header-info {
+  display: flex;
+  align-items: center;
+  color: var(--fc-gray2);
+  font-size: var(--font-12);
+
+  .sort {
+    display: flex;
+    align-items: center;
+    height: 10px;
+    padding-right: 6px;
+    margin-right: 6px;
+    border-right: 1px solid #d8dbe2;
+    font-weight: 700;
+  }
+
+  .utils {
+    margin-left: auto
+  }
+}
+
+.SOLBoard-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8em;
+  padding: 40px 0 16px;
+  line-height: 1.5em;
+}
+
+.SOLBoard-body-img {
+  border: 1px solid #70737c29;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.SOLBoard-footer {
+  padding-top: 24px;
+  border-top: 1px solid var(--tb-border)
+}
+
+.SOLBoard-navi {
+  margin-top: 48px;
+  border-bottom: 1px solid var(--tb-border);
+  white-space: nowrap;
+}
+
+.SOLBoard-navi-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-top: 1px solid var(--tb-border);
+  color: var(--fc-gray2);
+  line-height: 1.6;
+
+  .navi-prev,
+  .navi-next {
+    flex-shrink: 0;
+    position: relative;
+    padding-right: 3em;
+    color: var(--fc-default);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      margin-top: -2px;
+      border-style: solid;
+      border-color: transparent transparent var(--c-active) transparent;
+      border-width: 5px 4px;
+      border-radius: 2px;
+    }
+  }
+
+  .navi-next::after {
+    transform: scaleY(-1);
+  }
+
+  .title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    padding-left: 1em;
+    border-left: 1px solid var(--tb-border);
+  }
+
+  .date {
+    flex-shrink: 0;
+    margin-left: auto;
+    color: var(--fc-gray2);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: var(--fc-default);
+  }
+}
+
+.SOLBoard-searchbox {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin-bottom: 40px;
+
+  .SOLInput-box {
+    height: 100%;
+    padding-left: 1em;
+  }
+}
+
+.SOLBoard-searchbox-btns {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+
+  .SOLBtn-root:not(.t--icon) {
+    width: 96px;
+  }
+
+  .SOLBtn-root.t--icon {
+    width: 48px;
+  }
+}
+
+.SOLBoard-reply {
+  margin-top: 80px;
+  padding: 24px 24px 48px;
+  background-color: var(--c-bg);
+  border-radius: 8px;
+
+  & + & {
+    margin-top: 24px;
+  }
+}
+
+.SOLBoard-reply-header {
+  padding-bottom: 1em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid var(--tb-border);
+}

@@ -70,13 +70,12 @@
       text-align: left;
 
       &::before {
-        content: "";
+        content: '';
         width: 1.7em;
         height: 1.7em;
         margin-right: 0.5em;
         color: var(--c-active);
-        background: url(../../Common/image/icon/ic_q.svg) no-repeat left center /
-          contain;
+        background: url(../../Common/image/icon/ic_q.svg) no-repeat left center / contain;
       }
     }
 
@@ -135,7 +134,7 @@
   align-items: center;
   margin-left: auto;
   transition: transform 0.2s;
-  color: #95989B
+  color: #95989b;
 }
 
 .SOLAccordian-body {
@@ -143,7 +142,7 @@
   border-radius: 8px;
   background-color: var(--c-bg);
   color: #404252;
-  word-break: keep-all;  
+  word-break: keep-all;
 }
 
 .SOLAccordian-box {
@@ -164,7 +163,7 @@
 .js-accordian-body {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.2s;
+  transition: max-height 0.3s ease-in-out;
 
   .SOLSearchbox-root {
     flex: 1;
@@ -175,7 +174,7 @@
 .SOLAccordian-item {
   &.st--open {
     .js-accordian-body {
-      max-height: 207px;
+      max-height: 500px;
     }
 
     .SOLAccordian-arr {

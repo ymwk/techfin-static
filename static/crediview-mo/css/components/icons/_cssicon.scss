@@ -55,7 +55,7 @@
     }
 
     & + & {
-      margin-left: -20px
+      margin-left: -20px;
     }
   }
 
@@ -357,6 +357,36 @@
     background: url(../image/icon/ic_refresh.svg) no-repeat center center;
   }
 
+  &-picture {
+    width: 24px;
+    background: url(../image/icon/ic_picture.svg) no-repeat center center;
+  }
+
+  &-camera {
+    width: 24px;
+    background: url(../image/icon/ic_camera.svg) no-repeat center center;
+  }
+
+  &-dir {
+    width: 24px;
+    background: url(../image/icon/ic_dir.svg) no-repeat center center;
+  }
+
+  &-download-bk {
+    width: 24px;
+    background: url(../image/icon/ic_download.svg) no-repeat center center;
+  }
+
+  &-mail-s {
+    width: 1%;
+    background: url(../image/icon/ic_mail_s.svg) no-repeat center center;
+  }
+
+  &-phone-s {
+    width: 1%;
+    background: url(../image/icon/ic_phone_s.svg) no-repeat center center;
+  }
+
   &-hamburger {
     width: 20px;
     height: 2px;
@@ -412,7 +442,7 @@
     width: 24px;
     height: 28px;
     background: url(../image/icon/ic_download_w.svg) no-repeat center bottom;
-  }  
+  }
 
   &-edit {
     width: 18px;

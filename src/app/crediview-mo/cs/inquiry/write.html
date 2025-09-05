@@ -17,7 +17,7 @@
               <i class="SOLIcon-root SOLIcon-gt--l s--xl"></i>
               <span class="blind">Prev</span>
             </button>
-            <h2 class="SOLHeader-title-text">내 정보 관리</h2>
+            <h2 class="SOLHeader-title-text">1:1 문의</h2>
           </div>
 
           <div class="SOLHeader-global">
@@ -103,94 +103,115 @@
 
       <div class="console-container">
         <div class="section-outer">
-          <section class="console-section">
-            <ul class="SOLStepper-root t--service">
-              <li><span class="tit">유의사항 확인</span></li>
-              <li class="active"><span class="tit">탈퇴 사유 선택</span></li>
-              <li><span class="tit">이메일 인증</span></li>
-            </ul>
-
+          <div class="loginbox-inputs">
             <div class="service-header">
-              <h3 class="SOLTitle-headline"><small>어떤점이 불편하셨나요?</small> <br />사유를 모두 선택해주세요.</h3>
+              <h3 class="SOLTitle-headline">문의 내용을 작성해 주세요.</h3>
+              <p class="SOLText-note">
+                답변 등록시 입력하신 휴대폰 번호로 안내문자가 발송됩니다.<br />
+                답변 내용은 입력하신 이메일로 함께 발송됩니다.<br />
+                <span class="c--error">*</span>표시는 필수입력정보입니다.
+              </p>
             </div>
-          </section>
 
-          <div class="SOLCheck-root t--break">
-            <label class="SOLCheck-label">
-              <input type="checkbox" name="" />
-              <span>
-                <span class="list-item">
-                  <span class="tit">필요성이 없음</span>
-                  <span class="desc">기업신용 등급 조회가 필요 없거나, 활용 빈도가 낮아짐</span>
-                </span>
-              </span>
+            <label class="SOLInput-root">
+              <span class="SOLInput-label"><span class="require">이메일 주소</span></span>
+              <div class="SOLInput-fbox">
+                <div class="SOLInput-box">
+                  <input
+                    type="text"
+                    placeholder="이메일 주소를 입력하세요."
+                    value="kimtech@techfinratings.com"
+                    class="SOLInput-field"
+                  />
+                </div>
+              </div>
             </label>
 
-            <label class="SOLCheck-label">
-              <input type="checkbox" name="" checked />
-              <span>
-                <span class="list-item">
-                  <span class="tit">비용부담</span>
-                  <span class="desc">서비스 비용이 부담스러움</span>
-                </span>
-              </span>
-            </label>
-
-            <label class="SOLCheck-label">
-              <input type="checkbox" name="" />
-              <span>
-                <span class="list-item">
-                  <span class="tit">서비스 오류</span>
-                  <span class="desc">기능이 제대로 작동하지 않거나, 에러가 자주 발생함</span>
-                </span>
-              </span>
-            </label>
-
-            <label class="SOLCheck-label">
-              <input type="checkbox" name="" />
-              <span>
-                <span class="list-item">
-                  <span class="tit">정보 신뢰도 문제</span>
-                  <span class="desc">제공되는 신용등급 정보를 신뢰할 수 없음</span>
-                </span>
-              </span>
-            </label>
-
-            <label class="SOLCheck-label">
-              <input type="checkbox" name="" />
-              <span>
-                <span class="list-item">
-                  <span class="tit">고객지원 불만</span>
-                  <span class="desc">제공되는 신용등급 정보를 신뢰할 수 없음</span>
-                </span>
-              </span>
-            </label>
-
-            <label class="SOLCheck-label">
-              <input type="checkbox" name="" />
-              <span>
-                <span class="list-item">
-                  <span class="tit">보안 및 개인정보 문제</span>
-                  <span class="desc">데이터 보호에 대한 우려</span>
-                </span>
-              </span>
-            </label>
-
-            <label class="SOLCheck-label">
-              <input type="checkbox" name="" checked />
-              <span>
-                <span class="list-item">
-                  <span class="tit">직접 입력</span>
-                </span>
-              </span>
-
-              <div class="SOLTextarea-root">
-                <textarea class="SOLTextarea-field" name="">자주 사용하지 않습니다.</textarea>
+            <label class="SOLInput-root">
+              <span class="SOLInput-label"><span class="require">휴대폰 번호</span></span>
+              <div class="SOLInput-fbox">
+                <div class="SOLInput-box">
+                  <input type="text" placeholder="휴대폰 번호를 입력하세요." class="SOLInput-field" />
+                </div>
               </div>
             </label>
           </div>
+          <!-- loginbox-inputs -->
+
+          <hr class="hr-comm" />
+
+          <div class="service-terms">
+            <div class="service-terms-item">
+              <div class="SOLCheck-root t--terms s--lg">
+                <label class="SOLCheck-label">
+                  <input type="checkbox" name="" />
+                  <span>
+                    <span class="c--require">[필수]</span>
+                    이용문의 수집 목적의 개인정보 수집ㆍ이용동의
+                  </span>
+                </label>
+              </div>
+
+              <button type="button" class="SOLIconBtn-root">
+                <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                <span class="blind">이용약관 팝업 열기</span>
+              </button>
+            </div>
+          </div>
         </div>
-        <!-- //section-outer -->
+
+        <hr class="hr-service" />
+
+        <div class="section-outer">
+          <div class="loginbox-inputs">
+            <label class="SOLInput-root">
+              <span class="SOLInput-label"><span class="require">유형</span></span>
+              <div class="SOLCombobox-root">
+                <button type="button" class="SOLCombobox-button">선택</button>
+              </div>
+            </label>
+
+            <label class="SOLInput-root">
+              <span class="SOLInput-label">
+                <span class="require">제목</span>
+                <span class="count">0/200</span>
+              </span>
+              <div class="SOLInput-fbox">
+                <div class="SOLInput-box">
+                  <input type="text" placeholder="제목을 입력하세요." class="SOLInput-field" />
+                </div>
+              </div>
+            </label>
+
+            <label class="SOLInput-root">
+              <span class="SOLInput-label">
+                <span class="require">내용</span>
+                <span class="count">0/2000</span>
+              </span>
+              <div class="SOLTextarea-root">
+                <textarea
+                  class="SOLTextarea-field"
+                  name=""
+                  rows="14"
+                  placeholder="문의할 내용을 입력하세요."
+                ></textarea>
+              </div>
+            </label>
+          </div>
+          <!-- loginbox-inputs -->
+
+          <button type="button" class="SOLBtn-root w--full">
+            <i class="SOLIcon-root SOLIcon-add s--sm"></i>
+            파일첨부
+          </button>
+
+          <div class="box-msg">
+            <ul class="msg-noti">
+              <li>첨부파일은 최대 10개, 10MB까지 등록가능합니다.</li>
+              <li>이미지 및 PDF, TXT, Ms office 문서 및 zip파일만 업로드가능합니다.</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <!-- //console-container -->
 
@@ -200,8 +221,8 @@
           <span class="blind">Scroll to Top</span>
         </button>
         <div class="console-footer-btns">
-          <!-- <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>다음</button> -->
-          <a href="break-step3.html" class="SOLBtn-root t--contained s--lg w--full">다음</a>
+          <button type="button" class="SOLBtn-root t--outlined s--lg w--full">취소</button>
+          <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>등록</button>
         </div>
       </div>
     </div>
@@ -210,5 +231,13 @@
     <script src="/src/app/crediview-mo/js/popper.min.js"></script>
     <script src="/src/app/crediview-mo/js/tippy-bundle.umd.js"></script>
     <script src="/src/app/crediview-mo/js/custom.js"></script>
+    <script src="/static/crediview-mo/vendors/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.SOLFilter-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+      });
+    </script>
   </body>
 </html>

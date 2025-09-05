@@ -33,7 +33,7 @@
 }
 
 .SOLInput-label {
-  display: inline-block;
+  display: inline-flex;
   color: var(--fc-gray2);
   font-weight: 500;
   white-space: nowrap;
@@ -41,6 +41,19 @@
   &.t--empty {
     padding-bottom: 0;
     margin-top: -5px;
+  }
+
+  .require {
+    &::after {
+      content: '*';
+      color: var(--c-error)
+    }
+  }
+
+  .count {
+    margin-left: auto;
+    font-size: var(--font-11);
+    color: rgba(112, 115, 124, 0.48)
   }
 }
 

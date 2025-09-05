@@ -15,8 +15,8 @@
 
   td {
     height: 28px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     vertical-align: middle;
     font-size: var(--font-14);
     font-weight: 600;
@@ -46,21 +46,24 @@
   }
 
   &.t--coupon td {
-    padding: 6px 0;
+    height: 38px;
     font-weight: 500;
   }
 
   &.t--mypage td {
     text-align: right;
+    em {
+      color: inherit;
+    }
   }
 
   &.t--account td {
     text-align: right;
-    padding: 6px 0;
+    height: 38px;
     font-weight: 500;
 
     em {
-      color: inherit
+      color: inherit;
     }
   }
 

@@ -4,8 +4,6 @@
   width: 100%;
   font-size: var(--font-14);
   line-height: 1.4;
-  height: 7em;
-  max-height: 4.2em;
   overflow: hidden;
 }
 
@@ -14,6 +12,7 @@
   display: block;
   resize: none;
   @include formStyle;
+  height: auto;
   padding: 8px var(--form-pd);
   &.c--error {
     border-color: var(--c-error);

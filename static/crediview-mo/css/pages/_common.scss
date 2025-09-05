@@ -200,6 +200,20 @@
   }
 }
 
+.msg-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: var(--font-13);
+  color: var(--fc-gray1);
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
 .msg-err {
   @extend .msg-noti;
   color: var(--c-error);
@@ -218,6 +232,24 @@
   }
 }
 
+.msg-reply-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 8px;
+
+  .date {
+    font-size: var(--font-12);
+    color: var(--fc-gray2)
+  }
+}
+
+.msg-reply {
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 24px
+}
+
 .msg-btn {
   display: flex;
   justify-content: space-between;
@@ -227,11 +259,18 @@
   }
 }
 
-.msg-small {
+.msg-bullet {
+  position: relative;
   font-size: var(--font-12);
   color: var(--fc-gray2);
-  text-indent: -10px;
   padding-left: 12px;
+
+  &::before {
+    content: '※';
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .hr-service {
@@ -295,6 +334,14 @@
     background-image: url(../image/img/img_empty_user.svg);
   }
 
+  &.ic--notice::before {
+    background-image: url(../image/img/img_empty_notice.svg);
+  }
+
+  &.ic--doc::before {
+    background-image: url(../image/img/img_empty_doc.svg);
+  }
+
   &.ic--noresult::before {
     background-image: url(../image/img/img_empty_result.svg);
     background-position: 60% 60%;
@@ -329,6 +376,12 @@
     color: var(--fc-gray1);
     font-weight: 500;
   }
+}
+
+.btn-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 // 8배수
