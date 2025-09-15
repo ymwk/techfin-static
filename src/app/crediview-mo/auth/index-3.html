@@ -17,7 +17,7 @@
               <i class="SOLIcon-root SOLIcon-gt--l s--xl"></i>
               <span class="blind">Prev</span>
             </button>
-            <h2 class="SOLHeader-title-text">알림 설정</h2>
+            <h2 class="SOLHeader-title-text">진본 확인 서비스</h2>
           </div>
 
           <div class="SOLHeader-global">
@@ -103,62 +103,79 @@
 
       <div class="console-container">
         <div class="section-outer">
-          <div class="mypage-switchlist">
-            <div class="SOLCheck-root t--terms s--lg">
-              <label class="SOLCheck-label">
-                <input type="checkbox" name="" checked />
-                <span class="SOLTitle-t3">정보 수신 설정</span>
-              </label>
-            </div>
-            <!-- //SOLCheck-root -->
+          <div class="box-msg">
+            <ul class="msg-list-bullet">
+              <li>
+                본 서비스는 문서 번호(또는 QR)로 발급 사실만 확인하며, <br />
+                문서 내용의 정확성은 별도로 확인하지 않습니다.
+              </li>
+              <li>조회 결과는 참고용이며 법적 효력은 발급 기관 정책에 따릅니다.</li>
+              <li>위·변조된 문서 사용 시 법적 책임은 사용자에게 있습니다.</li>
+            </ul>
+          </div>
 
-            <label class="SOLSwitch-root">
-              <span>사이트 알림</span>
-              <input type="checkbox" name="" checked />
-            </label>
-
-            <label class="SOLSwitch-root">
-              <span>이메일</span>
-              <input type="checkbox" name="" checked />
-            </label>
-
-            <label class="SOLSwitch-root">
-              <span>휴대폰</span>
-              <input type="checkbox" name="" checked />
-            </label>
+          <div class="auth-qr">
+            <p>확인서 하단의 QR코드를 조회해주세요.</p>
+            <button type="button" class="SOLBtn-root t--contained c--dark">
+              <i class="SOLIcon-root SOLIcon-qr"></i>
+              <span>QR스캔</span>
+            </button>
           </div>
 
           <hr class="hr-comm" />
 
-          <div class="mypage-switchlist">
-            <div class="mypage-switchlist-terms">
-              <div class="SOLCheck-root t--terms s--lg">
-                <label class="SOLCheck-label">
-                  <input type="checkbox" name="" />
-                  <span class="SOLTitle-t3">마케팅 정보 수신 동의</span>
-                </label>
+          <p class="auth-qr mb-0">QR스캔이 불가할 경우 문서번호로 조회가능합니다.</p>
+
+          <label class="SOLInput-root c--error">
+            <div class="SOLInput-fbox">
+              <div class="SOLInput-box">
+                <input type="text" placeholder="사업자등록번호를 입력해 주세요." value="TRRATE2409020010" class="SOLInput-field" />
+                <span class="SOLInput-wrap">
+                    <span class="SOLInput-wrap--hidden">
+                      <button type="button" class="SOLInput-btn SOLIcon-close">
+                        <span class="blind">Del</span>
+                      </button>
+                    </span>
+                  </span>
               </div>
-
-              <button type="button" class="SOLIconBtn-root">
-                <i class="SOLIcon-root SOLIcon-gt--r"></i>
-                <span class="blind">상세보기</span>
-              </button>
-              <!-- //SOLCheck-root -->
             </div>
+            <p class="SOLInput-msg">올바른 형식의 사업자번호를 입력하세요. (형식: 숫자 10자리)</p>
+          </label>
 
-            <div class="box-msg">
-              <p class="msg-noti">마케팅 정보 수신 동의를 하시면 이벤트 및 광고성 정보를 받아보실 수 있습니다.</p>
+          <label class="SOLInput-root">
+            <div class="SOLInput-fbox">
+              <div class="SOLInput-box">
+                <input type="text" placeholder="문서번호를 입력해 주세요." class="SOLInput-field" disabled />
+              </div>
             </div>
-          </div>
+          </label>
         </div>
         <!-- //section-outer -->
       </div>
       <!-- //console-container -->
+
+      <div class="console-footer">
+        <button class="footer-topBtn">
+          <i class="SOLIcon-root SOLIcon-arr--t"></i>
+          <span class="blind">Scroll to Top</span>
+        </button>
+        <div class="console-footer-btns">
+          <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>조회</button>
+        </div>
+      </div>
     </div>
 
     <!-- component js -->
     <script src="/src/app/crediview-mo/js/popper.min.js"></script>
     <script src="/src/app/crediview-mo/js/tippy-bundle.umd.js"></script>
     <script src="/src/app/crediview-mo/js/custom.js"></script>
+    <script src="/static/crediview-mo/vendors/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.SOLFilter-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+      });
+    </script>
   </body>
 </html>

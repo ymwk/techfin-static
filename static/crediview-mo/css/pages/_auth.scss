@@ -1,0 +1,82 @@
+.auth-qr {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0;
+  color: var(--fc-gray1);
+  font-weight: 500;
+}
+
+.SOLQr-root {
+  z-index: 9999;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.SOLQr-header {
+  z-index: 10;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  color: #fff;
+}
+
+.SOLQr-title {
+  font-size: var(--font-18);
+  font-weight: 400;
+}
+
+.SOLQr-frame {
+  z-index: 9;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    flex-grow: 1;
+    background: rgba(51, 51, 51, 0.8);
+  }
+}
+
+.SOLQr-frame-inner {
+  flex-shrink: 0;
+  display: flex;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    flex-grow: 1;
+    background: rgba(51, 51, 51, 0.8);
+  }
+}
+
+.SOLQr-frame-area {
+  position: relative;
+  flex-shrink: 0;
+  width: 250px;
+  height: 228px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -30px;
+    background: url(../image/icon/ic_qr_frame.svg) no-repeat center center / contain;
+  }
+}
+
+.SOLQr-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

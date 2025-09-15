@@ -101,6 +101,15 @@
       background-color: #929292;
     }
   }
+
+  .SOLTable-small {
+    th, td {
+      height: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-weight: 400
+    }
+  }
 }
 
 .mypage-terms-list {
@@ -245,6 +254,11 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.mypage-switchlist-terms {
+  display: flex;
+  justify-content: space-between;
 }
 
 .mypage-accountlist {

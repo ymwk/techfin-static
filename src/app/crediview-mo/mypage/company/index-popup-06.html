@@ -11,7 +11,7 @@
   <body>
     <div class="SOLFullpage-root">
       <div class="SOLFullpage-header">
-        <h2 class="SOLTitle-t2">초대코드</h2>
+        <h2 class="SOLTitle-t2">추천인 조회</h2>
         <button type="button" class="SOLIconBtn-root">
           <i class="SOLIcon-root SOLIcon-close s--lg"></i>
           <span class="blind">닫기</span>
@@ -20,19 +20,10 @@
 
       <div class="SOLFullpage-container">
         <div class="section-outer">
-          <div class="box-msg">
-            <ul class="msg-noti">
-              <li>초대코드는 크레디뷰를 추천한 분의 코드입니다.</li>
-              <li>사업자별로 최초 1회만 입력 가능합니다.</li>
-              <li>한번 등록하면 수정이 불가합니다.</li>
-            </ul>
-          </div>
-
           <label class="SOLInput-root s--lg">
-            <span class="SOLInput-label">초대코드 등록</span>
             <div class="SOLInput-fbox">
               <div class="SOLInput-box">
-                <input type="text" placeholder="쿠폰 초대 코드를 입력하세요." class="SOLInput-field" />
+                <input type="text" placeholder="추천인 이름을 입력하세요." value="김테크" class="SOLInput-field" />
                 <span class="SOLInput-wrap">
                   <span class="SOLInput-wrap--hidden">
                     <button type="button" class="SOLInput-btn SOLIcon-close">
@@ -41,26 +32,14 @@
                   </span>
                 </span>
               </div>
+              <button type="button" class="SOLBtn-root">조회</button>
             </div>
           </label>
 
-          <div class="content-center">
-            <p>초대코드를 모르시나요?</p>
-            <button type="button" class="SOLTextBtn-root">
-              추천인 조회
-            </button>
-          </div>
-
+          <p class="content-empty ic--none">조회하신 추천인이 없습니다.</p>
         </div>
       </div>
       <!-- SOLFullpage-container -->
-
-      <div class="SOLFullpage-footer">
-        <div class="footer-btns">
-          <button type="button" class="SOLBtn-root t--outlined s--lg w--full">취소</button>
-          <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>등록</button>
-        </div>
-      </div>
     </div>
   </body>
 </html>

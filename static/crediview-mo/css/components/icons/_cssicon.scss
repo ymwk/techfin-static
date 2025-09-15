@@ -387,6 +387,11 @@
     background: url(../image/icon/ic_phone_s.svg) no-repeat center center;
   }
 
+  &-qr {
+    width: 14px;
+    background: url(../image/icon/ic_qr.png) no-repeat center center / contain;
+  }
+
   &-hamburger {
     width: 20px;
     height: 2px;

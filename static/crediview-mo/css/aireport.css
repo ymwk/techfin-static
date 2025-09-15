@@ -2218,6 +2218,10 @@ button.swiper-pagination-bullet {
   width: 1%;
   background: url(../image/icon/ic_phone_s.svg) no-repeat center center;
 }
+.SOLIcon-qr {
+  width: 14px;
+  background: url(../image/icon/ic_qr.png) no-repeat center center/contain;
+}
 .SOLIcon-hamburger {
   width: 20px;
   height: 2px;
@@ -2540,6 +2544,11 @@ button.swiper-pagination-bullet {
 .SOLBtn-root.t--contained:disabled, .SOLBtn-root.t--contained.disabled {
   background-color: #f4f4f5;
   color: rgba(55, 56, 60, 0.28);
+}
+.SOLBtn-root.t--contained.c--dark {
+  height: 48px;
+  background-color: #222;
+  border-radius: 8px;
 }
 .SOLBtn-root.t--outlined {
   color: var(--c-active);
@@ -3937,7 +3946,7 @@ table .SOLCheck-root {
   position: relative;
   padding: 0 24px;
   color: #222;
-  margin-bottom: 24px;
+  min-height: 304px;
 }
 
 .SOLDatepicker-action {
@@ -4010,7 +4019,6 @@ table .SOLCheck-root {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
 }
 .SOLDatepicker-week .SOLDatepicker-item:nth-child(7n+1), .SOLDatepicker-week .SOLDatepicker-item.t--off,
 .SOLDatepicker-days .SOLDatepicker-item:nth-child(7n+1),
@@ -4028,34 +4036,20 @@ table .SOLCheck-root {
 .SOLDatepicker-days {
   padding: 8px 0;
 }
-.SOLDatepicker-days:has(.t--end) .SOLDatepicker-item:not(.t--disabled) {
-  background-color: var(--bc-hover);
+.SOLDatepicker-days:has(.t--end):not(:has(.t--start)) .SOLDatepicker-item {
+  background-color: #e4e9ff;
 }
-.SOLDatepicker-days .SOLDatepicker-item.t--disabled {
+.SOLDatepicker-days .SOLDatepicker-item.t--disabled .SOLDatepicker-btn {
   opacity: 0.4;
 }
 .SOLDatepicker-days .SOLDatepicker-item.t--disabled .SOLDatepicker-btn:hover, .SOLDatepicker-days .SOLDatepicker-item.t--disabled .SOLDatepicker-btn:focus {
   border-color: transparent;
   cursor: default;
 }
-.SOLDatepicker-days .SOLDatepicker-item.t--start::before, .SOLDatepicker-days .SOLDatepicker-item.t--end::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  background-color: var(--bc-hover);
+.SOLDatepicker-days .SOLDatepicker-item.t--start, .SOLDatepicker-days .SOLDatepicker-item.t--start ~ .SOLDatepicker-item {
+  background-color: #e4e9ff;
 }
-.SOLDatepicker-days .SOLDatepicker-item.t--start::before {
-  right: 0;
-}
-.SOLDatepicker-days .SOLDatepicker-item.t--end::before {
-  left: 0;
-}
-.SOLDatepicker-days .SOLDatepicker-item.t--start ~ .SOLDatepicker-item:not(.t--disabled) {
-  background-color: var(--bc-hover);
-}
-.SOLDatepicker-days .SOLDatepicker-item.t--end:not(.t--disabled), .SOLDatepicker-days .SOLDatepicker-item.t--end ~ .SOLDatepicker-item:not(.t--disabled) {
+.SOLDatepicker-days .SOLDatepicker-item.t--end, .SOLDatepicker-days .SOLDatepicker-item.t--end ~ .SOLDatepicker-item {
   background-color: inherit;
 }
 
@@ -4299,6 +4293,9 @@ table .SOLCheck-root {
   border-width: 6px 5px;
   margin-top: -3px;
   border-radius: 2px;
+}
+.SOLCombobox-button.t--change {
+  background-color: var(--bc-hover);
 }
 
 .SOLCombobox-button.error {
@@ -5228,6 +5225,7 @@ table .SOLCheck-root {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-height: 69px;
   padding: 24px var(--spc-w);
   border-radius: 16px 16px 0 0;
   background-color: #fff;
@@ -5353,28 +5351,26 @@ table .SOLCheck-root {
   overflow-y: auto;
 }
 .SOLFullpage-root .SOLFullpage-container {
-  padding-top: var(--header-h);
+  padding-top: 0;
 }
 
 .SOLFullpage-header {
   flex-shrink: 0;
   z-index: 99;
-  position: fixed;
-  inset: 0 0 auto;
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
-  height: var(--header-h);
-  padding: 0 var(--spc-w);
+  min-height: var(--header-h);
+  padding: 20px 55px 20px var(--spc-w);
   background-color: #fff;
 }
 .SOLFullpage-header .SOLTitle-t2 {
-  line-height: 1;
-  transform: translateY(2px);
+  line-height: 1.2;
 }
 .SOLFullpage-header .SOLIconBtn-root {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 9px;
   right: 12px;
 }
 
@@ -6040,6 +6036,21 @@ table .SOLCheck-root {
   padding-right: 0.4em;
 }
 
+.msg-list-bullet {
+  position: relative;
+}
+.msg-list-bullet li {
+  position: relative;
+  padding: 2px 0 2px 12px;
+}
+.msg-list-bullet li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: var(--font-16);
+}
+
 .msg-info {
   display: flex;
   flex-direction: column;
@@ -6062,7 +6073,7 @@ table .SOLCheck-root {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  font-size: 14px;
+  font-size: var(--font-14);
   font-weight: 400;
 }
 .msg-terms em {
@@ -6106,6 +6117,13 @@ table .SOLCheck-root {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.msg-doc {
+  display: flex;
+  justify-content: center;
+  font-size: var(--font-14);
+  gap: 16px;
 }
 
 .hr-service {
@@ -6172,7 +6190,7 @@ table .SOLCheck-root {
   background-position: 60% 60%;
 }
 .content-empty.ic--none {
-  padding-bottom: 0;
+  padding-top: 10vh;
 }
 .content-empty.ic--none::before {
   content: none;
@@ -6180,6 +6198,14 @@ table .SOLCheck-root {
 .content-empty .SOLBtn-root {
   padding: 0 42px;
   margin-top: 12px;
+}
+
+.content-center {
+  padding: 20px 0;
+  text-align: center;
+}
+.content-center .SOLTextBtn-root {
+  color: var(--fc-default);
 }
 
 .content-empty-btns {
@@ -6217,6 +6243,10 @@ table .SOLCheck-root {
   margin-top: 24px;
 }
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
 .mb-g1 {
   margin-bottom: 8px;
 }
@@ -6247,6 +6277,10 @@ table .SOLCheck-root {
 
 .gap-g4 {
   gap: 36px !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
 }
 
 .index-footer {
@@ -7659,6 +7693,12 @@ table .SOLCheck-root {
 .mypage-coupon-list .disabled .SOLLabel-root {
   background-color: #929292;
 }
+.mypage-coupon-list .SOLTable-small th, .mypage-coupon-list .SOLTable-small td {
+  height: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-weight: 400;
+}
 
 .mypage-terms-list {
   margin-bottom: 10px;
@@ -7782,6 +7822,11 @@ table .SOLCheck-root {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.mypage-switchlist-terms {
+  display: flex;
+  justify-content: space-between;
 }
 
 .mypage-accountlist {

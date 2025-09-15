@@ -33,6 +33,10 @@
     margin-top: -3px;
     border-radius: 2px;
   }
+
+  &.t--change {
+    background-color: var(--bc-hover);
+  }
 }
 
 .SOLCombobox-button.error {

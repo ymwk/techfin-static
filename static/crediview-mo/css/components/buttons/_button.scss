@@ -51,6 +51,12 @@
         background-color: #f4f4f5;
         color: rgba(55, 56, 60, 0.28);
       }
+
+      &.c--dark {
+        height: 48px;
+        background-color: #222;
+        border-radius: 8px;
+      }
     }
 
     &--outlined {
