@@ -5,7 +5,7 @@
   text-align: left;
   flex-wrap: wrap;
   min-height: 2em;
-  line-height: 18px;
+  line-height: 1.4;
   font-size: var(--font-14);
   word-break: keep-all;
 }
@@ -73,10 +73,9 @@
 
   &.s--lg {
     font-size: var(--font-15);
-    line-height: 22px;
 
     .SOLCheck-label {
-      gap: 10px;
+      gap: 8px;
 
       [type='checkbox'] {
         width: 24px;

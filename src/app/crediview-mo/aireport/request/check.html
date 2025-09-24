@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <title>크레디뷰</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/crediview.css" />
+  </head>
+  <body>
+    <div class="console-root">
+      <header class="SOLHeader-root">
+        <div class="SOLHeader-inner">
+          <div class="SOLHeader-title">
+            <button type="button" class="SOLIconBtn-root">
+              <i class="SOLIcon-root SOLIcon-gt--l s--xl"></i>
+              <span class="blind">Prev</span>
+            </button>
+            <h2 class="SOLHeader-title-text">경영진단 신청</h2>
+          </div>
+
+          <div class="SOLHeader-global">
+            <button type="button" class="SOLIconBtn-root SOLHeader-menuBtn">
+              <i class="SOLIcon-root SOLIcon-hamburger"></i>
+              <span class="blind">전체메뉴 보기</span>
+            </button>
+
+            <nav class="SOLHeader-nav">
+              <h3 class="blind">전체메뉴</h3>
+              <div class="SOLHeader-nav-header">
+                <h1 class="SOLHeader-logo">
+                  <a href="#">
+                    <div class="logo">
+                      <span class="eng">Crediview</span>
+                    </div>
+                  </a>
+                </h1>
+
+                <div class="SOLHeader-global">
+                  <button type="button" class="SOLIconBtn-root SOLHeader-closeBtn">
+                    <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+                    <span class="blind">전체메뉴 닫기</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 전체메뉴 start -->
+              <div class="SOL-mb-gnb">
+                <ul class="gnb-menu">
+                  <li class="depth01">
+                    <a href="#">기업신용평가</a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#" class="on">기업신용평가 소개</a></li>
+                      <li><a href="#">신용평가 신청</a></li>
+                      <li><a href="#">신용평가등급확인서 제출</a></li>
+                      <li><a href="#">등급 산출 및 제출내역</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#" class="ai-post">AI경영진단보고서<span class="blind">Open</span></a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#">AI경영진단보고서 소개</a></li>
+                      <li><a href="#">경영진단 신청</a></li>
+                      <li><a href="#">진단내역</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">마이페이지</a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#">회사관리</a></li>
+                      <li><a href="#">인증서 관리</a></li>
+                      <li><a href="#">회원관리</a></li>
+                      <li><a href="#">내 정보 관리</a></li>
+                      <li><a href="#">정산관리</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">진본 확인 서비스</a>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">고객지원</a>
+                    <ul class="sub-menu depth02">
+                      <li><a href="#">공지사항</a></li>
+                      <li><a href="#">자주 묻는 질문</a></li>
+                      <li><a href="#">1:1 문의</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01">
+                    <a href="#">회사 소개</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- 전체메뉴 end -->
+
+              <div class="logout-box">
+                <button type="button" class="SOLBtn-root w--full">로그아웃</button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <form>
+        <div class="console-container">
+          <div class="section-outer">
+            <section class="console-section">
+              <span class="stepper-label">정보확인</span>
+
+              <div class="service-header">
+                <h3 class="SOLTitle-headline">
+                  신청서 정보를 확인 후 <br />
+                  경영진단을 신청해 주세요.
+                </h3>
+                <p class="SOLText-note">등록된 인증서 기준으로 회사정보가 입력됩니다.</p>
+              </div>
+            </section>
+
+            <section class="console-section">
+              <div class="console-section-header">
+                <h3 class="SOLTitle-t3">회사 정보</h3>
+                <div class="section-header-option">
+                  <span class="date">2024-09-09 15:16:17</span>
+                  <button type="button" class="SOLIconBtn-root">
+                    <span class="SOLSvg-root SOLSvg-refresh">
+                      <svg viewBox="0 0 16 16">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M14.1847 5.99992H10.5C10.2239 5.99992 10 5.77606 10 5.49992C10 5.22378 10.2239 4.99992 10.5 4.99992H13.4067C12.0703 2.56624 9.22594 1.32011 6.46428 2.02832C5.38017 2.30721 4.39241 2.87594 3.60695 3.67351C2.82144 4.47113 2.26787 5.46752 2.0056 6.55584C1.74334 7.64415 1.78227 8.78333 2.11823 9.8512C2.4542 10.9191 3.07451 11.8753 3.91264 12.6175C4.75078 13.3596 5.77512 13.8595 6.87581 14.0637C7.97649 14.2679 9.11201 14.1687 10.1606 13.7766C11.2091 13.3845 12.1312 12.7143 12.8278 11.838C13.5244 10.9617 13.9694 9.91233 14.115 8.80236C14.1509 8.52857 14.4019 8.33572 14.6757 8.37162C14.9495 8.40753 15.1424 8.65859 15.1065 8.93239C14.9373 10.2224 14.4202 11.4419 13.6106 12.4603C12.801 13.4787 11.7294 14.2575 10.5108 14.7132C9.29223 15.1689 7.97258 15.2843 6.6934 15.047C5.41422 14.8097 4.22377 14.2286 3.24972 13.3661C2.27567 12.5037 1.55477 11.3923 1.16433 10.1513C0.773888 8.91027 0.728638 7.58636 1.03343 6.32156C1.33823 5.05676 1.98157 3.89879 2.89445 2.97183C3.80734 2.04488 4.95534 1.38391 6.21533 1.05981L6.21567 1.05972C9.33877 0.25872 12.5661 1.61391 14.1667 4.31401V1.33325C14.1667 1.05711 14.3905 0.833252 14.6667 0.833252C14.9428 0.833252 15.1667 1.05711 15.1667 1.33325V5.49992C15.1667 5.77606 14.9428 5.99992 14.6667 5.99992H14.2037C14.1974 6.00004 14.191 6.00004 14.1847 5.99992Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="box-msg">
+                <table class="SOLTable-small" title="회사 정보">
+                  <tbody>
+                    <tr>
+                      <th>기업명</th>
+                      <td>(주)테크핀비즈온</td>
+                    </tr>
+                    <tr>
+                      <th>대표자명</th>
+                      <td>김테크</td>
+                    </tr>
+                    <tr>
+                      <th>사업자등록번호</th>
+                      <td>123-88-024545</td>
+                    </tr>
+                    <tr>
+                      <th>개업일</th>
+                      <td>2019-01-01</td>
+                    </tr>
+                    <tr>
+                      <th>업태</th>
+                      <td>서비스업/금융업</td>
+                    </tr>
+                    <tr>
+                      <th>종목</th>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th>법인등록번호</th>
+                      <td>110111-111222</td>
+                    </tr>
+                    <tr>
+                      <th>사업장소재지</th>
+                      <td>서울시 동작구 사당동 1138-1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="console-section">
+              <div class="console-section-header">
+                <h3 class="SOLTitle-t3">담당자 정보</h3>
+              </div>
+              <div class="box-msg">
+                <table class="SOLTable-small" title="담당자 정보">
+                  <tbody>
+                    <tr>
+                      <th>소속 부서</th>
+                      <td>경영지원실</td>
+                    </tr>
+                    <tr>
+                      <th>이름</th>
+                      <td>김테크</td>
+                    </tr>
+                    <tr>
+                      <th>이메일주소</th>
+                      <td>kimtech@techfinratings.com</td>
+                    </tr>
+                    <tr>
+                      <th>휴대폰 번호</th>
+                      <td>010-1234-5678</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+          <!-- //section-outer -->
+
+          <hr class="hr-service" />
+          <div class="section-outer">
+            <div class="ai-terms">
+              <h3 class="SOLTitle-t3">이용약관 동의</h3>
+              <div class="service-terms-item">
+                <div class="SOLCheck-root t--terms s--lg">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span> <span>[필수]</span>기업정보 수집·활용·제3자 제공 동의 </span>
+                  </label>
+                </div>
+
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                  <span class="blind">이용약관 팝업 열기</span>
+                </button>
+              </div>
+
+              <div class="service-terms-item">
+                <div class="SOLCheck-root t--terms s--lg">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span>
+                      <span>[필수]</span>
+                      기업정보 수집·활용·제3자 제공 동의
+                    </span>
+                  </label>
+                </div>
+
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                  <span class="blind">이용약관 팝업 열기</span>
+                </button>
+              </div>
+
+              <div class="service-terms-item">
+                <div class="SOLCheck-root t--terms s--lg">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span>
+                      <span>[필수]</span>
+                      크레디뷰 서비스 이용약관
+                    </span>
+                  </label>
+                </div>
+
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                  <span class="blind">이용약관 팝업 열기</span>
+                </button>
+              </div>
+
+              <div class="service-terms-item">
+                <div class="SOLCheck-root t--terms s--lg">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span>
+                      <span>[필수]</span>
+                      기업경영진단보고서 서비스 이용약관
+                    </span>
+                  </label>
+                </div>
+
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                  <span class="blind">이용약관 팝업 열기</span>
+                </button>
+              </div>
+
+              <div class="service-terms-item">
+                <div class="SOLCheck-root t--terms s--lg">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span> 기업경영진단 매월 업데이트·알림 서비스 이용약관 </span>
+                  </label>
+                </div>
+
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                  <span class="blind">이용약관 팝업 열기</span>
+                </button>
+              </div>
+
+              <div class="service-terms-item">
+                <div class="SOLCheck-root t--terms s--lg">
+                  <label class="SOLCheck-label">
+                    <input type="checkbox" name="" />
+                    <span> 마케팅 정보 수신 및 활용 동의 </span>
+                  </label>
+                </div>
+
+                <button type="button" class="SOLIconBtn-root">
+                  <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                  <span class="blind">이용약관 팝업 열기</span>
+                </button>
+              </div>
+            </div>
+            <!-- //ai-terms -->
+
+            <hr class="hr-comm" />
+
+            <section class="console-section gap-g2">
+              <h3 class="SOLTitle-t3">유의사항</h3>
+
+              <div class="SOLSnackbar-msgbox s--lg">
+                <ul>
+                  <li>기업경영진단보고서는 공공기관에 <em>제출용</em>으로 사용할 수 없습니다.</li>
+                  <li>
+                    <em>기업경영진단 매월 업데이트·알림 서비스</em>를 함께 신청하지 않으셔도, 보고서는 정상 생성됩니다.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="SOLCheck-root t--terms s--lg">
+                <label class="SOLCheck-label">
+                  <input type="checkbox" name="" />
+                  <span> <span>[필수]</span>유의사항을 확인했습니다. </span>
+                </label>
+              </div>
+            </section>
+          </div>
+          <!-- //section-outer -->
+        </div>
+        <!-- //console-container -->
+
+        <div class="console-footer">
+          <button class="footer-topBtn">
+            <i class="SOLIcon-root SOLIcon-arr--t"></i>
+            <span class="blind">Scroll to Top</span>
+          </button>
+          <div class="console-footer-btns">
+            <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>경영진단 신청</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- component js -->
+    <script src="/src/app/crediview-mo/js/popper.min.js"></script>
+    <script src="/src/app/crediview-mo/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/crediview-mo/js/custom.js"></script>
+  </body>
+</html>

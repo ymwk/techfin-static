@@ -9118,7 +9118,7 @@ body.keyboard-open .members-loginbox .loginbox-action {
   text-align: left;
   flex-wrap: wrap;
   min-height: 2em;
-  line-height: 18px;
+  line-height: 1.4;
   font-size: var(--font-14);
   word-break: keep-all;
 }
@@ -9178,10 +9178,9 @@ body.keyboard-open .members-loginbox .loginbox-action {
 }
 .SOLCheck-root.s--lg {
   font-size: var(--font-15);
-  line-height: 22px;
 }
 .SOLCheck-root.s--lg .SOLCheck-label {
-  gap: 10px;
+  gap: 8px;
 }
 .SOLCheck-root.s--lg .SOLCheck-label [type=checkbox] {
   width: 24px;
@@ -13424,6 +13423,9 @@ table .SOLCheck-root {
 .service-result-progress.t--submit {
   background-image: url(../image/img/bg_submit_progress.png);
 }
+.service-result-progress.t--report {
+  background-image: url(../image/img/bg_submit_report.png);
+}
 .service-result-progress .progress {
   position: relative;
   display: flex;
@@ -14116,10 +14118,10 @@ table .SOLCheck-root {
   gap: 12px;
 }
 .ai-terms .service-terms-item {
-  min-height: 72px;
+  min-height: 60px;
   border: 1px solid var(--tb-border);
   border-radius: 8px;
-  padding: 0 16px;
+  padding: 0 14px;
 }
 
 .service-terms {
@@ -14154,7 +14156,8 @@ table .SOLCheck-root {
   font-size: var(--font-14);
 }
 .service-terms-item .SOLIconBtn-root:last-child {
-  margin-right: -6px;
+  margin-right: -8px;
+  min-width: 34px;
 }
 .service-terms-item:last-child:not(:only-child) {
   margin-bottom: 6px;
