@@ -2349,6 +2349,9 @@ button.swiper-pagination-bullet {
 .SOLIcon-alert.c--success {
   background: url(../image/icon/ic_alert_success.svg) no-repeat center center/cover;
 }
+.SOLIcon-alert svg {
+  display: none;
+}
 
 .SOLSvg-root {
   display: inline-flex;
@@ -2524,7 +2527,7 @@ button.swiper-pagination-bullet {
   background-color: var(--form-c-bg-dis);
 }
 .SOLBtn-root:disabled, .SOLBtn-root.disabled {
-  background-color: transparent;
+  background-color: var(--form-c-bg-dis);
   color: rgba(55, 56, 60, 0.28);
   border-color: rgba(112, 115, 124, 0.28);
   box-shadow: none;
@@ -2588,6 +2591,11 @@ button.swiper-pagination-bullet {
   min-height: 30px;
   padding: 0 10px;
   font-size: var(--font-13);
+}
+.SOLBtn-root.s--xl {
+  height: 56px;
+  font-size: var(--font-16);
+  font-weight: 700;
 }
 .SOLBtn-root.w--full {
   width: 100%;
@@ -2660,6 +2668,10 @@ button.swiper-pagination-bullet {
 }
 .SOLIconBtn-root i + i {
   margin-left: -15px;
+}
+
+.loginbox-terms-list .SOLIconBtn-root {
+  min-height: unset;
 }
 
 .SOLCard-item.t--submit .SOLIconBtn-root.t--card {
@@ -2768,6 +2780,9 @@ button.swiper-pagination-bullet {
 }
 .SOLInput-root.s--lg .SOLInput-field {
   font-size: var(--font-15);
+}
+.SOLInput-root.s--lg .SOLInput-box {
+  height: 52px;
 }
 
 .SOLInput-label {
@@ -2906,7 +2921,7 @@ button.swiper-pagination-bullet {
   justify-content: center;
   gap: 5px;
   font-size: var(--font-12);
-  padding-right: 8px;
+  padding-left: 5px;
 }
 
 .SOLInput-btnwrap {
@@ -3224,7 +3239,7 @@ button.swiper-pagination-bullet {
 }
 .SOLCheck-root.s--lg {
   font-size: var(--font-15);
-  line-height: 24px;
+  line-height: 22px;
 }
 .SOLCheck-root.s--lg .SOLCheck-label {
   gap: 10px;
@@ -3375,6 +3390,7 @@ button.swiper-pagination-bullet {
 }
 .agreement-type01 .SOLCheck-label [type=checkbox]:checked {
   border: none;
+  background-color: var(--c-component);
 }
 .agreement-type01 .SOLCheck-label [type=checkbox]:checked::after {
   border-right: 2px solid #fff;
@@ -4390,6 +4406,26 @@ table .SOLCheck-root {
   transform: translateX(-50%);
   border-top: 1px solid #3d58c9;
 }
+.SOLStepper-root > li.num1::before {
+  content: "1";
+  background-image: none;
+}
+.SOLStepper-root > li.num2::before {
+  content: "2";
+  background-image: none;
+}
+.SOLStepper-root > li.num3::before {
+  content: "3";
+  background-image: none;
+}
+.SOLStepper-root > li.num4::before {
+  content: "4";
+  background-image: none;
+}
+.SOLStepper-root > li.num5::before {
+  content: "5";
+  background-image: none;
+}
 .SOLStepper-root > li.active ~ li {
   color: #bbc1c9;
 }
@@ -5021,6 +5057,9 @@ table .SOLCheck-root {
   gap: 8px;
   padding-top: 16px;
 }
+.SOLAlert-action .SOLBtn-root {
+  min-width: 90px;
+}
 
 .SOLAlert-msgbox, .SOLSnackbar-msgbox {
   text-align: center;
@@ -5065,6 +5104,86 @@ table .SOLCheck-root {
 }
 .SOLAlert-msgbox .SOLTitle-t4, .SOLSnackbar-msgbox .SOLTitle-t4 {
   padding: 6px 0 8px;
+}
+.SOLAlert-msgbox.mgt15, .mgt15.SOLSnackbar-msgbox {
+  margin-top: 15px;
+}
+.SOLAlert-msgbox-title {
+  font-size: var(--font-16);
+  font-weight: 700;
+  color: #404252;
+  padding-bottom: 5px;
+}
+.SOLAlert-msgbox-text {
+  font-size: var(--font-14);
+  font-weight: 400;
+  color: #404252;
+}
+.SOLAlert-msgbox.left, .left.SOLSnackbar-msgbox {
+  text-align: left;
+}
+.SOLAlert-msgbox.bd-radius, .bd-radius.SOLSnackbar-msgbox {
+  border-radius: 8px;
+}
+.SOLAlert-msgbox .kepp-in-mind, .SOLSnackbar-msgbox .kepp-in-mind {
+  font-size: var(--font-14);
+}
+.SOLAlert-msgbox .kepp-in-mind h5.title, .SOLSnackbar-msgbox .kepp-in-mind h5.title {
+  font-size: var(--font-14);
+  font-weight: 700;
+  color: #4e5262;
+  padding: 0 0 11px 28px;
+  border-bottom: solid 1px #e6e8eb;
+  position: relative;
+}
+.SOLAlert-msgbox .kepp-in-mind h5.title::before, .SOLSnackbar-msgbox .kepp-in-mind h5.title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../../Common/image/icon/ic_info.svg) no-repeat center;
+  border: solid 1px rgba(10, 43, 88, 0.1803921569);
+  border-radius: 50%;
+}
+.SOLAlert-msgbox .kepp-in-mind ul.list, .SOLSnackbar-msgbox .kepp-in-mind ul.list {
+  padding: 0px 0 0 0;
+}
+.SOLAlert-msgbox .kepp-in-mind ul.list li, .SOLSnackbar-msgbox .kepp-in-mind ul.list li {
+  position: relative;
+  padding: 0 0 0 20px;
+  text-indent: 0;
+  line-height: unset;
+}
+.SOLAlert-msgbox .kepp-in-mind ul.list li::before, .SOLSnackbar-msgbox .kepp-in-mind ul.list li::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 2px;
+  height: 2px;
+  background: #0a2b58;
+  border-radius: 50%;
+}
+.SOLAlert-msgbox .kepp-in-mind ul.list li span.tit, .SOLSnackbar-msgbox .kepp-in-mind ul.list li span.tit {
+  display: inline-block;
+  width: 110px;
+}
+.SOLAlert-msgbox .kepp-in-mind ul.list li span.con, .SOLSnackbar-msgbox .kepp-in-mind ul.list li span.con {
+  display: inline-block;
+  width: 100%;
+}
+.SOLAlert-msgbox .kepp-in-mind div.flex-box, .SOLSnackbar-msgbox .kepp-in-mind div.flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+.SOLAlert-msgbox .kepp-in-mind div.flex-box.bd-bt-line, .SOLSnackbar-msgbox .kepp-in-mind div.flex-box.bd-bt-line {
+  border-bottom: solid 1px #bebebe;
+}
+.SOLAlert-msgbox .kepp-in-mind div.flex-box .SOLIcon-gt--r::after, .SOLSnackbar-msgbox .kepp-in-mind div.flex-box .SOLIcon-gt--r::after {
+  width: 8px;
+  height: 8px;
 }
 
 .SOLAlert-msgbox-list {
@@ -5186,7 +5305,7 @@ table .SOLCheck-root {
   min-height: 90svh;
 }
 .SOLSnackbar-root.c--bg .SOLSnackbar-box {
-  background-color: #F5F7FA;
+  background-color: #f5f7fa;
 }
 .SOLSnackbar-root.c--bg .SOLSnackbar-footer {
   background: linear-gradient(to top, rgb(245, 247, 250) 82px, rgba(245, 247, 250, 0));
@@ -5235,6 +5354,15 @@ table .SOLCheck-root {
 .SOLSnackbar-header.center {
   text-align: center;
 }
+.SOLSnackbar-header.center-lg {
+  gap: 10px;
+  padding-top: 35px;
+  text-align: center;
+  font-size: var(--font-14);
+}
+.SOLSnackbar-header.center-lg .SOLSnackbar-title {
+  font-size: var(--font-20);
+}
 .SOLSnackbar-header .SOLSnackbar-title {
   font-size: var(--font-18);
   font-weight: 700;
@@ -5268,6 +5396,9 @@ table .SOLCheck-root {
 .SOLSnackbar-section:not(.SOLSnackbar-bg) {
   background-color: #fff;
 }
+.SOLSnackbar-section.t--ai .hr-comm {
+  margin: 0;
+}
 
 .SOLSnackbar-body {
   flex-grow: 1;
@@ -5296,6 +5427,10 @@ table .SOLCheck-root {
 }
 .SOLSnackbar-msgbox .SOLTable-small.t--list td {
   text-align: right;
+}
+.SOLSnackbar-msgbox.s--lg {
+  padding: 12px;
+  font-size: var(--font-14);
 }
 .SOLSnackbar-msgbox + .SOLSnackbar-msgbox {
   margin-top: -10px;
@@ -6259,6 +6394,10 @@ table .SOLCheck-root {
   margin-bottom: 24px;
 }
 
+.mt-g2--m {
+  margin-top: -16px !important;
+}
+
 .mb-g2--m {
   margin-bottom: -16px;
 }
@@ -6283,10 +6422,14 @@ table .SOLCheck-root {
   padding-top: 0 !important;
 }
 
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
 .index-footer {
   padding: 35px var(--spc-w) 52px;
-  background-color: #1A1A1B;
-  color: #7B7B7B;
+  background-color: #1a1a1b;
+  color: #7b7b7b;
   font-size: var(--font-12);
 }
 
@@ -6295,7 +6438,7 @@ table .SOLCheck-root {
   height: 100svh;
 }
 .section-ai:nth-child(3) {
-  background: linear-gradient(180deg, #F4F6FF 21.62%, #E4EDFF 105.25%);
+  background: linear-gradient(180deg, #f4f6ff 21.62%, #e4edff 105.25%);
 }
 
 .ai-intro {
@@ -6311,6 +6454,18 @@ table .SOLCheck-root {
 .index-topBtn .footer-topBtn {
   top: auto !important;
   bottom: 30px;
+}
+
+.banner-aireport {
+  position: relative;
+  margin: 30px 0 -10px;
+  background: linear-gradient(100.84deg, #467AEE 13.39%, #776DF9 85.49%);
+}
+.banner-aireport img {
+  display: block;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .console-root, .SOLFullpage-root, .SOLViewer-root {
@@ -6514,15 +6669,16 @@ table .SOLCheck-root {
   width: 100px;
   height: 28px;
   padding: 4px 20px 4px 0;
-  vertical-align: middle;
+  vertical-align: top;
   font-size: var(--font-13);
   color: var(--fc-gray2);
   font-weight: 400;
   text-align: left;
   white-space: nowrap;
+  line-height: 20px;
 }
 .SOLTable-small td {
-  height: 28px;
+  min-height: 28px;
   padding-top: 4px;
   padding-bottom: 4px;
   vertical-align: middle;
@@ -6547,8 +6703,11 @@ table .SOLCheck-root {
 .SOLTable-small.t--list td {
   padding-right: 8px;
 }
+.SOLTable-small.t--coupon th {
+  line-height: 26px;
+}
 .SOLTable-small.t--coupon td {
-  height: 38px;
+  min-height: 38px;
   font-weight: 500;
 }
 .SOLTable-small.t--mypage td {
@@ -6922,7 +7081,7 @@ table .SOLCheck-root {
 }
 .service-result-rating .titbar.c--error {
   color: #fff !important;
-  background-color: #FD8789;
+  background-color: #fd8789;
 }
 
 .service-result-paper {
@@ -7450,6 +7609,18 @@ table .SOLCheck-root {
   width: 62px;
 }
 
+.ai-terms {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ai-terms .service-terms-item {
+  min-height: 72px;
+  border: 1px solid var(--tb-border);
+  border-radius: 8px;
+  padding: 0 16px;
+}
+
 .service-terms {
   border: 1px solid var(--tb-border);
   border-radius: 8px;
@@ -7595,7 +7766,7 @@ table .SOLCheck-root {
   border-top: 0;
 }
 .SOLSnackbar-root .service-public-list .list-item {
-  border-bottom-color: #F4F4F4;
+  border-bottom-color: #f4f4f4;
   padding-left: 40px;
   background-position-x: left;
 }
@@ -7693,7 +7864,8 @@ table .SOLCheck-root {
 .mypage-coupon-list .disabled .SOLLabel-root {
   background-color: #929292;
 }
-.mypage-coupon-list .SOLTable-small th, .mypage-coupon-list .SOLTable-small td {
+.mypage-coupon-list .SOLTable-small th,
+.mypage-coupon-list .SOLTable-small td {
   height: 20px;
   padding-top: 0;
   padding-bottom: 0;
@@ -7736,7 +7908,7 @@ table .SOLCheck-root {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
   border-bottom: 1px solid var(--tb-border);
   padding-bottom: 16px;
   margin-top: 16px;
@@ -7755,9 +7927,13 @@ table .SOLCheck-root {
 .mypage-member-list .SOLSelect-root {
   margin-top: 4px;
 }
+.mypage-member-list .disabled {
+  color: var(--fc-gray2);
+}
 .mypage-member-list .time {
   font-size: var(--font-12);
   color: var(--fc-gray2);
+  padding-right: 8px;
 }
 .mypage-member-list .tit {
   font-size: var(--font-15);

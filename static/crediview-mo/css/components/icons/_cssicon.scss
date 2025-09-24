@@ -551,4 +551,8 @@
   &.c--success {
     background: url(../image/icon/ic_alert_success.svg) no-repeat center center / cover;
   }
+
+  svg {
+    display: none
+  }
 }

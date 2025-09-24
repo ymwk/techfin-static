@@ -332,7 +332,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   background-color: #f2f3f7;
 
   .rating {
@@ -366,7 +366,7 @@
 
     &.c--error {
       color: #fff !important;
-      background-color: #FD8789;
+      background-color: #fd8789;
     }
   }
 }
@@ -430,7 +430,7 @@
 
   .SOLTable-small th {
     padding-right: 20px;
-    min-width: 110px
+    min-width: 110px;
   }
 }
 
@@ -512,7 +512,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 490px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .result-graph-canvas {
@@ -961,6 +961,19 @@
   }
 }
 
+.ai-terms {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .service-terms-item {
+    min-height: 72px;
+    border: 1px solid var(--tb-border);
+    border-radius: 8px;
+    padding: 0 16px;
+  }
+}
+
 // 약관리스트박스
 .service-terms {
   border: 1px solid var(--tb-border);
@@ -1113,20 +1126,19 @@
     padding: 0;
     border-bottom: 0;
     background: unset;
-    font-size: var(--font-14)
+    font-size: var(--font-14);
   }
 }
-
 
 .SOLSnackbar-root .service-public-list {
   border-top: 0;
 
   .list-item {
-    border-bottom-color: #F4F4F4;
+    border-bottom-color: #f4f4f4;
     padding-left: 40px;
     background-position-x: left;
     &:last-child {
-      border-bottom: 0
+      border-bottom: 0;
     }
   }
 }

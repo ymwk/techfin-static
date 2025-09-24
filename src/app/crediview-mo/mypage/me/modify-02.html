@@ -17,7 +17,7 @@
               <i class="SOLIcon-root SOLIcon-gt--l s--xl"></i>
               <span class="blind">Prev</span>
             </button>
-            <h2 class="SOLHeader-title-text">정산관리</h2>
+            <h2 class="SOLHeader-title-text">회원정보 변경</h2>
           </div>
 
           <div class="SOLHeader-global">
@@ -101,107 +101,80 @@
         </div>
       </header>
 
-      <div class="console-container">
-        <div class="SOLTab-root">
-          <div class="SOLTab-menu">
-            <button type="button" class="SOLTab-btn">결제 내역</button>
-            <button type="button" class="SOLTab-btn st--active">현금영수증/전자세금계산서</button>
-          </div>
-
-          <div class="SOLTab-container">
-            <!-- 결제 내역 -->
-            <section class="SOLTab-content">
-              <h3 class="blind">결제 내역</h3>
-              <div class="SOLTab-inner">
-                <div class="SOLAlign-root">
-                  <span class="result">검색결과 <em>0</em>건</span>
-                  <div class="SOLAlign-utils">
-                    <span>2024-09-24 ~ 2025-09-24</span>
-                    <button type="button" class="SOLIconBtn-root">
-                      <i class="SOLIcon-root SOLIcon-align"></i>
-                      <span class="blind">상세조회</span>
-                    </button>
+      <form method="post">
+        <div class="console-container">
+          <div class="section-outer">
+            <div class="loginbox-inputs">
+              <label class="SOLInput-root">
+                <span class="SOLInput-label">소속 부서</span>
+                <div class="SOLInput-fbox">
+                  <div class="SOLInput-box">
+                    <input type="text" value="경영지원실" class="SOLInput-field" />
+                    <span class="SOLInput-wrap">
+                      <span class="SOLInput-wrap--hidden">
+                        <button type="button" class="SOLInput-btn SOLIcon-close">
+                          <span class="blind">Del</span>
+                        </button>
+                      </span>
+                    </span>
                   </div>
                 </div>
-                <!-- //SOLAlign-root -->
+              </label>
 
-                <div class="content-empty ic--noresult">
-                  <p>검색결과가 없습니다.</p>
-                  <div class="content-empty-btns">
-                    <button type="button" class="SOLBtn-root w--full">
-                      <i class="SOLIcon-root SOLIcon-refresh"></i>
-                      검색 조건 초기화
-                    </button>
+              <label class="SOLInput-root">
+                <span class="SOLInput-label">이름</span>
+                <div class="SOLInput-fbox">
+                  <div class="SOLInput-box">
+                    <input type="text" value="김테크" class="SOLInput-field" />
                   </div>
                 </div>
-                <!-- //content-empty -->
-              </div>
-              <!-- //SOLTab-inner -->
-            </section>
-            <!-- 회원등급 tab end -->
+              </label>
 
-            <!-- 현금영수증 -->
-            <section class="SOLTab-content st--active">
-              <h3 class="blind">현금영수증/전자세금계산서</h3>
-              <div class="SOLTab-inner">
-                <!-- filter -->
-                <div class="SOLFilter-root">
-                  <div class="SOLFilter-swiper swiper">
-                    <div class="SOLFilter-wrap swiper-wrapper">
-                      <button type="button" class="SOLFilter-btn swiper-slide">신청가능 20</button>
-                      <button type="button" class="SOLFilter-btn swiper-slide st--active">신청완료 30</button>
-                    </div>
+              <label class="SOLInput-root">
+                <span class="SOLInput-label">이메일 주소</span>
+                <div class="SOLInput-fbox">
+                  <div class="SOLInput-box">
+                    <input type="text" value="kimtech@techfinratings.com" class="SOLInput-field" readonly />
                   </div>
                 </div>
-                <!-- filter end -->
+              </label>
 
-                <div class="mb-g2--m"></div>
-
-                <div class="SOLAlign-root">
-                  <span class="result">검색결과 <em>0</em>건</span>
-                  <div class="SOLAlign-utils">
-                    <span>2024-09-24 ~ 2025-09-24</span>
-                    <button type="button" class="SOLIconBtn-root">
-                      <i class="SOLIcon-root SOLIcon-align"></i>
-                      <span class="blind">상세조회</span>
-                    </button>
+              <label class="SOLInput-root">
+                <span class="SOLInput-label">휴대폰 번호</span>
+                <div class="SOLInput-fbox">
+                  <div class="SOLInput-box">
+                    <input type="text" placeholder="휴대폰 번호를 등록해 주세요." class="SOLInput-field" readonly />
                   </div>
+                  <button type="button" class="SOLBtn-root">등록</button>
                 </div>
-                <!-- //SOLAlign-root -->
-                 
-                <div class="content-empty ic--noresult">
-                  <p>검색결과가 없습니다.</p>
-                  <div class="content-empty-btns">
-                    <button type="button" class="SOLBtn-root w--full">
-                      <i class="SOLIcon-root SOLIcon-refresh"></i>
-                      검색 조건 초기화
-                    </button>
-                  </div>
-                </div>
-                <!-- //content-empty -->
+              </label>
+            </div>
+            <!-- loginbox-inputs -->
 
-              </div>
-              <!-- //SOLTab-inner -->
-            </section>
-            <!-- 현금영수증 tab end -->
+            <hr class="hr-comm" />
+
+            <div>
+              <button type="button" class="SOLTextBtn-root">회원 탈퇴</button>
+            </div>
           </div>
         </div>
-        <!-- SOLTab-root -->
-      </div>
-      <!-- //console-container -->
+        <!-- //console-container -->
+
+        <div class="console-footer">
+          <button class="footer-topBtn">
+            <i class="SOLIcon-root SOLIcon-arr--t"></i>
+            <span class="blind">Scroll to Top</span>
+          </button>
+          <div class="console-footer-btns">
+            <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>변경</button>
+          </div>
+        </div>
+      </form>
     </div>
 
     <!-- component js -->
     <script src="/src/app/crediview-mo/js/popper.min.js"></script>
     <script src="/src/app/crediview-mo/js/tippy-bundle.umd.js"></script>
     <script src="/src/app/crediview-mo/js/custom.js"></script>
-    <script src="/static/crediview-mo/vendors/swiper-bundle.min.js"></script>
-
-    <script>
-      const swiper = new Swiper('.SOLFilter-swiper', {
-        slidesPerView: 'auto',
-        spaceBetween: 8,
-      });
-    </script>
   </body>
 </html>

@@ -5,16 +5,17 @@
     width: 100px;
     height: 28px;
     padding: 4px 20px 4px 0;
-    vertical-align: middle;
+    vertical-align: top;
     font-size: var(--font-13);
     color: var(--fc-gray2);
     font-weight: 400;
     text-align: left;
     white-space: nowrap;
+    line-height: 20px;
   }
 
   td {
-    height: 28px;
+    min-height: 28px;
     padding-top: 4px;
     padding-bottom: 4px;
     vertical-align: middle;
@@ -45,9 +46,14 @@
     }
   }
 
-  &.t--coupon td {
-    height: 38px;
+  &.t--coupon {
+    th {
+      line-height: 26px
+    }
+    td {
+    min-height: 38px;
     font-weight: 500;
+  }
   }
 
   &.t--mypage td {

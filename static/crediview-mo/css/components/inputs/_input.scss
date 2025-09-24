@@ -16,7 +16,7 @@
   }
 
   .SOLBtn-root {
-    min-width: 80px
+    min-width: 80px;
   }
 
   &.s--lg {
@@ -24,10 +24,14 @@
     .SOLInput-label {
       font-size: var(--font-16);
       font-weight: 700;
-      color: var(--fc-default)
+      color: var(--fc-default);
     }
     .SOLInput-field {
       font-size: var(--font-15);
+    }
+
+    .SOLInput-box {
+      height: 52px;
     }
   }
 }
@@ -46,14 +50,14 @@
   .require {
     &::after {
       content: '*';
-      color: var(--c-error)
+      color: var(--c-error);
     }
   }
 
   .count {
     margin-left: auto;
     font-size: var(--font-11);
-    color: rgba(112, 115, 124, 0.48)
+    color: rgba(112, 115, 124, 0.48);
   }
 }
 
@@ -69,7 +73,7 @@
 
   &:has(.SOLBtn-root) {
     .SOLInput-box:has(.SOLInput-field:disabled) {
-      background-color: #fff
+      background-color: #fff;
     }
   }
 }
@@ -149,10 +153,9 @@
     color: var(--form-c-text-dis);
   }
 
-  &[type="date"] {
+  &[type='date'] {
     padding-right: 20px;
-    background: url(../../Common/image/icon/ic_calendar.svg) no-repeat right
-      10px center / 16px;
+    background: url(../../Common/image/icon/ic_calendar.svg) no-repeat right 10px center / 16px;
 
     &::-webkit-calendar-picker-indicator {
       position: absolute;
@@ -178,7 +181,8 @@
   justify-content: center;
   gap: 5px;
   font-size: var(--font-12);
-  padding-right: 8px;
+  // padding-right: 8px;
+  padding-left: 5px;
 }
 
 .SOLInput-btnwrap {
@@ -276,7 +280,7 @@
   padding-right: 6px;
   font-size: var(--font-13);
   color: var(--c-active);
-  order: -1
+  order: -1;
 }
 
 .SOLInput-root {
@@ -287,7 +291,7 @@
     .SOLInput-icon {
       background-color: var(--c-error);
       &::after {
-        content: "!";
+        content: '!';
       }
     }
   }
@@ -298,11 +302,11 @@
     }
     .SOLInput-icon {
       &::after {
-        content: "!";
+        content: '!';
         position: relative;
       }
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         left: 50%;

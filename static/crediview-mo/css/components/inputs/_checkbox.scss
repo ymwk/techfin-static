@@ -73,7 +73,7 @@
 
   &.s--lg {
     font-size: var(--font-15);
-    line-height: 24px;
+    line-height: 22px;
 
     .SOLCheck-label {
       gap: 10px;
@@ -259,6 +259,7 @@
     }
     [type='checkbox']:checked {
       border: none;
+      background-color: var(--c-component);
       &::after {
         border-right: 2px solid #fff;
         border-bottom: 2px solid #fff;

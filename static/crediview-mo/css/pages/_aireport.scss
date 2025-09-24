@@ -1,8 +1,8 @@
 .index-footer {
   padding: 35px var(--spc-w) 52px;
-  background-color: #1A1A1B;
-  color: #7B7B7B;
-  font-size: var(--font-12)
+  background-color: #1a1a1b;
+  color: #7b7b7b;
+  font-size: var(--font-12);
 }
 
 .section-ai {
@@ -10,23 +10,36 @@
   height: 100svh;
 
   &:nth-child(3) {
-    background: linear-gradient(180deg, #F4F6FF 21.62%, #E4EDFF 105.25%);
+    background: linear-gradient(180deg, #f4f6ff 21.62%, #e4edff 105.25%);
   }
 }
 
 .ai-intro {
   height: calc(100vh - var(--header-h));
   height: calc(100svh - var(--header-h));
-  background: url(../image/ai/bg_ai_intro.png) no-repeat center center / cover
+  background: url(../image/ai/bg_ai_intro.png) no-repeat center center / cover;
 }
 
 .index-topBtn {
   position: sticky;
   bottom: 0;
-  
+
   .footer-topBtn {
     @extend .footer-topBtn;
     top: auto !important;
-    bottom: 30px;    
+    bottom: 30px;
+  }
+}
+
+.banner-aireport {
+  position: relative;
+  // height: 98px;
+  margin: 30px 0 -10px;
+  background: linear-gradient(100.84deg, #467AEE 13.39%, #776DF9 85.49%);
+
+  img {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
   }
 }

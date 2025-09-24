@@ -45,6 +45,38 @@
       border-top: 1px solid #3d58c9;
     }
 
+    &.num1 {
+      &::before {
+        content: "1";
+        background-image: none;
+      }
+    }
+
+    &.num2 {
+      &::before {
+        content: "2";
+        background-image: none;
+      }
+    }
+    &.num3 {
+      &::before {
+        content: "3";
+        background-image: none;
+      }
+    }
+    &.num4 {
+      &::before {
+        content: "4";
+        background-image: none;
+      }
+    }
+    &.num5 {
+      &::before {
+        content: "5";
+        background-image: none;
+      }
+    }
+
     &.active ~ li {
       color: #bbc1c9;
       &::before {

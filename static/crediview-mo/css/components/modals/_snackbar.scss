@@ -5,16 +5,16 @@
 
   &.h--max {
     .SOLSnackbar-box {
-      min-height: 90svh
+      min-height: 90svh;
     }
   }
 
   &.c--bg {
     .SOLSnackbar-box {
-      background-color: #F5F7FA;
+      background-color: #f5f7fa;
     }
     .SOLSnackbar-footer {
-      background: linear-gradient(to top, rgba(245,247,250,1) 82px, rgba(245,247,250,0));
+      background: linear-gradient(to top, rgba(245, 247, 250, 1) 82px, rgba(245, 247, 250, 0));
     }
   }
 }
@@ -51,7 +51,19 @@
   font-size: var(--font-12);
   color: var(--fc-gray2);
 
-  &.center { text-align: center }
+  &.center {
+    text-align: center;
+  }
+  &.center-lg {
+    gap: 10px;
+    padding-top: 35px;
+    text-align: center;
+    font-size: var(--font-14);
+
+    .SOLSnackbar-title {
+      font-size: var(--font-20);
+    }
+  }
 
   .SOLSnackbar-title {
     font-size: var(--font-18);
@@ -59,7 +71,7 @@
     color: var(--fc-default);
 
     em {
-      color: var(--c-active)
+      color: var(--c-active);
     }
   }
 
@@ -68,9 +80,9 @@
     top: 50%;
     right: var(--spc-w);
     transform: translateY(-50%);
-    font-size: var(--font-13)
+    font-size: var(--font-13);
   }
-  
+
   // &::before {
   //   content: '';
   //   z-index: 1;
@@ -86,7 +98,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  color: var(--fc-default)
+  color: var(--fc-default);
 }
 
 .SOLSnackbar-section {
@@ -95,17 +107,24 @@
   gap: 8px;
   padding: 24px var(--spc-w);
 
-  &:not(.SOLSnackbar-bg) { background-color: #fff }
-  
+  &:not(.SOLSnackbar-bg) {
+    background-color: #fff;
+  }
+
+  &.t--ai {
+    .hr-comm { margin: 0 }
+  }
 }
 
 .SOLSnackbar-body {
   flex-grow: 1;
   overflow-y: auto;
-  .SOLSnackbar-section:first-child { padding-top: 0 }
+  .SOLSnackbar-section:first-child {
+    padding-top: 0;
+  }
   .hr-comm {
     width: calc(100% - var(--spc-w) * 2);
-    margin: 0 auto
+    margin: 0 auto;
   }
 }
 
@@ -122,7 +141,9 @@
   @extend .SOLAlert-msgbox;
   padding: 12px 24px;
 
-  &.js-accordian-root { padding: 0 18px }
+  &.js-accordian-root {
+    padding: 0 18px;
+  }
 
   .SOLTable-small.t--list {
     th {
@@ -133,7 +154,14 @@
     }
   }
 
-  & + & { margin-top: -10px }
+  &.s--lg {
+    padding: 12px;
+    font-size: var(--font-14)
+  }
+
+  & + & {
+    margin-top: -10px;
+  }
 }
 
 .SOLSnackbar-msgbox-header {
@@ -141,7 +169,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: var(--font-14);
-  padding: 7px 0
+  padding: 7px 0;
 }
 
 .SOLSnackbar-msgbox-body {
@@ -150,24 +178,28 @@
 
   .SOLTable-small {
     margin: 20px 0;
-    td { text-align: left }
+    td {
+      text-align: left;
+    }
   }
 
-  .hr-comm { width: 100% }
+  .hr-comm {
+    width: 100%;
+  }
 }
 
 .js-accordian-root.st--open .SOLSnackbar-msgbox-body {
-  max-height: 500px;  
+  max-height: 500px;
 }
 
 .service-snack-coupon {
   display: flex;
   flex-direction: column;
-  gap: 8px
+  gap: 8px;
 }
 
 .service-snackbar-account {
   display: flex;
   flex-direction: column;
-  gap: 24px
+  gap: 24px;
 }

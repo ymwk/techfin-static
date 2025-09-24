@@ -24,7 +24,7 @@
 
   &:disabled,
   &.disabled {
-    background-color: transparent;
+    background-color: var(--form-c-bg-dis);
     color: rgba(55, 56, 60, 0.28);
     border-color: rgba(112, 115, 124, 0.28);
     box-shadow: none;
@@ -113,6 +113,12 @@
       min-height: 30px;
       padding: 0 10px;
       font-size: var(--font-13);
+    }
+
+    &--xl {
+      height: 56px;
+      font-size: var(--font-16);
+      font-weight: 700;
     }
   }
 
@@ -217,6 +223,10 @@
   i + i {
     margin-left: -15px;
   }
+}
+
+.loginbox-terms-list .SOLIconBtn-root {
+  min-height: unset
 }
 
 .SOLCard-item.t--submit {
