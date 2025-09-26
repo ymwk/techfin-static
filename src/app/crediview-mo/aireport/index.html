@@ -104,9 +104,103 @@
       </header>
 
       <div class="console-container">
-        <section class="section-ai ai-intro"></section>
-        <section class="section-ai"></section>
-        <section class="section-ai"></section>
+        <section class="report-intro-section section06 intro-landing ai-intro">
+          <div class="intro-landing-bg">
+            <video autoplay loop playsinline>
+              <source src="/static/Web/image/crediview/video/kv-ai.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="intro-landing-header">
+            <span class="intro-landing-label">
+              <span>베타오픈</span>
+            </span>
+            <h3 class="report-intro-title">
+              <span class="section06-tit">기업경영진단보고서</span>
+              <span class="section06-tit-em"><em>AIMS</em> REPORT</span>
+            </h3>
+            <p class="report-desc">
+              크레디뷰에서 <em>우리 회사의 경영 상태</em>를 진단하는 <br /><em>기업경영진단보고서</em>를
+              <em>무료로 확인</em>하실 수 있습니다
+            </p>
+          </div>
+
+          <div class="report-section06-btns">
+            <button type="button" class="btn-intro-service">
+              <span>우리회사 경영 진단하기</span>
+              <i class="SOLIcon-root SOLIcon-gt--r"></i>
+            </button>
+
+            <button type="button" class="btn-intro-service c--light">
+              <span>진단내역 확인</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="report-intro-section section05 intro-landing">
+          <h3 class="report-intro-title">
+            <span>
+              <em><span class="c--active">크레디뷰</span>에서 우리회사의 <br />경영상태를 확인하세요.</em>
+            </span>
+          </h3>
+          <p class="report-desc">우리 기업의 현재 위치와 성장 가능성을 <br />클릭 한번으로 진단합니다.</p>
+        </section>
+
+        <section class="report-intro-section section02 intro-landing">
+          <h3 class="report-intro-title">
+            <em>다양한 데이터를 분석한</em>
+            <span class="section02-tit-em">기업경영진단보고서</span>
+          </h3>
+
+          <ul class="report-section02-list">
+            <li class="ic-graph">
+              <span class="name">재무분석</span>
+              <p>다양한 측면에서의 <br />종합적인 경영 평가 <br />정보 제공</p>
+            </li>
+            <li class="ic-doc">
+              <span class="name">리스크 예측</span>
+              <p>기업 분석을 <br />수행하고 <br />미래 성과 예측 파악</p>
+            </li>
+            <li class="ic-bookmark">
+              <span class="name">업종 벤치마킹</span>
+              <p>동종 업계와의 비교를 <br />통해 우리 회사의 <br />현 위치 진단</p>
+            </li>
+            <li class="ic-chart">
+              <span class="name">경영 인사이트 제공</span>
+              <p>복잡한 데이터를 <br />시각적으로 표현해 <br />의사결정 지원</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="report-intro-section section03 intro-landing">
+          <h3 class="report-intro-title">
+            <span>
+              클릭 한번으로 <br />우리 회사를 진단합니다.<br />
+              <em>데이터 기반 의사결정의 시작</em>
+            </span>
+          </h3>
+        </section>
+
+        <section class="report-intro-section section04 intro-landing">
+          <h3 class="report-intro-title">
+            <small>기업경영진단보고서</small>
+            <span>
+              <em>법인사업자, 개인사업자 <br />기간한정 무료!</em>
+            </span>
+          </h3>
+          <div class="intro-section03-cont">
+            <div class="box">
+              <span>
+                법인/개인사업자
+                <del>100,000원</del>
+              </span>
+              <em>무료</em>
+            </div>
+            <ul class="list">
+              <li>이벤트 기간은 2025년 12월 31일까지입니다.</li>
+              <li>당사의 정책에 따라 사전 고지 없이 이벤트가 변경되거나 <br />조기 종료될 수 있습니다.</li>
+            </ul>
+          </div>
+        </section>
 
         <div class="index-topBtn">
           <button class="footer-topBtn">
@@ -212,7 +306,10 @@
       const footerTopBtn = document.querySelector('.SOLFooter-topBtn');
 
       window.addEventListener('scroll', function () {
-        landingheader.classList.toggle('light', headerHeight < window.scrollY && introHeight + headerHeight > window.scrollY);
+        landingheader.classList.toggle(
+          'light',
+          headerHeight < window.scrollY && introHeight + headerHeight > window.scrollY
+        );
 
         footerTopBtn.classList.toggle('show', 100 < window.scrollY);
       });

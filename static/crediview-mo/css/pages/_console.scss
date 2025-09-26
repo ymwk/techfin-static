@@ -86,6 +86,13 @@
   }
 }
 
+.console-footer-cont {
+  padding-top: 30px;
+  border-top: 1px solid var(--tb-border);
+  text-align: center;
+  font-size: var(--font-15)
+}
+
 .console-footer {
   &:not(:has(.console-footer-btns)) {
     .footer-topBtn {

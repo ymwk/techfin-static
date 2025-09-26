@@ -1,5 +1,6 @@
 .SOLTable-small {
   width: 100%;
+  min-height: 50px;
 
   th {
     width: 100px;
@@ -71,6 +72,11 @@
     em {
       color: inherit;
     }
+  }
+
+  &.t--report {
+    td { font-weight: 400}
+    em { color: inherit }
   }
 
   &.s--lg {

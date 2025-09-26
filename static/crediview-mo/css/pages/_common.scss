@@ -141,6 +141,12 @@
   border-bottom: 1px dashed var(--tb-border);
 }
 
+.box-outlined {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(24, 30, 43, 0.1);
+}
+
 .msg-warn {
   font-size: var(--font-14);
   text-align: center;
@@ -211,7 +217,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      font-size: var(--font-16)
+      font-size: var(--font-16);
     }
   }
 }
@@ -311,6 +317,12 @@
   }
 }
 
+.hr-dashed {
+  margin: 12px 0;
+  border: 0;
+  border-top: 1px dashed rgba(101, 112, 144, 0.1);
+}
+
 .section-outer > .hr-comm {
   margin: 0;
 }
@@ -322,7 +334,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 var(--spc-w) 10vh;
+  padding: 50px var(--spc-w);
   gap: 12px;
   font-size: var(--font-14);
   text-align: center;
@@ -363,6 +375,10 @@
 
   &.ic--doc::before {
     background-image: url(../image/img/img_empty_doc.svg);
+  }
+
+  &.ic--report::before {
+    background-image: url(../image/img/img_empty_report.svg);
   }
 
   &.ic--noresult::before {
@@ -418,6 +434,9 @@
 }
 
 // 8배수
+.pt-0 {
+  padding-top: 0 !important
+}
 .mt-g1 {
   margin-top: 8px;
 }
@@ -429,7 +448,7 @@
 }
 
 .mb-0 {
-  margin-bottom: 0 !important
+  margin-bottom: 0 !important;
 }
 
 .mb-g1 {
@@ -447,7 +466,11 @@
 }
 
 .mb-g2--m {
-  margin-bottom: -16px;
+  margin-bottom: -16px !important;
+}
+
+.mb-g4--m {
+  margin-bottom: -32px !important;
 }
 
 .gap-g1 {
@@ -468,5 +491,5 @@
 }
 
 .pb-0 {
-  padding-bottom: 0 !important
+  padding-bottom: 0 !important;
 }
