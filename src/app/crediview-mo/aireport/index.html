@@ -300,28 +300,29 @@
     <script src="/src/app/crediview-mo/js/custom.js"></script>
 
     <script>
-      const landingheader = document.querySelector('.SOLHeader-root.t--landing');
-      const introHeight = document.querySelector('.ai-intro').offsetHeight;
-      const headerHeight = document.querySelector('.SOLHeader-inner').offsetHeight;
-      const footerTopBtn = document.querySelector('.SOLFooter-topBtn');
+      document.addEventListener('DOMContentLoaded', function () {
+        const landingheader = document.querySelector('.SOLHeader-root.t--landing');
+        const introHeight = document.querySelector('.ai-intro').offsetHeight;
+        const headerHeight = document.querySelector('.SOLHeader-inner').offsetHeight;
 
-      window.addEventListener('scroll', function () {
-        landingheader.classList.toggle(
-          'light',
-          headerHeight < window.scrollY && introHeight + headerHeight > window.scrollY
-        );
+        window.addEventListener('scroll', function () {
+          landingheader.classList.toggle(
+            'light',
+            headerHeight < window.scrollY && introHeight + headerHeight > window.scrollY
+          );
+        });
 
-        footerTopBtn.classList.toggle('show', 100 < window.scrollY);
-      });
+        const familyList = document.querySelector('.SOLFooter-dropbox');
+        const familyBtn = document.querySelector('.SOLFooter-dropbox-btn');
 
-      const familyList = document.querySelector('.SOLFooter-dropbox');
-      const familyBtn = document.querySelector('.SOLFooter-dropbox-btn');
-      familyBtn.addEventListener('click', function () {
-        familyList.classList.toggle('on');
-      });
+        familyBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          familyList.classList.toggle('on');
+        });
 
-      window.addEventListener('click', (e) => {
-        e.target === familyList ? familyList.classList.remove('on') : false;
+        document.addEventListener('click', (e) => {
+          e.target !== familyList ? familyList.classList.remove('on') : false;
+        });
       });
     </script>
   </body>

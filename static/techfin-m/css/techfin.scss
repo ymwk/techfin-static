@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+// 공통
+@import '../../Common/font/pretendard/pretendardvariable.css';
+@import 'base/normalize';
+@import 'base/mixin';
+@import 'base/variable';
+@import 'base/animations';
+@import 'base/default';
+@import 'base/color';
+@import 'base/font';
+
+// vendor
+// @import 'vendors/swiper.min';
+
+// 컴포넌트
+@import 'components/cssicon';
+@import 'components/button';
+@import 'components/combobox';
+@import 'components/snackbar';
+@import 'components/radio';
+@import 'components/checkbox';
+@import 'components/textfield';
+
+// 레이아웃 구성요소
+@import 'partials/header';
+@import 'partials/footer';
+
+// 페이지
+@import 'pages/common';
+@import 'pages/sub';
+@import 'pages/terms';

@@ -114,6 +114,9 @@
   background-color: #888;
   color: #fff;
 }
+.index-label.incom {
+  opacity: 0.3;
+}
 .index-id {
   display: inline-block;
   font-size: 11px;
@@ -138,11 +141,11 @@
 }
 .index-toast::before {
   content: "toast";
-  background-color: #3B5DFB;
+  background-color: #3b5dfb;
 }
 .index-snack::before {
   content: "snackbar";
-  background-color: #7299E7;
+  background-color: #7299e7;
 }
 .index-table {
   width: 100%;

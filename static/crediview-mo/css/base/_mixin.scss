@@ -63,15 +63,7 @@
     cursor: not-allowed;
   }
 
-  &:hover:not(:disabled) {
-    border-color: var(--form-c-border-h);
-  }
-  &:hover:not(:read-only) {
-    border-color: var(--form-c-border-h);
-  }
-
-  &:focus,
-  &:hover:focus {
+  &:focus {
     border-color: var(--c-active);
     outline: 0;
   }

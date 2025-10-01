@@ -433,6 +433,7 @@ textarea {
   --font-34: 2.43rem;
   --font-36: 2.57rem;
   --font-40: 2.86rem;
+  --font-42: 3rem;
   --font-44: 3.18rem;
   --font-50: 3.57rem;
   --font-60: 4.29rem;
@@ -694,7 +695,6 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
@@ -3677,16 +3677,7 @@ table .SOLCheck-root {
   color: var(--form-c-text-dis);
   cursor: not-allowed;
 }
-.SOLTextarea-field:hover:not(:disabled) {
-  border-color: var(--form-c-border-h);
-}
-.SOLTextarea-field:hover:not(:-moz-read-only) {
-  border-color: var(--form-c-border-h);
-}
-.SOLTextarea-field:hover:not(:read-only) {
-  border-color: var(--form-c-border-h);
-}
-.SOLTextarea-field:focus, .SOLTextarea-field:hover:focus {
+.SOLTextarea-field:focus {
   border-color: var(--c-active);
   outline: 0;
 }
@@ -4213,16 +4204,7 @@ table .SOLCheck-root {
   color: var(--form-c-text-dis);
   cursor: not-allowed;
 }
-.SOLSelect-select:hover:not(:disabled) {
-  border-color: var(--form-c-border-h);
-}
-.SOLSelect-select:hover:not(:-moz-read-only) {
-  border-color: var(--form-c-border-h);
-}
-.SOLSelect-select:hover:not(:read-only) {
-  border-color: var(--form-c-border-h);
-}
-.SOLSelect-select:focus, .SOLSelect-select:hover:focus {
+.SOLSelect-select:focus {
   border-color: var(--c-active);
   outline: 0;
 }
@@ -4279,16 +4261,7 @@ table .SOLCheck-root {
   color: var(--form-c-text-dis);
   cursor: not-allowed;
 }
-.SOLCombobox-button:hover:not(:disabled) {
-  border-color: var(--form-c-border-h);
-}
-.SOLCombobox-button:hover:not(:-moz-read-only) {
-  border-color: var(--form-c-border-h);
-}
-.SOLCombobox-button:hover:not(:read-only) {
-  border-color: var(--form-c-border-h);
-}
-.SOLCombobox-button:focus, .SOLCombobox-button:hover:focus {
+.SOLCombobox-button:focus {
   border-color: var(--c-active);
   outline: 0;
 }
@@ -4782,7 +4755,7 @@ table .SOLCheck-root {
 }
 
 .SOLModal-root {
-  z-index: 999;
+  z-index: 1004;
   position: fixed;
   inset: 0;
   display: flex;
@@ -5482,7 +5455,7 @@ table .SOLCheck-root {
 }
 
 .SOLFullpage-root {
-  z-index: 1001;
+  z-index: 1003;
   position: fixed;
   inset: 0;
   overflow-y: auto;

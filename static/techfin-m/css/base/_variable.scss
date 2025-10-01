@@ -1,0 +1,81 @@
+:root {
+  // color
+  color: #222;
+  --fc-default: #1D2129;
+  --fc-gray1: #8C8C99;
+  --fc-gray2: #9b9ba0;
+  --fc-rating: #1e479f;
+
+  // state-color
+  --c-component: #265cf0;
+  --c-disabled: #bebebe;
+  --c-active: #3b5dfb;
+  --c-success: #18be71;
+  --c-error: #fc5356;
+  --c-warn: #febb2b;
+  --c-bg: #f8f9fb;
+  --tb-border: #e6e8eb;
+  --tb-bg: #f7f8fa;
+  --c-hover: #e9eff3;
+  --bc-hover: rgba(77, 124, 254, 0.1);
+
+  // input
+  --form-h: 40px;
+  --form-h-s: 38px;
+  --form-round: 6px;
+  --form-pd: 1em;
+  --form-c-border: #ddd;
+  --form-c-bg-dis: rgba(245, 245, 245, 1);
+  --form-c-text-dis: rgba(34, 34, 34, 0.3);
+
+  // console
+  --max-w: unset; /*720px;*/
+  --min-w: 360px;
+  --spc-w: 24px;
+  --side-w: 220px;
+  --side-gap: 40px;
+  --max-w-ld: 1102px;
+  --max-w-auto: auto;
+
+  //font size
+  font-size: 14px;
+  --font-14: 1rem;
+  --font-9: 0.64rem;
+  --font-10: 0.71rem;
+  --font-11: 0.79rem;
+  --font-12: 0.86rem;
+  --font-13: 0.93rem;
+  --font-15: 1.07rem;
+  --font-16: 1.14rem;
+  --font-17: 1.21rem;
+  --font-18: 1.29rem;
+  --font-19: 1.36rem;
+  --font-20: 1.43rem;
+  --font-21: 1.5rem;
+  --font-22: 1.57rem;
+  --font-24: 1.71rem;
+  --font-26: 1.86rem;
+  --font-27: 1.93rem;
+  --font-28: 2rem;
+  --font-30: 2.142rem;
+  --font-32: 2.29rem;
+  --font-34: 2.43rem;
+  --font-36: 2.57rem;
+  --font-40: 2.86rem;
+  --font-44: 3.18rem;
+  --font-50: 3.57rem;
+  --font-60: 4.29rem;
+  --font-80: 5.71rem;
+
+  // etc
+  --ease: cubic-bezier(0, 0.75, 0, 1);
+  --gra: linear-gradient(97deg, #0046ff, #8e48ff 60%);
+  --beta-g: linear-gradient(
+    108.47deg,
+    #22d6ff -38.28%,
+    #225eff 43.3%,
+    #8c2fff 100%
+  );
+  --header-bg: #3d58c9;
+  --header-h: 56px;
+}

@@ -1,0 +1,234 @@
+.TMHeader-root {
+  z-index: 998;
+  // position: fixed;
+  position: relative;
+  // top: 0;
+  // left: 50%;
+  // transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-w);
+  min-width: var(--min-w);
+  height: var(--header-h);
+  white-space: nowrap;
+  color: #222;
+
+  &.sticky .TMHeader-inner {
+    top: -56px;
+  }
+}
+
+.TMHeader-inner,
+.TMHeader-nav-header {
+  display: flex;
+  align-items: center;
+  gap: var(--side-gap);
+  width: 100%;
+  height: var(--header-h);
+  padding: 0 var(--spc-w);
+  transition: top 0.2s ease-out;
+  background-color: #fff;
+}
+
+.TMHeader-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.TMHeader-logo {
+  display: flex;
+  align-items: center;
+
+  .logo {
+    width: 168px;
+    height: 24px;
+    background: url(../../techfin-m/image/logo/logo_techfin.svg) no-repeat left center / 100%;
+  }
+}
+
+.TMHeader-global {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  font-size: var(--font-13);
+
+  a,
+  button {
+    color: inherit;
+  }
+
+  .TMIconBtn-root {
+    margin-right: -8px;
+  }
+}
+
+// 전체메뉴 layout
+.TMHeader-nav {
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  height: 100svh;
+  min-width: var(--min-w);
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  transform: translateX(100%);
+  transition: transform 0.5s var(--ease);
+  color: #353c49;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  .header-portal {
+    position: relative;
+    height: auto;
+  }
+
+  .TMHeader-logo {
+    padding-left: 0;
+    .logo .eng {
+      animation: none;
+    }
+  }
+
+  .TMHeader-inner {
+    position: relative;
+  }
+}
+
+.TMHeader-gnb {
+}
+
+// 전체메뉴 리스트
+.TMHeader-gnb-menu {
+  .link,
+  .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+  }
+
+  .btn {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 2px;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      border-radius: 1px;
+      translate: -50% -50%;
+      rotate: 45deg;
+      margin-left: -1px;
+      opacity: 0.8;
+      transition: rotate 0.2s;
+    }
+  }
+
+  .item {
+    padding: 10px var(--spc-w);
+    font-size: var(--font-18);
+    font-weight: 500;
+
+    &.on {
+      color: #3b5dfb;
+      font-weight: 700;
+
+      .btn::after {
+        rotate: -135deg;
+      }
+
+      .TMHeader-gnb-sub {
+        max-height: 100px;
+      }
+    }
+  }
+}
+
+.TMHeader-gnb-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s var(--ease);
+  color: #222;
+
+  li {
+    font-size: var(--font-16);
+    font-weight: 400;
+
+    &:first-of-type {
+      margin-top: 20px;
+    }
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+  }
+  a {
+    padding: 10px 0;
+  }
+}
+
+.TMHeader-gnb-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: auto var(--spc-w) 0;
+  padding: 20px 0;
+  border-top: 1px solid #d9d9d9;
+  font-size: var(--font-15);
+  font-weight: 500;
+
+  .TMIconBtn-root {
+    font-size: 100%;
+  }
+
+  .link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 35px;
+
+    .TMIcon-root {
+      width: 20px;
+      font-size: 16px;
+    }
+  }
+}
+
+.TMHeader-gnb-lang {
+  display: flex;
+  align-items: center;
+  margin-left: -12px;
+
+  .link {
+    padding: 0 12px;
+    &:not(.st--active) {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:not(:first-child) {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 1px;
+        height: 12px;
+        margin-top: -6px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

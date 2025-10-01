@@ -1,0 +1,126 @@
+.TMRadio-root {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  flex-wrap: wrap;
+
+  .TMTitle-t3 {
+    min-width: 130px;
+  }
+
+  &.t--column {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+.TMRadio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 2;
+  font-size: var(--font-14);
+  white-space: nowrap;
+
+  [type='radio'] {
+    appearance: none;
+    flex-shrink: 0;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(10, 43, 88, 0.18);
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--c-disabled);
+    transition: border-color 0.2s;
+
+    &:checked {
+      &:not(:disabled) {
+        border: 6px solid var(--c-active);
+      }
+      &:disabled {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #dde1e5;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    &:disabled,
+    &:disabled + span {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    &:disabled {
+      background-color: #f5f5f5;
+    }
+  }
+
+  .label-icon {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.TMRadio-root.t--list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0;
+  margin-bottom: 48px;
+
+  [type='radio'] {
+    position: absolute;
+    top: 50%;
+    right: var(--spc-w);
+    transform: translateY(-50%);
+    border: 0;
+    background: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 9px;
+      height: 14px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      border-radius: 1px;
+      margin-top: -1px;
+      color: transparent;
+      transition: color .2s;
+    }
+
+    &:checked {
+      border: 0;
+      &::after {color: var(--c-active) }
+    }
+  }
+
+  .TMRadio-label {
+    position: relative;
+    width: 100%;
+    padding: 16px var(--spc-w);
+    font-size: var(--font-15);
+    font-weight: 500;
+    transition: background-color 0.2s;
+    line-height: 1;
+
+    &:has([type='radio']:checked) {
+      background-color: #f7f8fa;
+    }
+  }
+}
