@@ -1,4 +1,6 @@
 .TMHeader-root {
+  --header-h: 56px;
+  
   z-index: 998;
   // position: fixed;
   position: relative;
@@ -21,7 +23,7 @@
 .TMHeader-nav-header {
   display: flex;
   align-items: center;
-  gap: var(--side-gap);
+  gap: 40px;
   width: 100%;
   height: var(--header-h);
   padding: 0 var(--spc-w);
@@ -51,7 +53,7 @@
   align-items: center;
   gap: 8px;
   margin-left: auto;
-  font-size: var(--font-13);
+  font-size: 13px;
 
   a,
   button {
@@ -136,7 +138,7 @@
 
   .item {
     padding: 10px var(--spc-w);
-    font-size: var(--font-18);
+    font-size: 18px;
     font-weight: 500;
 
     &.on {
@@ -164,7 +166,7 @@
   color: #222;
 
   li {
-    font-size: var(--font-16);
+    font-size: 16px;
     font-weight: 400;
 
     &:first-of-type {
@@ -187,7 +189,7 @@
   margin: auto var(--spc-w) 0;
   padding: 20px 0;
   border-top: 1px solid #d9d9d9;
-  font-size: var(--font-15);
+  font-size: 15px;
   font-weight: 500;
 
   .TMIconBtn-root {

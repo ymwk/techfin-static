@@ -7,8 +7,7 @@
   font-style: normal;
   width: 100%;
   aspect-ratio: 1;
-  min-width: 1rem;
-  max-width: 2rem;
+  width: 32px;
 }
 
 .TMIcon {
@@ -91,114 +90,13 @@
       margin-left: 2px;
     }
   }
-  &-chk {
-    background-color: var(--c-success) !important;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(45deg);
-      width: 6px;
-      height: 10px;
-      border-right: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
-      margin-top: -1px;
-      border-radius: 1px;
-    }
-  }
-
-  &-err {
-    background-color: var(--c-error) !important;
-    &::after {
-      content: '!';
-    }
-  }
-
-  &-warn {
-    background-color: var(--c-warn) !important;
-    &::after {
-      content: '!';
-    }
-  }
-
-  &-cancel {
-    background-color: var(--fc-default) !important;
-    &::after {
-      content: '!';
-    }
-  }
-
-  &-wait {
-    background-color: var(--c-active) !important;
-    &::after {
-      content: '···';
-      margin-top: -2px;
-    }
-  }
-
-  &-close {
-    font-size: var(--font-32);
-    font-weight: 100;
-
-    &::after {
-      content: '×';
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    &.s--sm {
-      font-size: var(--font-24);
-      font-weight: 200;
-
-      &::after {
-        margin-top: -1px;
-      }
-    }
-
-    &.s--lg {
-      font-size: var(--font-40);
-      font-weight: 200;
-    }
-  }
-
-  &-view,
-  &-view--off {
-    background-color: transparent;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      background: url(../../Common/image/icon/ic_eye.svg) no-repeat center center / contain;
-    }
-  }
-
-  &-view--off {
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(45deg);
-      width: 1em;
-      border-top: 1px solid #fff;
-      border-bottom: 1px solid #bbbbbd;
-    }
-  }
 
   &-arr--r,
   &-arr--l,
   &-arr--d,
   &-arr--t,
   &-arr--tr {
-    font-size: var(--font-20);
+    font-size: 20px;
     font-weight: 300;
 
     &::after {
@@ -211,7 +109,7 @@
     }
 
     &.s--sm {
-      font-size: var(--font-14);
+      font-size: 14px;
       font-weight: 600;
     }
   }
@@ -240,122 +138,48 @@
     }
   }
 
-  &-arr--type02 {
-    font-size: var(--font-20);
-    font-weight: 300;
+  &-chk {
+    background-color: var(--c-success) !important;
     &::after {
       content: '';
       position: absolute;
-      top: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 6px;
+      height: 10px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      margin-top: -1px;
+      border-radius: 1px;
+    }
+  }
+
+  &-close {
+    font-size: 32px;
+    font-weight: 100;
+
+    &::after {
+      content: '×';
+      position: absolute;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
-      margin-top: -1px;
-      width: 17px;
-      height: 10px;
-      background: url(../../Common/image/icon/ic_dwn_scroll.png) no-repeat center center;
     }
-    &::before {
-      content: 'Scroll';
-      font-size: 12px;
-      font-weight: 500;
-      color: #fff;
-      position: absolute;
-      transform: translate(-50%, 0%);
-      top: 0px;
-      left: 50%;
-      display: block;
+
+    &.s--sm {
+      font-size: 24px;
+      font-weight: 200;
+
+      &::after {
+        margin-top: -1px;
+      }
     }
-  }
 
-  &-down {
-    width: 10px;
-    height: 10px;
-    min-height: unset;
-
-    &::after {
-      content: '';
-      border-style: solid;
-      border-color: currentColor transparent transparent transparent;
-      border-width: 5px 5px;
-      border-radius: 3px;
-      transform: translateY(30%);
+    &.s--lg {
+      font-size: 40px;
+      font-weight: 200;
     }
-  }
-
-  &-more {
-    text-align: center;
-    overflow: hidden;
-    &::after {
-      content: '…';
-      font-size: var(--font-20);
-      text-align: center;
-      transform: rotate(90deg) translateY(-0.3em);
-    }
-  }
-
-  &-file {
-    width: 18px;
-    background: url(../../Common/image/icon/ic_file.svg) no-repeat center center;
-  }
-
-  &-receipt {
-    width: 22px;
-    background: url(../../Common/image/icon/ic_receipt.png) no-repeat center center;
-  }
-
-  &-alarm {
-    width: 24px;
-    background: url(../image/icon/ic_bell.svg) no-repeat center center / contain;
-  }
-
-  &-lock {
-    width: 24px;
-    background: url(../image/icon/ic_lock.svg) no-repeat center center / contain;
-  }
-
-  &-list {
-    width: 24px;
-    background: url(../image/icon/ic_list.svg) no-repeat center center / contain;
-  }
-
-  &-align {
-    width: 18px;
-    background: url(../image/icon/ic_align.svg) no-repeat center center;
-  }
-
-  &-refresh {
-    width: 18px;
-    background: url(../image/icon/ic_refresh.svg) no-repeat center center;
-  }
-
-  &-picture {
-    width: 24px;
-    background: url(../image/icon/ic_picture.svg) no-repeat center center;
-  }
-
-  &-camera {
-    width: 24px;
-    background: url(../image/icon/ic_camera.svg) no-repeat center center;
-  }
-
-  &-dir {
-    width: 24px;
-    background: url(../image/icon/ic_dir.svg) no-repeat center center;
-  }
-
-  &-download-bk {
-    width: 24px;
-    background: url(../image/icon/ic_download.svg) no-repeat center center;
-  }
-
-  &-mail-s {
-    width: 1%;
-    background: url(../image/icon/ic_mail_s.svg) no-repeat center center;
-  }
-
-  &-phone-s {
-    width: 1%;
-    background: url(../image/icon/ic_phone_s.svg) no-repeat center center;
   }
 
   &-hamburger {
@@ -386,139 +210,35 @@
     }
   }
 
-  &-notice {
-    width: 24px;
-    height: 24px;
-    background: url(../image/icon/ic_notice_w.svg) no-repeat center center;
+  // image icon
+
+  &-tel {
+    background: url(../image/icon/ic_contact_tel.svg) no-repeat center center;
   }
-
-  &-add {
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 13px;
-      height: 1px;
-      background-color: currentColor;
-      opacity: 0.8;
-    }
-    &::after {
-      rotate: 90deg;
-    }
+  &-mail {
+    background: url(../image/icon/ic_contact_mail.svg) no-repeat center center;
   }
-
-  &-download {
-    width: 24px;
-    height: 28px;
-    background: url(../image/icon/ic_download_w.svg) no-repeat center bottom;
-  }
-
-  &-edit {
-    width: 18px;
-    background: url(../image/icon/ic_edit.svg) no-repeat center center;
-  }
-}
-
-.TMBtn-root {
-  .TMIcon {
-    &-gt--u,
-    &-gt--r,
-    &-gt--d,
-    &-gt--l {
-      &::after {
-        width: 8px;
-        height: 8px;
-        // border-width: 0 1px 1px 0
-      }
-    }
-  }
-}
-
-.TMIcon-state {
-  position: relative;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-
-  &::after {
-    color: #fff;
-  }
-}
-
-.TMIcon-loader {
-  min-width: unset;
-  max-width: unset;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  position: relative;
-  animation: refresh 1s linear infinite;
-
-  &::before {
-    content: '';
-    box-sizing: border-box;
-    position: absolute;
-    inset: 0px;
-    border-radius: 50%;
-    border: 1px solid var(--c-active);
-    animation: prixClipFix 2s linear infinite;
-  }
-
-  &.s--lg {
-    width: 50px;
-    height: 50px;
-
-    &::before {
-      border: 4px solid #fff;
-    }
-  }
-
-  &.type02 {
-    &::before {
-      border: 7px solid #fff;
-    }
-  }
-}
-
-.TMLoader-text {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--c-bg);
 }
 
 .TMIcon-alert {
   max-width: unset;
+  width: 32px;
+    height: 32px;
 
-  &.c--success,
-  &.c--error,
-  &.c--active,
-  &.c--warn {
-    width: 40px;
-    height: 40px;
+  &.c--success {    
+    background: url(../image/icon/ic_alert_success.svg) no-repeat center center;
   }
-
-  &.c--active {
-    background: url(../image/icon/ic_alert_active.svg) no-repeat center center / cover;
+  &.c--warn {    
+    background: url(../image/icon/ic_alert_warn.svg) no-repeat center center;
   }
-  &.c--warn {
-    background: url(../image/icon/ic_alert_warn.svg) no-repeat center center / cover;
+  &.c--error {    
+    background: url(../image/icon/ic_alert_error.svg) no-repeat center center;
   }
-  &.c--error {
-    background: url(../image/icon/ic_alert_error.svg) no-repeat center center / cover;
-  }
-  &.c--success {
-    background: url(../image/icon/ic_alert_success.svg) no-repeat center center / cover;
+  &.c--help {    
+    background: url(../image/icon/ic_alert_help.svg) no-repeat center center;
   }
 
   svg {
-    display: none
+    display: none;
   }
 }

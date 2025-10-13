@@ -21,6 +21,8 @@
 @import 'components/radio';
 @import 'components/checkbox';
 @import 'components/textfield';
+@import 'components/alert';
+@import 'components/breadcrumbs';
 
 // 레이아웃 구성요소
 @import 'partials/header';
@@ -30,3 +32,4 @@
 @import 'pages/common';
 @import 'pages/sub';
 @import 'pages/terms';
+@import 'pages/contact';

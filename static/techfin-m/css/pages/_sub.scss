@@ -14,21 +14,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 8px;
   height: 270px;
   color: #fff;
   font-size: 16px;
   line-height: 1.5;
-  text-shadow: 0px 0px 4px 0px #0000004d;
+  text-shadow: 0 0 4px #0000004d;
   background: #081443 no-repeat center center / cover;
 
   .tit {
     font-size: 36px;
     font-weight: 700;
-    text-shadow: 0px 0px 4px 0px #0000004d;
   }
 
+  
+  // 이용안내
   &.terms-01 {
       background-image: url(../image/img/sub_terms_01.png);
   }
+
+  &.terms-02 {
+      background-image: url(../image/img/sub_terms_02.png);
+  }
+
+  &.terms-03 {
+      background-image: url(../image/img/sub_terms_03.png);
+  }
+
+  // 문의하기
+  &.contact-01 {
+      background-image: url(../image/img/sub_contact_01.png);
+  }
 }
+

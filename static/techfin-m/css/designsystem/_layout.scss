@@ -75,7 +75,9 @@
       padding: 10px;
       font-size: 14px;
 
-      &.hr { border-color: #222 }
+      &.hr {
+        border-color: #222;
+      }
     }
 
     & > li {
@@ -160,7 +162,6 @@
     }
   }
 
-
   &-pop {
     &::before {
       content: 'popup';
@@ -171,14 +172,14 @@
   &-toast {
     &::before {
       content: 'toast';
-      background-color: #3B5DFB;
+      background-color: #3b5dfb;
     }
   }
 
   &-snack {
     &::before {
       content: 'snackbar';
-      background-color: #7299E7;
+      background-color: #7299e7;
     }
   }
 
@@ -420,7 +421,7 @@
               position: relative;
               &::before {
                 content: 'CTA';
-                font-size: var(--font-14);
+                font-size: 14px;
                 font-weight: 400;
                 color: #7b7b7b;
                 position: absolute;

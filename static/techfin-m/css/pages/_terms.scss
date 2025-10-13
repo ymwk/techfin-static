@@ -1,19 +1,41 @@
 .terms-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   margin-top: 20px;
   padding-top: 24px;
   border-top: 1px solid #222;
   word-break: keep-all;
   font-size: 15px;
   line-height: 1.5;
+
+  .TMTitle-h3 {
+    margin-top: 10px;
+  }
+
+  .TMTitle-h1,
+  .TMTitle-h2,
+  .TMTitle-h3,
+  .TMTitle-h4 {
+    font-weight: 600;
+  }
 }
 
 .terms-section {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .tit {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
 }
 
 .terms-list-num {
@@ -38,6 +60,47 @@
     font-weight: 400;
     margin: 5px 0;
   }
+
+  .terms-list-bullet {
+    margin-left: -1em;
+    margin-top: 10px;
+
+    li {
+      font-size: 14px;
+      color: #7b7b7b;
+    }
+  }
+}
+
+.terms-list-bullet {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    position: relative;
+    padding-left: 1.3em;
+    &::before {
+      content: attr(data-bullet) '.';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 5px 0;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.terms-list-inner {
+  margin-left: -1em;
 }
 
 .table-terms {
@@ -67,6 +130,30 @@
   div {
     text-align: left;
   }
+
+  &.s--lg {
+    tbody,
+    tfoot {
+      th,
+      td {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &.s--sm {
+    tbody th,
+    td {
+      font-size: 14px;
+    }
+  }
+
+  &.t--rows {
+    tbody th {
+      background-color: #f7f8fc;
+      font-weight: 500;
+    }
+  }
 }
 
 table.st--fixed {
@@ -76,7 +163,7 @@ table.st--fixed {
 .note-bullet {
   display: flex;
   align-items: center;
-  color: #9B9BA0;
+  color: #9b9ba0;
   font-size: 14px;
 
   &::before {
@@ -86,5 +173,14 @@ table.st--fixed {
     margin-right: 6px;
     border-radius: 50%;
     background-color: currentColor;
+  }
+}
+
+.terms-img {
+  margin: 20px 0;
+  text-align: center;
+  img {
+    width: 100%;
+    max-width: 360px;
   }
 }

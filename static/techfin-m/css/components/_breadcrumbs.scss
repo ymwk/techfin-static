@@ -1,0 +1,35 @@
+.TMBreadcrumbs-root {
+  display: flex;
+  height: 44px;
+  border-bottom: 1px solid var(--c-border);
+  font-size: 12px
+}
+
+.TMBreadcrumbs-item {
+  flex-grow: 1;
+  display: flex;
+}
+
+.TMBreadcrumbs-button {
+  flex-grow: 1;
+  position: relative;
+  padding: 0 40px 0 24px;
+  text-align: left;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    opacity: 0.8;
+    transform: rotate(45deg);
+  }
+
+  &.t--change {
+    background-color: var(--bc-hover);
+  }
+}

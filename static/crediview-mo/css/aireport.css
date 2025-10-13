@@ -4942,7 +4942,7 @@ table .SOLCheck-root {
 }
 
 .SOLAlert-root {
-  z-index: 1002;
+  z-index: 1005;
   position: fixed;
   inset: 0;
   display: flex;
@@ -5051,12 +5051,15 @@ table .SOLCheck-root {
   text-align: left;
 }
 .SOLAlert-msgbox li, .SOLSnackbar-msgbox li {
+  position: relative;
   padding: 1px 0 1px 1em;
-  text-indent: -0.5em;
   line-height: 1.4;
 }
 .SOLAlert-msgbox li::before, .SOLSnackbar-msgbox li::before {
   content: "· ";
+  position: absolute;
+  top: 0;
+  left: 0.5em;
 }
 .SOLAlert-msgbox .name, .SOLSnackbar-msgbox .name {
   display: inline-block;
@@ -5202,7 +5205,7 @@ table .SOLCheck-root {
 }
 
 .SOLToast-root {
-  z-index: 1004;
+  z-index: 1005;
   position: fixed;
   inset: auto var(--spc-w) 34px;
   display: flex;
