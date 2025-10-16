@@ -57,6 +57,10 @@
         background-color: #222;
         border-radius: 8px;
       }
+
+      &.c--gra {
+        background: var(--gra)
+      }
     }
 
     &--outlined {

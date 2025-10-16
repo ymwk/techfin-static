@@ -1013,7 +1013,7 @@
 
   .SOLIconBtn-root:last-child {
     margin-right: -8px;
-    min-width: 34px
+    min-width: 34px;
   }
 
   &:last-child:not(:only-child) {
@@ -1051,8 +1051,29 @@
     }
 
     .date {
+      display: flex;
+      align-items: center;
+      padding-top: 15px;
+      margin: 12px 0 -4px;
+      border-top: 1px dashed rgba(112, 115, 124, 0.16);
       font-size: var(--font-12);
       color: var(--fc-gray1);
+
+      & > * {
+        display: inline-flex;
+        align-items: center;
+        height: 10px;
+
+        &:not(:first-child) {
+          padding-left: 10px;
+          margin-left: 10px;
+          border-left: 1px solid #d8dbe2;
+        }
+      }
+    }
+
+    .tag {
+      font-size: 12px
     }
 
     .label {

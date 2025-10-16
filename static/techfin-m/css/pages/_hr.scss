@@ -1,0 +1,179 @@
+.hr-talent-bg {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -125px;
+    width: 344px;
+    height: 161px;
+    background: url(../image/img/hr_pattern_01.svg) no-repeat left top;
+  }
+}
+
+.hr-talent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hr-talent-img {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+}
+
+.hr-welfare-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: 500;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      aspect-ratio: 146 / 128;
+      margin-bottom: 12px;
+      border-radius: 16px;
+      background: #f7f7f9 no-repeat center center / 72px;
+    }
+  }
+
+  small {
+    color: var(--fc-gray);
+    font-size: 14px;
+  }
+
+  .ico-insure::before {
+    background-image: url(../image/img/hr_ic_insure.svg);
+  }
+  .ico-condolence::before {
+    background-image: url(../image/img/hr_ic_condolence.svg);
+  }
+  .ico-holiday::before {
+    background-image: url(../image/img/hr_ic_holiday.svg);
+  }
+  .ico-pay::before {
+    background-image: url(../image/img/hr_ic_pay.svg);
+  }
+  .ico-meal::before {
+    background-image: url(../image/img/hr_ic_meal.svg);
+  }
+  .ico-cafe::before {
+    background-image: url(../image/img/hr_ic_cafe.svg);
+  }
+  .ico-health::before {
+    background-image: url(../image/img/hr_ic_health.svg);
+  }
+  .ico-welcome::before {
+    background-image: url(../image/img/hr_ic_welcome.svg);
+  }
+}
+
+.hr-recruit-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.hr-recruit-noti {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hr-recruit-list {
+  font-size: 15px;
+  counter-reset: number 0;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--c-border);
+    counter-increment: number 1;
+
+    &::before {
+      content: counter(number, decimal-leading-zero);
+      color: var(--c-active);
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  .tit {
+    display: flex;
+    align-items: center;
+    padding-left: 38px;
+    min-height: 32px;
+    background: no-repeat left center;
+
+    &.ico-step01 {
+      background-image: url(../image/img/hr_ic_step01.svg);
+    }
+    &.ico-step02 {
+      background-image: url(../image/img/hr_ic_step02.svg);
+    }
+    &.ico-step03 {
+      background-image: url(../image/img/hr_ic_step03.svg);
+    }
+    &.ico-step04 {
+      background-image: url(../image/img/hr_ic_step04.svg);
+    }
+    &.ico-step05 {
+      background-image: url(../image/img/hr_ic_step05.svg);
+    }
+  }
+}
+
+.hr-duty-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  word-break: keep-all;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--c-border);
+  }
+
+  .keyword {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 16px;
+    color: var(--fc-gray);
+    font-size: 13px;
+
+    & > * {
+      display: inline-flex;
+      align-items: center;
+      height: 30px;
+      padding: 0 10px;
+      border-radius: 4px;
+      background-color: #F5F6FA;
+    }
+  }
+}

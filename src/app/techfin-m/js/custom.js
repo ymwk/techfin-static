@@ -169,4 +169,22 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', (e) => {
     e.target !== familyList ? familyList.classList.remove('on') : false;
   });
+
+
+  //Breadcrumbs
+  const breadcrumbs = document.querySelectorAll('.TMBreadcrumbs-item');
+
+  breadcrumbs.forEach((item) => {
+    const btn = item.querySelector('.TMBreadcrumbs-btn');
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      item.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+      e.target !== item ? item.classList.remove('show') : false;
+    });
+  });  
 });
+

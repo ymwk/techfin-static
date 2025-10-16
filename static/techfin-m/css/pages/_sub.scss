@@ -1,12 +1,31 @@
 .container-sub {
-  padding: 64px var(--spc-w)
+  padding: 64px var(--spc-w);
+}
+
+.sub-headline-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
 }
 
 .sub-headline {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
-  margin-bottom: 15px;
+}
+
+.sub-headline-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--c-active);
+}
+
+.sub-headline-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 24px;
 }
 
 .sub-keyvisual {
@@ -18,6 +37,8 @@
   height: 270px;
   color: #fff;
   font-size: 16px;
+  font-weight: 300;
+  text-align: center;
   line-height: 1.5;
   text-shadow: 0 0 4px #0000004d;
   background: #081443 no-repeat center center / cover;
@@ -27,23 +48,69 @@
     font-weight: 700;
   }
 
-  
+  //인재채용
+  &.hr-01 {
+    background-image: url(../image/keyvisual/sub_hr_01.png);
+  }
+  &.hr-02 {
+    background-image: url(../image/keyvisual/sub_hr_02.png);
+  }
+  &.hr-03 {
+    background-image: url(../image/keyvisual/sub_hr_03.png);
+  }
+
   // 이용안내
   &.terms-01 {
-      background-image: url(../image/img/sub_terms_01.png);
+    background-image: url(../image/keyvisual/sub_terms_01.png);
   }
 
   &.terms-02 {
-      background-image: url(../image/img/sub_terms_02.png);
+    background-image: url(../image/keyvisual/sub_terms_02.png);
   }
 
   &.terms-03 {
-      background-image: url(../image/img/sub_terms_03.png);
+    background-image: url(../image/keyvisual/sub_terms_03.png);
   }
 
   // 문의하기
   &.contact-01 {
-      background-image: url(../image/img/sub_contact_01.png);
+    background-image: url(../image/keyvisual/sub_contact_01.png);
   }
 }
 
+.sub-cont-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+
+.sub-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  word-break: keep-all;
+
+  li {
+    position: relative;
+    padding-left: 11px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 3px;
+      height: 3px;
+      background-color: currentColor;
+    }
+  }
+}
+
+.sub-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

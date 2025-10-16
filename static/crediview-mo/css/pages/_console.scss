@@ -53,6 +53,14 @@
   &:has(.footer-topBtn) {
     margin-top: 40px;
   }
+
+  &.footer-intro {
+    background: #fff;
+    box-shadow: 0px -7px 10px 0px #0000000d;
+    .footer-topBtn.show {
+      top: -60px;
+    }
+  }
 }
 
 .console-footer-btns {
@@ -60,6 +68,14 @@
   display: flex;
   gap: 8px;
   margin: 20px 0 34px;
+
+  .SOLBtn-root.w--full .SOLIcon-gt--r {
+    margin: 0 -5px;
+    &::after {
+      width: 10px;
+      height: 10px
+    }
+  }
 }
 
 .footer-topBtn {
@@ -90,7 +106,7 @@
   padding-top: 30px;
   border-top: 1px solid var(--tb-border);
   text-align: center;
-  font-size: var(--font-15)
+  font-size: var(--font-15);
 }
 
 .console-footer {

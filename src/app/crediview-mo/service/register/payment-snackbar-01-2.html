@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 서비스</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, interactive-widget=resizes-content"
+    />
+    <link rel="stylesheet" href="/static/crediview-mo/css/designsystem.css" />
+  </head>
+  <body>
+    <div class="SOLSnackbar-root h--max">
+      <div class="SOLSnackbar-backdrop"></div>
+      <div class="SOLSnackbar-box">
+        <div class="SOLSnackbar-header">
+          <h3 class="SOLSnackbar-title">쿠폰 선택</h3>
+        </div>
+
+        <div class="SOLSnackbar-body">
+          <div class="SOLSnackbar-section">
+            <label class="SOLInput-root">
+              <div class="SOLInput-fbox">
+                <div class="SOLInput-box">
+                  <input type="text" placeholder="쿠폰 코드를 입력하세요" class="SOLInput-field" />
+                  <span class="SOLInput-wrap">
+                    <span class="SOLInput-wrap--hidden">
+                      <button type="button" class="SOLInput-btn SOLIcon-close">
+                        <span class="blind">Del</span>
+                      </button>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </label>
+
+            <button type="button" class="SOLBtn-root w--full">
+              <i class="SOLIcon-root SOLIcon-add"></i>
+              쿠폰 등록
+            </button>
+          </div>
+          <!-- //SOLSnackbar-section -->
+
+          <div class="SOLSnackbar-section SOLSnackbar-bg">
+            <h4 class="SOLTitle-t3">보유쿠폰 <em>2</em>건</h4>
+            <ul class="mypage-coupon-list">
+              <li class="active">
+                <div class="sort"><span>50% 할인권</span></div>
+                <div class="title">신용평가등급확인서 조회 할인권</div>
+                <div class="date">
+                  <span>3일 남음</span>
+                  <span>2025.06.20 09:00 ~ 2025.06.22 23:00</span>
+                </div>
+              </li>
+              <li>
+                <div class="sort"><span>100% 할인권</span></div>
+                <div class="title">신용평가등급확인서 무료 발급권</div>
+                <div class="date">
+                  <span>3일 남음</span>
+                  <span>2025.06.20 09:00 ~ 2025.06.22 23:00</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- //SOLSnackbar-section -->
+        </div>
+        <!-- //SOLSnackbar-body -->
+
+        <div class="SOLSnackbar-footer">
+          <div class="SOLSnackbar-footer-btns">
+            <button type="button" class="SOLBtn-root t--outlined s--lg w--full">선택 안 함</button>
+            <button type="button" class="SOLBtn-root t--contained s--lg w--full">쿠폰 적용</button>
+          </div>
+        </div>
+        <!-- //SOLSnackbar-footer -->
+      </div>
+    </div>
+  </body>
+</html>

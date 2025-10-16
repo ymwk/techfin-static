@@ -17,6 +17,7 @@
   &-gt--d,
   &-gt--l {
     width: 20px;
+    
     &::after {
       content: '';
       position: absolute;
@@ -390,6 +391,11 @@
   &-qr {
     width: 14px;
     background: url(../image/icon/ic_qr.png) no-repeat center center / contain;
+  }
+
+  &-information {
+    width: 18px;
+    background: url(../image/icon/ic_info.svg) no-repeat center center / contain;
   }
 
   &-hamburger {
