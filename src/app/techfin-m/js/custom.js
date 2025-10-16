@@ -170,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function () {
     e.target !== familyList ? familyList.classList.remove('on') : false;
   });
 
-
   //Breadcrumbs
   const breadcrumbs = document.querySelectorAll('.TMBreadcrumbs-item');
 
@@ -185,6 +184,18 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', (e) => {
       e.target !== item ? item.classList.remove('show') : false;
     });
-  });  
-});
+  });
 
+  //stickyNav
+  const stickyNav = document.querySelector('.TMStickyNav-list');
+  const stickyBtn = document.querySelector('.TMStickyNav-btn');
+
+  stickyBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    stickyNav.classList.toggle('show');
+  });
+
+  document.addEventListener('click', (e) => {
+    e.target !== stickyNav ? stickyNav.classList.remove('show') : false;
+  });
+});

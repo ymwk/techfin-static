@@ -124,11 +124,10 @@ hr {
 .container {
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
+  flex-direction: column;  
 }
 
-// html { scroll-behavior: smooth }
+html { scroll-behavior: smooth }
 
 .fixed {
   position: fixed;

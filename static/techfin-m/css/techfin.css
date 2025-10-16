@@ -773,7 +773,10 @@ hr {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .fixed {
@@ -2152,6 +2155,9 @@ table .TMCheck-root {
   max-height: 300px;
   border-width: 0 1px 1px 1px;
 }
+.TMBreadcrumbs-item.show .TMBreadcrumbs-btn::after {
+  transform: rotate(-135deg);
+}
 
 .TMBreadcrumbs-btn {
   flex-grow: 1;
@@ -2172,9 +2178,7 @@ table .TMCheck-root {
   border-bottom: 1px solid currentColor;
   opacity: 0.8;
   transform: rotate(45deg);
-}
-.TMBreadcrumbs-btn.t--change {
-  background-color: var(--bc-hover);
+  transition: transform 0.2s;
 }
 
 .TMBreadcrumbs-list {
@@ -2896,10 +2900,10 @@ table.st--fixed {
   content: "";
   position: absolute;
   top: 15px;
-  right: -125px;
+  right: calc(var(--spc-w) * -1);
   width: 344px;
   height: 161px;
-  background: url(../image/img/hr_pattern_01.svg) no-repeat left top;
+  background: url(../image/img/hr_pattern_01.svg) no-repeat right -100px top;
 }
 
 .hr-talent {
@@ -3054,5 +3058,63 @@ table.st--fixed {
   height: 30px;
   padding: 0 10px;
   border-radius: 4px;
-  background-color: #F5F6FA;
+  background-color: #f5f6fa;
+}
+
+.TMStickyNav-wrap {
+  position: relative;
+}
+.TMStickyNav-wrap .sub-section {
+  padding-top: 80px;
+  margin-top: -32px;
+}
+
+.TMStickyNav-root {
+  position: sticky;
+  top: 0;
+  margin-bottom: 32px;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.TMStickyNav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 52px;
+  padding: 0 12px;
+  border-bottom: 2px solid #222;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.TMStickyNav-list {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 8px 8px;
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, box-shadow 0.3s;
+}
+.TMStickyNav-list a {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  padding: 0 12px;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+.TMStickyNav-list .on {
+  background-color: rgba(56, 105, 252, 0.04);
+  color: var(--c-active);
+}
+.TMStickyNav-list.show {
+  max-height: 500px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 32, 62, 0.1019607843);
 }

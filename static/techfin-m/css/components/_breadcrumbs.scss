@@ -1,3 +1,4 @@
+
 .TMBreadcrumbs-root {
   display: flex;
   height: 44px;
@@ -36,6 +37,10 @@
       max-height: 300px;
       border-width: 0 1px 1px 1px
     }
+
+    .TMBreadcrumbs-btn::after {
+      transform: rotate(-135deg);
+    }
   }
 }
 
@@ -58,10 +63,7 @@
     border-bottom: 1px solid currentColor;
     opacity: 0.8;
     transform: rotate(45deg);
-  }
-
-  &.t--change {
-    background-color: var(--bc-hover);
+    transition: transform .2s;
   }
 }
 
