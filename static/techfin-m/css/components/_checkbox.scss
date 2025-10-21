@@ -22,7 +22,7 @@
     position: relative;
     width: 18px;
     height: 18px;
-    border: 1px solid #bbbbbd;
+    border: 1px solid var(--c-border);
     border-radius: 3px;
     background-color: #fff;
     color: var(--c-disabled);
@@ -40,6 +40,7 @@
       border-bottom: 2px solid currentColor;
       margin-top: -1px;
       border-radius: 1px;
+      color: transparent
     }
 
     &:checked {
@@ -82,6 +83,17 @@
     small {
       font-size: 14px;
       font-weight: 600;
+    }
+  }
+
+  &.t--column {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 24px;
+    padding-left: 4px;
+
+    .TMCheck-label {
+      gap: 15px
     }
   }
 }

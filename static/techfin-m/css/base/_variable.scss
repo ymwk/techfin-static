@@ -3,6 +3,7 @@
   color: #222;
   --fc-default: #222;
   --fc-gray: #7b7b7b;
+  --fc-gray2: #9B9BA0;
 
   // state-color
   --c-component: #265cf0;
@@ -29,6 +30,7 @@
   --max-w: unset; /*720px;*/
   --min-w: 360px;
   --spc-w: 24px;
+  --header-h: 56px;
 
   // etc
   --ease: cubic-bezier(0, 0.75, 0, 1);

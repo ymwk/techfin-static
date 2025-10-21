@@ -1,0 +1,155 @@
+.TMboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 43px;
+
+  .count {
+    em {
+      color: var(--c-active);
+      padding: 0 0 0 4px;
+    }
+  }
+}
+
+.TMboard-list {
+  border-top: 2px solid #222;
+}
+
+.TMboard-item {
+  border-bottom: 1px solid var(--c-border);
+
+  .TMboard-item-cont {
+    padding: 20px 10px;
+  }
+}
+
+.TMboard-item-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  color: var(--fc-gray);
+  line-height: 1.5;
+
+  .tit {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--fc-default);
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 0;
+
+    & > * {
+      display: inline-flex;
+      align-items: center;
+      height: 8px;
+
+      &:not(:last-child) {
+        padding-right: 6px;
+        margin-right: 6px;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .date {
+    color: var(--fc-gray2);
+  }
+}
+
+.TMboard-read-header {
+  font-size: 15px;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #222;
+
+  .tit {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .group {
+    gap: 18px 0;
+
+    & > * {
+      height: 12px;
+
+      &:not(:last-child) {
+        padding-right: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.TMboard-read-body {
+  padding: 32px 0;
+  font-size: 16px;
+  color: var(--fc-default);
+  line-height: 1.6;
+  word-break: keep-all;
+
+  img {
+    display: block;
+    max-width: 100%
+  }
+
+  h3 {
+    font-size: 20px;
+    margin: 15px 0 10px
+  }
+
+  h4 {
+    padding: 5px 0 5px 12px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      background-color: currentColor;
+    }
+  }
+
+  li {
+    position: relative;
+    padding-left: 1em;
+    &::before {
+      content: '・';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  small {
+    display: block;
+    margin: 5px 0;
+    font-size: .9em
+  }
+
+}
+
+.TMboard-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  padding: 50px 0;
+  font-size: 15px;
+  color: var(--fc-default);
+  font-weight: 500;
+
+  .ico-nolist {
+    padding-top: 64px;
+    background: url(../image/img/img_nolist.svg) no-repeat center top;
+  }
+}

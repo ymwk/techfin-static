@@ -10,7 +10,7 @@
 }
 
 .sub-headline {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   line-height: 1.5;
 }
@@ -26,6 +26,18 @@
   font-size: 16px;
   line-height: 1.5;
   margin-top: 24px;
+}
+
+.container-footer {
+  z-index: 99;
+  position: sticky;
+  bottom: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px var(--spc-w);
+  background-color: #fff;
+  box-shadow: 0px -2px 12px 0px #00000012;
 }
 
 .sub-keyvisual {
@@ -46,6 +58,17 @@
   .tit {
     font-size: 36px;
     font-weight: 700;
+  }
+
+  //새소식
+  &.news-01 {
+    background-image: url(../image/keyvisual/sub_news_01.png);
+  }
+  &.news-02 {
+    background-image: url(../image/keyvisual/sub_news_02.png);
+  }
+  &.news-03 {
+    background-image: url(../image/keyvisual/sub_news_03.png);
   }
 
   //인재채용

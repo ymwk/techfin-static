@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-height: 100svh;
+  max-height: calc(100svh - 50px);
   background-color: #fff;
   border-radius: 16px 16px 0 0;
   box-shadow: 0px -2px 12px 0px rgba(0, 0, 0, 0.07);
@@ -49,4 +49,22 @@
 .TMSnackbar-body {
   flex-grow: 1;
   overflow-y: auto;
+}
+
+.TMSnackbar-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px var(--spc-w);
+}
+
+.TMSnackbar-footer {
+  z-index: 99;
+  position: sticky;
+  bottom: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px var(--spc-w);
+  box-shadow: 0px -2px 12px 0px #00000012;
 }

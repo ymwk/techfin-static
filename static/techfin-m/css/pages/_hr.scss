@@ -188,12 +188,23 @@
 }
 
 .TMStickyNav-root {
+  z-index: 999;
   position: sticky;
-  top: 0;
+  top: 56px;
   margin-bottom: 32px;
   z-index: 1;
   background-color: #fff;
+  transition: top 0.2s 0.2s;
 }
+
+:root {
+  &:has(.TMHeader-root.sticky) {
+    .TMStickyNav-root {
+      top: 0
+    }
+  }
+}
+
 
 .TMStickyNav-btn {
   display: flex;

@@ -1,12 +1,9 @@
 .TMHeader-root {
-  --header-h: 56px;
-  
   z-index: 998;
-  // position: fixed;
-  position: relative;
-  // top: 0;
-  // left: 50%;
-  // transform: translateX(-50%);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   max-width: var(--max-w);
   min-width: var(--min-w);
@@ -14,8 +11,11 @@
   white-space: nowrap;
   color: #222;
 
-  &.sticky .TMHeader-inner {
-    top: -56px;
+  &.sticky {
+    z-index: 1;
+    .TMHeader-inner {
+      top: -56px;
+    }
   }
 }
 
@@ -101,9 +101,6 @@
   .TMHeader-inner {
     position: relative;
   }
-}
-
-.TMHeader-gnb {
 }
 
 // 전체메뉴 리스트
