@@ -1203,7 +1203,7 @@ hr {
   height: 7px;
 }
 .TMIconBtn-root:disabled, .TMIconBtn-root.disabled {
-  color: rgba(34, 34, 34, 0.2);
+  color: rgba(34, 34, 34, 0.4);
   cursor: not-allowed;
 }
 .TMIconBtn-root i + i {
@@ -2237,6 +2237,41 @@ table .TMCheck-root {
   transition: background-color 0.2s;
 }
 
+.TMPagenation-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  color: var(--fc-default);
+}
+.TMPagenation-root button,
+.TMPagenation-root .TMIconBtn-root {
+  min-width: 36px;
+  min-height: 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.TMPagenation-root button.st--active,
+.TMPagenation-root .TMIconBtn-root.st--active {
+  background-color: var(--c-active);
+  color: #fff;
+}
+
+.TMPagenation-group {
+  display: flex;
+  align-items: center;
+}
+.TMPagenation-group .TMIcon-root {
+  margin: 0 -11px;
+}
+.TMPagenation-group .TMIcon-root::after {
+  border-width: 1px;
+  border-radius: 0;
+}
+
 .TMHeader-root {
   z-index: 998;
   position: fixed;
@@ -3184,6 +3219,11 @@ table.st--fixed {
   box-shadow: 0px 4px 8px 0px rgba(0, 32, 62, 0.1019607843);
 }
 
+.TMboard-root img {
+  display: block;
+  max-width: 100%;
+}
+
 .TMboard-header {
   display: flex;
   align-items: center;
@@ -3198,12 +3238,26 @@ table.st--fixed {
 .TMboard-list {
   border-top: 2px solid #222;
 }
-
-.TMboard-item {
+.TMboard-list .TMboard-item {
   border-bottom: 1px solid var(--c-border);
 }
-.TMboard-item .TMboard-item-cont {
+.TMboard-list .TMboard-item .TMboard-item-cont {
   padding: 20px 10px;
+}
+
+.TMboard-gallery {
+  max-width: 720px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.TMboard-gallery .TMboard-empty {
+  border-radius: 16px;
+  background-color: #FAFBFF;
+}
+.TMboard-gallery .TMboard-item .tit {
+  font-weight: 700;
 }
 
 .TMboard-item-cont {
@@ -3237,6 +3291,20 @@ table.st--fixed {
 .TMboard-item-cont .date {
   color: var(--fc-gray2);
 }
+.TMboard-item-cont .thumb {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 312/195;
+  margin-bottom: 8px;
+  background: #FAFBFF url(../image/logo/logo_techfin_g.svg) no-repeat center center;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.TMboard-item-cont .thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .TMboard-read-header {
   font-size: 15px;
@@ -3259,6 +3327,9 @@ table.st--fixed {
   padding-right: 10px;
   margin-right: 10px;
 }
+.TMboard-read-header .TMboard-label {
+  margin-bottom: -8px;
+}
 
 .TMboard-read-body {
   padding: 32px 0;
@@ -3266,10 +3337,6 @@ table.st--fixed {
   color: var(--fc-default);
   line-height: 1.6;
   word-break: keep-all;
-}
-.TMboard-read-body img {
-  display: block;
-  max-width: 100%;
 }
 .TMboard-read-body h3 {
   font-size: 20px;
@@ -3317,4 +3384,50 @@ table.st--fixed {
 .TMboard-empty .ico-nolist {
   padding-top: 64px;
   background: url(../image/img/img_nolist.svg) no-repeat center top;
+}
+
+.TMboard-read-file {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.TMboard-read-file .item {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  padding-left: 26px;
+  background: url(../image/icon/ic_clip.svg) no-repeat left center;
+}
+.TMboard-read-file a {
+  color: inherit;
+}
+.TMboard-read-file .ic-down {
+  width: 100%;
+  padding-right: 30px;
+  background: url(../image/icon/ic_download.svg) no-repeat right center;
+}
+
+.TMboard-read-btns {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.TMboard-label {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  margin-right: auto;
+  border: 1px solid currentColor;
+  border-radius: 24px;
+  color: var(--c-active);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+.TMboard-label.c--event {
+  color: #8038FC;
 }

@@ -1,0 +1,36 @@
+.TMPagenation-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  color: var(--fc-default);
+
+  button,
+  .TMIconBtn-root {
+    min-width: 36px;
+    min-height: 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    font-size: 16px;
+
+    &.st--active {
+      background-color: var(--c-active);
+      color: #fff;
+    }
+  }
+}
+
+.TMPagenation-group {
+  display: flex;
+  align-items: center;
+
+  .TMIcon-root {
+    margin: 0 -11px;
+    &::after {
+      border-width: 1px;
+      border-radius: 0;
+    }
+  }
+}
