@@ -7,6 +7,7 @@
   font-style: normal;
   aspect-ratio: 1;
   width: 32px;
+  max-width: 100%
 }
 
 .TMIcon {
@@ -216,6 +217,9 @@
   }
   &-mail {
     background: url(../image/icon/ic_contact_mail.svg) no-repeat center center;
+  }
+  &-down {
+    background: url(../image/icon/ic_arr_down.svg) no-repeat center 60%;
   }
 }
 

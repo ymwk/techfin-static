@@ -11,7 +11,7 @@
 @import 'base/font';
 
 // vendor
-// @import 'vendors/swiper.min';
+@import '../vendors/swiper-bundle.min.css';
 
 // 컴포넌트
 @import 'components/cssicon';
@@ -23,7 +23,8 @@
 @import 'components/textfield';
 @import 'components/alert';
 @import 'components/breadcrumbs';
-@import 'components/pagenation';
+@import 'components/stickynav';
+@import 'components/accordian';
 
 // 레이아웃 구성요소
 @import 'partials/header';
@@ -35,4 +36,11 @@
 @import 'pages/terms';
 @import 'pages/contact';
 @import 'pages/hr';
+@import 'pages/service';
+@import 'pages/about';
 @import 'pages/board';
+
+
+@import "../../Techfin-web/css/components/styles/font";
+@import "../../Techfin-web/css/techfin/page/table";
+@import '../../Techfin-web/css/techfin/page/user-guide';

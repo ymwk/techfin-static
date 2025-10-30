@@ -1,5 +1,28 @@
 .container-sub {
   padding: 64px var(--spc-w);
+  word-break: keep-all;
+
+  & + .container-wide {
+    margin-top: -32px;
+  }
+}
+
+.container-wide {
+  word-break: keep-all;
+  .wide-inner {
+    padding-right: var(--spc-w);
+    padding-left: var(--spc-w);
+
+    &.t--bg {
+      background-color: #f7f8fc;
+      padding: 64px var(--spc-w);
+    }
+
+    .TMStickyNav-list {
+      right: var(--spc-w);
+      left: var(--spc-w);
+    }
+  }
 }
 
 .sub-headline-wrap {
@@ -7,12 +30,28 @@
   flex-direction: column;
   gap: 12px;
   margin-bottom: 32px;
+  word-break: keep-all;
+  line-height: 1.5;
+
+  &.t--sub {
+    .TMTitle-headline {
+      font-size: 24px;
+    }
+
+    .sub-headline-desc {
+      font-size: 15px;
+      margin-top: -5px;
+      color: var(--fc-gray);
+      font-weight: 500;
+    }
+  }
 }
 
 .sub-headline {
   font-size: 26px;
   font-weight: 700;
   line-height: 1.5;
+  color: var(--fc-default);
 }
 
 .sub-headline-label {
@@ -26,6 +65,7 @@
   font-size: 16px;
   line-height: 1.5;
   margin-top: 24px;
+  color: var(--fc-default);
 }
 
 .container-footer {
@@ -58,6 +98,19 @@
   .tit {
     font-size: 36px;
     font-weight: 700;
+  }
+
+  //회사소개
+  &.about-01 {
+    background-image: url(../image/keyvisual/sub_about_01.png);
+  }
+
+  //서비스소개
+  &.service-01 {
+    background-image: url(../image/keyvisual/sub_service_01.png);
+  }
+  &.service-02 {
+    background-image: url(../image/keyvisual/sub_service_02.png);
   }
 
   //새소식
@@ -136,4 +189,30 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.TMBanner-root {
+  padding: 32px 24px;
+  background: #004FFF url(../image/bg/bg_service_banner.png) no-repeat right center / auto 100%;
+  font-size: 13px;
+  color: rgba(255,255,255,.8);
+  line-height: 1.5;
+
+  .tit {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 10px
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 8px
+  }
+
+  &.banner-02 {
+    background-image: url(../image/bg/bg_service_banner02.png);
+    background-size: cover;
+  }
 }

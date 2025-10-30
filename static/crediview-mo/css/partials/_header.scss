@@ -23,11 +23,17 @@
       }
 
       .SOLHeader-logo .logo:not(.SOLHeader-nav .logo) {
-        .eng { background-image: url(../../Common/image/crediview/logo/bi_crediview_w.svg) }
-        .kr { background-image: url(../../Common/image/crediview/logo/bi_crediview_w_kr.svg) }
+        .eng {
+          background-image: url(../../Common/image/crediview/logo/bi_crediview_w.svg);
+        }
+        .kr {
+          background-image: url(../../Common/image/crediview/logo/bi_crediview_w_kr.svg);
+        }
       }
 
-      .SOLHeader-global-link { border-color: rgba(255,255,255,0.2)}
+      .SOLHeader-global-link {
+        border-color: rgba(255, 255, 255, 0.2);
+      }
     }
   }
 
@@ -196,6 +202,26 @@
 }
 
 // 전체메뉴 리스트
+.label-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  min-width: 47px;
+  margin-left: 5px;
+  background: url(../image/icon/ic_nav_open.svg) no-repeat left top / 100% 100%;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+
+  span {
+    background-image: var(--gra);
+    background-clip: text;
+    color: transparent;
+  }
+}
+
 .gnb-menu {
   border-radius: 0.8rem;
   background-color: #fff;
@@ -204,16 +230,8 @@
     display: flex;
     align-items: center;
 
-    &.on { color: #3b5dfb }
-  }
-
-  .ai-post {
-    gap: 8px;
-    &::after {
-      content: '';
-      width: 47px;
-      height: 24px;
-      background: url(../image/icon/ic_nav_open.svg) no-repeat left top;
+    &.on {
+      color: #3b5dfb;
     }
   }
 
@@ -267,7 +285,9 @@
         margin-top: 10px;
       }
     }
-    a { height: 42px }
+    a {
+      height: 42px;
+    }
   }
 }
 

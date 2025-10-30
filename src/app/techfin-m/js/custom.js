@@ -88,4 +88,19 @@ document.addEventListener('DOMContentLoaded', function () {
       e.target !== item ? item.classList.remove('show') : false;
     });
   });
+
+  // Accordian
+  const terms = document.querySelectorAll('.js-accordian-root');
+
+  terms.forEach((item) => {
+    const btn = item.querySelector('.js-accordian-btn');
+
+    btn.addEventListener('click', (e) => {
+      if (item.classList.contains('st--open')) {
+        item.classList.remove('st--open');
+      } else {
+        item.classList.add('st--open');
+      }
+    });
+  });
 });
