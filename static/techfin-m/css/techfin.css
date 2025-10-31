@@ -1691,7 +1691,6 @@ hr {
 .TMCheck-label {
   position: relative;
   display: inline-flex;
-  align-items: center;
   gap: 6px;
 }
 .TMCheck-label [type=checkbox] {
@@ -2405,30 +2404,6 @@ table .TMCheck-root {
   transition: transform 0.2s;
 }
 
-.service-case-cont {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 16px 20px 0;
-  font-size: 15px;
-  color: var(--fc-gray);
-}
-.service-case-cont .TMTitle-h5 {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.service-case-cont .TMTitle-h5 small {
-  display: inline-flex;
-  align-items: center;
-  height: 14px;
-  padding-left: 8px;
-  border-left: 1px solid var(--c-border);
-  color: var(--fc-gray);
-  font-size: 1em;
-  font-weight: 500;
-}
-
 .TMAccordian-body,
 .js-accordian-body {
   overflow: hidden;
@@ -2826,6 +2801,10 @@ table .TMCheck-root {
 
 .mb64 {
   margin-bottom: 64px !important;
+}
+
+.pt40 {
+  padding-top: 40px !important;
 }
 
 .box-comm {
@@ -3228,12 +3207,11 @@ table.st--fixed {
   align-items: center;
   gap: 5px;
 }
-.contact-list .cont {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.contact-list .cont em {
+  padding-right: 8px;
 }
 .contact-list small {
+  display: inline-block;
   font-size: 12px;
   color: var(--fc-gray);
 }
@@ -4035,6 +4013,7 @@ table.st--fixed {
   flex-direction: column;
   gap: 8px;
   padding: 24px;
+  margin-top: 40px;
   border-radius: 16px;
   background-color: #f7f8fc;
   line-height: 1.5;
@@ -4057,6 +4036,37 @@ table.st--fixed {
 .service-funds-cont .list li img {
   max-width: 80%;
   max-height: 80%;
+}
+
+.service-case-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 20px 0;
+  font-size: 15px;
+  color: var(--fc-gray);
+}
+.service-case-cont .TMTitle-h5 .name {
+  position: relative;
+  display: inline-block;
+  padding-right: 12px;
+  margin-right: 5px;
+}
+.service-case-cont .TMTitle-h5 .name::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -7px;
+  height: 14px;
+  border-right: 1px solid var(--c-border);
+}
+.service-case-cont .TMTitle-h5 .desc {
+  display: inline-flex;
+  align-items: center;
+  color: var(--fc-gray);
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .about-directions-map {
