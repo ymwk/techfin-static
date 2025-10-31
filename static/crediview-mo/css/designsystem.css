@@ -53,6 +53,16 @@
   background-color: #fb1cb1;
   color: #fff;
 }
+.index-pagelist .eng::after {
+  content: "ENG";
+  display: inline-block;
+  padding: 4px 8px;
+  margin-left: 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  background-color: #000;
+  color: #fff;
+}
 .index-pagelist a {
   display: inline-flex;
   align-items: center;

@@ -62,6 +62,19 @@
       }
     }
 
+    .eng {
+      &::after {
+        content: 'ENG';
+        display: inline-block;
+        padding: 4px 8px;
+        margin-left: 10px;
+        border-radius: 12px;
+        font-size: 11px;
+        background-color: #000;
+        color: #fff;
+      }
+    }
+
     a {
       display: inline-flex;
       align-items: center;
