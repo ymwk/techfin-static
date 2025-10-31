@@ -2925,6 +2925,7 @@ table .TMCheck-root {
   align-items: center;
   gap: 8px;
   height: 270px;
+  padding: 20px;
   color: #fff;
   font-size: 16px;
   font-weight: 300;
@@ -3018,6 +3019,7 @@ table .TMCheck-root {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.5;
+  text-transform: uppercase;
 }
 .TMBanner-root .tit {
   font-size: 18px;
@@ -3599,12 +3601,12 @@ table.st--fixed {
 
 .service-offer-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 16px;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  text-shadow: 0px 0px 1px 0px rgba(8, 20, 67, 0.3215686275);
+  text-shadow: 0px 0px 1px rgba(8, 20, 67, 0.3215686275);
 }
 .service-offer-list li {
   display: flex;
@@ -3613,7 +3615,7 @@ table.st--fixed {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1;
-  padding: 20px;
+  padding: 8px;
   border-radius: 16px;
   text-align: center;
   background: no-repeat center center/cover;
@@ -3722,10 +3724,11 @@ table.st--fixed {
 .service-offer-list2 .list li::before {
   content: "";
   position: absolute;
-  top: 2px;
+  top: 50%;
   left: 0;
   width: 18px;
   height: 18px;
+  margin-top: -9px;
   border-radius: 50%;
   background: #3869fc url(../image/icon/ic_check_w.svg) no-repeat center 55%/10px;
 }
@@ -3767,6 +3770,7 @@ table.st--fixed {
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
   line-height: 1.5;
+  text-transform: uppercase;
 }
 .service-ratings-shortcut.shortcut-02 {
   background-image: url(../image/bg/bg_service_shortcut02.png);
@@ -3785,6 +3789,7 @@ table.st--fixed {
 .service-ratings-shortcut .tit-line {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
 }
 .service-ratings-shortcut .logo {
@@ -3798,23 +3803,30 @@ table.st--fixed {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
+  min-width: 120px;
   height: 40px;
   margin-top: 8px;
+  padding: 0 24px;
   border-radius: 8px;
   background-color: #fff;
   color: var(--fc-default);
   font-weight: 700;
+  text-transform: none;
 }
 .service-ratings-shortcut .btn .TMIcon-root {
   margin: 0 -8px 0 -3px;
 }
 
+.service-target-list {
+  align-items: stretch;
+}
 .service-target-list .item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   width: 288px;
+  height: auto;
   border-radius: 16px;
   padding: 0 22px 36px;
   background-color: #f7f8fc;
@@ -3829,6 +3841,13 @@ table.st--fixed {
   height: 130px;
   margin-bottom: 8px;
   background: no-repeat center bottom/contain;
+}
+.service-target-list .desc {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .service-target-list .bg-target-01::before {
   background-image: url(../image/bg/bg_target_01.png);
@@ -3946,6 +3965,7 @@ table.st--fixed {
   position: relative;
   align-items: flex-start;
   padding: 22px;
+  text-align: left;
   counter-increment: number 1;
 }
 .service-benefit .service-target-list .item::after {
