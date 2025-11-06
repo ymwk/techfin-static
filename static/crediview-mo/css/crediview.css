@@ -12679,19 +12679,7 @@ table .SOLCheck-root {
 }
 .SOLHeader-root.t--landing .SOLHeader-inner {
   color: #353c49;
-  background: transparent;
-}
-.SOLHeader-root.t--landing.light .SOLHeader-inner {
-  color: #fff;
-}
-.SOLHeader-root.t--landing.light .SOLHeader-logo .logo:not(.SOLHeader-nav .logo) .eng {
-  background-image: url(../../Common/image/crediview/logo/bi_crediview_w.svg);
-}
-.SOLHeader-root.t--landing.light .SOLHeader-logo .logo:not(.SOLHeader-nav .logo) .kr {
-  background-image: url(../../Common/image/crediview/logo/bi_crediview_w_kr.svg);
-}
-.SOLHeader-root.t--landing.light .SOLHeader-global-link {
-  border-color: rgba(255, 255, 255, 0.2);
+  background: #fff;
 }
 .SOLHeader-root.sticky .SOLHeader-inner {
   top: -56px;
@@ -14362,7 +14350,7 @@ table .SOLCheck-root {
   width: 100px;
   height: 28px;
   padding: 4px 20px 4px 0;
-  vertical-align: top;
+  vertical-align: middle;
   font-size: var(--font-13);
   color: var(--fc-gray2);
   font-weight: 400;
@@ -16004,11 +15992,12 @@ table .SOLCheck-root {
 
 .SOLRatingCard-btn,
 .SOLCard-btn {
-  width: 100% !important;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   gap: 4px;
   color: #1d2129;

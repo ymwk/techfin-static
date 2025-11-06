@@ -14,27 +14,27 @@
   &.t--landing {
     .SOLHeader-inner {
       color: #353c49;
-      background: transparent;
+      background: #fff;
     }
 
-    &.light {
-      .SOLHeader-inner {
-        color: #fff;
-      }
+    // &.light {
+    //   .SOLHeader-inner {
+    //     color: #fff;
+    //   }
 
-      .SOLHeader-logo .logo:not(.SOLHeader-nav .logo) {
-        .eng {
-          background-image: url(../../Common/image/crediview/logo/bi_crediview_w.svg);
-        }
-        .kr {
-          background-image: url(../../Common/image/crediview/logo/bi_crediview_w_kr.svg);
-        }
-      }
+    //   .SOLHeader-logo .logo:not(.SOLHeader-nav .logo) {
+    //     .eng {
+    //       background-image: url(../../Common/image/crediview/logo/bi_crediview_w.svg);
+    //     }
+    //     .kr {
+    //       background-image: url(../../Common/image/crediview/logo/bi_crediview_w_kr.svg);
+    //     }
+    //   }
 
-      .SOLHeader-global-link {
-        border-color: rgba(255, 255, 255, 0.2);
-      }
-    }
+    //   .SOLHeader-global-link {
+    //     border-color: rgba(255, 255, 255, 0.2);
+    //   }
+    // }
   }
 
   &.sticky .SOLHeader-inner {
