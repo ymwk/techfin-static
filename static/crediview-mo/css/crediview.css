@@ -16470,13 +16470,13 @@ table .SOLCheck-root {
   color: var(--fc-default);
 }
 
-.csevent-list {
+.event-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding-bottom: 16px;
 }
-.csevent-list > li {
+.event-list > li {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16485,43 +16485,43 @@ table .SOLCheck-root {
   box-shadow: 0px 2px 4px 0px rgba(20, 25, 58, 0.06);
   overflow: hidden;
 }
-.csevent-list > li.t--disabled {
+.event-list > li.t--disabled {
   box-shadow: none;
 }
-.csevent-list > li.t--disabled::after {
+.event-list > li.t--disabled::after {
   content: "";
   z-index: 1;
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.1);
 }
-.csevent-list a {
+.event-list a {
   display: flex;
   flex-direction: column;
   color: inherit;
 }
-.csevent-list .event-thumb {
+.event-list .event-thumb {
   display: flex;
 }
-.csevent-list .event-thumb img {
+.event-list .event-thumb img {
   display: block;
   width: 100%;
 }
-.csevent-list .event-body {
+.event-list .event-body {
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 20px;
 }
-.csevent-list .event-body-title {
+.event-list .event-body-title {
   display: flex;
   justify-content: space-between;
 }
-.csevent-list .event-body-desc {
+.event-list .event-body-desc {
   font-size: var(--font-13);
   line-height: 1.5;
 }
-.csevent-list .event-body-date {
+.event-list .event-body-date {
   font-size: var(--font-12);
   color: var(--fc-gray2);
 }
