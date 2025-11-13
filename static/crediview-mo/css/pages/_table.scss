@@ -87,6 +87,17 @@
       font-size: var(--font-15);
     }
   }
+
+  &.t--notify {
+    th {
+      width: 50px;
+      padding-right: 0
+    }
+    th, td {
+      height: 20px;
+      min-height: 20px
+    }
+  }
 }
 
 .service-result-box {

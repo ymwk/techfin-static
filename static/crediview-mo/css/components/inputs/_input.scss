@@ -16,7 +16,8 @@
   }
 
   .SOLBtn-root {
-    min-width: 80px;
+    min-width: 105px;
+    padding: 0 10px
   }
 
   &.s--lg {
@@ -279,7 +280,7 @@
 .SOLInput-count {
   padding-right: 6px;
   font-size: var(--font-13);
-  color: var(--c-active);
+  color: var(--c-error);
   order: -1;
 }
 

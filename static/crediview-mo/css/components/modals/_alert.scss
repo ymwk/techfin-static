@@ -120,6 +120,10 @@
     color: var(--fc-gray2);
     padding-right: 10px;
     text-indent: 0;
+
+    &.wide {
+      min-width: 70px
+    }
   }
 
   .msg-expdate {

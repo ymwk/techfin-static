@@ -113,7 +113,9 @@
   }
 
   &.t--ai {
-    .hr-comm { margin: 0 }
+    .hr-comm {
+      margin: 0;
+    }
   }
 }
 
@@ -157,7 +159,7 @@
 
   &.s--lg {
     padding: 12px;
-    font-size: var(--font-14)
+    font-size: var(--font-14);
   }
 
   & + & {
@@ -203,4 +205,21 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.SOLSnackbar-btn-close {
+  position: absolute;
+  top: -32px;
+  right: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: var(--font-18);
+  color: #fff;
+
+  .SOLIcon-close {
+    font-size: var(--font-40);
+    margin-top: -2px
+  }
 }

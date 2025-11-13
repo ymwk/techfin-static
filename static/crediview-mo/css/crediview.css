@@ -9374,7 +9374,8 @@ body.keyboard-open .members-loginbox .loginbox-action {
   flex-shrink: 0;
 }
 .SOLInput-root .SOLBtn-root {
-  min-width: 80px;
+  min-width: 105px;
+  padding: 0 10px;
 }
 .SOLInput-root.s--lg {
   gap: 12px;
@@ -9621,7 +9622,7 @@ body.keyboard-open .members-loginbox .loginbox-action {
 .SOLInput-count {
   padding-right: 6px;
   font-size: var(--font-13);
-  color: var(--c-active);
+  color: var(--c-error);
   order: -1;
 }
 
@@ -11765,6 +11766,9 @@ table .SOLCheck-root {
   padding-right: 10px;
   text-indent: 0;
 }
+.SOLAlert-msgbox .name.wide, .SOLSnackbar-msgbox .name.wide {
+  min-width: 70px;
+}
 .SOLAlert-msgbox .msg-expdate, .SOLSnackbar-msgbox .msg-expdate {
   display: flex;
   flex-direction: column;
@@ -12147,6 +12151,22 @@ table .SOLCheck-root {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.SOLSnackbar-btn-close {
+  position: absolute;
+  top: -32px;
+  right: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: var(--font-18);
+  color: #fff;
+}
+.SOLSnackbar-btn-close .SOLIcon-close {
+  font-size: var(--font-40);
+  margin-top: -2px;
 }
 
 .no-touch-action {
@@ -13228,6 +13248,19 @@ table .SOLCheck-root {
   margin-bottom: 12px;
 }
 
+.box-msg-title {
+  padding: 10px 0;
+  margin: -5px 0 10px;
+  border-bottom: 1px solid var(--tb-border);
+  color: #8C8C99;
+  font-size: var(--font-12);
+}
+.box-msg-title em {
+  font-size: var(--font-14);
+  color: #1D2129;
+  padding-right: 4px;
+}
+
 .js-accordian-root .box-msg-header {
   padding-bottom: 0;
 }
@@ -13746,7 +13779,6 @@ table .SOLCheck-root {
   color: #8c8c99;
   align-items: center;
   text-align: center;
-  letter-spacing: -6%;
 }
 .report-intro-title em {
   color: var(--fc-default);
@@ -14416,6 +14448,14 @@ table .SOLCheck-root {
 }
 .SOLTable-small.s--lg td {
   font-size: var(--font-15);
+}
+.SOLTable-small.t--notify th {
+  width: 50px;
+  padding-right: 0;
+}
+.SOLTable-small.t--notify th, .SOLTable-small.t--notify td {
+  height: 20px;
+  min-height: 20px;
 }
 
 .service-result-box .SOLTable-small {
@@ -16470,13 +16510,13 @@ table .SOLCheck-root {
   color: var(--fc-default);
 }
 
-.event-list {
+.csevent-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding-bottom: 16px;
 }
-.event-list > li {
+.csevent-list > li {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16485,43 +16525,43 @@ table .SOLCheck-root {
   box-shadow: 0px 2px 4px 0px rgba(20, 25, 58, 0.06);
   overflow: hidden;
 }
-.event-list > li.t--disabled {
+.csevent-list > li.t--disabled {
   box-shadow: none;
 }
-.event-list > li.t--disabled::after {
+.csevent-list > li.t--disabled::after {
   content: "";
   z-index: 1;
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.1);
 }
-.event-list a {
+.csevent-list a {
   display: flex;
   flex-direction: column;
   color: inherit;
 }
-.event-list .event-thumb {
+.csevent-list .event-thumb {
   display: flex;
 }
-.event-list .event-thumb img {
+.csevent-list .event-thumb img {
   display: block;
   width: 100%;
 }
-.event-list .event-body {
+.csevent-list .event-body {
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 20px;
 }
-.event-list .event-body-title {
+.csevent-list .event-body-title {
   display: flex;
   justify-content: space-between;
 }
-.event-list .event-body-desc {
+.csevent-list .event-body-desc {
   font-size: var(--font-13);
   line-height: 1.5;
 }
-.event-list .event-body-date {
+.csevent-list .event-body-date {
   font-size: var(--font-12);
   color: var(--fc-gray2);
 }

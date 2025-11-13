@@ -72,6 +72,20 @@
   }
 }
 
+.box-msg-title {
+  padding: 10px 0;
+  margin: -5px 0 10px;
+  border-bottom: 1px solid var(--tb-border);
+  color: #8C8C99;
+  font-size: var(--font-12);
+
+  em {
+    font-size: var(--font-14);
+    color: #1D2129;
+    padding-right: 4px;
+  }
+}
+
 .js-accordian-root {
   .box-msg-header {
     padding-bottom: 0;

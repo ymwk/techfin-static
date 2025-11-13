@@ -2777,7 +2777,8 @@ button.swiper-pagination-bullet {
   flex-shrink: 0;
 }
 .SOLInput-root .SOLBtn-root {
-  min-width: 80px;
+  min-width: 105px;
+  padding: 0 10px;
 }
 .SOLInput-root.s--lg {
   gap: 12px;
@@ -3024,7 +3025,7 @@ button.swiper-pagination-bullet {
 .SOLInput-count {
   padding-right: 6px;
   font-size: var(--font-13);
-  color: var(--c-active);
+  color: var(--c-error);
   order: -1;
 }
 
@@ -5106,6 +5107,9 @@ table .SOLCheck-root {
   padding-right: 10px;
   text-indent: 0;
 }
+.SOLAlert-msgbox .name.wide, .SOLSnackbar-msgbox .name.wide {
+  min-width: 70px;
+}
 .SOLAlert-msgbox .msg-expdate, .SOLSnackbar-msgbox .msg-expdate {
   display: flex;
   flex-direction: column;
@@ -5488,6 +5492,22 @@ table .SOLCheck-root {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.SOLSnackbar-btn-close {
+  position: absolute;
+  top: -32px;
+  right: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: var(--font-18);
+  color: #fff;
+}
+.SOLSnackbar-btn-close .SOLIcon-close {
+  font-size: var(--font-40);
+  margin-top: -2px;
 }
 
 .no-touch-action {
@@ -6070,6 +6090,19 @@ table .SOLCheck-root {
   margin-bottom: 12px;
 }
 
+.box-msg-title {
+  padding: 10px 0;
+  margin: -5px 0 10px;
+  border-bottom: 1px solid var(--tb-border);
+  color: #8C8C99;
+  font-size: var(--font-12);
+}
+.box-msg-title em {
+  font-size: var(--font-14);
+  color: #1D2129;
+  padding-right: 4px;
+}
+
 .js-accordian-root .box-msg-header {
   padding-bottom: 0;
 }
@@ -6588,7 +6621,6 @@ table .SOLCheck-root {
   color: #8c8c99;
   align-items: center;
   text-align: center;
-  letter-spacing: -6%;
 }
 .report-intro-title em {
   color: var(--fc-default);
@@ -7258,6 +7290,14 @@ table .SOLCheck-root {
 }
 .SOLTable-small.s--lg td {
   font-size: var(--font-15);
+}
+.SOLTable-small.t--notify th {
+  width: 50px;
+  padding-right: 0;
+}
+.SOLTable-small.t--notify th, .SOLTable-small.t--notify td {
+  height: 20px;
+  min-height: 20px;
 }
 
 .service-result-box .SOLTable-small {
