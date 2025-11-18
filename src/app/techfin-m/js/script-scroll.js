@@ -1,16 +1,16 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
 const introList = document.querySelectorAll('.intro-landing .title span');
 gsap.from(introList, {
   scrollTrigger: {
     trigger: '.intro-landing',
     start: 'top 50%',
   },
-  stagger: 0.3,
+  stagger: 0.4,
   opacity: 0,
   yPercent: 20,
-  delay: 0.5
+  delay: 0.5,
+  ease: 'circ.out',
 });
 
 gsap.from('.intro-card .card-01', {
@@ -18,7 +18,7 @@ gsap.from('.intro-card .card-01', {
     trigger: '.intro-card .intro-section-inner',
     start: 'top top',
     end: '+=1000',
-    pin: true,
+    // pin: true,
   },
   opacity: 0,
   yPercent: 50,
@@ -50,14 +50,14 @@ const msgTimeline = gsap
   .to('.intro-msg .target', {
     yPercent: -50,
     duration: 0.7,
-    delay: 1
-  })
-  // .to('.intro-msg .target', {
-  //   yPercent: -50,
-  //   duration: 1,
-  //   delay: 1
-  // });
- 
+    delay: 1,
+  });
+// .to('.intro-msg .target', {
+//   yPercent: -50,
+//   duration: 1,
+//   delay: 1
+// });
+
 const numList = document.querySelectorAll('.intro-data .count');
 
 gsap.from(numList, {

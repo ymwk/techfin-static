@@ -4400,7 +4400,7 @@ table.st--fixed {
   letter-spacing: -0.02em;
   line-height: 1.4;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1019607843);
-  transform: translateY(-30%);
+  transform: translateY(-40px);
 }
 
 .intro-landing-bg {
@@ -4474,7 +4474,7 @@ table.st--fixed {
   position: relative;
   font-size: 16px;
   line-height: 1.5;
-  height: 550px;
+  height: 590px;
 }
 .intro-card .card-list li.card-front {
   z-index: 2;
@@ -4559,16 +4559,21 @@ table.st--fixed {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 94px;
-  height: 43px;
-  background: url(../image/intro/rotation_label.png) no-repeat center center/contain;
+  height: 44px;
+  border-radius: 40px;
+  padding: 2px;
   color: #fff;
   font-size: 20px;
   font-weight: 500;
+  background: linear-gradient(78.93deg, #00ceff -23.64%, #2f6fff 72.79%, #8829ff 177.97%, #f632ff 268.55%);
 }
-.intro-rotation .rotation-label.wide {
-  width: 109px;
-  background-image: url(../image/intro/rotation_label_wide.png);
+.intro-rotation .rotation-label > * {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-radius: 40px;
+  padding: 0 20px;
+  background-color: #1D2E5B;
 }
 .intro-rotation .rotation-circle {
   display: flex;
@@ -4644,6 +4649,7 @@ table.st--fixed {
 }
 .intro-msg .msg-box {
   display: flex;
+  justify-content: center;
   white-space: nowrap;
 }
 .intro-msg .action {
@@ -4662,22 +4668,28 @@ table.st--fixed {
   height: 80px;
 }
 
-.intro-data::before, .intro-data::after {
+.intro-card .intro-section-inner::before,
+.intro-data::before,
+.intro-data::after {
   content: "";
   position: absolute;
   width: 277px;
   height: 322px;
   background: url(../image/intro/data_bg.png) no-repeat left top/contain;
 }
+
+.intro-card .intro-section-inner::before,
 .intro-data::before {
   top: 0;
   left: 0;
 }
+
 .intro-data::after {
   right: 0;
   bottom: 0;
   transform: rotate(180deg);
 }
+
 .intro-data .data-list {
   display: flex;
   flex-direction: column;
@@ -4708,6 +4720,7 @@ table.st--fixed {
   color: #3869fc;
   font-size: 32px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .intro-swiper {
@@ -4787,6 +4800,8 @@ table.st--fixed {
 }
 
 .intro-banner-hr {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 8px;
