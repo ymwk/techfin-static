@@ -13,7 +13,7 @@ gsap.from(introList, {
   ease: 'circ.out',
 });
 
-gsap.from('.intro-card .card-01', {
+gsap.from('.intro-card li:first-of-type', {
   scrollTrigger: {
     trigger: '.intro-card .intro-section-inner',
     start: 'top top',
@@ -24,6 +24,7 @@ gsap.from('.intro-card .card-01', {
   yPercent: 50,
   duration: 1,
   ease: 'circ.out',
+  delay: 0.3
 });
 
 gsap.to('.intro-rotation .circle-techfin .arrow', {
