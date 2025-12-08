@@ -20,6 +20,15 @@
   gap: 32px;
   padding: 20px var(--spc-w) 0;
   border-bottom: 1px solid var(--tb-border);
+
+  &:has(> *:nth-child(3)) {
+    gap: 16px;
+
+    .SOLTab-btn {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
 }
 
 .SOLTab-btn {
@@ -84,5 +93,5 @@
 }
 
 .SOLTab-btns {
-  padding: 0 var(--spc-w) 24px
+  padding: 0 var(--spc-w) 24px;
 }

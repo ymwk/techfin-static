@@ -42,6 +42,13 @@
       height: 26px;
     }
   }
+
+  .SOLTable-small {
+    th, td {
+      padding-top: 0;
+      padding-bottom: 0
+    }
+  }
 }
 
 .box-msg-header {
@@ -186,8 +193,9 @@
   justify-content: center;
   min-height: 24px;
   padding-left: 32px;
+  padding-top: 4px;
   line-height: 1.4;
-  background: url(../image/icon/ic_msg_noti.svg) no-repeat left center;
+  background: url(../image/icon/ic_msg_noti.svg) no-repeat left top;
 
   li::before {
     content: '·';
@@ -448,9 +456,6 @@
 }
 
 // 8배수
-.pt-0 {
-  padding-top: 0 !important
-}
 .mt-g1 {
   margin-top: 8px;
 }
@@ -503,7 +508,13 @@
 .pt-0 {
   padding-top: 0 !important;
 }
-
 .pb-0 {
   padding-bottom: 0 !important;
+}
+.pb-g2 {
+  padding-bottom: 16px !important;
+}
+
+.b-btm {
+  border-bottom: 1px solid var(--tb-border)
 }

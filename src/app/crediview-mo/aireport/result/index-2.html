@@ -104,55 +104,25 @@
       <div class="console-container">
         <div class="SOLTab-root">
           <div class="SOLTab-menu">
-            <button type="button" class="SOLTab-btn">실시간 진단등급</button>
-            <button type="button" class="SOLTab-btn st--active">진단내역</button>
+            <button type="button" class="SOLTab-btn">최신 진단내역</button>
+            <button type="button" class="SOLTab-btn st--active">상세 진단내역</button>
+            <button type="button" class="SOLTab-btn">구독 및 설정</button>
           </div>
 
           <div class="SOLTab-container">
-            <!-- 실시간 진단등급 -->
+            <!-- 최신 진단내역 -->
             <section class="SOLTab-content">
-              <h3 class="blind">실시간 진단등급</h3>
-              <div class="SOLTab-inner">
-                <div class="section-outer">
-                  <div class="box-outlined">
-                    <div class="report-result">
-                      <span>실시간 진단등급</span>
-                      <em class="c--active">10등급</em>
-                    </div>
-                    <hr class="hr-dashed" />
-                    <table class="SOLTable-small t--report">
-                      <tbody>
-                        <tr>
-                          <th>데이터 기준월</th>
-                          <td><em>2025년 12월</em></td>
-                        </tr>
-                        <tr>
-                          <th>신청일</th>
-                          <td>2025년 12월 31일</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
+              <h3 class="blind">최신 진단내역</h3>
+              <div class="SOLTab-inner"></div>
             </section>
-            <!-- 실시간 진단등급 tab end -->
+            <!-- 최신 진단내역 tab end -->
 
-            <!-- 진단내역 -->
+            <!-- 상세 진단내역 -->
             <section class="SOLTab-content st--active">
-              <h3 class="blind">진단내역</h3>
+              <h3 class="blind">상세 진단내역</h3>
               <div class="SOLTab-inner">
-                <div class="banner-shortcut">
-                  <div class="banner-cont">
-                    <p class="banner-shortcut-report">기업경영진단&nbsp;<em>매월 업데이트·알림서비스</em></p>
-                  </div>
-                  <button type="button" class="SOLIconBtn-root">
-                    <i class="SOLIcon-root SOLIcon-gt--r"></i>
-                    <span class="blind">이용약관 팝업 열기</span>
-                  </button>
-                </div>
-
                 <div class="SOLAlign-root">
+                  <span class="result">총 <em>10</em>건</span>
                   <div class="SOLAlign-utils">
                     <span>2024-09-24 ~ 2025-09-24</span>
                     <button type="button" class="SOLIconBtn-root">
@@ -163,7 +133,7 @@
                 </div>
                 <!-- //SOLAlign-root -->
 
-                <h4 class="card-category">2025년 8월<span class="utils">2건</span></h4>
+                <h4 class="card-category">2025년 8월</h4>
 
                 <div class="section-outer">
                   <ul class="mypage-member-list">
@@ -209,16 +179,9 @@
                         </button>
                       </div>
                     </li>
-                  </ul>
-                </div>
-                <!-- //section-outer -->
 
-                <h4 class="card-category">2025년 7월<span class="utils">1건</span></h4>
-
-                <div class="section-outer">
-                  <ul class="mypage-member-list">
                     <li class="list-item">
-                      <span class="SOLLabel-root c--disabled">진단불가</span>
+                      <span class="SOLLabel-root c--success">진단완료</span>
                       <span class="time">10일(일) 05:30:30</span>
 
                       <div class="list-detail">
@@ -234,10 +197,39 @@
                             </tr>
                           </tbody>
                         </table>
+                        <button type="button" class="SOLIconBtn-root c--light">
+                          <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                        </button>
                       </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //section-outer -->
 
-                      <div class="mt-g1">
-                        <button type="button" class="SOLBtn-root w--full">사유확인</button>
+                <h4 class="card-category">2025년 7월</h4>
+
+                <div class="section-outer">
+                  <ul class="mypage-member-list">
+                    <li class="list-item">
+                      <span class="SOLLabel-root c--disabled">진단불가</span>
+                      <span class="time">10일(일) 05:30:30</span>
+
+                      <div class="list-detail">
+                        <table class="SOLTable-small">
+                          <tbody>
+                            <tr>
+                              <th>실시간 진단등급</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th>데이터 기준월</th>
+                              <td>-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <button type="button" class="SOLIconBtn-root c--light">
+                          <i class="SOLIcon-root SOLIcon-gt--r"></i>
+                        </button>
                       </div>
                     </li>
                   </ul>
@@ -246,22 +238,19 @@
               </div>
               <!-- //SOLTab-inner -->
             </section>
-            <!-- 진단내역 tab end -->
+            <!-- 상세 진단내역 tab end -->
+
+            <!-- 구독 및 설정 -->
+            <section class="SOLTab-content">
+              <h3 class="blind">구독 및 설정</h3>
+              <div class="SOLTab-inner"></div>
+            </section>
+            <!-- 구독 및 설정 tab end -->
           </div>
         </div>
         <!-- SOLTab-root -->
       </div>
       <!-- //console-container -->
-
-      <div class="console-footer">
-        <button class="footer-topBtn">
-          <i class="SOLIcon-root SOLIcon-arr--t"></i>
-          <span class="blind">Scroll to Top</span>
-        </button>
-        <div class="console-footer-btns">
-          <button type="button" class="SOLBtn-root t--contained s--lg w--full">경영진단 신청</button>
-        </div>
-      </div>
     </div>
 
     <!-- component js -->

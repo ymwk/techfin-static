@@ -425,6 +425,14 @@
   align-items: center;
   justify-content: center;
   padding: 30px;
+
+  .SOLTable-small {
+    th,
+    td {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 }
 
 .SOLFullpage-root .service-result-box {
@@ -1073,7 +1081,7 @@
     }
 
     .tag {
-      font-size: 12px
+      font-size: 12px;
     }
 
     .label {

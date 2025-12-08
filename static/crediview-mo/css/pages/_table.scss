@@ -24,6 +24,10 @@
     font-weight: 600;
     text-align: left;
     line-height: 1.5;
+
+    & > * {
+      vertical-align: middle;
+    }
   }
 
   em {
@@ -49,12 +53,12 @@
 
   &.t--coupon {
     th {
-      line-height: 26px
+      line-height: 26px;
     }
     td {
-    min-height: 38px;
-    font-weight: 500;
-  }
+      min-height: 38px;
+      font-weight: 500;
+    }
   }
 
   &.t--mypage td {
@@ -75,8 +79,12 @@
   }
 
   &.t--report {
-    td { font-weight: 400}
-    em { color: inherit }
+    td {
+      font-weight: 400;
+    }
+    em {
+      color: inherit;
+    }
   }
 
   &.s--lg {
@@ -91,22 +99,23 @@
   &.t--notify {
     th {
       width: 50px;
-      padding-right: 0
+      padding-right: 0;
     }
-    th, td {
+    th,
+    td {
       height: 20px;
-      min-height: 20px
+      min-height: 20px;
     }
   }
 }
 
 .service-result-box {
   .SOLTable-small {
-    min-width: 300px;
+    min-width: 280px;
     white-space: nowrap;
 
     th {
-      padding-right: 50px;
+      // padding-right: 50px;
     }
 
     td {
@@ -121,6 +130,11 @@
     .c--active,
     .c--disabled {
       font-weight: 700;
+    }
+
+    .desc {
+      white-space: wrap;
+      word-break: keep-all;
     }
   }
 }

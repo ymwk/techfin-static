@@ -17,7 +17,7 @@
               <i class="SOLIcon-root SOLIcon-gt--l s--xl"></i>
               <span class="blind">Prev</span>
             </button>
-            <h2 class="SOLHeader-title-text">진단내역</h2>
+            <h2 class="SOLHeader-title-text">경영진단 상세정보</h2>
           </div>
 
           <div class="SOLHeader-global">
@@ -103,80 +103,78 @@
 
       <div class="console-container">
         <div class="SOLTab-root">
-          <div class="SOLTab-menu">
-            <button type="button" class="SOLTab-btn">최신 진단내역</button>
-            <button type="button" class="SOLTab-btn st--active">상세 진단내역</button>
-            <button type="button" class="SOLTab-btn">구독 및 설정</button>
-          </div>
-
           <div class="SOLTab-container">
-            <!-- 최신 진단등급 -->
-            <section class="SOLTab-content">
+            <!-- 최신 진단내역 20251205 -->
+            <section class="SOLTab-content st--active">
               <h3 class="blind">최신 진단내역</h3>
               <div class="SOLTab-inner">
-                <div class="content-empty ic--report">
-                  <p>아직 진단 내역이 없어요.</p>
-                </div>
-              </div>
-              <div class="section-outer pb-0 mb-g4--m">
-                <div class="console-footer-cont">우리회사의 <br /><em>경영상태를 지금 바로 확인</em>해 보세요.</div>
-              </div>
-              <div class="console-footer">
-                <button class="footer-topBtn">
-                  <i class="SOLIcon-root SOLIcon-arr--t"></i>
-                  <span class="blind">Scroll to Top</span>
-                </button>
-                <div class="console-footer-btns">
-                  <button type="button" class="SOLBtn-root t--contained s--lg w--full">경영진단 신청</button>
-                </div>
-              </div>
-            </section>
-            <!-- 최신 진단등급 tab end -->
+                <div class="section-outer">
+                  <div class="service-result-box">
+                    <table class="SOLTable-small">
+                      <tbody>
+                        <tr>
+                          <th>신청일</th>
+                          <td>2024-05-15</td>
+                        </tr>
+                        <tr>
+                          <th>생성일</th>
+                          <td>2024-05-15</td>
+                        </tr>
+                        <tr>
+                          <th>상태</th>
+                          <td><span class="c--active">진단완료</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
 
-            <!-- 상세 진단내역 -->
-            <section class="SOLTab-content st--active">
-              <h3 class="blind">상세 진단내역</h3>
-              <div class="SOLTab-inner">
-                <!-- <div class="banner-shortcut">
-                  <div class="banner-cont">
-                    <p class="banner-shortcut-report">AI경영진단&nbsp;<em>매월 업데이트·알림서비스</em></p>
+                    <hr class="hr-comm" />
+
+                    <table class="SOLTable-small">
+                      <tbody>
+                        <tr>
+                          <th>발급번호</th>
+                          <td>TR-RATE-241231-001</td>
+                        </tr>
+                        <tr>
+                          <th>실시간 진단등급</th>
+                          <td>10등급</td>
+                        </tr>
+                        <tr>
+                          <th>데이터 기준월</th>
+                          <td>2024-05</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <button type="button" class="SOLIconBtn-root">
-                    <i class="SOLIcon-root SOLIcon-gt--r"></i>
-                    <span class="blind">이용약관 팝업 열기</span>
-                  </button>
-                </div> -->
+                  <!-- //service-result-box -->
 
-                <div class="content-empty ic--report">
-                  <p>아직 진단 내역이 없어요.</p>
-                </div>
-              </div>
-              <div class="section-outer pb-0 mb-g4--m">
-                <div class="console-footer-cont">우리회사의 <br /><em>경영상태를 지금 바로 확인</em>해 보세요.</div>
-              </div>
-              <div class="console-footer">
-                <button class="footer-topBtn">
-                  <i class="SOLIcon-root SOLIcon-arr--t"></i>
-                  <span class="blind">Scroll to Top</span>
-                </button>
-                <div class="console-footer-btns">
-                  <button type="button" class="SOLBtn-root t--contained s--lg w--full">경영진단 신청</button>
-                </div>
-              </div>
-            </section>
-            <!-- 상세 진단내역 tab end -->
+                  <button type="button" class="SOLBtn-root w--full">메일 발송이력</button>
 
-            <!-- 구독 및 설정 -->
-            <section class="SOLTab-content">
-              <h3 class="blind">구독 및 설정</h3>
-              <div class="SOLTab-inner"></div>
+                  <div class="box-msg">
+                    <p class="msg-noti">AI코멘트가 포함된 전체 보고서는 PC 버전에서 확인해 주세요</p>
+                  </div>
+                </div>
+                <!-- //section-outer -->
+              </div>
+              <!-- //SOLTab-inner -->
             </section>
-            <!-- 구독 및 설정 tab end -->
+            <!-- 실시간 진단등급 tab end -->
           </div>
         </div>
         <!-- SOLTab-root -->
       </div>
       <!-- //console-container -->
+
+      <div class="console-footer">
+        <button class="footer-topBtn">
+          <i class="SOLIcon-root SOLIcon-arr--t"></i>
+          <span class="blind">Scroll to Top</span>
+        </button>
+        <div class="console-footer-btns">
+          <button type="button" class="SOLBtn-root t--outlined s--lg w--full">이메일 발송</button>
+          <button type="button" class="SOLBtn-root t--contained s--lg w--full">PDF 다운</button>
+        </div>
+      </div>
     </div>
 
     <!-- component js -->

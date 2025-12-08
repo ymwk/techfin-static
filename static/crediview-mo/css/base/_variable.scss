@@ -1,8 +1,8 @@
 :root {
   // color
   color: #222;
-  --fc-default: #1D2129;
-  --fc-gray1: #8C8C99;
+  --fc-default: #1d2129;
+  --fc-gray1: #8c8c99;
   --fc-gray2: #9b9ba0;
   --fc-rating: #1e479f;
 
@@ -72,12 +72,9 @@
   // etc
   --ease: cubic-bezier(0, 0.75, 0, 1);
   --gra: linear-gradient(97deg, #0046ff, #8e48ff 60%);
-  --beta-g: linear-gradient(
-    108.47deg,
-    #22d6ff -38.28%,
-    #225eff 43.3%,
-    #8c2fff 100%
-  );
+  --beta-g: linear-gradient(108.47deg, #22d6ff -38.28%, #225eff 43.3%, #8c2fff 100%);
+  --gra2: linear-gradient(113.73deg, #22d6ff -0.36%, #225eff 62.03%, #8c2fff 105.39%);
+
   --header-bg: #3d58c9;
   --header-h: 56px;
 }

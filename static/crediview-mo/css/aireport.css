@@ -379,8 +379,8 @@ textarea {
 
 :root {
   color: #222;
-  --fc-default: #1D2129;
-  --fc-gray1: #8C8C99;
+  --fc-default: #1d2129;
+  --fc-gray1: #8c8c99;
   --fc-gray2: #9b9ba0;
   --fc-rating: #1e479f;
   --c-component: #265cf0;
@@ -440,12 +440,8 @@ textarea {
   --font-80: 5.71rem;
   --ease: cubic-bezier(0, 0.75, 0, 1);
   --gra: linear-gradient(97deg, #0046ff, #8e48ff 60%);
-  --beta-g: linear-gradient(
-    108.47deg,
-    #22d6ff -38.28%,
-    #225eff 43.3%,
-    #8c2fff 100%
-  );
+  --beta-g: linear-gradient(108.47deg, #22d6ff -38.28%, #225eff 43.3%, #8c2fff 100%);
+  --gra2: linear-gradient(113.73deg, #22d6ff -0.36%, #225eff 62.03%, #8c2fff 105.39%);
   --header-bg: #3d58c9;
   --header-h: 56px;
 }
@@ -2444,6 +2440,7 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   color: #797a88;
   white-space: nowrap;
+  line-height: 1;
 }
 .SOLLabel-root::before {
   content: "";
@@ -3243,6 +3240,9 @@ button.swiper-pagination-bullet {
 }
 .SOLCheck-label [type=checkbox]:disabled {
   background-color: #f5f5f5;
+}
+.SOLCheck-label .required {
+  color: var(--c-component);
 }
 
 .SOLCheck-root .SOLText-note {
@@ -5877,6 +5877,13 @@ table .SOLCheck-root {
   padding: 20px var(--spc-w) 0;
   border-bottom: 1px solid var(--tb-border);
 }
+.SOLTab-menu:has(> *:nth-child(3)) {
+  gap: 16px;
+}
+.SOLTab-menu:has(> *:nth-child(3)) .SOLTab-btn {
+  flex-grow: 1;
+  text-align: center;
+}
 
 .SOLTab-btn {
   position: relative;
@@ -6066,6 +6073,10 @@ table .SOLCheck-root {
   min-height: unset;
   height: 26px;
 }
+.box-msg .SOLTable-small th, .box-msg .SOLTable-small td {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 .box-msg-header {
   display: flex;
@@ -6196,8 +6207,9 @@ table .SOLCheck-root {
   justify-content: center;
   min-height: 24px;
   padding-left: 32px;
+  padding-top: 4px;
   line-height: 1.4;
-  background: url(../image/icon/ic_msg_noti.svg) no-repeat left center;
+  background: url(../image/icon/ic_msg_noti.svg) no-repeat left top;
 }
 .msg-noti li::before, .msg-err li::before {
   content: "·";
@@ -6430,10 +6442,6 @@ table .SOLCheck-root {
   gap: 8px;
 }
 
-.pt-0 {
-  padding-top: 0 !important;
-}
-
 .mt-g1 {
   margin-top: 8px;
 }
@@ -6498,6 +6506,14 @@ table .SOLCheck-root {
   padding-bottom: 0 !important;
 }
 
+.pb-g2 {
+  padding-bottom: 16px !important;
+}
+
+.b-btm {
+  border-bottom: 1px solid var(--tb-border);
+}
+
 .index-footer {
   padding: 35px var(--spc-w) 52px;
   background-color: #1a1a1b;
@@ -6506,12 +6522,20 @@ table .SOLCheck-root {
 }
 
 .index-topBtn {
+  z-index: 9;
   position: sticky;
   bottom: 0;
 }
 .index-topBtn .footer-topBtn {
   top: auto !important;
   bottom: 30px;
+  background-color: #0046ff;
+  color: #fff;
+  box-shadow: none;
+  border: 0;
+}
+.index-topBtn .footer-topBtn .SOLIcon-root {
+  font-weight: 100;
 }
 
 .banner-aireport {
@@ -6622,6 +6646,18 @@ table .SOLCheck-root {
   align-items: center;
   text-align: center;
 }
+.report-intro-title .label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 38px;
+  height: 24px;
+  color: #fff;
+  font-size: var(--font-14);
+  background: var(--gra2);
+  margin-top: 8px;
+}
 .report-intro-title em {
   color: var(--fc-default);
 }
@@ -6636,9 +6672,12 @@ table .SOLCheck-root {
   color: #3b5dfb;
 }
 .report-intro-title .section01-tit-em {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
   padding-top: 5px;
   color: #2c3748;
-  font-size: var(--font-44);
+  font-size: var(--font-40);
   font-weight: 400;
 }
 .report-intro-title .section01-tit-em em {
@@ -6779,7 +6818,7 @@ table .SOLCheck-root {
   top: 25px;
   left: calc(50% - 76px);
   width: 513px;
-  height: 407px;
+  height: 600px;
   background: #f4f6ff url(../image/ai/bg_report_section03_1_2.png) no-repeat center top/100%;
 }
 .report-section03-cont::after {
@@ -6812,6 +6851,15 @@ table .SOLCheck-root {
   left: 26px;
   bottom: 129px;
 }
+.report-section03-desc.desc-01::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 48px;
+  width: 68px;
+  height: 68px;
+  background: url(../image/ai/bg_report_section03_3.png) no-repeat center center/100%;
+}
 .report-section03-desc.desc-02 {
   position: absolute;
   left: 8px;
@@ -6841,6 +6889,9 @@ table .SOLCheck-root {
   font-size: var(--font-27);
 }
 .report-intro-section.section06.intro-landing .section06-tit-em {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
   font-size: var(--font-40);
 }
 .report-intro-section.section06.intro-landing .section06-tit-em em {
@@ -7049,7 +7100,7 @@ table .SOLCheck-root {
 .console-footer .SOLBtn-root.t--contained, .SOLSnackbar-footer .SOLBtn-root.t--contained, .SOLFullpage-footer .SOLBtn-root.t--contained, .SOLViewer-footer .SOLBtn-root.t--contained {
   font-weight: 600;
 }
-.console-footer:has(.footer-topBtn, .index-topBtn .footer-topBtn), .SOLSnackbar-footer:has(.footer-topBtn, .index-topBtn .footer-topBtn), .SOLFullpage-footer:has(.footer-topBtn, .index-topBtn .footer-topBtn), .SOLViewer-footer:has(.footer-topBtn, .index-topBtn .footer-topBtn) {
+.console-footer:has(.footer-topBtn), .SOLSnackbar-footer:has(.footer-topBtn), .SOLFullpage-footer:has(.footer-topBtn), .SOLViewer-footer:has(.footer-topBtn) {
   margin-top: 40px;
 }
 .console-footer.footer-intro, .footer-intro.SOLSnackbar-footer, .footer-intro.SOLFullpage-footer, .footer-intro.SOLViewer-footer {
@@ -7074,7 +7125,7 @@ table .SOLCheck-root {
   height: 10px;
 }
 
-.footer-topBtn, .index-topBtn .footer-topBtn {
+.footer-topBtn {
   position: absolute;
   top: 0;
   right: var(--spc-w);
@@ -7242,6 +7293,9 @@ table .SOLCheck-root {
   text-align: left;
   line-height: 1.5;
 }
+.SOLTable-small td > * {
+  vertical-align: middle;
+}
 .SOLTable-small em {
   color: var(--c-active);
 }
@@ -7295,17 +7349,15 @@ table .SOLCheck-root {
   width: 50px;
   padding-right: 0;
 }
-.SOLTable-small.t--notify th, .SOLTable-small.t--notify td {
+.SOLTable-small.t--notify th,
+.SOLTable-small.t--notify td {
   height: 20px;
   min-height: 20px;
 }
 
 .service-result-box .SOLTable-small {
-  min-width: 300px;
+  min-width: 280px;
   white-space: nowrap;
-}
-.service-result-box .SOLTable-small th {
-  padding-right: 50px;
 }
 .service-result-box .SOLTable-small td {
   font-weight: 500;
@@ -7317,6 +7369,10 @@ table .SOLCheck-root {
 .service-result-box .SOLTable-small .c--active,
 .service-result-box .SOLTable-small .c--disabled {
   font-weight: 700;
+}
+.service-result-box .SOLTable-small .desc {
+  white-space: wrap;
+  word-break: keep-all;
 }
 
 .service-header {
@@ -7702,6 +7758,11 @@ table .SOLCheck-root {
   align-items: center;
   justify-content: center;
   padding: 30px;
+}
+.service-result-box .SOLTable-small th,
+.service-result-box .SOLTable-small td {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .SOLFullpage-root .service-result-box {
@@ -8497,6 +8558,10 @@ table .SOLCheck-root {
 .mypage-terms-list .tit {
   font-size: var(--font-15);
   font-weight: 700;
+}
+.mypage-terms-list .state {
+  font-size: var(--font-12);
+  font-weight: 600;
 }
 
 .mypage-member-list .list-item {

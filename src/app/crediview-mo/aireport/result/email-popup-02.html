@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <title>크레디뷰</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, interactive-widget=resizes-content"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/crediview.css" />
+  </head>
+  <body>
+    <div class="SOLFullpage-root">
+      <div class="SOLFullpage-header">
+        <h2 class="SOLTitle-t2">이메일 발송</h2>
+        <button type="button" class="SOLIconBtn-root">
+          <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+          <span class="blind">닫기</span>
+        </button>
+      </div>
+
+      <div class="SOLFullpage-container">
+        <div class="section-outer">
+          <h3 class="SOLTitle-headline">보고서를 받을 분의 <br />이메일 주소를 입력해주세요.</h3>
+          <div class="console-section gap-g1">
+            <label class="SOLInput-root c--error">
+              <div class="SOLInput-fbox">
+                <div class="SOLInput-box">
+                  <input
+                    type="text"
+                    placeholder="이메일 주소를 입력하세요"
+                    value="layla011111111@techfinratings.com"
+                    class="SOLInput-field"
+                  />
+                  <span class="SOLInput-wrap">
+                    <span class="SOLInput-wrap--hidden">
+                      <button type="button" class="SOLInput-btn SOLIcon-close">
+                        <span class="blind">Del</span>
+                      </button>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <p class="SOLInput-msg">올바른 형식의 이메일 주소를 입력하세요.</p>
+            </label>
+
+            <button type="button" class="SOLBtn-root w--full" disabled>
+              <i class="SOLIcon-root SOLIcon-add"></i>
+              추가
+            </button>
+          </div>
+        </div>
+        <!-- //section-outer -->
+
+        <hr class="hr-service" />
+
+        <div class="section-outer s--full">
+          <div class="console-section-header">
+            <h3 class="SOLTitle-t3">이메일 리스트</h3>
+          </div>
+          <p class="content-empty ic--none">
+            이메일 주소를 추가해주세요.<br/>보고서 발송은 한번에 10개까지 가능합니다.
+          </p>
+        </div>
+      </div>
+      <!-- SOLFullpage-container -->
+
+      <div class="SOLFullpage-footer">
+        <div class="footer-btns">
+          <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>발송</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
