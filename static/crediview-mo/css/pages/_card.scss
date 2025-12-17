@@ -202,7 +202,7 @@
 
   .txt {
     font-size: var(--font-22);
-    line-height: 1em
+    line-height: 1em;
   }
 }
 
@@ -394,5 +394,71 @@
   .swiper-pagination-bullet-active {
     opacity: 1;
     background-color: #353c49;
+  }
+}
+
+.SOLSubmitCard-root {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.SOLSubmitCard-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 24px 20px;
+  border: 1px solid rgba(24, 30, 43, 0.1);
+  border-radius: 10px;
+}
+
+.SOLSubmitCard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .SOLIconBtn-root {
+    min-height: 32px;
+    margin-right: -16px
+  }
+}
+
+.SOLSubmitCard-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--font-13);
+  line-height: 1.4;
+
+  .box-msg {
+    padding-right: 10px
+  }
+
+  .SOLTable-small {
+    th {
+      width: 10%;
+      padding-right: 10px
+    }
+    td {
+      font-size: var(--font-13);
+    }
+  }
+
+  .SOLSelectGroup-label {
+    border: 0;
+    padding: 0 0 4px
+  }
+
+  .SOLTitle-t2 {
+    font-weight: 700
+  }
+}
+
+.SOLSubmitCard-action {
+  display: flex;
+  gap: 8px;
+
+  .SOLBtn-root {
+    min-width: 65px;
   }
 }

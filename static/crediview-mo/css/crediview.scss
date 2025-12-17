@@ -16,18 +16,21 @@
 @import 'vendors/tippy/popmenu';
 
 // Mobile import
-@import "../../Mobile/css/m-crediview/landing/index";
-@import "../../Mobile/css/m-crediview/landing/section";
-@import "../../Mobile/css/m-crediview/landing/responsive.scss";
-@import "../../Mobile/css/m-crediview/event/section";
-@import "../../Mobile/css/m-crediview/event/event-popup";
-@import "../../Mobile/css/m-crediview/event/responsive";
-@import "../../Mobile/css/m-crediview/event/ios";
+@import '../../Mobile/css/m-crediview/landing/index';
+@import '../../Mobile/css/m-crediview/landing/section';
+@import '../../Mobile/css/m-crediview/landing/responsive.scss';
+@import '../../Mobile/css/m-crediview/event/section';
+@import '../../Mobile/css/m-crediview/event/event-popup';
+@import '../../Mobile/css/m-crediview/event/responsive';
+@import '../../Mobile/css/m-crediview/event/ios';
 @import '../../Mobile/css/m-crediview/pages/common';
 @import '../../Mobile/css/m-crediview/pages/ios';
 @import '../../Mobile/css/m-crediview/pages/intro';
 @import '../../Mobile/css/m-crediview/pages/responsive';
 @import '../../Mobile/css/m-crediview/pages/members';
+@import '../../Mobile/css/m-crediview/epress-membership/landing';
+@import '../../Mobile/css/m-crediview/promotion/landing';
+@import '../../Mobile/css/components/modals/review';
 
 // 컴포넌트
 @import 'components/styles/color';

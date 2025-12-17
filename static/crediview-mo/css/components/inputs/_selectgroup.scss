@@ -40,7 +40,7 @@
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
   padding: 16px;
   border: 1px solid var(--tb-border);
   border-radius: 12px;
@@ -55,7 +55,7 @@
     position: relative;
     width: 18px;
     height: 18px;
-    margin-left: 8px;
+    margin: 0 4px;
     border: 1px solid rgba(10, 43, 88, 0.18);
     border-radius: 50%;
     background-color: #fff;
@@ -103,7 +103,9 @@
   .label {
     display: flex;
     flex-direction: column;
+    gap: 3px;
     color: var(--fc-gray1);
+    line-height: 1.2
   }
 
   .ico {
@@ -111,7 +113,7 @@
     width: 48px;
     height: 48px;
     border-radius: 8px;
-    background: no-repeat center center / contain;
+    background: #f2f5ff no-repeat center center;
   }
 
   .ico-card {
@@ -127,7 +129,7 @@
     background-image: url(../image/img/img_ic_public.svg);
   }
   .ico-private {
-    background-image: url(../../Common/image/img/img_ic_private.svg);
+    background-image: url(../image/img/img_ic_private.svg);
   }
   .ico-own {
     background-image: url(../image/img/img_ic_own.svg);
@@ -159,7 +161,7 @@
       align-items: flex-end;
       border-top: 1px solid var(--tb-border);
       margin-top: -3px;
-      padding-top: 20px
+      padding-top: 20px;
     }
 
     .price {
@@ -171,7 +173,7 @@
 
     del {
       font-size: var(--font-16);
-      color: #8B8B8F;
+      color: #8b8b8f;
     }
   }
 }

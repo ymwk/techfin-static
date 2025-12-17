@@ -179,6 +179,10 @@
     &--lg {
       font-size: var(--font-16);
     }
+    &--sm {
+      font-size: var(--font-12);
+      gap: 0
+    }
   }
 
   &.c {

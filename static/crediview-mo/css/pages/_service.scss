@@ -331,6 +331,15 @@
   }
 }
 
+.section-outer {
+  .service-result-rating {
+    border-radius: 10px;
+  }
+  .service-result-box {
+    padding-bottom: 0
+  }
+}
+
 .service-result-rating {
   display: flex;
   flex-direction: column;
@@ -425,14 +434,6 @@
   align-items: center;
   justify-content: center;
   padding: 30px;
-
-  .SOLTable-small {
-    th,
-    td {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
 }
 
 .SOLFullpage-root .service-result-box {
@@ -463,6 +464,10 @@
 
   .active-txt {
     color: var(--c-active);
+  }
+
+  .disabled-txt {
+    color: rgba(112, 115, 124, 0.48);
   }
 
   .countbox {
@@ -1167,11 +1172,18 @@
   border-top: 0;
 
   .list-item {
+    justify-content: center;
+    min-height: 68px;
     border-bottom-color: #f4f4f4;
     padding-left: 40px;
     background-position-x: left;
     &:last-child {
       border-bottom: 0;
     }
+  }
+
+  .tit {
+    font-size: var(--font-15);
+    font-weight: 500;
   }
 }

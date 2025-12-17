@@ -1,7 +1,9 @@
 .SOLAccordian-root {
-  border: 1px solid var(--tb-border);
-  border-radius: 8px;
-  padding: 16px;
+  &:not(.t--normal) {
+    border: 1px solid var(--tb-border);
+    border-radius: 8px;
+    padding: 16px;
+  }
 
   ::-webkit-scrollbar {
     width: 18px;

@@ -119,15 +119,36 @@
 
           <section class="console-section">
             <div class="console-section-header">
-              <h4 class="SOLTitle-t3">발급 정보</h4>
+              <h4 class="SOLTitle-t3">발급용도 선택</h4>
             </div>
 
-            <div class="SOLSelectGroup-label">
-              <i class="ico ico-public"></i>
-              <div class="label">
-                <span class="SOLTitle-t4">공공기관 제출용</span>
-                <span>조달청</span>
-              </div>
+            <div class="SOLSelectGroup-root">
+              <label class="SOLSelectGroup-label">
+                <input type="radio" name="serviceGroup" checked />
+                <i class="ico ico-public"></i>
+                <div class="label">
+                  <span class="SOLTitle-t4">공공기관 제출용</span>
+                  <span>조달청 적격심사 및 공공기관 입찰 참여를 위한 평가확인서</span>
+                </div>
+              </label>
+
+              <label class="SOLSelectGroup-label">
+                <input type="radio" name="serviceGroup" />
+                <i class="ico ico-private"></i>
+                <div class="label">
+                  <span class="SOLTitle-t4">민간기업 제출용</span>
+                  <span>협력업체 등록 및 민간기업 거래 평가를 위한 평가확인서</span>
+                </div>
+              </label>
+
+              <label class="SOLSelectGroup-label">
+                <input type="radio" name="serviceGroup" />
+                <i class="ico ico-own"></i>
+                <div class="label">
+                  <span class="SOLTitle-t4">자사확인용</span>
+                  <span>내부 관리 및 참고 목적의 평가확인서 (외부기관 제출 불가)</span>
+                </div>
+              </label>
             </div>
           </section>
 
