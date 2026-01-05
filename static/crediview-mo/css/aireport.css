@@ -2279,6 +2279,14 @@ button.swiper-pagination-bullet {
   width: 18px;
   background: url(../image/icon/ic_edit.svg) no-repeat center center;
 }
+.SOLIcon-kakao {
+  width: 22px;
+  background: url(../image/logo/logo_kakao.svg) no-repeat center center/contain;
+}
+.SOLIcon-share {
+  width: 18px;
+  background: url(../image/icon/ic_share.svg) no-repeat center center;
+}
 
 .SOLBtn-root .SOLIcon-gt--u::after, .SOLBtn-root .SOLIcon-gt--r::after, .SOLBtn-root .SOLIcon-gt--d::after, .SOLBtn-root .SOLIcon-gt--l::after {
   width: 8px;
@@ -2562,6 +2570,11 @@ button.swiper-pagination-bullet {
 }
 .SOLBtn-root.t--contained.c--gra {
   background: var(--gra);
+}
+.SOLBtn-root.t--contained.c--kakao {
+  background: #FADF34;
+  color: #000;
+  font-weight: 700 !important;
 }
 .SOLBtn-root.t--outlined {
   color: var(--c-active);
@@ -7178,6 +7191,17 @@ table .SOLCheck-root {
   position: absolute;
   top: 0;
   right: var(--spc-w);
+  opacity: 0;
+  transition: top 0.2s, opacity 0.2s;
+  color: #8b8b8b;
+}
+.footer-topBtn.show {
+  opacity: 1;
+  top: -40px;
+}
+
+.footer-topBtn,
+.footer-floating-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -7187,14 +7211,21 @@ table .SOLCheck-root {
   border-radius: 50%;
   background-color: #fff;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
-  color: #8b8b8b;
-  opacity: 0;
   overflow: hidden;
-  transition: top 0.2s, opacity 0.2s;
 }
-.footer-topBtn.show {
-  opacity: 1;
-  top: -40px;
+
+.footer-floating {
+  position: absolute;
+  right: var(--spc-w);
+  bottom: 125px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #333;
+}
+.footer-floating .footer-floating-btn:has(.SOLIcon-kakao) {
+  border: 1px solid rgba(119, 119, 119, 0.1019607843);
+  background-color: #fadf34;
 }
 
 .console-footer-cont {

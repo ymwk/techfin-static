@@ -44,7 +44,8 @@
   .logo {
     width: 168px;
     height: 24px;
-    background: url(../../techfin-m/image/logo/logo_techfin.svg) no-repeat left center / 100%;
+    background: url(../../techfin-m/image/logo/logo_techfin.svg) no-repeat left
+      center / 100%;
   }
 }
 
@@ -116,7 +117,7 @@
 
   .btn {
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       right: 2px;
@@ -147,7 +148,7 @@
       }
 
       .TMHeader-gnb-sub {
-        max-height: 100px;
+        max-height: 120px;
       }
     }
   }
@@ -219,7 +220,7 @@
 
     &:not(:first-child) {
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 50%;

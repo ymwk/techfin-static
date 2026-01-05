@@ -10245,6 +10245,14 @@ body.keyboard-open .members-loginbox .loginbox-action {
   width: 18px;
   background: url(../image/icon/ic_edit.svg) no-repeat center center;
 }
+.SOLIcon-kakao {
+  width: 22px;
+  background: url(../image/logo/logo_kakao.svg) no-repeat center center/contain;
+}
+.SOLIcon-share {
+  width: 18px;
+  background: url(../image/icon/ic_share.svg) no-repeat center center;
+}
 
 .SOLBtn-root .SOLIcon-gt--u::after, .SOLBtn-root .SOLIcon-gt--r::after, .SOLBtn-root .SOLIcon-gt--d::after, .SOLBtn-root .SOLIcon-gt--l::after {
   width: 8px;
@@ -10528,6 +10536,11 @@ body.keyboard-open .members-loginbox .loginbox-action {
 }
 .SOLBtn-root.t--contained.c--gra {
   background: var(--gra);
+}
+.SOLBtn-root.t--contained.c--kakao {
+  background: #FADF34;
+  color: #000;
+  font-weight: 700 !important;
 }
 .SOLBtn-root.t--outlined {
   color: var(--c-active);
@@ -15706,6 +15719,17 @@ table .SOLCheck-root {
   position: absolute;
   top: 0;
   right: var(--spc-w);
+  opacity: 0;
+  transition: top 0.2s, opacity 0.2s;
+  color: #8b8b8b;
+}
+.footer-topBtn.show {
+  opacity: 1;
+  top: -40px;
+}
+
+.footer-topBtn,
+.footer-floating-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -15715,14 +15739,21 @@ table .SOLCheck-root {
   border-radius: 50%;
   background-color: #fff;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
-  color: #8b8b8b;
-  opacity: 0;
   overflow: hidden;
-  transition: top 0.2s, opacity 0.2s;
 }
-.footer-topBtn.show {
-  opacity: 1;
-  top: -40px;
+
+.footer-floating {
+  position: absolute;
+  right: var(--spc-w);
+  bottom: 125px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #333;
+}
+.footer-floating .footer-floating-btn:has(.SOLIcon-kakao) {
+  border: 1px solid rgba(119, 119, 119, 0.1019607843);
+  background-color: #fadf34;
 }
 
 .console-footer-cont {
@@ -18908,4 +18939,295 @@ table .SOLCheck-root {
   height: 2px;
   border-radius: 50%;
   background-color: currentColor;
+}
+
+.console-root:has(.section-kakao-banner) .SOLHeader-root .SOLHeader-inner, .SOLFullpage-root:has(.section-kakao-banner) .SOLHeader-root .SOLHeader-inner, .SOLViewer-root:has(.section-kakao-banner) .SOLHeader-root .SOLHeader-inner {
+  background: #fff;
+  color: #1d2129;
+}
+.console-root:has(.section-kakao-banner) .SOLHeader-root .SOLHeader-title-text, .SOLFullpage-root:has(.section-kakao-banner) .SOLHeader-root .SOLHeader-title-text, .SOLViewer-root:has(.section-kakao-banner) .SOLHeader-root .SOLHeader-title-text {
+  font-weight: 600;
+}
+.console-root:has(.section-kakao-banner) .console-footer, .SOLFullpage-root:has(.section-kakao-banner) .console-footer, .SOLViewer-root:has(.section-kakao-banner) .console-footer, .console-root:has(.section-kakao-banner) .SOLSnackbar-footer, .SOLFullpage-root:has(.section-kakao-banner) .SOLSnackbar-footer, .SOLViewer-root:has(.section-kakao-banner) .SOLSnackbar-footer, .console-root:has(.section-kakao-banner) .SOLFullpage-footer, .SOLFullpage-root:has(.section-kakao-banner) .SOLFullpage-footer, .SOLViewer-root:has(.section-kakao-banner) .SOLFullpage-footer, .console-root:has(.section-kakao-banner) .SOLViewer-footer, .SOLFullpage-root:has(.section-kakao-banner) .SOLViewer-footer, .SOLViewer-root:has(.section-kakao-banner) .SOLViewer-footer {
+  background: #fff;
+  box-shadow: 0px -7px 10px 0px rgba(0, 0, 0, 0.0509803922);
+}
+.console-root:has(.section-kakao-banner) .footer-topBtn.show, .SOLFullpage-root:has(.section-kakao-banner) .footer-topBtn.show, .SOLViewer-root:has(.section-kakao-banner) .footer-topBtn.show {
+  top: -50px;
+}
+
+.section-kakao-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 52px;
+  background: url(../image/event/kakao/bg_kakao_01.png) no-repeat center bottom/cover;
+  color: #d2dced;
+  text-align: center;
+  line-height: 1.3;
+}
+.section-kakao-banner em {
+  color: #fff;
+  font-weight: 600;
+}
+.section-kakao-banner .logo {
+  width: 70px;
+  height: 18px;
+  background: url(../../Common/image/crediview/logo/bi_crediview_w_kr.svg) no-repeat center center/contain;
+}
+.section-kakao-banner .tit {
+  font-weight: 800;
+  font-size: var(--font-42);
+  transform: translateY(-4px);
+  color: #fff;
+}
+.section-kakao-banner::after {
+  content: "";
+  display: block;
+  width: calc(100% - 30px);
+  max-width: 332px;
+  aspect-ratio: 332/345;
+  background: url(../image/event/kakao/img_kakao_banner.png) no-repeat center bottom/cover;
+}
+
+.kakao-tit {
+  font-size: var(--font-28);
+  text-align: center;
+  color: #242a30;
+}
+
+.section-kakao-step {
+  padding: 25px 0;
+}
+.section-kakao-step .step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: var(--font-13);
+  color: #4e5262;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.section-kakao-step .step-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-top: 30px;
+  border-radius: 16px;
+  background-color: #f1f2f6;
+  text-align: center;
+  overflow: hidden;
+}
+.section-kakao-step .tit {
+  margin-top: 4px;
+  font-size: var(--font-18);
+  color: #242a30;
+}
+.section-kakao-step .label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 68px;
+  height: 22px;
+  border-radius: 22px;
+  background-color: #fff;
+  color: #0046ff;
+  font-size: var(--font-12);
+  font-weight: 700;
+}
+.section-kakao-step .box {
+  padding: 4px 12px;
+  border-radius: 3px;
+  background-color: #e6e6e6;
+  font-size: var(--font-11);
+}
+.section-kakao-step .img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.section-kakao-step .img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 317px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.section-kakao-ch {
+  padding: 25px 0;
+  background-color: #ffeb40;
+}
+.section-kakao-ch .kakao-tit {
+  font-size: var(--font-24);
+  color: #000;
+}
+.section-kakao-ch .kakao-ch-logo {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.section-kakao-ch .kakao-ch-logo .SOLIcon-kakao {
+  width: 52px;
+  max-width: unset;
+}
+.section-kakao-ch .kakao-ch-logo .ic-plus {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background-color: #221917;
+  color: #ffeb40;
+}
+.section-kakao-ch .kakao-ch-logo .ic-plus::before, .section-kakao-ch .kakao-ch-logo .ic-plus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 3px;
+  transform: translate(-50%, -50%);
+  background-color: currentColor;
+}
+.section-kakao-ch .kakao-ch-logo .ic-plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.section-kakao-ch .ch-list {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  color: #4e5262;
+  font-weight: 500;
+}
+.section-kakao-ch .ch-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+.section-kakao-ch .label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 177px;
+  height: 31px;
+  border-radius: 31px;
+  background-color: #221917;
+  color: #fff;
+  font-weight: 600;
+}
+.section-kakao-ch .qr {
+  width: 133px;
+  height: 133px;
+  margin-top: 6px;
+  padding: 10px;
+  background-color: #fff;
+}
+.section-kakao-ch .qr img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.section-kakao-ch .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 121px;
+  height: 121px;
+  border-radius: 38px;
+  margin: 8px 0 4px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.section-kakao-ch .icon .SOLIcon-kakao {
+  width: 64px;
+  max-width: unset;
+  margin: 5px 0 0 5px;
+}
+
+.section-kakao-faq {
+  padding: 25px 0;
+  background: #e7f0ff linear-gradient(146.27deg, #fffce1 2.94%, rgba(250, 243, 255, 0) 85.17%);
+}
+.section-kakao-faq .faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: var(--font-16);
+  color: #1d2129;
+  line-height: 1.3;
+  word-break: keep-all;
+}
+.section-kakao-faq .faq-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+.section-kakao-faq .faq-list .tit {
+  position: relative;
+  padding-bottom: 16px;
+  padding-left: 34px;
+  border-bottom: 1px solid rgba(112, 115, 124, 0.1607843137);
+  font-size: var(--font-17);
+  color: #242a30;
+  font-weight: 700;
+}
+.section-kakao-faq .faq-list .tit::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 24px;
+  height: 20px;
+  background: url(../image/icon/ic_q_bl.svg) no-repeat left center;
+}
+
+.section-kakao-noti {
+  padding: 10px 0 30px;
+  margin-bottom: -40px;
+  background-color: #f7f7f7;
+}
+.section-kakao-noti .tit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #4e5262;
+}
+.section-kakao-noti .tit::before {
+  content: "!";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  font-size: 0.9em;
+}
+.section-kakao-noti .msg-list-bullet {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 40px;
+  font-size: var(--font-12);
+  color: #4e5262;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.section-kakao-noti .msg-list-bullet li {
+  padding-left: 10px;
 }

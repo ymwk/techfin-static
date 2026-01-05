@@ -1306,6 +1306,10 @@ hr {
   z-index: 1003;
   position: fixed;
   inset: auto 0 0;
+  display: none;
+}
+.TMSnackbar-root.show {
+  display: block;
 }
 
 .TMSnackbar-backdrop {
@@ -2404,7 +2408,7 @@ table .TMCheck-root {
   rotate: -135deg;
 }
 .TMHeader-gnb-menu .item.on .TMHeader-gnb-sub {
-  max-height: 100px;
+  max-height: 120px;
 }
 
 .TMHeader-gnb-sub {

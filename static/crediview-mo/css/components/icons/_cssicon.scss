@@ -459,6 +459,16 @@
     width: 18px;
     background: url(../image/icon/ic_edit.svg) no-repeat center center;
   }
+
+  &-kakao {
+    width: 22px;
+    background: url(../image/logo/logo_kakao.svg) no-repeat center center / contain;
+  }
+
+  &-share {
+    width: 18px;
+    background: url(../image/icon/ic_share.svg) no-repeat center center;
+  }
 }
 
 .SOLBtn-root {
