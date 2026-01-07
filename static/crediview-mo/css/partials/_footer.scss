@@ -111,16 +111,25 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 10px;
+
     .sns-list {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1em;
+      gap: 1.5em;
       max-width: 185px;
       padding-right: 24px;
+      white-space: nowrap;
+      font-weight: 500;
+      font-size: var(--font-13);
+
       li {
         a {
-          display: inline-block;
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          color: inherit;
+
           img {
             max-width: 100%;
           }

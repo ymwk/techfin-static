@@ -2119,6 +2119,22 @@ button.swiper-pagination-bullet {
   font-size: var(--font-14);
   font-weight: 600;
 }
+.SOLIcon-arr--tr {
+  font-size: var(--font-20);
+  font-weight: 300;
+}
+.SOLIcon-arr--tr::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  margin-top: -1px;
+}
+.SOLIcon-arr--tr.s--sm {
+  font-size: var(--font-14);
+  font-weight: 600;
+}
 .SOLIcon-arr--type02 {
   font-size: var(--font-20);
   font-weight: 300;

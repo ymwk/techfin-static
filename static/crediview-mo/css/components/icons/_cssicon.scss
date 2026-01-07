@@ -270,6 +270,25 @@
     }
   }
 
+  &-arr--tr {
+    font-size: var(--font-20);
+    font-weight: 300;
+
+    &::after {
+      content: '→';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      margin-top: -1px;
+    }
+
+    &.s--sm {
+      font-size: var(--font-14);
+      font-weight: 600;
+    }
+  }
+
   &-arr--type02 {
     font-size: var(--font-20);
     font-weight: 300;
