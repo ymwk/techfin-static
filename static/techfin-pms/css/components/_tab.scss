@@ -1,0 +1,120 @@
+.tabmenu-root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &.t--header {
+    .tabmenu-menu {
+      height: unset;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    .tabmenu-btn {
+      min-width: 80px;
+      height: 36px;
+      border-radius: 36px;
+      border-color: #e5e5e5;
+      color: #000;
+      font-size: 14px;
+
+      &.ac--active {
+        border-color: var(--c-secondary);
+        background-color: #e7edff;
+        color: var(--c-secondary);
+        font-weight: 600;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.tabmenu-menu {
+  flex-shrink: 0;
+  display: flex;
+  height: 40px;
+
+  &::after {
+    content: '';
+    flex-grow: 1;
+    border-bottom: 1px solid var(--c-border2);
+  }
+}
+
+.tabmenu-btn {
+  min-width: 100px;
+  height: 40px;
+  padding: 0 18px;
+  border: 1px solid var(--c-border2);
+  border-radius: 4px 4px 0 0;
+  color: var(--c-gray2);
+  font-weight: 600;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+  &.ac--active {
+    border-color: var(--c-primary);
+    background-color: var(--c-primary);
+    color: #fff;
+    font-weight: 500;
+  }
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+}
+
+.tabmenu-menu.t--dashboard {
+  height: 30px;
+  margin-bottom: 7px;
+
+  &::after {
+    content: none;
+  }
+
+  .tabmenu-btn {
+    height: 30px;
+    border-radius: 36px;
+
+    &.ac--active {
+      border-color: var(--c-secondary);
+      background-color: var(--c-secondary);
+    }
+  }
+}
+
+.tabmenu-container {
+  flex-grow: 1;
+}
+
+.dashboard-tab {
+  display: flex;
+  gap: 4px;
+
+  .btn {
+    flex-grow: 1;
+    height: 31px;
+    border-radius: 12px;
+    border: 1px solid currentColor;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+    &:not([class*='g--']) {
+      color: #ddd;
+      span {
+        color: #222;
+      }
+    }
+
+    &.ac--active,
+    &:hover {
+      background-color: currentColor;
+      span {
+        color: #fff;
+      }
+    }
+  }
+}

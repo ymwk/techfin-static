@@ -1,0 +1,156 @@
+.board-root {
+  border-top: 2px solid #333;
+}
+
+.board-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 36px 30px;
+  border-bottom: 1px solid var(--c-border2);
+
+  .sort {
+    color: var(--c-secondary);
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .date {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--c-gray2);
+  }
+}
+
+.board-file {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.5em;
+  gap: 0.7em 1em;
+  font-size: 13px;
+}
+
+.board-file-item {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  min-width: calc(50% - 1em);
+  overflow: hidden;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    min-width: 0;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  small {
+    flex-shrink: 0;
+    color: var(--c-gray2);
+    text-transform: uppercase;
+  }
+}
+
+.board-body {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 40px 24px 80px;
+  border-bottom: 1px solid var(--c-border2);
+  font-size: 14px;
+  line-height: 1.5;
+
+  img {
+    display: block;
+    max-width: 100%;
+    // margin: 10px auto;
+  }
+}
+
+.board-navi {
+  margin-top: 30px;
+  border-bottom: 1px solid var(--c-border2);
+  white-space: nowrap;
+}
+
+.board-navi-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-top: 1px solid var(--c-border2);
+  color: var(--c-gray2);
+  line-height: 1.6;
+  color: #666;
+  font-size: 14px;
+
+  .navi-prev,
+  .navi-next {
+    flex-shrink: 0;
+    position: relative;
+    padding-right: 2em;
+    color: var(--c-gray1);
+    font-weight: 700;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      margin-top: -3px;
+      border-style: solid;
+      border-color: transparent transparent var(--c-secondary) transparent;
+      border-width: 7px 5px;
+      border-radius: 2px;
+    }
+  }
+
+  .navi-next::after {
+    transform: scaleY(-1);
+  }
+
+  .title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    padding-left: 1em;
+
+    // border-left: 1px solid var(--c-border);
+  }
+
+  .date {
+    flex-shrink: 0;
+    margin-left: auto;
+    color: var(--c-gray2);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: var(--c-gray1);
+  }
+}
+
+.board-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .btn-outlined {
+    min-width: 120px;
+  }
+}

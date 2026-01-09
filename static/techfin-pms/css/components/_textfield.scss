@@ -1,0 +1,63 @@
+// @import './mixins';
+
+.textfield-root {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &.ac--active .textfield-form {
+    border-color: var(--c-secondary);
+  }
+  &.ac--invalid .textfield-form {
+    border-color: var(--c-error);
+  }
+}
+
+.textfield-label {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+
+  .label {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+}
+
+.textfield-form {
+  @include formStyle;
+}
+
+.textarea-form {
+  @include formStyle;
+  height: 8em;
+  padding: 12px;
+  resize: vertical;
+}
+
+.textfield-btn {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-left: 1px solid var(--c-border);
+  transition: border-left-color 0.2s;
+}
+
+.textfield-root.ac--active,
+.textfield-root:has(.textfield-form:hover:not(:disabled):not(:read-only)) {
+  .textfield-btn {
+    border-left-color: var(--c-secondary);
+  }
+}

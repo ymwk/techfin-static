@@ -1,0 +1,85 @@
+.card-list {
+  display: flex;
+  gap: 24px;
+}
+
+.card-item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 400px;
+  padding: 28px 30px;
+  border: 1px solid #E7EDFF;
+  border-radius: 4px;
+  box-shadow: 4px 4px 18px -5px #DADDE8CC
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--c-border2)
+}
+
+.card-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  font-size: 14px;
+  font-weight: 600;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  .name {
+    width: 120px;
+    color: var(--c-gray2)
+  }
+}
+
+.member-card {
+  border: 1px solid var(--c-border2);
+  padding: 15px 20px
+}
+
+.member-card-tit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--c-border2);
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.member-card-cont {
+  padding-top: 15px;
+}
+
+.card-complate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+  padding: 20px 0 40px 0;
+
+  .tit {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

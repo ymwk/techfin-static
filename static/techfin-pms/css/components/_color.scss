@@ -1,0 +1,60 @@
+.c--primary { color: var(--c-primary) !important }
+.c--secondary { color: var(--c-secondary) !important }
+.c--error { color: var(--c-error) !important }
+.c--success { color: var(--c-success) !important }
+.c--warn { color: var(--c-warn) !important }
+.c--fail { color: var(--c-fail) !important }
+.c--black { color: var(--c-black) !important }
+.c--white { color: var(--c-white) !important }
+.c--gray1 { color: var(--c-gray1) !important }
+.c--gray2 { color: var(--c-gray2) !important }
+.c--gray3 { color: var(--c-gray3) !important }
+.c--gray4 { color: var(--c-gray4) !important }
+.c--active { color: var(--c-active) !important }
+
+.bg--primary { background-color: var(--c-primary) !important }
+.bg--secondary { background-color: var(--c-secondary) !important }
+.bg--error { background-color: var(--c-error) !important }
+.bg--success { background-color: var(--c-success) !important }
+.bg--warn { background-color: var(--c-warn) !important }
+.bg--fail { background-color: var(--c-fail) !important }
+.bg--black { background-color: var(--c-black) !important }
+.bg--white { background-color: var(--c-white) !important }
+.bg--gray1 { background-color: var(--c-gray1) !important }
+.bg--gray2 { background-color: var(--c-gray2) !important }
+.bg--gray3 { background-color: var(--c-gray3) !important }
+.bg--gray4 { background-color: var(--c-gray4) !important }
+.bg--active { background-color: var(--c-secondary) !important }
+
+.bg--border { background-color: var(--c-border) !important }
+.bg--bg { background-color: var(--c-bg) !important }
+
+// 정상
+.g--normal {
+  color: #0f7d00 !important;
+  font-weight: 600
+}
+
+// 유보
+.g--defer {
+  color: #ffd400 !important;
+  font-weight: 600
+}
+
+// 관찰
+.g--observe {
+  color: #ff9900 !important;
+  font-weight: 600
+}
+
+// 주의
+.g--warn {
+  color: var(--c-error) !important;
+  font-weight: 600
+}
+
+// 주의
+.g--active {
+  color: var(--c-secondary) !important;
+  font-weight: 600
+}

@@ -1,0 +1,24 @@
+.filefield-root {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  height: var(--form-h);
+  font-size: 14px;
+
+  input[type='file'] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+
+.filefield-box {
+  @include formStyle;
+  display: flex;
+  align-items: center;
+}
