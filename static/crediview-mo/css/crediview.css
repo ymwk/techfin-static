@@ -15141,15 +15141,17 @@ table .SOLCheck-root {
   position: sticky;
   bottom: 0;
 }
-.index-topBtn .footer-topBtn {
+.index-topBtn .footer-floating {
   top: auto !important;
   bottom: 30px;
+}
+.index-topBtn .footer-floating .footer-floating-btn.top {
   background-color: #0046ff;
   color: #fff;
   box-shadow: none;
   border: 0;
 }
-.index-topBtn .footer-topBtn .SOLIcon-root {
+.index-topBtn .footer-floating .footer-floating-btn.top .SOLIcon-root {
   font-weight: 100;
 }
 
@@ -15740,20 +15742,23 @@ table .SOLCheck-root {
   height: 10px;
 }
 
-.footer-topBtn {
+.footer-floating {
   position: absolute;
   top: 0;
   right: var(--spc-w);
   opacity: 0;
   transition: top 0.2s, opacity 0.2s;
-  color: #8b8b8b;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #333;
 }
-.footer-topBtn.show {
+.footer-floating.show {
   opacity: 1;
-  top: -40px;
+  top: -80px;
 }
 
-.footer-topBtn,
 .footer-floating-btn {
   display: inline-flex;
   align-items: center;
@@ -15767,15 +15772,6 @@ table .SOLCheck-root {
   overflow: hidden;
 }
 
-.footer-floating {
-  position: absolute;
-  right: var(--spc-w);
-  bottom: 125px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  color: #333;
-}
 .footer-floating .footer-floating-btn:has(.SOLIcon-kakao) {
   border: 1px solid rgba(119, 119, 119, 0.1019607843);
   background-color: #fadf34;

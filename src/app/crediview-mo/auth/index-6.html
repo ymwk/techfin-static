@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -129,14 +129,19 @@
           <label class="SOLInput-root">
             <div class="SOLInput-fbox">
               <div class="SOLInput-box">
-                <input type="text" placeholder="사업자등록번호를 입력해 주세요." value="1234567891" class="SOLInput-field" />
+                <input
+                  type="text"
+                  placeholder="사업자등록번호를 입력해 주세요."
+                  value="1234567891"
+                  class="SOLInput-field"
+                />
                 <span class="SOLInput-wrap">
-                    <span class="SOLInput-wrap--hidden">
-                      <button type="button" class="SOLInput-btn SOLIcon-close">
-                        <span class="blind">Del</span>
-                      </button>
-                    </span>
+                  <span class="SOLInput-wrap--hidden">
+                    <button type="button" class="SOLInput-btn SOLIcon-close">
+                      <span class="blind">Del</span>
+                    </button>
                   </span>
+                </span>
               </div>
             </div>
           </label>
@@ -144,14 +149,19 @@
           <label class="SOLInput-root c--active">
             <div class="SOLInput-fbox">
               <div class="SOLInput-box">
-                <input type="text" placeholder="문서번호를 입력해 주세요." value="TRRATE2409020010" class="SOLInput-field" />
+                <input
+                  type="text"
+                  placeholder="문서번호를 입력해 주세요."
+                  value="TRRATE2409020010"
+                  class="SOLInput-field"
+                />
                 <span class="SOLInput-wrap">
-                    <span class="SOLInput-wrap--hidden">
-                      <button type="button" class="SOLInput-btn SOLIcon-close">
-                        <span class="blind">Del</span>
-                      </button>
-                    </span>
+                  <span class="SOLInput-wrap--hidden">
+                    <button type="button" class="SOLInput-btn SOLIcon-close">
+                      <span class="blind">Del</span>
+                    </button>
                   </span>
+                </span>
               </div>
             </div>
           </label>
@@ -161,10 +171,17 @@
       <!-- //console-container -->
 
       <div class="console-footer">
-        <button class="footer-topBtn">
-          <i class="SOLIcon-root SOLIcon-arr--t"></i>
-          <span class="blind">Scroll to Top</span>
-        </button>
+        <div class="footer-floating">
+          <button class="footer-floating-btn">
+            <i class="SOLIcon-root SOLIcon-kakao"></i>
+            <span class="blind">카카오톡 채널</span>
+          </button>
+
+          <button class="footer-floating-btn top">
+            <i class="SOLIcon-root SOLIcon-arr--t"></i>
+            <span class="blind">Scroll to Top</span>
+          </button>
+        </div>
         <div class="console-footer-btns">
           <button type="button" class="SOLBtn-root t--contained s--lg w--full">조회</button>
         </div>

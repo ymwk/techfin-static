@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -129,14 +129,19 @@
           <label class="SOLInput-root c--error">
             <div class="SOLInput-fbox">
               <div class="SOLInput-box">
-                <input type="text" placeholder="사업자등록번호를 입력해 주세요." value="TRRATE2409020010" class="SOLInput-field" />
+                <input
+                  type="text"
+                  placeholder="사업자등록번호를 입력해 주세요."
+                  value="TRRATE2409020010"
+                  class="SOLInput-field"
+                />
                 <span class="SOLInput-wrap">
-                    <span class="SOLInput-wrap--hidden">
-                      <button type="button" class="SOLInput-btn SOLIcon-close">
-                        <span class="blind">Del</span>
-                      </button>
-                    </span>
+                  <span class="SOLInput-wrap--hidden">
+                    <button type="button" class="SOLInput-btn SOLIcon-close">
+                      <span class="blind">Del</span>
+                    </button>
                   </span>
+                </span>
               </div>
             </div>
             <p class="SOLInput-msg">올바른 형식의 사업자번호를 입력하세요. (형식: 숫자 10자리)</p>
@@ -155,10 +160,17 @@
       <!-- //console-container -->
 
       <div class="console-footer">
-        <button class="footer-topBtn">
-          <i class="SOLIcon-root SOLIcon-arr--t"></i>
-          <span class="blind">Scroll to Top</span>
-        </button>
+        <div class="footer-floating">
+          <button class="footer-floating-btn">
+            <i class="SOLIcon-root SOLIcon-kakao"></i>
+            <span class="blind">카카오톡 채널</span>
+          </button>
+
+          <button class="footer-floating-btn top">
+            <i class="SOLIcon-root SOLIcon-arr--t"></i>
+            <span class="blind">Scroll to Top</span>
+          </button>
+        </div>
         <div class="console-footer-btns">
           <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>조회</button>
         </div>

@@ -10,16 +10,18 @@
   position: sticky;
   bottom: 0;
 
-  .footer-topBtn {
+  .footer-floating {
     top: auto !important;
     bottom: 30px;
-    background-color: #0046ff;
-    color: #fff;
-    box-shadow: none;
-    border: 0;
+    .footer-floating-btn.top {
+      background-color: #0046ff;
+      color: #fff;
+      box-shadow: none;
+      border: 0;
 
-    .SOLIcon-root {
-      font-weight: 100;
+      .SOLIcon-root {
+        font-weight: 100;
+      }
     }
   }
 }
@@ -153,7 +155,7 @@
     color: #fff;
     font-size: var(--font-14);
     background: var(--gra2);
-    margin-top: 8px
+    margin-top: 8px;
   }
 
   em {

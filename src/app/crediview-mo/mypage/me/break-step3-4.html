@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -128,27 +128,27 @@
             </label>
 
             <label class="SOLInput-root">
-                <span class="SOLInput-label">인증번호 입력</span>
-                <div class="SOLInput-fbox">
-                  <div class="SOLInput-box">
-                    <input
-                      type="text"
-                      placeholder="인증번호를 입력하세요."
-                      value="입력시간이 초과되었습니다."
-                      class="SOLInput-field"
-                      disabled
-                    />
-                    <span class="SOLInput-wrap">
-                      <span class="SOLInput-wrap--hidden">
-                        <button type="button" class="SOLInput-btn SOLIcon-close">
-                          <span class="blind">Del</span>
-                        </button>
-                      </span>
-                      <span class="SOLInput-count c--error">00:00</span>
+              <span class="SOLInput-label">인증번호 입력</span>
+              <div class="SOLInput-fbox">
+                <div class="SOLInput-box">
+                  <input
+                    type="text"
+                    placeholder="인증번호를 입력하세요."
+                    value="입력시간이 초과되었습니다."
+                    class="SOLInput-field"
+                    disabled
+                  />
+                  <span class="SOLInput-wrap">
+                    <span class="SOLInput-wrap--hidden">
+                      <button type="button" class="SOLInput-btn SOLIcon-close">
+                        <span class="blind">Del</span>
+                      </button>
                     </span>
-                  </div>
+                    <span class="SOLInput-count c--error">00:00</span>
+                  </span>
                 </div>
-              </label>
+              </div>
+            </label>
           </div>
           <!-- //loginbox-inputs -->
         </div>
@@ -157,10 +157,17 @@
       <!-- //console-container -->
 
       <div class="console-footer">
-        <button class="footer-topBtn">
-          <i class="SOLIcon-root SOLIcon-arr--t"></i>
-          <span class="blind">Scroll to Top</span>
-        </button>
+        <div class="footer-floating">
+          <button class="footer-floating-btn">
+            <i class="SOLIcon-root SOLIcon-kakao"></i>
+            <span class="blind">카카오톡 채널</span>
+          </button>
+
+          <button class="footer-floating-btn top">
+            <i class="SOLIcon-root SOLIcon-arr--t"></i>
+            <span class="blind">Scroll to Top</span>
+          </button>
+        </div>
         <div class="console-footer-btns">
           <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>탈퇴</button>
         </div>

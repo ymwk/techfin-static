@@ -2275,6 +2275,41 @@ table .TMCheck-root {
   overflow: visible;
 }
 
+.TMPagenation-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  color: var(--fc-default);
+}
+.TMPagenation-root button,
+.TMPagenation-root .TMIconBtn-root {
+  min-width: 36px;
+  min-height: 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.TMPagenation-root button.st--active,
+.TMPagenation-root .TMIconBtn-root.st--active {
+  background-color: var(--c-active);
+  color: #fff;
+}
+
+.TMPagenation-group {
+  display: flex;
+  align-items: center;
+}
+.TMPagenation-group .TMIcon-root {
+  margin: 0 -11px;
+}
+.TMPagenation-group .TMIcon-root::after {
+  border-width: 1px;
+  border-radius: 0;
+}
+
 .TMHeader-root {
   z-index: 998;
   position: fixed;
