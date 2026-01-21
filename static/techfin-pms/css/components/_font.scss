@@ -4,39 +4,39 @@
 }
 
 .font-h2 {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 700;
-  color: #0F172A
+  color: #0f172a;
 }
 
 .font-h3 {
   font-size: 18px;
   font-weight: 700;
-  color: #0F172A
+  color: #0f172a;
 }
 
 .font-h4 {
   font-size: 16px;
   font-weight: 700;
-  color: var(--c-gray1)
+  color: var(--c-gray1);
 }
 
 .font-h5 {
   font-size: 14px;
   font-weight: 700;
-  color: var(--c-gray1)
+  color: var(--c-gray1);
 }
 
 .font-h6 {
   font-size: 13px;
   font-weight: 700;
-  color: var(--c-gray1)
+  color: var(--c-gray1);
 }
 
 .font-h7 {
   font-size: 12px;
   font-weight: 700;
-  color: var(--c-gray1)
+  color: var(--c-gray1);
 }
 
 .font-lg {
@@ -58,4 +58,11 @@
 .font-xs {
   font-size: 10px;
   font-weight: 400;
+}
+
+.text-desc {
+  color: #4F4F55;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 0
 }

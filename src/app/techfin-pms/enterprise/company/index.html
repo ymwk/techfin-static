@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/techfin-pms/css/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="console-root">
+        <!-- Header -->
+        <header class="console-header">
+          <div class="console-area">
+            <h1 class="console-header-logo">
+              <a href="/">
+                <div class="logo">
+                  <span class="blind">Crediview 기업모니터링</span>
+                </div>
+              </a>
+            </h1>
+            <nav class="console-header-nav">
+              <div class="console-header-menu">
+                <div class="console-nav-item">
+                  <a href="/src/app/mypage/company/index.html" class="nav-btn">기업조회</a>
+                  <div class="console-nav-sub">
+                    <ul class="console-nav-sublist">
+                      <li>
+                        <a href=""><span>기업정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>개인정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>인증서관리</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="console-nav-item">
+                  <a href="/src/app/enterprise/data/index.html" class="nav-btn ac--active">기업현황</a>
+                  <div class="console-nav-sub">
+                    <ul class="console-nav-sublist">
+                      <li>
+                        <a href="" class="ac--active"><span>관리기업현황</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>매출/매입처현황</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>재무제표</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>재무분석</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>기업신용정보</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>자료요청/제출현황</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="console-nav-item">
+                  <a href="/src/app/service/admin/index.html" class="nav-btn">마이페이지</a>
+                  <div class="console-nav-sub">
+                    <ul class="console-nav-sublist">
+                      <li>
+                        <a href=""><span>기업정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>개인정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>인증서관리</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="console-header-global">
+                <div class="global-btns">
+                  <div class="global-btn-user">
+                    <button type="button" class="btn-user">
+                      <i class="icon-comm i--user"></i>
+                      <span>kimtech@techfinratings.com</span>
+                    </button>
+
+                    <div class="global-user-menu">
+                      <ul class="user-menu-list">
+                        <li>
+                          <a href="#">
+                            <span>회사 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>인증서 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>내 정보 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>결제 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>회원 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <button type="button" class="btn-logout">
+                        <i class="icon-comm i--logout"></i>
+                        로그아웃
+                      </button>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-icon">
+                    <i class="icon-comm i--bell"></i>
+                    <span class="blind">알림</span>
+                    <span class="badge">14</span>
+                  </button>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <div class="console-container">
+          <!-- Sidebar Start -->
+          <div class="console-sidebar">
+            <div class="sidebar-menu">
+              <button type="button" class="sidebar-foldBtn">
+                <span class="blind">접기</span>
+              </button>
+              <button type="button" class="sidebar-btn company" data-target-id="tab1">
+                <span class="blind">기업</span>
+              </button>
+              <button type="button" class="sidebar-btn fav" data-target-id="tab2">
+                <span class="blind">즐겨찾기</span>
+              </button>
+
+              <button type="button" class="sidebar-btn fav" data-target-id="tab7">
+                <span class="blind">즐겨찾기</span>
+              </button>
+              <button type="button" class="sidebar-btn memo" data-target-id="tab3">
+                <span class="blind">메모</span>
+              </button>
+
+              <button type="button" class="sidebar-btn memo" data-target-id="tab4">
+                <span class="blind">메모</span>
+              </button>
+              <button type="button" class="sidebar-btn memo" data-target-id="tab5">
+                <span class="blind">메모</span>
+              </button>
+              <button type="button" class="sidebar-btn memo" data-target-id="tab6">
+                <span class="blind">메모</span>
+              </button>
+            </div>
+
+            <div class="sidebar-container">
+              <div class="sidebar-tab-cont" id="tab1" style="display: none">
+                <h3 class="sidebar-h1">우리 회사</h3>
+                <div class="sidebar-box">
+                  <table class="table-detail">
+                    <tbody>
+                      <tr>
+                        <th>기업명</th>
+                        <td>테크핀레이팅스</td>
+                      </tr>
+                      <tr>
+                        <th>사업자등록번호</th>
+                        <td>123-22-00015</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sidebar-subtit">
+                  <h4 class="sidebar-h2">관리기업</h4>
+                  <p>관리기업은 기업조회 후 등록하신 기업입니다.</p>
+                </div>
+                <div class="sidebar-searchbox">
+                  <div class="textfield-root">
+                    <label class="textfield-label">
+                      <span class="label blind">검색키워드</span>
+                      <input
+                        type="text"
+                        class="textfield-form"
+                        name=""
+                        placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
+                        value="전자"
+                      />
+                      <!-- 내용 입력시 나타나는 버튼 -->
+                      <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button>
+                    </label>
+                  </div>
+                </div>
+                <!-- //sidebar-searchbox -->
+                <div class="sidebar-content">
+                  <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
+                  <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
+                  <div class="sidebar-cont-scroll">
+                    <ul class="sidebar-companylist">
+                      <li>
+                        <span>LG<em>전자</em></span>
+                        <span class="num">107-86-78945</span>
+                        <button type="button" class="btn-fav ac--active">
+                          <i class="icon-comm i--fav"></i>
+                          <span class="blind">즐겨찾기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <span>삼성<em>전자</em></span>
+                        <span class="num">107-86-78945</span>
+                        <button type="button" class="btn-fav">
+                          <i class="icon-comm i--fav"></i>
+                          <span class="blind">즐겨찾기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <span>경인<em>전자</em></span>
+                        <span class="num">107-86-78945</span>
+                        <button type="button" class="btn-fav">
+                          <i class="icon-comm i--fav"></i>
+                          <span class="blind">즐겨찾기</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- // sidebar-content -->
+              </div>
+              <!-- // tab1 -->
+
+              <div class="sidebar-tab-cont" id="tab2" style="display: none">
+                <h3 class="sidebar-h1">우리 회사</h3>
+                <div class="sidebar-box">
+                  <table class="table-detail">
+                    <tbody>
+                      <tr>
+                        <th>기업명</th>
+                        <td>테크핀레이팅스</td>
+                      </tr>
+                      <tr>
+                        <th>사업자등록번호</th>
+                        <td>123-22-00015</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sidebar-subtit">
+                  <h4 class="sidebar-h2">즐겨찾는 기업 (3)</h4>
+                  <p>즐겨찾는 기업 목록입니다.</p>
+                </div>
+                <div class="sidebar-searchbox">
+                  <div class="textfield-root">
+                    <label class="textfield-label">
+                      <span class="label blind">검색키워드</span>
+                      <input
+                        type="text"
+                        class="textfield-form"
+                        name=""
+                        placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
+                      />
+                      <!-- 내용 입력시 나타나는 버튼 -->
+                      <!-- <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button> -->
+                    </label>
+                  </div>
+                </div>
+                <!-- //sidebar-searchbox -->
+                <div class="sidebar-content">
+                  <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
+                  <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
+                  <div class="sidebar-cont-scroll">
+                    <ul class="sidebar-companylist">
+                      <li>
+                        <span>LG전자</span>
+                        <span class="num">107-86-78945</span>
+                        <button type="button" class="btn-fav ac--active">
+                          <i class="icon-comm i--fav"></i>
+                          <span class="blind">즐겨찾기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <span>삼성전자</span>
+                        <span class="num">107-86-78945</span>
+                        <button type="button" class="btn-fav ac--active">
+                          <i class="icon-comm i--fav"></i>
+                          <span class="blind">즐겨찾기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <span>경인전자</span>
+                        <span class="num">107-86-78945</span>
+                        <button type="button" class="btn-fav ac--active">
+                          <i class="icon-comm i--fav"></i>
+                          <span class="blind">즐겨찾기</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- // sidebar-content -->
+              </div>
+              <!-- // tab2 -->
+
+              <div class="sidebar-tab-cont" id="tab7" style="display: none">
+                <h3 class="sidebar-h1">우리 회사</h3>
+                <div class="sidebar-box">
+                  <table class="table-detail">
+                    <tbody>
+                      <tr>
+                        <th>기업명</th>
+                        <td>테크핀레이팅스</td>
+                      </tr>
+                      <tr>
+                        <th>사업자등록번호</th>
+                        <td>123-22-00015</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sidebar-subtit">
+                  <h4 class="sidebar-h2">즐겨찾는 기업 (0)</h4>
+                  <p>즐겨찾는 기업 목록입니다.</p>
+                </div>
+                <div class="sidebar-searchbox">
+                  <div class="textfield-root">
+                    <label class="textfield-label">
+                      <span class="label blind">검색키워드</span>
+                      <input
+                        type="text"
+                        class="textfield-form"
+                        name=""
+                        placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
+                        value=""
+                      />
+                      <!-- 내용 입력시 나타나는 버튼 -->
+                      <!-- <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button> -->
+                    </label>
+                  </div>
+                </div>
+                <!-- //sidebar-searchbox -->
+                <div class="sidebar-content">
+                  <div class="sidebar-empty">
+                    즐겨찾는 기업이 없어요.<br />관리기업 목록에서 즐겨찾는 기업을 <br />설정해주세요.
+                  </div>
+                </div>
+                <!-- // sidebar-content -->
+              </div>
+              <!-- // tab2 -->
+
+              <div class="sidebar-tab-cont" id="tab3" style="display: none">
+                <h3 class="sidebar-h1">메모</h3>
+                <div class="sidebar-content">
+                  <textarea name="" class="textarea-form" placeholder="메모 내용을 입력해 주세요."></textarea>
+                </div>
+                <!-- // sidebar-content -->
+
+                <div class="sidebar-footer">
+                  <button type="button" class="btn-comm" disabled>
+                    <span>취소</span>
+                  </button>
+                  <button type="button" class="btn-contained" disabled>
+                    <span>저장</span>
+                  </button>
+                </div>
+                <!-- // sidebar-footer -->
+              </div>
+              <!-- // tab3 -->
+
+              <!-- 이후로는 메모 내용을 확인하기 위한 임시 탭입니다. -->
+              <div class="sidebar-tab-cont" id="tab4" style="display: none">
+                <h3 class="sidebar-h1">메모</h3>
+                <div class="sidebar-content">
+                  <textarea name="" class="textarea-form" placeholder="메모 내용을 입력해 주세요.">
+신용등급 전망이 안정적에서 부정적으로 변경되었고 EWS 경고 지표가 2건 발생해, 
+단기 유동성을 포함한 재무 구조 개선 여부에 대한 지속적인 모니터링이 필요합니다.최근 3개월간 차입금 증가율이 매출 성장률을 상회하는 가운데, 현금 보유액은 안정적이나 
+영업활동 현금흐름은 둔화 추세를 보이고 
+있으며, 매출 증가에도 불구하고 영업이익률이 소폭 하락해 고정비 비중이 높은 구조상 
+경기 변동 시 수익성 리스크가 존재합니다.
+                  </textarea>
+                </div>
+                <!-- // sidebar-content -->
+
+                <div class="sidebar-footer">
+                  <button type="button" class="btn-comm">
+                    <span>취소</span>
+                  </button>
+                  <button type="button" class="btn-contained">
+                    <span>저장</span>
+                  </button>
+                </div>
+                <!-- // sidebar-footer -->
+              </div>
+              <!-- // tab3 -->
+
+              <div class="sidebar-tab-cont" id="tab5" style="display: none">
+                <h3 class="sidebar-h1">메모</h3>
+                <div class="sidebar-memo-utils">
+                  <button type="button" class="btn-icon btn-memo-search">
+                    <i class="icon-comm i--search"></i>
+                    <span class="blind">검색</span>
+                  </button>
+                  <button type="button" class="btn-icon">
+                    <i class="icon-comm i--write"></i>
+                    <span class="blind">작성</span>
+                  </button>
+                  <button type="button" class="btn-icon btn-memo-del">
+                    <i class="icon-comm i--trash"></i>
+                    <span class="blind">삭제</span>
+                  </button>
+                </div>
+
+                <div class="sidebar-memo-searchbox">
+                  <div class="textfield-root">
+                    <label class="textfield-label">
+                      <span class="label blind">검색키워드</span>
+                      <input type="text" class="textfield-form" name="" placeholder="검색어를 입력해 주세요." />
+                      <!-- 내용 입력시 나타나는 버튼 -->
+                      <!-- <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button> -->
+                    </label>
+                  </div>
+                </div>
+                <!-- //sidebar-memo-searchbox -->
+
+                <div class="sidebar-content ac--del">
+                  <div class="sidebar-cont-scroll">
+                    <ul class="sidebar-memo-list">
+                      <li>
+                        <div class="radiocheck-root">
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" checked />
+                            <span class="blind">선택</span>
+                          </label>
+                        </div>
+                        <div class="box ellipsis">
+                          메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                          자동으로 축약됩니다.
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="radiocheck-root">
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" checked />
+                            <span class="blind">선택</span>
+                          </label>
+                        </div>
+                        <div class="box ellipsis">
+                          메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                          자동으로 축약됩니다.
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="radiocheck-root">
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                            <span class="blind">선택</span>
+                          </label>
+                        </div>
+                        <div class="box ellipsis">
+                          메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                          자동으로 축약됩니다.
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="radiocheck-root">
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                            <span class="blind">선택</span>
+                          </label>
+                        </div>
+                        <div class="box ellipsis">
+                          메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                          자동으로 축약됩니다.
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="radiocheck-root">
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                            <span class="blind">선택</span>
+                          </label>
+                        </div>
+                        <div class="box ellipsis">
+                          메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                          자동으로 축약됩니다.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- // sidebar-content -->
+
+                <div class="sidebar-footer">
+                  <button type="button" class="btn-comm">
+                    <span>취소</span>
+                  </button>
+                  <button type="button" class="btn-contained">
+                    <span>삭제</span>
+                  </button>
+                </div>
+                <!-- // sidebar-footer -->
+              </div>
+              <!-- // tab3 -->
+
+              <div class="sidebar-tab-cont" id="tab6" style="display: none">
+                <h3 class="sidebar-h1">메모</h3>
+                <div class="sidebar-memo-utils">
+                  <button type="button" class="btn-icon btn-memo-search">
+                    <i class="icon-comm i--search"></i>
+                    <span class="blind">검색</span>
+                  </button>
+                  <button type="button" class="btn-icon">
+                    <i class="icon-comm i--write"></i>
+                    <span class="blind">작성</span>
+                  </button>
+                  <button type="button" class="btn-icon btn-memo-del">
+                    <i class="icon-comm i--trash"></i>
+                    <span class="blind">삭제</span>
+                  </button>
+                </div>
+
+                <div class="sidebar-memo-searchbox ac--active">
+                  <div class="textfield-root">
+                    <label class="textfield-label">
+                      <span class="label blind">검색키워드</span>
+                      <input
+                        type="text"
+                        class="textfield-form"
+                        name=""
+                        placeholder="검색어를 입력해 주세요."
+                        value="관리"
+                      />
+                      <!-- 내용 입력시 나타나는 버튼 -->
+                      <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button>
+                    </label>
+                  </div>
+                </div>
+                <!-- //sidebar-memo-searchbox -->
+
+                <div class="sidebar-content">
+                  <div class="sidebar-empty">검색결과가 없습니다.</div>
+                </div>
+                <!-- // sidebar-content -->
+              </div>
+              <!-- // tab3 -->
+            </div>
+            <!-- //sidebar-container -->
+          </div>
+          <!-- Sidebar End -->
+
+          <!-- Main Contents Start -->
+          <main class="console-contents">
+            <div class="console-contents-inner">
+              <div class="cont-headline">
+                <h2 class="font-h2">관리기업</h2>
+                <p>등록된 기업 확인 및 상세 기업 정보를 확인할 수 있는 목록입니다.</p>
+              </div>
+
+              <div class="cont-headline-sub">
+                <h3 class="font-h3">우리 회사</h3>
+                <div class="utils">
+                  <button type="button" class="btn-comm">
+                    <span>상세정보</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="cont-headline-box">
+                <div class="headline-title">
+                  <em>주식회사카본메이크</em>
+                  <span>411-81-75485</span>
+                </div>
+                <ul class="list">
+                  <li>
+                    <em>대표자명</em>
+                    <span>622-87-00437</span>
+                  </li>
+                  <li>
+                    <em>업종</em>
+                    <span>그 외 기타 플라스틱 제품 제조업</span>
+                  </li>
+                  <li>
+                    <em>개업일</em>
+                    <span>2009년 12월 25일</span>
+                  </li>
+                  <li>
+                    <em>업태</em>
+                    <span>제조업</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 검색 -->
+              <div class="searchbox-root">
+                <div class="searchbox-item">
+                  <span class="searchbox-label">일자</span>
+                  <div class="datepicker-root ac--focus">
+                    <label class="textfield-label">
+                      <span class="label blind">날짜선택</span>
+                      <input
+                        type="text"
+                        class="textfield-form"
+                        name=""
+                        placeholder="날짜를 선택해주세요."
+                        value="2025-08-22"
+                        readonly=""
+                      />
+                      <button type="button" class="textfield-btn">
+                        <i class="icon-comm i--calendar"> </i>
+                        <span class="blind">달력 열기</span>
+                      </button>
+                    </label>
+
+                    <div class="datepicker-dropdown">
+                      <div class="datepicker-calendar">
+                        <div class="datepicker-calendar-month">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--arr-lw"></i>
+                            <span class="blind">Prev</span>
+                          </button>
+                          <span>2025.08</span>
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--arr-rw"></i>
+                            <span class="blind">Next</span>
+                          </button>
+                        </div>
+                        <div class="datepicker-calendar-week">
+                          <span class="sun">일</span>
+                          <span class="day">월</span>
+                          <span class="day">화</span>
+                          <span class="day">수</span>
+                          <span class="day">목</span>
+                          <span class="day">금</span>
+                          <span class="sat">토</span>
+                        </div>
+                        <div class="datepicker-calendar-day">
+                          <span class="empty"></span>
+                          <span class="empty"></span>
+                          <span class="empty"></span>
+                          <span class="empty"></span>
+                          <span class="empty"></span>
+                          <button type="button" class="datepicker-calendar-btn">1</button>
+                          <button type="button" class="datepicker-calendar-btn">2</button>
+                          <button type="button" class="datepicker-calendar-btn">3</button>
+                          <button type="button" class="datepicker-calendar-btn">4</button>
+                          <button type="button" class="datepicker-calendar-btn">5</button>
+                          <button type="button" class="datepicker-calendar-btn">6</button>
+                          <button type="button" class="datepicker-calendar-btn">7</button>
+                          <button type="button" class="datepicker-calendar-btn">8</button>
+                          <button type="button" class="datepicker-calendar-btn">9</button>
+                          <button type="button" class="datepicker-calendar-btn">10</button>
+                          <button type="button" class="datepicker-calendar-btn">11</button>
+                          <button type="button" class="datepicker-calendar-btn">12</button>
+                          <button type="button" class="datepicker-calendar-btn">13</button>
+                          <button type="button" class="datepicker-calendar-btn">14</button>
+                          <button type="button" class="datepicker-calendar-btn hday">15</button>
+                          <button type="button" class="datepicker-calendar-btn">16</button>
+                          <button type="button" class="datepicker-calendar-btn">17</button>
+                          <button type="button" class="datepicker-calendar-btn">18</button>
+                          <button type="button" class="datepicker-calendar-btn">19</button>
+                          <button type="button" class="datepicker-calendar-btn">20</button>
+                          <button type="button" class="datepicker-calendar-btn">21</button>
+                          <button type="button" class="datepicker-calendar-btn ac--selected">22</button>
+                          <button type="button" class="datepicker-calendar-btn">23</button>
+                          <button type="button" class="datepicker-calendar-btn">24</button>
+                          <button type="button" class="datepicker-calendar-btn">25</button>
+                          <button type="button" class="datepicker-calendar-btn">26</button>
+                          <button type="button" class="datepicker-calendar-btn">27</button>
+                          <button type="button" class="datepicker-calendar-btn">28</button>
+                          <button type="button" class="datepicker-calendar-btn">29</button>
+                          <button type="button" class="datepicker-calendar-btn">30</button>
+                          <button type="button" class="datepicker-calendar-btn">31</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- // datepicker-root -->
+
+                  <span>~</span>
+
+                  <div class="datepicker-root ac--focus">
+                    <label class="textfield-label">
+                      <span class="label blind">날짜선택</span>
+                      <input
+                        type="text"
+                        class="textfield-form"
+                        name=""
+                        placeholder="날짜를 선택해주세요."
+                        value="2025-08-22"
+                        readonly=""
+                      />
+                      <button type="button" class="textfield-btn">
+                        <i class="icon-comm i--calendar"> </i>
+                        <span class="blind">달력 열기</span>
+                      </button>
+                    </label>
+
+                    <div class="datepicker-dropdown">
+                      <div class="datepicker-calendar">
+                        <div class="datepicker-calendar-month">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--arr-lw"></i>
+                            <span class="blind">Prev</span>
+                          </button>
+                          <span>2025.08</span>
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--arr-rw"></i>
+                            <span class="blind">Next</span>
+                          </button>
+                        </div>
+                        <div class="datepicker-calendar-week">
+                          <span class="sun">일</span>
+                          <span class="day">월</span>
+                          <span class="day">화</span>
+                          <span class="day">수</span>
+                          <span class="day">목</span>
+                          <span class="day">금</span>
+                          <span class="sat">토</span>
+                        </div>
+                        <div class="datepicker-calendar-day">
+                          <span class="empty"></span>
+                          <span class="empty"></span>
+                          <span class="empty"></span>
+                          <span class="empty"></span>
+                          <span class="empty"></span>
+                          <button type="button" class="datepicker-calendar-btn">1</button>
+                          <button type="button" class="datepicker-calendar-btn">2</button>
+                          <button type="button" class="datepicker-calendar-btn">3</button>
+                          <button type="button" class="datepicker-calendar-btn">4</button>
+                          <button type="button" class="datepicker-calendar-btn">5</button>
+                          <button type="button" class="datepicker-calendar-btn">6</button>
+                          <button type="button" class="datepicker-calendar-btn">7</button>
+                          <button type="button" class="datepicker-calendar-btn">8</button>
+                          <button type="button" class="datepicker-calendar-btn">9</button>
+                          <button type="button" class="datepicker-calendar-btn">10</button>
+                          <button type="button" class="datepicker-calendar-btn">11</button>
+                          <button type="button" class="datepicker-calendar-btn">12</button>
+                          <button type="button" class="datepicker-calendar-btn">13</button>
+                          <button type="button" class="datepicker-calendar-btn">14</button>
+                          <button type="button" class="datepicker-calendar-btn hday">15</button>
+                          <button type="button" class="datepicker-calendar-btn">16</button>
+                          <button type="button" class="datepicker-calendar-btn">17</button>
+                          <button type="button" class="datepicker-calendar-btn">18</button>
+                          <button type="button" class="datepicker-calendar-btn">19</button>
+                          <button type="button" class="datepicker-calendar-btn">20</button>
+                          <button type="button" class="datepicker-calendar-btn">21</button>
+                          <button type="button" class="datepicker-calendar-btn ac--selected">22</button>
+                          <button type="button" class="datepicker-calendar-btn">23</button>
+                          <button type="button" class="datepicker-calendar-btn">24</button>
+                          <button type="button" class="datepicker-calendar-btn">25</button>
+                          <button type="button" class="datepicker-calendar-btn">26</button>
+                          <button type="button" class="datepicker-calendar-btn">27</button>
+                          <button type="button" class="datepicker-calendar-btn">28</button>
+                          <button type="button" class="datepicker-calendar-btn">29</button>
+                          <button type="button" class="datepicker-calendar-btn">30</button>
+                          <button type="button" class="datepicker-calendar-btn">31</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- // datepicker-root -->
+                </div>
+
+                <div class="searchbox-item s--full">
+                  <span class="searchbox-label">구분</span>
+                  <div class="combobox-root ac--focus">
+                    <button type="button" class="combobox-btn">기업명</button>
+                    <div class="combobox-dropdown">
+                      <ul class="combobox-option">
+                        <li class="ac--active">
+                          <button type="button">전체</button>
+                        </li>
+                        <li><button type="button">기업명</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="textfield-root">
+                    <label class="textfield-label">
+                      <span class="label blind">검색키워드</span>
+                      <input type="text" class="textfield-form" name="" placeholder="검색어를 입력해 주세요." />
+                    </label>
+                  </div>
+                </div>
+
+                <div class="searchbox-btns">
+                  <button type="button" class="btn-contained">검색</button>
+                  <button type="button" class="btn-comm">
+                    <i class="icon-comm i--refresh"></i>
+                    <span class="blind">초기화</span>
+                  </button>
+                </div>
+              </div>
+              <!-- //searchbox-root -->
+
+              <div class="datagrid-container">
+                <div class="table-header">
+                  <div class="count font-h3">목록<em>50</em>건</div>
+                  <div class="switch-root">
+                    <span>관심 기업만 보기</span>
+                    <input type="checkbox" name="" checked />
+                  </div>
+                  <div class="utils">
+                    <button type="button" class="btn-comm" disabled>삭제</button>
+                    <button type="button" class="btn-comm">기업추가</button>
+                  </div>
+                </div>
+
+                <div class="table-wrap">
+                  <table class="table-datagrid">
+                    <colgroup>
+                      <col style="width: 60px" />
+                      <col style="width: 60px" />
+                      <col style="width: 60px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                              <input type="checkbox" name="" />
+                              <span class="blind">전체선택</span>
+                            </label>
+                          </div>
+                        </th>
+                        <th></th>
+                        <th><span class="tit">번호</span></th>
+                        <th><span class="tit">기업명</span></th>
+                        <th><span class="tit">사업자등록번호</span></th>
+                        <th><span class="tit">대표자명</span></th>
+                        <th><span class="tit">분석정보</span></th>
+                        <th><span class="tit">정보충실도</span></th>
+                        <th><span class="tit">등록일시</span></th>
+                        <th><span class="tit">상세</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                              <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-fav ac--active">
+                            <i class="icon-comm i--fav"></i>
+                            <span class="blind">즐겨찾기</span>
+                          </button>
+                        </td>
+                        <td>1</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>보유</td>
+                        <td>상</td>
+                        <td>2025-11-01 12:46</td>
+                        <td>
+                          <button type="button" class="btn-text">
+                            <span class="underline">기업정보</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                              <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-fav ac--active">
+                            <i class="icon-comm i--fav"></i>
+                            <span class="blind">즐겨찾기</span>
+                          </button>
+                        </td>
+                        <td>2</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>보유</td>
+                        <td>상</td>
+                        <td>2025-11-01 12:46</td>
+                        <td>
+                          <button type="button" class="btn-text">
+                            <span class="underline">기업정보</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                              <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-fav ac--active">
+                            <i class="icon-comm i--fav"></i>
+                            <span class="blind">즐겨찾기</span>
+                          </button>
+                        </td>
+                        <td>3</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>보유</td>
+                        <td>상</td>
+                        <td>2025-11-01 12:46</td>
+                        <td>
+                          <button type="button" class="btn-text">
+                            <span class="underline">기업정보</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                              <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-fav ac--active">
+                            <i class="icon-comm i--fav"></i>
+                            <span class="blind">즐겨찾기</span>
+                          </button>
+                        </td>
+                        <td>4</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>보유</td>
+                        <td>상</td>
+                        <td>2025-11-01 12:46</td>
+                        <td>
+                          <button type="button" class="btn-text">
+                            <span class="underline">기업정보</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                              <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-fav ac--active">
+                            <i class="icon-comm i--fav"></i>
+                            <span class="blind">즐겨찾기</span>
+                          </button>
+                        </td>
+                        <td>5</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>보유</td>
+                        <td>상</td>
+                        <td>2025-11-01 12:46</td>
+                        <td>
+                          <button type="button" class="btn-text">
+                            <span class="underline">기업정보</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                              <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-fav ac--active">
+                            <i class="icon-comm i--fav"></i>
+                            <span class="blind">즐겨찾기</span>
+                          </button>
+                        </td>
+                        <td>6</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>보유</td>
+                        <td>상</td>
+                        <td>2025-11-01 12:46</td>
+                        <td>
+                          <button type="button" class="btn-text">
+                            <span class="underline">기업정보</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                              <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-fav ac--active">
+                            <i class="icon-comm i--fav"></i>
+                            <span class="blind">즐겨찾기</span>
+                          </button>
+                        </td>
+                        <td>7</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>보유</td>
+                        <td>상</td>
+                        <td>2025-11-01 12:46</td>
+                        <td>
+                          <button type="button" class="btn-text">
+                            <span class="underline">기업정보</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                              <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-fav ac--active">
+                            <i class="icon-comm i--fav"></i>
+                            <span class="blind">즐겨찾기</span>
+                          </button>
+                        </td>
+                        <td>8</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>보유</td>
+                        <td>상</td>
+                        <td>2025-11-01 12:46</td>
+                        <td>
+                          <button type="button" class="btn-text">
+                            <span class="underline">기업정보</span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="pagenation-root">
+                  <button type="button" class="pagenation-btn" disabled>
+                    <i class="icon-comm i--first"></i>
+                    <span class="blind">First Page</span>
+                  </button>
+                  <button type="button" class="pagenation-btn" disabled>
+                    <i class="icon-comm i--prev"></i>
+                    <span class="blind">Prev Page</span>
+                  </button>
+                  <button type="button" class="pagenation-btn ac--active">
+                    <span>1</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>2</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>3</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>4</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>5</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>6</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>7</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>8</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>9</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>10</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <i class="icon-comm i--next"></i>
+                    <span class="blind">Next Page</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <i class="icon-comm i--last"></i>
+                    <span class="blind">Last Page</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </main>
+          <!-- Main Contents End -->
+        </div>
+        <!-- //console-container -->
+      </div>
+      <!-- console-root -->
+    </div>
+
+    <script src="../../js/custom-v2.js"></script>
+  </body>
+</html>

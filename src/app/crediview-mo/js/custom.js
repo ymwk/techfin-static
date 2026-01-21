@@ -231,19 +231,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // scroll header
   const header = document.querySelector('.SOLHeader-root');
-  // top button
-  const floatingBtns = document.querySelector('.footer-floating');
-  const topBtn = document.querySelector('.footer-floating-btn.top');
   let beforeScrollY = window.scrollY || 0;
-
+  
   window.addEventListener('scroll', function () {
     let currentScrollY = window.scrollY;
     header.classList.toggle('sticky', beforeScrollY < currentScrollY && 50 < currentScrollY);
     beforeScrollY = currentScrollY;
-
-    floatingBtns.classList.toggle('show', 20 < currentScrollY);
   });
 
+  // top button
+  const topBtn = document.querySelector('.footer-floating-btn.top');
   topBtn.addEventListener('click', function () {
     window.scrollTo({
       top: 0,

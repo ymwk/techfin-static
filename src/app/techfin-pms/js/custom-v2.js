@@ -13,50 +13,109 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // sidebar menu
-  const navItem = document.querySelectorAll('.sidebar-menu .menu-item');
+  // sidebar
+  const sideBtn = document.querySelectorAll('.sidebar-menu .sidebar-btn');
+  const foldBtn = document.querySelector('.sidebar-menu .sidebar-foldBtn');
+  const tabConts = document.querySelectorAll('.sidebar-tab-cont');
 
-  navItem.forEach((item) => {
-    const btn = item.querySelector('.btn');
+  sideBtn.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      item.classList.toggle('ac--active');
+      sideBtn.forEach((item) => {
+        if (item.classList.contains('ac--active')) item.classList.remove('ac--active');
+      });
+      btn.classList.add('ac--active');
+
+      const targetId = btn.dataset.targetId;
+
+      tabConts.forEach((tab) => {
+        if (tab.id === targetId) {
+          tab.style.display = 'flex'; // target만 flex
+        } else {
+          tab.style.display = 'none'; // 나머지 none
+        }
+      });
+
+      // 클릭시 sidebar가 접혀있으면 펼침
+      if (!foldBtn.classList.contains('open')) {
+        foldBtn.classList.add('open');
+        document.body.classList.add('open');
+      }
     });
   });
 
-  // sitemap
-  const menuRoot = document.querySelector('.console-header');
-  const menuBg = document.querySelector('.console-header-inner');
-  const menuSub = document.querySelectorAll('.console-nav-sub');
-  const childHeight = document.querySelector('.console-nav-sub li').clientHeight;
-  console.log(childHeight);
-  let lng = 0;
-  let maxHeight = 0;
-  const headerHeight = 72;
+  foldBtn.addEventListener('click', (e) => {
+    if (foldBtn.classList.contains('open')) {
+      foldBtn.classList.remove('open');
+      document.body.classList.remove('open');
+    } else {
+      foldBtn.classList.add('open');
+      document.body.classList.add('open');
 
-  menuSub.forEach((element) => {
-    const count = element.children.length;
-    if (count > lng) lng = count;
+      // 펼침버튼 눌렀을때 active된 sideBtn이 하나도 없으면 첫번째 sideBtn에 active클래스를 추가
+      let hasActive = false;
+      sideBtn.forEach((btn) => {
+        if (btn.classList.contains('ac--active')) {
+          hasActive = true;
+        }
+      });
+
+      if (!hasActive && sideBtn.length > 0) {
+        sideBtn[0].classList.add('ac--active');
+      }
+
+      const targetId = sideBtn[0].dataset.targetId;
+
+      tabConts.forEach((tab) => {
+        if (tab.id === targetId) {
+          tab.style.display = 'flex'; // target만 flex
+        } else {
+          tab.style.display = 'none'; // 나머지 none
+        }
+      });
+    }
   });
 
-  maxHeight = childHeight * lng + headerHeight + 50;
-  console.log(maxHeight);
+  // 기업 즐겨찾기 토글
+  const favBtn = document.querySelectorAll('.btn-fav');
 
-  function showHeader() {
-    menuRoot.classList.add('show');
-    menuBg.style.height = maxHeight + 'px';
+  favBtn.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      btn.classList.toggle('ac--active');
+    });
+  });
+
+  //메모 검색 버튼
+  const searchBtn = document.querySelectorAll('.btn-memo-search');
+  searchBtn.forEach((btn) => {
+    const search = btn.closest('.sidebar-tab-cont').querySelector('.sidebar-memo-searchbox');
+    if (!search) {
+      return;
+    }
+    btn.addEventListener('click', (e) => {
+      if (search.classList.contains('ac--active')) {
+        search.classList.remove('ac--active');
+      } else {
+        search.classList.add('ac--active');
+        search.querySelector('.textfield-form').focus();
+      }
+    });
+  });
+
+  //메모 삭제 버튼
+  const delBtn = document.querySelectorAll('.btn-memo-del');
+  delBtn.forEach((btn) => {
+    const parente = btn.closest('.sidebar-tab-cont').querySelector('.sidebar-content');
+    
+    btn.addEventListener('click', (e) => {
+      parente.classList.toggle('ac--del');
+    });
+  });
+
+  // header
+  const userBtn = document.querySelector('.global-btn-user');
+  if (userBtn) {
+    userBtn.querySelector('.btn-user').addEventListener('click', (e) => {
+      userBtn.classList.toggle('ac--active');
+    });
   }
-
-  function hideHeader() {
-    menuRoot.classList.remove('show');
-    menuBg.style.height = headerHeight + 'px';
-  }
-
-  menuRoot.addEventListener('mouseenter', () => {
-    showHeader();
-  });
-
-  menuRoot.addEventListener('mouseleave', () => {
-    hideHeader();
-  });
-
 });

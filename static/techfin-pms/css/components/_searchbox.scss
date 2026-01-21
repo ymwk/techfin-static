@@ -1,16 +1,13 @@
 .searchbox-root {
   display: flex;
-  gap: 50px;
+  gap: 24px;
   width: 100%;
   padding: 24px 30px;
-  margin-bottom: 38px;
-  border-radius: 4px;
-  border: 1px solid #afccec;
-  background-color: #f0f7ff;
+  margin-bottom: 32px;
+  border-radius: 8px;
+  background-color: #F9F9F9;
 
   .textfield-form {
-    max-width: 240px;
-
     &:read-only {
       background-color: #fff;
     }
@@ -21,7 +18,6 @@
     align-items: center;
     gap: 5px;
     white-space: nowrap;
-    min-width: 240px;
   }
 
   .radiocheck-label {
@@ -60,6 +56,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  
+  &.s--full {
+    flex-grow: 1
+  }
 }
 
 .searchbox-label {
@@ -67,7 +67,6 @@
   align-items: center;
   padding-right: 4px;
   font-size: 14px;
-  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -75,7 +74,15 @@
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  
+  button {
+    height: 40px;
+  }
+  
+  .btn-contained {
+    padding: 0 20px
+  }
 }
 
 .modal-root .searchbox-root {

@@ -29,18 +29,18 @@
   @include formBox;
   min-width: 160px;
   padding-right: 50px;
-  color: var(--c-gray2);
 
   &::after {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 30px;
-    height: 30px;
-    border-left: 1px solid var(--c-border);
-    background: url(../image/icon/ic_down.svg) no-repeat center center;
+    right: 14px;
+    top: 50%;
+    margin-top: -2px;
+    border-style: solid;
+    border-width: 6px;
+    border-color: currentColor transparent transparent;
+    border-radius: 2px;
+    color: #4F4F55
   }
 }
 
@@ -51,7 +51,6 @@
   left: 0;
   width: 100%;
   margin-top: -1px;
-  font-size: 12px;
   color: var(--c-gray1);
   overflow: hidden;
 

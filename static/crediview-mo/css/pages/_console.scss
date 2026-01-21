@@ -39,7 +39,6 @@
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  // margin-top: 40px;
   padding: 0 20px;
   background: linear-gradient(to top, rgba(255, 255, 255, 1) 82px, rgba(255, 255, 255, 0));
 
@@ -50,16 +49,14 @@
     font-weight: 600;
   }
 
-  &:has(.footer-topBtn) {
-    margin-top: 40px;
+  &:has(.footer-floating) {
+    // margin-top: 40px;
+    min-height: 110px
   }
 
   &.footer-intro {
     background: #fff;
     box-shadow: 0px -7px 10px 0px #0000000d;
-    .footer-topBtn.show {
-      top: -60px;
-    }
   }
 }
 
@@ -67,7 +64,7 @@
   position: relative;
   display: flex;
   gap: 8px;
-  margin: 20px 0 34px;
+  margin: 110px 0 34px;
 
   .SOLBtn-root.w--full .SOLIcon-gt--r {
     margin: 0 -5px;
@@ -82,18 +79,12 @@
   position: absolute;
   top: 0;
   right: var(--spc-w);
-  opacity: 0;
-  transition: top 0.2s, opacity 0.2s;
+  padding-bottom: 20px;
   color: #333;
   display: flex;
   flex-direction: column;
   gap: 10px;
   color: #333;
-
-  &.show {
-    opacity: 1;
-    top: -80px;
-  }
 }
 
 .footer-floating-btn {
@@ -107,18 +98,8 @@
   background-color: #fff;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-}
 
-.footer-floating {
-  // position: absolute;
-  // right: var(--spc-w);
-  // bottom: 125px;
-  // display: flex;
-  // flex-direction: column;
-  // gap: 10px;
-  // color: #333;
-
-  .footer-floating-btn:has(.SOLIcon-kakao) {
+  &:has(.SOLIcon-kakao) {
     border: 1px solid #7777771a;
     background-color: #fadf34;
   }

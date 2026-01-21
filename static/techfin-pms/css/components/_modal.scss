@@ -21,7 +21,7 @@
 .modal-box,
 .alert-box {
   @include popBox;
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
 }
@@ -35,23 +35,23 @@
     width: 1000px;
   }
   &.s--lg .modal-box {
-    width: 800px;
+    width: 880px;
   }
   &.s--md .modal-box {
     width: 600px;
   }
 
   &.h--500 .modal-box {
-    height: 500px
+    height: 500px;
   }
 
   .card-list {
-    padding-bottom: 10px
+    padding-bottom: 10px;
   }
 }
 
 .alert-box {
-  min-width: 280px;
+  min-width: 380px;
   min-height: 132px;
 }
 
@@ -67,9 +67,13 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  height: 30px;
-  padding-bottom: 12px;
+  height: 36px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--c-border2);
+
+  .font-h3 {
+    font-size: 20px;
+  }
 }
 
 .modal-contents,
@@ -82,7 +86,7 @@
   overflow-y: auto;
 
   &.t--visible {
-    overflow: visible
+    overflow: visible;
   }
 }
 
@@ -90,7 +94,7 @@
   overflow-y: scroll;
   margin-right: -18px;
   padding-right: 12px;
-  gap: 10px;
+  gap: 16px;
 }
 
 .modal-action,
@@ -99,15 +103,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
+}
 
-  button { margin-top: 20px }
+.modal-action button {
+  margin-top: 40px;
+  width: 160px;
+  height: 48px;
+  font-size: 16px;
+}
+
+.alert-action {
+  margin-bottom: 16px;
+
+  button {
+    margin-top: 24px;
+    width: 104px;
+    height: 40px;
+    font-size: 14px;
+  }
 }
 
 .alert-icons {
   display: flex;
   justify-content: center;
-  margin-bottom: auto;
+  margin-bottom: -8px;
 }
 
 .alert-msg {
@@ -117,9 +137,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1.5;
+  // padding: 24px;
+  color: #4f4f55;
 }
 
 .modal-desc-top {

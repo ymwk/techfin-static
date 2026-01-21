@@ -12,7 +12,7 @@
 }
 
 .i--search {
-  height: 14px;
+  height: 18px;
   background-image: url(../image/icon/ic_search.svg);
   background-position-y: top;
 }
@@ -27,6 +27,7 @@
   background-position-y: top;
 }
 .i--calendar {
+  width: 18px;
   background-image: url(../image/icon/ic_calendar.svg);
 }
 .i--down,
@@ -49,13 +50,14 @@
   background-size: 14px;
 }
 .i--refresh {
-  background-image: url(../image/icon/ic_refresh.svg);
+  width: 24px;
+  background-image: url(../image/icon/ic_reset.svg);
 }
 .i--refresh-w {
   background-image: url(../image/icon/ic_refresh_w.svg);
 }
 .i--user {
-  width: 20px;
+  width: 32px;
   background-image: url(../image/icon/ic_user.svg);
 }
 .i--dir {
@@ -191,7 +193,7 @@
   min-width: 1em;
   min-height: 1em;
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 200;
 
   &::after {
     content: '×';
@@ -202,7 +204,7 @@
   }
 
   &.s--lg {
-    font-size: 32px;
+    font-size: 38px;
   }
 
   &.s--xl {
@@ -236,14 +238,14 @@
 .i--last::after {
   content: '';
   position: absolute;
-  top: calc(50% - 3px);
+  top: calc(50% - 4px);
   left: calc(50% - 4px);
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-right: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   transform: rotate(-45deg);
-  color: #000;
+  color: var(--c-gray1)
 }
 
 .i--first,
@@ -254,7 +256,7 @@
 .i--first,
 .i--last {
   &::before {
-    margin-left: -2px;
+    margin-left: -3px;
   }
 }
 
@@ -322,8 +324,11 @@
 .icon-comm.t--alert {
   width: 48px;
   height: 48px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
+}
+
+.i--warn {
+  width: 48px;
+  background-image: url(../image/icon/ic_alert_warning.svg);
 }
 
 .i--more {
@@ -451,11 +456,11 @@
 }
 
 .i--bell {
-  width: 20px;
-  background-image: icon(bell, 222);
+  width: 24px;
+  background-image: url(../image/icon/ic_bell.svg);
 
   &.ac--active {
-    background-image: icon(badgeBell, 222);
+    
     &::after {
       content: '';
       position: absolute;
@@ -475,6 +480,27 @@
 }
 
 .i--logout {
+  width: 14px;
+  background-image: url(../image/icon/ic_logout.svg);
+}
+
+.i--fav {
   width: 18px;
-  background-image: icon(logout, 222);
+  background-image: url(../image/icon/ic_fav.svg);
+}
+
+.ac--active > .i--fav {
+  background-image: url(../image/icon/ic_fav_on.svg);
+}
+
+
+
+.i--write {
+  width: 18px;
+  background-image: url(../image/icon/ic_write.svg);
+}
+
+.i--trash {
+  width: 18px;
+  background-image: url(../image/icon/ic_trash.svg);
 }

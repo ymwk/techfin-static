@@ -6,7 +6,7 @@
   line-height: 18px;
   min-height: 21px;
   font-size: 14px;
-  font-weight: 500;;
+  font-weight: 500;
   text-align: left;
   word-break: keep-all;
 
@@ -35,7 +35,7 @@
 
       &:checked {
         background: var(--c-secondary);
-        color: #fff
+        color: #fff;
       }
     }
   }
@@ -46,7 +46,7 @@
   }
 
   .btn-icon {
-    margin-left: auto
+    margin-left: auto;
   }
 }
 
@@ -62,49 +62,29 @@
     position: relative;
     width: 18px;
     height: 18px;
-    border: 1px solid currentColor;
-    border-radius: 2px;
+    border: 1px solid #d4d4d9;
+    border-radius: 4px;
     background: #fff;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s;
 
     &:checked {
       border-color: transparent;
-      background: var(--c-secondary) url(../image/icon/ic_check_w.svg) no-repeat center center;
+      background: var(--c-primary) url(../image/icon/ic_check_w.svg) no-repeat center center;
     }
   }
 
   [type='radio'] {
     appearance: none;
     flex-shrink: 0;
-    position: relative;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #999;
-    border-radius: 50%;
-    background: #fff;
-    color: var(--c-disabled);
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    
 
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      margin: auto;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: transparent;
-      transition: background-color 0.2s;
-    }
-
-    &:checked {
-      &::after {
-        background-color: var(--c-secondary);
-      }
-      &:disabled::after {
-        background-color: #dbdbdb;
-      }
-    }
+    
   }
 
   [type='checkbox'],
@@ -114,5 +94,31 @@
       background-color: #f7f7f7;
       cursor: default;
     }
+  }
+}
+
+.radiocheck-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+  .item {
+    padding: 18px 20px;
+    border: 1px solid var(--c-border2);
+    border-radius: 8px;
+    font-size: 13px;
+    transition: .2s;
+    font-weight: 500;
+    
+    &:has([type='radio']:checked) {
+      border-color: var(--c-primary);
+      background-color: #F0F4FF;
+    }
+  }
+  
+  small {
+    padding-left: 12px;
+    font-weight: 400px;
+    color: #75757A;
   }
 }

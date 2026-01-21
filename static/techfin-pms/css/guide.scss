@@ -111,7 +111,8 @@
 
   .pop,
   .alert,
-  .new {
+  .new,
+  .toast {
     font-style: normal;
     &::before {
       content: 'popup';
@@ -131,6 +132,11 @@
   .alert::before {
     content: 'Alert';
     background-color: #b61150;
+  }
+
+  .toast::before {
+    content: 'Alert';
+    background-color: #3B5DFB;
   }
 
   .new::before {

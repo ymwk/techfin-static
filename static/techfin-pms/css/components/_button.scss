@@ -8,21 +8,23 @@
   justify-content: center;
   align-items: center;
   gap: 6px;
-  min-width: 56px;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 12px;
   border: 1px solid transparent;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 700;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
   white-space: nowrap;
   color: var(--c-gray1);
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
 
   &:disabled {
-    color: var(--c-gray2);
-    border: 1px solid var(--c-gray3);
-    background-color: var(--c-bg);
+    color: #b1b1b4;
+    border: 1px solid var(--c-border2);
+    background-color: #f9f9f9;
     font-weight: 500;
     cursor: not-allowed;
   }
@@ -46,11 +48,21 @@
     min-width: 20px;
     margin-left: -4px;
   }
+
+  &:has(.icon-comm:only-child),
+  &:has(.blind) {
+    width: 40px;
+    padding: 0;
+
+    .icon-comm {
+      margin-left: 0;
+    }
+  }
 }
 
 .btn-comm,
 .btn-link {
-  border-color: var(--c-border);
+  border-color: #d4d4d9;
   background-color: #fff;
 
   &:hover,
@@ -66,9 +78,16 @@
 }
 
 .btn-contained {
-  background-color: var(--c-secondary);
+  border-color: #1c3bdb;
+  background-color: #3b5dfb;
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
+
+  &:disabled {
+    background-color: #f0f4ff;
+    border-color: #d8e0ff;
+    color: #bac7ff;
+  }
 
   &:hover,
   &.hover,
@@ -151,20 +170,18 @@
 }
 
 .btn-text {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
   padding: 4px 0;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
 
   .underline {
-    display: block;
+    display: inline-block;
     line-height: 1.1em;
     border-bottom: 1px solid currentColor;
-    font-size: 12px;
-    font-weight: 700;
   }
 }
 
@@ -223,4 +240,14 @@
     background-size: 4px;
     margin-right: -2px;
   }
+}
+
+.btn-download {
+  margin-left: auto;
+  text-decoration: underline;
+  color: var(--c-primary);
+  font-size: 13px;
+  font-weight: 500;
+  padding-right: 24px;
+  background: url(../image/icon/ic_download.svg) no-repeat right center;
 }
