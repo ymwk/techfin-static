@@ -1,0 +1,40 @@
+// 접기 펼치기 버튼
+.console-container,
+.console-header,
+.console-contents-inner,
+.console-area {
+  transition:
+    padding 0.4s 0.2s,
+    opacity 0.4s 0.2s;
+}
+
+.console-container,
+.console-header {
+  padding-left: 48px;
+}
+
+.sidebar-container,
+.console-sidebar {
+  transition: width 0.3s;
+}
+
+body.open {
+  .console-container,
+  .console-header {
+    padding-left: var(--w-sidebar);
+  }
+  
+  .console-sidebar {
+    width: var(--w-sidebar);
+  }
+
+  .sidebar-container {
+    width: calc(var(--w-sidebar) - var(--w-short));
+  }
+  .console-contents-inner,
+  .console-area {
+    padding-left: 20px;
+  }
+
+  
+}

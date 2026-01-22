@@ -28,33 +28,3 @@
 
 .bg--border { background-color: var(--c-border) !important }
 .bg--bg { background-color: var(--c-bg) !important }
-
-// 정상
-.g--normal {
-  color: #0f7d00 !important;
-  font-weight: 600
-}
-
-// 유보
-.g--defer {
-  color: #ffd400 !important;
-  font-weight: 600
-}
-
-// 관찰
-.g--observe {
-  color: #ff9900 !important;
-  font-weight: 600
-}
-
-// 주의
-.g--warn {
-  color: var(--c-error) !important;
-  font-weight: 600
-}
-
-// 주의
-.g--active {
-  color: var(--c-secondary) !important;
-  font-weight: 600
-}

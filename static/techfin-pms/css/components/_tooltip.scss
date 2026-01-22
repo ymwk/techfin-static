@@ -24,31 +24,50 @@
 .tooltip-popper {
   z-index: 1;
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: -10px;
   padding-top: 5px;
 }
 
 .tooltip-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   position: relative;
+  min-width: 336px;
   padding: 10px 12px;
   border-radius: 5px;
-  border: 1px solid var(--c-gray2);
-  background-color: #e7edff;
+  border: 1px solid var(--c-border2);
+  background-color: #fff;
   color: var(--c-gray1);
-  font-size: 14px;
-  white-space: nowrap;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: 20px;
-    width: 9px;
-    height: 9px;
-    border-top: 1px solid var(--c-gray2);
-    border-left: 1px solid var(--c-gray2);
-    background-color: #e7edff;
-    rotate: 45deg;
+  font-size: 12px;
+  line-height: 1.4;
+  
+  .tit {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 700;
+    white-space: nowrap;
+    line-height: 1;
+    
+    small {
+      font-size: 12px;
+      font-weight: 400
+    }
+  }
+  
+  ul {
+    padding-left: 16px
+  }
+  
+  li {
+    padding: 3px 0 3px 0.7em;
+    text-indent: -0.7em;
+    
+    &::before {
+      content: '• '
+    }
   }
 }

@@ -11,13 +11,11 @@
 }
 
 .console-area {
+  @include width;
   display: flex;
   gap: var(--w-gap);
   align-items: flex-start;
   height: var(--h-header);
-  width: var(--w-cont);
-  padding: 0 20px;
-  margin: 0 auto;
 }
 
 .console-header-logo {
@@ -186,6 +184,7 @@
     .global-user-menu {
       opacity: 1;
       max-height: 300px;
+      visibility: visible;
     }
 
     .btn-user::after {
@@ -235,6 +234,7 @@
     opacity 0.3s,
     max-height 0.2s ease-in-out;
   overflow: hidden;
+  visibility: hidden;
 
   .btn-logout {
     display: flex;
@@ -267,6 +267,7 @@
   }
 
   .icon-comm {
-    opacity: 0.5;
+    opacity: 0.6;
+    transform: scale(0.8);
   }
 }

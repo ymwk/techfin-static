@@ -1,0 +1,1558 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/techfin-pms/css/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="console-root">
+        <!-- Header -->
+        <header class="console-header">
+          <div class="console-area">
+            <h1 class="console-header-logo">
+              <a href="/">
+                <div class="logo">
+                  <span class="blind">Crediview 기업모니터링</span>
+                </div>
+              </a>
+            </h1>
+            <nav class="console-header-nav">
+              <div class="console-header-menu">
+                <div class="console-nav-item">
+                  <a href="/src/app/mypage/company/index.html" class="nav-btn">기업조회</a>
+                  <div class="console-nav-sub">
+                    <ul class="console-nav-sublist">
+                      <li>
+                        <a href=""><span>기업정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>개인정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>인증서관리</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="console-nav-item">
+                  <a href="/src/app/enterprise/data/index.html" class="nav-btn ac--active">기업현황</a>
+                  <div class="console-nav-sub">
+                    <ul class="console-nav-sublist">
+                      <li>
+                        <a href="" class="ac--active"><span>관리기업현황</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>매출/매입처현황</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>재무제표</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>재무분석</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>기업신용정보</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>자료요청/제출현황</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="console-nav-item">
+                  <a href="/src/app/service/admin/index.html" class="nav-btn">마이페이지</a>
+                  <div class="console-nav-sub">
+                    <ul class="console-nav-sublist">
+                      <li>
+                        <a href=""><span>기업정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>개인정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>인증서관리</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="console-header-global">
+                <div class="global-btns">
+                  <div class="global-btn-user">
+                    <button type="button" class="btn-user">
+                      <i class="icon-comm i--user"></i>
+                      <span>kimtech@techfinratings.com</span>
+                    </button>
+
+                    <div class="global-user-menu">
+                      <ul class="user-menu-list">
+                        <li>
+                          <a href="#">
+                            <span>회사 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>인증서 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>내 정보 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>결제 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>회원 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <button type="button" class="btn-logout">
+                        <i class="icon-comm i--logout"></i>
+                        로그아웃
+                      </button>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-icon">
+                    <i class="icon-comm i--bell"></i>
+                    <span class="blind">알림</span>
+                    <span class="badge">14</span>
+                  </button>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <div class="console-container">
+          <!-- Sidebar Start -->
+          <div class="console-sidebar">
+            <div class="sidebar-posistion">
+              <div class="sidebar-menu">
+                <button type="button" class="sidebar-foldBtn">
+                  <span class="blind">접기</span>
+                </button>
+                <button type="button" class="sidebar-btn company" data-target-id="tab1">
+                  <span class="blind">기업</span>
+                </button>
+                <button type="button" class="sidebar-btn fav" data-target-id="tab2">
+                  <span class="blind">즐겨찾기</span>
+                </button>
+                <button type="button" class="sidebar-btn memo" data-target-id="tab3">
+                  <span class="blind">메모</span>
+                </button>
+              </div>
+
+              <div class="sidebar-container">
+                <div class="sidebar-inner">
+                  <div class="sidebar-tab-cont" id="tab1" style="display: none">
+                    <h3 class="sidebar-h1">우리 회사</h3>
+                    <div class="sidebar-box">
+                      <table class="table-detail">
+                        <tbody>
+                          <tr>
+                            <th>기업명</th>
+                            <td>테크핀레이팅스</td>
+                          </tr>
+                          <tr>
+                            <th>사업자등록번호</th>
+                            <td>123-22-00015</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="sidebar-subtit">
+                      <h4 class="sidebar-h2">관리기업</h4>
+                      <p>관리기업은 기업조회 후 등록하신 기업입니다.</p>
+                    </div>
+                    <div class="sidebar-searchbox">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input
+                            type="text"
+                            class="textfield-form"
+                            name=""
+                            placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
+                            value="전자"
+                          />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <button type="button" class="btn-clear">
+                            <span class="blind">삭제</span>
+                          </button>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-searchbox -->
+                    <div class="sidebar-content">
+                      <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
+                      <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
+                      <div class="sidebar-cont-scroll">
+                        <ul class="sidebar-companylist">
+                          <li>
+                            <span>LG<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>삼성<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // sidebar-content -->
+                  </div>
+                  <!-- // tab1 -->
+
+                  <div class="sidebar-tab-cont" id="tab2" style="display: none">
+                    <h3 class="sidebar-h1">우리 회사</h3>
+                    <div class="sidebar-box">
+                      <table class="table-detail">
+                        <tbody>
+                          <tr>
+                            <th>기업명</th>
+                            <td>테크핀레이팅스</td>
+                          </tr>
+                          <tr>
+                            <th>사업자등록번호</th>
+                            <td>123-22-00015</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="sidebar-subtit">
+                      <h4 class="sidebar-h2">즐겨찾는 기업 (3)</h4>
+                      <p>즐겨찾는 기업 목록입니다.</p>
+                    </div>
+                    <div class="sidebar-searchbox">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input
+                            type="text"
+                            class="textfield-form"
+                            name=""
+                            placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
+                          />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <!-- <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button> -->
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-searchbox -->
+                    <div class="sidebar-content">
+                      <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
+                      <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
+                      <div class="sidebar-cont-scroll">
+                        <ul class="sidebar-companylist">
+                          <li>
+                            <span>LG전자</span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>삼성전자</span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인전자</span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // sidebar-content -->
+                  </div>
+                  <!-- // tab2 -->
+
+                  <div class="sidebar-tab-cont" id="tab3" style="display: none">
+                    <h3 class="sidebar-h1">메모</h3>
+                    <div class="sidebar-memo-utils">
+                      <button type="button" class="btn-icon btn-memo-search">
+                        <i class="icon-comm i--search"></i>
+                        <span class="blind">검색</span>
+                      </button>
+                      <button type="button" class="btn-icon">
+                        <i class="icon-comm i--write"></i>
+                        <span class="blind">작성</span>
+                      </button>
+                      <button type="button" class="btn-icon btn-memo-del">
+                        <i class="icon-comm i--trash"></i>
+                        <span class="blind">삭제</span>
+                      </button>
+                    </div>
+
+                    <div class="sidebar-memo-searchbox">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input type="text" class="textfield-form" name="" placeholder="검색어를 입력해 주세요." />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <!-- <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button> -->
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-memo-searchbox -->
+
+                    <div class="sidebar-content ac--del">
+                      <div class="sidebar-cont-scroll">
+                        <ul class="sidebar-memo-list">
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" checked />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" checked />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // sidebar-content -->
+
+                    <div class="sidebar-footer">
+                      <button type="button" class="btn-comm">
+                        <span>취소</span>
+                      </button>
+                      <button type="button" class="btn-contained">
+                        <span>삭제</span>
+                      </button>
+                    </div>
+                    <!-- // sidebar-footer -->
+                  </div>
+                  <!-- // tab3 -->
+                </div>
+                <!-- // sidebar-inner -->
+              </div>
+              <!-- //sidebar-container -->
+            </div>
+          </div>
+          <!-- Sidebar End -->
+
+          <!-- Main Contents Start -->
+          <main class="console-contents">
+            <div class="console-contents-inner">
+              <div class="cont-headline">
+                <h2 class="font-h2">기업정보</h2>
+                <p>각 기업의 상세 정보를 확인하실 수 있습니다.</p>
+
+                <div class="headline-utils">
+                  <div class="cont-breadcrumbs">
+                    <a href="../../enterprise/data/index.html">기업현황</a>
+                    <a href="../../enterprise/company/index.html">관리기업</a>
+                    <span>기업정보</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cont-headline-box t--detail">
+                <div class="headline-title">
+                  <div class="headline-company">
+                    <div class="logo">
+                      <img src="/static/techfin-pms/image/logo/logo_techfin.png" alt="logo" />
+                    </div>
+                    <em>테크핀레이팅스</em>
+                    <button type="button" class="btn-fav ac--active">
+                      <i class="icon-comm i--fav"></i>
+                      <span class="blind">즐겨찾기</span>
+                    </button>
+                  </div>
+                </div>
+                <ul class="list">
+                  <li>
+                    <em>대표자명</em>
+                    <span>김테크</span>
+                  </li>
+                  <li>
+                    <em>업종</em>
+                    <span>그 외 기타 소프트웨어업</span>
+                  </li>
+                  <li>
+                    <em>사업자등록번호</em>
+                    <span>411-81-75485</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tabmenu-menu">
+                <button type="button" class="tabmenu-btn ac--active">기업요약</button>
+                <button type="button" class="tabmenu-btn">재무제표</button>
+                <button type="button" class="tabmenu-btn">재무분석</button>
+                <button type="button" class="tabmenu-btn">등급정보</button>
+                <button type="button" class="tabmenu-btn">신용정보</button>
+                <button type="button" class="tabmenu-btn">거래처현황</button>
+              </div>
+
+              <div class="tabmenu-content" id="">
+                <h3 class="blind">기업요약</h3>
+                <div class="tabmenu-filter" data-target-group="filter">
+                  <button type="button" class="tabmenu-btn ac--active" data-target-tab="filter1">종합정보</button>
+                  <button type="button" class="tabmenu-btn" data-target-tab="filter2">기업개요</button>
+                  <button type="button" class="tabmenu-btn" data-target-tab="filter3">주요재무 요약</button>
+                  <button type="button" class="tabmenu-btn" data-target-tab="filter4">고용현황</button>
+                  <button type="button" class="tabmenu-btn" data-target-tab="filter5">런웨이</button>
+                </div>
+
+                <div class="tabmenu-content" id="filter1" style="display: block">
+                  <div class="dashboard-sub">
+                    <!-- EWS 등급 현황 -->
+                    <div class="dashboard-panel">
+                      <div class="panel-title">
+                        <span class="font-h3">EWS 등급 현황</span>
+
+                        <div class="tooltip-root ac-hover">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span class="blind">툴팁보기</span>
+                          </button>
+                          <div class="tooltip-popper">
+                            <div class="tooltip-box">
+                              <div class="tit"><i class="icon-comm i--tooltip"></i>EWS 등급 현황</div>
+                              <p>
+                                EWS 등급 현황에서는 관리 중인 기업의 위험 수준과 등급 변동 내역을 한눈에 확인할 수
+                                있습니다.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" class="btn-icon btn-more">
+                          <i class="icon-comm i--next"></i>
+                        </button>
+                      </div>
+                      <!-- // panel-title -->
+
+                      <div class="panel-cont">
+                        <div class="grade">
+                          <em class="font-h1">관찰</em>
+                          <span class="grade-sort g--normal"><i class="icon-comm i--rise"></i>2등급</span>
+                        </div>
+                        <div class="chart" style="background: #f4f4f4"></div>
+                        <div class="date"><span>데이터 기준월 : 2025-10</span></div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+
+                    <!-- 매출진도율 -->
+                    <div class="dashboard-panel">
+                      <div class="panel-title">
+                        <span class="font-h3">전년결산 대비 매출진도율</span>
+
+                        <div class="tooltip-root ac-hover">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span class="blind">툴팁보기</span>
+                          </button>
+                          <div class="tooltip-popper">
+                            <div class="tooltip-box">
+                              <div class="tit">
+                                <i class="icon-comm i--tooltip"></i>
+                                <span>매출 진도율</span>
+                                <small>작년 전체 매출 대비 올해 현재까지 달성한 비율</small>
+                              </div>
+                              <ul>
+                                <li>비교 시점 : 작년 동기</li>
+                                <li>
+                                  평가 기준 : 진도율이 클수록 좋음. 단, 진도율 적정성을 고려해 ±1개월 내 수준은
+                                  ‘적정'으로 표기
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- // panel-title -->
+
+                      <div class="panel-cont">
+                        <div class="grade">
+                          <em class="font-h1">21%</em>
+                          <span class="grade-label g--normal">적정 이상</span>
+                        </div>
+                        <div class="chart" style="background: #f4f4f4"></div>
+                        <div class="date"><span>데이터 기준월 : 2025-10</span></div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+
+                    <!-- 영업이익진도율 -->
+                    <div class="dashboard-panel">
+                      <div class="panel-title">
+                        <span class="font-h3">전년결산 대비 영업이익 진도율</span>
+
+                        <div class="tooltip-root ac-hover">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span class="blind">툴팁보기</span>
+                          </button>
+                          <div class="tooltip-popper">
+                            <div class="tooltip-box">
+                              <div class="tit">
+                                <i class="icon-comm i--tooltip"></i>
+                                영업이익 진도율
+                                <small>작년 전체 영업이익 대비 올해 현재까지 달성 비율</small>
+                              </div>
+                              <ul>
+                                <li>비교 시점 : 작년 동기</li>
+                                <li>
+                                  평가 기준 : 진도율이 클수록 좋음. 단, 진도율 적정성을 고려해 ±1개월 내 수준은
+                                  ‘적정'으로 표기
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- // panel-title -->
+
+                      <div class="panel-cont">
+                        <div class="grade">
+                          <em class="font-h1">21%</em>
+                          <span class="grade-label g--warn">적정 이상</span>
+                        </div>
+                        <div class="chart" style="background: #f4f4f4"></div>
+                        <div class="date"><span>데이터 기준월 : 2025-10</span></div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+
+                    <!-- 실시간 등급 -->
+                    <div class="dashboard-panel">
+                      <div class="panel-title">
+                        <span class="font-h3">실시간 등급</span>
+
+                        <div class="tooltip-root ac-hover">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span class="blind">툴팁보기</span>
+                          </button>
+                          <div class="tooltip-popper">
+                            <div class="tooltip-box">
+                              <div class="tit">
+                                <i class="icon-comm i--tooltip"></i>
+                                실시간 등급
+                              </div>
+                              <p>
+                                실시간 등급은 기업의 최신 신용 정보를 반영해 현재 위험 수준을 확인할 수 있는 지표입니다.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" class="btn-icon btn-more">
+                          <i class="icon-comm i--next"></i>
+                        </button>
+                      </div>
+                      <!-- // panel-title -->
+
+                      <div class="panel-cont">
+                        <div class="chart" style="background: #f4f4f4"></div>
+                        <div class="date"><span>데이터 기준월 : 2025-10</span></div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+
+                    <!-- 런웨이 현황 -->
+                    <div class="dashboard-panel grid-4">
+                      <div class="panel-title">
+                        <span class="font-h3">런웨이 현황</span>
+
+                        <div class="tooltip-root ac-hover">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span class="blind">툴팁보기</span>
+                          </button>
+                          <div class="tooltip-popper">
+                            <div class="tooltip-box">
+                              <div class="tit">
+                                <i class="icon-comm i--tooltip"></i>
+                                런웨이 현황
+                              </div>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" class="btn-icon btn-more">
+                          <i class="icon-comm i--next"></i>
+                        </button>
+                      </div>
+                      <!-- // panel-title -->
+
+                      <div class="panel-cont">
+                        <div class="runway-cont">
+                          <p class="desc">
+                            자금 소진일까지 <br /><em>351</em>일이 예상됩니다.<br />
+                            <small>(약 11개월 27일)</small>
+                          </p>
+                          <ul class="list">
+                            <li>
+                              <span class="name">예산소진일</span>
+                              <em>2025-08-31</em>
+                            </li>
+                            <li>
+                              <span class="name">전년 동기</span>
+                              <em>337,000,000<small>원</small></em>
+                            </li>
+                            <li>
+                              <span class="name">전년 결산시점</span>
+                              <em>1,337,000,000<small>원</small></em>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="date">
+                          <span>데이터 기준월 : 2025-10</span>
+                          <duv class="desc-info">
+                            <i class="icon-comm i--tooltip"></i>
+                            <p>런웨이가 하이픈(-) 으로 표시되는 경우 현금 순유입구간을 의미합니다.</p>
+                          </duv>
+                        </div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+
+                    <!-- 매출처 현황 -->
+                    <div class="dashboard-panel grid-3">
+                      <div class="panel-title">
+                        <span class="font-h3">매출처 현황</span>
+
+                        <div class="tooltip-root ac-hover">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span class="blind">툴팁보기</span>
+                          </button>
+                          <div class="tooltip-popper">
+                            <div class="tooltip-box">
+                              <div class="tit">
+                                <i class="icon-comm i--tooltip"></i>
+                                매출처 현황
+                              </div>
+                              <p>관리 기업의 매출처 및 평균 회수일 현황입니다.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" class="btn-icon btn-more">
+                          <i class="icon-comm i--next"></i>
+                        </button>
+                      </div>
+                      <!-- // panel-title -->
+
+                      <div class="panel-cont">
+                        <div class="table-wrap">
+                          <table class="table-datagrid">
+                            <thead>
+                              <tr>
+                                <th><span class="tit">번호</span></th>
+                                <th><span class="tit">기업명</span></th>
+                                <th><span class="tit">매출금액</span></th>
+                                <th><span class="tit">평균 회수기일</span></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>퓨처바이오</td>
+                                <td>1,000,000,000</td>
+                                <td>10일</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>넥스트에너지</td>
+                                <td>100,000,000</td>
+                                <td>10일</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>퓨처바이오</td>
+                                <td>1,000,000,000</td>
+                                <td>10일</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>퓨처바이오</td>
+                                <td>1,000,000,000</td>
+                                <td>10일</td>
+                              </tr>
+                              <tr>
+                                <td>5</td>
+                                <td>퓨처바이오</td>
+                                <td>1,000,000,000</td>
+                                <td>10일</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+
+                    <!-- 매입처 현황 -->
+                    <div class="dashboard-panel grid-3">
+                      <div class="panel-title">
+                        <span class="font-h3">매입처 현황</span>
+
+                        <div class="tooltip-root ac-hover">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span class="blind">툴팁보기</span>
+                          </button>
+                          <div class="tooltip-popper">
+                            <div class="tooltip-box">
+                              <div class="tit">
+                                <i class="icon-comm i--tooltip"></i>
+                                매입처 현황
+                              </div>
+                              <p>관리 기업의 매입처 및 평균 지급일 현황입니다.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" class="btn-icon btn-more">
+                          <i class="icon-comm i--next"></i>
+                        </button>
+                      </div>
+                      <!-- // panel-title -->
+
+                      <div class="panel-cont">
+                        <div class="table-wrap">
+                          <table class="table-datagrid">
+                            <thead>
+                              <tr>
+                                <th><span class="tit">번호</span></th>
+                                <th><span class="tit">기업명</span></th>
+                                <th><span class="tit">매출금액</span></th>
+                                <th><span class="tit">평균 회수기일</span></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>퓨처바이오</td>
+                                <td>1,000,000,000</td>
+                                <td>10일</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>넥스트에너지</td>
+                                <td>100,000,000</td>
+                                <td>10일</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>퓨처바이오</td>
+                                <td>1,000,000,000</td>
+                                <td>10일</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>퓨처바이오</td>
+                                <td>1,000,000,000</td>
+                                <td>10일</td>
+                              </tr>
+                              <tr>
+                                <td>5</td>
+                                <td>퓨처바이오</td>
+                                <td>1,000,000,000</td>
+                                <td>10일</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+                  </div>
+                  <!-- // dashboard-sub -->
+                </div>
+                <!-- // tabmenu-content -->
+
+                <div class="tabmenu-content" id="filter2" style="display: none">
+                  <div class="table-wrap">
+                    <table class="table-rows">
+                      <tbody>
+                        <tr>
+                          <th>기업명</th>
+                          <td>테크핀비즈온</td>
+                          <th>개업일</th>
+                          <td>2011-01-10</td>
+                        </tr>
+                        <tr>
+                          <th>사업자등록번호</th>
+                          <td>123-45-13456</td>
+                          <th>대표자명</th>
+                          <td>김테크</td>
+                        </tr>
+                        <tr>
+                          <th>사업장소재지</th>
+                          <td>서울특별시 강남구 강남동 65</td>
+                          <th>법인등록번호</th>
+                          <td>110111-4517771</td>
+                        </tr>
+                        <tr>
+                          <th>업태</th>
+                          <td colspan="3">서비스/서비스/서비스/서비스 제조업/건설업/도소매/소매</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="tabmenu-content" id="filter3" style="display: none">
+                  <div class="dashboard-sub">
+                    <!-- 재무 -->
+                    <div class="dashboard-panel grid-3">
+                      <div class="panel-title">
+                        <span class="font-h3">재무</span>
+                        <ul class="chart-legend">
+                          <li><span class="bullet" style="background: #f26b7a"></span>부채</li>
+                          <li><span class="bullet" style="background: #7d98ff"></span>자본</li>
+                          <li><span class="bullet" style="background: #b1b1b4"></span>자산</li>
+                        </ul>
+                      </div>
+                      <div class="panel-cont">
+                        <div class="chart" style="background: #f4f4f4"></div>
+                        <div>
+                          <div class="table-header">
+                            <div class="unit">(단위: 원)</div>
+                          </div>
+                          <div class="table-wrap">
+                            <table class="table-datagrid">
+                              <thead>
+                                <tr>
+                                  <th><span class="tit">구분</span></th>
+                                  <th><span class="tit">2022</span></th>
+                                  <th><span class="tit">2023</span></th>
+                                  <th><span class="tit">2024</span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>자산</td>
+                                  <td class="al--right">36,063,334,612</td>
+                                  <td class="al--right">0</td>
+                                  <td class="al--right">0</td>
+                                </tr>
+                                <tr>
+                                  <td>자본</td>
+                                  <td class="al--right">18,294,893,246</td>
+                                  <td class="al--right">0</td>
+                                  <td class="al--right">0</td>
+                                </tr>
+                                <tr>
+                                  <td>부채</td>
+                                  <td class="al--right">36,063,334,612</td>
+                                  <td class="al--right">0</td>
+                                  <td class="al--right">0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- // table-wrap -->
+                        </div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+
+                    <!-- 손익 -->
+                    <div class="dashboard-panel grid-3">
+                      <div class="panel-title">
+                        <span class="font-h3">재무</span>
+                        <ul class="chart-legend">
+                          <li><span class="bullet" style="background: #f26b7a"></span>매출액</li>
+                          <li><span class="bullet" style="background: #7d98ff"></span>순이익</li>
+                          <li><span class="bullet" style="background: #b1b1b4"></span>영업이익</li>
+                        </ul>
+                      </div>
+                      <div class="panel-cont">
+                        <div class="chart" style="background: #f4f4f4"></div>
+                        <div>
+                          <div class="table-header">
+                            <div class="unit">(단위: 원)</div>
+                          </div>
+                          <div class="table-wrap">
+                            <table class="table-datagrid">
+                              <thead>
+                                <tr>
+                                  <th><span class="tit">구분</span></th>
+                                  <th><span class="tit">2022</span></th>
+                                  <th><span class="tit">2023</span></th>
+                                  <th><span class="tit">2024</span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>순이익</td>
+                                  <td class="al--right">36,063,334,612</td>
+                                  <td class="al--right">0</td>
+                                  <td class="al--right">0</td>
+                                </tr>
+                                <tr>
+                                  <td>매출액</td>
+                                  <td class="al--right">18,294,893,246</td>
+                                  <td class="al--right">0</td>
+                                  <td class="al--right">0</td>
+                                </tr>
+                                <tr>
+                                  <td>영업이익</td>
+                                  <td class="al--right">36,063,334,612</td>
+                                  <td class="al--right">0</td>
+                                  <td class="al--right">0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- // table-wrap -->
+                        </div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+
+                    <!-- 현금흐름 -->
+                    <div class="dashboard-panel grid-3">
+                      <div class="panel-title">
+                        <span class="font-h3">현금흐름</span>
+                        <ul class="chart-legend">
+                          <li><span class="bullet" style="background: #f26b7a"></span>영업</li>
+                          <li><span class="bullet" style="background: #7d98ff"></span>재무</li>
+                          <li><span class="bullet" style="background: #b1b1b4"></span>투자</li>
+                        </ul>
+                      </div>
+                      <div class="panel-cont">
+                        <div class="chart" style="background: #f4f4f4"></div>
+                        <div>
+                          <div class="table-header">
+                            <div class="unit">(단위: 원)</div>
+                          </div>
+                          <div class="table-wrap">
+                            <table class="table-datagrid">
+                              <thead>
+                                <tr>
+                                  <th><span class="tit">구분</span></th>
+                                  <th><span class="tit">2022</span></th>
+                                  <th><span class="tit">2023</span></th>
+                                  <th><span class="tit">2024</span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>재무</td>
+                                  <td class="al--right">36,063,334,612</td>
+                                  <td class="al--right">0</td>
+                                  <td class="al--right">0</td>
+                                </tr>
+                                <tr>
+                                  <td>투자</td>
+                                  <td class="al--right">18,294,893,246</td>
+                                  <td class="al--right">0</td>
+                                  <td class="al--right">0</td>
+                                </tr>
+                                <tr>
+                                  <td>영업</td>
+                                  <td class="al--right">36,063,334,612</td>
+                                  <td class="al--right">0</td>
+                                  <td class="al--right">0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- // table-wrap -->
+                        </div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+                  </div>
+                  <!-- // dashboard-sub -->
+                </div>
+                <!-- // tabmenu-content -->
+
+                <div class="tabmenu-content" id="filter4" style="display: none">
+                  <div class="dashboard-sub">
+                    <!-- 종업원 현황 -->
+                    <div class="dashboard-panel grid-6">
+                      <div class="panel-title">
+                        <span class="font-h3"
+                          >종업원 현황
+                          <small class="unit">최근 12개월</small>
+                        </span>
+                      </div>
+                      <div class="panel-cont">
+                        <div>
+                          <div class="table-header">
+                            <ul class="chart-legend">
+                              <li><span class="bullet" style="background: #7d98ff"></span>입사자 수</li>
+                              <li><span class="bullet" style="background: #b1b1b4"></span>퇴사자 수</li>
+                              <li><span class="bullet" style="background: #f2c14f"></span>전체 인원수</li>
+                            </ul>
+                          </div>
+
+                          <div class="chart" style="background: #f4f4f4; height: 320px"></div>
+                        </div>
+                        <div>
+                          <div class="table-header">
+                            <div class="unit">(단위: 명)</div>
+                          </div>
+                          <div class="table-wrap">
+                            <table class="table-datagrid table-price">
+                              <thead>
+                                <tr>
+                                  <th style="width: 120px">구분</th>
+                                  <th><span class="tit">2024.08</span></th>
+                                  <th><span class="tit">2024.09</span></th>
+                                  <th><span class="tit">2024.10</span></th>
+                                  <th><span class="tit">2024.11</span></th>
+                                  <th><span class="tit">2024.12</span></th>
+                                  <th><span class="tit">2025.01</span></th>
+                                  <th><span class="tit">2025.02</span></th>
+                                  <th><span class="tit">2025.03</span></th>
+                                  <th><span class="tit">2025.04</span></th>
+                                  <th><span class="tit">2025.05</span></th>
+                                  <th><span class="tit">2025.06</span></th>
+                                  <th><span class="tit">2025.07</span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>입사자 수</th>
+                                  <td>10</td>
+                                  <td>0</td>
+                                  <td>5</td>
+                                  <td>37.5</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>22</td>
+                                  <td>10</td>
+                                </tr>
+                                <tr>
+                                  <th>퇴사자 수</th>
+                                  <td>10</td>
+                                  <td>0</td>
+                                  <td>5</td>
+                                  <td>37.5</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>22</td>
+                                  <td>10</td>
+                                </tr>
+                                <tr>
+                                  <th>전체 인원 수</th>
+                                  <td>10</td>
+                                  <td>10</td>
+                                  <td>25</td>
+                                  <td>37.5</td>
+                                  <td>30</td>
+                                  <td>40</td>
+                                  <td>70</td>
+                                  <td>30</td>
+                                  <td>40</td>
+                                  <td>10</td>
+                                  <td>220</td>
+                                  <td>1000</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+
+                    <!-- 인건비 현황 -->
+                    <div class="dashboard-panel grid-6">
+                      <div class="panel-title">
+                        <span class="font-h3"
+                          >인건비 현황
+                          <small class="unit">최근 12개월</small>
+                        </span>
+                      </div>
+
+                      <div class="panel-cont">
+                        <ul class="summary-list">
+                          <li>
+                            <span class="tit">최근 12개월 평균급여 증가율</span>
+                            <span class="value">-17.94%</span>
+                          </li>
+                          <li>
+                            <span class="tit">최근 12개월 인건비 증가율</span>
+                            <span class="value">-10.8%</span>
+                          </li>
+                          <li>
+                            <span class="tit">최근 12개월 퇴직급여충담금 증가율</span>
+                            <span class="value">-</span>
+                          </li>
+                        </ul>
+
+                        <div>
+                          <div class="table-header">
+                            <ul class="chart-legend">
+                              <li><span class="bullet" style="background: #7d98ff"></span>평균급여</li>
+                              <li><span class="bullet" style="background: #b1b1b4"></span>퇴직급여충당금</li>
+                              <li><span class="bullet" style="background: #f2c14f"></span>총인건비</li>
+                            </ul>
+                          </div>
+
+                          <div class="chart" style="background: #f4f4f4; height: 320px"></div>
+                        </div>
+
+                        <div>
+                          <div class="table-header">
+                            <div class="unit">(단위: 원)</div>
+                          </div>
+                          <div class="table-wrap">
+                            <table class="table-datagrid table-price">
+                              <thead>
+                                <tr>
+                                  <th style="width: 120px">구분</th>
+                                  <th><span class="tit">2024.08</span></th>
+                                  <th><span class="tit">2024.09</span></th>
+                                  <th><span class="tit">2024.10</span></th>
+                                  <th><span class="tit">2024.11</span></th>
+                                  <th><span class="tit">2024.12</span></th>
+                                  <th><span class="tit">2025.01</span></th>
+                                  <th><span class="tit">2025.02</span></th>
+                                  <th><span class="tit">2025.03</span></th>
+                                  <th><span class="tit">2025.04</span></th>
+                                  <th><span class="tit">2025.05</span></th>
+                                  <th><span class="tit">2025.06</span></th>
+                                  <th><span class="tit">2025.07</span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>평균급여</th>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                  <td>3,926,122.71</td>
+                                </tr>
+                                <tr>
+                                  <th>퇴직급여충당금</th>
+                                  <td>10</td>
+                                  <td>0</td>
+                                  <td>5</td>
+                                  <td>37.5</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>22</td>
+                                  <td>10</td>
+                                </tr>
+                                <tr>
+                                  <th>총 인건비</th>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                  <td>65,338,182</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+                  </div>
+                  <!-- // dashboard-sub -->
+                </div>
+                <!-- // tabmenu-content -->
+
+                <div class="tabmenu-content" id="filter5" style="display: none">
+                  <div class="runway-container">
+                    <div class="runway-cont">
+                      <h4 class="font-h3 title">
+                        런웨이 현황
+                        <small>기준일 : 2025-09-30 최근 12개월</small>
+                      </h4>
+
+                      <p class="desc">
+                        2025년 09월 30일 기준 자금 소진일까지 <em>1,107</em>일이 예상됩니다. (약 36개월 11일)
+                      </p>
+                      <ul class="list">
+                        <li>
+                          <span class="name">예산소진일</span>
+                          <em>2025-08-31</em>
+                        </li>
+                        <li>
+                          <span class="name">2025년 09월 기준 현금 보유액</span>
+                          <em>337,000,000<small>원</small></em>
+                        </li>
+                        <li>
+                          <span class="name">2025년 09월 기준 최근2개월 현금지출액 평균</span>
+                          <em>1,337,000,000<small>원</small></em>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="desc-info mt20">
+                    <i class="icon-comm i--tooltip"></i>
+                    <em>런웨이 현황</em>
+                    <p>
+                      관리기업의 보유 현금과 지출 흐름을 기준으로 예상 가능한 자금 소진 시점을 한눈에 확인할 수
+                      있습니다.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="table-header">
+                      <ul class="chart-legend">
+                        <li><span class="bullet" style="background: #7d98ff"></span>현금보유액</li>
+                        <li><span class="bullet" style="background: #b1b1b4"></span>지출</li>
+                        <li><span class="bullet" style="background: #f2c14f"></span>런웨이ⓐ/ⓑ</li>
+                      </ul>
+                    </div>
+
+                    <div class="chart" style="background: #f4f4f4; height: 320px"></div>
+                  </div>
+
+                  <div class="table-header mt10">
+                    <div class="unit">(단위: 원)</div>
+                  </div>
+                  <div class="table-wrap table-xscroll">
+                    <table class="table-datagrid table-price">
+                      <thead>
+                        <tr>
+                          <th style="width: 120px">구분</th>
+                          <th><span class="tit">2024.08</span></th>
+                          <th><span class="tit">2024.09</span></th>
+                          <th><span class="tit">2024.10</span></th>
+                          <th><span class="tit">2024.11</span></th>
+                          <th><span class="tit">2024.12</span></th>
+                          <th><span class="tit">2025.01</span></th>
+                          <th><span class="tit">2025.02</span></th>
+                          <th><span class="tit">2025.03</span></th>
+                          <th><span class="tit">2025.04</span></th>
+                          <th><span class="tit">2025.05</span></th>
+                          <th><span class="tit">2025.06</span></th>
+                          <th><span class="tit">2025.07</span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>현금보유액ⓐ</th>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                        </tr>
+                        <tr>
+                          <th>현금지출액<br />3개월평균ⓑ</th>
+                          <td>10</td>
+                          <td>0</td>
+                          <td>5</td>
+                          <td>37.5</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>22</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <th>런웨이ⓐ/ⓑ</th>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- // table-wrap -->
+                  <div class="desc-info mt20">
+                    <i class="icon-comm i--tooltip"></i>
+                    <div>
+                      <p>현금지출은 현금수지분석표의 현금판매비 및 일반관리비에 1을 곱한 값입니다.</p>
+                      <p>
+                        현금판매비 및 일반관리비는 판매관리비에서 비현금성향목(유형자산감가상각비, 무형자산상각비,
+                        대손상각비, 선급비용중감, 미지급비용중감)을 차감한 금액입니다.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="table-header mt10">
+                    <div class="unit">(단위: 원)</div>
+                  </div>
+                  <div class="table-wrap table-xscroll">
+                    <table class="table-datagrid table-price">
+                      <thead>
+                        <tr>
+                          <th style="width: 120px">구분</th>
+                          <th><span class="tit">2024.08</span></th>
+                          <th><span class="tit">2024.09</span></th>
+                          <th><span class="tit">2024.10</span></th>
+                          <th><span class="tit">2024.11</span></th>
+                          <th><span class="tit">2024.12</span></th>
+                          <th><span class="tit">2025.01</span></th>
+                          <th><span class="tit">2025.02</span></th>
+                          <th><span class="tit">2025.03</span></th>
+                          <th><span class="tit">2025.04</span></th>
+                          <th><span class="tit">2025.05</span></th>
+                          <th><span class="tit">2025.06</span></th>
+                          <th><span class="tit">2025.07</span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>외상매입금</th>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                          <td>3,926,122.71</td>
+                        </tr>
+                        <tr>
+                          <th>미지급비용</th>
+                          <td>10</td>
+                          <td>0</td>
+                          <td>5</td>
+                          <td>37.5</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>22</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <th>전환사채</th>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                          <td>65,338,182</td>
+                        </tr>
+                        <tr>
+                          <th>지급어음</th>
+                          <td>10</td>
+                          <td>0</td>
+                          <td>5</td>
+                          <td>37.5</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>22</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <th>미지급금</th>
+                          <td>10</td>
+                          <td>0</td>
+                          <td>5</td>
+                          <td>37.5</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>22</td>
+                          <td>10</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- // table-wrap -->
+
+                  <div class="desc-info mt20">
+                    <i class="icon-comm i--tooltip"></i>
+                    <div>
+                      <p>
+                        참고지표는 미래 현금 유출이 예상되는 주요 계정으로, 단순 런웨이 산출 시 고려되지 않은 잠재 부담
+                        요인입니다.
+                      </p>
+                      <p>함께 확인하여 실제 운용 가능한 현금 여력을 점검하시기 바랍니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- // tabmenu-content -->
+              </div>
+            </div>
+          </main>
+          <!-- Main Contents End -->
+        </div>
+        <!-- //console-container -->
+      </div>
+      <!-- console-root -->
+    </div>
+
+    <script src="../../js/custom-v2.js"></script>
+  </body>
+</html>

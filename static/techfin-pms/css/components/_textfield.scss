@@ -68,7 +68,7 @@
   margin: auto 0;
   width: 30px;
   height: 30px;
-  
+
   &::after {
     content: '×';
     display: inline-flex;
@@ -77,10 +77,9 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background-color: #8B8B8F;
+    background-color: var(--c-gray3);
     color: #fff;
     font-weight: 200;
     line-height: 13px;
   }
-  
 }

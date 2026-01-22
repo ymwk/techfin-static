@@ -10,6 +10,11 @@
     position: relative;
     background-color: #1d1d1d;
   }
+  
+  .console-area {
+    max-width: var(--w-cont);
+    padding: 0
+  }
 }
 
 .main-section {

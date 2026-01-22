@@ -141,441 +141,447 @@
         <div class="console-container">
           <!-- Sidebar Start -->
           <div class="console-sidebar">
-            <div class="sidebar-menu">
-              <button type="button" class="sidebar-foldBtn">
-                <span class="blind">접기</span>
-              </button>
-              <button type="button" class="sidebar-btn company" data-target-id="tab1">
-                <span class="blind">기업</span>
-              </button>
-              <button type="button" class="sidebar-btn fav" data-target-id="tab2">
-                <span class="blind">즐겨찾기</span>
-              </button>
+            <div class="sidebar-posistion">
+              <div class="sidebar-menu">
+                <button type="button" class="sidebar-foldBtn">
+                  <span class="blind">접기</span>
+                </button>
+                <button type="button" class="sidebar-btn company" data-target-id="tab1">
+                  <span class="blind">기업</span>
+                </button>
+                <button type="button" class="sidebar-btn fav" data-target-id="tab2">
+                  <span class="blind">즐겨찾기</span>
+                </button>
 
-              <button type="button" class="sidebar-btn fav" data-target-id="tab7">
-                <span class="blind">즐겨찾기</span>
-              </button>
-              <button type="button" class="sidebar-btn memo" data-target-id="tab3">
-                <span class="blind">메모</span>
-              </button>
+                <button type="button" class="sidebar-btn fav" data-target-id="tab7">
+                  <span class="blind">즐겨찾기</span>
+                </button>
+                <button type="button" class="sidebar-btn memo" data-target-id="tab3">
+                  <span class="blind">메모</span>
+                </button>
 
-              <button type="button" class="sidebar-btn memo" data-target-id="tab4">
-                <span class="blind">메모</span>
-              </button>
-              <button type="button" class="sidebar-btn memo" data-target-id="tab5">
-                <span class="blind">메모</span>
-              </button>
-              <button type="button" class="sidebar-btn memo" data-target-id="tab6">
-                <span class="blind">메모</span>
-              </button>
-            </div>
+                <button type="button" class="sidebar-btn memo" data-target-id="tab4">
+                  <span class="blind">메모</span>
+                </button>
+                <button type="button" class="sidebar-btn memo" data-target-id="tab5">
+                  <span class="blind">메모</span>
+                </button>
+                <button type="button" class="sidebar-btn memo" data-target-id="tab6">
+                  <span class="blind">메모</span>
+                </button>
+              </div>
 
-            <div class="sidebar-container">
-              <div class="sidebar-tab-cont" id="tab1" style="display: none">
-                <h3 class="sidebar-h1">우리 회사</h3>
-                <div class="sidebar-box">
-                  <table class="table-detail">
-                    <tbody>
-                      <tr>
-                        <th>기업명</th>
-                        <td>테크핀레이팅스</td>
-                      </tr>
-                      <tr>
-                        <th>사업자등록번호</th>
-                        <td>123-22-00015</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="sidebar-container">
+                <div class="sidebar-inner">
+                  <div class="sidebar-tab-cont" id="tab1" style="display: none">
+                    <h3 class="sidebar-h1">우리 회사</h3>
+                    <div class="sidebar-box">
+                      <table class="table-detail">
+                        <tbody>
+                          <tr>
+                            <th>기업명</th>
+                            <td>테크핀레이팅스</td>
+                          </tr>
+                          <tr>
+                            <th>사업자등록번호</th>
+                            <td>123-22-00015</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
 
-                <div class="sidebar-subtit">
-                  <h4 class="sidebar-h2">관리기업</h4>
-                  <p>관리기업은 기업조회 후 등록하신 기업입니다.</p>
-                </div>
-                <div class="sidebar-searchbox">
-                  <div class="textfield-root">
-                    <label class="textfield-label">
-                      <span class="label blind">검색키워드</span>
-                      <input
-                        type="text"
-                        class="textfield-form"
-                        name=""
-                        placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
-                        value="전자"
-                      />
-                      <!-- 내용 입력시 나타나는 버튼 -->
-                      <button type="button" class="btn-clear">
+                    <div class="sidebar-subtit">
+                      <h4 class="sidebar-h2">관리기업</h4>
+                      <p>관리기업은 기업조회 후 등록하신 기업입니다.</p>
+                    </div>
+                    <div class="sidebar-searchbox">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input
+                            type="text"
+                            class="textfield-form"
+                            name=""
+                            placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
+                            value="전자"
+                          />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <button type="button" class="btn-clear">
+                            <span class="blind">삭제</span>
+                          </button>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-searchbox -->
+                    <div class="sidebar-content">
+                      <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
+                      <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
+                      <div class="sidebar-cont-scroll">
+                        <ul class="sidebar-companylist">
+                          <li>
+                            <span>LG<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>삼성<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // sidebar-content -->
+                  </div>
+                  <!-- // tab1 -->
+
+                  <div class="sidebar-tab-cont" id="tab2" style="display: none">
+                    <h3 class="sidebar-h1">우리 회사</h3>
+                    <div class="sidebar-box">
+                      <table class="table-detail">
+                        <tbody>
+                          <tr>
+                            <th>기업명</th>
+                            <td>테크핀레이팅스</td>
+                          </tr>
+                          <tr>
+                            <th>사업자등록번호</th>
+                            <td>123-22-00015</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="sidebar-subtit">
+                      <h4 class="sidebar-h2">즐겨찾는 기업 (3)</h4>
+                      <p>즐겨찾는 기업 목록입니다.</p>
+                    </div>
+                    <div class="sidebar-searchbox">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input
+                            type="text"
+                            class="textfield-form"
+                            name=""
+                            placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
+                          />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <!-- <button type="button" class="btn-clear">
                         <span class="blind">삭제</span>
+                      </button> -->
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-searchbox -->
+                    <div class="sidebar-content">
+                      <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
+                      <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
+                      <div class="sidebar-cont-scroll">
+                        <ul class="sidebar-companylist">
+                          <li>
+                            <span>LG전자</span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>삼성전자</span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인전자</span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // sidebar-content -->
+                  </div>
+                  <!-- // tab2 -->
+
+                  <div class="sidebar-tab-cont" id="tab7" style="display: none">
+                    <h3 class="sidebar-h1">우리 회사</h3>
+                    <div class="sidebar-box">
+                      <table class="table-detail">
+                        <tbody>
+                          <tr>
+                            <th>기업명</th>
+                            <td>테크핀레이팅스</td>
+                          </tr>
+                          <tr>
+                            <th>사업자등록번호</th>
+                            <td>123-22-00015</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="sidebar-subtit">
+                      <h4 class="sidebar-h2">즐겨찾는 기업 (0)</h4>
+                      <p>즐겨찾는 기업 목록입니다.</p>
+                    </div>
+                    <div class="sidebar-searchbox">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input
+                            type="text"
+                            class="textfield-form"
+                            name=""
+                            placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
+                            value=""
+                          />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <!-- <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button> -->
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-searchbox -->
+                    <div class="sidebar-content">
+                      <div class="sidebar-empty">
+                        즐겨찾는 기업이 없어요.<br />관리기업 목록에서 즐겨찾는 기업을 <br />설정해주세요.
+                      </div>
+                    </div>
+                    <!-- // sidebar-content -->
+                  </div>
+                  <!-- // tab2 -->
+
+                  <div class="sidebar-tab-cont" id="tab3" style="display: none">
+                    <h3 class="sidebar-h1">메모</h3>
+                    <div class="sidebar-content">
+                      <textarea name="" class="textarea-form" placeholder="메모 내용을 입력해 주세요."></textarea>
+                    </div>
+                    <!-- // sidebar-content -->
+
+                    <div class="sidebar-footer">
+                      <button type="button" class="btn-comm" disabled>
+                        <span>취소</span>
                       </button>
-                    </label>
+                      <button type="button" class="btn-contained" disabled>
+                        <span>저장</span>
+                      </button>
+                    </div>
+                    <!-- // sidebar-footer -->
                   </div>
-                </div>
-                <!-- //sidebar-searchbox -->
-                <div class="sidebar-content">
-                  <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
-                  <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
-                  <div class="sidebar-cont-scroll">
-                    <ul class="sidebar-companylist">
-                      <li>
-                        <span>LG<em>전자</em></span>
-                        <span class="num">107-86-78945</span>
-                        <button type="button" class="btn-fav ac--active">
-                          <i class="icon-comm i--fav"></i>
-                          <span class="blind">즐겨찾기</span>
-                        </button>
-                      </li>
-                      <li>
-                        <span>삼성<em>전자</em></span>
-                        <span class="num">107-86-78945</span>
-                        <button type="button" class="btn-fav">
-                          <i class="icon-comm i--fav"></i>
-                          <span class="blind">즐겨찾기</span>
-                        </button>
-                      </li>
-                      <li>
-                        <span>경인<em>전자</em></span>
-                        <span class="num">107-86-78945</span>
-                        <button type="button" class="btn-fav">
-                          <i class="icon-comm i--fav"></i>
-                          <span class="blind">즐겨찾기</span>
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- // sidebar-content -->
-              </div>
-              <!-- // tab1 -->
+                  <!-- // tab3 -->
 
-              <div class="sidebar-tab-cont" id="tab2" style="display: none">
-                <h3 class="sidebar-h1">우리 회사</h3>
-                <div class="sidebar-box">
-                  <table class="table-detail">
-                    <tbody>
-                      <tr>
-                        <th>기업명</th>
-                        <td>테크핀레이팅스</td>
-                      </tr>
-                      <tr>
-                        <th>사업자등록번호</th>
-                        <td>123-22-00015</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div class="sidebar-subtit">
-                  <h4 class="sidebar-h2">즐겨찾는 기업 (3)</h4>
-                  <p>즐겨찾는 기업 목록입니다.</p>
-                </div>
-                <div class="sidebar-searchbox">
-                  <div class="textfield-root">
-                    <label class="textfield-label">
-                      <span class="label blind">검색키워드</span>
-                      <input
-                        type="text"
-                        class="textfield-form"
-                        name=""
-                        placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
-                      />
-                      <!-- 내용 입력시 나타나는 버튼 -->
-                      <!-- <button type="button" class="btn-clear">
-                        <span class="blind">삭제</span>
-                      </button> -->
-                    </label>
-                  </div>
-                </div>
-                <!-- //sidebar-searchbox -->
-                <div class="sidebar-content">
-                  <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
-                  <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
-                  <div class="sidebar-cont-scroll">
-                    <ul class="sidebar-companylist">
-                      <li>
-                        <span>LG전자</span>
-                        <span class="num">107-86-78945</span>
-                        <button type="button" class="btn-fav ac--active">
-                          <i class="icon-comm i--fav"></i>
-                          <span class="blind">즐겨찾기</span>
-                        </button>
-                      </li>
-                      <li>
-                        <span>삼성전자</span>
-                        <span class="num">107-86-78945</span>
-                        <button type="button" class="btn-fav ac--active">
-                          <i class="icon-comm i--fav"></i>
-                          <span class="blind">즐겨찾기</span>
-                        </button>
-                      </li>
-                      <li>
-                        <span>경인전자</span>
-                        <span class="num">107-86-78945</span>
-                        <button type="button" class="btn-fav ac--active">
-                          <i class="icon-comm i--fav"></i>
-                          <span class="blind">즐겨찾기</span>
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- // sidebar-content -->
-              </div>
-              <!-- // tab2 -->
-
-              <div class="sidebar-tab-cont" id="tab7" style="display: none">
-                <h3 class="sidebar-h1">우리 회사</h3>
-                <div class="sidebar-box">
-                  <table class="table-detail">
-                    <tbody>
-                      <tr>
-                        <th>기업명</th>
-                        <td>테크핀레이팅스</td>
-                      </tr>
-                      <tr>
-                        <th>사업자등록번호</th>
-                        <td>123-22-00015</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div class="sidebar-subtit">
-                  <h4 class="sidebar-h2">즐겨찾는 기업 (0)</h4>
-                  <p>즐겨찾는 기업 목록입니다.</p>
-                </div>
-                <div class="sidebar-searchbox">
-                  <div class="textfield-root">
-                    <label class="textfield-label">
-                      <span class="label blind">검색키워드</span>
-                      <input
-                        type="text"
-                        class="textfield-form"
-                        name=""
-                        placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
-                        value=""
-                      />
-                      <!-- 내용 입력시 나타나는 버튼 -->
-                      <!-- <button type="button" class="btn-clear">
-                        <span class="blind">삭제</span>
-                      </button> -->
-                    </label>
-                  </div>
-                </div>
-                <!-- //sidebar-searchbox -->
-                <div class="sidebar-content">
-                  <div class="sidebar-empty">
-                    즐겨찾는 기업이 없어요.<br />관리기업 목록에서 즐겨찾는 기업을 <br />설정해주세요.
-                  </div>
-                </div>
-                <!-- // sidebar-content -->
-              </div>
-              <!-- // tab2 -->
-
-              <div class="sidebar-tab-cont" id="tab3" style="display: none">
-                <h3 class="sidebar-h1">메모</h3>
-                <div class="sidebar-content">
-                  <textarea name="" class="textarea-form" placeholder="메모 내용을 입력해 주세요."></textarea>
-                </div>
-                <!-- // sidebar-content -->
-
-                <div class="sidebar-footer">
-                  <button type="button" class="btn-comm" disabled>
-                    <span>취소</span>
-                  </button>
-                  <button type="button" class="btn-contained" disabled>
-                    <span>저장</span>
-                  </button>
-                </div>
-                <!-- // sidebar-footer -->
-              </div>
-              <!-- // tab3 -->
-
-              <!-- 이후로는 메모 내용을 확인하기 위한 임시 탭입니다. -->
-              <div class="sidebar-tab-cont" id="tab4" style="display: none">
-                <h3 class="sidebar-h1">메모</h3>
-                <div class="sidebar-content">
-                  <textarea name="" class="textarea-form" placeholder="메모 내용을 입력해 주세요.">
+                  <!-- 이후로는 메모 내용을 확인하기 위한 임시 탭입니다. -->
+                  <div class="sidebar-tab-cont" id="tab4" style="display: none">
+                    <h3 class="sidebar-h1">메모</h3>
+                    <div class="sidebar-content">
+                      <textarea name="" class="textarea-form" placeholder="메모 내용을 입력해 주세요.">
 신용등급 전망이 안정적에서 부정적으로 변경되었고 EWS 경고 지표가 2건 발생해, 
 단기 유동성을 포함한 재무 구조 개선 여부에 대한 지속적인 모니터링이 필요합니다.최근 3개월간 차입금 증가율이 매출 성장률을 상회하는 가운데, 현금 보유액은 안정적이나 
 영업활동 현금흐름은 둔화 추세를 보이고 
 있으며, 매출 증가에도 불구하고 영업이익률이 소폭 하락해 고정비 비중이 높은 구조상 
 경기 변동 시 수익성 리스크가 존재합니다.
-                  </textarea>
-                </div>
-                <!-- // sidebar-content -->
+                  </textarea
+                      >
+                    </div>
+                    <!-- // sidebar-content -->
 
-                <div class="sidebar-footer">
-                  <button type="button" class="btn-comm">
-                    <span>취소</span>
-                  </button>
-                  <button type="button" class="btn-contained">
-                    <span>저장</span>
-                  </button>
-                </div>
-                <!-- // sidebar-footer -->
-              </div>
-              <!-- // tab3 -->
-
-              <div class="sidebar-tab-cont" id="tab5" style="display: none">
-                <h3 class="sidebar-h1">메모</h3>
-                <div class="sidebar-memo-utils">
-                  <button type="button" class="btn-icon btn-memo-search">
-                    <i class="icon-comm i--search"></i>
-                    <span class="blind">검색</span>
-                  </button>
-                  <button type="button" class="btn-icon">
-                    <i class="icon-comm i--write"></i>
-                    <span class="blind">작성</span>
-                  </button>
-                  <button type="button" class="btn-icon btn-memo-del">
-                    <i class="icon-comm i--trash"></i>
-                    <span class="blind">삭제</span>
-                  </button>
-                </div>
-
-                <div class="sidebar-memo-searchbox">
-                  <div class="textfield-root">
-                    <label class="textfield-label">
-                      <span class="label blind">검색키워드</span>
-                      <input type="text" class="textfield-form" name="" placeholder="검색어를 입력해 주세요." />
-                      <!-- 내용 입력시 나타나는 버튼 -->
-                      <!-- <button type="button" class="btn-clear">
-                        <span class="blind">삭제</span>
-                      </button> -->
-                    </label>
+                    <div class="sidebar-footer">
+                      <button type="button" class="btn-comm">
+                        <span>취소</span>
+                      </button>
+                      <button type="button" class="btn-contained">
+                        <span>저장</span>
+                      </button>
+                    </div>
+                    <!-- // sidebar-footer -->
                   </div>
-                </div>
-                <!-- //sidebar-memo-searchbox -->
+                  <!-- // tab3 -->
 
-                <div class="sidebar-content ac--del">
-                  <div class="sidebar-cont-scroll">
-                    <ul class="sidebar-memo-list">
-                      <li>
-                        <div class="radiocheck-root">
-                          <label class="radiocheck-label">
-                            <input type="checkbox" name="" checked />
-                            <span class="blind">선택</span>
-                          </label>
-                        </div>
-                        <div class="box ellipsis">
-                          메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
-                          자동으로 축약됩니다.
-                        </div>
-                      </li>
-
-                      <li>
-                        <div class="radiocheck-root">
-                          <label class="radiocheck-label">
-                            <input type="checkbox" name="" checked />
-                            <span class="blind">선택</span>
-                          </label>
-                        </div>
-                        <div class="box ellipsis">
-                          메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
-                          자동으로 축약됩니다.
-                        </div>
-                      </li>
-
-                      <li>
-                        <div class="radiocheck-root">
-                          <label class="radiocheck-label">
-                            <input type="checkbox" name="" />
-                            <span class="blind">선택</span>
-                          </label>
-                        </div>
-                        <div class="box ellipsis">
-                          메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
-                          자동으로 축약됩니다.
-                        </div>
-                      </li>
-
-                      <li>
-                        <div class="radiocheck-root">
-                          <label class="radiocheck-label">
-                            <input type="checkbox" name="" />
-                            <span class="blind">선택</span>
-                          </label>
-                        </div>
-                        <div class="box ellipsis">
-                          메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
-                          자동으로 축약됩니다.
-                        </div>
-                      </li>
-
-                      <li>
-                        <div class="radiocheck-root">
-                          <label class="radiocheck-label">
-                            <input type="checkbox" name="" />
-                            <span class="blind">선택</span>
-                          </label>
-                        </div>
-                        <div class="box ellipsis">
-                          메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
-                          자동으로 축약됩니다.
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- // sidebar-content -->
-
-                <div class="sidebar-footer">
-                  <button type="button" class="btn-comm">
-                    <span>취소</span>
-                  </button>
-                  <button type="button" class="btn-contained">
-                    <span>삭제</span>
-                  </button>
-                </div>
-                <!-- // sidebar-footer -->
-              </div>
-              <!-- // tab3 -->
-
-              <div class="sidebar-tab-cont" id="tab6" style="display: none">
-                <h3 class="sidebar-h1">메모</h3>
-                <div class="sidebar-memo-utils">
-                  <button type="button" class="btn-icon btn-memo-search">
-                    <i class="icon-comm i--search"></i>
-                    <span class="blind">검색</span>
-                  </button>
-                  <button type="button" class="btn-icon">
-                    <i class="icon-comm i--write"></i>
-                    <span class="blind">작성</span>
-                  </button>
-                  <button type="button" class="btn-icon btn-memo-del">
-                    <i class="icon-comm i--trash"></i>
-                    <span class="blind">삭제</span>
-                  </button>
-                </div>
-
-                <div class="sidebar-memo-searchbox ac--active">
-                  <div class="textfield-root">
-                    <label class="textfield-label">
-                      <span class="label blind">검색키워드</span>
-                      <input
-                        type="text"
-                        class="textfield-form"
-                        name=""
-                        placeholder="검색어를 입력해 주세요."
-                        value="관리"
-                      />
-                      <!-- 내용 입력시 나타나는 버튼 -->
-                      <button type="button" class="btn-clear">
+                  <div class="sidebar-tab-cont" id="tab5" style="display: none">
+                    <h3 class="sidebar-h1">메모</h3>
+                    <div class="sidebar-memo-utils">
+                      <button type="button" class="btn-icon btn-memo-search">
+                        <i class="icon-comm i--search"></i>
+                        <span class="blind">검색</span>
+                      </button>
+                      <button type="button" class="btn-icon">
+                        <i class="icon-comm i--write"></i>
+                        <span class="blind">작성</span>
+                      </button>
+                      <button type="button" class="btn-icon btn-memo-del">
+                        <i class="icon-comm i--trash"></i>
                         <span class="blind">삭제</span>
                       </button>
-                    </label>
-                  </div>
-                </div>
-                <!-- //sidebar-memo-searchbox -->
+                    </div>
 
-                <div class="sidebar-content">
-                  <div class="sidebar-empty">검색결과가 없습니다.</div>
+                    <div class="sidebar-memo-searchbox">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input type="text" class="textfield-form" name="" placeholder="검색어를 입력해 주세요." />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <!-- <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button> -->
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-memo-searchbox -->
+
+                    <div class="sidebar-content ac--del">
+                      <div class="sidebar-cont-scroll">
+                        <ul class="sidebar-memo-list">
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" checked />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" checked />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // sidebar-content -->
+
+                    <div class="sidebar-footer">
+                      <button type="button" class="btn-comm">
+                        <span>취소</span>
+                      </button>
+                      <button type="button" class="btn-contained">
+                        <span>삭제</span>
+                      </button>
+                    </div>
+                    <!-- // sidebar-footer -->
+                  </div>
+                  <!-- // tab3 -->
+
+                  <div class="sidebar-tab-cont" id="tab6" style="display: none">
+                    <h3 class="sidebar-h1">메모</h3>
+                    <div class="sidebar-memo-utils">
+                      <button type="button" class="btn-icon btn-memo-search">
+                        <i class="icon-comm i--search"></i>
+                        <span class="blind">검색</span>
+                      </button>
+                      <button type="button" class="btn-icon">
+                        <i class="icon-comm i--write"></i>
+                        <span class="blind">작성</span>
+                      </button>
+                      <button type="button" class="btn-icon btn-memo-del">
+                        <i class="icon-comm i--trash"></i>
+                        <span class="blind">삭제</span>
+                      </button>
+                    </div>
+
+                    <div class="sidebar-memo-searchbox ac--active">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input
+                            type="text"
+                            class="textfield-form"
+                            name=""
+                            placeholder="검색어를 입력해 주세요."
+                            value="관리"
+                          />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <button type="button" class="btn-clear">
+                            <span class="blind">삭제</span>
+                          </button>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-memo-searchbox -->
+
+                    <div class="sidebar-content">
+                      <div class="sidebar-empty">검색결과가 없습니다.</div>
+                    </div>
+                    <!-- // sidebar-content -->
+                  </div>
+                  <!-- // tab3 -->
                 </div>
-                <!-- // sidebar-content -->
+                <!-- // sidebar-inner -->
               </div>
-              <!-- // tab3 -->
+              <!-- //sidebar-container -->
             </div>
-            <!-- //sidebar-container -->
           </div>
           <!-- Sidebar End -->
 
@@ -888,9 +894,9 @@
                         <td>상</td>
                         <td>2025-11-01 12:46</td>
                         <td>
-                          <button type="button" class="btn-text">
+                          <a href="detail.html" class="btn-text">
                             <span class="underline">기업정보</span>
-                          </button>
+                          </a>
                         </td>
                       </tr>
                       <tr>
@@ -916,9 +922,9 @@
                         <td>상</td>
                         <td>2025-11-01 12:46</td>
                         <td>
-                          <button type="button" class="btn-text">
+                          <a href="detail.html" class="btn-text">
                             <span class="underline">기업정보</span>
-                          </button>
+                          </a>
                         </td>
                       </tr>
                       <tr>
@@ -944,9 +950,9 @@
                         <td>상</td>
                         <td>2025-11-01 12:46</td>
                         <td>
-                          <button type="button" class="btn-text">
+                          <a href="detail.html" class="btn-text">
                             <span class="underline">기업정보</span>
-                          </button>
+                          </a>
                         </td>
                       </tr>
                       <tr>
@@ -972,9 +978,9 @@
                         <td>상</td>
                         <td>2025-11-01 12:46</td>
                         <td>
-                          <button type="button" class="btn-text">
+                          <a href="detail.html" class="btn-text">
                             <span class="underline">기업정보</span>
-                          </button>
+                          </a>
                         </td>
                       </tr>
                       <tr>
@@ -1000,9 +1006,9 @@
                         <td>상</td>
                         <td>2025-11-01 12:46</td>
                         <td>
-                          <button type="button" class="btn-text">
+                          <a href="detail.html" class="btn-text">
                             <span class="underline">기업정보</span>
-                          </button>
+                          </a>
                         </td>
                       </tr>
                       <tr>
@@ -1028,9 +1034,9 @@
                         <td>상</td>
                         <td>2025-11-01 12:46</td>
                         <td>
-                          <button type="button" class="btn-text">
+                          <a href="detail.html" class="btn-text">
                             <span class="underline">기업정보</span>
-                          </button>
+                          </a>
                         </td>
                       </tr>
                       <tr>
@@ -1056,9 +1062,9 @@
                         <td>상</td>
                         <td>2025-11-01 12:46</td>
                         <td>
-                          <button type="button" class="btn-text">
+                          <a href="detail.html" class="btn-text">
                             <span class="underline">기업정보</span>
-                          </button>
+                          </a>
                         </td>
                       </tr>
                       <tr>
@@ -1084,9 +1090,9 @@
                         <td>상</td>
                         <td>2025-11-01 12:46</td>
                         <td>
-                          <button type="button" class="btn-text">
+                          <a href="detail.html" class="btn-text">
                             <span class="underline">기업정보</span>
-                          </button>
+                          </a>
                         </td>
                       </tr>
                     </tbody>

@@ -83,3 +83,11 @@
     opacity: 1;
   }
 }
+
+@mixin width {
+  width: 100%;
+  min-width: 1160px;
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+}

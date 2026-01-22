@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const delBtn = document.querySelectorAll('.btn-memo-del');
   delBtn.forEach((btn) => {
     const parente = btn.closest('.sidebar-tab-cont').querySelector('.sidebar-content');
-    
+
     btn.addEventListener('click', (e) => {
       parente.classList.toggle('ac--del');
     });
@@ -115,7 +115,51 @@ document.addEventListener('DOMContentLoaded', function () {
   const userBtn = document.querySelector('.global-btn-user');
   if (userBtn) {
     userBtn.querySelector('.btn-user').addEventListener('click', (e) => {
+      e.stopPropagation();
       userBtn.classList.toggle('ac--active');
+    });
+
+    // 바깥 영역 닫기
+    document.addEventListener('click', (e) => {
+      if (!userBtn.contains(e.target)) {
+        userBtn.classList.remove('ac--active');
+      }
+    });
+  }
+
+  // tab
+  const tabs = document.querySelectorAll('.tabmenu-btn');
+
+  if (tabs.length > 0) {
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', (e) => {
+        const parent = tab.parentElement;
+        const siblingTabs = parent.querySelectorAll('.tabmenu-btn');
+
+        // tab button toggle
+        siblingTabs.forEach((siblings) => {
+          siblings.classList.remove('ac--active');
+        });
+        tab.classList.add('ac--active');
+
+        if (tab.dataset.targetTab) {
+          const targetId = tab.dataset.targetTab;
+          const targetCont = document.getElementById(targetId);
+
+          // tab contents
+          if (targetCont) {
+            targetCont.style.display = 'block';
+
+            const siblingContents = targetCont.parentElement.querySelectorAll('.tabmenu-content');
+
+            siblingContents.forEach((content) => {
+              if (content !== targetCont) {
+                content.style.display = 'none';
+              }
+            });
+          }
+        }
+      });
     });
   }
 });

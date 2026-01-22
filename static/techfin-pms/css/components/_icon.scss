@@ -306,14 +306,12 @@
 .i--drop {
   &::after {
     content: '▼';
-    color: var(--c-secondary);
   }
 }
 
 .i--rise {
   &::after {
     content: '▲';
-    color: var(--c-error);
   }
 }
 
@@ -485,12 +483,15 @@
 }
 
 .i--fav {
-  width: 18px;
+  width: 24px;
   background-image: url(../image/icon/ic_fav.svg);
+  background-size: contain
 }
 
 .ac--active > .i--fav {
+  width: 24px;
   background-image: url(../image/icon/ic_fav_on.svg);
+  background-size: contain
 }
 
 
