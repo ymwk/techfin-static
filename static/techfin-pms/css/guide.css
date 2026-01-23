@@ -387,7 +387,7 @@ textarea {
   --c-gray4: #f9f9f9;
   --c-disabled: #bebebe;
   --c-error: #fc5356;
-  --c-success: #23c2b8;
+  --c-success: #35A785;
   --c-warn: #ff9900;
   --c-fail: #718ebf;
   --c-cta: #5a7299;
@@ -806,6 +806,7 @@ ul {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  font-variant-numeric: tabular-nums;
 }
 
 button {
@@ -2281,7 +2282,7 @@ img {
 }
 
 .modal-root.s--xl .modal-box {
-  width: 1000px;
+  width: 1120px;
 }
 .modal-root.s--lg .modal-box {
   width: 880px;

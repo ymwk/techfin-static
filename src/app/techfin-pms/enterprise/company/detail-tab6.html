@@ -482,10 +482,8 @@
                 <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab2.html'">재무제표</button>
                 <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab3.html'">재무분석</button>
                 <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab4.html'">등급정보</button>
-                <button type="button" class="tabmenu-btn ac--active" onclick="location.href = 'detail-tab5.html'">
-                  신용정보
-                </button>
-                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab6.html'">
+                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab5.html'">신용정보</button>
+                <button type="button" class="tabmenu-btn ac--active" onclick="location.href = 'detail-tab6.html'">
                   거래처현황
                 </button>
               </div>
@@ -494,355 +492,247 @@
                 <h3 class="blind">기업요약</h3>
                 <div class="table-header">
                   <div class="tabmenu-filter" data-target-group="filter">
-                    <button type="button" class="tabmenu-btn ac--active" data-target-tab="filter1">전체</button>
-                    <button type="button" class="tabmenu-btn" data-target-tab="filter2">단기연체정보</button>
-                    <button type="button" class="tabmenu-btn" data-target-tab="filter3">신용도판단정보</button>
-                    <button type="button" class="tabmenu-btn" data-target-tab="filter4">공공정보</button>
-                    <button type="button" class="tabmenu-btn" data-target-tab="filter5">휴폐업정보</button>
-                    <button type="button" class="tabmenu-btn" data-target-tab="filter6">신용개설정보</button>
+                    <button type="button" class="tabmenu-btn ac--active" data-target-tab="filter1">매출처현황</button>
+                    <button type="button" class="tabmenu-btn" data-target-tab="filter2">매입처현황</button>
+                    <button type="button" class="tabmenu-btn" data-target-tab="filter3">거래처관계망</button>
                   </div>
                 </div>
 
-                <div class="tabmenu-content" id="filter1" style="display: block">
-                  <ul class="panel-list">
-                    <li>
-                      <a class="panel-link" href="#credit01">
-                        <span>단기연체정보</span>
-                        <span class="value">평가없음</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="panel-link" href="#credit02">
-                        <span>신용도판단정보</span>
-                        <span class="value">2건</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="panel-link" href="#credit03">
-                        <span>공공정보</span>
-                        <span class="value">1건</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="panel-link" href="#credit04">
-                        <span>휴폐업정보</span>
-                        <span class="value">부가가치세 일반과세자</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="panel-link" href="#credit05">
-                        <span>신용개설정보</span>
-                        <span class="value">1건</span>
-                      </a>
-                    </li>
-                  </ul>
-
+                <div class="tabmenu-content" id="filter1" style="display: none">
                   <div class="datagrid-list">
                     <div class="datagrid-container">
                       <div class="table-header">
                         <div class="count">
-                          <h4 class="font-h3">연체정보요약(연체진행중)</h4>
+                          <h4 class="font-h3">주요 매출처 (<em>상위 5개</em>)</h4>
                         </div>
 
-                        <span class="unit">(단위 : 천원)</span>
+                        <div class="utils">
+                          <button type="button" class="btn-comm">더보기</button>
+                        </div>
                       </div>
 
-                      <div class="table-wrap">
+                      <div class="table-wrap finance-table">
                         <table class="table-datagrid">
                           <thead>
                             <tr>
-                              <th><span class="tit">총 등록건수</span></th>
-                              <th><span class="tit">총 등록금액</span></th>
-                              <th><span class="tit">총 연체금액</span></th>
-                              <th><span class="tit">최초 발생일자</span></th>
-                            </tr>
-                          </thead>
-
-                          <tbody>
-                            <tr>
-                              <td>0</td>
-                              <td>0</td>
-                              <td>0</td>
-                              <td>-</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <!-- // table-wrap -->
-
-                      <ul class="msg-list">
-                        <li>위 정보는 단기연체, 신용도판단정보, 공공정보에 대한 요약 정보입니다.</li>
-                        <li>
-                          최초 발생일자는 보유한 단기연체, 신용도판단정보, 공공정보 중 최초로 발생한 건의 일자를
-                          의미합니다.
-                        </li>
-                        <li>단기연체 정보만 보유했을 경우 총 등록금액은 0원으로 표기됩니다.</li>
-                      </ul>
-                    </div>
-                    <!-- // datagrid-container -->
-
-                    <div class="datagrid-container" id="credit01">
-                      <div class="table-header">
-                        <div class="count">
-                          <h4 class="font-h3">단기연체정보 총 <em>2</em>건</h4>
-                        </div>
-
-                        <span class="unit">(단위 : 천원)</span>
-                      </div>
-
-                      <div class="table-wrap">
-                        <table class="table-datagrid">
-                          <thead>
-                            <tr>
-                              <th><span class="tit">등록일자</span></th>
-                              <th><span class="tit">등록기관</span></th>
-                              <th><span class="tit">연체금액</span></th>
-                              <th><span class="tit">연체기산일자</span></th>
-                              <th><span class="tit">이자연체여부</span></th>
-                            </tr>
-                          </thead>
-
-                          <tbody>
-                            <tr>
-                              <td>2025-01-09</td>
-                              <td>(주)비씨디이엔씨</td>
-                              <td>0</td>
-                              <td>2025-01-09</td>
-                              <td>연체</td>
-                            </tr>
-                            <tr>
-                              <td>2025-01-09</td>
-                              <td>(주)비씨디이엔씨</td>
-                              <td>0</td>
-                              <td>2025-01-09</td>
-                              <td>연체</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <!-- // table-wrap -->
-
-                      <ul class="msg-list">
-                        <li>연체금액 10만원 단위에서 반올림하여 표시됩니다. (500만원 미만은 0으로 표시)</li>
-                        <li>대표자의 단기연체 내역은 관련 법률에 의거, 표시되지 않습니다.</li>
-                        <li>
-                          연체정보 관련 상세 내용은 등록기관(한국신용정보원)에 문의해주시기 바랍니다.
-                          <span class="c--error"
-                            >(※ 표시 대상 : 단기연체정보, 신용도판단정보, 공공정보, 신용개설정보)</span
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- // datagrid-container -->
-
-                    <div class="datagrid-container" id="credit02">
-                      <div class="table-header">
-                        <div class="count">
-                          <h4 class="font-h3">신용도판단정보 총 <em>0</em>건</h4>
-                        </div>
-
-                        <span class="unit">(단위 : 천원)</span>
-                      </div>
-
-                      <div class="table-wrap">
-                        <table class="table-datagrid">
-                          <thead>
-                            <tr>
-                              <th><span class="tit">등록코드</span></th>
-                              <th><span class="tit">등록사유</span></th>
-                              <th><span class="tit">등록일자</span></th>
-                              <th><span class="tit">해제일자</span></th>
-                              <th><span class="tit">등록금액</span></th>
-                              <th><span class="tit">연체금액</span></th>
-                              <th><span class="tit">등록기관명</span></th>
-                            </tr>
-                          </thead>
-                        </table>
-                      </div>
-                      <!-- // table-wrap -->
-                      <div class="table-empty">조회된 결과가 없습니다.</div>
-
-                      <ul class="msg-list">
-                        <li>
-                          기업 채무불이행(90일 이상 연체) 진행 중이거나 해제된 이력이 존재할 경우 내역이 표시될 수
-                          있습니다.
-                        </li>
-                        <li>연체정보 관련 상세내용은 등록기관에 문의해주시기 바랍니다.</li>
-                      </ul>
-                    </div>
-                    <!-- // datagrid-container -->
-
-                    <div class="datagrid-container" id="credit03">
-                      <div class="table-header">
-                        <div class="count">
-                          <h4 class="font-h3">공공정보 총 <em>2</em>건</h4>
-                        </div>
-
-                        <span class="unit">(단위 : 천원)</span>
-                      </div>
-
-                      <div class="table-wrap">
-                        <table class="table-datagrid">
-                          <thead>
-                            <tr>
-                              <th><span class="tit">등록코드</span></th>
-                              <th><span class="tit">등록사유</span></th>
-                              <th><span class="tit">등록일자</span></th>
-                              <th><span class="tit">해제일자</span></th>
-                              <th><span class="tit">등록금액</span></th>
-                              <th><span class="tit">연체금액</span></th>
-                              <th><span class="tit">등록기관명</span></th>
-                            </tr>
-                          </thead>
-
-                          <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>연체</td>
-                              <td>2025-01-09</td>
-                              <td>2025-01-09</td>
-                              <td>-</td>
-                              <td>-</td>
-                              <td>(주)비씨디이엔씨</td>
-                            </tr>
-                            <tr>
-                              <td>1</td>
-                              <td>연체</td>
-                              <td>2025-01-09</td>
-                              <td>2025-01-09</td>
-                              <td>-</td>
-                              <td>-</td>
-                              <td>(주)비씨디이엔씨</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <!-- // table-wrap -->
-
-                      <ul class="msg-list">
-                        <li>
-                          2024년도 3/4분기 이후 등록되는 국세체납 금액은 체납금액구간의 하한 값으로 표시되고 있습니다.
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- // datagrid-container -->
-
-                    <div class="datagrid-container" id="credit04">
-                      <div class="table-header">
-                        <div class="count">
-                          <h4 class="font-h3">휴폐업정보 총 <em>0</em>건</h4>
-                        </div>
-
-                        <span class="unit">(단위 : 천원)</span>
-                      </div>
-
-                      <div class="table-wrap">
-                        <table class="table-datagrid">
-                          <thead>
-                            <tr>
+                              <th><span class="tit">매출처</span></th>
                               <th><span class="tit">사업자등록번호</span></th>
-                              <th><span class="tit">휴폐업상태</span></th>
-                              <th><span class="tit">조회일자</span></th>
-                              <th><span class="tit">휴폐업일자</span></th>
+                              <th><span class="tit">대표자명</span></th>
+                              <th><span class="tit">모니터링등급</span></th>
+                              <th><span class="tit">매출금액</span></th>
+                              <th><span class="tit">매출비중</span></th>
+                              <th><span class="tit">평균 회수기일</span></th>
                             </tr>
                           </thead>
-                        </table>
-                      </div>
-                      <!-- // table-wrap -->
-                      <div class="table-empty">조회된 결과가 없습니다.</div>
-
-                      <ul class="msg-list">
-                        <li>휴폐업정보 관련 상세 내용은 등록기관(국세청)에 문의해주시기 바랍니다.</li>
-                      </ul>
-                    </div>
-                    <!-- // datagrid-container -->
-
-                    <div class="datagrid-container" id="credit05">
-                      <div class="table-header">
-                        <div class="count">
-                          <h4 class="font-h3">신용개설정보 총 <em>0</em>건</h4>
-                        </div>
-
-                        <span class="unit">(단위 : 천원)</span>
-                      </div>
-
-                      <div class="table-wrap">
-                        <table class="table-datagrid">
-                          <thead>
+                          <tfoot>
                             <tr>
-                              <th><span class="tit">개설사유</span></th>
-                              <th><span class="tit">개설기관명</span></th>
-                              <th><span class="tit">개설일자</span></th>
+                              <th class="al--left" colspan="4">상위 5개 매출처 합계</th>
+                              <td class="al--num"><em>46,330</em></td>
+                              <td class="al--right"><em>93%</em></td>
+                              <td>29.4일</td>
                             </tr>
-                          </thead>
-                        </table>
-                      </div>
-                      <!-- // table-wrap -->
-                      <div class="table-empty">조회된 결과가 없습니다.</div>
-                    </div>
-                    <!-- // datagrid-container -->
-                  </div>
-                  <!-- // datagrid-list -->
-                </div>
-                <!-- // tabmenu-content -->
-
-                <div class="tabmenu-content" id="filter2" style="display: none">
-                  <div class="datagrid-list">
-                    <div class="datagrid-container">
-                      <div class="table-header">
-                        <div class="count">
-                          <h4 class="font-h3">단기연체정보 총 <em>2</em>건</h4>
-                        </div>
-
-                        <span class="unit">(단위 : 천원)</span>
-                      </div>
-
-                      <div class="table-wrap">
-                        <table class="table-datagrid">
-                          <thead>
                             <tr>
-                              <th><span class="tit">등록일자</span></th>
-                              <th><span class="tit">등록기관</span></th>
-                              <th><span class="tit">연체금액</span></th>
-                              <th><span class="tit">연체기산일자</span></th>
-                              <th><span class="tit">이자연체여부</span></th>
+                              <th class="al--left" colspan="4">그 외</th>
+                              <td class="al--num"><em>4,330</em></td>
+                              <td class="al--right"><em>7%</em></td>
+                              <td>29.4일</td>
                             </tr>
-                          </thead>
-
+                            <tr>
+                              <th class="al--left" colspan="4">전체 매출처</th>
+                              <td class="al--num"><em>46,330</em></td>
+                              <td class="al--right"><em>100%</em></td>
+                              <td>29.4일</td>
+                            </tr>
+                          </tfoot>
                           <tbody>
                             <tr>
-                              <td>2025-01-09</td>
-                              <td>(주)비씨디이엔씨</td>
-                              <td>0</td>
-                              <td>2025-01-09</td>
-                              <td>연체</td>
+                              <th>HMC</th>
+                              <td>370-88-12345</td>
+                              <td>홍길동</td>
+                              <td><span class="grade-label g--normal">안전</span></td>
+                              <td class="al--num bg--em">13,450</td>
+                              <td class="al--num"><span class="c--em">27%</span></td>
+                              <td>27.4일</td>
                             </tr>
                             <tr>
-                              <td>2025-01-09</td>
-                              <td>(주)비씨디이엔씨</td>
-                              <td>0</td>
-                              <td>2025-01-09</td>
-                              <td>연체</td>
+                              <th>엠테크</th>
+                              <td>370-88-12345</td>
+                              <td>홍길동</td>
+                              <td><span class="grade-label g--normal">안전</span></td>
+                              <td class="al--num bg--em">13,450</td>
+                              <td class="al--num"><span class="c--em">27%</span></td>
+                              <td>27.4일</td>
+                            </tr>
+                            <tr>
+                              <th>(주)테크이엔지</th>
+                              <td>370-88-12345</td>
+                              <td>홍길동</td>
+                              <td><span class="grade-label g--warn">경고</span></td>
+                              <td class="al--num bg--em">13,450</td>
+                              <td class="al--num"><span class="c--em">27%</span></td>
+                              <td>27.4일</td>
+                            </tr>
+                            <tr>
+                              <th>(주)테크이엔지</th>
+                              <td>370-88-12345</td>
+                              <td>홍길동</td>
+                              <td><span class="grade-label g--normal">안전</span></td>
+                              <td class="al--num bg--em">13,450</td>
+                              <td class="al--num"><span class="c--em">27%</span></td>
+                              <td>27.4일</td>
+                            </tr>
+                            <tr>
+                              <th>(주)테크이엔지</th>
+                              <td>370-88-12345</td>
+                              <td>홍길동</td>
+                              <td><span class="grade-label g--normal">안전</span></td>
+                              <td class="al--num bg--em">13,450</td>
+                              <td class="al--num"><span class="c--em">27%</span></td>
+                              <td>27.4일</td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
                       <!-- // table-wrap -->
-
-                      <ul class="msg-list">
-                        <li>연체금액 10만원 단위에서 반올림하여 표시됩니다. (500만원 미만은 0으로 표시)</li>
-                        <li>대표자의 단기연체 내역은 관련 법률에 의거, 표시되지 않습니다.</li>
-                        <li>
-                          연체정보 관련 상세 내용은 등록기관(한국신용정보원)에 문의해주시기 바랍니다.
-                          <span class="c--error"
-                            >(※ 표시 대상 : 단기연체정보, 신용도판단정보, 공공정보, 신용개설정보)</span
-                          >
-                        </li>
-                      </ul>
                     </div>
+                    <!-- // datagrid-container -->
+
+                    <div class="datagrid-container">
+                      <div class="table-header">
+                        <div class="count">
+                          <h4 class="font-h3">매출처 거래지도 (<em>상위 5개</em>)</h4>
+                        </div>
+                      </div>
+
+                      <div class="msg-border">
+                        <div class="chart" style="background: #f4f4f4; height: 400px"></div>
+                      </div>
+                    </div>
+                    <!-- // datagrid-container -->
                   </div>
                 </div>
                 <!-- // tabmenu-content -->
+                 
+                <div class="tabmenu-content" id="filter2" style="display: block">
+                  <div class="datagrid-list">
+                    <div class="datagrid-container">
+                      <div class="table-header">
+                        <div class="count">
+                          <h4 class="font-h3">주요 매입처 (<em class="c--success">상위 5개</em>)</h4>
+                        </div>
+
+                        <div class="utils">
+                          <button type="button" class="btn-comm">더보기</button>
+                        </div>
+                      </div>
+
+                      <div class="table-wrap finance-table c--second">
+                        <table class="table-datagrid">
+                          <thead>
+                            <tr>
+                              <th><span class="tit">매출처</span></th>
+                              <th><span class="tit">사업자등록번호</span></th>
+                              <th><span class="tit">대표자명</span></th>
+                              <th><span class="tit">모니터링등급</span></th>
+                              <th><span class="tit">매출금액</span></th>
+                              <th><span class="tit">매출비중</span></th>
+                              <th><span class="tit">평균 회수기일</span></th>
+                            </tr>
+                          </thead>
+                          <tfoot>
+                            <tr>
+                              <th class="al--left" colspan="4">상위 5개 매출처 합계</th>
+                              <td class="al--num"><em>46,330</em></td>
+                              <td class="al--right"><em>93%</em></td>
+                              <td>29.4일</td>
+                            </tr>
+                            <tr>
+                              <th class="al--left" colspan="4">그 외</th>
+                              <td class="al--num"><em>4,330</em></td>
+                              <td class="al--right"><em>7%</em></td>
+                              <td>29.4일</td>
+                            </tr>
+                            <tr>
+                              <th class="al--left" colspan="4">전체 매출처</th>
+                              <td class="al--num"><em>46,330</em></td>
+                              <td class="al--right"><em>100%</em></td>
+                              <td>29.4일</td>
+                            </tr>
+                          </tfoot>
+                          <tbody>
+                            <tr>
+                              <th>HMC</th>
+                              <td>370-88-12345</td>
+                              <td>홍길동</td>
+                              <td><span class="grade-label g--normal">안전</span></td>
+                              <td class="al--num bg--em">13,450</td>
+                              <td class="al--num"><span class="c--em">27%</span></td>
+                              <td>27.4일</td>
+                            </tr>
+                            <tr>
+                              <th>엠테크</th>
+                              <td>370-88-12345</td>
+                              <td>홍길동</td>
+                              <td><span class="grade-label g--normal">안전</span></td>
+                              <td class="al--num bg--em">13,450</td>
+                              <td class="al--num"><span class="c--em">27%</span></td>
+                              <td>27.4일</td>
+                            </tr>
+                            <tr>
+                              <th>(주)테크이엔지</th>
+                              <td>370-88-12345</td>
+                              <td>홍길동</td>
+                              <td><span class="grade-label g--warn">경고</span></td>
+                              <td class="al--num bg--em">13,450</td>
+                              <td class="al--num"><span class="c--em">27%</span></td>
+                              <td>27.4일</td>
+                            </tr>
+                            <tr>
+                              <th>(주)테크이엔지</th>
+                              <td>370-88-12345</td>
+                              <td>홍길동</td>
+                              <td><span class="grade-label g--normal">안전</span></td>
+                              <td class="al--num bg--em">13,450</td>
+                              <td class="al--num"><span class="c--em">27%</span></td>
+                              <td>27.4일</td>
+                            </tr>
+                            <tr>
+                              <th>(주)테크이엔지</th>
+                              <td>370-88-12345</td>
+                              <td>홍길동</td>
+                              <td><span class="grade-label g--normal">안전</span></td>
+                              <td class="al--num bg--em">13,450</td>
+                              <td class="al--num"><span class="c--em">27%</span></td>
+                              <td>27.4일</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- // table-wrap -->
+                    </div>
+                    <!-- // datagrid-container -->
+
+                    <div class="datagrid-container">
+                      <div class="table-header">
+                        <div class="count">
+                          <h4 class="font-h3">매출처 거래지도 (<em class="c--success">상위 5개</em>)</h4>
+                        </div>
+                      </div>
+
+                      <div class="msg-border">
+                        <div class="chart" style="background: #f4f4f4; height: 400px"></div>
+                      </div>
+                    </div>
+                    <!-- // datagrid-container -->
+                  </div>
+                </div>
+                <!-- // tabmenu-content -->
+
+                <div class="tabmenu-content" id="filter3" style="display: none">
+                  <div class="msg-border">
+                    <div class="chart" style="background: #f4f4f4; height: 400px"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </main>
