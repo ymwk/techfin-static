@@ -1128,29 +1128,3 @@
   }
 }
 
-.detail-list {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-top: 1px solid var(--c-border2);
-  color: var(--c-gray2);
-  font-size: 14px;
-  
-  
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 32px;
-  }
-  em {
-    color: var(--c-gray1);
-    font-weight: 500
-  }
-  
-  &.st2 {
-    border-top: 0;
-    padding-top: 16px;
-  }
-}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/techfin-pms/css/index.css" />
+  </head>
+  <body>
+    <div class="modal-root s--md t--terms">
+      <div class="modal-backdrop"></div>
+      <div class="modal-box">
+        <button type="button" class="modal-close">
+          <i class="icon-comm i--close s--lg"></i>
+          <span class="blind">Close</span>
+        </button>
+        <div class="modal-header">
+          <h2 class="font-h3">서비스 가입신청 단계</h2>
+        </div>
+
+        <ul class="stepper-list">
+          <li>
+            <div class="title font-h4">서비스 가입신청 안내</div>
+          </li>
+          <li>
+            <div class="title font-h4">이용약관 동의</div>
+          </li>
+          <li class="current">
+            <div class="title font-h4">기업/담당자인증</div>
+          </li>
+          <li>
+            <div class="title font-h4">가입신청 완료</div>
+          </li>
+        </ul>
+        <p class="text-desc mt-20">기업 인증이 필요합니다. 아래 인증 방식 중 택하여 진행 바랍니다.</p>
+
+        <div class="modal-contents">
+          <div class="radiocheck-list t--register">
+            <label class="item">
+              <input type="radio" name="radioGroup" class="blind" />
+              <i class="icon-comm i--register1"></i>
+              <span>사업자 공동인증서</span>
+            </label>
+
+            <label class="item">
+              <input type="radio" name="radioGroup" class="blind" />
+              <i class="icon-comm i--register2"></i>
+              <span>서류로 인증하기</span>
+              <small>(사업자등록증명원, 재직증명서)</small>
+            </label>
+          </div>
+        </div>
+        <!-- //modal-contents -->
+
+        <div class="modal-action">
+          <div class="modal-action-btns">
+            <button type="button" class="btn-comm">
+              <span>이전</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //modal-root -->
+  </body>
+</html>

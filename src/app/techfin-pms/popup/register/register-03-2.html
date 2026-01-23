@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/techfin-pms/css/index.css" />
+  </head>
+  <body>
+    <div class="modal-root s--md t--terms">
+      <div class="modal-backdrop"></div>
+      <div class="modal-box">
+        <button type="button" class="modal-close">
+          <i class="icon-comm i--close s--lg"></i>
+          <span class="blind">Close</span>
+        </button>
+        <div class="modal-header">
+          <h2 class="font-h3">서비스 가입신청 단계</h2>
+        </div>
+
+        <ul class="stepper-list">
+          <li>
+            <div class="title font-h4">서비스 가입신청 안내</div>
+          </li>
+          <li>
+            <div class="title font-h4">이용약관 동의</div>
+          </li>
+          <li class="current">
+            <div class="title font-h4">기업/담당자인증</div>
+          </li>
+          <li>
+            <div class="title font-h4">가입신청 완료</div>
+          </li>
+        </ul>
+
+        <div class="modal-contents">
+          <h4 class="font-h5">서류 첨부 제출</h4>
+          <div class="filelist-box">파일을 드래그하여 추가해 주세요.</div>
+          <label class="filefield-root">
+            <input type="file" name="" onchange="fileChange(this)" />
+            <div class="filefield-box">
+              <span class="filefield-name">파일을 첨부해 주세요.</span>
+            </div>
+            <span class="btn-comm">파일선택</span>
+          </label>
+          <p class="c--gray2">※ PDF 형식으로 2MB이하의 파일로 업로드 바랍니다.</p>
+        </div>
+        <!-- //modal-contents -->
+
+        <div class="modal-action">
+          <div class="modal-action-btns">
+            <button type="button" class="btn-comm">
+              <span>이전</span>
+            </button>
+            <button type="button" class="btn-contained" disabled>
+              <span>다음</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //modal-root -->
+  </body>
+</html>

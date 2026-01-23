@@ -24,6 +24,7 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .modal-box {
@@ -47,6 +48,28 @@
 
   .card-list {
     padding-bottom: 10px;
+  }
+
+  &.t--terms {
+    .modal-contents {
+      height: 333px;
+    }
+    .modal-action:has([type='checkbox']) {
+      margin: auto -24px -24px;
+      padding: 16px 24px 24px;
+      background-color: #fff;
+      box-shadow: 0px -1px 10px 0px #00000014;
+    }
+
+    &:has(.modal-action:has([type='checkbox'])) .modal-contents {
+      height: 308px;
+      padding-top: 0;
+      padding-bottom: 32px;
+    }
+
+    .stepper-list {
+      margin: 20px 0;
+    }
   }
 }
 
@@ -97,7 +120,7 @@
   gap: 16px;
 }
 
-.modal-action,
+.modal-action-btns,
 .alert-action {
   flex: 0 0 auto;
   display: flex;
@@ -107,10 +130,13 @@
 }
 
 .modal-action button {
-  margin-top: 40px;
   width: 160px;
   height: 48px;
   font-size: 16px;
+}
+
+.modal-action-btns {
+  margin-top: 40px;
 }
 
 .alert-action {
@@ -136,6 +162,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 4px;
   text-align: center;
   font-size: 14px;
   font-weight: 400;

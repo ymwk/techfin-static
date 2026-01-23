@@ -245,7 +245,7 @@
   border-right: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   transform: rotate(-45deg);
-  color: var(--c-gray1)
+  color: var(--c-gray1);
 }
 
 .i--first,
@@ -327,6 +327,14 @@
 .i--warn {
   width: 48px;
   background-image: url(../image/icon/ic_alert_warning.svg);
+}
+.i--err {
+  width: 48px;
+  background-image: url(../image/icon/ic_alert_err.svg);
+}
+.i--check {
+  width: 48px;
+  background-image: url(../image/icon/ic_alert_check.svg);
 }
 
 .i--more {
@@ -429,7 +437,9 @@
     height: 2px;
     border-radius: 2px;
     background-color: currentColor;
-    transition: transform 0.2s, background-color .4s;
+    transition:
+      transform 0.2s,
+      background-color 0.4s;
   }
 
   &::before {
@@ -458,16 +468,15 @@
   background-image: url(../image/icon/ic_bell.svg);
 
   &.ac--active {
-    
     &::after {
       content: '';
       position: absolute;
       top: 0;
-      right: -1px; 
+      right: -1px;
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background-color: #FF3B30;
+      background-color: #ff3b30;
     }
   }
 }
@@ -485,16 +494,14 @@
 .i--fav {
   width: 24px;
   background-image: url(../image/icon/ic_fav.svg);
-  background-size: contain
+  background-size: contain;
 }
 
 .ac--active > .i--fav {
   width: 24px;
   background-image: url(../image/icon/ic_fav_on.svg);
-  background-size: contain
+  background-size: contain;
 }
-
-
 
 .i--write {
   width: 18px;
@@ -504,4 +511,17 @@
 .i--trash {
   width: 18px;
   background-image: url(../image/icon/ic_trash.svg);
+}
+
+.i--register1 {
+  width: 80px;
+  background-image: url(../image/icon/ic_register_01.svg);
+}
+.i--register2 {
+  width: 80px;
+  background-image: url(../image/icon/ic_register_02.svg);
+}
+.i--empty-check {
+  width: 80px;
+  background-image: url(../image/icon/ic_empty_check.svg);
 }

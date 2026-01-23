@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/techfin-pms/css/index.css" />
+  </head>
+  <body>
+    <div class="modal-root s--md">
+      <div class="modal-backdrop"></div>
+      <div class="modal-box">
+        <button type="button" class="modal-close">
+          <i class="icon-comm i--close s--lg"></i>
+          <span class="blind">Close</span>
+        </button>
+        <div class="modal-header">
+          <h2 class="font-h3">일괄등록</h2>
+        </div>
+
+        <div class="modal-contents">
+          <ul class="stepper-list">
+            <li>
+              <div class="title font-h4">기업추가 방식을 선택해 주세요.</div>
+            </li>
+            <li class="current">
+              <div class="title font-h4">
+                <p>샘플 양식을 다운받아 작성 한 후 파일을 업로드 해주세요.</p>
+              </div>
+            </li>
+          </ul>
+
+          <p class="text-desc mt-30">기업 일괄등록은 최대 50건 까지 가능합니다.</p>
+
+          <div class="msg-box">
+            <p>파일명 : 샘플파일.xlsx (24KB)</p>
+            <a href="#" class="btn-download">등록 양식 다운로드</a>
+          </div>
+
+          <label class="filefield-root">
+            <input type="file" name="" onchange="fileChange(this)" />
+            <div class="filefield-box">
+              <span class="filefield-name">파일을 첨부해 주세요.</span>
+            </div>
+            <span class="btn-comm">파일선택</span>
+          </label>
+        </div>
+        <!-- //modal-contents -->
+
+        <div class="modal-action">
+          <div class="modal-action-btns">
+            <button type="button" class="btn-comm">
+              <span>뒤로</span>
+            </button>
+            <button type="button" class="btn-contained" disabled>
+              <span>등록</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //modal-root -->
+  </body>
+</html>
