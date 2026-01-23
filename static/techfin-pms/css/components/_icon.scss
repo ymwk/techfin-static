@@ -149,10 +149,10 @@
 .i--plus,
 .i--minus {
   position: relative;
-  width: 18px;
-  height: 18px;
-  border: 1px solid var(--c-gray2);
-  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid var(--c-border2);
   background-color: #fff;
 }
 
@@ -165,14 +165,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 10px;
-  height: 2px;
+  height: 1px;
   border-radius: 2px;
-  background-color: var(--c-secondary);
+  background-color: #222;
 }
 
 .i--plus::before {
   content: '';
-  width: 2px;
+  width: 1px;
   height: 10px;
 }
 

@@ -118,6 +118,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
   width: calc(var(--w-sidebar) - var(--w-short));
   display: flex;
   flex-direction: column;

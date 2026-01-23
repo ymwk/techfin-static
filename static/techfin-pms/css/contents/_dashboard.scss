@@ -856,7 +856,7 @@
     grid-column: span 2;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 16px;
     padding: 20px;
     border-radius: 8px;
     border: 1px solid var(--c-border2);
@@ -879,6 +879,7 @@
     .btn-more {
       margin-left: auto;
       margin-right: -8px;
+      height: 25px;
 
       .icon-comm {
         transform: scale(1.2);
@@ -897,9 +898,7 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 16px;
-    padding-top: 16px;
 
     .date {
       display: flex;
@@ -919,12 +918,16 @@
     }
 
     .grade {
-      flex-grow: 1;
       display: inline-flex;
+      height: 45px;
       align-items: center;
       gap: 8px;
       font-size: 16px;
     }
+  }
+  
+  &.grid-8 {
+    grid-template-columns: repeat(8, 1fr);
   }
 }
 
@@ -1122,5 +1125,32 @@
 .panel-title, .table-header {
   .chart-legend {
     margin-left: auto
+  }
+}
+
+.detail-list {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid var(--c-border2);
+  color: var(--c-gray2);
+  font-size: 14px;
+  
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+  }
+  em {
+    color: var(--c-gray1);
+    font-weight: 500
+  }
+  
+  &.st2 {
+    border-top: 0;
+    padding-top: 16px;
   }
 }

@@ -1536,9 +1536,16 @@ img {
      -moz-appearance: none;
           appearance: none;
   flex-shrink: 0;
-  position: absolute;
-  width: 1px;
-  height: 1px;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #d4d4d9;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.radiocheck-label [type=radio]:checked {
+  border-color: #3b5dfb;
+  border-width: 6px;
 }
 .radiocheck-label [type=checkbox]:disabled,
 .radiocheck-label [type=radio]:disabled {
@@ -1562,12 +1569,12 @@ img {
 }
 .radiocheck-list .item:has([type=radio]:checked) {
   border-color: var(--c-primary);
-  background-color: #F0F4FF;
+  background-color: #f0f4ff;
 }
 .radiocheck-list small {
   padding-left: 12px;
   font-weight: 400px;
-  color: #75757A;
+  color: #75757a;
 }
 
 .icon-comm {
@@ -1752,10 +1759,10 @@ img {
 .i--plus,
 .i--minus {
   position: relative;
-  width: 18px;
-  height: 18px;
-  border: 1px solid var(--c-gray2);
-  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid var(--c-border2);
   background-color: #fff;
 }
 
@@ -1768,14 +1775,14 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 10px;
-  height: 2px;
+  height: 1px;
   border-radius: 2px;
-  background-color: var(--c-secondary);
+  background-color: #222;
 }
 
 .i--plus::before {
   content: "";
-  width: 2px;
+  width: 1px;
   height: 10px;
 }
 
@@ -2639,16 +2646,18 @@ img {
 .searchbox-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
 }
 .searchbox-item.s--full {
   flex-grow: 1;
+}
+.searchbox-item .radiocheck-root {
+  flex-wrap: nowrap;
 }
 
 .searchbox-label {
   display: inline-flex;
   align-items: center;
-  padding-right: 4px;
   font-size: 14px;
   white-space: nowrap;
 }

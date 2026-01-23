@@ -478,12 +478,16 @@
               </div>
 
               <div class="tabmenu-menu">
-                <button type="button" class="tabmenu-btn ac--active">기업요약</button>
-                <button type="button" class="tabmenu-btn">재무제표</button>
-                <button type="button" class="tabmenu-btn">재무분석</button>
-                <button type="button" class="tabmenu-btn">등급정보</button>
-                <button type="button" class="tabmenu-btn">신용정보</button>
-                <button type="button" class="tabmenu-btn">거래처현황</button>
+                <button type="button" class="tabmenu-btn ac--active" onclick="location.href = 'detail.html'">
+                  기업요약
+                </button>
+                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab2.html'">재무제표</button>
+                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab3.html'">재무분석</button>
+                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab4.html'">등급정보</button>
+                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab5.html'">신용정보</button>
+                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab6.html'">
+                  거래처현황
+                </button>
               </div>
 
               <div class="tabmenu-content" id="">
@@ -707,10 +711,10 @@
                         </div>
                         <div class="date">
                           <span>데이터 기준월 : 2025-10</span>
-                          <duv class="desc-info">
+                          <div class="desc-info">
                             <i class="icon-comm i--tooltip"></i>
                             <p>런웨이가 하이픈(-) 으로 표시되는 경우 현금 순유입구간을 의미합니다.</p>
-                          </duv>
+                          </div>
                         </div>
                       </div>
                       <!-- // panel-cont -->

@@ -81,6 +81,42 @@
     font-weight: 400;
     transition: background-color 0.2s;
   }
+
+  th:not(:first-of-type) {
+    .tit {
+      display: inline-block;
+      width: 100%;
+      height: 16px;
+      border-left: 1px solid var(--c-border2);
+    }
+  }
+
+  thead th:not(:has(.tit)) {
+    border-left: 1px solid #e8e8eb;
+  }
+  
+  .th-cont{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.table-small {
+  thead th {
+    height: 48px
+  }
+  
+  td {
+    height: 35px;
+    border-right: 1px solid var(--c-border2);
+    border-left: 1px solid var(--c-border2);
+    line-height: 1.3;
+    
+    & > p {
+      text-align: left
+    }
+  }
 }
 
 .table-datagrid {
@@ -118,16 +154,6 @@
     }
   }
 
-  &:not(.s--sm, .t--board) tbody {
-    tr:nth-child(even) td {
-      background-color: var(--c-gray4);
-    }
-
-    tr:hover td {
-      // background-color: #f3f6ff;
-    }
-  }
-
   th.bg--first {
     background-color: #e7edff !important;
   }
@@ -150,13 +176,6 @@
       background-size: contain;
     }
   }
-
-  th:not(:first-of-type) .tit {
-    display: block;
-    width: 100%;
-    height: 16px;
-    border-left: 1px solid var(--c-border2);
-  }
 }
 
 .table-datatree {
@@ -176,8 +195,7 @@
   }
 
   .line-lv2 td {
-    background-color: #e7edff;
-    font-weight: 700;
+    background-color: #f0f4ff;
 
     &.al--right {
       letter-spacing: -0.035em;
@@ -185,11 +203,11 @@
   }
 
   .line-lv3 .tree-item {
-    padding-left: 2em;
+    padding-left: 1em;
   }
 
   .line-lv4 .tree-item {
-    padding-left: 4em;
+    padding-left: 2em;
   }
 
   .tree-item {
@@ -197,7 +215,6 @@
     align-items: center;
     gap: 6px;
     text-align: left;
-    font-weight: 600;
 
     .btn-icon {
       margin-left: auto;
@@ -450,10 +467,6 @@
     transition: background-color 0.2s;
   }
 
-  tr:nth-of-type(even) {
-    background: rgba(237, 241, 255, 0.6);
-  }
-
   .c--error,
   .c--calm {
     font-weight: 600;
@@ -488,6 +501,10 @@
     text-align: right;
     background-color: #fff !important;
   }
+
+  tbody th {
+    text-align: left;
+  }
 }
 
 .dashboard-panel {
@@ -499,7 +516,7 @@
 }
 
 .table-xscroll {
-  overflow-x: auto
+  overflow-x: auto;
 }
 
 .summary-list {

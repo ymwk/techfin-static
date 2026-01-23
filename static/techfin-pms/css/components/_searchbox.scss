@@ -55,17 +55,20 @@
 .searchbox-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
   
   &.s--full {
     flex-grow: 1
+  }
+  
+  .radiocheck-root {
+    flex-wrap: nowrap
   }
 }
 
 .searchbox-label {
   display: inline-flex;
   align-items: center;
-  padding-right: 4px;
   font-size: 14px;
   white-space: nowrap;
 }
