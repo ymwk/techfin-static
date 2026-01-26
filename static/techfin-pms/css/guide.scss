@@ -135,14 +135,8 @@
   }
 
   .toast::before {
-    content: 'Alert';
+    content: 'Toast';
     background-color: #3B5DFB;
-  }
-
-  .new::before {
-    content: 'NEW';
-    background-color: blue;
-    margin-left: 5px
   }
 }
 

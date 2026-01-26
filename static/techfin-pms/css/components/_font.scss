@@ -18,25 +18,25 @@
 .font-h4 {
   font-size: 16px;
   font-weight: 700;
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .font-h5 {
   font-size: 14px;
   font-weight: 700;
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .font-h6 {
   font-size: 13px;
   font-weight: 700;
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .font-h7 {
   font-size: 12px;
   font-weight: 700;
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .font-lg {
@@ -61,8 +61,8 @@
 }
 
 .text-desc {
-  color: #4F4F55;
+  color: var(--c-gray1);
   font-size: 14px;
   font-weight: 400;
-  padding: 8px 0
+  padding: 8px 0;
 }

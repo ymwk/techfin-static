@@ -23,7 +23,7 @@
   align-items: center;
   height: 32px;
   background-color: #fff !important;
-  font-size: 13px
+  font-size: 13px;
 }
 
 .filelist-box {
@@ -35,7 +35,7 @@
   border-radius: 8px;
   border: 1px solid var(--c-border2);
   font-size: 13px;
-  color: #4f4f55;
+  color: var(--c-gray1);
   line-height: 1.4;
   word-break: keep-all;
 }

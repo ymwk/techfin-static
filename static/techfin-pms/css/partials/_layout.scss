@@ -2,6 +2,7 @@
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .console-root {
@@ -11,8 +12,7 @@
   display: flex;
   flex-direction: column;
   // min-width: 1900px;
-  color: var(--c-gray1);
-  overflow-y: scroll;  
+  color: var(--c-black);
 }
 
 .console-container {
@@ -41,6 +41,6 @@
   margin-bottom: 20px;
 
   .cont-headline-box {
-    margin: 0
+    margin: 0;
   }
 }

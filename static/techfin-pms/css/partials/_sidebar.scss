@@ -104,13 +104,13 @@
   .sidebar-h1 {
     font-size: 16px;
     margin-bottom: 15px;
-    color: var(--c-gray1);
+    color: var(--c-black);
   }
   .sidebar-h2 {
     font-size: 14px;
     margin-top: 24px;
     margin-bottom: 4px;
-    color: var(--c-gray1);
+    color: var(--c-black);
   }
 }
 
@@ -136,7 +136,7 @@
   margin-bottom: 16px;
   border-bottom: 1px solid #d4d4d9;
   font-size: 13px;
-  color: #4f4f55;
+  color: var(--c-gray1);
 }
 
 .sidebar-box {

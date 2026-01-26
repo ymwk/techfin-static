@@ -100,7 +100,7 @@
     flex-shrink: 0;
     position: relative;
     padding-right: 2em;
-    color: var(--c-gray1);
+    color: var(--c-black);
     font-weight: 700;
 
     &::after {
@@ -140,7 +140,7 @@
   a {
     display: flex;
     align-items: center;
-    color: var(--c-gray1);
+    color: var(--c-black);
   }
 }
 

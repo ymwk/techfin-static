@@ -5,7 +5,7 @@
   padding: 24px 30px;
   margin-bottom: 32px;
   border-radius: 8px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 
   .textfield-form {
     &:read-only {
@@ -35,12 +35,12 @@
   th {
     text-align: left;
     vertical-align: middle;
-    padding-right: 10px
+    padding-right: 10px;
   }
 
   td {
     vertical-align: middle;
-    padding-right: 20px
+    padding-right: 20px;
   }
 
   .combobox-root {
@@ -56,13 +56,28 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  
+
   &.s--full {
-    flex-grow: 1
+    flex-grow: 1;
   }
-  
+
+  &.s--min {
+    flex-grow: 1;
+    
+    .combobox-root {
+      flex-grow: 1;
+    }
+    .combobox-btn {
+      min-width: 110px;
+    }
+  }
+
   .radiocheck-root {
-    flex-wrap: nowrap
+    flex-wrap: nowrap;
+  }
+
+  .combobox-btn {
+    min-width: 160px;
   }
 }
 
@@ -78,13 +93,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  
+
   button {
     height: 40px;
   }
-  
+
   .btn-contained {
-    padding: 0 20px
+    padding: 0 20px;
   }
 }
 

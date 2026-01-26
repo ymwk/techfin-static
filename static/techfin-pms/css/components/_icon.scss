@@ -245,7 +245,7 @@
   border-right: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   transform: rotate(-45deg);
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .i--first,
@@ -312,6 +312,12 @@
 .i--rise {
   &::after {
     content: '▲';
+  }
+}
+
+.i--line {
+  &::after {
+    content: '-';
   }
 }
 

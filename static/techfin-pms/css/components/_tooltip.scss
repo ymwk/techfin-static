@@ -5,19 +5,26 @@
     &:hover {
       .tooltip-popper {
         opacity: 1;
-        z-index: 99;
+        visibility: visible;
       }
     }
 
     .tooltip-popper {
       opacity: 0;
-      z-index: -1;
+      visibility: hidden;
       transition: opacity 0.2s;
     }
   }
 
   .btn-icon {
-    height: 25px
+    height: 25px;
+  }
+
+  &.xp {
+    .tooltip-popper {
+      left: auto;
+      right: -10px;
+    }
   }
 }
 
@@ -34,15 +41,17 @@
   flex-direction: column;
   gap: 8px;
   position: relative;
-  min-width: 336px;
+  width: 320px;
   padding: 10px 12px;
   border-radius: 5px;
   border: 1px solid var(--c-border2);
   background-color: #fff;
-  color: var(--c-gray1);
+  color: var(--c-black);
   font-size: 12px;
   line-height: 1.4;
-  
+  text-align: left;
+  box-shadow: 0px 3px 12px 0px #00000012;
+
   .tit {
     flex-shrink: 0;
     display: flex;
@@ -51,23 +60,23 @@
     font-weight: 700;
     white-space: nowrap;
     line-height: 1;
-    
+
     small {
       font-size: 12px;
-      font-weight: 400
+      font-weight: 400;
     }
   }
-  
+
   ul {
-    padding-left: 16px
+    padding-left: 16px;
   }
-  
+
   li {
     padding: 3px 0 3px 0.7em;
     text-indent: -0.7em;
-    
+
     &::before {
-      content: '• '
+      content: '• ';
     }
   }
 }

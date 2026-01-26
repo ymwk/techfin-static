@@ -379,15 +379,14 @@ textarea {
 :root {
   --c-primary: #3b5dfb;
   --c-secondary: #3d58c9;
-  --c-black: #232323;
-  --c-white: #fff;
-  --c-gray1: #212126;
+  --c-black: #212126;
+  --c-gray1: #4F4F55;
   --c-gray2: #75757a;
-  --c-gray3: #8B8B8F;
+  --c-gray3: #8b8b8f;
   --c-gray4: #f9f9f9;
   --c-disabled: #bebebe;
-  --c-error: #fc5356;
-  --c-success: #35A785;
+  --c-error: #E14B5F;
+  --c-success: #35a785;
   --c-warn: #ff9900;
   --c-fail: #718ebf;
   --c-cta: #5a7299;
@@ -883,12 +882,8 @@ img {
   color: var(--c-black) !important;
 }
 
-.c--white {
-  color: var(--c-white) !important;
-}
-
 .c--gray1 {
-  color: var(--c-gray1) !important;
+  color: var(--c-black) !important;
 }
 
 .c--gray2 {
@@ -935,12 +930,8 @@ img {
   background-color: var(--c-black) !important;
 }
 
-.bg--white {
-  background-color: var(--c-white) !important;
-}
-
 .bg--gray1 {
-  background-color: var(--c-gray1) !important;
+  background-color: var(--c-black) !important;
 }
 
 .bg--gray2 {
@@ -987,25 +978,25 @@ img {
 .font-h4 {
   font-size: 16px;
   font-weight: 700;
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .font-h5 {
   font-size: 14px;
   font-weight: 700;
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .font-h6 {
   font-size: 13px;
   font-weight: 700;
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .font-h7 {
   font-size: 12px;
   font-weight: 700;
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .font-lg {
@@ -1034,7 +1025,7 @@ img {
 }
 
 .text-desc {
-  color: #4F4F55;
+  color: var(--c-gray1);
   font-size: 14px;
   font-weight: 400;
   padding: 8px 0;
@@ -1078,7 +1069,7 @@ img {
   border-radius: 6px;
   background-color: #fff;
   font-size: 14px;
-  color: var(--c-gray1);
+  color: var(--c-black);
   font-weight: 400;
   text-align: left;
   transition: border-color 0.2s;
@@ -1128,7 +1119,7 @@ img {
   border-radius: 6px;
   background-color: #fff;
   font-size: 14px;
-  color: var(--c-gray1);
+  color: var(--c-black);
   font-weight: 400;
   text-align: left;
   transition: border-color 0.2s;
@@ -1232,7 +1223,7 @@ img {
   font-size: 13px;
   font-weight: 500;
   white-space: nowrap;
-  color: var(--c-gray1);
+  color: var(--c-black);
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 .btn-comm:disabled,
@@ -1872,7 +1863,7 @@ img {
   border-right: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   transform: rotate(-45deg);
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .i--first,
@@ -1935,6 +1926,10 @@ img {
 
 .i--rise::after {
   content: "▲";
+}
+
+.i--line::after {
+  content: "-";
 }
 
 .i--gt-l {
@@ -2128,6 +2123,7 @@ img {
 .combobox-root.ac--focus:has(button:focus) .combobox-dropdown, .combobox-root.ac--focus.ac--active .combobox-dropdown {
   max-height: 200px;
   overflow-y: auto;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.0588235294);
 }
 .combobox-root.ac--focus ::-webkit-scrollbar {
   width: 0;
@@ -2144,12 +2140,13 @@ img {
   border-radius: 6px;
   background-color: #fff;
   font-size: 14px;
-  color: var(--c-gray1);
+  color: var(--c-black);
   font-weight: 400;
   text-align: left;
   transition: border-color 0.2s;
-  min-width: 160px;
+  min-width: 100px;
   padding-right: 50px;
+  white-space: nowrap;
 }
 .combobox-btn:has(.textfield-btn) {
   padding-right: 40px;
@@ -2164,7 +2161,10 @@ img {
   border-width: 6px;
   border-color: currentColor transparent transparent;
   border-radius: 2px;
-  color: #4F4F55;
+  color: var(--c-gray1);
+}
+.combobox-btn:focus {
+  border-color: var(--c-primary);
 }
 
 .combobox-dropdown {
@@ -2173,31 +2173,43 @@ img {
   top: 100%;
   left: 0;
   width: 100%;
-  margin-top: -1px;
-  color: var(--c-gray1);
+  margin-top: 3px;
+  color: var(--c-black);
   overflow: hidden;
 }
 .combobox-dropdown .combobox-option {
-  border: 1px solid var(--c-border);
-  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid #e8e8eb;
+  border-radius: 6px;
   background-color: #fff;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.combobox-dropdown .combobox-option::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.combobox-dropdown .combobox-option::-webkit-scrollbar-thumb {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: #e4e4e4;
 }
 .combobox-dropdown li {
   display: flex;
   align-items: center;
   transition: background-color 0.2s;
 }
-.combobox-dropdown li.ac--active {
-  background-color: rgba(50, 101, 255, 0.15);
-}
-.combobox-dropdown li:hover:not(.ac--active, :has(button:disabled)) {
-  background-color: rgba(50, 101, 255, 0.15);
+.combobox-dropdown li.ac--active, .combobox-dropdown li:hover:not(.ac--active, :has(button:disabled)) {
+  background-color: #f9f9f9;
 }
 .combobox-dropdown li > * {
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 2.4em;
+  min-height: 24px;
   text-align: left;
   padding: 5px 12px;
   color: inherit;
@@ -2324,7 +2336,7 @@ img {
   top: 12px;
   right: 12px;
   display: flex;
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .modal-header {
@@ -2406,7 +2418,7 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: #4f4f55;
+  color: var(--c-gray1);
 }
 
 .modal-desc-top {
@@ -2415,7 +2427,7 @@ img {
   gap: 10px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: var(--c-gray1);
+  color: var(--c-black);
   font-weight: 500;
 }
 
@@ -2436,15 +2448,26 @@ img {
   font-weight: 500;
   font-size: 18px;
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
   transition: color 0.2s, border-color 0.2s, color 0.2s;
 }
 .tabmenu-menu .tabmenu-btn.ac--active {
   border-bottom-color: currentColor;
-  color: var(--c-gray1);
+  color: var(--c-black);
   font-weight: 700;
 }
 .tabmenu-menu .tabmenu-btn:not(:last-child) {
   margin-right: 4px;
+}
+.tabmenu-menu.s--sm {
+  margin-bottom: 4px;
+  gap: 12px;
+}
+.tabmenu-menu.s--sm .tabmenu-btn {
+  height: 44px;
+  padding-top: 0;
+  align-items: center;
+  font-size: 16px;
 }
 
 .tabmenu-filter {
@@ -2459,6 +2482,7 @@ img {
   font-size: 14px;
   color: var(--c-gray3);
   background-color: #f1f1f3;
+  white-space: nowrap;
   transition: color 0.2s, background-color 0.2s;
 }
 .tabmenu-filter .tabmenu-btn.ac--active {
@@ -2495,15 +2519,19 @@ img {
 }
 .tooltip-root.ac-hover:hover .tooltip-popper {
   opacity: 1;
-  z-index: 99;
+  visibility: visible;
 }
 .tooltip-root.ac-hover .tooltip-popper {
   opacity: 0;
-  z-index: -1;
+  visibility: hidden;
   transition: opacity 0.2s;
 }
 .tooltip-root .btn-icon {
   height: 25px;
+}
+.tooltip-root.xp .tooltip-popper {
+  left: auto;
+  right: -10px;
 }
 
 .tooltip-popper {
@@ -2519,14 +2547,16 @@ img {
   flex-direction: column;
   gap: 8px;
   position: relative;
-  min-width: 336px;
+  width: 320px;
   padding: 10px 12px;
   border-radius: 5px;
   border: 1px solid var(--c-border2);
   background-color: #fff;
-  color: var(--c-gray1);
+  color: var(--c-black);
   font-size: 12px;
   line-height: 1.4;
+  text-align: left;
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.0705882353);
 }
 .tooltip-box .tit {
   flex-shrink: 0;
@@ -2593,7 +2623,7 @@ img {
   border-radius: 4px;
   overflow: hidden;
   font-size: 12px;
-  color: var(--c-gray1);
+  color: var(--c-black);
 }
 
 .datepicker-calendar-month {
@@ -2668,7 +2698,7 @@ img {
   padding: 24px 30px;
   margin-bottom: 32px;
   border-radius: 8px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 .searchbox-root .textfield-form:-moz-read-only {
   background-color: #fff;
@@ -2717,8 +2747,20 @@ img {
 .searchbox-item.s--full {
   flex-grow: 1;
 }
+.searchbox-item.s--min {
+  flex-grow: 1;
+}
+.searchbox-item.s--min .combobox-root {
+  flex-grow: 1;
+}
+.searchbox-item.s--min .combobox-btn {
+  min-width: 110px;
+}
 .searchbox-item .radiocheck-root {
   flex-wrap: nowrap;
+}
+.searchbox-item .combobox-btn {
+  min-width: 160px;
 }
 
 .searchbox-label {

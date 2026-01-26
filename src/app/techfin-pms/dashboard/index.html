@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/techfin-pms/css/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="console-root">
+        <!-- Header -->
+        <header class="console-header">
+          <div class="console-area">
+            <h1 class="console-header-logo">
+              <a href="/">
+                <div class="logo">
+                  <span class="blind">Crediview 기업모니터링</span>
+                </div>
+              </a>
+            </h1>
+            <nav class="console-header-nav">
+              <div class="console-header-menu">
+                <div class="console-nav-item">
+                  <a href="/src/app/mypage/company/index.html" class="nav-btn">기업조회</a>
+                  <div class="console-nav-sub">
+                    <ul class="console-nav-sublist">
+                      <li>
+                        <a href=""><span>기업정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>개인정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>인증서관리</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="console-nav-item">
+                  <a href="/src/app/enterprise/data/index.html" class="nav-btn ac--active">기업현황</a>
+                  <div class="console-nav-sub">
+                    <ul class="console-nav-sublist">
+                      <li>
+                        <a href="" class="ac--active"><span>관리기업현황</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>매출/매입처현황</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>재무제표</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>재무분석</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>기업신용정보</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>자료요청/제출현황</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="console-nav-item">
+                  <a href="/src/app/service/admin/index.html" class="nav-btn">마이페이지</a>
+                  <div class="console-nav-sub">
+                    <ul class="console-nav-sublist">
+                      <li>
+                        <a href=""><span>기업정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>개인정보관리</span></a>
+                      </li>
+                      <li>
+                        <a href=""><span>인증서관리</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="console-header-global">
+                <div class="global-btns">
+                  <div class="global-btn-user">
+                    <button type="button" class="btn-user">
+                      <i class="icon-comm i--user"></i>
+                      <span>kimtech@techfinratings.com</span>
+                    </button>
+
+                    <div class="global-user-menu">
+                      <ul class="user-menu-list">
+                        <li>
+                          <a href="#">
+                            <span>회사 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>인증서 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>내 정보 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>결제 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>회원 관리</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <button type="button" class="btn-logout">
+                        <i class="icon-comm i--logout"></i>
+                        로그아웃
+                      </button>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-icon">
+                    <i class="icon-comm i--bell"></i>
+                    <span class="blind">알림</span>
+                    <span class="badge">14</span>
+                  </button>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <div class="console-container">
+          <!-- Sidebar Start -->
+          <div class="console-sidebar">
+            <div class="sidebar-posistion">
+              <div class="sidebar-menu">
+                <button type="button" class="sidebar-foldBtn">
+                  <span class="blind">접기</span>
+                </button>
+                <button type="button" class="sidebar-btn company" data-target-id="tab1">
+                  <span class="blind">기업</span>
+                </button>
+                <button type="button" class="sidebar-btn fav" data-target-id="tab2">
+                  <span class="blind">즐겨찾기</span>
+                </button>
+                <button type="button" class="sidebar-btn memo" data-target-id="tab3">
+                  <span class="blind">메모</span>
+                </button>
+              </div>
+
+              <div class="sidebar-container">
+                <div class="sidebar-inner">
+                  <div class="sidebar-tab-cont" id="tab1" style="display: none">
+                    <h3 class="sidebar-h1">우리 회사</h3>
+                    <div class="sidebar-box">
+                      <table class="table-detail">
+                        <tbody>
+                          <tr>
+                            <th>기업명</th>
+                            <td>테크핀레이팅스</td>
+                          </tr>
+                          <tr>
+                            <th>사업자등록번호</th>
+                            <td>123-22-00015</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="sidebar-subtit">
+                      <h4 class="sidebar-h2">관리기업</h4>
+                      <p>관리기업은 기업조회 후 등록하신 기업입니다.</p>
+                    </div>
+                    <div class="sidebar-searchbox">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input
+                            type="text"
+                            class="textfield-form"
+                            name=""
+                            placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
+                            value="전자"
+                          />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <button type="button" class="btn-clear">
+                            <span class="blind">삭제</span>
+                          </button>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-searchbox -->
+                    <div class="sidebar-content">
+                      <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
+                      <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
+                      <div class="sidebar-cont-scroll">
+                        <ul class="sidebar-companylist">
+                          <li>
+                            <span>LG<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>삼성<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // sidebar-content -->
+                  </div>
+                  <!-- // tab1 -->
+
+                  <div class="sidebar-tab-cont" id="tab2" style="display: none">
+                    <h3 class="sidebar-h1">우리 회사</h3>
+                    <div class="sidebar-box">
+                      <table class="table-detail">
+                        <tbody>
+                          <tr>
+                            <th>기업명</th>
+                            <td>테크핀레이팅스</td>
+                          </tr>
+                          <tr>
+                            <th>사업자등록번호</th>
+                            <td>123-22-00015</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="sidebar-subtit">
+                      <h4 class="sidebar-h2">즐겨찾는 기업 (3)</h4>
+                      <p>즐겨찾는 기업 목록입니다.</p>
+                    </div>
+                    <div class="sidebar-searchbox">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input
+                            type="text"
+                            class="textfield-form"
+                            name=""
+                            placeholder="기업명 또는 사업자등록번호를 입력해 주세요."
+                          />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <!-- <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button> -->
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-searchbox -->
+                    <div class="sidebar-content">
+                      <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
+                      <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
+                      <div class="sidebar-cont-scroll">
+                        <ul class="sidebar-companylist">
+                          <li>
+                            <span>LG전자</span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>삼성전자</span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인전자</span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav ac--active">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // sidebar-content -->
+                  </div>
+                  <!-- // tab2 -->
+
+                  <div class="sidebar-tab-cont" id="tab3" style="display: none">
+                    <h3 class="sidebar-h1">메모</h3>
+                    <div class="sidebar-memo-utils">
+                      <button type="button" class="btn-icon btn-memo-search">
+                        <i class="icon-comm i--search"></i>
+                        <span class="blind">검색</span>
+                      </button>
+                      <button type="button" class="btn-icon">
+                        <i class="icon-comm i--write"></i>
+                        <span class="blind">작성</span>
+                      </button>
+                      <button type="button" class="btn-icon btn-memo-del">
+                        <i class="icon-comm i--trash"></i>
+                        <span class="blind">삭제</span>
+                      </button>
+                    </div>
+
+                    <div class="sidebar-memo-searchbox">
+                      <div class="textfield-root">
+                        <label class="textfield-label">
+                          <span class="label blind">검색키워드</span>
+                          <input type="text" class="textfield-form" name="" placeholder="검색어를 입력해 주세요." />
+                          <!-- 내용 입력시 나타나는 버튼 -->
+                          <!-- <button type="button" class="btn-clear">
+                        <span class="blind">삭제</span>
+                      </button> -->
+                        </label>
+                      </div>
+                    </div>
+                    <!-- //sidebar-memo-searchbox -->
+
+                    <div class="sidebar-content ac--del">
+                      <div class="sidebar-cont-scroll">
+                        <ul class="sidebar-memo-list">
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" checked />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" checked />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="radiocheck-root">
+                              <label class="radiocheck-label">
+                                <input type="checkbox" name="" />
+                                <span class="blind">선택</span>
+                              </label>
+                            </div>
+                            <div class="box ellipsis">
+                              메모는 최대 1줄까지 미리보기로 표시됩니다. 그 이후의 긴 내용은 화면을 깔끔하게 보기 위해
+                              자동으로 축약됩니다.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- // sidebar-content -->
+
+                    <div class="sidebar-footer">
+                      <button type="button" class="btn-comm">
+                        <span>취소</span>
+                      </button>
+                      <button type="button" class="btn-contained">
+                        <span>삭제</span>
+                      </button>
+                    </div>
+                    <!-- // sidebar-footer -->
+                  </div>
+                  <!-- // tab3 -->
+                </div>
+                <!-- // sidebar-inner -->
+              </div>
+              <!-- //sidebar-container -->
+            </div>
+          </div>
+          <!-- Sidebar End -->
+
+          <!-- Main Contents Start -->
+          <main class="console-contents">
+            <div class="console-contents-inner">
+              <div class="cont-headline">
+                <h2 class="font-h2">대시보드</h2>
+                <p>관리 기업의 주요 리스크 지표와 거래 현황을 한눈에 확인하실 수 있습니다.</p>
+              </div>
+
+              <div class="dashboard-sub">
+                <!-- EWS 등급 현황 -->
+                <div class="dashboard-panel row-2">
+                  <div class="panel-title">
+                    <span class="font-h3">EWS 등급 현황</span>
+
+                    <div class="tooltip-root ac-hover">
+                      <button type="button" class="btn-icon">
+                        <i class="icon-comm i--tooltip"></i>
+                        <span class="blind">툴팁보기</span>
+                      </button>
+                      <div class="tooltip-popper">
+                        <div class="tooltip-box">
+                          <div class="tit">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span>EWS 등급 현황</span>
+                          </div>
+                          <p>
+                            EWS 등급 현황에서는 관리 중인 기업의 위험 수준과 등급 변동 내역을 한눈에 확인할 수 있습니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="unit">기준일 : 2025-11-24</span>
+                    <button type="button" class="btn-icon btn-more">
+                      <i class="icon-comm i--next"></i>
+                    </button>
+                  </div>
+                  <!-- // panel-title -->
+
+                  <div class="panel-cont">
+                    <div class="tabmenu-menu s--sm">
+                      <button type="button" class="tabmenu-btn ac--active">전체 50</button>
+                      <button type="button" class="tabmenu-btn">상승 30</button>
+                      <button type="button" class="tabmenu-btn">하락 10</button>
+                      <button type="button" class="tabmenu-btn">변동없음 10</button>
+                    </div>
+
+                    <div class="tabmenu-filter">
+                      <button type="button" class="tabmenu-btn ac--active">전체</button>
+                      <button type="button" class="tabmenu-btn">정상 23</button>
+                      <button type="button" class="tabmenu-btn">유보 3</button>
+                      <button type="button" class="tabmenu-btn">관찰 2</button>
+                      <button type="button" class="tabmenu-btn">경고 2</button>
+                    </div>
+
+                    <div class="grade-list-wrap">
+                      <ul class="grade-list">
+                        <li>
+                          <span class="tit">삼성전자</span>
+                          <span class="grade-label g--normal">정상</span>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--rise c--error"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">현대자동차</span>
+                          <span class="grade-label g--defer">유보</span>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--nc"></i>동일</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">SK하이닉스</span>
+                          <span class="grade-label g--observe">관찰</span>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--rise c--error"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">LG화학</span>
+                          <span class="grade-label g--warn">주의</span>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--drop c--primary"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">삼성전자</span>
+                          <span class="grade-label g--normal">정상</span>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--rise c--error"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">현대자동차</span>
+                          <span class="grade-label g--defer">유보</span>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--nc"></i>동일</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">SK하이닉스</span>
+                          <span class="grade-label g--observe">관찰</span>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--rise c--error"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">LG화학</span>
+                          <span class="grade-label g--warn">주의</span>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--drop c--primary"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">SK하이닉스</span>
+                          <span class="grade-label g--observe">관찰</span>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--rise c--error"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">LG화학</span>
+                          <span class="grade-label g--warn">주의</span>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--drop c--primary"></i>2등급</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // panel-cont -->
+                </div>
+                <!-- // dashboard-panel -->
+
+                <!-- 런웨이 현황 -->
+                <div class="dashboard-panel grid-4">
+                  <div class="panel-title">
+                    <span class="font-h3">런웨이 현황 </span>
+
+                    <div class="tooltip-root ac-hover">
+                      <button type="button" class="btn-icon">
+                        <i class="icon-comm i--tooltip"></i>
+                        <span class="blind">툴팁보기</span>
+                      </button>
+                      <div class="tooltip-popper">
+                        <div class="tooltip-box">
+                          <div class="tit">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span>런웨이 현황</span>
+                          </div>
+                          <p>
+                            관리 기업의 보유 현금과 지출 흐름을 기준으로 예상 가능한 자금 소진 시점을 한눈에 확인할 수
+                            있습니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="unit">기준월 : 2025-11</span>
+
+                    <button type="button" class="btn-icon btn-more">
+                      <i class="icon-comm i--next"></i>
+                    </button>
+                  </div>
+                  <!-- // panel-title -->
+
+                  <div class="panel-cont">
+                    <div>
+                      <div class="table-header">
+                        <div class="count">
+                          <h4 class="font-h5">전체<em>50</em>건</h4>
+                        </div>
+                      </div>
+                      <div class="table-wrap table-sticky">
+                        <table class="table-datagrid">
+                          <colgroup>
+                            <col style="width: 60px" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th><span class="tit">번호</span></th>
+                              <th><span class="tit">기업명</span></th>
+                              <th><span class="tit">남은 런웨이</span></th>
+                              <th><span class="tit">현금잔액</span></th>
+                              <th><span class="tit">최근 3개월 현금지출액 평균</span></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>퓨처바이오</td>
+                              <td>약 2개월 15일</td>
+                              <td class="al--right">145,000,000</td>
+                              <td class="al--right">820,000,000</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>퓨처바이오</td>
+                              <td>약 2개월 15일</td>
+                              <td class="al--right">145,000,000</td>
+                              <td class="al--right">820,000,000</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>퓨처바이오</td>
+                              <td>약 2개월 15일</td>
+                              <td class="al--right">145,000,000</td>
+                              <td class="al--right">820,000,000</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>퓨처바이오</td>
+                              <td>약 2개월 15일</td>
+                              <td class="al--right">145,000,000</td>
+                              <td class="al--right">820,000,000</td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>퓨처바이오</td>
+                              <td>약 2개월 15일</td>
+                              <td class="al--right">145,000,000</td>
+                              <td class="al--right">820,000,000</td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>퓨처바이오</td>
+                              <td>약 2개월 15일</td>
+                              <td class="al--right">145,000,000</td>
+                              <td class="al--right">820,000,000</td>
+                            </tr>
+                            <tr>
+                              <td>7</td>
+                              <td>퓨처바이오</td>
+                              <td>약 2개월 15일</td>
+                              <td class="al--right">145,000,000</td>
+                              <td class="al--right">820,000,000</td>
+                            </tr>
+                            <tr>
+                              <td>8</td>
+                              <td>퓨처바이오</td>
+                              <td>약 2개월 15일</td>
+                              <td class="al--right">145,000,000</td>
+                              <td class="al--right">820,000,000</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- // panel-cont -->
+                </div>
+                <!-- // dashboard-panel -->
+
+                <!-- 실시간 등급 -->
+                <div class="dashboard-panel">
+                  <div class="panel-title">
+                    <span class="font-h3">실시간 등급 현황</span>
+
+                    <div class="tooltip-root ac-hover">
+                      <button type="button" class="btn-icon">
+                        <i class="icon-comm i--tooltip"></i>
+                        <span class="blind">툴팁보기</span>
+                      </button>
+                      <div class="tooltip-popper">
+                        <div class="tooltip-box">
+                          <div class="tit">
+                            <i class="icon-comm i--tooltip"></i>
+                            실시간 등급
+                          </div>
+                          <p>
+                            실시간 등급은 기업의 최신 신용 정보를 반영해 현재 위험 수준을 확인할 수 있는 지표입니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="unit">기준월 : 2025-11</span>
+
+                    <button type="button" class="btn-icon btn-more">
+                      <i class="icon-comm i--next"></i>
+                    </button>
+                  </div>
+                  <!-- // panel-title -->
+
+                  <div class="panel-cont">
+                    <div class="tabmenu-menu s--sm">
+                      <button type="button" class="tabmenu-btn ac--active" data-target-tab="customer1">전체 50</button>
+                      <button type="button" class="tabmenu-btn" data-target-tab="customer2">상승 30</button>
+                      <button type="button" class="tabmenu-btn" data-target-tab="customer2">하락 10</button>
+                      <button type="button" class="tabmenu-btn" data-target-tab="customer2">변동없음 30</button>
+                    </div>
+
+                    <div class="grade-list-wrap">
+                      <ul class="grade-list">
+                        <li>
+                          <span class="tit">삼성전자</span>
+                          <em class="rating">AAA</em>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--rise c--error"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">현대자동차</span>
+                          <em class="rating">BBB+</em>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--nc"></i>동일</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">SK하이닉스</span>
+                          <em class="rating">BB+</em>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--rise c--error"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">LG화학</span>
+                          <em class="rating">AA</em>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--drop c--primary"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">삼성전자</span>
+                          <em class="rating">AA</em>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--rise c--error"></i>2등급</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit">현대자동차</span>
+                          <em class="rating">AA</em>
+                          <div class="grade">
+                            <span>이전대비</span>
+                            <span class="grade-sort"><i class="icon-comm i--nc"></i>동일</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- // panel-cont -->
+                </div>
+                <!-- // dashboard-panel -->
+
+                <!-- 매출처 현황 -->
+                <div class="dashboard-panel">
+                  <div class="panel-title">
+                    <span class="font-h3">매출/매입처 현황</span>
+
+                    <div class="tooltip-root ac-hover">
+                      <button type="button" class="btn-icon">
+                        <i class="icon-comm i--tooltip"></i>
+                        <span class="blind">툴팁보기</span>
+                      </button>
+                      <div class="tooltip-popper">
+                        <div class="tooltip-box">
+                          <div class="tit">
+                            <i class="icon-comm i--tooltip"></i>
+                            매출/매입처 현황
+                          </div>
+                          <p>관리 기업의 매출/매입처 현황 및 평균 지급기일/평균 회수기일을 확인할 수 있습니다.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button type="button" class="btn-icon btn-more">
+                      <i class="icon-comm i--next"></i>
+                    </button>
+                  </div>
+                  <!-- // panel-title -->
+
+                  <div class="panel-cont">
+                    <div class="tabmenu-menu s--sm">
+                      <button type="button" class="tabmenu-btn ac--active" data-target-tab="customer1">
+                        매출처 현황
+                      </button>
+                      <button type="button" class="tabmenu-btn" data-target-tab="customer2">매입처 현황</button>
+                    </div>
+
+                    <div class="tabmenu-content" id="customer1" style="display: block">
+                      <div class="table-header">
+                        <div class="count">
+                          <h4 class="font-h5">전체<em>50</em>건</h4>
+                        </div>
+                      </div>
+                      <div class="table-wrap table-sticky">
+                        <table class="table-datagrid">
+                          <colgroup>
+                            <col style="width: 50px" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th><span class="tit">번호</span></th>
+                              <th><span class="tit">기업명</span></th>
+                              <th><span class="tit">매출처 수</span></th>
+                              <th><span class="tit">평균 회수기일</span></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>퓨처바이오</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>넥스트에너지</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>엠테크</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>(주)테크이엔지</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>퓨처바이오</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>퓨처바이오</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>7</td>
+                              <td>넥스트에너지</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>8</td>
+                              <td>엠테크</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>9</td>
+                              <td>(주)테크이엔지</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>10</td>
+                              <td>퓨처바이오</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- // tabmenu-content -->
+
+                    <div class="tabmenu-content" id="customer2" style="display: none">
+                      <div class="table-header">
+                        <div class="count">
+                          <h4 class="font-h5">전체<em>50</em>건</h4>
+                        </div>
+                      </div>
+                      <div class="table-wrap table-sticky">
+                        <table class="table-datagrid">
+                          <colgroup>
+                            <col style="width: 60px" />
+                            <col />
+                            <col style="width: 80px" />
+                            <col style="width: 100px" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th><span class="tit">번호</span></th>
+                              <th><span class="tit">기업명</span></th>
+                              <th><span class="tit">매입처 수</span></th>
+                              <th><span class="tit">평균 지급기일</span></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>퓨처바이오</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>넥스트에너지</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>퓨처바이오</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>퓨처바이오</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>퓨처바이오</td>
+                              <td>150</td>
+                              <td>10일</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- // tabmenu-content -->
+                  </div>
+                  <!-- // panel-cont -->
+                </div>
+                <!-- // dashboard-panel -->
+              </div>
+              <!-- // dashboard-sub -->
+            </div>
+          </main>
+          <!-- Main Contents End -->
+        </div>
+        <!-- //console-container -->
+      </div>
+      <!-- console-root -->
+    </div>
+
+    <script src="../js/custom-v2.js"></script>
+  </body>
+</html>

@@ -162,4 +162,22 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  // tooltip
+  function updateTooltipPosition() {
+    const tooltips = document.querySelectorAll('.tooltip-root');
+    const threshold = window.innerWidth - 300;
+
+    tooltips.forEach((tip) => {
+      const rect = tip.getBoundingClientRect();
+      if (rect.left > threshold) {
+        tip.classList.add('xp');
+      } else {
+        tip.classList.remove('xp');
+      }
+    });
+  }
+
+  updateTooltipPosition();
+  window.addEventListener('resize', updateTooltipPosition);
 });

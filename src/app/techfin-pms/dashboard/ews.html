@@ -436,314 +436,326 @@
           <main class="console-contents">
             <div class="console-contents-inner">
               <div class="cont-headline">
-                <h2 class="font-h2">기업정보</h2>
-                <p>각 기업의 상세 정보를 확인하실 수 있습니다.</p>
+                <h2 class="font-h2">EWS 등급 현황</h2>
+                <p>실시간 등급 현황에서는 관리 중인 기업의 신용등급 변동 상황을 실시간으로 확인할 수 있습니다.</p>
 
                 <div class="headline-utils">
                   <div class="cont-breadcrumbs">
-                    <a href="../../enterprise/data/index.html">기업현황</a>
-                    <a href="../../enterprise/company/index.html">관리기업</a>
-                    <span>기업정보</span>
+                    <a href="#">대시보드</a>
+                    <span>EWS 등급 현황</span>
                   </div>
                 </div>
               </div>
 
-              <div class="cont-headline-box t--detail">
-                <div class="headline-title">
-                  <div class="headline-company">
-                    <div class="logo">
-                      <img src="/static/techfin-pms/image/logo/logo_techfin.png" alt="logo" />
+              <!-- 검색 -->
+              <div class="searchbox-root">
+                <div class="searchbox-item">
+                  <span class="searchbox-label">EWS등급 변동</span>
+                  <div class="combobox-root ac--focus">
+                    <button type="button" class="combobox-btn">전체</button>
+                    <div class="combobox-dropdown">
+                      <ul class="combobox-option">
+                        <li class="ac--active">
+                          <button type="button">전체</button>
+                        </li>
+                      </ul>
                     </div>
-                    <em>테크핀레이팅스</em>
-                    <button type="button" class="btn-fav ac--active">
-                      <i class="icon-comm i--fav"></i>
-                      <span class="blind">즐겨찾기</span>
-                    </button>
                   </div>
                 </div>
-                <ul class="list">
-                  <li>
-                    <em>대표자명</em>
-                    <span>김테크</span>
-                  </li>
-                  <li>
-                    <em>업종</em>
-                    <span>그 외 기타 소프트웨어업</span>
-                  </li>
-                  <li>
-                    <em>사업자등록번호</em>
-                    <span>411-81-75485</span>
-                  </li>
-                </ul>
-              </div>
 
-              <div class="tabmenu-menu">
-                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail.html'">기업요약</button>
-                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab2.html'">재무제표</button>
-                <button type="button" class="tabmenu-btn ac--active" onclick="location.href = 'detail-tab3.html'">
-                  재무분석
-                </button>
-                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab4.html'">등급정보</button>
-                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab5.html'">신용정보</button>
-                <button type="button" class="tabmenu-btn" onclick="location.href = 'detail-tab6.html'">
-                  거래처현황
-                </button>
-              </div>
-
-              <div class="tabmenu-content" id="">
-                <h3 class="blind">기업요약</h3>
-                <div class="tabmenu-filter">
-                  <button type="button" class="tabmenu-btn ac--active" data-target-tab="filter1">전체</button>
-                  <button type="button" class="tabmenu-btn" data-target-tab="filter2">성장성</button>
-                  <button type="button" class="tabmenu-btn" data-target-tab="filter3">수익성</button>
-                  <button type="button" class="tabmenu-btn" data-target-tab="filter4">안정성</button>
-                  <button type="button" class="tabmenu-btn" data-target-tab="filter5">활동성</button>
-                  <button type="button" class="tabmenu-btn" data-target-tab="filter6">생산성</button>
+                <div class="searchbox-item">
+                  <span class="searchbox-label">현재 EWS등급</span>
+                  <div class="combobox-root ac--focus">
+                    <button type="button" class="combobox-btn">전체</button>
+                    <div class="combobox-dropdown">
+                      <ul class="combobox-option">
+                        <li class="ac--active">
+                          <button type="button">전체</button>
+                        </li>
+                        <li><button type="button">AAA</button></li>
+                        <li><button type="button">AA+</button></li>
+                        <li><button type="button">AA</button></li>
+                        <li><button type="button">AA-</button></li>
+                        <li><button type="button">A+</button></li>
+                        <li><button type="button">A</button></li>
+                        <li><button type="button">A-</button></li>
+                        <li><button type="button">BBB+</button></li>
+                        <li><button type="button">BBB</button></li>
+                        <li><button type="button">BBB-</button></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="tabmenu-content" id="filter1" style="display: block">
-                  <!-- 검색 -->
-                  <div class="searchbox-root">
-                    <div class="searchbox-item">
-                      <span class="searchbox-label">결산단위</span>
-                      <div class="combobox-root ac--focus">
-                        <button type="button" class="combobox-btn">결산</button>
-                        <div class="combobox-dropdown">
-                          <ul class="combobox-option">
-                            <li class="ac--active">
-                              <button type="button">전체</button>
-                            </li>
-                            <li><button type="button">결산</button></li>
-                          </ul>
-                        </div>
-                      </div>
+                <div class="searchbox-item">
+                  <span class="searchbox-label">이전 EWS등급</span>
+                  <div class="combobox-root ac--focus">
+                    <button type="button" class="combobox-btn">전체</button>
+                    <div class="combobox-dropdown">
+                      <ul class="combobox-option">
+                        <li class="ac--active">
+                          <button type="button">전체</button>
+                        </li>
+                        <li><button type="button">AAA</button></li>
+                        <li><button type="button">AA+</button></li>
+                        <li><button type="button">AA</button></li>
+                        <li><button type="button">AA-</button></li>
+                        <li><button type="button">A+</button></li>
+                        <li><button type="button">A</button></li>
+                        <li><button type="button">A-</button></li>
+                        <li><button type="button">BBB+</button></li>
+                        <li><button type="button">BBB</button></li>
+                        <li><button type="button">BBB-</button></li>
+                      </ul>
                     </div>
+                  </div>
+                </div>
 
-                    <div class="searchbox-item">
-                      <span class="searchbox-label">기준일자</span>
-                      <div class="combobox-root ac--focus">
-                        <button type="button" class="combobox-btn">2024</button>
-                        <div class="combobox-dropdown">
-                          <ul class="combobox-option">
-                            <li class="ac--active">
-                              <button type="button">전체</button>
-                            </li>
-                            <li><button type="button">결산</button></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                <div class="searchbox-btns">
+                  <button type="button" class="btn-contained">조회</button>
+                  <button type="button" class="btn-comm">
+                    <i class="icon-comm i--refresh"></i>
+                    <span class="blind">초기화</span>
+                  </button>
+                </div>
+              </div>
+              <!-- //searchbox-root -->
 
-                    <div class="searchbox-item">
-                      <span class="searchbox-label">표시기간</span>
-                      <div class="combobox-root ac--focus">
-                        <button type="button" class="combobox-btn">3기</button>
-                        <div class="combobox-dropdown">
-                          <ul class="combobox-option">
-                            <li class="ac--active">
-                              <button type="button">전체</button>
-                            </li>
-                            <li><button type="button">결산</button></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+              <div class="datagrid-container">
+                <div class="table-header">
+                  <div class="count font-h3">전체<em>20</em>건</div>
 
-                    <div class="searchbox-item">
-                      <div class="searchbox-label">
-                        <span class="searchbox-label">전년동기여부</span>
-                        <div class="tooltip-root ac-hover">
-                          <button type="button" class="btn-icon">
-                            <i class="icon-comm i--tooltip"></i>
-                            <span class="blind">툴팁보기</span>
-                          </button>
-                          <div class="tooltip-popper">
-                            <div class="tooltip-box">
-                              <div class="tit"><i class="icon-comm i--tooltip"></i>제목</div>
-                              <p>설명글</p>
+                  <div class="utils">
+                    <button type="button" class="btn-comm">엑셀 다운로드</button>
+                  </div>
+                </div>
+
+                <div class="table-wrap">
+                  <table class="table-datagrid">
+                    <colgroup>
+                      <col style="width: 60px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th rowspan="2">번호</th>
+                        <th rowspan="2">관리기업명</th>
+                        <th rowspan="2">사업자등록번호</th>
+                        <th rowspan="2">대표자</th>
+                        <th colspan="2">
+                          <div class="th-cont">
+                            <span>EWS 등급</span>
+                            <div class="tooltip-root ac-hover">
+                              <button type="button" class="btn-icon">
+                                <i class="icon-comm i--tooltip"></i>
+                                <span class="blind">툴팁보기</span>
+                              </button>
+                              <div class="tooltip-popper">
+                                <div class="tooltip-box">
+                                  <div class="tit"><i class="icon-comm i--tooltip"></i>EWS 등급</div>
+                                  <p>
+                                    EWS 등급은 Early Warning System(조기경보시스템)의 약자로, 기업의 재무 · 거래 · 신용
+                                    지표를 종합해 위험 수준을 단계별로 나타내는 지표입니다
+                                  </p>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="radiocheck-root">
-                        <label class="radiocheck-label">
-                          <input type="radio" name="radiogroup2" checked />
-                          <span>여</span>
-                        </label>
-                        <label class="radiocheck-label">
-                          <input type="radio" name="radiogroup2" />
-                          <span>부</span>
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="searchbox-btns">
-                      <button type="button" class="btn-contained">검색</button>
-                      <button type="button" class="btn-comm">
-                        <i class="icon-comm i--refresh"></i>
-                        <span class="blind">초기화</span>
-                      </button>
-                    </div>
-                  </div>
-                  <!-- //searchbox-root -->
-
-                  <div class="table-header">
-                    <div class="utils">
-                      <button type="button" class="btn-comm">엑셀 다운로드</button>
-                    </div>
-                  </div>
-
-                  <div class="table-wrap">
-                    <table class="table-datatree">
-                      <thead>
-                        <tr>
-                          <th style="width: 30%"><span class="tit">재무상태표</span></th>
-                          <th><span class="tit">2024년</span></th>
-                          <th><span class="tit">2023년</span></th>
-                          <th><span class="tit">2022년</span></th>
-                          <th><span class="tit">2021년</span></th>
-                          <th><span class="tit">2020년</span></th>
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        <tr class="line-lv2">
-                          <td>
-                            <div class="tree-item">
-                              <em>자산총계 (I+Ⅱ)</em>
-                              <button type="button" class="btn-icon">
-                                <i class="icon-comm i--minus"></i>
-                                <span class="blind">닫기</span>
-                              </button>
-                            </div>
-                          </td>
-                          <td class="al--right">5,621,834</td>
-                          <td class="al--right">19,175,407</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">0</td>
-                        </tr>
-                        <tr class="line-lv3">
-                          <td>
-                            <div class="tree-item">
-                              <span>재고자산</span>
-                              <button type="button" class="btn-icon">
-                                <i class="icon-comm i--plus"></i>
-                                <span class="blind">닫기</span>
-                              </button>
-                            </div>
-                          </td>
-                          <td class="al--right">5,621,834</td>
-                          <td class="al--right">19,175,407</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">0</td>
-                        </tr>
-                        <tr class="line-lv4">
-                          <td>
-                            <div class="tree-item">
-                              <span>현금 및 현금 등가물</span>
-                              <button type="button" class="btn-icon">
-                                <i class="icon-comm i--minus"></i>
-                                <span class="blind">닫기</span>
-                              </button>
-                            </div>
-                          </td>
-                          <td class="al--right">5,621,834</td>
-                          <td class="al--right">19,175,407</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">0</td>
-                        </tr>
-                        <tr class="line-lv4">
-                          <td>
-                            <div class="tree-item">
-                              <span>매출채권(미수금포함)</span>
-                              <button type="button" class="btn-icon">
-                                <i class="icon-comm i--minus"></i>
-                                <span class="blind">닫기</span>
-                              </button>
-                            </div>
-                          </td>
-                          <td class="al--right">5,621,834</td>
-                          <td class="al--right">19,175,407</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">0</td>
-                        </tr>
-                      </tbody>
-
-                      <tbody>
-                        <tr class="line-lv2">
-                          <td>
-                            <div class="tree-item">
-                              <span>부채와 자본총계</span>
-                              <button type="button" class="btn-icon">
-                                <i class="icon-comm i--minus"></i>
-                                <span class="blind">닫기</span>
-                              </button>
-                            </div>
-                          </td>
-                          <td class="al--right">5,621,834</td>
-                          <td class="al--right">19,175,407</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">0</td>
-                        </tr>
-                        <tr class="line-lv3">
-                          <td>
-                            <div class="tree-item">
-                              <span>재고자산</span>
-                              <button type="button" class="btn-icon">
-                                <i class="icon-comm i--plus"></i>
-                                <span class="blind">열기</span>
-                              </button>
-                            </div>
-                          </td>
-                          <td class="al--right">5,621,834</td>
-                          <td class="al--right">19,175,407</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">0</td>
-                        </tr>
-                        <tr class="line-lv3">
-                          <td>
-                            <div class="tree-item">
-                              <span>현금 및 현금 등가물</span>
-                              <button type="button" class="btn-icon">
-                                <i class="icon-comm i--plus"></i>
-                                <span class="blind">열기</span>
-                              </button>
-                            </div>
-                          </td>
-                          <td class="al--right">5,621,834</td>
-                          <td class="al--right">19,175,407</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">0</td>
-                        </tr>
-                        <tr class="line-lv3">
-                          <td>
-                            <div class="tree-item">
-                              <span>매출채권(미수금포함)</span>
-                              <button type="button" class="btn-icon">
-                                <i class="icon-comm i--plus"></i>
-                                <span class="blind">열기</span>
-                              </button>
-                            </div>
-                          </td>
-                          <td class="al--right">5,621,834</td>
-                          <td class="al--right">19,175,407</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">44,366,866</td>
-                          <td class="al--right">0</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <!-- // table-wrap -->
+                        </th>
+                        <th rowspan="2">EWS 등급 변동일자</th>
+                        <th rowspan="2">EWS 등급변동</th>
+                      </tr>
+                      <tr>
+                        <th>이전 평가등급</th>
+                        <th>현재 평가등급</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>-</td>
+                        <td>
+                          <div class="td-grade">
+                            <span>2025-02-01</span>
+                            <span class="grade-label g--normal">정상</span>
+                          </div>
+                        </td>
+                        <td>2025-02-01</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동, 김영웅</td>
+                        <td>
+                          <div class="td-grade">
+                            <span>2025-02-01</span>
+                            <span class="grade-label g--defer">유보</span>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="td-grade">
+                            <span>2025-02-01</span>
+                            <span class="grade-label g--observe">관찰</span>
+                          </div>
+                        </td>
+                        <td>2025-02-01</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>2025-02-01</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>삼성전자</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>-</td>
+                        <td>
+                          <div class="td-grade">
+                            <span>2025-02-01</span>
+                            <span class="grade-label g--normal">정상</span>
+                          </div>
+                        </td>
+                        <td>2025-02-01</td>
+                        <td>
+                          <span class="grade-sort"><i class="icon-comm i--rise c--error"></i>상승</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>바이오리서치에이아이</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>
+                          <div class="td-grade">
+                            <span>2025-02-01</span>
+                            <span class="grade-label g--normal">정상</span>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="td-grade">
+                            <span>2025-02-01</span>
+                            <span class="grade-label g--warn">경고</span>
+                          </div>
+                        </td>
+                        <td>2025-02-01</td>
+                        <td>
+                          <span class="grade-sort"><i class="icon-comm i--drop c--primary"></i>하락</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>바이오리서치에이아이</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>2025-02-01</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>바이오리서치에이아이</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>2025-02-01</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>바이오리서치에이아이</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>2025-02-01</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>바이오리서치에이아이</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>2025-02-01</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>바이오리서치에이아이</td>
+                        <td>370-88-12345</td>
+                        <td>홍길동</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>2025-02-01</td>
+                        <td>-</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <!-- // tabmenu-content -->
+
+                <div class="pagenation-root">
+                  <button type="button" class="pagenation-btn" disabled>
+                    <i class="icon-comm i--first"></i>
+                    <span class="blind">First Page</span>
+                  </button>
+                  <button type="button" class="pagenation-btn" disabled>
+                    <i class="icon-comm i--prev"></i>
+                    <span class="blind">Prev Page</span>
+                  </button>
+                  <button type="button" class="pagenation-btn ac--active">
+                    <span>1</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>2</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>3</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>4</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>5</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>6</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>7</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>8</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>9</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>10</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <i class="icon-comm i--next"></i>
+                    <span class="blind">Next Page</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <i class="icon-comm i--last"></i>
+                    <span class="blind">Last Page</span>
+                  </button>
+                </div>
               </div>
             </div>
           </main>
@@ -754,6 +766,6 @@
       <!-- console-root -->
     </div>
 
-    <script src="../../js/custom-v2.js"></script>
+    <script src="../js/custom-v2.js"></script>
   </body>
 </html>
