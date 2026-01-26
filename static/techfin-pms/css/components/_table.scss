@@ -472,6 +472,11 @@
   }
 }
 
+.panel-cont .table-empty {
+  flex-grow: 1;
+  padding: 60px 0;
+}
+
 .table-empty {
   border-bottom: 1px solid var(--c-border2);
   padding: 160px 0;

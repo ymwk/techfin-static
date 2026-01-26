@@ -2926,6 +2926,11 @@ button.swiper-pagination-bullet {
   background-image: url(../image/icon/ic_empty_check.svg);
 }
 
+.i--empty-report {
+  width: 80px;
+  background-image: url(../image/icon/ic_empty_report.svg);
+}
+
 .combobox-root {
   z-index: 10;
   position: relative;
@@ -4128,6 +4133,11 @@ button.swiper-pagination-bullet {
 }
 .datagrid-list .table-empty {
   padding: 45px 0;
+}
+
+.panel-cont .table-empty {
+  flex-grow: 1;
+  padding: 60px 0;
 }
 
 .table-empty {
@@ -7344,6 +7354,75 @@ td .msg-list {
 }
 .grade-list .rating {
   min-width: 35px;
+}
+
+.screen-swiper-wrapper {
+  --h: 320px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 120px;
+  font-size: 14px;
+  color: var(--c-gray2);
+  text-align: center;
+  overflow: hidden;
+}
+.screen-swiper-wrapper .screen-swiper {
+  height: var(--h);
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.0588235294);
+  border-radius: 12px;
+  overflow: visible;
+  background: url(../image/img/bg_guide.png) no-repeat center center/cover;
+}
+.screen-swiper-wrapper li {
+  position: relative;
+  padding-top: var(--h);
+}
+.screen-swiper-wrapper .screen {
+  position: absolute;
+  inset: 0 0 auto 0;
+  width: 100%;
+  height: var(--h);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.screen-swiper-wrapper .screen img {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.screen-swiper-wrapper .desc {
+  position: absolute;
+  inset: 100% 0 auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 30px;
+}
+.screen-swiper-wrapper .swiper-pagination {
+  bottom: 0;
+}
+.screen-swiper-wrapper .swiper-pagination-bullet {
+  background-color: #d4d4d9;
+  opacity: 1;
+  border-radius: 8px;
+  transition: width 0.2s;
+}
+.screen-swiper-wrapper .swiper-pagination-bullet-active {
+  width: 24px;
+  background-color: #4f4f55;
+}
+
+.dashboard-empty {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #8b8b8f;
 }
 
 .landing-root {

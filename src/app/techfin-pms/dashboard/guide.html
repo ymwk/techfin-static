@@ -15,44 +15,50 @@
           <span class="blind">Close</span>
         </button>
         <div class="modal-header">
-          <h2 class="font-h3">기업정보</h2>
+          <h2 class="font-h3">기업모니터링 시작가이드</h2>
         </div>
 
         <div class="modal-contents">
-          <div class="table-wrap">
-            <table class="table-rows">
-              <tbody>
-                <tr>
-                  <th>기업명</th>
-                  <td>테크핀비즈온</td>
-                  <th>개업일</th>
-                  <td>2011-01-10</td>
-                </tr>
-                <tr>
-                  <th>사업자등록번호</th>
-                  <td>123-45-13456</td>
-                  <th>대표자명</th>
-                  <td>김테크</td>
-                </tr>
-                <tr>
-                  <th>사업장소재지</th>
-                  <td>부산광역시 강서구 녹산산단382로 14번가길</td>
-                  <th>법인등록번호</th>
-                  <td>110111-4517771</td>
-                </tr>
-                <tr>
-                  <th>업태</th>
-                  <td colspan="3">서비스/서비스/서비스/서비스 제조업/건설업/도소매/소매</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="screen-swiper-wrapper">
+            <div class="screen-swiper swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="screen">
+                    <img src="/static/techfin-pms/image/img/img_guide_01.png" alt="기업조회 화면" />
+                  </div>
+                  <div class="desc">
+                    <p class="font-h3">기업조회 및 관리기업으로 등록 후 서비스를 시작하세요</p>
+                    <p>관리기업 등록을 하면, 등급변동 현황 및 런웨이 현황정보를 한 눈에 확인할 수 있습니다.</p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="screen">
+                    <img src="/static/techfin-pms/image/img/img_guide_02.png" alt="조회 안내 팝업 화면" />
+                  </div>
+                  <div class="desc">
+                    <p class="font-h3">기업조회 및 관리기업으로 등록 후 서비스를 시작하세요</p>
+                    <p>관리기업 등록을 하면, 등급변동 현황 및 런웨이 현황정보를 한 눈에 확인할 수 있습니다.</p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="screen">
+                    <img src="/static/techfin-pms/image/img/img_guide_03.png" alt="대시보드 화면" />
+                  </div>
+                  <div class="desc">
+                    <p class="font-h3">기업조회 및 관리기업으로 등록 후 서비스를 시작하세요</p>
+                    <p>관리기업 등록을 하면, 등급변동 현황 및 런웨이 현황정보를 한 눈에 확인할 수 있습니다.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
         <!-- //modal-contents -->
 
         <div class="modal-action">
           <div class="modal-action-btns">
-            <button type="button" class="btn-comm">
+            <button type="button" class="btn-contained">
               <span>닫기</span>
             </button>
           </div>
@@ -60,5 +66,20 @@
       </div>
     </div>
     <!-- //modal-root -->
+    <script src="../js/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const screenSwiper = new Swiper('.screen-swiper.swiper', {
+        slidesPerView: 1,
+        speed: 500,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.screen-swiper-wrapper .swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
