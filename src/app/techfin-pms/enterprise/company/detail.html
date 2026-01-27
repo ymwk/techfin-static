@@ -613,12 +613,12 @@
                       <!-- // panel-title -->
 
                       <div class="panel-cont">
-                        <div class="grade">
-                          <em class="font-h1">21%</em>
-                          <span class="grade-label g--warn">적정 이상</span>
+                        <div class="chart">
+                          <div class="dashboard-empty">
+                            <i class="icon-comm i--empty-report"></i>
+                            <p>표시할 데이터가 없습니다.</p>
+                          </div>
                         </div>
-                        <div class="chart" style="background: #f4f4f4"></div>
-                        <div class="date"><span>데이터 기준월 : 2025-10</span></div>
                       </div>
                       <!-- // panel-cont -->
                     </div>
@@ -970,7 +970,7 @@
                     <!-- 손익 -->
                     <div class="dashboard-panel grid-3">
                       <div class="panel-title">
-                        <span class="font-h3">재무</span>
+                        <span class="font-h3">손익</span>
                         <ul class="chart-legend">
                           <li><span class="bullet" style="background: #f26b7a"></span>매출액</li>
                           <li><span class="bullet" style="background: #7d98ff"></span>순이익</li>
@@ -978,7 +978,12 @@
                         </ul>
                       </div>
                       <div class="panel-cont">
-                        <div class="chart" style="background: #f4f4f4"></div>
+                        <div class="chart">
+                          <div class="dashboard-empty">
+                            <i class="icon-comm i--empty-report"></i>
+                            <p>표시할 데이터가 없습니다.</p>
+                          </div>
+                        </div>
                         <div>
                           <div class="table-header">
                             <div class="unit">(단위: 원)</div>
@@ -1092,6 +1097,21 @@
                         </span>
                       </div>
                       <div class="panel-cont">
+                        <ul class="summary-list">
+                          <li>
+                            <span class="tit">평균 종업원 수</span>
+                            <span class="value">-</span>
+                          </li>
+                          <li>
+                            <span class="tit">최근 12개월 종업원 증가율</span>
+                            <span class="value">-</span>
+                          </li>
+                          <li>
+                            <span class="tit">최근 12개월 종업원 퇴사율</span>
+                            <span class="value">-</span>
+                          </li>
+                        </ul>
+
                         <div>
                           <div class="table-header">
                             <ul class="chart-legend">
@@ -1175,6 +1195,66 @@
                               </tbody>
                             </table>
                           </div>
+                        </div>
+                      </div>
+                      <!-- // panel-cont -->
+                    </div>
+                    <!-- // dashboard-panel -->
+
+                    <!-- 종업원 현황 nodata -->
+                    <div class="dashboard-panel grid-6">
+                      <div class="panel-title">
+                        <span class="font-h3"
+                          >종업원 현황
+                          <small class="unit">최근 12개월</small>
+                        </span>
+                      </div>
+                      <div class="panel-cont">
+                        <ul class="summary-list">
+                          <li>
+                            <span class="tit">평균 종업원 수</span>
+                            <span class="value">-</span>
+                          </li>
+                          <li>
+                            <span class="tit">최근 12개월 종업원 증가율</span>
+                            <span class="value">-</span>
+                          </li>
+                          <li>
+                            <span class="tit">최근 12개월 종업원 퇴사율</span>
+                            <span class="value">-</span>
+                          </li>
+                        </ul>
+
+                        <div>
+                          <div class="table-header">
+                            <ul class="chart-legend">
+                              <li><span class="bullet" style="background: #7d98ff"></span>입사자 수</li>
+                              <li><span class="bullet" style="background: #b1b1b4"></span>퇴사자 수</li>
+                              <li><span class="bullet" style="background: #f2c14f"></span>전체 인원수</li>
+                            </ul>
+                          </div>
+
+                          <div class="chart" style="height: 320px">
+                            <div class="dashboard-empty">
+                              <i class="icon-comm i--empty-report"></i>
+                              <p>표시할 데이터가 없습니다.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="table-header">
+                            <div class="unit">(단위: 명)</div>
+                          </div>
+                          <div class="table-wrap">
+                            <table class="table-datagrid table-price">
+                              <thead>
+                                <tr>
+                                  <th class="th-empty">표시할 데이터가 없습니다.</th>
+                                </tr>
+                              </thead>
+                            </table>
+                          </div>
+                          <div class="table-empty">표시할 데이터가 없습니다.</div>
                         </div>
                       </div>
                       <!-- // panel-cont -->
@@ -1325,6 +1405,28 @@
                           <em>1,337,000,000<small>원</small></em>
                         </li>
                       </ul>
+                    </div>
+                  </div>
+
+                  <div class="desc-info mt20">
+                    <i class="icon-comm i--tooltip"></i>
+                    <em>런웨이 현황</em>
+                    <p>
+                      관리기업의 보유 현금과 지출 흐름을 기준으로 예상 가능한 자금 소진 시점을 한눈에 확인할 수
+                      있습니다.
+                    </p>
+                  </div>
+
+                  <!-- 런웨이현황 nodata -->
+                  <div class="mt30"></div>
+                  <div class="runway-container">
+                    <div class="runway-cont">
+                      <h4 class="font-h3 title">런웨이 현황</h4>
+
+                      <div class="dashboard-empty">
+                        <i class="icon-comm i--empty-report"></i>
+                        <p>표시할 데이터가 없습니다.</p>
+                      </div>
                     </div>
                   </div>
 

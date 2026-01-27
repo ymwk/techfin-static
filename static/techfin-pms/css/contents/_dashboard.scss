@@ -1055,6 +1055,9 @@
 }
 
 .runway-container {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
   padding: 32px;
   border-radius: 8px;
   border: 1px solid #e8e8eb;
