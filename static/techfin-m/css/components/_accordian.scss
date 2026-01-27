@@ -10,7 +10,10 @@
 
 .TMAccordian-title {
   position: relative;
-  height: 183px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 183px;
   padding: 22px 24px;
   border-radius: 12px;
   font-size: 17px;
@@ -39,9 +42,7 @@
 }
 
 .TMAccordian-btn {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
+  margin-top: auto;
   width: 20px;
   height: 20px;
   border-radius: 50%;

@@ -2,8 +2,8 @@
   position: relative;
 
   .sub-section {
-    padding-top: 80px;
-    margin-top: -24px;
+    padding-top: 110px;
+    margin-top: -54px;
   }
 }
 
@@ -46,7 +46,9 @@
   background-color: #fff;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s, box-shadow 0.3s;
+  transition:
+    max-height 0.3s,
+    box-shadow 0.3s;
 
   &.show {
     max-height: 500px;
@@ -72,8 +74,13 @@
   }
 }
 
+// .TMStickyNav-sticky {
+//   margin-bottom: -56px
+// }
+
 .TMStickyNav-tab-cont {
   display: none;
+  // padding-top: 41px;
 
   &.show {
     display: block;
