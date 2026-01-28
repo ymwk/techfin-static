@@ -559,19 +559,6 @@
 
     <!-- component js -->
     <script src="/src/app/techfin-m/js/custom.js"></script>
-    <script>
-      //stickyNav
-      const stickyNav = document.querySelector('.TMStickyNav-list');
-      const stickyBtn = document.querySelector('.TMStickyNav-btn');
-
-      stickyBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        stickyNav.classList.toggle('show');
-      });
-
-      document.addEventListener('click', (e) => {
-        e.target !== stickyNav ? stickyNav.classList.remove('show') : false;
-      });
-    </script>
+    
   </body>
 </html>

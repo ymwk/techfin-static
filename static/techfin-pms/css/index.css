@@ -3525,6 +3525,15 @@ button.swiper-pagination-bullet {
   transform: translateY(-50%);
   color: var(--c-gray1);
 }
+.datepicker-month-prev .btn-icon,
+.datepicker-month-next .btn-icon {
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+.datepicker-month-prev .btn-icon:hover,
+.datepicker-month-next .btn-icon:hover {
+  background-color: #F1F1F3;
+}
 
 .datepicker-month-prev {
   left: 0;

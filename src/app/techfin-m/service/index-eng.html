@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -151,7 +151,7 @@
         <!-- //container-sub -->
 
         <div class="container-wide">
-          <div id="tabStart" class="blind"></div>
+          <div id="tabStart" class="TMStickyNav-start"></div>
 
           <div class="TMStickyNav-root">
             <div class="TMStickyNav-sticky wide-inner">
@@ -732,9 +732,15 @@
                 <ul class="service-offer-list">
                   <li class="bg-offer-06">Corporate Informationt<small>Overview of corporate information</small></li>
                   <li class="bg-offer-02">Credit Information<small>Corporate credit information</small></li>
-                  <li class="bg-offer-07">Key Personnel Information<small>Information related to key directors and employee</small></li>
-                  <li class="bg-offer-08">Industry Information<small>Relevant industry trends and information</small></li>
-                  <li class="bg-offer-09">Management Information<small>Information on business performance and management status</small></li>
+                  <li class="bg-offer-07">
+                    Key Personnel Information<small>Information related to key directors and employee</small>
+                  </li>
+                  <li class="bg-offer-08">
+                    Industry Information<small>Relevant industry trends and information</small>
+                  </li>
+                  <li class="bg-offer-09">
+                    Management Information<small>Information on business performance and management status</small>
+                  </li>
                 </ul>
               </section>
 
@@ -780,7 +786,10 @@
               <div class="wide-inner">
                 <div class="service-banner tab-02">
                   <h2 class="tit">Certificate Issuance Service</h2>
-                  <p>We provide the issuance of credit rating certificates from Techfin ratings to clients utilizing our credit evaluation services.</p>
+                  <p>
+                    We provide the issuance of credit rating certificates from Techfin ratings to clients utilizing our
+                    credit evaluation services.
+                  </p>
                 </div>
               </div>
 
@@ -788,9 +797,7 @@
                 <div class="sub-headline-wrap t--sub">
                   <h3 class="TMTitle-headline">Key Features</h3>
 
-                  <p class="sub-headline-desc">
-                    We deliver integrated key data for business analysis.
-                  </p>
+                  <p class="sub-headline-desc">We deliver integrated key data for business analysis.</p>
                 </div>
                 <!-- //sub-headline-wrap -->
 
@@ -800,7 +807,8 @@
                     <ul class="list">
                       <li>
                         <p class="TMTitle-h5">
-                          A private sector service designed to aid in the public promotion of the company's credit rating and enhance its brand value
+                          A private sector service designed to aid in the public promotion of the company's credit
+                          rating and enhance its brand value
                         </p>
                       </li>
                     </ul>
@@ -809,7 +817,9 @@
                     <h3 class="TMTitle-h3 ic-service-07 c--active">Eligible Companies</h3>
                     <ul class="list">
                       <li>
-                        <p class="TMTitle-h5">Companies that have been credit evaluated by Techfin ratings within the current year</p>
+                        <p class="TMTitle-h5">
+                          Companies that have been credit evaluated by Techfin ratings within the current year
+                        </p>
                         <p>only applications with a credit rating of BB or higher are eligible</p>
                       </li>
                     </ul>
@@ -818,7 +828,9 @@
                     <h3 class="TMTitle-h3 ic-service-01 c--active">Areas of Activity</h3>
                     <ul class="list">
                       <li>
-                        <p class="TMTitle-h5">Promotional assets for the company, including investor relations (IR) materials</p>
+                        <p class="TMTitle-h5">
+                          Promotional assets for the company, including investor relations (IR) materials
+                        </p>
                       </li>
                     </ul>
                   </li>
@@ -879,48 +891,6 @@
 
     <!-- component js -->
     <script src="/src/app/techfin-m/js/custom.js"></script>
-    <script>
-      //stickyNav
-      const stickyNav = document.querySelector('.TMStickyNav-list');
-      const stickyBtn = document.querySelector('.TMStickyNav-btn');
-
-      stickyBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        stickyNav.classList.toggle('show');
-      });
-
-      document.addEventListener('click', (e) => {
-        e.target !== stickyNav ? stickyNav.classList.remove('show') : false;
-      });
-
-      const stickyTabBtn = stickyNav.querySelectorAll('.TMStickyNav-tab-btn');
-      const stickyTabCont = document.querySelectorAll('.TMStickyNav-tab-cont');
-      let targetY = window.pageYOffset + document.querySelector('.TMStickyNav-root').getBoundingClientRect().top;
-
-      stickyTabBtn.forEach((btn) => {
-        const target = document.querySelector(btn.getAttribute('data-target'));
-
-        btn.addEventListener('click', function () {
-          stickyTabCont.forEach((item) => {
-            item.classList.remove('show');
-          });
-          target.classList.add('show');
-
-          // window.scrollTo({
-          //   top: targetY,
-          // });
-
-          // console.log(targetY);
-
-          stickyTabBtn.forEach((sbtn) => {
-            sbtn.classList.remove('on');
-          });
-          btn.classList.add('on');
-
-          stickyBtn.querySelector('.label').textContent = btn.textContent;
-        });
-      });
-    </script>
 
     <!-- swiper -->
     <script src="/static/techfin-m/vendors/swiper-bundle.min.js"></script>

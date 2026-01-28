@@ -103,4 +103,51 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  //stickyNav
+  const stickyNav = document.querySelector('.TMStickyNav-list');
+  const stickyBtn = document.querySelector('.TMStickyNav-btn');
+  const stickyTabBtn = stickyNav.querySelectorAll('.TMStickyNav-tab-btn');
+  const stickyTabCont = document.querySelectorAll('.TMStickyNav-tab-cont');
+  const stickyTarget = document.querySelector('.TMStickyNav-start');
+
+  if (stickyBtn) {
+    stickyBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      stickyNav.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+      e.target !== stickyNav ? stickyNav.classList.remove('show') : false;
+    });
+
+    if (stickyTabBtn) {
+      stickyTabBtn.forEach((btn) => {
+        const target = document.querySelector(btn.getAttribute('data-target'));
+
+        btn.addEventListener('click', function () {
+          stickyTabCont.forEach((item) => {
+            item.classList.remove('show');
+          });
+          target.classList.add('show');
+
+          stickyTabBtn.forEach((sbtn) => {
+            sbtn.classList.remove('on');
+          });
+          btn.classList.add('on');
+
+          stickyBtn.querySelector('.label').textContent = btn.textContent;
+
+          // Sticky Button Position
+          const rect = target.getBoundingClientRect();
+
+          if (rect.top < 0) {
+            stickyTarget.classList.add('open');
+          } else {
+            stickyTarget.classList.remove('open');
+          }
+        });
+      });
+    }
+  }
 });

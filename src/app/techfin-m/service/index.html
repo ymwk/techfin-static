@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -152,7 +152,7 @@
         <!-- //container-sub -->
 
         <div class="container-wide">
-          <div id="tabStart" class="blind"></div>
+          <div id="tabStart" class="TMStickyNav-start"></div>
 
           <div class="TMStickyNav-root">
             <div class="TMStickyNav-sticky wide-inner">
@@ -869,48 +869,6 @@
 
     <!-- component js -->
     <script src="/src/app/techfin-m/js/custom.js"></script>
-    <script>
-      //stickyNav
-      const stickyNav = document.querySelector('.TMStickyNav-list');
-      const stickyBtn = document.querySelector('.TMStickyNav-btn');
-
-      stickyBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        stickyNav.classList.toggle('show');
-      });
-
-      document.addEventListener('click', (e) => {
-        e.target !== stickyNav ? stickyNav.classList.remove('show') : false;
-      });
-
-      const stickyTabBtn = stickyNav.querySelectorAll('.TMStickyNav-tab-btn');
-      const stickyTabCont = document.querySelectorAll('.TMStickyNav-tab-cont');
-      let targetY = window.pageYOffset + document.querySelector('.TMStickyNav-root').getBoundingClientRect().top;
-
-      stickyTabBtn.forEach((btn) => {
-        const target = document.querySelector(btn.getAttribute('data-target'));
-
-        btn.addEventListener('click', function () {
-          stickyTabCont.forEach((item) => {
-            item.classList.remove('show');
-          });
-          target.classList.add('show');
-
-          // window.scrollTo({
-          //   top: targetY,
-          // });
-
-          // console.log(targetY);
-
-          stickyTabBtn.forEach((sbtn) => {
-            sbtn.classList.remove('on');
-          });
-          btn.classList.add('on');
-
-          stickyBtn.querySelector('.label').textContent = btn.textContent;
-        });
-      });
-    </script>
 
     <!-- swiper -->
     <script src="/static/techfin-m/vendors/swiper-bundle.min.js"></script>

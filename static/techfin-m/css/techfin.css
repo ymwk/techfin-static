@@ -2156,6 +2156,7 @@ table .TMCheck-root {
   font-size: 15px;
   font-weight: 700;
   text-align: left;
+  color: var(--fc-default);
 }
 
 .TMStickyNav-list {
@@ -2197,6 +2198,19 @@ table .TMCheck-root {
 }
 .TMStickyNav-tab-cont.show {
   display: block;
+}
+
+.TMStickyNav-start {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+}
+.TMStickyNav-start.open {
+  top: -56px;
+}
+
+.container-wide {
+  position: relative;
 }
 
 .TMAccordian-root {

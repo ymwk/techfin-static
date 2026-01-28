@@ -94,6 +94,14 @@
   top: 50%;
   transform: translateY(-50%);
   color: var(--c-gray1);
+  
+  .btn-icon {
+    border-radius: 10px;
+    transition: background-color .2s;
+    &:hover {
+      background-color: #F1F1F3;
+    }
+  }
 }
 .datepicker-month-prev {
   left: 0;

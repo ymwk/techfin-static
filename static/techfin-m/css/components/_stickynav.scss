@@ -35,6 +35,7 @@
   font-size: 15px;
   font-weight: 700;
   text-align: left;
+  color: var(--fc-default);
 }
 
 .TMStickyNav-list {
@@ -75,14 +76,27 @@
 }
 
 // .TMStickyNav-sticky {
-//   margin-bottom: -56px
+//   margin-bottom: 60px
 // }
 
 .TMStickyNav-tab-cont {
   display: none;
-  // padding-top: 41px;
 
   &.show {
     display: block;
   }
+}
+
+.TMStickyNav-start {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+
+  &.open {
+    top: -56px;
+  }
+}
+
+.container-wide {
+  position: relative;
 }

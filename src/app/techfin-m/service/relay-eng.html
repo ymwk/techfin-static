@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -134,8 +134,7 @@
           <div class="sub-headline-wrap hr-talent-bg">
             <div class="sub-headline">
               Becoming a Reliable <br />
-              Partner in SMEs’ Financial
-              Activities
+              Partner in SMEs’ Financial Activities
             </div>
 
             <p class="sub-headline-desc">
@@ -152,7 +151,7 @@
         <!-- //container-sub -->
 
         <div class="container-wide">
-          <div id="tabStart" class="blind"></div>
+          <div id="tabStart" class="TMStickyNav-start"></div>
 
           <div class="TMStickyNav-root">
             <div class="TMStickyNav-sticky wide-inner">
@@ -626,7 +625,7 @@
       <!-- //container -->
 
       <div class="TMBanner-root banner-02">
-        <div class="tit">Techfin ratings is <br>a trusted partner for SMEs</div>
+        <div class="tit">Techfin ratings is <br />a trusted partner for SMEs</div>
         <div class="item">
           <em>Business Hours</em>
           <span>Weekdays 09:00~18:00</span>
@@ -670,42 +669,6 @@
 
     <!-- component js -->
     <script src="/src/app/techfin-m/js/custom.js"></script>
-    <script>
-      //stickyNav
-      const stickyNav = document.querySelector('.TMStickyNav-list');
-      const stickyBtn = document.querySelector('.TMStickyNav-btn');
-
-      stickyBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        stickyNav.classList.toggle('show');
-      });
-
-      document.addEventListener('click', (e) => {
-        e.target !== stickyNav ? stickyNav.classList.remove('show') : false;
-      });
-
-      const stickyTabBtn = stickyNav.querySelectorAll('.TMStickyNav-tab-btn');
-      const stickyTabCont = document.querySelectorAll('.TMStickyNav-tab-cont');
-      let targetY = window.pageYOffset + document.querySelector('.TMStickyNav-root').getBoundingClientRect().top;
-
-      stickyTabBtn.forEach((btn) => {
-        const target = document.querySelector(btn.getAttribute('data-target'));
-
-        btn.addEventListener('click', function () {
-          stickyTabCont.forEach((item) => {
-            item.classList.remove('show');
-          });
-          target.classList.add('show');
-
-          stickyTabBtn.forEach((sbtn) => {
-            sbtn.classList.remove('on');
-          });
-          btn.classList.add('on');
-
-          stickyBtn.querySelector('.label').textContent = btn.textContent;
-        });
-      });
-    </script>
 
     <!-- swiper -->
     <script src="/static/techfin-m/vendors/swiper-bundle.min.js"></script>
