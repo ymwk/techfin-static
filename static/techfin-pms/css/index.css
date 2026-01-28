@@ -7358,7 +7358,7 @@ td .msg-list {
 }
 .grade-label.g--lv1,
 .label-comm.g--lv1 {
-  color: #0F7D00;
+  color: #0f7d00;
   border: 1px solid rgba(15, 125, 0, 0.4);
   background-color: rgba(15, 125, 0, 0.1490196078);
 }
@@ -7370,13 +7370,13 @@ td .msg-list {
 }
 .grade-label.g--lv3,
 .label-comm.g--lv3 {
-  color: #FC5356;
+  color: #fc5356;
   border: 1px solid rgba(252, 83, 86, 0.4);
   background-color: rgba(252, 83, 86, 0.1490196078);
 }
 .grade-label.g--lv4,
 .label-comm.g--lv4 {
-  color: #FF9900;
+  color: #ff9900;
   border: 1px solid rgba(255, 153, 0, 0.4);
   background-color: rgba(255, 153, 0, 0.1490196078);
 }
@@ -7645,13 +7645,13 @@ td .msg-list {
   height: 180px;
 }
 .arch-progress-container .stop-start {
-  stop-color: #1EB98B;
+  stop-color: #fc5356;
 }
 .arch-progress-container .stop-mid {
-  stop-color: #FEBB2B;
+  stop-color: #febb2b;
 }
 .arch-progress-container .stop-end {
-  stop-color: #FC5356;
+  stop-color: #1eb98b;
 }
 .arch-progress-container .arch-bg,
 .arch-progress-container .arch-progress {

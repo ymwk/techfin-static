@@ -998,8 +998,8 @@
   font-weight: 500;
 
   &.g--normal {
-    border: 1px solid #1EB98B66;
-    background-color: #1EB98B26;
+    border: 1px solid #1eb98b66;
+    background-color: #1eb98b26;
   }
   &.g--defer {
     border: 1px solid #f1a40066;
@@ -1021,31 +1021,31 @@
     border: 1px solid #9da3aa66;
     background-color: #9da3aa26;
   }
-  
+
   &.g--lv1 {
-    color: #0F7D00;
-    border: 1px solid #0F7D0066;
-    background-color: #0F7D0026;
+    color: #0f7d00;
+    border: 1px solid #0f7d0066;
+    background-color: #0f7d0026;
   }
   &.g--lv2 {
     color: #3d58c9;
-    border: 1px solid #3D58C966;
-    background-color: #3D58C926;
+    border: 1px solid #3d58c966;
+    background-color: #3d58c926;
   }
   &.g--lv3 {
-    color: #FC5356;
-    border: 1px solid #FC535666;
-    background-color: #FC535626;
+    color: #fc5356;
+    border: 1px solid #fc535666;
+    background-color: #fc535626;
   }
   &.g--lv4 {
-    color: #FF9900;
-    border: 1px solid #FF990066;
-    background-color: #FF990026;
+    color: #ff9900;
+    border: 1px solid #ff990066;
+    background-color: #ff990026;
   }
   &.g--lv5 {
     color: #23c2b8;
-    border: 1px solid #23C2B866;
-    background-color: #23C2B826;
+    border: 1px solid #23c2b866;
+    background-color: #23c2b826;
   }
   &.g--lv6 {
     color: #999;
@@ -1342,15 +1342,15 @@
 .arch-progress-container {
   position: relative;
   height: 180px;
-  
+
   .stop-start {
-    stop-color: #1EB98B
+    stop-color: #fc5356;
   }
   .stop-mid {
-    stop-color: #FEBB2B
+    stop-color: #febb2b;
   }
   .stop-end {
-    stop-color: #FC5356
+    stop-color: #1eb98b;
   }
 
   .arch-bg,
