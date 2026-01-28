@@ -7328,23 +7328,23 @@ td .msg-list {
 }
 .grade-label.g--normal,
 .label-comm.g--normal {
-  border: 1px solid #cdeedf;
-  background-color: #eaf7f1;
+  border: 1px solid rgba(30, 185, 139, 0.4);
+  background-color: rgba(30, 185, 139, 0.1490196078);
 }
 .grade-label.g--defer,
 .label-comm.g--defer {
-  border: 1px solid #ffe9b3;
-  background-color: #fff7e0;
+  border: 1px solid rgba(241, 164, 0, 0.4);
+  background-color: rgba(241, 164, 0, 0.1490196078);
 }
 .grade-label.g--observe,
 .label-comm.g--observe {
-  border: 1px solid #ffd8c2;
-  background-color: #fff1e8;
+  border: 1px solid rgba(245, 125, 5, 0.4);
+  background-color: rgba(245, 125, 5, 0.1490196078);
 }
 .grade-label.g--warn,
 .label-comm.g--warn {
-  border: 1px solid #ffd6da;
-  background-color: #ffedee;
+  border: 1px solid rgba(238, 99, 104, 0.4);
+  background-color: rgba(238, 99, 104, 0.1490196078);
 }
 .grade-label.g--active,
 .label-comm.g--active {
@@ -7353,24 +7353,60 @@ td .msg-list {
 }
 .grade-label.g--fail,
 .label-comm.g--fail {
-  border: 1px solid #D4D4D9;
-  background-color: #F1F1F3;
+  border: 1px solid rgba(157, 163, 170, 0.4);
+  background-color: rgba(157, 163, 170, 0.1490196078);
+}
+.grade-label.g--lv1,
+.label-comm.g--lv1 {
+  color: #0F7D00;
+  border: 1px solid rgba(15, 125, 0, 0.4);
+  background-color: rgba(15, 125, 0, 0.1490196078);
+}
+.grade-label.g--lv2,
+.label-comm.g--lv2 {
+  color: #3d58c9;
+  border: 1px solid rgba(61, 88, 201, 0.4);
+  background-color: rgba(61, 88, 201, 0.1490196078);
+}
+.grade-label.g--lv3,
+.label-comm.g--lv3 {
+  color: #FC5356;
+  border: 1px solid rgba(252, 83, 86, 0.4);
+  background-color: rgba(252, 83, 86, 0.1490196078);
+}
+.grade-label.g--lv4,
+.label-comm.g--lv4 {
+  color: #FF9900;
+  border: 1px solid rgba(255, 153, 0, 0.4);
+  background-color: rgba(255, 153, 0, 0.1490196078);
+}
+.grade-label.g--lv5,
+.label-comm.g--lv5 {
+  color: #23c2b8;
+  border: 1px solid rgba(35, 194, 184, 0.4);
+  background-color: rgba(35, 194, 184, 0.1490196078);
+}
+.grade-label.g--lv6,
+.label-comm.g--lv6 {
+  color: #999;
+  border: 1px solid rgba(153, 153, 153, 0.4);
+  background-color: rgba(153, 153, 153, 0.1490196078);
 }
 
 .g--normal {
-  color: #35a785 !important;
+  color: #1eb98b !important;
 }
 
 .g--defer {
-  color: #d9a636 !important;
+  color: #f1a400 !important;
 }
 
 .g--observe {
-  color: #d96826 !important;
+  color: #f57d05 !important;
 }
 
 .g--warn {
-  color: #e14b5f !important;
+  color: #ee6368 !important;
 }
 
 .g--active {
@@ -7378,7 +7414,7 @@ td .msg-list {
 }
 
 .g--fail {
-  color: #75757A !important;
+  color: #9da3aa !important;
 }
 
 .desc-info {
@@ -7602,6 +7638,73 @@ td .msg-list {
   text-align: center;
   font-size: 14px;
   color: #8b8b8f;
+}
+
+.arch-progress-container {
+  position: relative;
+  height: 180px;
+}
+.arch-progress-container .stop-start {
+  stop-color: #1EB98B;
+}
+.arch-progress-container .stop-mid {
+  stop-color: #FEBB2B;
+}
+.arch-progress-container .stop-end {
+  stop-color: #FC5356;
+}
+.arch-progress-container .arch-bg,
+.arch-progress-container .arch-progress {
+  stroke-width: 15px;
+  stroke-linecap: round;
+  stroke-dasharray: 380 565;
+  transform-origin: 100px 100px;
+  transform: rotate(149deg);
+  fill: none;
+}
+.arch-progress-container .arch-bg {
+  stroke: #e5e5e5;
+}
+.arch-progress-container .arch-progress {
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+.arch-progress-container .arch-tip {
+  stroke: #fff;
+  stroke-width: 2px;
+  fill: none;
+  offset-path: path("M 22.8,146.4 A 90,90 0 1 1 177.2,146.4");
+  offset-distance: 0%;
+  transition: offset-distance 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+.arch-progress-container .arch-unit {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 16px;
+  transform: translateX(-50%);
+}
+.arch-progress-container .arch-unit .value {
+  font-size: 32px;
+  font-weight: 700;
+}
+.arch-progress-container .leg-start,
+.arch-progress-container .leg-end {
+  position: absolute;
+  top: 165px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.arch-progress-container .leg-start {
+  color: #f26b7a;
+  left: 15px;
+}
+.arch-progress-container .leg-end {
+  color: #4fbf9b;
+  right: 15px;
 }
 
 .landing-root {

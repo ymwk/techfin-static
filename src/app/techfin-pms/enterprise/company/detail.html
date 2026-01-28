@@ -573,7 +573,8 @@
                       <div class="panel-cont">
                         <div class="grade">
                           <em class="font-h1">21%</em>
-                          <span class="grade-label g--normal">적정 이상</span>
+                          <!-- g--lv1 ~ g--lv6 -->
+                          <span class="grade-label g--lv1">적정 이상</span>
                         </div>
                         <div class="chart" style="background: #f4f4f4"></div>
                         <div class="date"><span>데이터 기준월 : 2025-10</span></div>
@@ -641,7 +642,7 @@
                                 실시간 등급
                               </div>
                               <p>
-                                실시간 등급은 기업의 최신 신용 정보를 반영해 현재 위험 수준을 확인할 수 있는 지표입니다.
+                                실시간 등급은 기업의 최신 신용 정보를 반영해 현재 위험 수준을 확인할 수 있는 지표입니다.
                               </p>
                             </div>
                           </div>
@@ -654,7 +655,40 @@
                       <!-- // panel-title -->
 
                       <div class="panel-cont">
-                        <div class="chart" style="background: #f4f4f4"></div>
+                        <div class="chart">
+                          <div class="arch-progress-container">
+                            <svg width="200" height="200" viewBox="0 0 200 200">
+                              <defs>
+                                <linearGradient id="grad" x1="0%" y1="100%" x2="100%" y2="100%">
+                                  <stop offset="0%" class="stop-start" />
+                                  <stop offset="30%" class="stop-mid" />
+                                  <stop offset="110%" class="stop-end" />
+                                </linearGradient>
+                              </defs>
+
+                              <circle cx="100" cy="100" r="90" class="arch-bg" />
+
+                              <circle
+                                class="arch-progress"
+                                cx="100"
+                                cy="100"
+                                r="90"
+                                stroke="url(#grad)"
+                                stroke-dashoffset="380"
+                                style="transition: stroke-dashoffset 1.5s cubic-bezier(0.42, 0, 0.58, 1)"
+                              />
+
+                              <circle class="arch-tip" r="7.5" />
+                            </svg>
+
+                            <div class="arch-unit">
+                              <em class="value">AA+</em>
+                              <span class="grade-sort g--normal"><i class="icon-comm i--rise"></i>2등급</span>
+                            </div>
+                            <span class="leg-start">취약</span>
+                            <span class="leg-end">우수</span>
+                          </div>
+                        </div>
                         <div class="date"><span>데이터 기준월 : 2025-10</span></div>
                       </div>
                       <!-- // panel-cont -->
@@ -1660,5 +1694,17 @@
     </div>
 
     <script src="../../js/custom-v2.js"></script>
+
+    <script>
+      function setProgress(percent) {
+        const circle = document.querySelector('.arch-progress');
+        const tip = document.querySelector('.arch-tip');
+
+        circle.style.strokeDashoffset = 380 - (percent / 100) * 380;
+        tip.style.offsetDistance = percent + '%';
+      }
+
+      setTimeout(() => setProgress(85), 100);
+    </script>
   </body>
 </html>

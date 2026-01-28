@@ -998,49 +998,80 @@
   font-weight: 500;
 
   &.g--normal {
-    border: 1px solid #cdeedf;
-    background-color: #eaf7f1;
+    border: 1px solid #1EB98B66;
+    background-color: #1EB98B26;
   }
   &.g--defer {
-    border: 1px solid #ffe9b3;
-    background-color: #fff7e0;
+    border: 1px solid #f1a40066;
+    background-color: #f1a40026;
   }
   &.g--observe {
-    border: 1px solid #ffd8c2;
-    background-color: #fff1e8;
+    border: 1px solid #f57d0566;
+    background-color: #f57d0526;
   }
   &.g--warn {
-    border: 1px solid #ffd6da;
-    background-color: #ffedee;
+    border: 1px solid #ee636866;
+    background-color: #ee636826;
   }
   &.g--active {
     border: 1px solid #d8e0ff;
     background-color: #f0f4ff;
   }
   &.g--fail {
-    border: 1px solid #D4D4D9;
-    background-color: #F1F1F3;
+    border: 1px solid #9da3aa66;
+    background-color: #9da3aa26;
+  }
+  
+  &.g--lv1 {
+    color: #0F7D00;
+    border: 1px solid #0F7D0066;
+    background-color: #0F7D0026;
+  }
+  &.g--lv2 {
+    color: #3d58c9;
+    border: 1px solid #3D58C966;
+    background-color: #3D58C926;
+  }
+  &.g--lv3 {
+    color: #FC5356;
+    border: 1px solid #FC535666;
+    background-color: #FC535626;
+  }
+  &.g--lv4 {
+    color: #FF9900;
+    border: 1px solid #FF990066;
+    background-color: #FF990026;
+  }
+  &.g--lv5 {
+    color: #23c2b8;
+    border: 1px solid #23C2B866;
+    background-color: #23C2B826;
+  }
+  &.g--lv6 {
+    color: #999;
+    border: 1px solid #99999966;
+    background-color: #99999926;
   }
 }
 
 // 정상
 .g--normal {
-  color: #35a785 !important;
+  color: #1eb98b !important;
 }
 
 // 유보
 .g--defer {
-  color: #d9a636 !important;
+  color: #f1a400 !important;
 }
 
 // 관찰
 .g--observe {
-  color: #d96826 !important;
+  color: #f57d05 !important;
 }
 
 // 주의
 .g--warn {
-  color: #e14b5f !important;
+  color: #ee6368 !important;
 }
 
 // 주의
@@ -1049,7 +1080,7 @@
 }
 
 .g--fail {
-  color: #75757A !important;
+  color: #9da3aa !important;
 }
 
 .desc-info {
@@ -1306,4 +1337,80 @@
   text-align: center;
   font-size: 14px;
   color: #8b8b8f;
+}
+
+.arch-progress-container {
+  position: relative;
+  height: 180px;
+  
+  .stop-start {
+    stop-color: #1EB98B
+  }
+  .stop-mid {
+    stop-color: #FEBB2B
+  }
+  .stop-end {
+    stop-color: #FC5356
+  }
+
+  .arch-bg,
+  .arch-progress {
+    stroke-width: 15px;
+    stroke-linecap: round;
+    stroke-dasharray: 380 565;
+    transform-origin: 100px 100px;
+    transform: rotate(149deg);
+    fill: none;
+  }
+
+  .arch-bg {
+    stroke: #e5e5e5;
+  }
+
+  .arch-progress {
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+
+  .arch-tip {
+    stroke: #fff;
+    stroke-width: 2px;
+    fill: none;
+    offset-path: path('M 22.8,146.4 A 90,90 0 1 1 177.2,146.4');
+    offset-distance: 0%;
+    transition: offset-distance 1.5s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+
+  .arch-unit {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 16px;
+    transform: translateX(-50%);
+
+    .value {
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+
+  .leg-start,
+  .leg-end {
+    position: absolute;
+    top: 165px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .leg-start {
+    color: #f26b7a;
+    left: 15px;
+  }
+  .leg-end {
+    color: #4fbf9b;
+    right: 15px;
+  }
 }
