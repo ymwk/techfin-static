@@ -631,7 +631,23 @@
               <div class="searchbox-root">
                 <div class="searchbox-item">
                   <span class="searchbox-label">일자</span>
-                  <div class="datepicker-root ac--focus">
+                  <div class="datepicker-root"> <!-- ac--active class추가시 보임 -->                    
+                    <label class="textfield-label">
+                      <span class="label blind">날짜선택</span>
+                      <input
+                        type="text"
+                        class="textfield-form"
+                        name=""
+                        placeholder="날짜를 선택해주세요."
+                        value="2025-08-22"
+                        readonly=""
+                      />
+                      <button type="button" class="textfield-btn">
+                        <i class="icon-comm i--calendar"> </i>
+                        <span class="blind">달력 열기</span>
+                      </button>
+                    </label>
+                    <span>~</span>
                     <label class="textfield-label">
                       <span class="label blind">날짜선택</span>
                       <input
@@ -648,152 +664,290 @@
                       </button>
                     </label>
 
-                    <div class="datepicker-dropdown">
-                      <div class="datepicker-calendar">
-                        <div class="datepicker-calendar-month">
-                          <button type="button" class="btn-icon">
-                            <i class="icon-comm i--arr-lw"></i>
-                            <span class="blind">Prev</span>
-                          </button>
-                          <span>2025.08</span>
-                          <button type="button" class="btn-icon">
-                            <i class="icon-comm i--arr-rw"></i>
-                            <span class="blind">Next</span>
-                          </button>
+                    <div class="datepicker-popper">
+                      <div class="datepicker-box">
+                        <div class="datepicker-section">
+                          <div class="datepicker-cont">
+                            <div class="datepicker-month">
+                              <span>2024.12</span>
+                              <div class="datepicker-month-prev">
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--first"></i>
+                                  <span class="blind">이전해</span>
+                                </button>
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--prev"></i>
+                                  <span class="blind">이전달</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="datepicker-calendar">
+                              <div class="datepicker-week">
+                                <span class="datepicker-item">일</span>
+                                <span class="datepicker-item">월</span>
+                                <span class="datepicker-item">화</span>
+                                <span class="datepicker-item">수</span>
+                                <span class="datepicker-item">목</span>
+                                <span class="datepicker-item">금</span>
+                                <span class="datepicker-item">토</span>
+                              </div>
+                              <div class="datepicker-days">
+                                <span class="datepicker-item t--disabled">
+                                  <button type="button" class="datepicker-btn">31</button>
+                                </span>
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">1</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">2</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">3</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">4</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">5</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">6</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">7</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">8</button></span
+                                >
+                                <span class="datepicker-item">
+                                  <button type="button" class="datepicker-btn">9</button>
+                                </span>
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">10</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">11</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">12</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">13</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">14</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">15</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">16</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">17</button></span
+                                >
+                                <span class="datepicker-item t--start"
+                                  ><button type="button" class="datepicker-btn t--selected">18</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">19</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">20</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">21</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">22</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">23</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">24</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">25</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">26</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">27</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">28</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">29</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">30</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">31</button></span
+                                >
+                                <span class="datepicker-item t--disabled">
+                                  <button type="button" class="datepicker-btn">1</button>
+                                </span>
+                                <span class="datepicker-item t--disabled">
+                                  <button type="button" class="datepicker-btn">2</button>
+                                </span>
+                                <span class="datepicker-item t--disabled">
+                                  <button type="button" class="datepicker-btn">3</button>
+                                </span>
+                              </div>
+                            </div>
+                            <!-- //datepicker-calendar -->
+                          </div>
+                          <!-- //datepicker-cont -->
+
+                          <div class="datepicker-cont">
+                            <div class="datepicker-month">
+                              <span>2025.01</span>
+                              <div class="datepicker-month-next">
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--next"></i>
+                                  <span class="blind">다음달</span>
+                                </button>
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--last"></i>
+                                  <span class="blind">다음해</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="datepicker-calendar">
+                              <div class="datepicker-week">
+                                <span class="datepicker-item">일</span>
+                                <span class="datepicker-item">월</span>
+                                <span class="datepicker-item">화</span>
+                                <span class="datepicker-item">수</span>
+                                <span class="datepicker-item">목</span>
+                                <span class="datepicker-item">금</span>
+                                <span class="datepicker-item">토</span>
+                              </div>
+                              <div class="datepicker-days">
+                                <span class="datepicker-item t--disabled">
+                                  <button type="button" class="datepicker-btn">28</button>
+                                </span>
+                                <span class="datepicker-item t--disabled"
+                                  ><button type="button" class="datepicker-btn">29</button></span
+                                >
+                                <span class="datepicker-item t--disabled"
+                                  ><button type="button" class="datepicker-btn">30</button></span
+                                >
+                                <span class="datepicker-item t--disabled"
+                                  ><button type="button" class="datepicker-btn">31</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">1</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">2</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">3</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">4</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">5</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">6</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">7</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">8</button></span
+                                >
+                                <span class="datepicker-item t--end">
+                                  <button type="button" class="datepicker-btn t--selected">9</button>
+                                </span>
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">10</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">11</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">12</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">13</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">14</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">15</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">16</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">17</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">18</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">19</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">20</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">21</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">22</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">23</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">24</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">25</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">26</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">27</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">28</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">29</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">30</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">31</button></span
+                                >
+                              </div>
+                            </div>
+                            <!-- //datepicker-calendar -->
+                          </div>
+                          <!-- //datepicker-cont -->
                         </div>
-                        <div class="datepicker-calendar-week">
-                          <span class="sun">일</span>
-                          <span class="day">월</span>
-                          <span class="day">화</span>
-                          <span class="day">수</span>
-                          <span class="day">목</span>
-                          <span class="day">금</span>
-                          <span class="sat">토</span>
-                        </div>
-                        <div class="datepicker-calendar-day">
-                          <span class="empty"></span>
-                          <span class="empty"></span>
-                          <span class="empty"></span>
-                          <span class="empty"></span>
-                          <span class="empty"></span>
-                          <button type="button" class="datepicker-calendar-btn">1</button>
-                          <button type="button" class="datepicker-calendar-btn">2</button>
-                          <button type="button" class="datepicker-calendar-btn">3</button>
-                          <button type="button" class="datepicker-calendar-btn">4</button>
-                          <button type="button" class="datepicker-calendar-btn">5</button>
-                          <button type="button" class="datepicker-calendar-btn">6</button>
-                          <button type="button" class="datepicker-calendar-btn">7</button>
-                          <button type="button" class="datepicker-calendar-btn">8</button>
-                          <button type="button" class="datepicker-calendar-btn">9</button>
-                          <button type="button" class="datepicker-calendar-btn">10</button>
-                          <button type="button" class="datepicker-calendar-btn">11</button>
-                          <button type="button" class="datepicker-calendar-btn">12</button>
-                          <button type="button" class="datepicker-calendar-btn">13</button>
-                          <button type="button" class="datepicker-calendar-btn">14</button>
-                          <button type="button" class="datepicker-calendar-btn hday">15</button>
-                          <button type="button" class="datepicker-calendar-btn">16</button>
-                          <button type="button" class="datepicker-calendar-btn">17</button>
-                          <button type="button" class="datepicker-calendar-btn">18</button>
-                          <button type="button" class="datepicker-calendar-btn">19</button>
-                          <button type="button" class="datepicker-calendar-btn">20</button>
-                          <button type="button" class="datepicker-calendar-btn">21</button>
-                          <button type="button" class="datepicker-calendar-btn ac--selected">22</button>
-                          <button type="button" class="datepicker-calendar-btn">23</button>
-                          <button type="button" class="datepicker-calendar-btn">24</button>
-                          <button type="button" class="datepicker-calendar-btn">25</button>
-                          <button type="button" class="datepicker-calendar-btn">26</button>
-                          <button type="button" class="datepicker-calendar-btn">27</button>
-                          <button type="button" class="datepicker-calendar-btn">28</button>
-                          <button type="button" class="datepicker-calendar-btn">29</button>
-                          <button type="button" class="datepicker-calendar-btn">30</button>
-                          <button type="button" class="datepicker-calendar-btn">31</button>
+
+                        <div class="datepicker-action">
+                          <button type="button" class="btn-outlined">취소</button>
+                          <button type="button" class="btn-contained">적용</button>
                         </div>
                       </div>
+                      <!-- //datepicker-box -->
                     </div>
-                  </div>
-                  <!-- // datepicker-root -->
-
-                  <span>~</span>
-
-                  <div class="datepicker-root ac--focus">
-                    <label class="textfield-label">
-                      <span class="label blind">날짜선택</span>
-                      <input
-                        type="text"
-                        class="textfield-form"
-                        name=""
-                        placeholder="날짜를 선택해주세요."
-                        value="2025-08-22"
-                        readonly=""
-                      />
-                      <button type="button" class="textfield-btn">
-                        <i class="icon-comm i--calendar"> </i>
-                        <span class="blind">달력 열기</span>
-                      </button>
-                    </label>
-
-                    <div class="datepicker-dropdown">
-                      <div class="datepicker-calendar">
-                        <div class="datepicker-calendar-month">
-                          <button type="button" class="btn-icon">
-                            <i class="icon-comm i--arr-lw"></i>
-                            <span class="blind">Prev</span>
-                          </button>
-                          <span>2025.08</span>
-                          <button type="button" class="btn-icon">
-                            <i class="icon-comm i--arr-rw"></i>
-                            <span class="blind">Next</span>
-                          </button>
-                        </div>
-                        <div class="datepicker-calendar-week">
-                          <span class="sun">일</span>
-                          <span class="day">월</span>
-                          <span class="day">화</span>
-                          <span class="day">수</span>
-                          <span class="day">목</span>
-                          <span class="day">금</span>
-                          <span class="sat">토</span>
-                        </div>
-                        <div class="datepicker-calendar-day">
-                          <span class="empty"></span>
-                          <span class="empty"></span>
-                          <span class="empty"></span>
-                          <span class="empty"></span>
-                          <span class="empty"></span>
-                          <button type="button" class="datepicker-calendar-btn">1</button>
-                          <button type="button" class="datepicker-calendar-btn">2</button>
-                          <button type="button" class="datepicker-calendar-btn">3</button>
-                          <button type="button" class="datepicker-calendar-btn">4</button>
-                          <button type="button" class="datepicker-calendar-btn">5</button>
-                          <button type="button" class="datepicker-calendar-btn">6</button>
-                          <button type="button" class="datepicker-calendar-btn">7</button>
-                          <button type="button" class="datepicker-calendar-btn">8</button>
-                          <button type="button" class="datepicker-calendar-btn">9</button>
-                          <button type="button" class="datepicker-calendar-btn">10</button>
-                          <button type="button" class="datepicker-calendar-btn">11</button>
-                          <button type="button" class="datepicker-calendar-btn">12</button>
-                          <button type="button" class="datepicker-calendar-btn">13</button>
-                          <button type="button" class="datepicker-calendar-btn">14</button>
-                          <button type="button" class="datepicker-calendar-btn hday">15</button>
-                          <button type="button" class="datepicker-calendar-btn">16</button>
-                          <button type="button" class="datepicker-calendar-btn">17</button>
-                          <button type="button" class="datepicker-calendar-btn">18</button>
-                          <button type="button" class="datepicker-calendar-btn">19</button>
-                          <button type="button" class="datepicker-calendar-btn">20</button>
-                          <button type="button" class="datepicker-calendar-btn">21</button>
-                          <button type="button" class="datepicker-calendar-btn ac--selected">22</button>
-                          <button type="button" class="datepicker-calendar-btn">23</button>
-                          <button type="button" class="datepicker-calendar-btn">24</button>
-                          <button type="button" class="datepicker-calendar-btn">25</button>
-                          <button type="button" class="datepicker-calendar-btn">26</button>
-                          <button type="button" class="datepicker-calendar-btn">27</button>
-                          <button type="button" class="datepicker-calendar-btn">28</button>
-                          <button type="button" class="datepicker-calendar-btn">29</button>
-                          <button type="button" class="datepicker-calendar-btn">30</button>
-                          <button type="button" class="datepicker-calendar-btn">31</button>
-                        </div>
-                      </div>
-                    </div>
+                    <!-- // datepicker-popper -->
                   </div>
                   <!-- // datepicker-root -->
                 </div>
