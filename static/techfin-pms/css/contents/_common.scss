@@ -198,10 +198,13 @@
 .btns-wrap {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 12px;
 
   .btn-comm {
+    width: 102px;
+    height: 40px;
     margin-left: auto;
+    font-size: 14px
   }
 }
 
@@ -216,17 +219,6 @@
   color: var(--c-gray2);
 }
 
-.box-msg {
-  padding: 12px;
-  border: 1px solid var(--c-border2);
-  background-color: var(--c-gray4);
-  border-radius: 4px;
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
 .box-centered {
   display: flex;
   align-items: center;
@@ -239,21 +231,8 @@
 }
 
 .box-panel {
-  padding: 30px;
   border: 1px solid var(--c-border2);
-  background-color: var(--c-gray4);
-  border-radius: 4px;
-
-  .switch-wrap {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-  }
-
-  .certi-wrap {
-    padding-left: 300px;
-    background: url(../image/img/img_certi.png) no-repeat 50px center;
-  }
+  border-radius: 8px;
 }
 
 .terms-pop {
@@ -312,12 +291,17 @@
 }
 
 .msg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--c-gray1);
+  line-height: 1.3;
+  font-size: 13px;
+
   & > li {
     position: relative;
     padding: 1px 0 1px 14px;
     text-align: left;
-    line-height: 1.3;
-    font-size: 13px;
 
     &::before {
       content: '';
@@ -334,14 +318,19 @@
   ul {
     margin: 3px 0;
     li {
-      padding: 1px 0 1px 5px;
+      padding: 1px 0;
     }
   }
 
   &.s--lg {
-    font-size: 14px;
+    line-height: 1.5;
+    
     & > li {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
       padding: 5px 0 5px 17px;
+
       &::before {
         top: 12px;
         width: 3px;
@@ -355,6 +344,10 @@
         padding: 3px 0 3px 20px;
       }
     }
+  }
+
+  a {
+    color: inherit;
   }
 }
 
@@ -372,10 +365,6 @@
     li {
       height: 32px;
     }
-  }
-
-  &.msg-list {
-    gap: 4px;
   }
 
   .desc {
@@ -659,6 +648,10 @@ td .msg-list {
 
 .mb0 {
   margin-bottom: 0 !important;
+}
+
+.mb5 {
+  margin-bottom: 5px !important;
 }
 
 .mb10 {

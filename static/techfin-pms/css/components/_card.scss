@@ -1,41 +1,40 @@
 .card-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  margin-top: 24px
 }
 
 .card-item {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  max-width: 400px;
-  padding: 28px 30px;
-  border: 1px solid #E7EDFF;
-  border-radius: 4px;
-  box-shadow: 4px 4px 18px -5px #DADDE8CC
+  padding: 20px;
+  border: 1px solid var(--c-border2);
+  border-radius: 12px;
 }
 
 .card-header {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 7px;
-  border-bottom: 1px solid var(--c-border2)
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #F1F1F3
 }
 
 .card-action {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 6px;
-  padding: 6px 0;
 }
 
 .card-detail {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 16px;
   font-size: 14px;
-  font-weight: 600;
+  padding: 20px 0 12px;
 
   li {
     display: flex;
@@ -45,6 +44,10 @@
   .name {
     width: 120px;
     color: var(--c-gray2)
+  }
+  
+  .value {
+    font-weight: 500
   }
 }
 

@@ -436,194 +436,298 @@
           <main class="console-contents">
             <div class="console-contents-inner">
               <div class="cont-headline">
-                <h2 class="font-h2">매출/매입처 현황</h2>
-                <p>관리 기업의 매입·매출처별 평균 지급 및 회수일 현황입니다.</p>
-
+                <h2 class="font-h2">회원 관리</h2>
+                <p>회원 등급 확인 및 변경을 할 수 있습니다.</p>
                 <div class="headline-utils">
                   <div class="cont-breadcrumbs">
-                    <a href="#">대시보드</a>
-                    <span>매출/매입처 현황</span>
+                    <a href="#">마이페이지</a>
+                    <span>계정 관리</span>
                   </div>
                 </div>
-              </div>
-
-              <div class="tabmenu-menu">
-                <button type="button" class="tabmenu-btn ac--active">매출처 현황</button>
-                <button type="button" class="tabmenu-btn">매입처 현황</button>
               </div>
 
               <!-- 검색 -->
               <div class="searchbox-root">
-                <div class="searchbox-item s--full">
-                  <span class="searchbox-label">기업명</span>
-                  <div class="textfield-root">
-                    <label class="textfield-label">
-                      <span class="label blind">검색키워드</span>
-                      <input type="text" class="textfield-form" name="" placeholder="검색어를 입력해 주세요." />
+                <div class="searchbox-item">
+                  <div class="radiocheck-root">
+                    <label class="radiocheck-label">
+                      <input type="checkbox" name="" checked />
+                      <span>전체</span>
                     </label>
                   </div>
-                </div>
 
-                <div class="searchbox-item">
-                  <span class="searchbox-label">기준년도</span>
-                  <div class="combobox-root ac--focus">
-                    <button type="button" class="combobox-btn">2025</button>
-                    <div class="combobox-dropdown">
-                      <ul class="combobox-option">
-                        <li class="ac--active">
-                          <button type="button">전체</button>
-                        </li>
-                        <li><button type="button">2025</button></li>
-                      </ul>
-                    </div>
+                  <div class="radiocheck-root">
+                    <label class="radiocheck-label">
+                      <input type="checkbox" name="" checked />
+                      <span>마스터관리자</span>
+                    </label>
                   </div>
-                </div>
 
-                <div class="searchbox-item">
-                  <span class="searchbox-label">기준월</span>
-                  <div class="combobox-root ac--focus">
-                    <button type="button" class="combobox-btn">10월</button>
-                    <div class="combobox-dropdown">
-                      <ul class="combobox-option">
-                        <li class="ac--active">
-                          <button type="button">전체</button>
-                        </li>
-                        <li><button type="button">10월</button></li>
-                      </ul>
-                    </div>
+                  <div class="radiocheck-root">
+                    <label class="radiocheck-label">
+                      <input type="checkbox" name="" checked />
+                      <span>일반관리자</span>
+                    </label>
                   </div>
-                </div>
 
-                <div class="searchbox-item">
-                  <span class="searchbox-label">표시기준</span>
-                  <div class="combobox-root ac--focus">
-                    <button type="button" class="combobox-btn">12개월</button>
-                    <div class="combobox-dropdown">
-                      <ul class="combobox-option">
-                        <li class="ac--active">
-                          <button type="button">전체</button>
-                        </li>
-                        <li><button type="button">12개월</button></li>
-                      </ul>
-                    </div>
+                  <div class="radiocheck-root">
+                    <label class="radiocheck-label">
+                      <input type="checkbox" name="" checked />
+                      <span>일반회원</span>
+                    </label>
                   </div>
-                </div>
 
-                <div class="searchbox-btns">
-                  <button type="button" class="btn-contained">검색</button>
-                  <button type="button" class="btn-comm">
-                    <i class="icon-comm i--refresh"></i>
-                    <span class="blind">초기화</span>
-                  </button>
+                  <div class="radiocheck-root">
+                    <label class="radiocheck-label">
+                      <input type="checkbox" name="" checked />
+                      <span>임시회원</span>
+                    </label>
+                  </div>
                 </div>
               </div>
               <!-- //searchbox-root -->
 
               <div class="datagrid-container">
                 <div class="table-header">
-                  <div class="count font-h3">전체<em>20</em>건</div>
-
+                  <div class="count font-h3">전체<em>50</em>건</div>
+                  <p class="desc">변경을 원하시는 등급을 선택해 주세요</p>
                   <div class="utils">
-                    <span>기준월: 2025-10</span>
-                    <button type="button" class="btn-comm">엑셀 다운로드</button>
+                    <button type="button" class="btn-comm">등급변경 취소</button>
+                    <button type="button" class="btn-comm">등급별 메뉴 접근권한</button>
                   </div>
                 </div>
 
                 <div class="table-wrap">
                   <table class="table-datagrid">
-                    <colgroup>
-                      <col style="width: 60px" />
-                    </colgroup>
                     <thead>
                       <tr>
+                        <th>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </th>
                         <th><span class="tit">번호</span></th>
-                        <th><span class="tit">기업명</span></th>
-                        <th><span class="tit">사업자등록번호</span></th>
-                        <th><span class="tit">대표자명</span></th>
-                        <th><span class="tit">매출처 수</span></th>
-                        <th><span class="tit">평균 회수일</span></th>
+                        <th><span class="tit">초대 이메일 주소</span></th>
+                        <th><span class="tit">이름</span></th>
+                        <th><span class="tit">부서</span></th>
+                        <th><span class="tit">회원등급</span></th>
+                        <th><span class="tit">접속일시</span></th>
+                        <th><span class="tit">회원정보</span></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
                         <td>1</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
+                        <td>kimtech@techfinratings.com</td>
                         <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <td>경영지원실</td>
+                        <td>마스터관리자</td>
+                        <td>2024-08-01 15:30:30</td>
+                        <td>
+                          <button class="btn-text">
+                            <span class="underline">보기</span>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
                         <td>2</td>
-                        <td>넥스트에너지</td>
-                        <td>370-88-12345</td>
+                        <td>kimtech@techfinratings.com</td>
                         <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <td>경영지원실</td>
+                        <td>마스터관리자</td>
+                        <td>2024-08-01 15:30:30</td>
+                        <td>
+                          <button class="btn-text">
+                            <span class="underline">보기</span>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
                         <td>3</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
+                        <td>kimtech@techfinratings.com</td>
                         <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <td>경영지원실</td>
+                        <td>마스터관리자</td>
+                        <td>2024-08-01 15:30:30</td>
+                        <td>
+                          <button class="btn-text">
+                            <span class="underline">보기</span>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
                         <td>4</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
+                        <td>kimtech@techfinratings.com</td>
                         <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <td>경영지원실</td>
+                        <td>마스터관리자</td>
+                        <td>2024-08-01 15:30:30</td>
+                        <td>
+                          <button class="btn-text">
+                            <span class="underline">보기</span>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
                         <td>5</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
+                        <td>kimtech@techfinratings.com</td>
                         <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <td>경영지원실</td>
+                        <td>마스터관리자</td>
+                        <td>2024-08-01 15:30:30</td>
+                        <td>
+                          <button class="btn-text">
+                            <span class="underline">보기</span>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
                         <td>6</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
+                        <td>kimtech@techfinratings.com</td>
                         <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <td>경영지원실</td>
+                        <td>마스터관리자</td>
+                        <td>2024-08-01 15:30:30</td>
+                        <td>
+                          <button class="btn-text">
+                            <span class="underline">보기</span>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
                         <td>7</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
+                        <td>kimtech@techfinratings.com</td>
                         <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <td>경영지원실</td>
+                        <td>마스터관리자</td>
+                        <td>2024-08-01 15:30:30</td>
+                        <td>
+                          <button class="btn-text">
+                            <span class="underline">보기</span>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
                         <td>8</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
+                        <td>kimtech@techfinratings.com</td>
                         <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <td>경영지원실</td>
+                        <td>마스터관리자</td>
+                        <td>2024-08-01 15:30:30</td>
+                        <td>
+                          <button class="btn-text">
+                            <span class="underline">보기</span>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
                         <td>9</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
+                        <td>kimtech@techfinratings.com</td>
                         <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <td>경영지원실</td>
+                        <td>마스터관리자</td>
+                        <td>2024-08-01 15:30:30</td>
+                        <td>
+                          <button class="btn-text">
+                            <span class="underline">보기</span>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
+                        <td>
+                          <div class="radiocheck-root">
+                            <label class="radiocheck-label">
+                               <input type="checkbox" name="" />
+                              <span class="blind">선택</span>
+                            </label>
+                          </div>
+                        </td>
                         <td>10</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
+                        <td>kimtech@techfinratings.com</td>
                         <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <td>경영지원실</td>
+                        <td>마스터관리자</td>
+                        <td>2024-08-01 15:30:30</td>
+                        <td>
+                          <button class="btn-text">
+                            <span class="underline">보기</span>
+                          </button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -641,38 +745,11 @@
                   <button type="button" class="pagenation-btn ac--active">
                     <span>1</span>
                   </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>2</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>3</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>4</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>5</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>6</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>7</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>8</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>9</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>10</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
+                  <button type="button" class="pagenation-btn" disabled>
                     <i class="icon-comm i--next"></i>
                     <span class="blind">Next Page</span>
                   </button>
-                  <button type="button" class="pagenation-btn">
+                  <button type="button" class="pagenation-btn" disabled>
                     <i class="icon-comm i--last"></i>
                     <span class="blind">Last Page</span>
                   </button>
@@ -687,6 +764,6 @@
       <!-- console-root -->
     </div>
 
-    <script src="../js/custom-v2.js"></script>
+    <script src="../../js/custom-v2.js"></script>
   </body>
 </html>

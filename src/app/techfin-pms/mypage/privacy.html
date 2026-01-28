@@ -436,246 +436,129 @@
           <main class="console-contents">
             <div class="console-contents-inner">
               <div class="cont-headline">
-                <h2 class="font-h2">매출/매입처 현황</h2>
-                <p>관리 기업의 매입·매출처별 평균 지급 및 회수일 현황입니다.</p>
+                <h2 class="font-h2">내 정보 관리</h2>
+                <p>가입 정보 확인,수정 및 정보 수신 설정을 하실 수 있습니다.</p>
 
                 <div class="headline-utils">
                   <div class="cont-breadcrumbs">
-                    <a href="#">대시보드</a>
-                    <span>매출/매입처 현황</span>
+                    <a href="#">마이페이지</a>
+                    <span>내 정보 관리</span>
                   </div>
                 </div>
               </div>
 
-              <div class="tabmenu-menu">
-                <button type="button" class="tabmenu-btn ac--active">매출처 현황</button>
-                <button type="button" class="tabmenu-btn">매입처 현황</button>
-              </div>
+              <div class="datagrid-list">
+                <div class="datagrid-container">
+                  <div class="table-header">
+                    <h3 class="font-h3">회원 정보</h3>
+                    <div class="utils">
+                      <button type="button" class="btn-comm">저장</button>
+                    </div>
+                  </div>
 
-              <!-- 검색 -->
-              <div class="searchbox-root">
-                <div class="searchbox-item s--full">
-                  <span class="searchbox-label">기업명</span>
-                  <div class="textfield-root">
-                    <label class="textfield-label">
-                      <span class="label blind">검색키워드</span>
-                      <input type="text" class="textfield-form" name="" placeholder="검색어를 입력해 주세요." />
-                    </label>
+                  <div class="table-wrap">
+                    <table class="table-rows">
+                      <tbody>
+                        <tr>
+                          <th>소속 부서</th>
+                          <td>
+                            <div class="textfield-root">
+                              <label class="textfield-label">
+                                <span class="label blind">소속 부서</span>
+                                <input
+                                  type="text"
+                                  class="textfield-form"
+                                  name=""
+                                  value="경영지원실"
+                                  placeholder="소속 부서를 입력해 주세요."
+                                />
+                              </label>
+                            </div>
+                          </td>
+                          <th>이름</th>
+                          <td>김테크</td>
+                        </tr>
+                        <tr>
+                          <th>이메일 주소</th>
+                          <td>kimtech@techfinratings.com</td>
+                          <th>휴대폰 번호</th>
+                          <td>
+                            <div class="textfield-root">
+                              <label class="textfield-label">
+                                <span class="label blind">소속 부서</span>
+                                <input
+                                  type="text"
+                                  class="textfield-form"
+                                  name=""
+                                  value="01012345678"
+                                  placeholder="소속 부서를 입력해 주세요."
+                                />
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>기업모니터링 회원등급</th>
+                          <td>일반회원</td>
+                          <th>크레디뷰 회원등급</th>
+                          <td>일반회원</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
+                <!-- // datagrid-container -->
 
-                <div class="searchbox-item">
-                  <span class="searchbox-label">기준년도</span>
-                  <div class="combobox-root ac--focus">
-                    <button type="button" class="combobox-btn">2025</button>
-                    <div class="combobox-dropdown">
-                      <ul class="combobox-option">
-                        <li class="ac--active">
-                          <button type="button">전체</button>
-                        </li>
-                        <li><button type="button">2025</button></li>
-                      </ul>
+                <div class="datagrid-container">
+                  <div class="table-header">
+                    <h3 class="font-h3">정보수신 설정</h3>
+                  </div>
+
+                  <div class="box-panel">
+                    <div class="switch-wrap">
+                      <label class="switch-root s--lg">
+                        <i class="icon-comm i--bell"></i>
+                        <span class="switch-label">사이트 알림</span>
+                        <input type="checkbox" name="" />
+                      </label>
+
+                      <label class="switch-root s--lg">
+                        <i class="icon-comm i--mail"></i>
+                        <span class="switch-label">이메일</span>
+                        <input type="checkbox" name="" />
+                      </label>
+
+                      <label class="switch-root s--lg">
+                        <i class="icon-comm i--phone"></i>
+                        <span class="switch-label">휴대폰</span>
+                        <input type="checkbox" name="" checked="" />
+                      </label>
                     </div>
                   </div>
                 </div>
+                <!-- // datagrid-container -->
 
-                <div class="searchbox-item">
-                  <span class="searchbox-label">기준월</span>
-                  <div class="combobox-root ac--focus">
-                    <button type="button" class="combobox-btn">10월</button>
-                    <div class="combobox-dropdown">
-                      <ul class="combobox-option">
-                        <li class="ac--active">
-                          <button type="button">전체</button>
-                        </li>
-                        <li><button type="button">10월</button></li>
-                      </ul>
-                    </div>
+                <div class="datagrid-container">
+                  <div class="table-header">
+                    <h3 class="font-h3">약관 동의 내역</h3>
                   </div>
-                </div>
 
-                <div class="searchbox-item">
-                  <span class="searchbox-label">표시기준</span>
-                  <div class="combobox-root ac--focus">
-                    <button type="button" class="combobox-btn">12개월</button>
-                    <div class="combobox-dropdown">
-                      <ul class="combobox-option">
-                        <li class="ac--active">
-                          <button type="button">전체</button>
-                        </li>
-                        <li><button type="button">12개월</button></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="searchbox-btns">
-                  <button type="button" class="btn-contained">검색</button>
-                  <button type="button" class="btn-comm">
-                    <i class="icon-comm i--refresh"></i>
-                    <span class="blind">초기화</span>
-                  </button>
-                </div>
-              </div>
-              <!-- //searchbox-root -->
-
-              <div class="datagrid-container">
-                <div class="table-header">
-                  <div class="count font-h3">전체<em>20</em>건</div>
-
-                  <div class="utils">
-                    <span>기준월: 2025-10</span>
-                    <button type="button" class="btn-comm">엑셀 다운로드</button>
-                  </div>
-                </div>
-
-                <div class="table-wrap">
-                  <table class="table-datagrid">
-                    <colgroup>
-                      <col style="width: 60px" />
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th><span class="tit">번호</span></th>
-                        <th><span class="tit">기업명</span></th>
-                        <th><span class="tit">사업자등록번호</span></th>
-                        <th><span class="tit">대표자명</span></th>
-                        <th><span class="tit">매출처 수</span></th>
-                        <th><span class="tit">평균 회수일</span></th>
-                      </tr>
-                    </thead>
+                  <table class="table-rows">
                     <tbody>
                       <tr>
-                        <td>1</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>넥스트에너지</td>
-                        <td>370-88-12345</td>
-                        <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>홍길동</td>
-                        <td>27</td>
-                        <td>1일</td>
+                        <th>인증서 정보 수집 · 이용 동의</th>
+                        <td>2025-10-28 18:07:13</td>
+                        <th>서비스 이용약관 동의</th>
+                        <td>2025-10-28 18:07:13</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+                <!-- // datagrid-container -->
 
-                <div class="pagenation-root">
-                  <button type="button" class="pagenation-btn" disabled>
-                    <i class="icon-comm i--first"></i>
-                    <span class="blind">First Page</span>
-                  </button>
-                  <button type="button" class="pagenation-btn" disabled>
-                    <i class="icon-comm i--prev"></i>
-                    <span class="blind">Prev Page</span>
-                  </button>
-                  <button type="button" class="pagenation-btn ac--active">
-                    <span>1</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>2</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>3</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>4</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>5</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>6</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>7</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>8</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>9</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>10</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <i class="icon-comm i--next"></i>
-                    <span class="blind">Next Page</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <i class="icon-comm i--last"></i>
-                    <span class="blind">Last Page</span>
-                  </button>
+                <div class="table-footer-btns">
+                  <button type="button" class="btn-comm">회원탈퇴</button>
+                  <button type="button" class="btn-comm">기업모니터링 서비스 해지</button>
                 </div>
               </div>
             </div>
@@ -687,6 +570,6 @@
       <!-- console-root -->
     </div>
 
-    <script src="../js/custom-v2.js"></script>
+    <script src="../../js/custom-v2.js"></script>
   </body>
 </html>

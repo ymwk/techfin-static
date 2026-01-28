@@ -1206,6 +1206,16 @@ img {
   line-height: 13px;
 }
 
+.form-count {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto 0;
+  color: var(--c-error);
+  font-weight: 400;
+}
+
 .btn-comm,
 .btn-contained,
 .btn-outlined,
@@ -1377,8 +1387,8 @@ img {
   justify-content: center;
   gap: 4px;
   padding: 4px 0;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 13px;
+  color: var(--c-black);
 }
 .btn-text .underline {
   display: inline-block;
@@ -1681,7 +1691,7 @@ img {
 }
 
 .i--mail {
-  width: 20px;
+  width: 24px;
   background-image: url(../image/icon/ic_mail.svg);
 }
 
@@ -2113,6 +2123,11 @@ img {
 .i--empty-report {
   width: 80px;
   background-image: url(../image/icon/ic_empty_report.svg);
+}
+
+.i--phone {
+  width: 24px;
+  background-image: url(../image/icon/ic_phone.svg);
 }
 
 .combobox-root {

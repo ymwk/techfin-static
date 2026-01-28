@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/techfin-pms/css/index.css" />
+  </head>
+  <body>
+    <div class="modal-root s--md">
+      <div class="modal-backdrop"></div>
+      <div class="modal-box">
+        <button type="button" class="modal-close">
+          <i class="icon-comm i--close s--lg"></i>
+          <span class="blind">Close</span>
+        </button>
+        <div class="modal-header">
+          <h2 class="font-h3">등급선택</h2>
+        </div>
+
+        <div class="modal-contents">
+          <p class="font-h4">변경할 등급을 선택해 주세요.</p>
+
+          <div class="radiocheck-list">
+            <label class="item">
+              <input type="radio" name="radioGroup" class="blind" />
+              <i class="icon-comm i--member-lv1"></i>
+              <span>마스터관리자</span>
+              <small>마스터 관리자는 1명만 설정 가능합니다.</small>
+            </label>
+
+            <label class="item">
+              <input type="radio" name="radioGroup" class="blind" />
+              <i class="icon-comm i--member-lv2"></i>
+              <span>일반관리자</span>
+            </label>
+
+            <label class="item">
+              <input type="radio" name="radioGroup" class="blind" />
+              <i class="icon-comm i--member-lv3"></i>
+              <span>일반회원</span>
+            </label>
+
+            <label class="item">
+              <input type="radio" name="radioGroup" class="blind" />
+              <i class="icon-comm i--member-lv4"></i>
+              <span>임시회원</span>
+            </label>
+          </div>
+        </div>
+        <!-- //modal-contents -->
+
+        <div class="modal-action">
+          <div class="modal-action-btns">
+            <button type="button" class="btn-comm">닫기</button>
+            <button type="button" class="btn-contained">변경</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //modal-root -->
+  </body>
+</html>

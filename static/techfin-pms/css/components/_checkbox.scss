@@ -94,6 +94,10 @@
       border-color: #dbdbdb;
       background-color: #f7f7f7;
       cursor: default;
+      
+      &:checked {
+        background-image: url(../image/icon/ic_check_g.svg);
+      }
     }
   }
 }
@@ -104,6 +108,9 @@
   gap: 8px;
 
   .item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 18px 20px;
     border: 1px solid var(--c-border2);
     border-radius: 8px;
@@ -119,7 +126,7 @@
 
   small {
     padding-left: 12px;
-    font-weight: 400px;
+    font-weight: 400;
     color: #75757a;
   }
 
