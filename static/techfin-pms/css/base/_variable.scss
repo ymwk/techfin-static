@@ -31,6 +31,10 @@
   
   --min-width: 1160px;
   --max-width: 1440px;
+  
+  .console-root:has(.table-xscroll) {
+    --min-width: 1240px;
+  }
 
   // etc
   --ease: cubic-bezier(0, 0.75, 0, 1);

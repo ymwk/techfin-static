@@ -403,6 +403,9 @@ textarea {
   --ease: cubic-bezier(0, 0.75, 0, 1);
   --gra: linear-gradient(90deg, #0046ff, #8e48ff 40%);
 }
+:root .console-root:has(.table-xscroll) {
+  --min-width: 1240px;
+}
 
 @keyframes fadeIn {
   from {
