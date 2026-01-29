@@ -36,6 +36,10 @@
     margin-left: auto;
     font-size: 13px;
     color: var(--c-gray1);
+
+    .unit {
+      margin-top: unset;
+    }
   }
   .unit {
     margin-left: auto;
@@ -57,7 +61,7 @@
 .table-footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px
+  margin-top: 20px;
 }
 
 .table-footer-btns {
@@ -152,9 +156,9 @@
     // font-weight: 500;
     // text-align: left;
   }
-  
+
   tbody th {
-    border-right:  1px solid var(--c-border2)
+    border-right: 1px solid var(--c-border2);
   }
 
   tfoot {
@@ -390,7 +394,7 @@
 }
 
 .modal-root .table-rows th {
-  width: 140px
+  width: 140px;
 }
 
 .table-rows {
@@ -420,13 +424,14 @@
     border-bottom: 1px solid var(--c-border2);
     vertical-align: middle;
   }
-  
+
   &.table-form {
     border-top: 1px solid #212126;
-    
-    th, td {
+
+    th,
+    td {
       height: 64px;
-      background-color: #fff
+      background-color: #fff;
     }
   }
 }
@@ -577,6 +582,7 @@
     padding: 0 10px;
     text-align: right;
     background-color: #fff !important;
+    word-break: break-all;
   }
 
   tbody th {
@@ -584,13 +590,13 @@
   }
 }
 
-.dashboard-panel {
-  .table-price {
-    td {
-      word-break: break-all;
-    }
-  }
-}
+// .dashboard-panel {
+//   .table-price {
+//     td {
+//       word-break: break-all;
+//     }
+//   }
+// }
 
 .table-xscroll {
   overflow-x: auto;
@@ -631,9 +637,24 @@
   gap: 8px;
   width: 120px;
   white-space: nowrap;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .table-fixed {
   table-layout: fixed;
+}
+
+.table-link {
+  tbody {
+    td, th {
+      transition: background-color .3s;
+    }
+    tr:hover {
+      td,
+      th {
+        background-color: #f0f4ff !important;
+        cursor: pointer;
+      }
+    }
+  }
 }

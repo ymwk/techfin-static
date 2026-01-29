@@ -7187,6 +7187,12 @@ table .SOLCheck-root {
   background: #fff;
   box-shadow: 0px -7px 10px 0px rgba(0, 0, 0, 0.0509803922);
 }
+.console-footer.footer-intro .console-footer-btns, .footer-intro.SOLSnackbar-footer .console-footer-btns, .footer-intro.SOLFullpage-footer .console-footer-btns, .footer-intro.SOLViewer-footer .console-footer-btns, .console-footer.footer-intro .SOLSnackbar-footer-btns, .footer-intro.SOLSnackbar-footer .SOLSnackbar-footer-btns, .footer-intro.SOLFullpage-footer .SOLSnackbar-footer-btns, .footer-intro.SOLViewer-footer .SOLSnackbar-footer-btns, .console-footer.footer-intro .SOLFullpage-footer .footer-btns, .SOLFullpage-footer .console-footer.footer-intro .footer-btns, .footer-intro.SOLSnackbar-footer .SOLFullpage-footer .footer-btns, .SOLFullpage-footer .footer-intro.SOLSnackbar-footer .footer-btns, .footer-intro.SOLFullpage-footer .footer-btns, .console-footer.footer-intro .SOLViewer-footer .footer-btns, .SOLViewer-footer .console-footer.footer-intro .footer-btns, .footer-intro.SOLSnackbar-footer .SOLViewer-footer .footer-btns, .SOLViewer-footer .footer-intro.SOLSnackbar-footer .footer-btns, .footer-intro.SOLViewer-footer .footer-btns {
+  margin-top: 20px;
+}
+.console-footer.footer-intro .footer-floating, .footer-intro.SOLSnackbar-footer .footer-floating, .footer-intro.SOLFullpage-footer .footer-floating, .footer-intro.SOLViewer-footer .footer-floating {
+  top: -105px;
+}
 
 .console-footer-btns, .SOLSnackbar-footer-btns, .SOLFullpage-footer .footer-btns, .SOLViewer-footer .footer-btns {
   position: relative;

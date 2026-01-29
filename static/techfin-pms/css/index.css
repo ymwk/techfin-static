@@ -397,8 +397,9 @@ textarea {
   --w-sidebar: 368px;
   --w-gap: 12px;
   --w-space: 30px;
-  --w-cont: 1160px;
   --h-header: 72px;
+  --min-width: 1160px;
+  --max-width: 1440px;
   --ease: cubic-bezier(0, 0.75, 0, 1);
   --gra: linear-gradient(90deg, #0046ff, #8e48ff 40%);
 }
@@ -3872,6 +3873,9 @@ button.swiper-pagination-bullet {
   font-size: 13px;
   color: var(--c-gray1);
 }
+.table-header .utils .unit {
+  margin-top: unset;
+}
 .table-header .unit {
   margin-left: auto;
   margin-top: auto;
@@ -4192,7 +4196,8 @@ button.swiper-pagination-bullet {
 .table-rows.table-form {
   border-top: 1px solid #212126;
 }
-.table-rows.table-form th, .table-rows.table-form td {
+.table-rows.table-form th,
+.table-rows.table-form td {
   height: 64px;
   background-color: #fff;
 }
@@ -4334,13 +4339,10 @@ button.swiper-pagination-bullet {
   padding: 0 10px;
   text-align: right;
   background-color: #fff !important;
+  word-break: break-all;
 }
 .table-price tbody th {
   text-align: left;
-}
-
-.dashboard-panel .table-price td {
-  word-break: break-all;
 }
 
 .table-xscroll {
@@ -4384,6 +4386,15 @@ button.swiper-pagination-bullet {
 
 .table-fixed {
   table-layout: fixed;
+}
+
+.table-link tbody td, .table-link tbody th {
+  transition: background-color 0.3s;
+}
+.table-link tbody tr:hover td,
+.table-link tbody tr:hover th {
+  background-color: #f0f4ff !important;
+  cursor: pointer;
 }
 
 .switch-wrap {
@@ -4749,8 +4760,8 @@ button.swiper-pagination-bullet {
 
 .console-contents-inner {
   width: 100%;
-  min-width: 1160px;
-  max-width: 1440px;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
   padding: 0 20px;
   margin: 0 auto;
   padding-top: 56px;
@@ -4781,8 +4792,8 @@ button.swiper-pagination-bullet {
 
 .console-area {
   width: 100%;
-  min-width: 1160px;
-  max-width: 1440px;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
   padding: 0 20px;
   margin: 0 auto;
   display: flex;
@@ -5013,15 +5024,15 @@ button.swiper-pagination-bullet {
 }
 
 .console-sidebar {
-  --w-short: 48px;
-  --w-cont: calc(var(--w-sidebar) - var(--w-short));
+  --s-short: 48px;
+  --s-cont: calc(var(--w-sidebar) - var(--s-short));
   z-index: 99;
   position: absolute;
   inset: 0 auto 0 0;
   border-right: 1px solid #d8e0ff;
   background-color: #f0f4ff;
   box-shadow: 3px 0px 8px 0px rgba(11, 31, 91, 0.0588235294);
-  width: var(--w-short);
+  width: var(--s-short);
 }
 .console-sidebar ::-webkit-scrollbar {
   width: 4px;
@@ -5040,7 +5051,7 @@ button.swiper-pagination-bullet {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
-  width: var(--w-short);
+  width: var(--s-short);
   background: #1c3bdb;
 }
 
@@ -5059,7 +5070,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  width: var(--w-short);
+  width: var(--s-short);
   padding: 6px;
 }
 
@@ -5125,7 +5136,7 @@ button.swiper-pagination-bullet {
   top: 0;
   right: 0;
   bottom: 0;
-  width: calc(var(--w-sidebar) - var(--w-short));
+  width: calc(var(--w-sidebar) - var(--s-short));
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -6327,6 +6338,10 @@ td .msg-list {
   margin-bottom: 100px !important;
 }
 
+.mt-10 {
+  margin-top: -10px !important;
+}
+
 .mt-20 {
   margin-top: -20px !important;
 }
@@ -7478,6 +7493,9 @@ td .msg-list {
 }
 .runway-cont .list {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 16px 24px;
   border-radius: 8px;
   background-color: var(--c-gray4);
@@ -7555,6 +7573,12 @@ td .msg-list {
   padding: 12px 16px;
   border: 1px solid var(--c-border2);
   border-radius: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.grade-list li:hover {
+  background-color: #F0F4FF;
+  border-color: var(--c-primary);
+  cursor: pointer;
 }
 .grade-list .tit {
   flex-grow: 1;
@@ -7663,7 +7687,7 @@ td .msg-list {
   fill: none;
 }
 .arch-progress-container .arch-bg {
-  stroke: #e5e5e5;
+  stroke: #DBDEE2;
 }
 .arch-progress-container .arch-progress {
   transition: stroke-dashoffset 1.5s cubic-bezier(0.42, 0, 0.58, 1);
@@ -7708,6 +7732,7 @@ td .msg-list {
 }
 
 .landing-root {
+  --w-cont: 1160px;
   flex-grow: 1;
   min-width: 1500px;
 }

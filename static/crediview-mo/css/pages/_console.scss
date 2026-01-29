@@ -57,6 +57,15 @@
   &.footer-intro {
     background: #fff;
     box-shadow: 0px -7px 10px 0px #0000000d;
+    
+    .console-footer-btns {
+      margin-top: 20px
+    }
+    
+    .footer-floating {
+      top: -105px
+    }
+    
   }
 }
 

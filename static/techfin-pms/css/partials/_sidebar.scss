@@ -1,6 +1,6 @@
 .console-sidebar {
-  --w-short: 48px;
-  --w-cont: calc(var(--w-sidebar) - var(--w-short));
+  --s-short: 48px;
+  --s-cont: calc(var(--w-sidebar) - var(--s-short));
 
   z-index: 99;
   position: absolute;
@@ -8,7 +8,7 @@
   border-right: 1px solid #d8e0ff;
   background-color: #f0f4ff;
   box-shadow: 3px 0px 8px 0px #0b1f5b0f;
-  width: var(--w-short);
+  width: var(--s-short);
 
   ::-webkit-scrollbar {
     width: 4px;
@@ -30,7 +30,7 @@
     content: '';
     position: absolute;
     inset: 0 auto 0 0;
-    width: var(--w-short);
+    width: var(--s-short);
     background: #1c3bdb;
   }
 }
@@ -50,7 +50,7 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  width: var(--w-short);
+  width: var(--s-short);
   padding: 6px;
   // background-color: #1c3bdb;
 }
@@ -119,7 +119,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  width: calc(var(--w-sidebar) - var(--w-short));
+  width: calc(var(--w-sidebar) - var(--s-short));
   display: flex;
   flex-direction: column;
   padding: 20px;

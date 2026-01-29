@@ -27,8 +27,10 @@
   --w-sidebar: 368px;
   --w-gap: 12px;
   --w-space: 30px;
-  --w-cont: 1160px;
   --h-header: 72px;
+  
+  --min-width: 1160px;
+  --max-width: 1440px;
 
   // etc
   --ease: cubic-bezier(0, 0.75, 0, 1);

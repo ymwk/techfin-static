@@ -86,8 +86,8 @@
 
 @mixin width {
   width: 100%;
-  min-width: 1160px;
-  max-width: 1440px;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
   padding: 0 20px;
   margin: 0 auto;
 }
