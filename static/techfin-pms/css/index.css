@@ -395,6 +395,7 @@ textarea {
   --c-border2: #e8e8eb;
   --c-bg: #f7f7f7;
   --w-sidebar: 368px;
+  --w-fold: 48px;
   --w-gap: 12px;
   --w-space: 30px;
   --h-header: 72px;
@@ -5027,15 +5028,13 @@ button.swiper-pagination-bullet {
 }
 
 .console-sidebar {
-  --s-short: 48px;
-  --s-cont: calc(var(--w-sidebar) - var(--s-short));
   z-index: 99;
   position: absolute;
   inset: 0 auto 0 0;
   border-right: 1px solid #d8e0ff;
   background-color: #f0f4ff;
   box-shadow: 3px 0px 8px 0px rgba(11, 31, 91, 0.0588235294);
-  width: var(--s-short);
+  width: var(--w-fold);
 }
 .console-sidebar ::-webkit-scrollbar {
   width: 4px;
@@ -5054,7 +5053,7 @@ button.swiper-pagination-bullet {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
-  width: var(--s-short);
+  width: var(--w-fold);
   background: #1c3bdb;
 }
 
@@ -5073,7 +5072,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  width: var(--s-short);
+  width: var(--w-fold);
   padding: 6px;
 }
 
@@ -5139,7 +5138,7 @@ button.swiper-pagination-bullet {
   top: 0;
   right: 0;
   bottom: 0;
-  width: calc(var(--w-sidebar) - var(--s-short));
+  width: calc(var(--w-sidebar) - var(--w-fold));
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -5714,7 +5713,7 @@ body.open .console-sidebar {
   width: var(--w-sidebar);
 }
 body.open .sidebar-container {
-  width: calc(var(--w-sidebar) - var(--w-short));
+  width: calc(var(--w-sidebar) - var(--w-fold));
 }
 body.open .console-contents-inner,
 body.open .console-area {

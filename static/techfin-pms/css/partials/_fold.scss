@@ -23,18 +23,16 @@ body.open {
   .console-header {
     padding-left: var(--w-sidebar);
   }
-  
+
   .console-sidebar {
     width: var(--w-sidebar);
   }
 
   .sidebar-container {
-    width: calc(var(--w-sidebar) - var(--w-short));
+    width: calc(var(--w-sidebar) - var(--w-fold));
   }
   .console-contents-inner,
   .console-area {
     padding-left: 20px;
   }
-
-  
 }
