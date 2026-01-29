@@ -16,21 +16,14 @@
 @import 'vendors/tippy/popmenu';
 
 // Mobile import
-@import '../../Mobile/css/m-crediview/landing/index';
-@import '../../Mobile/css/m-crediview/landing/section';
-@import '../../Mobile/css/m-crediview/landing/responsive.scss';
-@import '../../Mobile/css/m-crediview/event/section';
-@import '../../Mobile/css/m-crediview/event/event-popup';
-@import '../../Mobile/css/m-crediview/event/responsive';
-@import '../../Mobile/css/m-crediview/event/ios';
-@import '../../Mobile/css/m-crediview/pages/common';
-@import '../../Mobile/css/m-crediview/pages/ios';
-@import '../../Mobile/css/m-crediview/pages/intro';
-@import '../../Mobile/css/m-crediview/pages/responsive';
-@import '../../Mobile/css/m-crediview/pages/members';
-@import '../../Mobile/css/m-crediview/epress-membership/landing';
-@import '../../Mobile/css/m-crediview/promotion/landing';
-@import '../../Mobile/css/components/modals/review';
+// @import '../../Mobile/css/m-crediview/pages/common';
+// @import '../../Mobile/css/m-crediview/pages/ios';
+// @import '../../Mobile/css/m-crediview/pages/intro';
+// @import '../../Mobile/css/m-crediview/pages/responsive';
+// @import '../../Mobile/css/m-crediview/pages/members';
+// @import '../../Mobile/css/m-crediview/epress-membership/landing';
+// @import '../../Mobile/css/m-crediview/promotion/landing';
+// @import '../../Mobile/css/components/modals/review';
 
 // 컴포넌트
 @import 'components/styles/color';
@@ -66,6 +59,7 @@
 @import 'components/popups/popper';
 @import 'components/tabs/tab';
 @import 'components/tabs/filter';
+@import 'components/modals/review';
 
 // 레이아웃 구성요소
 @import 'partials/header';
@@ -83,6 +77,23 @@
 @import 'pages/cs';
 @import 'pages/board';
 @import 'pages/guide';
+@import 'pages/members-old'; //추가
 @import 'pages/auth';
 @import 'pages/custom';
 @import 'pages/event';
+@import 'pages/intro'; //추가
+@import 'pages/responsive'; //추가
+@import 'pages/epress'; //추가
+@import 'pages/promotion'; //추가
+
+// 회원가입, 로그인
+
+// 랜딩페이지
+@import 'landing/index'; //추가
+@import 'landing/section'; //추가
+@import 'landing/responsive'; //추가
+
+// 이벤트
+@import 'event/section'; //추가
+@import 'event/event-popup'; //추가
+@import 'event/responsive'; //추가

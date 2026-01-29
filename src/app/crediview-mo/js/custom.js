@@ -168,15 +168,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const subMenu = this.nextElementSibling;
 
-      document.querySelectorAll('.gnb-menu .depth01 > a').forEach((otherLink) => {
-        if (otherLink !== this) {
-          otherLink.classList.remove('on');
-          const otherSubMenu = otherLink.nextElementSibling;
-          if (otherSubMenu) {
-            otherSubMenu.style.maxHeight = null;
+      document
+        .querySelectorAll('.gnb-menu .depth01 > a')
+        .forEach((otherLink) => {
+          if (otherLink !== this) {
+            otherLink.classList.remove('on');
+            const otherSubMenu = otherLink.nextElementSibling;
+            if (otherSubMenu) {
+              otherSubMenu.style.maxHeight = null;
+            }
           }
-        }
-      });
+          console.log(otherLink);
+        });
 
       // 현재 메뉴 열기/닫기 및 on 클래스 토글
       if (subMenu.style.maxHeight) {
@@ -232,10 +235,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // scroll header
   const header = document.querySelector('.SOLHeader-root');
   let beforeScrollY = window.scrollY || 0;
-  
+
   window.addEventListener('scroll', function () {
     let currentScrollY = window.scrollY;
-    header.classList.toggle('sticky', beforeScrollY < currentScrollY && 50 < currentScrollY);
+    header.classList.toggle(
+      'sticky',
+      beforeScrollY < currentScrollY && 50 < currentScrollY
+    );
     beforeScrollY = currentScrollY;
   });
 
