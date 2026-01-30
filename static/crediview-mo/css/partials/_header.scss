@@ -79,14 +79,15 @@
       position: absolute;
       inset: 0 0 auto 0;
       height: 100%;
-      background: url(../../Common/image/crediview/logo/bi_crediview.svg) no-repeat left center / contain;
+      background: url(../image/logo/bi_crediview.svg) no-repeat left center /
+        contain;
       animation: logoSwap 10s ease infinite;
     }
     .kr {
       position: absolute;
       inset: auto 0 0 0;
       height: 100%;
-      background: url(../../Common/image/crediview/logo/bi_crediview_kr.svg) no-repeat 5% 58% / 65%;
+      background: url(../image/logo/bi_crediview_kr.svg) no-repeat 5% 58% / 65%;
       animation: logoSwap2 10s ease infinite;
     }
   }
@@ -236,7 +237,7 @@
     }
 
     .SOLIcon-root {
-      margin-left: auto
+      margin-left: auto;
     }
   }
 

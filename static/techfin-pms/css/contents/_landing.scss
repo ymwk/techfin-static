@@ -1,6 +1,6 @@
 .landing-root {
   --w-cont: 1160px;
-  
+
   flex-grow: 1;
   min-width: 1500px;
 
@@ -12,10 +12,10 @@
     position: relative;
     background-color: #1d1d1d;
   }
-  
+
   .console-area {
     max-width: var(--w-cont);
-    padding: 0
+    padding: 0;
   }
 }
 
@@ -408,7 +408,9 @@
         border-radius: 50%;
         border: 2px solid #c6c6c6;
         background: #fff url(../image/icon/ic_check2.svg) no-repeat center center;
-        transition: background-color 0.2s, border-color 0.2s;
+        transition:
+          background-color 0.2s,
+          border-color 0.2s;
       }
     }
 
@@ -439,13 +441,41 @@
   width: 840px;
   border-radius: 24px;
   border: 1px solid #0000000f;
+  background:
+    linear-gradient(191.83deg, #edf1ff 26.07%, #cfe5fc 96.93%);
 
-  .swiper-slide {
+
+}
+
+.main-step-list {
+  li {
+    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding: 32px;
+    font-size: 18px;
+    color: #373737;
+    font-weight: 600
+  }
+  
+  .screen {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+  }
+  
+  .desc {
+    display: flex;
     align-items: center;
-    background: #ff08da1a;
-    // border-radius: 24px
+    gap: 16px;
+    
+    &::before {
+      content: '';
+      width: 41px;
+      height: 41px;
+      background: url(../image/main/step_swiper_icon.svg) no-repeat left top;
+    }
   }
 }
 
@@ -476,7 +506,9 @@
       font-weight: 500;
       opacity: 1;
       margin: 0 !important;
-      transition: background-color 0.2s, color 0.2s;
+      transition:
+        background-color 0.2s,
+        color 0.2s;
     }
 
     .swiper-pagination-bullet-active {
@@ -504,9 +536,17 @@
   background-color: #fff;
 
   .screen {
+    position: relative;
+    display: flex;
     flex-shrink: 0;
     width: 720px;
     background: linear-gradient(191.83deg, #edf1ff 26.07%, #cfe5fc 96.93%);
+    
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0
+    }
   }
 
   .cont {
@@ -586,20 +626,18 @@
     &.turn-03::before {
       background-image: url(../image/main/turn_ic_03.svg);
     }
-
   }
 
   .tit {
     font-size: 22px;
-    color: #3F3F46;
+    color: #3f3f46;
     font-weight: 700;
   }
 }
 
-
 ////////////////////////////////////////////////////////
 .main-final {
-  background: #2E3068F2 url(../image/main/final_bg_01.png) no-repeat center center / cover;
+  background: #2e3068f2 url(../image/main/final_bg_01.png) no-repeat center center / cover;
   color: #fff;
 
   .main-section-inner {
