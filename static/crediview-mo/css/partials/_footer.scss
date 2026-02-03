@@ -1,10 +1,15 @@
 .SOLFooter-root {
   position: relative;
   padding: 35px 0;
+  color: #7b7b7b;
 
   &.t--dark {
     background-color: #1a1a1b;
-    color: #7b7b7b;
+
+    .SOLFooter-utils .sns-link .sns-blackbook {
+      background-image: url(../image/logo/logo_blackbook_w.png);
+      opacity: 1;
+    }
   }
 
   .inquery-for-use {
@@ -117,8 +122,8 @@
       justify-content: space-between;
       align-items: center;
       gap: 1.5em;
-      max-width: 185px;
-      padding-right: 24px;
+      // max-width: 185px;
+      // padding-right: 24px;
       white-space: nowrap;
       font-weight: 500;
       font-size: var(--font-13);
@@ -158,6 +163,12 @@
         transform: translateY(-50%);
         opacity: 0.3;
       }
+    }
+
+    .sns-blackbook {
+      width: 91px;
+      height: 19px;
+      opacity: 0.5;
     }
   }
 }
@@ -234,7 +245,10 @@
   border-radius: 6px;
   background-color: #1a1a1b;
   color: #4b4e53;
-  transition: color 0.2s, background-color 0.2s, max-height 0.2s ease-in-out;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    max-height 0.2s ease-in-out;
 }
 
 .SOLFooter-bottom {

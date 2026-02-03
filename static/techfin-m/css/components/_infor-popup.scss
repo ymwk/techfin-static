@@ -1,0 +1,149 @@
+// 안내용 공통 팝업
+.review-popup {
+  &-root {
+    position: relative;
+    .review-popup-component {
+      position: fixed;
+      z-index: 999;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 600px;
+      border-radius: 8px 8px 0 0;
+      background-color: #fff;
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+      box-sizing: border-box;
+      //display: none;
+      &.w360 {
+        width: 360px;
+      }
+      &.w400 {
+        width: 400px;
+      }
+      &.w520 {
+        width: 520px;
+      }
+
+      &.w800 {
+        width: 800px;
+      }
+
+      &.center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &.top {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &.bottom {
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &.left {
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+      }
+
+      &.right {
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+      }
+
+      .review-popup-contents {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px 8px 0 0;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+        }
+
+        img {
+          max-width: none;
+          max-height: none;
+          object-fit: none;
+          object-position: center;
+        }
+      }
+
+      .skip-today-box {
+        width: 100%;
+        position: absolute;
+        bottom: -51px;
+        left: 0;
+        display: flex;
+        justify-content: flex-start;
+        background-color: #353535;
+        padding: 16px 24px;
+        border-radius: 0 0 16px 16px;
+        box-sizing: border-box;
+
+        .chk-box {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          input[type='checkbox'] {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          label {
+            color: #fff;
+            display: inline-block;
+            padding: 0 0 0 5px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #bababa;
+          }
+        }
+
+        .skip-btn-close {
+          display: block;
+          font-size: 14px;
+          font-weight: 500;
+          color: #bababa;
+          position: relative;
+          padding: 0 0 0 20px;
+          cursor: pointer;
+          margin-left: auto; // 핵심 포인트
+          &:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: url(/src/app/backoffice/resource/images/skip-btn-close.png)
+              no-repeat;
+            position: absolute;
+            top: 4px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 안내용 공통 팝업 사이즈별
+@media all and (max-width: 800px) {
+  .review-popup-component {
+    width: 90%;
+  }
+}

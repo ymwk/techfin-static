@@ -79,8 +79,7 @@
       position: absolute;
       inset: 0 0 auto 0;
       height: 100%;
-      background: url(../image/logo/bi_crediview.svg) no-repeat left center /
-        contain;
+      background: url(../image/logo/bi_crediview.svg) no-repeat left center / contain;
       animation: logoSwap 10s ease infinite;
     }
     .kr {
@@ -254,6 +253,7 @@
     > a {
       position: relative;
       height: 40px;
+      color: #222;
 
       &.on::before {
         rotate: -135deg;
@@ -303,4 +303,10 @@
   .SOLBtn-root {
     height: 44px;
   }
+}
+
+.sns-blackbook {
+  width: 128px;
+  height: 23px;
+  background: url(../image/logo/logo_blackbook_bk.png) no-repeat center center / contain;
 }

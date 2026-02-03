@@ -6505,6 +6505,7 @@ table .SOLCheck-root {
 .gnb-menu > li > a {
   position: relative;
   height: 40px;
+  color: #222;
 }
 .gnb-menu > li > a.on::before {
   rotate: -135deg;
@@ -6548,13 +6549,23 @@ table .SOLCheck-root {
   height: 44px;
 }
 
+.sns-blackbook {
+  width: 128px;
+  height: 23px;
+  background: url(../image/logo/logo_blackbook_bk.png) no-repeat center center/contain;
+}
+
 .SOLFooter-root {
   position: relative;
   padding: 35px 0;
+  color: #7b7b7b;
 }
 .SOLFooter-root.t--dark {
   background-color: #1a1a1b;
-  color: #7b7b7b;
+}
+.SOLFooter-root.t--dark .SOLFooter-utils .sns-link .sns-blackbook {
+  background-image: url(../image/logo/logo_blackbook_w.png);
+  opacity: 1;
 }
 .SOLFooter-root .inquery-for-use {
   display: flex;
@@ -6651,8 +6662,6 @@ table .SOLCheck-root {
   justify-content: space-between;
   align-items: center;
   gap: 1.5em;
-  max-width: 185px;
-  padding-right: 24px;
   white-space: nowrap;
   font-weight: 500;
   font-size: var(--font-13);
@@ -6686,6 +6695,11 @@ table .SOLCheck-root {
   left: -21px;
   transform: translateY(-50%);
   opacity: 0.3;
+}
+.SOLFooter-utils .sns-link .sns-blackbook {
+  width: 91px;
+  height: 19px;
+  opacity: 0.5;
 }
 
 .SOLFooter-dropbox {
