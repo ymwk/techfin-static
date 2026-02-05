@@ -488,6 +488,22 @@
     width: 18px;
     background: url(../image/icon/ic_share.svg) no-repeat center center;
   }
+
+  &-public {
+    width: 24px;
+    background: url(../image/icon/ic_public.svg) no-repeat center center;
+  }
+
+  &-private {
+    width: 24px;
+    background: url(../image/icon/ic_private.svg) no-repeat center center;
+  }
+
+  &-own {
+    width: 24px;
+    background: url(../image/icon/ic_own.svg) no-repeat center center;
+  }
+  
 }
 
 .SOLBtn-root {

@@ -758,6 +758,10 @@ button {
   border: none;
   background-color: transparent;
   padding: 0;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 
 a {
@@ -2302,6 +2306,18 @@ button.swiper-pagination-bullet {
 .SOLIcon-share {
   width: 18px;
   background: url(../image/icon/ic_share.svg) no-repeat center center;
+}
+.SOLIcon-public {
+  width: 24px;
+  background: url(../image/icon/ic_public.svg) no-repeat center center;
+}
+.SOLIcon-private {
+  width: 24px;
+  background: url(../image/icon/ic_private.svg) no-repeat center center;
+}
+.SOLIcon-own {
+  width: 24px;
+  background: url(../image/icon/ic_own.svg) no-repeat center center;
 }
 
 .SOLBtn-root .SOLIcon-gt--u::after, .SOLBtn-root .SOLIcon-gt--r::after, .SOLBtn-root .SOLIcon-gt--d::after, .SOLBtn-root .SOLIcon-gt--l::after {
