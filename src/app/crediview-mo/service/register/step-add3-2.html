@@ -104,76 +104,84 @@
       <form>
         <div class="console-container">
           <div class="section-outer">
-            <!-- 서비스 프로세스 -->
-            <section class="service-guide js-accordian-root">
-              <div class="service-guide-title">
-                <h3 class="SOLTitle-t5">서비스 프로세스</h3>
-                <button type="button" class="SOLAccordian-btn js-accordian-btn">
-                  <span class="SOLAccordian-arr">
-                    <i class="SOLIcon-root SOLIcon-gt--d"></i>
-                  </span>
-                </button>
-              </div>
-              <ol class="service-guide-step SOLAccordian-body js-accordian-body">
-                <li>
-                  <p class="tit">신용평가 신청</p>
-                  <p>최초 기업 홈택스 연동하고 기업신용등급 신청</p>
-                </li>
-                <li>
-                  <p class="tit">
-                    신용평가등급 확인
-                    <span class="service-guide-label">무료</span>
-                  </p>
-                  <p>신용등급 무료로 즉시 조회 가능</p>
-                </li>
-                <li>
-                  <p class="tit">
-                    신용평가등급확인서 발급
-                    <span class="service-guide-label c--primary">유료</span>
-                  </p>
-                  <p>무료 등급 확인 후 결제 시 등급확인서 즉시 발급 완료</p>
-                </li>
-                <li>
-                  <p class="tit">
-                    기관 제출
-                    <span class="service-guide-label">무료</span>
-                  </p>
-                  <p>PDF 다운로드 제출하거나 조달청 자동전송</p>
-                </li>
-              </ol>
-            </section>
-
             <section class="console-section">
               <ul class="SOLStepper-root t--service">
-                <li class="active"><span class="tit">이용약관 동의</span></li>
+                <li><span class="tit">이용약관 동의</span></li>
                 <li><span class="tit">신청서 작성</span></li>
-                <li><span class="tit">서비스 선택</span></li>
+                <li class="active"><span class="tit">서비스 선택</span></li>
                 <li><span class="tit">결제</span></li>
                 <li><span class="tit">신용평가등급 확인</span></li>
               </ul>
 
               <div class="service-header">
-                <h3 class="SOLTitle-headline">서비스 이용을 위해 <br />이용약관에 동의해 주세요.</h3>
-                <p class="SOLText-note">서비스 이용을 위해서 꼭 필요한 사항입니다.</p>
+                <h3 class="SOLTitle-headline">서비스를 선택해 주세요.</h3>
               </div>
             </section>
 
             <section class="console-section">
-              <h3 class="blind">약관 항목</h3>
-              <div class="service-terms">
-                <div class="service-terms-header">
-                  <div class="SOLCheck-root t--terms s--lg">
-                    <label class="SOLCheck-label">
-                      <input type="checkbox" name="" />
-                      <span>
-                        <em>약관에 모두 동의</em>
-                      </span>
-                    </label>
+              <div class="SOLSelectGroup-root">
+                <label class="SOLSelectGroup-label">
+                  <input type="radio" name="serviceGroup" />
+                  <i class="ico ico-service-grade"></i>
+                  <div class="label">
+                    <span class="SOLTitle-t4">등급 조회</span>
+                    <span>신용평가 등급 결과 확인 후 <br />추가로 확인서 발급이 가능합니다</span>
                   </div>
-                </div>
+                </label>
 
+                <label class="SOLSelectGroup-label">
+                  <input type="radio" name="serviceGroup" checked />
+                  <i class="ico ico-service-doc"></i>
+                  <div class="label">
+                    <span class="SOLTitle-t4">신용평가등급확인서 발급</span>
+                    <span>신용평가 등급 산출 후 <br />확인서 발급을 함께 진행합니다 </span>
+                  </div>
+                </label>
+              </div>
+            </section>
+
+            <section class="console-section">
+              <div class="console-section-header">
+                <h3 class="SOLTitle-t3">발급용도를 선택해 주세요.</h3>
+              </div>
+              <div class="SOLSelectGroup-root">
+                <label class="SOLSelectGroup-label">
+                  <input type="radio" name="serviceGroup2" checked />
+                  <i class="ico ico-public"></i>
+                  <div class="label">
+                    <span class="SOLTitle-t4">공공기관 제출용</span>
+                    <span>조달청 적격심사 및 공공기관 <br />입찰 참여를 위한 평가확인서</span>
+                  </div>
+                </label>
+
+                <label class="SOLSelectGroup-label">
+                  <input type="radio" name="serviceGroup2" />
+                  <i class="ico ico-private"></i>
+                  <div class="label">
+                    <span class="SOLTitle-t4">민간기업 제출용</span>
+                    <span>협력업체 등록 및 민간기업 <br />거래 평가를 위한 평가확인서</span>
+                  </div>
+                </label>
+
+                <label class="SOLSelectGroup-label">
+                  <input type="radio" name="serviceGroup2" />
+                  <i class="ico ico-own"></i>
+                  <div class="label">
+                    <span class="SOLTitle-t4">자사확인용</span>
+                    <span>내부 관리 및 참고 목적의 평가확인서<br />(외부기관 제출 불가)</span>
+                  </div>
+                </label>
+              </div>
+            </section>
+
+            <section class="console-section">
+              <div class="console-section-header">
+                <h3 class="SOLTitle-t3">이용약관 동의</h3>
+              </div>
+
+              <div class="service-terms">
                 <div class="service-terms-item">
-                  <div class="SOLCheck-root t--terms-md">
+                  <div class="SOLCheck-root t--terms s--lg">
                     <label class="SOLCheck-label">
                       <input type="checkbox" name="" />
                       <span>
@@ -188,89 +196,37 @@
                     <span class="blind">이용약관 팝업 열기</span>
                   </button>
                 </div>
-
-                <div class="service-terms-item">
-                  <div class="SOLCheck-root t--terms-md">
-                    <label class="SOLCheck-label">
-                      <input type="checkbox" name="" />
-                      <span>
-                        <span>[필수]</span>
-                        기업정보 수집·활용·제3자 제공 동의
-                      </span>
-                    </label>
-                  </div>
-
-                  <button type="button" class="SOLIconBtn-root">
-                    <i class="SOLIcon-root SOLIcon-gt--r"></i>
-                    <span class="blind">이용약관 팝업 열기</span>
-                  </button>
-                </div>
-
-                <div class="service-terms-item">
-                  <div class="SOLCheck-root t--terms-md">
-                    <label class="SOLCheck-label">
-                      <input type="checkbox" name="" />
-                      <span>
-                        <span>[필수]</span>
-                        크레디뷰 서비스 이용약관
-                      </span>
-                    </label>
-                  </div>
-
-                  <button type="button" class="SOLIconBtn-root">
-                    <i class="SOLIcon-root SOLIcon-gt--r"></i>
-                    <span class="blind">이용약관 팝업 열기</span>
-                  </button>
-                </div>
-
-                <div class="service-terms-item">
-                  <div class="SOLCheck-root t--terms-md">
-                    <label class="SOLCheck-label">
-                      <input type="checkbox" name="" />
-                      <span>
-                        <span>[선택]</span>
-                        기업정보 수집 · 활용 · 제3자 제공
-                      </span>
-                    </label>
-                  </div>
-
-                  <button type="button" class="SOLIconBtn-root">
-                    <i class="SOLIcon-root SOLIcon-gt--r"></i>
-                    <span class="blind">이용약관 팝업 열기</span>
-                  </button>
-                </div>
+              </div>
+              <div class="box-err mt-g2">
+                <p class="msg-warn">
+                  발급 후 3일 이내 신용평가등급확인서를 전송하여야 하며, 미 전송 시 발급 후 3일째 되는 날에
+                  조달청(나라장터)에 전송됩니다.
+                </p>
               </div>
             </section>
 
             <section class="console-section">
               <div class="console-section-header">
-                <h3 class="SOLTitle-t3">유의사항</h3>
+                <h3 class="SOLTitle-t3">확인서 유효기간 유의사항</h3>
               </div>
 
-              <div class="box-msg mb-g3">
+              <div class="box-msg mb-g3 mt-g2">
                 <div class="msg-terms">
+                  <p>신용평가등급 확인서의 유효기간은 원칙적으로 결제일을 포함하여 1년입니다.</p>
+                  <p>다만, 유효기간은 평가의 기준이 되는 재무제표 결산년월로부터 18개월을 초과할 수 없습니다.</p>
                   <p>
-                    <em>
-                      당사 신용평가시스템은 국세청 신고자료,<br />
-                      회계프로그램의 기장정보를 근거로 산출됩니다.<br />
-                      이에 따라, 아래의 경우<br />
-                      신용등급이 산출되지 않을 수 있습니다.
-                    </em>
+                    따라서 결제일이 당기 결산년월로부터 6개월을 초과한 시점에 이루어지는 경우, 유효기간이 1년 미만으로
+                    산정됩니다.
                   </p>
-                  <ul>
-                    <li>1. 금융기관, 비영리단체, 공공기관인 경우</li>
-                    <li>2. 신고 자료와 기장 정보가 부족한 경우</li>
-                    <li>3. 인증서가 미등록 되거나 유효기간이 만료된 경우</li>
-                  </ul>
                 </div>
               </div>
+              <div class="SOLCheck-root t--terms-md">
+                <label class="SOLCheck-label">
+                  <input type="checkbox" name="" />
+                  <span>위 내용에 동의합니다.</span>
+                </label>
+              </div>
             </section>
-            <div class="SOLCheck-root t--terms-md">
-              <label class="SOLCheck-label">
-                <input type="checkbox" name="" />
-                <span><span class="c--require">[필수]</span> 유의사항을 확인했습니다.</span>
-              </label>
-            </div>
           </div>
         </div>
         <!-- //console-container -->
@@ -287,10 +243,8 @@
               <span class="blind">Scroll to Top</span>
             </button>
           </div>
-
           <div class="console-footer-btns">
-            <!-- <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>다음</button> -->
-            <a href="step2.html" class="SOLBtn-root t--contained s--lg w--full disabled">다음</a>
+            <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>다음</button>
           </div>
         </div>
       </form>

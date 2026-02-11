@@ -201,6 +201,12 @@
     content: '·';
     padding-right: 0.4em;
   }
+  
+  &.t--info {
+    padding-top: 0;
+    padding-left: 28px;
+    background: url(../image/icon/ic_msg_info.svg) no-repeat left top;
+  }
 }
 
 .msg-list {

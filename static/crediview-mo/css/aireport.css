@@ -3997,6 +3997,20 @@ table .SOLCheck-root {
 .SOLSelectGroup-label .ico-doc {
   background-image: url(../image/img/img_ic_doc.svg);
 }
+.SOLSelectGroup-label .ico-service-doc {
+  width: 57px;
+  height: 54px;
+  border-radius: 0;
+  background-color: transparent;
+  background-image: url(../image/img/img_ic_service.svg);
+}
+.SOLSelectGroup-label .ico-service-grade {
+  width: 57px;
+  height: 54px;
+  border-radius: 0;
+  background-color: transparent;
+  background-image: url(../image/img/img_ic_service_grade.svg);
+}
 .SOLSelectGroup-label .ico-private {
   background-size: 50%;
 }
@@ -6276,6 +6290,11 @@ table .SOLCheck-root {
 .msg-noti li::before, .msg-err li::before {
   content: "·";
   padding-right: 0.4em;
+}
+.msg-noti.t--info, .t--info.msg-err {
+  padding-top: 0;
+  padding-left: 28px;
+  background: url(../image/icon/ic_msg_info.svg) no-repeat left top;
 }
 
 .msg-list {

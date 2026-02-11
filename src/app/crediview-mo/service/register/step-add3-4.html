@@ -107,103 +107,100 @@
             <section class="console-section">
               <ul class="SOLStepper-root t--service">
                 <li><span class="tit">이용약관 동의</span></li>
-                <li class="active"><span class="tit">신청서 작성</span></li>
-                <li><span class="tit">서비스 선택</span></li>
+                <li><span class="tit">신청서 작성</span></li>
+                <li class="active"><span class="tit">서비스 선택</span></li>
                 <li><span class="tit">결제</span></li>
                 <li><span class="tit">신용평가등급 확인</span></li>
               </ul>
 
               <div class="service-header">
-                <h3 class="SOLTitle-headline">신청서 정보를 작성 후 <br />신용평가를 신청해 주세요.</h3>
-                <p class="SOLText-note">등록된 인증서 기준으로 회사정보가 입력됩니다.</p>
+                <h3 class="SOLTitle-headline">서비스를 선택해 주세요.</h3>
+              </div>
+            </section>
+
+            <section class="console-section">
+              <div class="SOLSelectGroup-root">
+                <label class="SOLSelectGroup-label">
+                  <input type="radio" name="serviceGroup" />
+                  <i class="ico ico-service-grade"></i>
+                  <div class="label">
+                    <span class="SOLTitle-t4">등급 조회</span>
+                    <span>신용평가 등급 결과 확인 후 <br />추가로 확인서 발급이 가능합니다</span>
+                  </div>
+                </label>
+
+                <label class="SOLSelectGroup-label">
+                  <input type="radio" name="serviceGroup" checked />
+                  <i class="ico ico-service-doc"></i>
+                  <div class="label">
+                    <span class="SOLTitle-t4">신용평가등급확인서 발급</span>
+                    <span>신용평가 등급 산출 후 <br />확인서 발급을 함께 진행합니다 </span>
+                  </div>
+                </label>
               </div>
             </section>
 
             <section class="console-section">
               <div class="console-section-header">
-                <h3 class="SOLTitle-t3">회사 정보</h3>
-                <div class="section-header-option">
-                  <span class="date">2024-09-09 15:16:17</span>
-                  <button type="button" class="SOLIconBtn-root">
-                    <span class="SOLSvg-root SOLSvg-refresh">
-                      <svg viewBox="0 0 16 16">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M14.1847 5.99992H10.5C10.2239 5.99992 10 5.77606 10 5.49992C10 5.22378 10.2239 4.99992 10.5 4.99992H13.4067C12.0703 2.56624 9.22594 1.32011 6.46428 2.02832C5.38017 2.30721 4.39241 2.87594 3.60695 3.67351C2.82144 4.47113 2.26787 5.46752 2.0056 6.55584C1.74334 7.64415 1.78227 8.78333 2.11823 9.8512C2.4542 10.9191 3.07451 11.8753 3.91264 12.6175C4.75078 13.3596 5.77512 13.8595 6.87581 14.0637C7.97649 14.2679 9.11201 14.1687 10.1606 13.7766C11.2091 13.3845 12.1312 12.7143 12.8278 11.838C13.5244 10.9617 13.9694 9.91233 14.115 8.80236C14.1509 8.52857 14.4019 8.33572 14.6757 8.37162C14.9495 8.40753 15.1424 8.65859 15.1065 8.93239C14.9373 10.2224 14.4202 11.4419 13.6106 12.4603C12.801 13.4787 11.7294 14.2575 10.5108 14.7132C9.29223 15.1689 7.97258 15.2843 6.6934 15.047C5.41422 14.8097 4.22377 14.2286 3.24972 13.3661C2.27567 12.5037 1.55477 11.3923 1.16433 10.1513C0.773888 8.91027 0.728638 7.58636 1.03343 6.32156C1.33823 5.05676 1.98157 3.89879 2.89445 2.97183C3.80734 2.04488 4.95534 1.38391 6.21533 1.05981L6.21567 1.05972C9.33877 0.25872 12.5661 1.61391 14.1667 4.31401V1.33325C14.1667 1.05711 14.3905 0.833252 14.6667 0.833252C14.9428 0.833252 15.1667 1.05711 15.1667 1.33325V5.49992C15.1667 5.77606 14.9428 5.99992 14.6667 5.99992H14.2037C14.1974 6.00004 14.191 6.00004 14.1847 5.99992Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </span>
-                  </button>
+                <h3 class="SOLTitle-t3">발급용도를 선택해 주세요.</h3>
+              </div>
+              <div class="SOLSelectGroup-root">
+                <label class="SOLSelectGroup-label">
+                  <input type="radio" name="serviceGroup2" />
+                  <i class="ico ico-public"></i>
+                  <div class="label">
+                    <span class="SOLTitle-t4">공공기관 제출용</span>
+                    <span>조달청 적격심사 및 공공기관 <br />입찰 참여를 위한 평가확인서</span>
+                  </div>
+                </label>
+
+                <label class="SOLSelectGroup-label">
+                  <input type="radio" name="serviceGroup2" />
+                  <i class="ico ico-private"></i>
+                  <div class="label">
+                    <span class="SOLTitle-t4">민간기업 제출용</span>
+                    <span>협력업체 등록 및 민간기업 <br />거래 평가를 위한 평가확인서</span>
+                  </div>
+                </label>
+
+                <label class="SOLSelectGroup-label">
+                  <input type="radio" name="serviceGroup2" checked />
+                  <i class="ico ico-own"></i>
+                  <div class="label">
+                    <span class="SOLTitle-t4">자사확인용</span>
+                    <span>내부 관리 및 참고 목적의 평가확인서<br />(외부기관 제출 불가)</span>
+                  </div>
+                </label>
+              </div>
+            </section>
+
+            <div class="box-msg">
+              <p class="msg-warn">
+                자사확인용은 공공기관 및 민간기업 등에<br />
+                <em>제출용</em>으로 사용할 수 없습니다.
+              </p>
+            </div>
+
+            <section class="console-section">
+              <div class="console-section-header">
+                <h3 class="SOLTitle-t3">확인서 유효기간 유의사항</h3>
+              </div>
+
+              <div class="box-msg mb-g3 mt-g2">
+                <div class="msg-terms">
+                  <p>신용평가등급 확인서의 유효기간은 원칙적으로 결제일을 포함하여 1년입니다.</p>
+                  <p>다만, 유효기간은 평가의 기준이 되는 재무제표 결산년월로부터 18개월을 초과할 수 없습니다.</p>
+                  <p>
+                    따라서 결제일이 당기 결산년월로부터 6개월을 초과한 시점에 이루어지는 경우, 유효기간이 1년 미만으로
+                    산정됩니다.
+                  </p>
                 </div>
               </div>
-              <div class="box-msg">
-                <table class="SOLTable-small" title="회사 정보">
-                  <tbody>
-                    <tr>
-                      <th>기업명</th>
-                      <td>(주)테크핀비즈온</td>
-                    </tr>
-                    <tr>
-                      <th>대표자명</th>
-                      <td>김테크</td>
-                    </tr>
-                    <tr>
-                      <th>사업자등록번호</th>
-                      <td>123-88-024545</td>
-                    </tr>
-                    <tr>
-                      <th>개업일</th>
-                      <td>2019-01-01</td>
-                    </tr>
-                    <tr>
-                      <th>업태</th>
-                      <td>서비스업/금융업</td>
-                    </tr>
-                    <tr>
-                      <th>종목</th>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <th>법인등록번호</th>
-                      <td>110111-111222</td>
-                    </tr>
-                    <tr>
-                      <th>사업장소재지</th>
-                      <td>서울시 동작구 사당동 1138-1</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
-
-            <section class="console-section">
-              <div class="console-section-header">
-                <h3 class="SOLTitle-t3">담당자 정보</h3>
-                <p class="desc">정보 수정이 필요하시면 '내 정보 관리' 메뉴에서 수정해 주세요.</p>
-              </div>
-              <div class="box-msg">
-                <table class="SOLTable-small" title="담당자 정보">
-                  <tbody>
-                    <tr>
-                      <th>소속 부서</th>
-                      <td>경영지원실</td>
-                    </tr>
-                    <tr>
-                      <th>이름</th>
-                      <td>김테크</td>
-                    </tr>
-                    <tr>
-                      <th>이메일주소</th>
-                      <td>kimtech@techfinratings.com</td>
-                    </tr>
-                    <tr>
-                      <th>휴대폰 번호</th>
-                      <td>010-1234-5678</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="SOLCheck-root t--terms-md">
+                <label class="SOLCheck-label">
+                  <input type="checkbox" name="" />
+                  <span>위 내용에 동의합니다.</span>
+                </label>
               </div>
             </section>
           </div>
@@ -223,8 +220,7 @@
             </button>
           </div>
           <div class="console-footer-btns">
-            <button type="button" class="SOLBtn-root t--outlined s--lg w--full">이전</button>
-            <button type="button" class="SOLBtn-root t--contained s--lg w--full">다음</button>
+            <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>다음</button>
           </div>
         </div>
       </form>
