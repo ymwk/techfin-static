@@ -504,6 +504,26 @@
     background: url(../image/icon/ic_own.svg) no-repeat center center;
   }
   
+  &-search--w {
+    width: 18px;
+    background: url(../image/icon/ic_search_w.svg) no-repeat center center;
+  }
+  
+  &-share--w {
+    width: 18px;
+    background: url(../image/icon/ic_share_w.svg) no-repeat center center;
+  }
+  
+  &-copy {
+    width: 24px;
+    background: url(../image/icon/ic_copy.svg) no-repeat center center;
+  }
+  
+  &-card {
+    width: 24px;
+    background: url(../image/icon/ic_card.svg) no-repeat center center;
+  }
+  
 }
 
 .SOLBtn-root {

@@ -17,7 +17,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 7px;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
     margin-bottom: 20px;
     border-bottom: solid 1px #bababa33;
 
@@ -40,7 +40,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding-bottom: 5px;
+      padding: 5px 0;
       .title {
         min-width: 75px;
         font-size: var(--font-13);
@@ -60,19 +60,20 @@
           margin-top: -7px;
         }
       }
-      // &:last-child {
-      //   .title {
-      //     &::before {
-      //       background: url('../../Common/image/icon/mb/ic_email.png') no-repeat;
-      //     }
-      //   }
-      // }
+      &:last-child:not(:first-child) {
+        .title {
+          &::before {
+            background-image: url('../../Common/image/icon/mb/ic_email.png')
+          }
+        }
+      }
       .txt {
         font-size: var(--font-13);
         font-weight: 400;
         color: #7b7b7b;
       }
     }
+    a { color: inherit }
   }
 }
 

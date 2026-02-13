@@ -21,45 +21,52 @@
           .swiper-slide {
             width: 100%;
             height: 100%;
-            background: url(../image/landing/landing-first-bnbg01.png) no-repeat
-              top center/cover;
+            background: url(../image/landing/landing-first-bnbg01.png) no-repeat top center/cover;
             background-position: 100% 100%;
             &.nth-02-bg {
-              background: url(../image/landing/landing-first-bnbg02.png)
-                no-repeat top center/cover;
+              background: url(../image/landing/landing-first-bnbg02.png) no-repeat top center/cover;
             }
             &.nth-03-bg {
-              background: url(../image/landing/mb/landing-first-bnbg03.png)
-                no-repeat top center/cover;
+              background: url(../image/landing/mb/landing-first-bnbg03.png) no-repeat top center/cover;
             }
 
             &.nth-04-bg {
-              background: url(../image/landing/landing-first-bnbg04.png)
-                no-repeat;
+              background: url(../image/landing/landing-first-bnbg04.png) no-repeat;
               background-size: cover;
               background-position: 85% 0;
             }
             &.nth-05-bg {
-              background: url(../image/landing/landing-first-bnbg05.png)
-                no-repeat;
+              background: url(../image/landing/landing-first-bnbg05.png) no-repeat;
               background-size: cover;
               background-position: 65% 68px;
             }
             &.nth-06-bg {
-              background: url(../image/landing/landing-first-bnbg06.png)
-                no-repeat;
+              background: url(../image/landing/landing-first-bnbg06.png) no-repeat;
               background-size: cover;
               // @media all and (max-width: 760px) {
               //   background-position: -704px 46px;
               // }
             }
             &.nth-07-bg {
-              background: url(../image/landing/landing-first-bnbg07.png)
-                no-repeat;
+              background: url(../image/landing/landing-first-bnbg07.png) no-repeat;
               background-size: cover;
               // @media all and (max-width: 760px) {
               //   background-position: -547px 0;
               // }
+            }
+            &.nth-08-bg {
+              background: url(../image/event/enterprise/bg_ent_01.png) no-repeat;
+              background-size: cover;
+              .text-active {
+                background-image: linear-gradient(90deg, #9dfaaa 0%, #68def8 100%);
+                background-clip: text;
+                color: transparent;
+                font-weight: 700;
+                font-size: 34px;
+              }
+              .sm-tit {
+                background: none !important;
+              }
             }
 
             div.bn-content {
@@ -122,12 +129,7 @@
                       color: transparent;
                       padding: 0 0 12px 7px;
                       &.event {
-                        background: linear-gradient(
-                          258.88deg,
-                          #009eb6 9.84%,
-                          #08b7af 48.25%,
-                          #39c8b7 86.65%
-                        );
+                        background: linear-gradient(258.88deg, #009eb6 9.84%, #08b7af 48.25%, #39c8b7 86.65%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         color: transparent;
@@ -158,11 +160,7 @@
                   &.gradiation {
                     width: 144px;
                     height: 44px;
-                    background: linear-gradient(
-                      90deg,
-                      #0046ff 0%,
-                      #8e48ff 100%
-                    );
+                    background: linear-gradient(90deg, #0046ff 0%, #8e48ff 100%);
                     border-radius: 24px;
                     span {
                       color: #fff;
@@ -173,8 +171,7 @@
                         content: '';
                         width: 14px;
                         height: 15px;
-                        background: url(../image/landing/ic_arrow_w_btn.png)
-                          no-repeat;
+                        background: url(../image/landing/ic_arrow_w_btn.png) no-repeat;
                         position: absolute;
                         top: 2px;
                       }
@@ -191,8 +188,7 @@
                       content: '';
                       width: 14px;
                       height: 15px;
-                      background: url(../image/landing/ic_arrow_btn.png)
-                        no-repeat center center;
+                      background: url(../image/landing/ic_arrow_btn.png) no-repeat center center;
                       background-size: 10px;
                       position: absolute;
                       top: 2px;
@@ -285,8 +281,7 @@
                     &.crediview-logo {
                       width: 67px;
                       height: 18px;
-                      background: url(../image/landing/bn-c-logo.png) no-repeat
-                        center;
+                      background: url(../image/landing/bn-c-logo.png) no-repeat center;
                       display: block;
                       margin: 0 auto 8px auto;
                     }
@@ -377,6 +372,12 @@
                       transform: translate(-50%, 0px);
                     }
                   }
+                  &.img-custom-st03 {
+                    img {
+                      width: 282px;
+                      transform: translate(-50%, 0px);
+                    }
+                  }
                 }
               }
             }
@@ -405,8 +406,7 @@
                       content: '';
                       width: 14px;
                       height: 15px;
-                      background: url(../image/landing/ic_arrow_w_btn.png)
-                        no-repeat;
+                      background: url(../image/landing/ic_arrow_w_btn.png) no-repeat;
                       position: absolute;
                       top: 2px;
                     }
@@ -424,8 +424,7 @@
                     width: 14px;
                     height: 15px;
                     // background: url(../image/landing/ic_arrow_btn.png)
-                    background: url(../image/landing/ic_arrow_btn.png) no-repeat
-                      center center;
+                    background: url(../image/landing/ic_arrow_btn.png) no-repeat center center;
                     background-size: 10px;
                     position: absolute;
                     top: 2px;
@@ -464,8 +463,7 @@
           button {
             width: 32px;
             height: 32px;
-            background: url(../image/landing/swiper-bn-navbtn.png) no-repeat
-              center;
+            background: url(../image/landing/swiper-bn-navbtn.png) no-repeat center;
             position: absolute;
             top: 50%;
             left: 20px;
@@ -723,11 +721,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.82),
-        rgba(255, 255, 255, 0) 45%
-      );
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0) 45%);
     }
   }
 
@@ -852,8 +846,7 @@
           height: 40px;
           border-radius: 10px;
           border: 1px solid #fff;
-          background: rgba(255, 255, 255, 0.64)
-            url(../image/landing/fourth_icon_05.svg) no-repeat 55% 57%;
+          background: rgba(255, 255, 255, 0.64) url(../image/landing/fourth_icon_05.svg) no-repeat 55% 57%;
           box-shadow: 0 20px 60px rgba(30, 47, 118, 0.15);
           background-size: 48px;
         }
@@ -869,8 +862,7 @@
           height: 52px;
           border-radius: 10px;
           border: 1px solid #fff;
-          background: rgba(255, 255, 255, 0.6)
-            url(../image/landing/fourth_icon_04.svg) no-repeat center center;
+          background: rgba(255, 255, 255, 0.6) url(../image/landing/fourth_icon_04.svg) no-repeat center center;
           box-shadow: 0 20px 60px rgba(30, 47, 118, 0.15);
           background-size: 32px;
         }
@@ -887,11 +879,12 @@
           border-radius: 10px;
           border: 1px solid #fff;
           background-color: rgba(255, 255, 255, 0.6);
-          background-image: url(../image/landing/fourth_icon_08_1.svg),
-            url(../image/landing/fourth_icon_08_2.svg);
+          background-image: url(../image/landing/fourth_icon_08_1.svg), url(../image/landing/fourth_icon_08_2.svg);
           background-size: 30px;
           background-repeat: no-repeat;
-          background-position: center top 33px, center bottom 19px;
+          background-position:
+            center top 33px,
+            center bottom 19px;
           box-shadow: 0 20px 60px rgba(30, 47, 118, 0.15);
         }
       }
@@ -903,8 +896,7 @@
         > * {
           width: 32px;
           height: 32px;
-          background: rgba(134, 225, 252, 0.34)
-            url(../image/landing/fourth_icon_06.svg) no-repeat center center;
+          background: rgba(134, 225, 252, 0.34) url(../image/landing/fourth_icon_06.svg) no-repeat center center;
           background-size: 14px;
           border-radius: 50%;
         }
@@ -917,8 +909,7 @@
         > * {
           width: 39px;
           height: 39px;
-          background: rgba(75, 152, 255, 0.16)
-            url(../image/landing/fourth_icon_07.svg) no-repeat center center;
+          background: rgba(75, 152, 255, 0.16) url(../image/landing/fourth_icon_07.svg) no-repeat center center;
           background-size: 23px;
           border-radius: 50%;
         }
@@ -980,8 +971,7 @@
         > * {
           width: 52px;
           height: 52px;
-          background: rgba(75, 152, 255, 0.3)
-            url(../image/landing/fourth_icon_09.svg) no-repeat center center;
+          background: rgba(75, 152, 255, 0.3) url(../image/landing/fourth_icon_09.svg) no-repeat center center;
           background-size: 21px;
           border-radius: 50%;
           opacity: 0.6;
@@ -1093,8 +1083,7 @@
         right: -37px;
         width: 70px;
         height: 70px;
-        background: url(../image/landing/fourth_badge.png) no-repeat left top /
-          contain;
+        background: url(../image/landing/fourth_badge.png) no-repeat left top / contain;
       }
 
       .logo {
@@ -1104,8 +1093,7 @@
         width: 70px;
         height: 70px;
         border-radius: 20px;
-        background: #0046ff url(../image/logo/logo_crediview_app_w.svg)
-          no-repeat center center / 82%;
+        background: #0046ff url(../image/logo/logo_crediview_app_w.svg) no-repeat center center / 82%;
       }
     }
 
@@ -1137,8 +1125,7 @@
         left: 50%;
         width: 132px;
         height: 132px;
-        background: url(../image/landing/img_wreath.png) no-repeat center center /
-          contain;
+        background: url(../image/landing/img_wreath.png) no-repeat center center / contain;
         transform: translate(-50%, -50%);
       }
     }
@@ -1386,8 +1373,7 @@
           content: '';
           width: 16px;
           height: 16px;
-          background: url(../image/landing/ic-paper-stack-filled-24.png)
-            no-repeat;
+          background: url(../image/landing/ic-paper-stack-filled-24.png) no-repeat;
           background-size: 16px;
           position: absolute;
           top: 0;
@@ -1398,8 +1384,7 @@
           background-size: 16px;
         }
         &:nth-child(3)::before {
-          background: url(../image/landing/ic-doc-increase-filled-24.png)
-            no-repeat;
+          background: url(../image/landing/ic-doc-increase-filled-24.png) no-repeat;
           background-size: 16px;
         }
         span.bold {
@@ -1557,8 +1542,7 @@
             content: '';
             width: 95px;
             height: 77px;
-            background: url('../image/landing/landing-shortcut-img02.png')
-              no-repeat;
+            background: url('../image/landing/landing-shortcut-img02.png') no-repeat;
             position: absolute;
             top: 0;
             right: 0;

@@ -237,7 +237,7 @@
 .msg-list-bullet {
   position: relative;
 
-  li {
+  & > li {
     position: relative;
     padding: 2px 0 2px 8px;
     &::before {
@@ -246,6 +246,14 @@
       left: 0;
       top: 0;
       font-size: var(--font-16);
+    }
+  }
+  
+  ul {
+    padding: 4px 0;
+    
+    li {
+      padding: 1px 0
     }
   }
 

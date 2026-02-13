@@ -435,7 +435,9 @@ textarea {
   --font-40: 2.86rem;
   --font-42: 3rem;
   --font-44: 3.18rem;
+  --font-47: 3.36rem;
   --font-50: 3.57rem;
+  --font-54: 3.86rem;
   --font-60: 4.29rem;
   --font-80: 5.71rem;
   --ease: cubic-bezier(0, 0.75, 0, 1);
@@ -2319,6 +2321,22 @@ button.swiper-pagination-bullet {
   width: 24px;
   background: url(../image/icon/ic_own.svg) no-repeat center center;
 }
+.SOLIcon-search--w {
+  width: 18px;
+  background: url(../image/icon/ic_search_w.svg) no-repeat center center;
+}
+.SOLIcon-share--w {
+  width: 18px;
+  background: url(../image/icon/ic_share_w.svg) no-repeat center center;
+}
+.SOLIcon-copy {
+  width: 24px;
+  background: url(../image/icon/ic_copy.svg) no-repeat center center;
+}
+.SOLIcon-card {
+  width: 24px;
+  background: url(../image/icon/ic_card.svg) no-repeat center center;
+}
 
 .SOLBtn-root .SOLIcon-gt--u::after, .SOLBtn-root .SOLIcon-gt--r::after, .SOLBtn-root .SOLIcon-gt--d::after, .SOLBtn-root .SOLIcon-gt--l::after {
   width: 8px;
@@ -2604,9 +2622,12 @@ button.swiper-pagination-bullet {
   background: var(--gra);
 }
 .SOLBtn-root.t--contained.c--kakao {
-  background: #FADF34;
+  background: #fadf34;
   color: #000;
   font-weight: 700 !important;
+}
+.SOLBtn-root.t--contained.c--enter {
+  background: linear-gradient(258.88deg, #009eb6 9.84%, #08b7af 48.25%, #39c8b7 86.65%);
 }
 .SOLBtn-root.t--outlined {
   color: var(--c-active);
@@ -2794,7 +2815,7 @@ button.swiper-pagination-bullet {
   display: flex;
   padding: 4px;
   border-radius: 8px;
-  background-color: #F5F6F9;
+  background-color: #f5f6f9;
 }
 .SOLGroupBtn-root button {
   flex: 1 0 auto;
@@ -6322,16 +6343,22 @@ table .SOLCheck-root {
 .msg-list-bullet {
   position: relative;
 }
-.msg-list-bullet li {
+.msg-list-bullet > li {
   position: relative;
   padding: 2px 0 2px 8px;
 }
-.msg-list-bullet li::before {
+.msg-list-bullet > li::before {
   content: "·";
   position: absolute;
   left: 0;
   top: 0;
   font-size: var(--font-16);
+}
+.msg-list-bullet ul {
+  padding: 4px 0;
+}
+.msg-list-bullet ul li {
+  padding: 1px 0;
 }
 .msg-list-bullet.s--md {
   font-size: var(--font-14);

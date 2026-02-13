@@ -15,7 +15,9 @@
   white-space: nowrap;
   color: var(--fc-default);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 
   &:focus,
   &:active {
@@ -59,13 +61,17 @@
       }
 
       &.c--gra {
-        background: var(--gra)
+        background: var(--gra);
       }
 
       &.c--kakao {
-        background: #FADF34;
+        background: #fadf34;
         color: #000;
-        font-weight: 700 !important
+        font-weight: 700 !important;
+      }
+
+      &.c--enter {
+        background: linear-gradient(258.88deg, #009eb6 9.84%, #08b7af 48.25%, #39c8b7 86.65%);
       }
     }
 
@@ -178,7 +184,9 @@
   background-color: transparent;
   font-size: var(--font-14);
   white-space: nowrap;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
   color: inherit;
 
   &.s {
@@ -187,7 +195,7 @@
     }
     &--sm {
       font-size: var(--font-12);
-      gap: 0
+      gap: 0;
     }
   }
 
@@ -240,7 +248,7 @@
 }
 
 .loginbox-terms-list .SOLIconBtn-root {
-  min-height: unset
+  min-height: unset;
 }
 
 .SOLCard-item.t--submit {
@@ -258,7 +266,9 @@
   font-size: var(--font-13);
   text-decoration: underline;
   color: var(--fc-gray1);
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
   white-space: nowrap;
   font-weight: 500;
 
@@ -324,7 +334,7 @@
   display: flex;
   padding: 4px;
   border-radius: 8px;
-  background-color: #F5F6F9;
+  background-color: #f5f6f9;
 
   button {
     flex: 1 0 auto;
@@ -333,7 +343,7 @@
     font-size: 14px;
     color: var(--fc-gray2);
     font-weight: 500;
-    transition: .2s;
+    transition: 0.2s;
 
     &.st--active {
       background-color: #fff;
