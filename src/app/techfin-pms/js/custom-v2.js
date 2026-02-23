@@ -126,6 +126,21 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+  
+  const notifyBtn = document.querySelector('.global-btn-notify');
+  if (notifyBtn) {
+    notifyBtn.querySelector('.btn-notify').addEventListener('click', (e) => {
+      e.stopPropagation();
+      notifyBtn.classList.toggle('ac--active');
+    });
+
+    // 바깥 영역 닫기
+    document.addEventListener('click', (e) => {
+      if (!notifyBtn.contains(e.target)) {
+        notifyBtn.classList.remove('ac--active');
+      }
+    });
+  }
 
   // tab
   const tabs = document.querySelectorAll('.tabmenu-btn');

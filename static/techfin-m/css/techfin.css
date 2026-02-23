@@ -1204,7 +1204,6 @@ hr {
   transition: border-color 0.2s;
   color: var(--fc-default);
   text-align: left;
-  padding-right: 40px;
 }
 .TMCombobox-button:not(button):-moz-read-only {
   background-color: var(--form-c-bg-dis);
@@ -1237,6 +1236,9 @@ hr {
 .TMCombobox-button::placeholder {
   color: var(--form-c-text-dis);
   opacity: 1;
+}
+.TMCombobox-button {
+  padding-right: 40px;
 }
 .TMCombobox-button::after {
   content: "";
@@ -1317,13 +1319,14 @@ hr {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
   animation: fadeIn 0.5s;
-  position: fixed;
-  inset: 0;
 }
 .TMSnackbar-backdrop.t--blur {
   background-color: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.TMSnackbar-backdrop {
+  position: fixed;
+  inset: 0;
 }
 
 .TMSnackbar-box {
@@ -1805,8 +1808,7 @@ table .TMCheck-root {
 }
 .TMAlert-backdrop.t--blur {
   background-color: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 
 .TMAlert-box {

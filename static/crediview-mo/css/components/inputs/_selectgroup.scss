@@ -29,6 +29,28 @@
     }
   }
 
+  &.t--revers {
+    .SOLSelectGroup-label {
+      padding-right: 60px;
+      font-size: var(--font-12);
+
+      .label {
+        min-width: 0;
+      }
+      
+      .SOLTitle-t4 {
+        line-height: 1.3;
+      }
+
+      input[type='radio'] {
+        position: absolute;
+        top: 50%;
+        right: 18px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
   .SOLCombobox-root {
     width: unset;
     flex-grow: 1;
@@ -105,7 +127,7 @@
     flex-direction: column;
     gap: 3px;
     color: var(--fc-gray1);
-    line-height: 1.2
+    line-height: 1.2;
   }
 
   .ico {

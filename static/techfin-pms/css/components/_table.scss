@@ -110,7 +110,7 @@
   }
 
   thead th:not(:has(> .tit)) {
-    border-left: 1px solid #e8e8eb;
+    border-left: 1px solid var(--c-border2);
   }
 
   tfoot th {
@@ -606,7 +606,7 @@
   display: flex;
   padding: 16px;
   border-radius: 8px;
-  border: 1px solid #e8e8eb;
+  border: 1px solid var(--c-border2);
   font-size: 13px;
   color: #8b8b8f;
 
@@ -620,7 +620,7 @@
     flex-grow: 1;
 
     &:not(:first-of-type) {
-      border-left: 1px solid #e8e8eb;
+      border-left: 1px solid var(--c-border2);
     }
   }
 

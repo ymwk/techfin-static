@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <title>크레디뷰</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, interactive-widget=resizes-content"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="/static/crediview-mo/css/crediview.css" />
+  </head>
+  <body>
+    <div class="SOLFullpage-root">
+      <div class="SOLFullpage-header">
+        <h2 class="SOLTitle-t2">기업명으로 조회하기</h2>
+        <button type="button" class="SOLIconBtn-root">
+          <i class="SOLIcon-root SOLIcon-close s--lg"></i>
+          <span class="blind">닫기</span>
+        </button>
+      </div>
+
+      <div class="SOLFullpage-container">
+        <div class="section-outer pt-g2">
+          <label class="SOLInput-root">
+            <div class="SOLInput-fbox">
+              <div class="SOLInput-box">
+                <input
+                  class="SOLInput-field"
+                  placeholder="2글자 이상의 기업명을 입력하세요."
+                  value="테크"
+                  name="noBiz"
+                />
+                <span class="SOLInput-wrap">
+                  <span class="SOLInput-wrap--hidden">
+                    <button tabindex="-1" type="button" class="SOLInput-btn SOLIcon-close">
+                      <span class="blind">Del</span>
+                    </button>
+                  </span>
+                  <span class="SOLInput-wrap--btn">
+                    <button type="button" class="SOLIconBtn-root">
+                      <i class="SOLIcon-root SOLIcon-search"></i>
+                      <span class="blind">Search</span>
+                    </button>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </label>
+        </div>
+        <!-- //section-outer -->
+
+        <div class="content-empty ic--noresult">
+          <p>
+            검색결과가 너무 많습니다.<br>
+            <small>기업명을 조금 더 구체적으로 입력해 주세요.</small>
+          </p>
+        </div>
+      </div>
+      <!-- SOLFullpage-container -->
+
+      <div class="SOLFullpage-footer">
+        <div class="footer-btns">
+          <button type="button" class="SOLBtn-root t--contained s--lg w--full" disabled>선택</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

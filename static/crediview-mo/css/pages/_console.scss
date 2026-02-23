@@ -51,7 +51,11 @@
 
   &:has(.footer-floating) {
     // margin-top: 40px;
-    min-height: 110px
+    min-height: 110px;
+    
+    .console-footer-btns {
+      margin-top: 110px
+    }
   }
 
   &.footer-intro {
@@ -73,7 +77,7 @@
   position: relative;
   display: flex;
   gap: 8px;
-  margin: 110px 0 34px;
+  margin: 20px 0 34px;
 
   .SOLBtn-root.w--full .SOLIcon-gt--r {
     margin: 0 -5px;
