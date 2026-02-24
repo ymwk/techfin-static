@@ -1,10 +1,18 @@
-.global-btn-notify.ac--active {
-  .notify-popper {
-    visibility: visible;
-    pointer-events: auto;
-    opacity: 1;
-    z-index: 99;
+.global-btn-notify,
+.global-btn-apps {
+  &.ac--active {
+    .notify-popper {
+      visibility: visible;
+      pointer-events: auto;
+      opacity: 1;
+      z-index: 99;
+    }
   }
+}
+
+.global-btn-apps .notify-popper {
+  width: 284px;
+  padding: 16px;
 }
 
 .notify-popper {
@@ -13,6 +21,7 @@
   top: calc(100% + 8px);
   right: 0;
   width: 510px;
+  min-height: 200px;
   border-radius: 16px;
   background-color: #fff;
   box-shadow: 0 3px 6px #00000029;
@@ -90,6 +99,18 @@
       border: 1px solid var(--c-border2);
       border-radius: 8px;
       transition: background-color 0.3s;
+      
+      &:has(>a) {
+        padding: 0;
+      }
+
+      & > a {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        color: inherit;
+        padding: 16px 16px 14px 70px;
+      }
 
       &:hover,
       &.ac--new {
@@ -100,7 +121,7 @@
         color: inherit;
       }
 
-      &:has(.notify-icon) {
+      &:has(.notify-icon):not(:has(a)) {
         padding-left: 70px;
       }
     }
@@ -139,12 +160,15 @@
     height: 36px;
     border-radius: 50%;
     overflow: hidden;
-    
+
     &.i--notify-user {
-      background: url(../image/icon/ic_noti_user.svg) no-repeat center center / cover
+      background: url(../image/icon/ic_noti_user.svg) no-repeat center center / cover;
     }
     &.i--notify-company {
-      background: url(../image/icon/ic_noti_company.svg) no-repeat center center / cover
+      background: url(../image/icon/ic_noti_company.svg) no-repeat center center / cover;
+    }
+    &.i--notify-monitoring {
+      background: url(../image/icon/ic_noti_monitoring.svg) no-repeat center center / cover;
     }
   }
 
@@ -177,5 +201,20 @@
     line-height: 1.4;
     font-weight: 400;
     color: #4f4f55;
+  }
+
+  &-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+    font-size: 16px;
+    color: #8b8b8f;
+    text-align: center;
+
+    .msg {
+      padding-top: 72px;
+      background: url(../image/icon/ic_notify_empty.svg) no-repeat center top;
+    }
   }
 }

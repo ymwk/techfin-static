@@ -37,10 +37,31 @@
 
   .logo {
     position: relative;
-    width: 82px;
-    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     color: transparent;
-    background: url(../image/logo/bi_monitoring.png) no-repeat left center / contain;
+    width: 187px;
+    height: 16px;
+    background: url(../image/logo/bi_monitoring.svg) no-repeat left center / contain;
+  }
+
+  .crediview {
+    width: 98px;
+    height: 16px;
+    background: url(../image/logo/bi_crediview.svg) no-repeat left center / contain;
+  }
+
+  .monitoring {
+    width: 82px;
+    height: 15px;
+    background: url(../image/logo/bi_monitoring2.svg) no-repeat left center / contain;
+  }
+
+  .db {
+    width: 182px;
+    height: 16px;
+    background: url(../image/logo/bi_db.png) no-repeat left center / contain;
   }
 }
 
@@ -54,7 +75,8 @@
   position: relative;
   z-index: 91;
   display: flex;
-  gap: 100px;
+  gap: 40px;
+  margin: 0 auto;
 
   .nav-btn {
     display: inline-flex;
@@ -125,6 +147,7 @@
   align-items: center;
   margin-left: auto;
   gap: 10px;
+  height: 100%;
   font-size: 14px;
   font-weight: 500;
 
@@ -132,7 +155,7 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 15px;
+    gap: 6px;
     height: 100%;
 
     .btn-global {
@@ -149,6 +172,15 @@
         color: #3b5dfb;
       }
     }
+
+    .btn-icon,
+    .btn-user {
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #f1f1f3;
+      }
+    }
   }
 }
 
@@ -156,6 +188,7 @@
   z-index: 1;
   position: relative;
   font-size: 13px;
+  margin: 0 6px;
 
   & > * {
     position: relative;
@@ -164,7 +197,7 @@
   &.ac--active {
     .global-user-menu {
       opacity: 1;
-      max-height: 300px;
+      max-height: 400px;
       visibility: visible;
     }
 
@@ -184,14 +217,15 @@
     display: inline-flex;
     align-items: center;
     height: 32px;
-    padding-right: 20px;
+    padding-right: 30px;
+    border-radius: 6px;
     color: inherit;
     font-weight: 400;
 
     &::after {
       content: '';
       position: absolute;
-      right: 0;
+      right: 8px;
       top: 50%;
       margin-top: -2px;
       border-style: solid;
@@ -204,7 +238,7 @@
 
 .global-user-menu {
   position: absolute;
-  inset: -12px -20px auto;
+  inset: -12px -16px auto;
   padding: 52px 16px 8px;
   border-radius: 16px;
   background: #fff;
@@ -223,6 +257,37 @@
     height: 30px;
     gap: 6px;
     padding: 0 8px;
+  }
+}
+
+.user-menu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid #f1f1f3;
+  font-size: 16px;
+  padding: 12px 0 8px;
+
+  .info-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .info-detail-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .company {
+    color: #75757a;
+  }
+
+  .time {
+    color: var(--c-primary);
   }
 }
 
@@ -254,7 +319,7 @@
 }
 
 .global-btn-notify {
-  .btn-notify {
+  .btn-popper {
     position: relative;
     width: 32px;
     height: 32px;
@@ -272,4 +337,31 @@
       line-height: 1;
     }
   }
+}
+
+.console-header-search {
+  position: relative;
+  margin: auto;
+  display: flex;
+  width: 568px;
+
+  .textfield-form {
+    background-color: #f9f9f9;
+    padding-left: 34px;
+  }
+
+  .icon-comm {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    margin-top: -7px;
+    width: 15px;
+  }
+}
+
+.global-apps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

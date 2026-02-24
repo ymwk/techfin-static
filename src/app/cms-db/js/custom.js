@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // header
-  const globalBtns = document.querySelectorAll('.global-btn-user, .global-btn-notify');
+  const globalBtns = document.querySelectorAll('.global-btn-user, .global-btn-notify, .global-btn-apps');
 
   globalBtns.forEach((wrapper) => {
     const btn = wrapper.querySelector('.btn-popper');

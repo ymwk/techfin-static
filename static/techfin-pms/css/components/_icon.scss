@@ -15,6 +15,7 @@
   height: 18px;
   background-image: url(../image/icon/ic_search.svg);
   background-position-y: top;
+  background-size: contain
 }
 .i--search-w {
   height: 14px;
@@ -148,6 +149,18 @@
 .i--set {
   width: 24px;
   background-image: url(../image/icon/ic_set.svg);
+}
+.i--filter {
+  width: 24px;
+  background-image: url(../image/icon/ic_filter.svg);
+}
+.i--apps {
+  width: 24px;
+  background-image: url(../image/icon/ic_apps.svg);
+}
+.i--globe {
+  width: 18px;
+  background-image: url(../image/icon/ic_globe.svg);
 }
 
 .i--plus,

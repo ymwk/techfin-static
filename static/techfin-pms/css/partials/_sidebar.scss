@@ -30,6 +30,12 @@
     width: var(--w-fold);
     background: #1c3bdb;
   }
+  
+  &.st--db {
+    &::before {
+      background-color: #212126;
+    }
+  }
 }
 
 .sidebar-posistion {

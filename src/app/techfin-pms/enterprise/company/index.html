@@ -83,7 +83,7 @@
               <div class="console-header-global">
                 <div class="global-btns">
                   <div class="global-btn-user">
-                    <button type="button" class="btn-user">
+                    <button type="button" class="btn-user btn-popper">
                       <i class="icon-comm i--user"></i>
                       <span>kimtech@techfinratings.com</span>
                     </button>
@@ -128,8 +128,8 @@
                     </div>
                   </div>
 
-                  <div class="global-btn-notify ac--active">
-                    <button type="button" class="btn-icon btn-notify">
+                  <div class="global-btn-notify">
+                    <button type="button" class="btn-icon btn-popper">
                       <i class="icon-comm i--bell"></i>
                       <span class="blind">알림</span>
                       <span class="badge">14</span>
@@ -143,118 +143,134 @@
                         </button>
                       </div>
                       <div class="notify-cont">
-                        <div class="notify-section">
-                          <div class="notify-tit">
-                            <h4 class="font-h4">최근 알림을 확인해 주세요.</h4>
-                            <small>(표시 기준: 최근 6개월)</small>
-                            <div class="btns">
-                              <button type="button" class="btn-comm">모두 읽음</button>
-                              <button type="button" class="btn-comm">모두 삭제</button>
-                            </div>
-                          </div>
-                          <div class="notify-body">
-                            <ul class="notify-list">
-                              <li class="ac--new">
-                                <button type="button" class="btn-icon notify-close">
-                                  <i class="icon-comm i--close s--sm"></i>
-                                  <span class="blind">Close</span>
-                                </button>
-                                <i class="notify-icon i--notify-user"></i>
-                                <div class="notify-item-tit">회원등급 변경 요청<small>1시간 전</small></div>
-                                <div class="notify-item-cont">
-                                  <p class="desc">인증서 등록이 완료되었습니다.</p>
-                                </div>
-                              </li>
-
-                              <li class="ac--new">
-                                <button type="button" class="btn-icon notify-close">
-                                  <i class="icon-comm i--close s--sm"></i>
-                                  <span class="blind">Close</span>
-                                </button>
-                                <i class="notify-icon i--notify-user"></i>
-                                <div class="notify-item-tit">회원등급 변경 완료<small>2시간 전</small></div>
-                                <div class="notify-item-cont">
-                                  <p class="desc">회원등급 변경 승인이 완료되었습니다. (이전등급 -> 변경등급)</p>
-                                </div>
-                              </li>
-
-                              <li>
-                                <button type="button" class="btn-icon notify-close">
-                                  <i class="icon-comm i--close s--sm"></i>
-                                  <span class="blind">Close</span>
-                                </button>
-                                <i class="notify-icon i--notify-user"></i>
-                                <div class="notify-item-tit">마스터 관리자 권한 위임<small>3일전</small></div>
-                                <div class="notify-item-cont">
-                                  <p class="desc">마스터관리자가 김테크님으로 변경되었습니다.</p>
-                                </div>
-                              </li>
-
-                              <li>
-                                <button type="button" class="btn-icon notify-close">
-                                  <i class="icon-comm i--close s--sm"></i>
-                                  <span class="blind">Close</span>
-                                </button>
-                                <i class="notify-icon i--notify-company"></i>
-                                <div class="notify-item-tit">EWS 등급 정보 변경<small>2024년 5월 30일</small></div>
-                                <div class="notify-item-cont">
-                                  <p class="desc">크레디뷰의 EWS 등급 정보가 변경되었습니다.</p>
-                                </div>
-                              </li>
-
-                              <li>
-                                <button type="button" class="btn-icon notify-close">
-                                  <i class="icon-comm i--close s--sm"></i>
-                                  <span class="blind">Close</span>
-                                </button>
-                                <i class="notify-icon i--notify-company"></i>
-                                <div class="notify-item-tit">실시간 등급 정보 변경<small>2024년 4월 30일</small></div>
-                                <div class="notify-item-cont">
-                                  <p class="desc">
-                                    크레디뷰의 실시간 등급 정보가 변경되었습니다.크레디뷰의 실시간 등급 정보가
-                                    변경되었습니다.크레디뷰의 실시간 등급 정보가 변경되었습니다.크레디뷰의 실시간 등급
-                                    정보가 변경되었습니다.
-                                  </p>
-                                </div>
-                              </li>
-
-                              <li>
-                                <button type="button" class="btn-icon notify-close">
-                                  <i class="icon-comm i--close s--sm"></i>
-                                  <span class="blind">Close</span>
-                                </button>
-                                <i class="notify-icon i--notify-user"></i>
-                                <div class="notify-item-tit">인증서 유효기간 만료<small>2024년 2월 21일</small></div>
-                                <div class="notify-item-cont">
-                                  <p class="desc">
-                                    공동인증서가 만료되었습니다. 공동인증서를 재등록 해주시기 바랍니다.
-                                  </p>
-                                </div>
-                              </li>
-
-                              <li>
-                                <button type="button" class="btn-icon notify-close">
-                                  <i class="icon-comm i--close s--sm"></i>
-                                  <span class="blind">Close</span>
-                                </button>
-                                <i class="notify-icon i--notify-user"></i>
-                                <div class="notify-item-tit">
-                                  인증서 유효기간 만료 예정<small>2024년 2월 21일</small>
-                                </div>
-                                <div class="notify-item-cont">
-                                  <p class="desc">공동인증서가 30일 후 만료될 예정입니다.</p>
-                                </div>
-                              </li>
-                            </ul>
+                        <div class="notify-tit">
+                          <h4 class="font-h4">최근 알림을 확인해 주세요.</h4>
+                          <small>(표시 기준: 최근 6개월)</small>
+                          <div class="btns">
+                            <button type="button" class="btn-comm">모두 읽음</button>
+                            <button type="button" class="btn-comm">모두 삭제</button>
                           </div>
                         </div>
-                        <!-- notify-section end -->
+                        <!-- 알림 내역 있음 -->
+                        <div class="notify-body">
+                          <ul class="notify-list">
+                            <li class="ac--new">
+                              <button type="button" class="btn-icon notify-close">
+                                <i class="icon-comm i--close s--sm"></i>
+                                <span class="blind">Close</span>
+                              </button>
+                              <i class="notify-icon i--notify-user"></i>
+                              <div class="notify-item-tit">회원등급 변경 요청<small>1시간 전</small></div>
+                              <div class="notify-item-cont">
+                                <p class="desc">인증서 등록이 완료되었습니다.</p>
+                              </div>
+                            </li>
+
+                            <li class="ac--new">
+                              <button type="button" class="btn-icon notify-close">
+                                <i class="icon-comm i--close s--sm"></i>
+                                <span class="blind">Close</span>
+                              </button>
+                              <i class="notify-icon i--notify-user"></i>
+                              <div class="notify-item-tit">회원등급 변경 완료<small>2시간 전</small></div>
+                              <div class="notify-item-cont">
+                                <p class="desc">회원등급 변경 승인이 완료되었습니다. (이전등급 -> 변경등급)</p>
+                              </div>
+                            </li>
+
+                            <li>
+                              <button type="button" class="btn-icon notify-close">
+                                <i class="icon-comm i--close s--sm"></i>
+                                <span class="blind">Close</span>
+                              </button>
+                              <i class="notify-icon i--notify-user"></i>
+                              <div class="notify-item-tit">마스터 관리자 권한 위임<small>3일전</small></div>
+                              <div class="notify-item-cont">
+                                <p class="desc">마스터관리자가 김테크님으로 변경되었습니다.</p>
+                              </div>
+                            </li>
+
+                            <li>
+                              <button type="button" class="btn-icon notify-close">
+                                <i class="icon-comm i--close s--sm"></i>
+                                <span class="blind">Close</span>
+                              </button>
+                              <i class="notify-icon i--notify-company"></i>
+                              <div class="notify-item-tit">EWS 등급 정보 변경<small>2024년 5월 30일</small></div>
+                              <div class="notify-item-cont">
+                                <p class="desc">크레디뷰의 EWS 등급 정보가 변경되었습니다.</p>
+                              </div>
+                            </li>
+
+                            <li>
+                              <button type="button" class="btn-icon notify-close">
+                                <i class="icon-comm i--close s--sm"></i>
+                                <span class="blind">Close</span>
+                              </button>
+                              <i class="notify-icon i--notify-company"></i>
+                              <div class="notify-item-tit">실시간 등급 정보 변경<small>2024년 4월 30일</small></div>
+                              <div class="notify-item-cont">
+                                <p class="desc">
+                                  크레디뷰의 실시간 등급 정보가 변경되었습니다.크레디뷰의 실시간 등급 정보가
+                                  변경되었습니다.크레디뷰의 실시간 등급 정보가 변경되었습니다.크레디뷰의 실시간 등급
+                                  정보가 변경되었습니다.
+                                </p>
+                              </div>
+                            </li>
+
+                            <li>
+                              <button type="button" class="btn-icon notify-close">
+                                <i class="icon-comm i--close s--sm"></i>
+                                <span class="blind">Close</span>
+                              </button>
+                              <i class="notify-icon i--notify-user"></i>
+                              <div class="notify-item-tit">인증서 유효기간 만료<small>2024년 2월 21일</small></div>
+                              <div class="notify-item-cont">
+                                <p class="desc">공동인증서가 만료되었습니다. 공동인증서를 재등록 해주시기 바랍니다.</p>
+                              </div>
+                            </li>
+
+                            <li>
+                              <button type="button" class="btn-icon notify-close">
+                                <i class="icon-comm i--close s--sm"></i>
+                                <span class="blind">Close</span>
+                              </button>
+                              <i class="notify-icon i--notify-user"></i>
+                              <div class="notify-item-tit">인증서 유효기간 만료 예정<small>2024년 2월 21일</small></div>
+                              <div class="notify-item-cont">
+                                <p class="desc">공동인증서가 10일 후 만료될 예정입니다.</p>
+                              </div>
+                            </li>
+
+                            <li>
+                              <button type="button" class="btn-icon notify-close">
+                                <i class="icon-comm i--close s--sm"></i>
+                                <span class="blind">Close</span>
+                              </button>
+                              <i class="notify-icon i--notify-user"></i>
+                              <div class="notify-item-tit">인증서 유효기간 만료 예정<small>2024년 2월 1일</small></div>
+                              <div class="notify-item-cont">
+                                <p class="desc">공동인증서가 30일 후 만료될 예정입니다.</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- // notify-body -->
+
+                        <!-- 알림 내역 없음 
+                        <div class="notify-empty">
+                          <p class="msg">최근 6개월간 표시할 알림이 없습니다.</p>
+                        </div> -->
                       </div>
+                      <!-- // notify-cont -->
                     </div>
-                    <!-- notify end -->
+                    <!-- // notify-popper -->
                   </div>
+                  <!-- // global-btn-notify -->
                 </div>
+                <!-- // global-btns -->
               </div>
+              <!-- // console-header-global -->
             </nav>
           </div>
         </header>

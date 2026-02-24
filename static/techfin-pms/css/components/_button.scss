@@ -2,7 +2,8 @@
 .btn-contained,
 .btn-outlined,
 .btn-cta,
-.btn-link {
+.btn-link,
+.btn-round {
   flex-shrink: 0;
   display: inline-flex;
   justify-content: center;
@@ -167,7 +168,8 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  color: inherit
+  border-radius: 6px;
+  color: inherit;
 }
 
 .btn-text {
@@ -181,8 +183,19 @@
 
   .underline {
     display: inline-block;
-    line-height: 1.1em;
+    line-height: 1.05em;
     border-bottom: 1px solid currentColor;
+  }
+
+  .hoverline {
+    display: inline-block;
+    line-height: 1.05em;
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s;
+  }
+
+  &:has(.hoverline):hover .hoverline {
+    border-color: currentColor;
   }
 }
 
@@ -194,6 +207,11 @@
     margin-left: auto;
     color: var(--c-gray2);
   }
+}
+
+.btn-round {
+  border-radius: 32px;
+  border: 1px solid #d4d4d9;
 }
 
 .btn-more {

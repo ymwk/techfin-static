@@ -1239,7 +1239,8 @@ img {
 .btn-contained,
 .btn-outlined,
 .btn-cta,
-.btn-link {
+.btn-link,
+.btn-round {
   flex-shrink: 0;
   display: inline-flex;
   justify-content: center;
@@ -1259,7 +1260,8 @@ img {
 .btn-contained:disabled,
 .btn-outlined:disabled,
 .btn-cta:disabled,
-.btn-link:disabled {
+.btn-link:disabled,
+.btn-round:disabled {
   color: #b1b1b4;
   border: 1px solid var(--c-border2);
   background-color: #f9f9f9;
@@ -1270,7 +1272,8 @@ img {
 .btn-contained.s--sm,
 .btn-outlined.s--sm,
 .btn-cta.s--sm,
-.btn-link.s--sm {
+.btn-link.s--sm,
+.btn-round.s--sm {
   min-width: 50px;
   height: 26px;
   padding: 0 5px;
@@ -1280,21 +1283,24 @@ img {
 .btn-contained.s--lg,
 .btn-outlined.s--lg,
 .btn-cta.s--lg,
-.btn-link.s--lg {
+.btn-link.s--lg,
+.btn-round.s--lg {
   min-width: 90px;
 }
 .btn-comm:has(.icon-comm),
 .btn-contained:has(.icon-comm),
 .btn-outlined:has(.icon-comm),
 .btn-cta:has(.icon-comm),
-.btn-link:has(.icon-comm) {
+.btn-link:has(.icon-comm),
+.btn-round:has(.icon-comm) {
   padding: 0 12px;
 }
 .btn-comm .icon-comm,
 .btn-contained .icon-comm,
 .btn-outlined .icon-comm,
 .btn-cta .icon-comm,
-.btn-link .icon-comm {
+.btn-link .icon-comm,
+.btn-round .icon-comm {
   min-width: 20px;
   margin-left: -4px;
 }
@@ -1306,7 +1312,9 @@ img {
 .btn-cta:has(.icon-comm:only-child),
 .btn-cta:has(.blind),
 .btn-link:has(.icon-comm:only-child),
-.btn-link:has(.blind) {
+.btn-link:has(.blind),
+.btn-round:has(.icon-comm:only-child),
+.btn-round:has(.blind) {
   width: 40px;
   padding: 0;
 }
@@ -1318,7 +1326,9 @@ img {
 .btn-cta:has(.icon-comm:only-child) .icon-comm,
 .btn-cta:has(.blind) .icon-comm,
 .btn-link:has(.icon-comm:only-child) .icon-comm,
-.btn-link:has(.blind) .icon-comm {
+.btn-link:has(.blind) .icon-comm,
+.btn-round:has(.icon-comm:only-child) .icon-comm,
+.btn-round:has(.blind) .icon-comm {
   margin-left: 0;
 }
 
@@ -1398,6 +1408,7 @@ img {
   justify-content: center;
   width: 32px;
   height: 32px;
+  border-radius: 6px;
   color: inherit;
 }
 
@@ -1412,8 +1423,17 @@ img {
 }
 .btn-text .underline {
   display: inline-block;
-  line-height: 1.1em;
+  line-height: 1.05em;
   border-bottom: 1px solid currentColor;
+}
+.btn-text .hoverline {
+  display: inline-block;
+  line-height: 1.05em;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.btn-text:has(.hoverline):hover .hoverline {
+  border-color: currentColor;
 }
 
 .btn-link {
@@ -1423,6 +1443,11 @@ img {
 .btn-link .utils {
   margin-left: auto;
   color: var(--c-gray2);
+}
+
+.btn-round {
+  border-radius: 32px;
+  border: 1px solid #d4d4d9;
 }
 
 .btn-more {
@@ -1641,6 +1666,7 @@ img {
   height: 18px;
   background-image: url(../image/icon/ic_search.svg);
   background-position-y: top;
+  background-size: contain;
 }
 
 .i--search-w {
@@ -1806,6 +1832,21 @@ img {
 .i--set {
   width: 24px;
   background-image: url(../image/icon/ic_set.svg);
+}
+
+.i--filter {
+  width: 24px;
+  background-image: url(../image/icon/ic_filter.svg);
+}
+
+.i--apps {
+  width: 24px;
+  background-image: url(../image/icon/ic_apps.svg);
+}
+
+.i--globe {
+  width: 18px;
+  background-image: url(../image/icon/ic_globe.svg);
 }
 
 .i--plus,
@@ -2644,6 +2685,10 @@ img {
   font-size: 12px;
   font-weight: 400;
 }
+.tooltip-box .msg {
+  font-size: 13px;
+  font-weight: 400;
+}
 .tooltip-box ul {
   padding-left: 16px;
 }
@@ -2889,6 +2934,9 @@ img {
 }
 .searchbox-item .combobox-btn {
   min-width: 160px;
+}
+.searchbox-item .textfield-root {
+  max-width: 640px;
 }
 
 .searchbox-label {

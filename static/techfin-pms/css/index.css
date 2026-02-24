@@ -2057,7 +2057,8 @@ button.swiper-pagination-bullet {
 .btn-contained,
 .btn-outlined,
 .btn-cta,
-.btn-link {
+.btn-link,
+.btn-round {
   flex-shrink: 0;
   display: inline-flex;
   justify-content: center;
@@ -2077,7 +2078,8 @@ button.swiper-pagination-bullet {
 .btn-contained:disabled,
 .btn-outlined:disabled,
 .btn-cta:disabled,
-.btn-link:disabled {
+.btn-link:disabled,
+.btn-round:disabled {
   color: #b1b1b4;
   border: 1px solid var(--c-border2);
   background-color: #f9f9f9;
@@ -2088,7 +2090,8 @@ button.swiper-pagination-bullet {
 .btn-contained.s--sm,
 .btn-outlined.s--sm,
 .btn-cta.s--sm,
-.btn-link.s--sm {
+.btn-link.s--sm,
+.btn-round.s--sm {
   min-width: 50px;
   height: 26px;
   padding: 0 5px;
@@ -2098,21 +2101,24 @@ button.swiper-pagination-bullet {
 .btn-contained.s--lg,
 .btn-outlined.s--lg,
 .btn-cta.s--lg,
-.btn-link.s--lg {
+.btn-link.s--lg,
+.btn-round.s--lg {
   min-width: 90px;
 }
 .btn-comm:has(.icon-comm),
 .btn-contained:has(.icon-comm),
 .btn-outlined:has(.icon-comm),
 .btn-cta:has(.icon-comm),
-.btn-link:has(.icon-comm) {
+.btn-link:has(.icon-comm),
+.btn-round:has(.icon-comm) {
   padding: 0 12px;
 }
 .btn-comm .icon-comm,
 .btn-contained .icon-comm,
 .btn-outlined .icon-comm,
 .btn-cta .icon-comm,
-.btn-link .icon-comm {
+.btn-link .icon-comm,
+.btn-round .icon-comm {
   min-width: 20px;
   margin-left: -4px;
 }
@@ -2124,7 +2130,9 @@ button.swiper-pagination-bullet {
 .btn-cta:has(.icon-comm:only-child),
 .btn-cta:has(.blind),
 .btn-link:has(.icon-comm:only-child),
-.btn-link:has(.blind) {
+.btn-link:has(.blind),
+.btn-round:has(.icon-comm:only-child),
+.btn-round:has(.blind) {
   width: 40px;
   padding: 0;
 }
@@ -2136,7 +2144,9 @@ button.swiper-pagination-bullet {
 .btn-cta:has(.icon-comm:only-child) .icon-comm,
 .btn-cta:has(.blind) .icon-comm,
 .btn-link:has(.icon-comm:only-child) .icon-comm,
-.btn-link:has(.blind) .icon-comm {
+.btn-link:has(.blind) .icon-comm,
+.btn-round:has(.icon-comm:only-child) .icon-comm,
+.btn-round:has(.blind) .icon-comm {
   margin-left: 0;
 }
 
@@ -2216,6 +2226,7 @@ button.swiper-pagination-bullet {
   justify-content: center;
   width: 32px;
   height: 32px;
+  border-radius: 6px;
   color: inherit;
 }
 
@@ -2230,8 +2241,17 @@ button.swiper-pagination-bullet {
 }
 .btn-text .underline {
   display: inline-block;
-  line-height: 1.1em;
+  line-height: 1.05em;
   border-bottom: 1px solid currentColor;
+}
+.btn-text .hoverline {
+  display: inline-block;
+  line-height: 1.05em;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.btn-text:has(.hoverline):hover .hoverline {
+  border-color: currentColor;
 }
 
 .btn-link {
@@ -2241,6 +2261,11 @@ button.swiper-pagination-bullet {
 .btn-link .utils {
   margin-left: auto;
   color: var(--c-gray2);
+}
+
+.btn-round {
+  border-radius: 32px;
+  border: 1px solid #d4d4d9;
 }
 
 .btn-more {
@@ -2459,6 +2484,7 @@ button.swiper-pagination-bullet {
   height: 18px;
   background-image: url(../image/icon/ic_search.svg);
   background-position-y: top;
+  background-size: contain;
 }
 
 .i--search-w {
@@ -2624,6 +2650,21 @@ button.swiper-pagination-bullet {
 .i--set {
   width: 24px;
   background-image: url(../image/icon/ic_set.svg);
+}
+
+.i--filter {
+  width: 24px;
+  background-image: url(../image/icon/ic_filter.svg);
+}
+
+.i--apps {
+  width: 24px;
+  background-image: url(../image/icon/ic_apps.svg);
+}
+
+.i--globe {
+  width: 18px;
+  background-image: url(../image/icon/ic_globe.svg);
 }
 
 .i--plus,
@@ -3462,6 +3503,10 @@ button.swiper-pagination-bullet {
   font-size: 12px;
   font-weight: 400;
 }
+.tooltip-box .msg {
+  font-size: 13px;
+  font-weight: 400;
+}
 .tooltip-box ul {
   padding-left: 16px;
 }
@@ -3707,6 +3752,9 @@ button.swiper-pagination-bullet {
 }
 .searchbox-item .combobox-btn {
   min-width: 160px;
+}
+.searchbox-item .textfield-root {
+  max-width: 640px;
 }
 
 .searchbox-label {
@@ -4759,11 +4807,17 @@ button.swiper-pagination-bullet {
   font-size: 10px;
 }
 
-.global-btn-notify.ac--active .notify-popper {
+.global-btn-notify.ac--active .notify-popper,
+.global-btn-apps.ac--active .notify-popper {
   visibility: visible;
   pointer-events: auto;
   opacity: 1;
   z-index: 99;
+}
+
+.global-btn-apps .notify-popper {
+  width: 284px;
+  padding: 16px;
 }
 
 .notify-popper {
@@ -4772,6 +4826,7 @@ button.swiper-pagination-bullet {
   top: calc(100% + 8px);
   right: 0;
   width: 510px;
+  min-height: 200px;
   border-radius: 16px;
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
@@ -4838,13 +4893,23 @@ button.swiper-pagination-bullet {
   border-radius: 8px;
   transition: background-color 0.3s;
 }
+.notify-list li:has(> a) {
+  padding: 0;
+}
+.notify-list li > a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: inherit;
+  padding: 16px 16px 14px 70px;
+}
 .notify-list li:hover, .notify-list li.ac--new {
   background-color: #f9f9f9;
 }
 .notify-list li .btn-icon {
   color: inherit;
 }
-.notify-list li:has(.notify-icon) {
+.notify-list li:has(.notify-icon):not(:has(a)) {
   padding-left: 70px;
 }
 .notify-list .t--service {
@@ -4882,6 +4947,9 @@ button.swiper-pagination-bullet {
 .notify-icon.i--notify-company {
   background: url(../image/icon/ic_noti_company.svg) no-repeat center center/cover;
 }
+.notify-icon.i--notify-monitoring {
+  background: url(../image/icon/ic_noti_monitoring.svg) no-repeat center center/cover;
+}
 .notify-close {
   position: absolute;
   top: 9px;
@@ -4907,6 +4975,19 @@ button.swiper-pagination-bullet {
   line-height: 1.4;
   font-weight: 400;
   color: #4f4f55;
+}
+.notify-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  font-size: 16px;
+  color: #8b8b8f;
+  text-align: center;
+}
+.notify-empty .msg {
+  padding-top: 72px;
+  background: url(../image/icon/ic_notify_empty.svg) no-repeat center top;
 }
 
 #root {
@@ -5000,10 +5081,28 @@ button.swiper-pagination-bullet {
 }
 .console-header-logo .logo {
   position: relative;
-  width: 82px;
-  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: transparent;
-  background: url(../image/logo/bi_monitoring.png) no-repeat left center/contain;
+  width: 187px;
+  height: 16px;
+  background: url(../image/logo/bi_monitoring.svg) no-repeat left center/contain;
+}
+.console-header-logo .crediview {
+  width: 98px;
+  height: 16px;
+  background: url(../image/logo/bi_crediview.svg) no-repeat left center/contain;
+}
+.console-header-logo .monitoring {
+  width: 82px;
+  height: 15px;
+  background: url(../image/logo/bi_monitoring2.svg) no-repeat left center/contain;
+}
+.console-header-logo .db {
+  width: 182px;
+  height: 16px;
+  background: url(../image/logo/bi_db.png) no-repeat left center/contain;
 }
 
 .console-header-nav {
@@ -5016,7 +5115,8 @@ button.swiper-pagination-bullet {
   position: relative;
   z-index: 91;
   display: flex;
-  gap: 100px;
+  gap: 40px;
+  margin: 0 auto;
 }
 .console-header-menu .nav-btn {
   display: inline-flex;
@@ -5075,6 +5175,7 @@ button.swiper-pagination-bullet {
   align-items: center;
   margin-left: auto;
   gap: 10px;
+  height: 100%;
   font-size: 14px;
   font-weight: 500;
 }
@@ -5082,7 +5183,7 @@ button.swiper-pagination-bullet {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 15px;
+  gap: 6px;
   height: 100%;
 }
 .console-header-global .global-btns .btn-global {
@@ -5098,18 +5199,27 @@ button.swiper-pagination-bullet {
   border-color: currentColor;
   color: #3b5dfb;
 }
+.console-header-global .global-btns .btn-icon,
+.console-header-global .global-btns .btn-user {
+  transition: background-color 0.2s;
+}
+.console-header-global .global-btns .btn-icon:hover,
+.console-header-global .global-btns .btn-user:hover {
+  background-color: #f1f1f3;
+}
 
 .global-btn-user {
   z-index: 1;
   position: relative;
   font-size: 13px;
+  margin: 0 6px;
 }
 .global-btn-user > * {
   position: relative;
 }
 .global-btn-user.ac--active .global-user-menu {
   opacity: 1;
-  max-height: 300px;
+  max-height: 400px;
   visibility: visible;
 }
 .global-btn-user.ac--active .btn-user::after {
@@ -5125,14 +5235,15 @@ button.swiper-pagination-bullet {
   display: inline-flex;
   align-items: center;
   height: 32px;
-  padding-right: 20px;
+  padding-right: 30px;
+  border-radius: 6px;
   color: inherit;
   font-weight: 400;
 }
 .global-btn-user .btn-user::after {
   content: "";
   position: absolute;
-  right: 0;
+  right: 8px;
   top: 50%;
   margin-top: -2px;
   border-style: solid;
@@ -5143,7 +5254,7 @@ button.swiper-pagination-bullet {
 
 .global-user-menu {
   position: absolute;
-  inset: -12px -20px auto;
+  inset: -12px -16px auto;
   padding: 52px 16px 8px;
   border-radius: 16px;
   background: #fff;
@@ -5160,6 +5271,33 @@ button.swiper-pagination-bullet {
   height: 30px;
   gap: 6px;
   padding: 0 8px;
+}
+
+.user-menu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid #f1f1f3;
+  font-size: 16px;
+  padding: 12px 0 8px;
+}
+.user-menu-info .info-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 400;
+}
+.user-menu-info .info-detail-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.user-menu-info .company {
+  color: #75757a;
+}
+.user-menu-info .time {
+  color: var(--c-primary);
 }
 
 .user-menu-list {
@@ -5186,13 +5324,13 @@ button.swiper-pagination-bullet {
   transform: scale(0.8);
 }
 
-.global-btn-notify .btn-notify {
+.global-btn-notify .btn-popper {
   position: relative;
   width: 32px;
   height: 32px;
   color: inherit;
 }
-.global-btn-notify .btn-notify .badge {
+.global-btn-notify .btn-popper .badge {
   position: absolute;
   top: 0;
   right: 0;
@@ -5202,6 +5340,31 @@ button.swiper-pagination-bullet {
   font-size: 10px;
   color: #fff;
   line-height: 1;
+}
+
+.console-header-search {
+  position: relative;
+  margin: auto;
+  display: flex;
+  width: 568px;
+}
+.console-header-search .textfield-form {
+  background-color: #f9f9f9;
+  padding-left: 34px;
+}
+.console-header-search .icon-comm {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  margin-top: -7px;
+  width: 15px;
+}
+
+.global-apps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .console-sidebar {
@@ -5232,6 +5395,9 @@ button.swiper-pagination-bullet {
   inset: 0 auto 0 0;
   width: var(--w-fold);
   background: #1c3bdb;
+}
+.console-sidebar.st--db::before {
+  background-color: #212126;
 }
 
 .sidebar-posistion {
