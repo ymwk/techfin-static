@@ -2,8 +2,7 @@
 .btn-contained,
 .btn-outlined,
 .btn-cta,
-.btn-link,
-.btn-round {
+.btn-link {
   flex-shrink: 0;
   display: inline-flex;
   justify-content: center;
@@ -35,6 +34,12 @@
     height: 26px;
     padding: 0 5px;
     box-sizing: border-box;
+  }
+
+  &.s--md {
+    height: 40px;
+    font-size: 14px;
+    padding: 0 20px;
   }
 
   &.s--lg {
@@ -73,8 +78,18 @@
   &:active,
   &.active {
     &:not(:disabled) {
-      border-color: var(--c-secondary);
+      background-color: #f1f1f3;
     }
+  }
+
+  &.t--round {
+    border-radius: 32px;
+  }
+  
+  &.ac--active {
+    border-color: #7D98FF;
+    background-color: #D8E0FF;
+    color: #3B5DFB
   }
 }
 
@@ -180,18 +195,33 @@
   padding: 4px 0;
   font-size: 13px;
   color: var(--c-black);
+  
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  &:not(:has(.underline, .hoverline)) {
+    border-radius: 6px;
+    padding: 0 6px;
+    transition: background-color .2s;
+    
+    &:not(:disabled):hover {
+      background-color: #f9f9f9;
+    }
+  }
 
   .underline {
     display: inline-block;
     line-height: 1.05em;
     border-bottom: 1px solid currentColor;
+    
   }
 
   .hoverline {
     display: inline-block;
     line-height: 1.05em;
     border-bottom: 1px solid transparent;
-    transition: border-color .2s;
+    transition: border-color 0.2s;
   }
 
   &:has(.hoverline):hover .hoverline {
@@ -207,11 +237,6 @@
     margin-left: auto;
     color: var(--c-gray2);
   }
-}
-
-.btn-round {
-  border-radius: 32px;
-  border: 1px solid #d4d4d9;
 }
 
 .btn-more {

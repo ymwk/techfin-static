@@ -59,27 +59,27 @@
   margin-top: 3px;
   color: var(--c-black);
   overflow: hidden;
+}
 
-  .combobox-option {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 8px;
-    border: 1px solid var(--c-border2);
-    border-radius: 6px;
-    background-color: #fff;
-    max-height: 200px;
-    overflow-y: auto;
+.combobox-option {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid var(--c-border2);
+  border-radius: 6px;
+  background-color: #fff;
+  max-height: 200px;
+  overflow-y: auto;
 
-    &::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    &::-webkit-scrollbar-thumb {
-      border: 1px solid #fff;
-      border-radius: 5px;
-      background-color: #e4e4e4;
-    }
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #e4e4e4;
   }
 
   li {

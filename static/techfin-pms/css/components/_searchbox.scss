@@ -63,7 +63,7 @@
 
   &.s--min {
     flex-grow: 1;
-    
+
     .combobox-root {
       flex-grow: 1;
     }
@@ -79,9 +79,9 @@
   .combobox-btn {
     min-width: 160px;
   }
-  
+
   .textfield-root {
-    max-width: 640px
+    max-width: 640px;
   }
 }
 
@@ -138,4 +138,188 @@
 
 .searchbox-root + .searchbox-chips {
   margin-top: -33px;
+}
+
+.search-filter-root {
+  @include popper;
+}
+
+.search-filter-popper {
+  top: calc(100% + 8px);
+  right: 0;
+  width: 560px;
+  padding: 12px 24px 30px;
+  border-radius: 16px;
+  border: 1px solid var(--c-border2);
+  background-color: #fff;
+  box-shadow: 12px 16px 40px 0px #0000000a;
+
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--c-border2);
+  }
+
+  .filter-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0 36px;
+  }
+
+  .filter-action {
+    text-align: center;
+
+    .btn-contained {
+      min-width: 160px;
+      height: 48px;
+      font-size: 16px;
+    }
+  }
+
+  .filter-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .filter-chip-list {
+      max-width: calc(100% - 80px);
+    }
+
+    .btn-text {
+      height: 26px;
+      font-size: 14px;
+    }
+  }
+}
+
+.filter-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .btn-chip {
+    display: inline-flex;
+    align-items: center;
+    height: 26px;
+    padding: 0 4px 0 8px;
+    background-color: #f1f1f3;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--c-gray2);
+
+    &:hover {
+      background-color: #e8e8eb;
+    }
+  }
+}
+
+.filter-checklist-root {
+  display: flex;
+  border: 1px solid var(--c-border2);
+  border-radius: 6px;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    border: 3px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(33, 33, 38, 0.12);
+  }
+
+  --chk-h: 40px;
+
+  .checklist-box {
+    flex: 1;
+    height: calc(var(--chk-h) * 5);
+    padding: 8px 0 8px 8px;
+    box-sizing: content-box;
+    overflow-y: auto;
+
+    &:not(:first-child) {
+      border-left: 1px solid var(--c-border2);
+    }
+  }
+
+  .radiocheck-root {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .radiocheck-label {
+    width: 100%;
+    height: var(--chk-h);
+    padding: 0 16px;
+    border-radius: 8px;
+    justify-content: space-between;
+    font-weight: 500;
+    color: var(--c-gray1);
+    transition: background-color 0.2s;
+
+    &.ac--active {
+      background-color: #f1f1f3;
+    }
+
+    &:hover {
+      [type='checkbox'] {
+        box-shadow: 0 0 0 3px #f1f1f3;
+      }
+    }
+  }
+}
+
+.searchbox-root:has(.searchbox-filter-result) {
+  flex-wrap: wrap;
+}
+
+.searchbox-filter-result {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  padding-top: 16px;
+  margin-top: -8px;
+  border-top: 1px solid var(--c-border2);
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    padding-left: 4px;
+    border: 1px solid #e8e8eb;
+    border-radius: 6px;
+    background-color: #fff;
+
+    & > .icon-comm {
+      margin-right: 2px;
+    }
+
+    .btn-icon {
+      width: 24px;
+      height: 30px;
+    }
+  }
+}
+
+.searchbox-filter-btns {
+  margin-left: auto;
+
+  .btn-comm {
+    height: 40px;
+  }
+}
+
+.select-btns {
+  display: flex;
+  gap: 8px
 }

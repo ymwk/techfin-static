@@ -1,0 +1,135 @@
+.console-root.st--db {
+  --w-sidebar: 240px;
+
+  .console-area,
+  .console-contents-inner {
+    max-width: unset;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .console-header {
+    padding-left: 0 !important;
+    transition: none;
+    z-index: 101;
+  }
+
+  .console-sidebar {
+    background-color: rgba(33, 33, 38, 0.85);
+    border-right: 0;
+    box-shadow: none;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .sidebar-menu {
+    width: 100%;
+    align-items: stretch;
+    min-height: 100vh;
+  }
+
+  .sidebar-menu-cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+  }
+
+  .sidebar-btn {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+
+    .label {
+      position: absolute;
+      top: 50%;
+      left: var(--btn-w);
+      transform: translateY(-50%);
+    }
+  }
+
+  .sidebar-btn,
+  .sidebar-foldBtn {
+    &:hover,
+    &.ac--active {
+      background-color: rgba(33, 33, 38, 0.5);
+    }
+  }
+
+  .sidebar-companylist {
+    padding: 0;
+    color: #fff;
+
+    li {
+      padding-left: 10px;
+      &:hover,
+      &.ac--active {
+        background-color: rgba(33, 33, 38, 0.3);
+      }
+    }
+
+    .btn-fav,
+    .btn-del {
+      right: 0;
+    }
+
+    .num {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .sidebar-empty {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.4;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.console-root.st--db .sidebar-menu-top,
+.sidebar-menu-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 7px;
+  overflow: hidden;
+
+  .sidebar-btn {
+    width: var(--btn-w);
+    overflow: visible;
+  }
+}
+
+body.open {
+  .console-root.st--db .sidebar-menu-top,
+  .sidebar-menu-top {
+    box-shadow: inset 0 -1px 0 rgba(241, 241, 243, 0.2);
+
+    .sidebar-btn {
+      &::after {
+        content: '';
+        position: absolute;
+        inset: calc(100% + 5px) 0 auto;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom-color 0.2s;
+      }
+
+      &:hover,
+      &.ac--active {
+        background-color: transparent;
+
+        &::after {
+          border-bottom-color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,23 +1,36 @@
-.global-btn-notify,
 .global-btn-apps {
-  &.ac--active {
-    .notify-popper {
-      visibility: visible;
-      pointer-events: auto;
-      opacity: 1;
-      z-index: 99;
+  @include popper;
+
+  .notify-popper {
+    width: 284px;
+    padding: 16px;
+  }
+}
+
+.global-btn-notify {
+  @include popper;
+  
+  .btn-popper {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    color: inherit;
+
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 2px 4px;
+      border-radius: 20px;
+      background-color: #e14b5f;
+      font-size: 10px;
+      color: #fff;
+      line-height: 1;
     }
   }
 }
 
-.global-btn-apps .notify-popper {
-  width: 284px;
-  padding: 16px;
-}
-
 .notify-popper {
-  z-index: -1;
-  position: absolute;
   top: calc(100% + 8px);
   right: 0;
   width: 510px;
@@ -25,10 +38,6 @@
   border-radius: 16px;
   background-color: #fff;
   box-shadow: 0 3px 6px #00000029;
-  visibility: hidden;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
 
   // &:hover {
   //   ::-webkit-scrollbar-thumb {
@@ -99,8 +108,8 @@
       border: 1px solid var(--c-border2);
       border-radius: 8px;
       transition: background-color 0.3s;
-      
-      &:has(>a) {
+
+      &:has(> a) {
         padding: 0;
       }
 

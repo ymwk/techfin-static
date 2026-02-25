@@ -96,6 +96,37 @@
       padding-right: 10px;
       color: var(--c-gray2);
       font-weight: inherit;
+      font-size: inherit !important;
+    }
+  }
+
+  .utils {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  .utils-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 12px;
+  }
+
+  .headline-detail {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+
+    &.ac--open {
+      max-height: 200px;
+    }
+
+    .list {
+      margin-top: 16px;
+      border-top: 1px solid var(--c-border2);
     }
   }
 
@@ -130,6 +161,65 @@
         padding: 0;
         font-weight: 400;
       }
+    }
+  }
+
+  &.t--db {
+    padding: 24px 32px;
+    border-color: var(--c-border2);
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+
+    .headline-title {
+      width: auto;
+      height: unset;
+      border: none;
+      em {
+        font-size: 20px;
+      }
+
+      .list {
+        border-left: 0;
+        margin-left: 8px;
+        padding: 0;
+        gap: 12px;
+
+        li {
+          display: flex;
+          align-items: center;
+          width: auto;
+          padding: 0;
+          font-weight: 500;
+          height: 10px;
+          padding-left: 12px;
+          border-left: 1px solid var(--c-border2);
+        }
+
+        em {
+          min-width: unset;
+          padding: 0;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .list {
+      padding-left: 0;
+      padding-top: 24px;
+      border-left: 0;
+
+      li {
+        width: calc(100% / 3);
+        padding: 0;
+      }
+
+      em {
+        min-width: 100px;
+      }
+    }
+
+    .btn-summary.ac--open {
+      transform: scaleY(-1);
     }
   }
 }
@@ -204,7 +294,7 @@
     width: 102px;
     height: 40px;
     margin-left: auto;
-    font-size: 14px
+    font-size: 14px;
   }
 }
 
@@ -324,7 +414,7 @@
 
   &.s--lg {
     line-height: 1.5;
-    
+
     & > li {
       display: flex;
       flex-direction: column;
@@ -656,6 +746,10 @@ td .msg-list {
 
 .mb10 {
   margin-bottom: 10px !important;
+}
+
+.mb16 {
+  margin-bottom: 16px !important;
 }
 
 .mb20 {
