@@ -9,7 +9,7 @@
   width: 18px;
   background-repeat: no-repeat;
   background-position: center center;
-  
+
   &.s--sm {
     width: 18px;
     background-size: contain;
@@ -20,7 +20,7 @@
   height: 18px;
   background-image: url(../image/icon/ic_search.svg);
   background-position-y: top;
-  background-size: contain
+  background-size: contain;
 }
 .i--search-w {
   height: 14px;
@@ -183,15 +183,35 @@
 .ac--active > .i--like {
   background-image: url(../image/icon/ic_heart_on.svg);
 }
+.i--increase {
+  width: 20px;
+  background-image: url(../image/icon/ic_increase.svg);
+}
+.i--menual {
+  width: 28px;
+  background-image: url(../image/icon/ic_menual.svg);
+}
+.i--video {
+  width: 28px;
+  background-image: url(../image/icon/ic_video.svg);
+}
 
 .i--plus,
 .i--minus {
   position: relative;
   width: 16px;
   height: 16px;
-  border-radius: 3px;
-  border: 1px solid var(--c-border2);
-  background-color: #fff;
+
+  &:not(.s--lg) {
+    border-radius: 3px;
+    border: 1px solid var(--c-border2);
+    background-color: #fff;
+  }
+
+  &.s--lg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .i--plus::before,
@@ -214,6 +234,19 @@
   height: 10px;
 }
 
+.i--plus.s--lg::before,
+.i--plus.s--lg::after,
+.i--minus.s--lg::after {
+  width: 18px;
+  height: 2px;
+}
+
+.i--plus.s--lg::before {
+  content: '';
+  width: 2px;
+  height: 18px;
+}
+
 .i--add-w {
   width: 22px;
   background-image: url(../image/icon/ic_add_w.svg);
@@ -223,6 +256,11 @@
 .i--arr-lw {
   width: 20px;
   background-image: url(../image/icon/ic_next_w.svg);
+
+  &.s--md {
+    width: 16px;
+    background-size: contain;
+  }
 }
 .i--arr-lw {
   transform: scaleX(-1);
@@ -348,11 +386,11 @@
 }
 .i--gt-d {
   transform: rotate(90deg);
-  margin-top: -4px
+  margin-top: -4px;
 }
 .i--gt-u {
   transform: rotate(-90deg);
-  margin-top: 4px
+  margin-top: 4px;
 }
 
 .i--drop {
@@ -370,6 +408,16 @@
 .i--line {
   &::after {
     content: '-';
+  }
+}
+
+.i--up {
+  &::after {
+    content: '→';
+    transform: rotate(-90deg);
+    line-height: 1;
+    margin-left: -0.1em;
+    display: inline-block
   }
 }
 
@@ -502,7 +550,7 @@
   &::after {
     transform: translate(-50%, calc(-50% + 6px));
   }
-  
+
   &.s--sm {
     transform: scale(0.6);
   }

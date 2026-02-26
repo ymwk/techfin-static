@@ -22,23 +22,13 @@
             <nav class="console-header-nav">
               <div class="console-header-menu">
                 <div class="console-nav-item">
-                  <a href="/src/app/mypage/company/index.html" class="nav-btn">기업조회</a>
-                  <div class="console-nav-sub">
-                    <ul class="console-nav-sublist">
-                      <li>
-                        <a href=""><span>기업정보관리</span></a>
-                      </li>
-                      <li>
-                        <a href=""><span>개인정보관리</span></a>
-                      </li>
-                      <li>
-                        <a href=""><span>인증서관리</span></a>
-                      </li>
-                    </ul>
-                  </div>
+                  <a href="/src/app/techfin-pms/enterprise/search/index.html" class="nav-btn">기업조회</a>
                 </div>
                 <div class="console-nav-item">
-                  <a href="/src/app/enterprise/data/index.html" class="nav-btn ac--active">기업현황</a>
+                  <a href="/src/app/techfin-pms/dashboard/index.html" class="nav-btn">대시보드</a>
+                </div>
+                <div class="console-nav-item">
+                  <a href="/src/app/techfin-pms/enterprise/company/index.html" class="nav-btn ac--active">기업현황</a>
                   <div class="console-nav-sub">
                     <ul class="console-nav-sublist">
                       <li>
@@ -62,26 +52,27 @@
                     </ul>
                   </div>
                 </div>
-                <div class="console-nav-item">
-                  <a href="/src/app/service/admin/index.html" class="nav-btn">마이페이지</a>
-                  <div class="console-nav-sub">
-                    <ul class="console-nav-sublist">
-                      <li>
-                        <a href=""><span>기업정보관리</span></a>
-                      </li>
-                      <li>
-                        <a href=""><span>개인정보관리</span></a>
-                      </li>
-                      <li>
-                        <a href=""><span>인증서관리</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
               </div>
 
               <div class="console-header-global">
                 <div class="global-btns">
+                  <div class="global-btn-user t--service">
+                    <button type="button" class="btn-user btn-popper">
+                      <span>서비스 더보기</span>
+                    </button>
+
+                    <div class="global-user-menu">
+                      <ul class="user-menu-list">
+                        <li>
+                          <a href="#">
+                            <span>크레디뷰</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
                   <div class="global-btn-user">
                     <button type="button" class="btn-user btn-popper">
                       <i class="icon-comm i--user"></i>
@@ -311,26 +302,30 @@
               <div class="sidebar-container">
                 <div class="sidebar-inner">
                   <div class="sidebar-tab-cont" id="tab1" style="display: none">
-                    <h3 class="sidebar-h1">우리 회사</h3>
-                    <div class="sidebar-box">
-                      <table class="table-detail">
-                        <tbody>
-                          <tr>
-                            <th>기업명</th>
-                            <td>테크핀레이팅스</td>
-                          </tr>
-                          <tr>
-                            <th>사업자등록번호</th>
-                            <td>123-22-00015</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <div class="sidebar-our">
+                      <h3 class="sidebar-h1">우리 회사</h3>
+                      <div class="info">
+                        <span>(주)테크핀레이팅스</span>
+                        <small>123-22-00015</small>
+                      </div>
                     </div>
 
                     <div class="sidebar-subtit">
                       <h4 class="sidebar-h2">관리기업</h4>
-                      <p>관리기업은 기업조회 후 등록하신 기업입니다.</p>
+                      <div class="tooltip-root ac-hover">
+                        <button type="button" class="btn-icon">
+                          <i class="icon-comm i--tooltip"></i>
+                          <span class="blind">툴팁보기</span>
+                        </button>
+                        <div class="tooltip-popper">
+                          <div class="tooltip-box">
+                            <p class="msg">등록하신 기업을 최신순으로 정렬하며,<br />최대 50개까지 보여집니다.</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    <!-- // sidebar-subtit -->
+
                     <div class="sidebar-searchbox">
                       <div class="textfield-root">
                         <label class="textfield-label">
@@ -350,6 +345,11 @@
                       </div>
                     </div>
                     <!-- //sidebar-searchbox -->
+
+                    <div class="sidebar-searchbox-btm">
+                      <button type="button" class="btn-text s--xs">목록 정렬 초기화</button>
+                    </div>
+
                     <div class="sidebar-content">
                       <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
                       <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
@@ -379,33 +379,263 @@
                               <span class="blind">즐겨찾기</span>
                             </button>
                           </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
+                          <li>
+                            <span>경인<em>전자</em></span>
+                            <span class="num">107-86-78945</span>
+                            <button type="button" class="btn-fav">
+                              <i class="icon-comm i--fav"></i>
+                              <span class="blind">즐겨찾기</span>
+                            </button>
+                          </li>
                         </ul>
                       </div>
                     </div>
                     <!-- // sidebar-content -->
+
+                    <div class="sidebar-footer">
+                      <button type="button" class="btn-contained">
+                        <span>기업 더보기</span>
+                      </button>
+                    </div>
+                    <!-- // sidebar-footer -->
                   </div>
                   <!-- // tab1 -->
 
                   <div class="sidebar-tab-cont" id="tab2" style="display: none">
-                    <h3 class="sidebar-h1">우리 회사</h3>
-                    <div class="sidebar-box">
-                      <table class="table-detail">
-                        <tbody>
-                          <tr>
-                            <th>기업명</th>
-                            <td>테크핀레이팅스</td>
-                          </tr>
-                          <tr>
-                            <th>사업자등록번호</th>
-                            <td>123-22-00015</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <div class="sidebar-our">
+                      <h3 class="sidebar-h1">우리 회사</h3>
+                      <div class="info">
+                        <span>(주)테크핀레이팅스</span>
+                        <small>123-22-00015</small>
+                      </div>
                     </div>
 
                     <div class="sidebar-subtit">
                       <h4 class="sidebar-h2">즐겨찾는 기업 (3)</h4>
-                      <p>즐겨찾는 기업 목록입니다.</p>
                     </div>
                     <div class="sidebar-searchbox">
                       <div class="textfield-root">
@@ -425,6 +655,11 @@
                       </div>
                     </div>
                     <!-- //sidebar-searchbox -->
+
+                    <div class="sidebar-searchbox-btm">
+                      <button type="button" class="btn-text s--xs">목록 정렬 초기화</button>
+                    </div>
+
                     <div class="sidebar-content">
                       <!-- <div class="sidebar-empty">아직 등록한 기업이 없어요.<br />먼저 기업을 조회한 후 등록해 주세요.</div> -->
                       <!-- <div class="sidebar-empty">검색결과가 없습니다.</div> -->
@@ -462,25 +697,16 @@
                   <!-- // tab2 -->
 
                   <div class="sidebar-tab-cont" id="tab7" style="display: none">
-                    <h3 class="sidebar-h1">우리 회사</h3>
-                    <div class="sidebar-box">
-                      <table class="table-detail">
-                        <tbody>
-                          <tr>
-                            <th>기업명</th>
-                            <td>테크핀레이팅스</td>
-                          </tr>
-                          <tr>
-                            <th>사업자등록번호</th>
-                            <td>123-22-00015</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <div class="sidebar-our">
+                      <h3 class="sidebar-h1">우리 회사</h3>
+                      <div class="info">
+                        <span>(주)테크핀레이팅스</span>
+                        <small>123-22-00015</small>
+                      </div>
                     </div>
 
                     <div class="sidebar-subtit">
                       <h4 class="sidebar-h2">즐겨찾는 기업 (0)</h4>
-                      <p>즐겨찾는 기업 목록입니다.</p>
                     </div>
                     <div class="sidebar-searchbox">
                       <div class="textfield-root">
@@ -501,6 +727,7 @@
                       </div>
                     </div>
                     <!-- //sidebar-searchbox -->
+
                     <div class="sidebar-content">
                       <div class="sidebar-empty">
                         즐겨찾는 기업이 없어요.<br />관리기업 목록에서 즐겨찾는 기업을 <br />설정해주세요.
@@ -511,9 +738,13 @@
                   <!-- // tab2 -->
 
                   <div class="sidebar-tab-cont" id="tab3" style="display: none">
-                    <h3 class="sidebar-h1">메모</h3>
+                    <div class="sidebar-our">
+                      <h3 class="sidebar-h1">메모</h3>
+                    </div>
                     <div class="sidebar-content">
-                      <textarea name="" class="textarea-form" placeholder="메모 내용을 입력해 주세요."></textarea>
+                      <div class="sidebar-cont-scroll">
+                        <textarea name="" class="textarea-form" placeholder="메모 내용을 입력해 주세요."></textarea>
+                      </div>
                     </div>
                     <!-- // sidebar-content -->
 
@@ -531,16 +762,19 @@
 
                   <!-- 이후로는 메모 내용을 확인하기 위한 임시 탭입니다. -->
                   <div class="sidebar-tab-cont" id="tab4" style="display: none">
-                    <h3 class="sidebar-h1">메모</h3>
+                    <div class="sidebar-our">
+                      <h3 class="sidebar-h1">메모</h3>
+                    </div>
                     <div class="sidebar-content">
-                      <textarea name="" class="textarea-form" placeholder="메모 내용을 입력해 주세요.">
+                      <div class="sidebar-cont-scroll">
+                        <textarea name="" class="textarea-form" placeholder="메모 내용을 입력해 주세요.">
 신용등급 전망이 안정적에서 부정적으로 변경되었고 EWS 경고 지표가 2건 발생해, 
 단기 유동성을 포함한 재무 구조 개선 여부에 대한 지속적인 모니터링이 필요합니다.최근 3개월간 차입금 증가율이 매출 성장률을 상회하는 가운데, 현금 보유액은 안정적이나 
 영업활동 현금흐름은 둔화 추세를 보이고 
 있으며, 매출 증가에도 불구하고 영업이익률이 소폭 하락해 고정비 비중이 높은 구조상 
-경기 변동 시 수익성 리스크가 존재합니다.
-                  </textarea
-                      >
+경기 변동 시 수익성 리스크가 존재합니다.</textarea
+                        >
+                      </div>
                     </div>
                     <!-- // sidebar-content -->
 
@@ -557,7 +791,9 @@
                   <!-- // tab3 -->
 
                   <div class="sidebar-tab-cont" id="tab5" style="display: none">
-                    <h3 class="sidebar-h1">메모</h3>
+                    <div class="sidebar-our">
+                      <h3 class="sidebar-h1">메모</h3>
+                    </div>
                     <div class="sidebar-memo-utils">
                       <button type="button" class="btn-icon btn-memo-search">
                         <i class="icon-comm i--search"></i>
@@ -672,7 +908,9 @@
                   <!-- // tab3 -->
 
                   <div class="sidebar-tab-cont" id="tab6" style="display: none">
-                    <h3 class="sidebar-h1">메모</h3>
+                    <div class="sidebar-our">
+                      <h3 class="sidebar-h1">메모</h3>
+                    </div>
                     <div class="sidebar-memo-utils">
                       <button type="button" class="btn-icon btn-memo-search">
                         <i class="icon-comm i--search"></i>

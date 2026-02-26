@@ -18,62 +18,66 @@ document.addEventListener('DOMContentLoaded', function () {
   const foldBtn = document.querySelector('.sidebar-menu .sidebar-foldBtn');
   const tabConts = document.querySelectorAll('.sidebar-tab-cont');
 
-  sideBtn.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      sideBtn.forEach((item) => {
-        if (item.classList.contains('ac--active')) item.classList.remove('ac--active');
-      });
-      btn.classList.add('ac--active');
+  if (sideBtn) {
+    sideBtn.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        sideBtn.forEach((item) => {
+          if (item.classList.contains('ac--active')) item.classList.remove('ac--active');
+        });
+        btn.classList.add('ac--active');
 
-      const targetId = btn.dataset.targetId;
+        const targetId = btn.dataset.targetId;
 
-      tabConts.forEach((tab) => {
-        if (tab.id === targetId) {
-          tab.style.display = 'flex'; // target만 flex
-        } else {
-          tab.style.display = 'none'; // 나머지 none
+        tabConts.forEach((tab) => {
+          if (tab.id === targetId) {
+            tab.style.display = 'flex'; // target만 flex
+          } else {
+            tab.style.display = 'none'; // 나머지 none
+          }
+        });
+
+        // 클릭시 sidebar가 접혀있으면 펼침
+        if (!foldBtn.classList.contains('open')) {
+          foldBtn.classList.add('open');
+          document.body.classList.add('open');
         }
       });
+    });
+  }
 
-      // 클릭시 sidebar가 접혀있으면 펼침
-      if (!foldBtn.classList.contains('open')) {
+  if (foldBtn) {
+    foldBtn.addEventListener('click', (e) => {
+      if (foldBtn.classList.contains('open')) {
+        foldBtn.classList.remove('open');
+        document.body.classList.remove('open');
+      } else {
         foldBtn.classList.add('open');
         document.body.classList.add('open');
+
+        // 펼침버튼 눌렀을때 active된 sideBtn이 하나도 없으면 첫번째 sideBtn에 active클래스를 추가
+        let hasActive = false;
+        sideBtn.forEach((btn) => {
+          if (btn.classList.contains('ac--active')) {
+            hasActive = true;
+          }
+        });
+
+        if (!hasActive && sideBtn.length > 0) {
+          sideBtn[0].classList.add('ac--active');
+        }
+
+        const targetId = sideBtn[0].dataset.targetId;
+
+        tabConts.forEach((tab) => {
+          if (tab.id === targetId) {
+            tab.style.display = 'flex'; // target만 flex
+          } else {
+            tab.style.display = 'none'; // 나머지 none
+          }
+        });
       }
     });
-  });
-
-  foldBtn.addEventListener('click', (e) => {
-    if (foldBtn.classList.contains('open')) {
-      foldBtn.classList.remove('open');
-      document.body.classList.remove('open');
-    } else {
-      foldBtn.classList.add('open');
-      document.body.classList.add('open');
-
-      // 펼침버튼 눌렀을때 active된 sideBtn이 하나도 없으면 첫번째 sideBtn에 active클래스를 추가
-      let hasActive = false;
-      sideBtn.forEach((btn) => {
-        if (btn.classList.contains('ac--active')) {
-          hasActive = true;
-        }
-      });
-
-      if (!hasActive && sideBtn.length > 0) {
-        sideBtn[0].classList.add('ac--active');
-      }
-
-      const targetId = sideBtn[0].dataset.targetId;
-
-      tabConts.forEach((tab) => {
-        if (tab.id === targetId) {
-          tab.style.display = 'flex'; // target만 flex
-        } else {
-          tab.style.display = 'none'; // 나머지 none
-        }
-      });
-    }
-  });
+  }
 
   // 기업 즐겨찾기 토글
   const favBtn = document.querySelectorAll('.btn-fav');

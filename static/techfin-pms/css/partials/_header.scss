@@ -218,6 +218,7 @@
     align-items: center;
     height: 32px;
     padding-right: 30px;
+    padding-left: 8px;
     border-radius: 6px;
     color: inherit;
     font-weight: 400;
@@ -233,13 +234,26 @@
       border-color: currentColor transparent transparent;
       border-radius: 2px;
     }
+
+    & > .icon-comm:first-child {
+      margin-left: -8px;
+    }
+  }
+
+  &.t--service {
+    margin-right: 16px;
+
+    .global-user-menu {
+      inset: -8px -8px auto;
+      padding: 48px 16px 4px;
+    }
   }
 }
 
 .global-user-menu {
   position: absolute;
   inset: -12px -16px auto;
-  padding: 52px 16px 8px;
+  padding: 52px 16px 10px;
   border-radius: 16px;
   background: #fff;
   box-shadow: 0 3px 6px #00000029;
@@ -291,11 +305,16 @@
   }
 }
 
+.global-user-menu:has(.btn-logout) {
+  .user-menu-list {
+    border-bottom: 1px solid #f1f1f3;
+    margin-bottom: 8px;
+  }
+}
+
 .user-menu-list {
   border-top: 1px solid #f1f1f3;
-  border-bottom: 1px solid #f1f1f3;
   padding: 8px 0;
-  margin-bottom: 8px;
 
   a {
     display: flex;

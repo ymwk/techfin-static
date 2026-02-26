@@ -20,52 +20,58 @@ document.addEventListener('DOMContentLoaded', function () {
   const sideTopBtns = document.querySelectorAll('.sidebar-menu-top .sidebar-btn');
   const tabConts = document.querySelectorAll('.sidebar-menu-cont');
 
-  sideBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      sideBtns.forEach((item) => {
-        if (item.classList.contains('ac--active')) item.classList.remove('ac--active');
-      });
-      btn.classList.add('ac--active');
+  if (sideBtns) {
+    sideBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        sideBtns.forEach((item) => {
+          if (item.classList.contains('ac--active')) item.classList.remove('ac--active');
+        });
+        btn.classList.add('ac--active');
 
-      // 클릭시 sidebar가 접혀있으면 펼침
-      if (!foldBtn.classList.contains('open')) {
+        // 클릭시 sidebar가 접혀있으면 펼침
+        if (!foldBtn.classList.contains('open')) {
+          foldBtn.classList.add('open');
+          document.body.classList.add('open');
+        }
+      });
+    });
+  }
+
+  if (sideTopBtns) {
+    sideTopBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        sideTopBtns.forEach((item) => {
+          if (item.classList.contains('ac--active')) item.classList.remove('ac--active');
+        });
+        btn.classList.add('ac--active');
+
+        const targetId = btn.dataset.targetId;
+
+        tabConts.forEach((tab) => {
+          if (tab.id === targetId) {
+            tab.style.display = 'flex'; // target만 flex
+          } else {
+            tab.style.display = 'none'; // 나머지 none
+          }
+        });
+      });
+    });
+  }
+
+  if (foldBtn) {
+    foldBtn.addEventListener('click', (e) => {
+      if (foldBtn.classList.contains('open')) {
+        foldBtn.classList.remove('open');
+        document.body.classList.remove('open');
+
+        // 접히면 메뉴버튼 활성화
+        document.querySelector('.sidebar-btn.menu').click();
+      } else {
         foldBtn.classList.add('open');
         document.body.classList.add('open');
       }
     });
-  });
-
-  sideTopBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      sideTopBtns.forEach((item) => {
-        if (item.classList.contains('ac--active')) item.classList.remove('ac--active');
-      });
-      btn.classList.add('ac--active');
-
-      const targetId = btn.dataset.targetId;
-
-      tabConts.forEach((tab) => {
-        if (tab.id === targetId) {
-          tab.style.display = 'flex'; // target만 flex
-        } else {
-          tab.style.display = 'none'; // 나머지 none
-        }
-      });
-    });
-  });
-
-  foldBtn.addEventListener('click', (e) => {
-    if (foldBtn.classList.contains('open')) {
-      foldBtn.classList.remove('open');
-      document.body.classList.remove('open');
-
-      // 접히면 메뉴버튼 활성화
-      document.querySelector('.sidebar-btn.menu').click();
-    } else {
-      foldBtn.classList.add('open');
-      document.body.classList.add('open');
-    }
-  });
+  }
 
   // 즐겨찾기 토글
   const favBtn = document.querySelectorAll('.btn-fav');

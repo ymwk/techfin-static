@@ -1,5 +1,6 @@
 .tooltip-root {
   position: relative;
+  display: inline-block;
 
   &.ac-hover {
     &:hover {

@@ -1,0 +1,15 @@
+.landing-root {
+  @mixin mobile {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+  
+  @include mobile {
+    min-width: unset;
+    
+    .main-section-inner {
+      margin: 0 24px
+    }
+  }
+}

@@ -704,6 +704,33 @@ td .msg-list {
   }
 }
 
+
+.noti-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--c-gray2);
+  font-weight: 400;
+  padding: 8px 0;
+  
+  li {
+    position: relative;
+    padding-left: 10px;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 2px;
+      height: 2px;
+      background-color: currentColor;
+    }
+  }
+}
+
 .mt0 {
   margin-top: 0 !important;
 }
@@ -770,6 +797,10 @@ td .msg-list {
 
 .mb100 {
   margin-bottom: 100px !important;
+}
+
+.mr16 {
+  margin-right: 16px !important;
 }
 
 .mt-10 {

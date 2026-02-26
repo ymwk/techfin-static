@@ -6,7 +6,7 @@ gsap.from(introList, {
     trigger: '.main-banner',
     start: 'top 50%',
   },
-  stagger: 0.4,
+  stagger: 0.3,
   opacity: 0,
   yPercent: 20,
   delay: 0.5,
@@ -72,4 +72,50 @@ gsap.from(turnList, {
   ease: 'circ.out',
 });
 
+const designList = document.querySelectorAll('.main-design-list > li');
+gsap.from(designList, {
+  scrollTrigger: {
+    trigger: '.main-design',
+    start: 'top 20%',
+  },
+  stagger: 0.2,
+  opacity: 0,
+  yPercent: 30,
+  ease: 'circ.out',
+});
+
+const exactImg = document.querySelector('.main-exact-img');
+gsap.from(exactImg, {
+  scrollTrigger: {
+    trigger: '.main-exact',
+    start: 'top 40%',
+  },
+  opacity: 0,
+  yPercent: 30,
+  ease: 'circ.out',
+});
+
+const exactList = document.querySelectorAll('.main-exact-list > li');
+gsap.from(exactList, {
+  scrollTrigger: {
+    trigger: '.main-exact-list',
+    start: 'top 60%',
+  },
+  stagger: 0.2,
+  opacity: 0,
+  yPercent: 30,
+  ease: 'circ.out',
+});
+
+const faqListItem = document.querySelectorAll('.main-faq-list > li');
+gsap.from(faqListItem, {
+  scrollTrigger: {
+    trigger: '.main-faq-list',
+    start: 'top 60%',
+  },
+  stagger: 0.2,
+  opacity: 0,
+  yPercent: 30,
+  ease: 'circ.out',
+});
 

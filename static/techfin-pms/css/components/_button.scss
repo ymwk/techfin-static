@@ -139,7 +139,7 @@
 }
 
 .btn-outlined {
-  color: var(--c-secondary);
+  color: var(--c-primary);
   border-color: currentColor;
   background-color: #fff;
 
@@ -206,7 +206,7 @@
     transition: background-color .2s;
     
     &:not(:disabled):hover {
-      background-color: #f9f9f9;
+      background-color: rgba(0,0,0,0.015);
     }
   }
 
@@ -226,6 +226,12 @@
 
   &:has(.hoverline):hover .hoverline {
     border-color: currentColor;
+  }
+  
+  &.s--xs {
+    font-size: 10px;
+    font-weight: 700;
+    color: #7E7E88;
   }
 }
 
