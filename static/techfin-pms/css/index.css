@@ -10586,15 +10586,19 @@ td .msg-list {
     padding-top: 0;
   }
   .landing-root .main-exact-img {
-    height: 320px;
+    aspect-ratio: 312/320;
     margin-top: 32px;
   }
   .landing-root .main-exact-img img {
     position: absolute;
-    top: 0;
-    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: right bottom;
+       object-position: right bottom;
   }
   .landing-root .main-exact-swiper {
     padding-bottom: 40px;
