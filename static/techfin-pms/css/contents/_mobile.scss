@@ -228,9 +228,11 @@
       padding-top: 64px;
       padding-bottom: 64px;
     }
-  }
-
-  &:has(.global-btn-user.t--service.ac--active) {
+    
+    
+    
+    
+    &:has(.global-btn-user.t--service.ac--active) {
     .console-area {
       position: fixed;
     }
@@ -393,4 +395,7 @@
       object-position: left top;
     }
   }
+  }
+
+  
 }
