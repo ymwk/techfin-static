@@ -934,8 +934,10 @@
 
 .main-faq {
   background-color: #fff;
-  
-  .main-section-title br { display: none }
+
+  .main-section-title br {
+    display: none;
+  }
 }
 
 .main-faq-list {
@@ -1132,6 +1134,36 @@
   .main-section-title {
     padding-top: 100px;
     padding-bottom: 80px;
+  }
+}
+
+.main-design-msg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  font-size: 18px;
+  color: var(--c-gray2);
+  font-weight: 700;
+
+  li {
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 13px 30px;
+
+    &:first-of-type {
+      opacity: 0.6;
+    }
+    &:nth-of-type(3) {
+      opacity: 0.6;
+    }
+    &:nth-of-type(4) {
+      opacity: 0.2;
+    }
   }
 }
 

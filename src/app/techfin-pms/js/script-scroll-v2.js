@@ -18,7 +18,7 @@ titleList.forEach((element) => {
   gsap.from(element, {
     scrollTrigger: {
       trigger: element,
-      start: 'top 60%',
+      start: 'top 40%',
     },
     opacity: 0,
     yPercent: 30,
@@ -99,7 +99,7 @@ const exactList = document.querySelectorAll('.main-exact-list > li');
 gsap.from(exactList, {
   scrollTrigger: {
     trigger: '.main-exact-list',
-    start: 'top 60%',
+    start: 'top 40%',
   },
   stagger: 0.2,
   opacity: 0,
@@ -111,7 +111,7 @@ const faqListItem = document.querySelectorAll('.main-faq-list > li');
 gsap.from(faqListItem, {
   scrollTrigger: {
     trigger: '.main-faq-list',
-    start: 'top 60%',
+    start: 'top 40%',
   },
   stagger: 0.2,
   opacity: 0,

@@ -9992,6 +9992,34 @@ td .msg-list {
   padding-bottom: 80px;
 }
 
+.main-design-msg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  font-size: 18px;
+  color: var(--c-gray2);
+  font-weight: 700;
+}
+.main-design-msg li {
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 13px 30px;
+}
+.main-design-msg li:first-of-type {
+  opacity: 0.6;
+}
+.main-design-msg li:nth-of-type(3) {
+  opacity: 0.6;
+}
+.main-design-msg li:nth-of-type(4) {
+  opacity: 0.2;
+}
+
 .main-design-list {
   display: flex;
   gap: 24px;
@@ -10606,6 +10634,11 @@ td .msg-list {
   }
   .landing-root .main-section.main-design .main-section-title br {
     display: none;
+  }
+  .landing-root .main-design-msg {
+    position: static;
+    transform: none;
+    font-size: 14px;
   }
   .landing-root .main-design-list {
     gap: 0;
