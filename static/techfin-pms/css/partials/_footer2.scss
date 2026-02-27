@@ -1,0 +1,89 @@
+@mixin desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+.SOLFooter-root {
+  --font-13: 13px;
+  --font-14: 14px;
+  --font-15: 15px;
+  --fc-gray2: #777;
+  --fc-default: #222;
+  --max-w: 1120px;
+  --spc-w: 24px;
+  --beta-g: linear-gradient(108.47deg, #22d6ff -38.28%, #225eff 43.3%, #8c2fff 100%);
+
+  z-index: 1;
+
+  @include desktop {
+    .SOLFooter-inner {
+      max-width: calc(var(--max-w) + var(--spc-w) * 2);
+      margin: 0 auto;
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      .inquery-for-use {
+        display: none;
+        // position: absolute;
+        // right: var(--spc-w);
+        // bottom: 0
+      }
+
+      .SOLFooter-address {
+        p {
+          &:not(.copyright) {
+            display: inline-block;
+
+            &::before {
+              content: ' | ';
+            }
+          }
+
+          &:first-of-type::before {
+            content: none;
+          }
+
+          &.copyright {
+            padding-top: 0;
+          }
+        }
+      }
+
+      .SOLFooter-utils {
+        border-top: 1px solid #ffffff1a;
+        padding-top: 20px;
+        margin-top: 60px;
+
+        .sns-link {
+          position: absolute;
+          top: 0;
+          right: calc(var(--spc-w) + 225px);
+          margin-top: 6px;
+        }
+
+        .SOLFooter-dropbox {
+          position: absolute;
+          top: 0;
+          right: var(--spc-w);
+          width: 210px;
+        }
+      }
+
+      .footer-logo {
+        position: absolute;
+        top: 4px;
+        left: var(--spc-2);
+        width: 200px;
+        height: 33px;
+        background-size: contain;
+      }
+
+      .SOLFooter-bottom {
+        padding-top: 0;
+      }
+    }
+  }
+}

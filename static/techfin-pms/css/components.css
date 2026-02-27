@@ -2516,6 +2516,7 @@ img {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  height: auto;
   border-bottom: 0;
 }
 .modal-root.t--menual .modal-header .text-active,
@@ -2525,14 +2526,17 @@ img {
 }
 .modal-root.t--menual .menual-desc,
 .alert-root.t--menual .menual-desc {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   font-size: 14px;
   color: #434343;
+  word-break: keep-all;
+  line-height: 1.4;
 }
 .modal-root.t--menual .menual-box,
 .alert-root.t--menual .menual-box {
-  height: 288px;
-  margin: 24px 0 16px;
+  aspect-ratio: 512/288;
+  margin-bottom: 16px;
   border-radius: 12px;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.1);
