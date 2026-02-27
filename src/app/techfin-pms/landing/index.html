@@ -274,7 +274,9 @@
               <ul class="main-design-list swiper-wrapper">
                 <li class="swiper-slide">
                   <p class="tit">빚 못 갚는 중소기업 늘어… <br />은행 연체율 7년 만에 최고</p>
-                  <img src="/static/techfin-pms/image/main/design_img_01.svg" alt="" class="img" />
+                  <img src="/static/techfin-pms/image/main/design_img_02.svg" alt="" class="img" />
+                  <!-- mobile
+                  <img src="/static/techfin-pms/image/main/design_img_01_m.svg" alt="" class="img" /> -->
                   <small>단위 : %, 자료: 금감원, ※ 매년 10월 기준</small>
                   <p>
                     일부 은행에서는 중소기업 연체율이 1.0%를 넘어 15년 만의 최고 수준을 기록했으며, 이로 인해 중소기업
@@ -284,6 +286,8 @@
                 <li class="swiper-slide">
                   <p class="tit">부실 위험 기업 수 <br />1년 만에 11.8% 증가</p>
                   <img src="/static/techfin-pms/image/main/design_img_02.svg" alt="" class="img" />
+                  <!-- mobile
+                  <img src="/static/techfin-pms/image/main/design_img_02_m.svg" alt="" class="img" /> -->
                   <small>출처 : 금융감독원 기업신용위험 평가(C,D 등급) 결과 종합(23~25년, 언론 공개 자료 재구성)</small>
                   <p>
                     금융감독원에 따르면, 부실 위험(C·D등급) 기업 수는 매년 증가하고 있으며, 연체율과 비슷한 추세로 위험
@@ -312,7 +316,7 @@
             </div>
 
             <div class="main-exact-img">
-              <img src="/static/techfin-pms/image/main/exact_screen_01.png" alt="" />
+              <img src="/static/techfin-pms/image/main/exact_screen_01_m.png" alt="" />
             </div>
 
             <div class="main-exact-swiper swiper">
@@ -430,7 +434,7 @@
           <div class="main-section-inner">
             <div class="main-section-title">
               <span class="text-active">FAQ</span>
-              <p class="tit">궁금한 점을 빠르게 확인하세요</p>
+              <p class="tit">궁금한 점을 <br />빠르게 확인하세요</p>
             </div>
 
             <ul class="main-faq-list">
@@ -702,21 +706,21 @@
           delay: 3000,
           disableOnInteraction: false,
         },
-
-        breakpoints: {
-          768: {
-            slidesPerView: 'auto',
-            pagination: {
-              el: '.main-step .swiper-pagination',
-              clickable: true,
-              renderBullet: function (index, className) {
-                return `
+        pagination: {
+          el: '.main-step .swiper-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `
               <li class="${className}">
                 <span>${texts[index]}</span>
               </li>
             `;
-              },
-            },
+          },
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 'auto',
+
             navigation: {
               nextEl: '.main-step .swiper-next',
               prevEl: '.main-step .swiper-prev',

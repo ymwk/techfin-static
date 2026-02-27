@@ -9821,6 +9821,9 @@ td .msg-list {
 .main-faq {
   background-color: #fff;
 }
+.main-faq .main-section-title br {
+  display: none;
+}
 
 .main-faq-list {
   display: flex;
@@ -10448,6 +10451,9 @@ td .msg-list {
   .landing-root .main-section-title .tit-h2 {
     font-size: 24px;
   }
+  .landing-root .main-section-title .desc {
+    display: none;
+  }
   .landing-root .main-swiper-btns {
     display: none;
   }
@@ -10523,6 +10529,12 @@ td .msg-list {
     -o-object-position: left top;
        object-position: left top;
   }
+  .landing-root .main-section.main-faq .main-section-title br {
+    display: block;
+  }
+  .landing-root .main-faq-list {
+    margin-top: 32px;
+  }
   .landing-root .main-faq-list .tit {
     font-size: 14px;
   }
@@ -10537,24 +10549,24 @@ td .msg-list {
     scale: 0.6;
   }
   .landing-root .main-section.main-case {
-    padding-left: var(--pd);
-    padding-right: var(--pd);
+    padding: 64px var(--pd);
   }
   .landing-root .main-case-swiper .tit {
     font-size: 20px;
   }
+  .landing-root .main-exact .main-section-inner {
+    padding-top: 0;
+  }
   .landing-root .main-exact-img {
     height: 320px;
+    margin-top: 32px;
   }
   .landing-root .main-exact-img img {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
-    -o-object-fit: none;
-       object-fit: none;
-    -o-object-position: left top;
-       object-position: left top;
   }
   .landing-root .main-exact-swiper {
     padding-bottom: 40px;
@@ -10562,6 +10574,7 @@ td .msg-list {
   .landing-root .main-exact-list {
     gap: 0;
     align-items: stretch !important;
+    margin-top: 16px;
   }
   .landing-root .main-exact-list > li {
     flex: none;
