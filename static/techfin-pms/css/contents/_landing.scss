@@ -416,7 +416,7 @@
     }
   }
 
-  .swiper-pagination {
+  .swiper-pagination.pagination-step {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -753,7 +753,8 @@
 .main-exact-swiper,
 .main-design-swiper,
 .main-case-swiper,
-.main-point-swiper {
+.main-point-swiper,
+.main-step-cont {
   .swiper-pagination-bullet {
     background-color: rgba(33, 33, 38, 0.16);
     opacity: 1;

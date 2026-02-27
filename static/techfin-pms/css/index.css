@@ -9355,7 +9355,7 @@ td .msg-list {
 .main-step .main-swiper-btns .swiper-next {
   border: 1px solid rgba(0, 0, 0, 0.0784313725);
 }
-.main-step .swiper-pagination {
+.main-step .swiper-pagination.pagination-step {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9369,7 +9369,7 @@ td .msg-list {
   letter-spacing: 0;
   counter-reset: item-counter;
 }
-.main-step .swiper-pagination::before {
+.main-step .swiper-pagination.pagination-step::before {
   content: "";
   position: absolute;
   top: 5px;
@@ -9377,7 +9377,7 @@ td .msg-list {
   left: 11px;
   border-left: 2px dashed #e9e9e9;
 }
-.main-step .swiper-pagination .swiper-pagination-bullet {
+.main-step .swiper-pagination.pagination-step .swiper-pagination-bullet {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9392,11 +9392,11 @@ td .msg-list {
   counter-increment: item-counter;
   transition: color 0.2s;
 }
-.main-step .swiper-pagination .swiper-pagination-bullet::before {
+.main-step .swiper-pagination.pagination-step .swiper-pagination-bullet::before {
   content: "Step." counter(item-counter, decimal-leading-zero);
   transition: color 0.2s;
 }
-.main-step .swiper-pagination .swiper-pagination-bullet::after {
+.main-step .swiper-pagination.pagination-step .swiper-pagination-bullet::after {
   content: "";
   position: absolute;
   left: 0;
@@ -9409,13 +9409,13 @@ td .msg-list {
   background: #fff url(../image/icon/ic_check2.svg) no-repeat center center;
   transition: background-color 0.2s, border-color 0.2s;
 }
-.main-step .swiper-pagination .swiper-pagination-bullet-active {
+.main-step .swiper-pagination.pagination-step .swiper-pagination-bullet-active {
   color: #222;
 }
-.main-step .swiper-pagination .swiper-pagination-bullet-active::before {
+.main-step .swiper-pagination.pagination-step .swiper-pagination-bullet-active::before {
   color: #5784ff;
 }
-.main-step .swiper-pagination .swiper-pagination-bullet-active::after {
+.main-step .swiper-pagination.pagination-step .swiper-pagination-bullet-active::after {
   background-color: #5784ff;
   background-image: url(../image/icon/ic_check2_w.svg);
   border-color: transparent;
@@ -9651,7 +9651,8 @@ td .msg-list {
 .main-exact-swiper .swiper-pagination-bullet,
 .main-design-swiper .swiper-pagination-bullet,
 .main-case-swiper .swiper-pagination-bullet,
-.main-point-swiper .swiper-pagination-bullet {
+.main-point-swiper .swiper-pagination-bullet,
+.main-step-cont .swiper-pagination-bullet {
   background-color: rgba(33, 33, 38, 0.16);
   opacity: 1;
   transition: width 0.2s;
@@ -9659,7 +9660,8 @@ td .msg-list {
 .main-exact-swiper .swiper-pagination-bullet-active,
 .main-design-swiper .swiper-pagination-bullet-active,
 .main-case-swiper .swiper-pagination-bullet-active,
-.main-point-swiper .swiper-pagination-bullet-active {
+.main-point-swiper .swiper-pagination-bullet-active,
+.main-step-cont .swiper-pagination-bullet-active {
   width: 16px;
   border-radius: 8px;
   background-color: var(--c-black);
@@ -10522,16 +10524,42 @@ td .msg-list {
   .landing-root .main-step-cont {
     flex-direction: column;
     height: auto;
+    gap: 24px;
+    margin-top: 48px;
   }
-  .landing-root .main-step .swiper-pagination {
-    width: auto;
+  .landing-root .main-step .main-section-title .desc {
+    display: block;
+    width: 280px;
+  }
+  .landing-root .main-step .swiper-pagination.pagination-bullet {
+    position: static;
+  }
+  .landing-root .main-step .swiper-pagination.pagination-step {
+    width: 100%;
     gap: 16px;
+    height: 24px;
+    overflow: hidden;
   }
-  .landing-root .main-step .swiper-pagination::before {
-    bottom: 0;
+  .landing-root .main-step .swiper-pagination.pagination-step::before {
+    content: none;
   }
-  .landing-root .main-step .swiper-pagination-bullet {
+  .landing-root .main-step .swiper-pagination.pagination-step .swiper-pagination-bullet {
     flex-direction: row;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    transition: top 0.3s;
+    opacity: 0;
+    white-space: nowrap;
+  }
+  .landing-root .main-step .swiper-pagination.pagination-step .swiper-pagination-bullet-active {
+    top: 0;
+    opacity: 1;
+  }
+  .landing-root .main-step .swiper-pagination.pagination-step .swiper-pagination-bullet-active + .swiper-pagination-bullet {
+    top: 30px;
   }
   .landing-root .main-step-swiper.swiper {
     width: 100%;

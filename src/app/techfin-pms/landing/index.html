@@ -268,7 +268,7 @@
                 내 거래처, <br />
                 ‘지금 이 순간' 과연 안전할까요?
               </p>
-              
+
               <ul class="main-design-msg">
                 <li>여기 계속 거래해도 괜찮을까?</li>
                 <li>받을 돈도 못 받았는데, 거래처 상태가 이상하다?</li>
@@ -541,7 +541,7 @@
             </div>
 
             <div class="main-step-cont">
-              <ul class="swiper-pagination"></ul>
+              <ul class="swiper-pagination pagination-step"></ul>
 
               <div class="main-step-swiper swiper">
                 <ul class="main-step-list swiper-wrapper">
@@ -571,6 +571,8 @@
                   </li>
                 </ul>
               </div>
+
+              <div class="swiper-pagination pagination-bullet"></div>
             </div>
           </div>
         </div>
@@ -714,7 +716,7 @@
           disableOnInteraction: false,
         },
         pagination: {
-          el: '.main-step .swiper-pagination',
+          el: '.main-step .pagination-step',
           clickable: true,
           renderBullet: function (index, className) {
             return `
@@ -735,6 +737,14 @@
           },
         },
       });
+      const stepSwiperbullet = new Swiper('.main-step-swiper.swiper', {
+        pagination: {
+          el: '.main-step .pagination-bullet',
+          clickable: true,
+        },
+      });
+
+      stepSwiper.controller.control = stepSwiperbullet;
 
       btnAry = ['전체 대시보드', '기업별 대시보드', '런웨이현황'];
 
