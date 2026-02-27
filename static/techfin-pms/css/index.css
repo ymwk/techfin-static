@@ -9648,12 +9648,18 @@ td .msg-list {
   background-image: url(../image/main/turn_ic_06.svg);
 }
 
-.main-exact-swiper .swiper-pagination-bullet {
+.main-exact-swiper .swiper-pagination-bullet,
+.main-design-swiper .swiper-pagination-bullet,
+.main-case-swiper .swiper-pagination-bullet,
+.main-point-swiper .swiper-pagination-bullet {
   background-color: rgba(33, 33, 38, 0.16);
   opacity: 1;
   transition: width 0.2s;
 }
-.main-exact-swiper .swiper-pagination-bullet-active {
+.main-exact-swiper .swiper-pagination-bullet-active,
+.main-design-swiper .swiper-pagination-bullet-active,
+.main-case-swiper .swiper-pagination-bullet-active,
+.main-point-swiper .swiper-pagination-bullet-active {
   width: 16px;
   border-radius: 8px;
   background-color: var(--c-black);
@@ -10041,16 +10047,6 @@ td .msg-list {
   flex-direction: column;
   gap: 16px;
 }
-.main-case-swiper .swiper-pagination-bullet {
-  background-color: rgba(33, 33, 38, 0.16);
-  opacity: 1;
-  transition: width 0.2s;
-}
-.main-case-swiper .swiper-pagination-bullet-active {
-  width: 16px;
-  border-radius: 8px;
-  background-color: var(--c-black);
-}
 
 .side-short-root {
   z-index: 110;
@@ -10059,13 +10055,21 @@ td .msg-list {
 }
 .side-short-root .btn-top {
   width: 56px;
-  height: 56px;
+  height: 0;
   border-radius: 50%;
   background-color: var(--c-primary);
   color: #fff;
   font-size: 40px;
   font-weight: 200;
   font-size: 24px;
+  visibility: hidden;
+  overflow: hidden;
+  transition: height 0.2s, margin-top 0.2s;
+}
+.side-short-root .btn-top.show {
+  visibility: visible;
+  height: 56px;
+  margin-top: 12px;
 }
 
 .side-short-cont {
@@ -10075,7 +10079,6 @@ td .msg-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
 }
 
 .side-short-list {
@@ -10278,10 +10281,19 @@ td .msg-list {
     height: var(--mh-header);
   }
   .landing-root .console-header .console-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: var(--mh-header);
     display: flex;
     flex-direction: column;
     gap: 0;
+    background-color: #fff;
+    transition: top 0.2s ease-out;
+  }
+  .landing-root .console-header.sticky .console-area {
+    top: calc(var(--mh-header) * -1);
   }
   .landing-root .console-header-logo {
     width: auto;
@@ -10435,6 +10447,9 @@ td .msg-list {
   .landing-root .main-section-title .tit-h2 {
     font-size: 24px;
   }
+  .landing-root .main-swiper-btns {
+    display: none;
+  }
   .landing-root .main-banner {
     height: calc(100vh - var(--mh-header));
   }
@@ -10451,7 +10466,7 @@ td .msg-list {
     padding: 0 24px;
     font-size: 16px;
   }
-  .landing-root .main-section.main-point .main-point-link {
+  .landing-root .main-section.main-point .main-section-inner {
     display: none;
   }
   .landing-root .main-section.main-final {
@@ -10482,9 +10497,6 @@ td .msg-list {
   }
   .landing-root .main-step .swiper-pagination-bullet {
     flex-direction: row;
-  }
-  .landing-root .main-swiper-btns {
-    display: none;
   }
   .landing-root .main-step-swiper.swiper {
     width: 100%;
@@ -10542,5 +10554,135 @@ td .msg-list {
        object-fit: none;
     -o-object-position: left top;
        object-position: left top;
+  }
+  .landing-root .main-exact-swiper {
+    padding-bottom: 40px;
+  }
+  .landing-root .main-exact-list {
+    gap: 0;
+    align-items: stretch !important;
+  }
+  .landing-root .main-exact-list > li {
+    flex: none;
+    border: 1px solid var(--c-border2);
+    border-radius: 20px;
+    padding: 24px;
+    height: auto !important;
+  }
+  .landing-root .main-exact-list > li .tit {
+    font-size: 13px;
+    padding-left: 55px;
+  }
+  .landing-root .main-exact-list > li .tit::before {
+    width: 44px;
+    height: 44px;
+    background-size: contain;
+  }
+  .landing-root .main-exact-list > li .tit em {
+    font-size: 16px;
+  }
+  .landing-root .noti-bullet-list {
+    font-size: 14px;
+  }
+  .landing-root .noti-bullet-list li::before {
+    top: 8px;
+  }
+  .landing-root .main-section.main-design .main-section-title {
+    padding: 0 0 24px;
+  }
+  .landing-root .main-section.main-design .main-section-title br {
+    display: none;
+  }
+  .landing-root .main-design-list {
+    gap: 0;
+    align-items: stretch !important;
+  }
+  .landing-root .main-design-list li {
+    flex: none;
+    height: auto !important;
+  }
+  .landing-root .main-design-list .tit {
+    font-size: 18px;
+  }
+  .landing-root .main-design-swiper {
+    padding-bottom: 40px;
+  }
+  .landing-root .main-service .main-service-btns {
+    position: static;
+    width: 100%;
+    margin: 16px 0 0;
+    gap: 8px;
+  }
+  .landing-root .main-service .main-service-btns > * {
+    height: 32px;
+    font-size: 13px;
+    white-space: nowrap;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+  }
+  .landing-root .main-service-swiper.swiper {
+    margin-top: 16px;
+    height: auto;
+    border-radius: 16px;
+  }
+  .landing-root .main-service-item {
+    flex-direction: column-reverse;
+  }
+  .landing-root .main-service-item .screen {
+    width: 100%;
+    aspect-ratio: 312/228;
+    padding: 15%;
+  }
+  .landing-root .main-service-item .screen img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    -o-object-fit: none;
+       object-fit: none;
+    -o-object-position: left top;
+       object-position: left top;
+  }
+  .landing-root .main-service-item .cont {
+    padding: 26px;
+  }
+  .landing-root .main-service-item .cont .tit {
+    font-size: 18px;
+  }
+  .landing-root .main-service-item .cont .tit br {
+    display: none;
+  }
+  .landing-root .main-service-item .cont > p {
+    display: none;
+  }
+  .landing-root .main-service-item .list {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 16px;
+  }
+  .landing-root .main-service-item .list li::before {
+    top: 1px;
+  }
+  .landing-root .main-section.main-point {
+    padding: 60px var(--pd);
+  }
+  .landing-root .main-section.main-point .main-section-title {
+    position: static;
+    width: auto;
+  }
+  .landing-root .main-point-cont {
+    flex-direction: column;
+    height: auto;
+  }
+  .landing-root .main-point-swiper.swiper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: content-box;
+    padding-bottom: 40px;
   }
 }

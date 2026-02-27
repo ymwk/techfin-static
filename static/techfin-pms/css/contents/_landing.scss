@@ -750,7 +750,10 @@
   }
 }
 
-.main-exact-swiper {
+.main-exact-swiper,
+.main-design-swiper,
+.main-case-swiper,
+.main-point-swiper {
   .swiper-pagination-bullet {
     background-color: rgba(33, 33, 38, 0.16);
     opacity: 1;
@@ -1195,18 +1198,6 @@
     flex-direction: column;
     gap: 16px;
   }
-
-  .swiper-pagination-bullet {
-    background-color: rgba(33, 33, 38, 0.16);
-    opacity: 1;
-    transition: width 0.2s;
-  }
-
-  .swiper-pagination-bullet-active {
-    width: 16px;
-    border-radius: 8px;
-    background-color: var(--c-black);
-  }
 }
 
 .side-short-root {
@@ -1216,13 +1207,24 @@
 
   .btn-top {
     width: 56px;
-    height: 56px;
+    height: 0;
     border-radius: 50%;
     background-color: var(--c-primary);
     color: #fff;
     font-size: 40px;
     font-weight: 200;
     font-size: 24px;
+    visibility: hidden;
+    overflow: hidden;
+    transition:
+      height 0.2s,
+      margin-top 0.2s;
+
+    &.show {
+      visibility: visible;
+      height: 56px;
+      margin-top: 12px;
+    }
   }
 }
 
@@ -1233,7 +1235,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
 }
 
 .side-short-list {

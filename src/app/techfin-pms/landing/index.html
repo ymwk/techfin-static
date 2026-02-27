@@ -106,7 +106,7 @@
                 손쉽게 조회하고, <br />
                 신용등급 변동현황까지
               </p>
-              <p>실시간 분석하는 올인원 서비스를 경험하세요.</p>
+              <p class="desc">실시간 분석하는 올인원 서비스를 경험하세요.</p>
               <div class="main-swiper-btns">
                 <button type="button" class="swiper-prev">
                   <span class="blind">Prev</span>
@@ -156,6 +156,8 @@
                   <p>신용등급·조기경보 통합 제공, <br />기업 신용 상태 신속 진단</p>
                 </li>
               </ul>
+
+              <div class="swiper-pagination"></div>
             </div>
             <!-- // main-point-swiper -->
           </div>
@@ -268,27 +270,31 @@
               </p>
             </div>
 
-            <ul class="main-design-list">
-              <li>
-                <p class="tit">빚 못 갚는 중소기업 늘어… <br />은행 연체율 7년 만에 최고</p>
-                <img src="/static/techfin-pms/image/main/design_img_01.svg" alt="" class="img" />
-                <small>단위 : %, 자료: 금감원, ※ 매년 10월 기준</small>
-                <p>
-                  일부 은행에서는 중소기업 연체율이 1.0%를 넘어 15년 만의 최고 수준을 기록했으며, 이로 인해 중소기업
-                  전반에 현금흐름 압박과 지급지연 위험이 확산되고 있음을 보여줍니다.
-                </p>
-              </li>
-              <li>
-                <p class="tit">부실 위험 기업 수 <br />1년 만에 11.8% 증가</p>
-                <img src="/static/techfin-pms/image/main/design_img_02.svg" alt="" class="img" />
-                <small>출처 : 금융감독원 기업신용위험 평가(C,D 등급) 결과 종합(23~25년, 언론 공개 자료 재구성)</small>
-                <p>
-                  금융감독원에 따르면, 부실 위험(C·D등급) 기업 수는 매년 증가하고 있으며, 연체율과 비슷한 추세로 위험
-                  단계로 진입한 기업이 늘어나고 있습니다. 이는 기업의 재무 상태가 1년 사이에도 급격히 악화될 수 있음을
-                  보여주는 지표입니다.
-                </p>
-              </li>
-            </ul>
+            <div class="main-design-swiper swiper">
+              <ul class="main-design-list swiper-wrapper">
+                <li class="swiper-slide">
+                  <p class="tit">빚 못 갚는 중소기업 늘어… <br />은행 연체율 7년 만에 최고</p>
+                  <img src="/static/techfin-pms/image/main/design_img_01.svg" alt="" class="img" />
+                  <small>단위 : %, 자료: 금감원, ※ 매년 10월 기준</small>
+                  <p>
+                    일부 은행에서는 중소기업 연체율이 1.0%를 넘어 15년 만의 최고 수준을 기록했으며, 이로 인해 중소기업
+                    전반에 현금흐름 압박과 지급지연 위험이 확산되고 있음을 보여줍니다.
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <p class="tit">부실 위험 기업 수 <br />1년 만에 11.8% 증가</p>
+                  <img src="/static/techfin-pms/image/main/design_img_02.svg" alt="" class="img" />
+                  <small>출처 : 금융감독원 기업신용위험 평가(C,D 등급) 결과 종합(23~25년, 언론 공개 자료 재구성)</small>
+                  <p>
+                    금융감독원에 따르면, 부실 위험(C·D등급) 기업 수는 매년 증가하고 있으며, 연체율과 비슷한 추세로 위험
+                    단계로 진입한 기업이 늘어나고 있습니다. 이는 기업의 재무 상태가 1년 사이에도 급격히 악화될 수 있음을
+                    보여주는 지표입니다.
+                  </p>
+                </li>
+              </ul>
+
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
         </div>
 
@@ -362,7 +368,7 @@
                   </ul>
                 </li>
               </ul>
-              
+
               <div class="swiper-pagination"></div>
             </div>
           </div>
@@ -509,7 +515,7 @@
                 기업 분석을 4단계로 <br />
                 완성하는 기업 모니터링 서비스
               </p>
-              <p>복잡한 기업 분석을 4단계 프로세스로 쉽고 빠르게 관리하세요.</p>
+              <p class="desc">복잡한 기업 분석을 4단계 프로세스로 쉽고 빠르게 관리하세요.</p>
 
               <div class="main-swiper-btns">
                 <button type="button" class="swiper-prev">
@@ -663,16 +669,27 @@
     <script src="../js/swiper/swiper-bundle.min.js"></script>
     <script>
       const pointSwiper = new Swiper('.main-point-swiper.swiper', {
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         spaceBetween: 40,
         speed: 500,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
+
+        pagination: {
+          el: '.main-point .swiper-pagination',
+          clickable: true,
         },
-        navigation: {
-          nextEl: '.main-point .swiper-next',
-          prevEl: '.main-point .swiper-prev',
+        breakpoints: {
+          768: {
+            slidesPerView: 'auto',
+            pagination: false,
+            navigation: {
+              nextEl: '.main-point .swiper-next',
+              prevEl: '.main-point .swiper-prev',
+            },
+          },
         },
       });
 
@@ -685,24 +702,30 @@
           delay: 3000,
           disableOnInteraction: false,
         },
-        navigation: {
-          nextEl: '.main-step .swiper-next',
-          prevEl: '.main-step .swiper-prev',
-        },
-        pagination: {
-          el: '.main-step .swiper-pagination',
-          clickable: true,
-          renderBullet: function (index, className) {
-            return `
+        navigation: false,
+        breakpoints: {
+          768: {
+            slidesPerView: 'auto',
+            pagination: {
+              el: '.main-step .swiper-pagination',
+              clickable: true,
+              renderBullet: function (index, className) {
+                return `
               <li class="${className}">
                 <span>${texts[index]}</span>
               </li>
             `;
+              },
+            },
+            navigation: {
+              nextEl: '.main-step .swiper-next',
+              prevEl: '.main-step .swiper-prev',
+            },
           },
         },
       });
 
-      btnAry = ['관리기업 대시보드', '기업별 대시보드', '런웨이현황'];
+      btnAry = ['전체 대시보드', '기업별 대시보드', '런웨이현황'];
 
       const serviceSwiper = new Swiper('.main-service-swiper.swiper', {
         slidesPerView: 1,
@@ -735,18 +758,54 @@
           clickable: true,
         },
       });
-      
+
       const exactSwiper = new Swiper('.main-exact-swiper.swiper', {
+        enabled: false,
         slidesPerView: 1,
+        spaceBetween: 40,
         speed: 800,
         loop: true,
-        // autoplay: {
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: '.main-exact .swiper-pagination',
           clickable: true,
+        },
+
+        breakpoints: {
+          0: {
+            enabled: true,
+          },
+          768: {
+            enabled: false,
+          },
+        },
+      });
+
+      const designSwiper = new Swiper('.main-design-swiper.swiper', {
+        enabled: false,
+        slidesPerView: 1,
+        spaceBetween: 40,
+        speed: 800,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.main-design .swiper-pagination',
+          clickable: true,
+        },
+
+        breakpoints: {
+          0: {
+            enabled: true,
+          },
+          768: {
+            enabled: false,
+          },
         },
       });
 
@@ -790,6 +849,35 @@
           }
         });
       });
+    </script>
+
+    <!-- header -->
+    <script>
+      // top button
+      const topBtn = document.querySelector('.side-short-root .btn-top');
+      topBtn.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      });
+      
+      
+      // scroll header
+      const header = document.querySelector('.console-header');
+      let beforeScrollY = window.scrollY || 0;
+      const vh = window.innerHeight;
+
+      window.addEventListener('scroll', function () {
+        let currentScrollY = window.scrollY;
+        header.classList.toggle('sticky', beforeScrollY < currentScrollY && 50 < currentScrollY);
+        beforeScrollY = currentScrollY;
+
+        // top buttom toggle
+        topBtn.classList.toggle('show', currentScrollY > vh/2);
+      });
+
+      
     </script>
 
     <!-- GSAP -->
