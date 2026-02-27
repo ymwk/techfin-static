@@ -10464,8 +10464,8 @@ td .msg-list {
     padding-top: 64px;
     padding-bottom: 64px;
   }
-  .landing-root:has(.global-btn-user.t--service.ac--active) .console-area {
-    position: fixed;
+  .landing-root:has(.global-btn-user.t--service.ac--active) .console-header.sticky .console-area {
+    top: 0;
   }
   .landing-root .main-section .text-active {
     font-size: 18px;

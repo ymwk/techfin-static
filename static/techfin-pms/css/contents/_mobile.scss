@@ -243,8 +243,8 @@
     }
 
     &:has(.global-btn-user.t--service.ac--active) {
-      .console-area {
-        position: fixed;
+      .console-header.sticky .console-area {
+        top: 0
       }
     }
 
