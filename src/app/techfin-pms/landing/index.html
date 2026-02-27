@@ -702,7 +702,7 @@
           delay: 3000,
           disableOnInteraction: false,
         },
-        navigation: false,
+
         breakpoints: {
           768: {
             slidesPerView: 'auto',
@@ -861,8 +861,7 @@
           behavior: 'smooth',
         });
       });
-      
-      
+
       // scroll header
       const header = document.querySelector('.console-header');
       let beforeScrollY = window.scrollY || 0;
@@ -874,10 +873,8 @@
         beforeScrollY = currentScrollY;
 
         // top buttom toggle
-        topBtn.classList.toggle('show', currentScrollY > vh/2);
+        topBtn.classList.toggle('show', currentScrollY > vh / 2);
       });
-
-      
     </script>
 
     <!-- GSAP -->

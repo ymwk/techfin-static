@@ -1143,6 +1143,7 @@
 
   li {
     flex: 1;
+    height: auto !important;
     display: flex;
     flex-direction: column;
     gap: 24px;
