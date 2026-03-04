@@ -1,12 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const introList = document.querySelectorAll('.main-banner-cont > *');
+const introList = document.querySelectorAll('.main-db-banner > .main-section-inner > *');
 gsap.from(introList, {
   scrollTrigger: {
     trigger: '.main-banner',
     start: 'top 50%',
   },
-  stagger: 0.4,
+  stagger: 0.2,
   opacity: 0,
   yPercent: 20,
   delay: 0.5,
@@ -26,11 +26,11 @@ titleList.forEach((element) => {
   });
 });
 
-const pointList = document.querySelectorAll('.main-point-list > li');
-gsap.from(pointList, {
+const expertList = document.querySelectorAll('.main-db-expert .expert-list > li');
+gsap.from(expertList, {
   scrollTrigger: {
-    trigger: '.main-point',
-    start: 'top 20%',
+    trigger: '.main-db-expert',
+    start: 'top 50%',
   },
   stagger: 0.2,
   opacity: 0,
@@ -38,33 +38,11 @@ gsap.from(pointList, {
   ease: 'circ.out',
 });
 
-const stepList = document.querySelector('.main-step-cont');
-gsap.from(stepList, {
+const insightList = document.querySelectorAll('.main-db-insight .insight-list > li');
+gsap.from(insightList, {
   scrollTrigger: {
-    trigger: '.main-step',
-    start: 'top 20%',
-  },
-  opacity: 0,
-  yPercent: 30,
-  ease: 'circ.out',
-});
-
-const serviceList = document.querySelector('.main-service-swiper');
-gsap.from(serviceList, {
-  scrollTrigger: {
-    trigger: '.main-service',
-    start: 'top 20%',
-  },
-  opacity: 0,
-  yPercent: 30,
-  ease: 'circ.out',
-});
-
-const turnList = document.querySelectorAll('.main-turn-list > li');
-gsap.from(turnList, {
-  scrollTrigger: {
-    trigger: '.main-turn',
-    start: 'top 20%',
+    trigger: '.main-db-insight',
+    start: 'top 50%',
   },
   stagger: 0.2,
   opacity: 0,
@@ -72,4 +50,15 @@ gsap.from(turnList, {
   ease: 'circ.out',
 });
 
-
+const workflowList = document.querySelectorAll('.main-db-flow .flow-list > li');
+workflowList.forEach((element) => {
+  gsap.from(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: 'top 80%',
+    },
+    opacity: 0,
+    yPercent: 30,
+    ease: 'circ.out',
+  });
+});
