@@ -160,9 +160,18 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
   updateTooltipPosition();
   window.addEventListener('resize', updateTooltipPosition);
+
+  // 아코디언
+  const summary = document.querySelectorAll('.btn-summary');
+  summary.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const target = document.querySelector(`#${btn.getAttribute(['data-target-id'])}`);
+      btn.classList.toggle('ac--open');
+      target.classList.toggle('ac--open');
+    });
+  });
 
   // common popper
   const popperRoot = document.querySelectorAll('.popper-comm-root');
@@ -178,42 +187,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const closeBtn = wrapper.querySelector('.btn-popper-close');
     if (closeBtn) {
-      closeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        wrapper.classList.remove('ac--active');
-      });
+      closeBtn.onclick = () => wrapper.classList.remove('ac--active');
     }
   });
 
-  // 바깥 클릭 닫기
-  document.addEventListener('click', (e) => {
-    let clickedInside = false;
-    popperRoot.forEach((wrapper) => {
-      if (wrapper.contains(e.target)) {
-        clickedInside = true;
+  // 검색창 관련
+  const updateFieldState = (field, eventType) => {
+    const hasValue = field.value.trim() !== '';
+
+    // 검색 popper
+    const searchRoot = field.closest('.popper-search-root');
+    if (searchRoot) {
+      if (eventType === 'blur' || eventType === 'init') {
+        searchRoot.classList.remove('ac--active');
       } else {
+        searchRoot.classList.toggle('ac--active', hasValue);
+      }
+    }
+
+    // textfield
+    const textfieldRoot = field.closest('.textfield-root');
+    if (textfieldRoot) textfieldRoot.classList.toggle('ac--focus', hasValue);
+  };
+
+  document.querySelectorAll('.textfield-form').forEach((field) => {
+    ['input', 'focus', 'blur'].forEach((event) => {
+      field.addEventListener(event, () => updateFieldState(field, event));
+    });
+
+    // Clear button
+    const root = field.closest('.textfield-root');
+    if (root) {
+      const clearBtn = root.querySelector('.btn-clear');
+      if (clearBtn) {
+        clearBtn.style.display = 'none';
+        clearBtn.addEventListener('click', () => {
+          field.value = '';
+          field.focus();
+          updateFieldState(field, 'input');
+        });
+      }
+    }
+
+    // 초기 실행
+    updateFieldState(field, 'init');
+  });
+
+  // 바깥 영역 클릭
+  document.addEventListener('click', (e) => {
+    popperRoot.forEach((wrapper) => {
+      if (!wrapper.contains(e.target) && wrapper.classList.contains('ac--active')) {
         wrapper.classList.remove('ac--active');
       }
     });
-  });
-
-  // 아코디언
-  const summary = document.querySelectorAll('.btn-summary');
-  summary.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const target = document.querySelector(`#${btn.getAttribute(['data-target-id'])}`);
-      btn.classList.toggle('ac--open');
-      target.classList.toggle('ac--open');
-    });
-  });
-
-  // 검색창 popper
-  const toggleActive = (textfield) => {
-    textfield.closest('.tablesearch-popper-root').classList.toggle('ac--active', textfield.value.trim() !== '');
-  };
-
-  document.querySelectorAll('.tablesearch-popper-root .textfield-form').forEach((textfield) => {
-    textfield.addEventListener('input', () => toggleActive(textfield));
-    textfield.addEventListener('focus', () => toggleActive(textfield));
   });
 });

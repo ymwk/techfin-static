@@ -391,7 +391,7 @@ textarea {
   --c-fail: #718ebf;
   --c-cta: #5a7299;
   --c-active: #5a71fe;
-  --c-border: #bbb;
+  --c-border: #D4D4D9;
   --c-border2: #e8e8eb;
   --c-bg: #f7f7f7;
   --w-sidebar: 368px;
@@ -989,6 +989,8 @@ img {
 }
 
 .font-h4 {
+  display: inline-flex;
+  gap: 4px;
   font-size: 16px;
   font-weight: 700;
   color: var(--c-black);
@@ -1057,6 +1059,12 @@ img {
 .textfield-root.ac--invalid .textfield-form {
   border-color: var(--c-error);
 }
+.textfield-root.ac--focus .btn-clear {
+  display: block !important;
+}
+.textfield-root.ac--focus .textfield-form {
+  background-color: #fff;
+}
 
 .textfield-label {
   position: relative;
@@ -1088,7 +1096,7 @@ img {
   color: var(--c-black);
   font-weight: 400;
   text-align: left;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background-color 0.2s;
 }
 .textfield-form:has(.textfield-btn) {
   padding-right: 40px;
@@ -1138,7 +1146,7 @@ img {
   color: var(--c-black);
   font-weight: 400;
   text-align: left;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background-color 0.2s;
 }
 .textarea-form:has(.textfield-btn) {
   padding-right: 40px;
@@ -1214,6 +1222,7 @@ img {
 }
 
 .btn-clear {
+  z-index: 1;
   position: absolute;
   inset: 0 5px 0 auto;
   margin: auto 0;
@@ -1301,6 +1310,16 @@ img {
 .btn-link.s--lg {
   min-width: 90px;
 }
+.btn-comm.s--bd,
+.btn-contained.s--bd,
+.btn-outlined.s--bd,
+.btn-cta.s--bd,
+.btn-link.s--bd {
+  min-width: 160px;
+  height: 48px;
+  border-radius: 6px;
+  font-size: 16px;
+}
 .btn-comm:has(.icon-comm),
 .btn-contained:has(.icon-comm),
 .btn-outlined:has(.icon-comm),
@@ -1342,7 +1361,7 @@ img {
 
 .btn-comm,
 .btn-link {
-  border-color: #d4d4d9;
+  border-color: var(--c-border);
   background-color: #fff;
 }
 .btn-comm:hover:not(:disabled), .btn-comm.hover:not(:disabled), .btn-comm:focus:not(:disabled), .btn-comm.focus:not(:disabled), .btn-comm:active:not(:disabled), .btn-comm.active:not(:disabled),
@@ -1360,9 +1379,9 @@ img {
 }
 .btn-comm.ac--active,
 .btn-link.ac--active {
-  border-color: #7D98FF;
-  background-color: #D8E0FF;
-  color: #3B5DFB;
+  border-color: #7d98ff;
+  background-color: #d8e0ff;
+  color: #3b5dfb;
 }
 
 .btn-contained {
@@ -1467,7 +1486,7 @@ img {
 .btn-text.s--xs {
   font-size: 10px;
   font-weight: 700;
-  color: #7E7E88;
+  color: #7e7e88;
 }
 
 .btn-link {
@@ -1594,7 +1613,7 @@ img {
   position: relative;
   width: 18px;
   height: 18px;
-  border: 1px solid #d4d4d9;
+  border: 1px solid var(--c-border);
   border-radius: 4px;
   background: #fff;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -1611,7 +1630,7 @@ img {
   position: relative;
   width: 18px;
   height: 18px;
-  border: 1px solid #d4d4d9;
+  border: 1px solid var(--c-border);
   border-radius: 50%;
   background-color: #fff;
 }
@@ -2196,7 +2215,8 @@ img {
 }
 
 .i--up::after,
-.i--up-r::after {
+.i--up-r::after,
+.i--up-tr::after {
   content: "→";
   transform: rotate(-90deg);
   line-height: 1;
@@ -2208,6 +2228,10 @@ img {
   transform: none;
   font-size: 1.2em;
   font-weight: 300;
+}
+
+.i--up-tr::after {
+  transform: rotate(-45deg);
 }
 
 .icon-comm.t--alert {
@@ -2450,7 +2474,7 @@ img {
   color: var(--c-black);
   font-weight: 400;
   text-align: left;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background-color 0.2s;
 }
 .combobox-btn:has(.textfield-btn) {
   padding-right: 40px;
@@ -2788,6 +2812,7 @@ img {
 .tabmenu-menu .tabmenu-btn {
   position: relative;
   display: inline-flex;
+  gap: 4px;
   height: 50px;
   padding-top: 8px;
   margin-bottom: -1px;
@@ -2803,8 +2828,14 @@ img {
   color: var(--c-black);
   font-weight: 700;
 }
+.tabmenu-menu .tabmenu-btn.ac--active em {
+  color: var(--c-primary);
+}
 .tabmenu-menu .tabmenu-btn:not(:last-child) {
   margin-right: 4px;
+}
+.tabmenu-menu .tabmenu-btn em {
+  font-weight: inherit;
 }
 .tabmenu-menu.s--sm {
   margin-bottom: 4px;

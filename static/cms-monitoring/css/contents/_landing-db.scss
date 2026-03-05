@@ -1,5 +1,10 @@
 .landing-root.st--db {
   --w-landing: 1200px;
+  --max-width: 1240px;
+
+  .SOLFooter-root {
+    border-top: 1px solid var(--c-border2);
+  }
 }
 
 .console-contents {
@@ -433,7 +438,7 @@
         align-items: center;
         justify-content: center;
         height: 12px;
-        border-left: 1px solid #d4d4d9;
+        border-left: 1px solid var(--c-border);
       }
     }
 

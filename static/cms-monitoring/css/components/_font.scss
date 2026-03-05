@@ -16,6 +16,8 @@
 }
 
 .font-h4 {
+  display: inline-flex;
+  gap: 4px;
   font-size: 16px;
   font-weight: 700;
   color: var(--c-black);

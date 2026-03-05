@@ -460,7 +460,8 @@
 }
 
 .i--up,
-.i--up-r {
+.i--up-r,
+.i--up-tr {
   &::after {
     content: '→';
     transform: rotate(-90deg);
@@ -475,6 +476,12 @@
     transform: none;
     font-size: 1.2em;
     font-weight: 300;
+  }
+}
+
+.i--up-tr {
+  &::after {
+    transform: rotate(-45deg);;
   }
 }
 

@@ -770,7 +770,7 @@
 }
 
 .tableset-popper-root,
-.tablesearch-popper-root {
+.popper-search-root {
   @include popper;
 }
 
@@ -778,9 +778,9 @@
   min-width: 100%;
   top: calc(100% + 6px);
   box-shadow: 12px 16px 40px 0px #0000000a;
-  
+
   .combobox-option {
-    max-height: 134px
+    max-height: 134px;
   }
 }
 
@@ -802,27 +802,27 @@
       gap: 16px;
       padding: 6px 0;
       font-size: inherit;
-      
+
       &:not(:first-child) {
         border-top: 0;
       }
     }
   }
-  
+
   .tableset-combobox {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 8px
+    margin-top: 8px;
   }
-  
+
   .combobox-root {
     flex-direction: row;
     font-size: inherit;
-    
+
     .combobox-btn {
       height: 32px;
-    font-size: inherit;
+      font-size: inherit;
     }
   }
 }

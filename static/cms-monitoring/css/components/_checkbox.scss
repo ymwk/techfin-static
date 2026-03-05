@@ -58,7 +58,7 @@
     position: relative;
     width: 18px;
     height: 18px;
-    border: 1px solid #d4d4d9;
+    border: 1px solid var(--c-border);
     border-radius: 4px;
     background: #fff;
     transition:
@@ -78,7 +78,7 @@
     position: relative;
     width: 18px;
     height: 18px;
-    border: 1px solid #d4d4d9;
+    border: 1px solid var(--c-border);
     border-radius: 50%;
     background-color: #fff;
 
@@ -94,7 +94,7 @@
       border-color: #dbdbdb;
       background-color: #f7f7f7;
       cursor: default;
-      
+
       &:checked {
         background-image: url(../image/icon/ic_check_g.svg);
       }
@@ -150,7 +150,7 @@
       small {
         padding-left: 0;
         font-weight: 400;
-        font-size: 13px
+        font-size: 13px;
       }
     }
   }

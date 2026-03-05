@@ -13,6 +13,14 @@
   &.ac--invalid .textfield-form {
     border-color: var(--c-error);
   }
+  &.ac--focus {
+    .btn-clear {
+      display: block !important;
+    }
+    .textfield-form {
+      background-color: #fff;
+    }
+  }
 }
 
 .textfield-label {
@@ -28,9 +36,9 @@
     align-items: center;
     white-space: nowrap;
   }
-  
+
   .btn-comm {
-    min-width: 65px
+    min-width: 65px;
   }
 }
 
@@ -77,6 +85,7 @@
 }
 
 .btn-clear {
+  z-index: 1;
   position: absolute;
   inset: 0 5px 0 auto;
   margin: auto 0;

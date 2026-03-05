@@ -8,6 +8,7 @@
   .tabmenu-btn {
     position: relative;
     display: inline-flex;
+    gap: 4px;
     height: 50px;
     padding-top: 8px;
     margin-bottom: -1px;
@@ -25,10 +26,18 @@
       border-bottom-color: currentColor;
       color: var(--c-black);
       font-weight: 700;
+      
+      em {
+        color: var(--c-primary)
+      }
     }
 
     &:not(:last-child) {
       margin-right: 4px;
+    }
+    
+    em {
+      font-weight: inherit;
     }
   }
 
