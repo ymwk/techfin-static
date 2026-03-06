@@ -1,0 +1,45 @@
+.SOLFilelist-root {
+  .SOLIconBtn-root {
+    flex-shrink: 0;
+    min-width: 28px;
+    width: 28px;
+    padding: 0;
+  }
+}
+
+.SOLFilelist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 8px;
+
+  .info {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+  }
+
+  small {
+    font-size: var(--font-12);
+    color: var(--fc-gray2)
+  }
+}
+
+.SOLFilelist-list {
+  padding: 10px 0;
+  border-top: 1px solid var(--tb-border);
+  border-bottom: 1px solid var(--tb-border);
+
+  & > li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+  }
+}
+
+.SOLFilelist-name {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+}

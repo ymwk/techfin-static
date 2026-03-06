@@ -1,0 +1,245 @@
+.amaranth-layout-root {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0 20px;
+  flex-wrap: wrap;
+  min-width: 1500px;
+  .intro-root {
+    flex: 1;
+    .aireport-landing-section01 {
+      .ai-reprot-floating-wrap {
+        left: calc(50% + 220px);
+        transform: translate(calc(-50% - 110px), 0);
+      }
+    }
+    .aireport-landing-section02 {
+      height: auto;
+    }
+  }
+  .aireport-landing-root {
+    flex: 1;
+    .aireport-landing-section02 {
+      height: auto;
+    }
+  }
+  .SOLFooter-root {
+    align-items: flex-start;
+    max-width: 100%;
+    padding: 0 0 0 223px;
+  }
+}
+
+.amaranth-lnb {
+  &-root {
+    font-family: "Noto Sans KR Variable";
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    max-height: 100vh;
+    overflow-y: auto;
+    .amaranth-lnb-container {
+      width: 200px;
+      height: 100%;
+      border-right: 1px solid #e6e6e6;
+      border-bottom: 1px solid #e6e6e6;
+      border-left: 1px solid #e6e6e6;
+      .crediview-btn-wrap {
+        padding: 12px;
+        border-bottom: 1px solid #e6e6e6;
+        button {
+          width: 100%;
+          padding: 8px 10px;
+          border-radius: 2px;
+          background: #1c90fb;
+          transition: ease-in-out 0.2s;
+          &:hover {
+            background: #036dd2;
+          }
+          span {
+            display: block;
+            color: #fff;
+            text-align: center;
+            font-size: var(--font-13);
+            font-weight: 400;
+          }
+        }
+      }
+      //menu
+      .menu-box {
+        .home {
+          display: block;
+          padding: 9px 0 9px 24px;
+          span {
+            display: block;
+            font-size: var(--font-13);
+            color: #000;
+            position: relative;
+            font-weight: 700;
+            padding: 2px 0 0 23px;
+            &::before {
+              content: "";
+              width: 18px;
+              height: 18px;
+              background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/home-ico.svg)
+                no-repeat center;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+          &.st--open {
+            span {
+              &::before {
+                content: "";
+                background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/home-on-ico.svg)
+                  no-repeat center;
+              }
+            }
+          }
+        }
+        .lnb-menu-wrap {
+          padding: 0 0 0 10px;
+          li {
+            a {
+              padding: 9px 0 9px 0px;
+              position: relative;
+              display: flex;
+              color: #000;
+              cursor: pointer;
+              .custom-svg {
+                width: 18px;
+                padding: 0 0 0 13px;
+                fill: #666666;
+              }
+
+              &::before {
+                content: "";
+                width: 5px;
+                height: 9px;
+                background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/menu-arrorw-ico.svg)
+                  no-repeat center;
+                position: absolute;
+                top: 12px;
+                left: 2px;
+                transition: ease-in-out 0.2s;
+              }
+              span {
+                display: flex;
+                align-items: center;
+                padding: 0 0 0 5px;
+                color: #000;
+                font-size: var(--font-13);
+                font-weight: 400;
+                position: relative;
+              }
+            }
+
+            &.st--open {
+              a {
+                &::before {
+                  content: "";
+                  background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/menu-arrorw-on-ico.svg)
+                    no-repeat center;
+                  transform: rotate(90deg);
+                }
+                .custom-svg {
+                  fill: #1c90fb;
+                }
+                span {
+                  font-weight: 700;
+                }
+              }
+              .sub-menu {
+                max-height: 500px;
+              }
+            }
+            &:nth-child(2) {
+              a {
+                &::before {
+                  content: "";
+                  top: 14px;
+                }
+                span {
+                  padding: 2px 0 0 5px;
+                }
+              }
+            }
+
+            &:nth-child(3) {
+              a {
+                &::before {
+                  top: 12px;
+                }
+              }
+            }
+            &:last-child {
+              a {
+                &::before {
+                  top: 13px;
+                }
+                span {
+                  padding: 1px 0 0 5px;
+                }
+              }
+            }
+
+            .sub-menu {
+              max-height: 0px;
+              overflow: hidden;
+              transition: max-height 0.2s;
+              position: relative;
+              &::before {
+                content: "";
+                width: 1px;
+                height: 100%;
+                border-left: dotted 1px #cccccc;
+                position: absolute;
+                top: -15px;
+                left: 24px;
+              }
+              li {
+                a {
+                  position: relative;
+                  padding: 5px 0;
+                  transition: ease-in-out 0.2s;
+                  &::before {
+                    content: none;
+                  }
+                  &:hover {
+                    color: #1c90fb;
+                    font-weight: 700;
+                  }
+
+                  span {
+                    display: flex;
+                    align-items: center;
+                    height: 19px;
+                    position: relative;
+                    padding: 0 0 0 36px;
+                    font-weight: 400;
+                    &::before {
+                      content: "";
+                      width: 7px;
+                      height: 1px;
+                      border-top: dotted 1px #cccccc;
+                      position: absolute;
+                      top: 8px;
+                      left: 26px;
+                      background-image: none !important;
+                    }
+                    &.st--active {
+                      color: #1c90fb;
+                      font-weight: 700;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

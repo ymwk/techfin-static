@@ -1,0 +1,209 @@
+@charset "UTF-8";
+.AidataReport {
+  &-wrap {
+    &.v2 {
+      .AidataReport-cover {
+        padding: 4.75rem 6.25rem 6.25rem 6.25rem;
+        height: 100%;
+        position: relative;
+        //표지버전 v-2
+        &::before {
+          content: "";
+          width: 100%;
+          height: 1023px;
+          background: url(/static/crediview/crediview-w/image/views/aireport/cover-bg-top-v2-2.png)
+            no-repeat;
+          background-size: 944px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+        &::after {
+          content: "";
+          width: 100%;
+          height: 1501px;
+          background: url(/static/crediview/crediview-w/image/views/aireport/cover-bg-bottom-v2.png)
+            no-repeat;
+          background-size: cover;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          z-index: 0;
+        }
+
+        .AidataReport-cover-contents {
+          position: relative;
+          z-index: 1;
+          //상단타이틀
+          .top-infor-contents {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .left-tit {
+              span {
+                display: block;
+                font-size: var(--font-17);
+                font-weight: 500;
+                color: rgba(0, 0, 0, 0.6);
+              }
+            }
+            .aims-reprot-tit {
+              display: block;
+              font-size: var(--font-22);
+              font-weight: 500;
+              color: rgba(0, 0, 0, 0.6);
+            }
+          }
+          //메인컨텐츠
+          .main-contents {
+            padding: 15.188rem 0 0 0;
+            .main-tit {
+              h2 {
+                font-family: "GmarketSans";
+                span {
+                  display: block;
+                  font-size: 90px;
+                  font-weight: 700;
+                  &.active-txt {
+                    color: #225eff;
+                    font-size: 100px;
+                    padding-bottom: 5px;
+                  }
+                }
+              }
+              .desc {
+                padding-top: 3.125rem;
+                font-size: var(--font-22);
+                font-weight: 500;
+                line-height: 32px;
+                color: rgba(0, 0, 0, 0.8);
+              }
+            }
+            //회사정보
+            .company-infor {
+              padding: 10.875rem 0 15.938rem 0;
+              .title {
+                font-size: var(--font-22);
+                font-weight: 700;
+                color: #000000;
+                padding: 1.25rem 0 2.5rem 0;
+                position: relative;
+                &::before {
+                  content: "";
+                  width: 30px;
+                  height: 4px;
+                  background: #000000;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                }
+              }
+              .company-list {
+                li {
+                  display: flex;
+                  align-items: center;
+                  padding-bottom: 1.125rem;
+                  span {
+                    display: block;
+                    font-size: var(--font-20);
+                    color: rgba(0, 0, 0, 1);
+                    &.tit {
+                      width: 150px;
+                      font-weight: 500;
+                    }
+                    &.con {
+                      font-weight: 700;
+                    }
+                  }
+                  &:last-child {
+                    padding-bottom: 0;
+                  }
+                }
+              }
+              .desc {
+                padding-top: 3.125rem;
+                font-size: var(--font-17);
+                font-weight: 500;
+                line-height: 26px;
+                color: rgba(0, 0, 0, 1);
+              }
+            }
+            .footer-contents {
+              .title {
+                font-size: var(--font-22);
+                font-weight: 500;
+                color: rgba(41, 45, 54, 1);
+                padding-bottom: 1.25rem;
+              }
+              .desc {
+                font-size: var(--font-17);
+                font-weight: 500;
+                color: rgba(0, 0, 0, 0.5);
+                line-height: 24px;
+              }
+            }
+          }
+        }
+      }
+      &.even {
+        .AidataReport-cover {
+          background: rgba(34, 49, 79, 1);
+          .AidataReport-cover-contents {
+            .top-infor-contents {
+              .left-tit {
+                span {
+                  color: rgba(255, 255, 255, 0.6);
+                }
+              }
+              .aims-reprot-tit {
+                color: rgba(255, 255, 255, 0.6);
+              }
+            }
+            .main-contents {
+              .main-tit {
+                h2 {
+                  span {
+                    color: rgba(255, 255, 255, 1);
+                    &.active-txt {
+                      color: #225eff;
+                    }
+                  }
+                }
+                .desc {
+                  color: rgba(255, 255, 255, 0.8);
+                }
+              }
+              .company-infor {
+                .title {
+                  color: rgba(255, 255, 255, 1);
+                  &::before {
+                    background: rgba(255, 255, 255, 1);
+                  }
+                }
+                .company-list {
+                  li {
+                    span {
+                      color: rgba(255, 255, 255, 1);
+                    }
+                  }
+                }
+                .desc {
+                  color: rgba(255, 255, 255, 1);
+                }
+              }
+              .footer-contents {
+                .title {
+                  color: rgba(255, 255, 255, 1);
+                }
+                .desc {
+                  color: rgba(255, 255, 255, 0.5);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+// 페이지 공통
+body {
+  overflow-x: hidden;
+}
+//페이지 네비게이션 상단 공통
+.page-navigation-top {
+  width: 100%;
+  height: 480px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::before {
+    content: "";
+    width: 90%;
+    height: 80px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(70px 0, 100% 0, 100% 100%, 0% 100%, 0% 81px);
+  }
+  //회사소개
+  &.tfr0101 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-cp-top-bg01.png)
+      top center/cover;
+  }
+  //서비스 소개 기업신용평가, 기업금융중개
+  &.tfr0201 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-top-bg01.png)
+      top center/cover;
+  }
+  &.tfr0202 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-top-bg02.png)
+      top center/cover;
+  }
+  // 새소식, 문의하기
+  &.tfr0301 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-top-bg03.png)
+      top center/cover;
+  }
+  &.tfr0302 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-top-bg04.png)
+      top center/cover;
+  }
+  &.tfr0303 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-top-bg05.png)
+      top center/cover;
+  }
+  //문의하기
+  &.tfr0401 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-iq-top-bg01.png)
+      top center/cover;
+  }
+  // 인재채용
+  &.tfr0501 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-cr-top-bg01.png)
+      top center/cover;
+  }
+  &.tfr0502 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-cr-top-bg02.png)
+      top center/cover;
+  }
+  &.tfr0503 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-cr-top-bg03.png)
+      top center/cover;
+  }
+
+  // 이용안내
+  &.tfr0701 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-ug-top-bg01.png)
+      top center/cover;
+  }
+  &.tfr0702 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-ug-top-bg02.png)
+      top center/cover;
+  }
+  &.tfr0703 {
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-ug-top-bg03.png)
+      top center/cover;
+  }
+
+  .lct-box {
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px 80px 0 80px;
+  }
+  .title-box {
+    position: absolute;
+    top: calc(50% - 80px);
+    left: 50%;
+    transform: translate(-50%, -10%);
+    .title {
+      font-size: 52px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #fff;
+      text-align: center;
+    }
+    .desc {
+      font-size: var(--font-20);
+      font-weight: 400;
+      color: #fff;
+      padding-top: 10px;
+      text-align: center;
+    }
+  }
+}
+
+//페이지 컨텐츠 레이아웃
+.page-layout-wrap {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+// 페이지 컨텐츠 공통
+.common-bf-bg {
+  width: 100%;
+  position: relative;
+  &:before {
+    content: "";
+    width: 551px;
+    height: 313px;
+    background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sec-common-bg01.png)
+      no-repeat center;
+    position: absolute;
+    top: 40px;
+    right: 0;
+  }
+  &.ps-top-0 {
+    &::before {
+      content: "";
+      top: 0px;
+    }
+  }
+}
+
+//게시판 공통
+.board-tit-common {
+  padding-bottom: 80px;
+  span {
+    display: block;
+    &.tit {
+      font-size: var(--font-20);
+      font-weight: 700;
+      color: var(--c-active);
+      padding-bottom: 12px;
+    }
+    &.sub-tit {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--fc-default);
+    }
+  }
+  &.careers {
+    .careers-desc {
+      display: block;
+      padding-top: 24px;
+      font-size: var(--font-18);
+      font-weight: 400;
+      line-height: 150%;
+      color: var(--fc-default);
+    }
+  }
+}

@@ -1,0 +1,588 @@
+.epress-landing {
+  &-root {
+    .sec-layout-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .bottom-fix-btn {
+      width: 100%;
+      position: fixed;
+      bottom: 0px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 10;
+      background-color: transparent;
+      box-shadow: none;
+      &-wrap {
+        width: 1020px;
+        padding: 2px 2px 0px 2px;
+        margin: 0 auto;
+        background: linear-gradient(85.03deg, #0046ff 9.99%, #8e48ff 152.39%);
+        border-radius: 20px 20px 0 0;
+        display: block;
+        border-width: 2px, 2px, 0px, 2px;
+      }
+
+      &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        border-radius: 17px 17px 0 0;
+        padding: 20px 40px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+      }
+      .tit-box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .logo {
+          width: 126px;
+          height: 20px;
+          background: url(/static/crediview/crediview-w/image/views/logo/bi_crediview.svg)
+            no-repeat center;
+          background-size: 126px;
+          position: relative;
+          &::before {
+            content: "x";
+            font-size: var(--font-28);
+            font-weight: 700;
+            position: absolute;
+            top: -10px;
+            right: -29px;
+          }
+        }
+        span {
+          display: block;
+
+          &.epress-logo {
+            width: 99px;
+            height: 28px;
+            background: url(/static/crediview/crediview-w/image/views/logo/bi_epress.png)
+              no-repeat center;
+            background-size: 99px;
+            margin-left: 40px;
+          }
+          &.tit {
+            display: block;
+            font-size: var(--font-22);
+            font-weight: 700;
+            color: #1d2129;
+            padding: 0 0 0 10px;
+          }
+        }
+      }
+      .user-referral-btn {
+        width: 238px;
+        height: 64px;
+        text-align: center;
+        background: linear-gradient(85.05deg, #0046ff 9.96%, #8e48ff 99.38%);
+
+        border-radius: 8px;
+        span {
+          display: inline-block;
+          color: #fff;
+          font-size: var(--font-16);
+          position: relative;
+          padding: 0 20px 0 0;
+          &::before {
+            content: "";
+            width: 14px;
+            height: 15px;
+            background: url(/static/crediview/crediview-w/image/icon/ic_arrow_w_btn.png)
+              no-repeat center center;
+            position: absolute;
+            top: 2px;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+  &-container {
+    .section01 {
+      width: 100%;
+      height: 960px;
+      background: url(/static/crediview/crediview-w/image/views/epress/epress-sec01-bg01.png)
+        no-repeat center center;
+      background-size: cover;
+      position: relative;
+      padding: 150px 0 0 0;
+      .logo-box {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+        .logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 262px;
+          height: 42px;
+          background: #fff;
+          border-radius: 100px;
+          box-shadow: 0px 4px 20px 0px rgba(186, 204, 246, 0.3);
+          border: 1px solid rgba(237, 238, 240, 1);
+          position: relative;
+
+          img {
+            max-width: 202px;
+            max-height: 28px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+      .tit-box {
+        span {
+          display: block;
+          text-align: center;
+          &.tit {
+            font-size: var(--font-22);
+            font-weight: 700;
+            color: #0046ff;
+          }
+          &.txt {
+            font-size: 46px;
+            font-weight: 700;
+            color: #000000;
+            padding-top: 20px;
+            line-height: 134%;
+          }
+        }
+      }
+      .img {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0);
+        width: 857px;
+        height: 570px;
+        background: url(/static/crediview/crediview-w/image/views/epress/epress-sec01-img01.png)
+          no-repeat center;
+        background-size: contain;
+        .ps-img01 {
+          position: absolute;
+          top: 170px;
+          left: -40px;
+          img {
+            width: 120px;
+            height: 120px;
+          }
+        }
+        .ps-img02 {
+          position: absolute;
+          top: 229px;
+          right: -115px;
+          img {
+            width: 447px;
+            height: 182px;
+          }
+        }
+      }
+    }
+    .section02 {
+      padding: 120px 0 140px 0;
+      background: #fff;
+      .tit-box {
+        text-align: center;
+        padding-bottom: 80px;
+        span {
+          display: block;
+          &.tit {
+            font-size: var(--font-36);
+            font-weight: 700;
+            color: #242a30;
+            padding-bottom: 10px;
+            em {
+              color: #3b5dfb;
+            }
+          }
+          &.desc {
+            font-size: var(--font-18);
+            font-weight: 500;
+            color: #4e5262;
+          }
+        }
+      }
+      .list-infor {
+        .tit {
+          display: block;
+          font-size: var(--font-24);
+          font-weight: 700;
+          color: #242a30;
+          padding: 0 0 24px 40px;
+          position: relative;
+          &::before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background: url(/static/crediview/crediview-w/image/views/epress/ic_check.png)
+              no-repeat center;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+        .list {
+          display: flex;
+          justify-content: space-between;
+          flex-flow: wrap;
+          gap: 20px;
+          li {
+            width: 49%;
+
+            div {
+              width: 100%;
+              height: 125px;
+              padding: 30px 40px;
+              background: #f7f8fc;
+              border-radius: 16px;
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              .txt {
+                font-size: var(--font-18);
+                font-weight: 400;
+                line-height: 143%;
+                position: relative;
+                span {
+                  display: inline-block;
+                  color: #3b5dfb;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .section03 {
+      width: 100%;
+      height: 808px;
+      background: url(/static/crediview/crediview-w/image/views/epress/epress-sec03-bg01.png)
+        no-repeat center/cover;
+      padding: 120px 0 140px 0;
+      .tit-box {
+        text-align: center;
+        padding-bottom: 60px;
+        .tit {
+          display: block;
+          font-size: var(--font-36);
+          font-weight: 700;
+          em {
+            color: #3b5dfb;
+          }
+        }
+      }
+      .box-list {
+        ul {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          li {
+            width: 462px;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0px 4px 24px 0px rgba(72, 114, 221, 0.16);
+
+            .title {
+              display: block;
+              text-align: center;
+              font-size: var(--font-24);
+              font-weight: 700;
+              color: #242a30;
+              padding: 30px 0;
+              border-radius: 20px 20px 0 0;
+              background: #f7f8fa;
+            }
+            &:last-child {
+              .title {
+                background: #f3f5ff;
+              }
+            }
+            .box-wrap {
+              padding: 44px;
+            }
+            .box-inner {
+              &:first-child {
+                padding-bottom: 30px;
+                border-bottom: solid 1px #ecf1f7;
+              }
+              &:last-child {
+                padding-top: 30px;
+              }
+              .s-tit {
+                font-size: var(--font-20);
+                font-weight: 700;
+                color: #222222;
+              }
+              .flex-box {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 0 0 0;
+
+                span {
+                  display: block;
+                  &.s-list {
+                    font-size: var(--font-18);
+                    font-weight: 500;
+                    color: #7b7b7b;
+                    padding: 0 0 0 10px;
+                    position: relative;
+                    &:before {
+                      content: "";
+                      width: 3px;
+                      height: 3px;
+                      border-radius: 100%;
+                      background: #7b7b7b;
+                      position: absolute;
+                      top: 50%;
+                      left: 0;
+                      transform: translate(0, -50%);
+                    }
+                  }
+                  &.price {
+                    font-size: var(--font-18);
+                    font-weight: 700;
+                    color: #393939;
+                  }
+                }
+              }
+            }
+            &.t02 {
+              position: relative;
+              z-index: 1;
+              background: #fff;
+              padding: 2px 2px;
+              &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                  99.88deg,
+                  #422bf5 -297.36%,
+                  #b54aff -75.37%,
+                  #47d3ff 146.62%
+                );
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 22px;
+                z-index: 0;
+              }
+
+              .title {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                align-items: center;
+                em {
+                  display: block;
+                  &.st01 {
+                    width: 73px;
+                    background: linear-gradient(
+                      90.48deg,
+                      #0046ff 0.85%,
+                      #8e48ff 95.79%
+                    );
+                    border-radius: 999px;
+                    padding: 6px 16px;
+                    color: #fff;
+                    font-size: var(--font-16);
+                    font-weight: 600;
+                    text-align: center;
+                  }
+                  &.st02 {
+                    font-size: var(--font-24);
+                    font-weight: 700;
+                    color: #3b5dfb;
+                  }
+                }
+              }
+              .box-wrap {
+                position: relative;
+                z-index: 1;
+                background: #fff;
+                border-radius: 0 0 20px 20px;
+                .price {
+                  &.check {
+                    color: #3b5dfb;
+                    padding: 0 0 0 25px;
+                    position: relative;
+                    &::before {
+                      content: "";
+                      width: 20px;
+                      height: 20px;
+                      background: url(/static/crediview/crediview-w/image/views/epress/ic_check.png)
+                        no-repeat center;
+                      position: absolute;
+                      top: 50%;
+                      left: 0;
+                      transform: translate(0, -50%);
+                      background-size: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .section04 {
+      width: 100%;
+      padding: 120px 0 140px 0;
+      .tit-box {
+        text-align: center;
+        .tit {
+          font-size: var(--font-36);
+          font-weight: 700;
+          color: #242a30;
+          em {
+            color: #1051ff;
+          }
+        }
+      }
+      .process-list {
+        padding-top: 50px;
+        .step-box {
+          width: 100%;
+          padding: 60px 0 0px 0;
+          background: #eef6ff;
+          border-radius: 16px;
+          margin-bottom: 40px;
+          &:nth-child(2) {
+            background: #f3f5ff;
+            .tit-box {
+              p {
+                .num {
+                  color: #416aff;
+                }
+              }
+            }
+          }
+          &:last-child {
+            margin-bottom: 0px;
+            background: #f8f5ff;
+            .tit-box {
+              p {
+                .num {
+                  color: #a241ff;
+                }
+              }
+            }
+          }
+          .tit-box {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            p {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              padding-bottom: 16px;
+              span {
+                display: inline-block;
+                &.num {
+                  width: 87px;
+                  font-size: var(--font-18);
+                  font-weight: 600;
+                  color: #1051ff;
+                  text-align: center;
+                  background: #fff;
+                  border-radius: 24px;
+                  padding: 5px 0;
+                }
+                &.tit {
+                  font-size: var(--font-24);
+                  font-weight: 700;
+                  color: #242a30;
+                }
+              }
+            }
+            .desc {
+              font-size: var(--font-16);
+              font-weight: 500;
+              color: #4e5262;
+              text-align: center;
+              padding-bottom: 40px;
+            }
+          }
+          .img {
+            display: flex;
+            justify-content: center;
+            img {
+              width: 881px;
+            }
+          }
+          &:nth-child(2) {
+            .img {
+              img {
+                width: 950px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec-impor-notes {
+      padding: 50px 0;
+      background: #f7f8fc;
+      .tit-box {
+        .tit {
+          display: block;
+          width: 100%;
+          font-size: var(--font-20);
+          font-weight: 700;
+          padding: 0 0 16px 30px;
+          border-bottom: solid 1px #e6e8eb;
+          position: relative;
+          &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            background: url(/static/crediview/crediview-w/image/icon/ic_note.png) no-repeat
+              center;
+            background-size: 24px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+      .list {
+        padding-top: 30px;
+        li {
+          padding-bottom: 10px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+          span {
+            display: block;
+            font-size: var(--font-16);
+            font-weight: 400;
+            color: #4e5262;
+            padding: 0 0 0 15px;
+            position: relative;
+            &::before {
+              content: "";
+              width: 3px;
+              height: 3px;
+              background: #4e5262;
+              border-radius: 100%;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translate(0, -50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

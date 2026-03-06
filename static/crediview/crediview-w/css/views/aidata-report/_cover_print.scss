@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@media print {
+  /* 프린트용 스타일만 따로 지정 */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  //표지
+  .AidataReport-wrap.cover {
+    height: 297mm; /* A4 높이 */
+    margin: 0; /* 여백 제거 */
+    page-break-after: always; /* 다음 페이지로 넘어가도록 설정 */
+    &.v2 {
+      .AidataReport-cover {
+        &::after {
+          content: "";
+          width: 1000px;
+          height: 1213px;
+          background-size: 1000px;
+        }
+        .AidataReport-cover-contents {
+          .main-contents {
+            .company-infor {
+              padding: 10.875rem 0 13rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

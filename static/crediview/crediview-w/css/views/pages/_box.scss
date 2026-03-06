@@ -1,0 +1,367 @@
+.box-panel {
+  display: flex;
+  // align-items: center;
+  border: 1px solid var(--tb-border);
+  border-radius: 8px;
+}
+
+.box-panel-list {
+  @extend .box-panel;
+  display: block;
+  padding: 4px 24px;
+
+  li {
+    display: flex;
+    align-items: center;
+    height: 64px;
+
+    &:not(:first-of-type) {
+      border-top: 1px solid var(--tb-border);
+    }
+  }
+
+  .SOLSwitch-root {
+    width: 100%;
+  }
+}
+
+.box-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  min-height: 106px;
+  padding: 24px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  background-color: var(--c-bg);
+  font-size: var(--font-13);
+  color: var(--fc-gray1);
+}
+
+.box-msg {
+  padding: 1em;
+  border-radius: 8px;
+  background-color: var(--c-bg);
+  text-align: center;
+
+  &.c--error {
+    border: 1px solid rgba(221, 82, 76, 0.1);
+    background-color: rgba(252, 83, 86, 0.1);
+    color: var(--c-error);
+  }
+  &.list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    span {
+      display: block;
+      color: #4e5262;
+      font-size: var(--font-14);
+      font-weight: 400;
+      line-height: 100%; /* 14px */
+      letter-spacing: -0.14px;
+    }
+  }
+}
+
+.wrapper-fbox {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+
+  & > * {
+    flex-grow: 1;
+  }
+
+  .box-panel {
+    padding: 18px 24px;
+    justify-content: space-between;
+    align-items: center;
+    &.flex-wrap {
+      flex-wrap: wrap;
+    }
+  }
+
+  .box-panel.input--circle--type {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 7px 24px;
+    .SOLCheck-root .SOLCheck-label input[type='checkbox'] {
+      border-radius: 50%;
+    }
+  }
+
+  .SOLBtn-root {
+    min-width: unset;
+  }
+}
+
+.wrapper-fbox-table {
+  display: flex;
+  gap: 24px;
+
+  & > .SOLTable-data {
+    &:nth-child(2) {
+      width: 50%;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.wrapper-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &.input-flex-type {
+    gap: 10px;
+    align-items: center;
+    .SOLInput-msg {
+      width: 100%;
+    }
+  }
+  &.align-center {
+    align-items: center;
+  }
+}
+
+.wrapper-align {
+  display: flex;
+  align-items: center;
+
+  .SOLFile-root {
+    width: unset;
+  }
+  &.depth-type02 {
+    width: 100%;
+    border-top: 1px solid var(--tb-border);
+    padding: 10px 0 0 0;
+    margin-top: 10px;
+    .SOLCheck-root {
+      padding: 0 0 0 20px;
+      .SOLTitle-t4 {
+        font-weight: 500;
+        font-size: var(--font-14);
+      }
+    }
+  }
+}
+
+.wrapper-inputlist {
+  border-top: 1px solid #777;
+  .flex-column {
+    flex: 1;
+  }
+  .SOLInput-root {
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--tb-border);
+    &.error-type02 {
+      display: block;
+      padding: 16px 16px 35px 16px;
+      div.flex-column {
+        display: flex;
+        align-items: center;
+      }
+
+      .SOLInput-byte.s--between {
+        width: 100%;
+        justify-content: flex-end;
+        position: relative;
+
+        .SOLInput-msg.c--error {
+          margin-top: 0px;
+          padding: 0px;
+          background: none;
+          border: none;
+          position: absolute;
+          top: 9px;
+          right: 0;
+          &::before {
+            content: '';
+          }
+        }
+        .SOLInput-byte--count {
+          width: 150px;
+          padding: 0px 0 0px 0px;
+          position: absolute;
+          top: 9px;
+          left: 0px;
+        }
+      }
+    }
+
+    .SOLInput-label {
+      width: 120px;
+      padding-bottom: 0;
+      font-weight: normal;
+      color: var(--fc-default);
+    }
+    &.lay-type02 {
+      div.button-box {
+        padding: 0 0 0 10px;
+      }
+      .SOLInput-label {
+        &.w-text-input {
+          width: 83px;
+        }
+      }
+    }
+  }
+
+  .SOLInput-msg {
+    position: relative;
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid currentColor;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &::before {
+      content: '·';
+      padding-right: 4px;
+    }
+
+    &.c--error {
+      color: #dd524c;
+      border: 1px solid rgba(221, 82, 76, 0.1);
+      background-color: rgba(252, 83, 86, 0.1);
+    }
+  }
+
+  .reset-txt {
+    margin-top: 30px;
+    text-align: center;
+    display: block;
+    text-decoration: underline;
+    cursor: pointer;
+    &.desc {
+      text-decoration: none;
+      text-align: left;
+    }
+  }
+}
+
+.wrapper-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.wrapper-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  color: var(--fc-gray2);
+}
+
+.inputbottom-txt-wrap {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  span {
+    display: block;
+    text-align: center;
+    &.desc {
+      padding-bottom: 6px;
+    }
+  }
+  .SOLTextBtn-root {
+    font-size: var(--font-14);
+    font-weight: 600;
+    color: #222222;
+  }
+}
+
+.notice-box-list {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f9fafc;
+  &.mgt20 {
+    margin-top: 20px;
+  }
+  &.mgb16 {
+    margin-bottom: 16px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+    li {
+      span {
+        display: block;
+        color: #404252;
+        font-size: var(--font-14);
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        padding: 0 0 0 7px;
+        position: relative;
+        &::before {
+          content: '·';
+          color: #404252;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+  &.sm {
+    .list {
+      li span {
+        font-size: var(--font-13);
+        letter-spacing: -0.39px;
+        line-height: 120%;
+        em {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.company-list-root {
+  border-radius: 8px;
+  border: 1px solid #e6e8eb;
+  padding: 4px 24px;
+  li {
+    border-bottom: 1px solid #e6e8eb;
+    padding: 12px 0;
+    &:last-child {
+      border-bottom: none;
+    }
+    span {
+      display: block;
+      color: #222;
+      font-size: var(--font-14);
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+      padding-left: 32px;
+      position: relative;
+      &::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url(/static/crediview/crediview-w/image/img/img_ic_company-w.svg) no-repeat
+          center;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+  &.mgt {
+    margin: 16px 0 24px 0;
+  }
+}

@@ -1,0 +1,42 @@
+.SOLTextarea-root {
+  width: 100%;
+  font-size: var(--font-14);
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  .SOLTextarea-label {
+    em {
+      padding-right: 7px;
+      position: relative;
+      font-weight: 400;
+      display: inline-block;
+      &::before {
+        content: "*";
+        color: #ff7272;
+        font-size: var(--font-15);
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    font-weight: 400;
+    color: #7b7b7b;
+  }
+
+  .SOLTextarea_field {
+    height: 100%;
+  }
+
+  .SOLTextarea_field.error {
+    border: solid 1px var(--c-error);
+  }
+}
+
+.SOLTextarea_field {
+  display: block;
+  resize: vertical;
+  @include formStyle;
+  padding: var(--form-pd);
+}

@@ -1,0 +1,99 @@
+.SOLCaption-root {
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--c-bg);
+}
+
+.SOLCaption-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #4e5262;
+  font-weight: 700;
+}
+
+.SOLCaption-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 8px;
+
+  & > li::before {
+    content: "·";
+    padding-right: 4px;
+  }
+
+  ul {
+    padding-left: 8px;
+
+    li {
+      padding-top: 4px;
+    }
+  }
+}
+
+.SOLCaption-text {
+  padding: 8px;
+}
+
+.SOLLine-default {
+  margin: 24px 0;
+  border-top: 1px solid var(--tb-border);
+}
+
+.SOLCaption-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--fc-gray2);
+  font-size: var(--font-13);
+  text-align: left;
+
+  li {
+    &::before {
+      content: "·";
+      padding-right: 4px;
+    }
+  }
+}
+
+.wrapper-align .SOLCaption-sm {
+  margin-left: 1em;
+}
+
+.SOLCaption-noti {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--font-13);
+  margin-top: 1em;
+
+  li {
+    &::before {
+      content: "·";
+      padding-right: 4px;
+    }
+  }
+}
+
+.SOLInput-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &.gap10 {
+    gap: 10px;
+  }
+  &.gap20 {
+    gap: 20px;
+  }
+  &.mgtop20 {
+    margin-top: 20px;
+  }
+  &.gap-control {
+    .SOLInput-root {
+      gap: 0px;
+    }
+  }
+}

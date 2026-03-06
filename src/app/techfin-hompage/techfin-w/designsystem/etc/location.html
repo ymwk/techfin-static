@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/techfin-hompage/techfin-w/css/designsystem.css" />
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Location</h2>
+        <p class="comp-pagetitle-desc">Location 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">
+            Default Location(SOLLocation-root bg : bg 클래스는 배경 보기용)
+          </h3>
+          <div class="SOLLocation-root bg">
+            <ul class="SOLLocation-box">
+              <li>
+                <a href="" class="home"><span class="blind">홈</span></a>
+              </li>
+              <li>
+                <a href="" class="depth1">서비스 소개</a>
+              </li>
+              <li>
+                <a href="" class="depth2 active">기업금융중개</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

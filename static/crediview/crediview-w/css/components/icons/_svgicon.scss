@@ -1,0 +1,74 @@
+.SOLSvg-root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 100%;
+  }
+}
+
+.SOLSvg-logo {
+  width: 114px;
+
+  .st0 {
+    fill: #0046ff;
+  }
+}
+
+.SOLSvg-success {
+  width: 40px;
+}
+
+.SOLSvg-warn {
+  width: 45px;
+}
+
+.SOLSvg-error {
+  width: 40px;
+}
+
+.SOLSvg-avata,
+.SOLSvg-bell {
+  width: 16px;
+}
+
+.SOLSvg-company,
+.SOLSvg-mypage,
+.SOLSvg-customer {
+  width: 24px;
+}
+
+.SOLSvg-info {
+  width: 6px;
+}
+
+.SOLSvg-refresh {
+  width: 16px;
+}
+
+.SOLSvg-search {
+  width: 18px;
+}
+
+.SOLIcon-info {
+  width: 14px;
+  height: 14px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background-color: #fff;
+
+  .SOLSvg-root {
+    width: 4px;
+  }
+
+  &.s--lg {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(10, 43, 88, 0.18);
+    color: #888ea3;
+
+    .SOLSvg-root {
+      width: 6px;
+    }
+  }
+}

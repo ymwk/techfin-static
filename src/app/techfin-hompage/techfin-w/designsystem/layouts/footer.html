@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/techfin-hompage/techfin-w/css/designsystem.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Footer</h2>
+        <p class="comp-pagetitle-desc">Landing 및 로그인화면 footer</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">footer theme : landing</h3>
+          <footer class="TCFFooter-root">
+            <div class="TCFFooter-inner">
+              <div class="footer-h">
+                <span class="f-logo"></span>
+                <ul class="link-box">
+                  <li>
+                    <a href="">신용평가체계</a>
+                  </li>
+                  <li>
+                    <a href="">신용정보활용체제</a>
+                  </li>
+                  <li>
+                    <a class="on" href="">개인정보처리방침</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="copyright-b">
+                <div class="tch-address-wrap">
+                  <ul class="tch-address">
+                    <li><span class="bold">(주)테크핀레이팅스</span></li>
+                    <li>
+                      <span>서울특별시 중구 을지로1가 87 더존을지타워 10F</span>
+                    </li>
+                    <li><span>사업자등록번호 370-88-02545</span></li>
+                    <li><span>대표전화 1660-3832</span></li>
+                  </ul>
+                  <span class="copyright"
+                    >Copyright © Techfin ratings Co,.Ltd All Rights
+                    Reserved.</span
+                  >
+                </div>
+
+                <div class="SOLCombobox-root" style="width: 260px">
+                  <button
+                    type="button"
+                    class="SOLCombobox-button"
+                    onclick="combobox(this)"
+                  >
+                    관련사이트 바로가기
+                  </button>
+                  <div class="SOLCombobox-option">
+                    <ul>
+                      <li><button type="button">크레디뷰</button></li>
+                      <li>
+                        <button type="button">매출채권팩토링 플랫폼</button>
+                      </li>
+                      <li>
+                        <button type="button">관련사이트 바로가기</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

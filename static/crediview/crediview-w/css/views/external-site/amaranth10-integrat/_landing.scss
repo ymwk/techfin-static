@@ -1,0 +1,709 @@
+.amaranth-landing {
+  &-root {
+    width: 100%;
+    min-width: 1180px;
+
+    .SOLFooter-root {
+      border-top: none;
+      .SOLFooter-container {
+        max-width: 1180px;
+        padding: 24px 0 40px 0;
+
+        .SOLFooter-content {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          padding-bottom: 16px;
+        }
+        .SOLFooter-content {
+          margin-bottom: 12px;
+        }
+        .SOLFooter-infor {
+          p {
+            font-size: var(--font-13);
+            font-weight: 400;
+            line-height: 18px;
+            color: #9b9ba0;
+            padding-bottom: 16px;
+          }
+        }
+        .SOLFooter-address {
+          .line {
+            gap: 16px;
+            span {
+              position: relative;
+              color: rgba(155, 155, 160, 1);
+              font-size: var(--font-13);
+              font-weight: 400;
+              &::before {
+                content: '';
+                width: 1px;
+                height: 10px;
+                background: rgba(0, 0, 0, 0.1);
+                position: absolute;
+                top: 50%;
+                right: -16px;
+                transform: translate(0, -50%);
+              }
+              &:last-child {
+                &::before {
+                  display: none;
+                }
+              }
+            }
+          }
+          .copyright {
+            color: rgba(155, 155, 160, 1);
+            font-size: var(--font-13);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  &-topper {
+    z-index: 9;
+    position: sticky;
+    right: 0;
+    bottom: 0;
+    &-wrap {
+      position: absolute;
+      bottom: 90px;
+      right: 32px;
+      transition: transform 0.3s ease-in-out;
+    }
+    &-list {
+      border-radius: 8px;
+      border: solid 1px #ebebeb;
+      background-color: #fff;
+      padding: 16px 0;
+      margin-bottom: 16px;
+      li {
+        &:first-child {
+          a {
+            padding: 0px 0;
+            padding-bottom: 20px;
+          }
+        }
+
+        &:nth-child(2) {
+          a {
+            padding-top: 20px;
+          }
+        }
+
+        &:nth-child(3) {
+          a {
+            padding-bottom: 0px;
+          }
+        }
+
+        &:last-child {
+          a {
+            padding-bottom: 0px;
+            padding-top: 0px;
+          }
+        }
+        a {
+          display: block;
+          padding: 24px 10px;
+          transition: ease-in-out 0.3s;
+          &.guide {
+            .img {
+              width: 19px;
+              height: 19px;
+              margin: 0 auto;
+              background: url('/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/landing/quick-guide-icon.png')
+                no-repeat center;
+            }
+          }
+
+          &.company {
+            .img {
+              width: 25px;
+              height: 24px;
+              margin: 0 auto;
+              background: url('/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/landing/quick-cs-icon.png')
+                no-repeat center;
+            }
+          }
+
+          &.certificate {
+            .img {
+              width: 25px;
+              height: 24px;
+              margin: 0 auto;
+              background: url('/static/crediview/crediview-w/image/views/landing/quick-ico06.png')
+                no-repeat center;
+            }
+            &:hover {
+              .img {
+                width: 25px;
+                height: 24px;
+                margin: 0 auto;
+                background: url('/static/crediview/crediview-w/image/views/landing/quick-ico06-on.png')
+                  no-repeat center;
+              }
+            }
+          }
+
+          span {
+            display: block;
+            font-size: var(--font-12);
+            color: var(--fc-default);
+            font-weight: 400;
+            text-align: center;
+            padding: 4px 0 0 0;
+          }
+        }
+      }
+    }
+    .event-bn {
+      margin-bottom: 12px;
+    }
+  }
+
+  &-topBtn {
+    width: 56px;
+    height: 57px;
+    background: url('/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/landing/ic_quick_top_normal.png')
+      no-repeat center;
+    transition: color 0.2s, bottom 0.4s;
+    display: none;
+    transition: ease-in-out 0.3s;
+    margin: 0 auto;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+.amaranth-landing {
+  &-wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+.amaranth-landing {
+  &-container {
+    .section01 {
+      width: 100%;
+      height: auto;
+      background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/landing/sec01-bg01.png)
+        no-repeat #f2f6ff;
+      background-size: contain;
+      padding: 224px 0 100px 0;
+      .flex-box {
+        width: 100%;
+        height: 591px;
+        position: relative;
+        .con-left {
+          padding-left: 33px;
+          .tit-box {
+            text-align: left;
+            padding-bottom: 60px;
+            .tit {
+              color: #000;
+              font-size: 55px;
+              font-weight: 700;
+              line-height: 130%;
+              letter-spacing: -3.3px;
+
+              span {
+                display: inline-block;
+                &.gradation-txt {
+                  em {
+                    display: inline-block;
+                    width: 325px;
+                    background: linear-gradient(
+                      84deg,
+                      #1b53e9 56.79%,
+                      #8e48ff 88.96%
+                    );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                }
+                &.df-txt {
+                  text-shadow: 0 1px 3px #fff;
+                  padding-left: 1px;
+                }
+              }
+            }
+            .desc {
+              display: block;
+              padding-top: 14px;
+              color: #4e5262;
+              text-align: left;
+              font-size: var(--font-18);
+              font-weight: 500;
+              line-height: 141%;
+            }
+          }
+          .btn-wrap {
+            margin-bottom: 10px;
+            button {
+              display: flex;
+              height: 64px;
+              padding: 15px 40px;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              border-radius: 12px;
+              background: linear-gradient(
+                85deg,
+                #0046ff 9.99%,
+                #8e48ff 152.39%
+              );
+              box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+              span {
+                display: block;
+                color: #fff;
+                text-align: center;
+                font-size: var(--font-20);
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: -0.06px;
+              }
+            }
+          }
+        }
+        .img-box {
+          position: absolute;
+          top: -37px;
+          right: -132px;
+          img {
+          }
+        }
+      }
+
+      .card-list-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding-top: 70px;
+        li {
+          width: 33%;
+          height: 400px;
+          background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/landing/sec01-card-bg01.png)
+            no-repeat center;
+          padding: 56px 48px 0 48px;
+          &:nth-child(2) {
+            background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/landing/sec01-card-bg02.png)
+              no-repeat center;
+          }
+          &:nth-child(3) {
+            background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/landing/sec01-card-bg03.png)
+              no-repeat center;
+          }
+          span {
+            display: block;
+            color: #fff;
+            font-size: var(--font-26);
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: -0.078px;
+          }
+        }
+      }
+    }
+    .section02 {
+      padding: 100px 0;
+      .tit-box {
+        span {
+          display: block;
+          color: #212529;
+          text-align: center;
+          font-size: var(--font-36);
+          font-weight: 700;
+          line-height: 62px;
+          padding-bottom: 60px;
+        }
+      }
+      .content-infor-box {
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          border-radius: 20px;
+          border: 1.597px solid #3b5dfb;
+          overflow: hidden;
+          li {
+            width: 50%;
+
+            &:last-child {
+              .inner-box .con dt {
+                border-right: none;
+              }
+            }
+            .inner-box {
+              .con {
+                dt {
+                  background: #3b5dfb;
+                  height: 80px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-right: 1.597px solid #eee;
+                  .title {
+                    display: block;
+                    color: #fff;
+                    font-size: 25px;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: -0.511px;
+                    text-align: center;
+                  }
+                }
+                dd {
+                  .flex-box {
+                    display: flex;
+                    justify-content: center;
+                    flex-flow: wrap;
+                    padding: 36px 40px 14px 40px;
+                    gap: 0px 20px;
+                    position: relative;
+                    &::before {
+                      content: '';
+                      width: 1px;
+                      height: 100%;
+                      background: #eee;
+                      position: absolute;
+                      top: 0;
+                      left: -1px;
+                    }
+                    &.column {
+                      padding: 36px 40px 0 40px;
+                      flex-direction: column;
+                      justify-content: flex-start;
+                      gap: 0px;
+                    }
+                    span {
+                      display: block;
+                      text-align: center;
+                      &.service-tit {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        height: 60px;
+                        padding: 10px 0;
+                        align-items: center;
+                        border-radius: 8px;
+                        background: #e1e9ff;
+                        color: #333;
+                        font-size: var(--font-20);
+                        font-weight: 700;
+                        line-height: 150%;
+                      }
+                      &.discount-price {
+                        color: #9b9ba0;
+                        text-align: center;
+                        font-size: var(--font-26);
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: -0.52px;
+                        text-decoration-line: line-through;
+                        padding-top: 20px;
+                        em {
+                          font-weight: 400;
+                        }
+                      }
+                      &.price {
+                        color: #3b5dfb;
+                        text-align: center;
+                        font-size: 42px;
+                        font-weight: 700;
+                        line-height: 180%;
+                        padding-top: 11px;
+                      }
+                    }
+                    .box {
+                      width: 48%;
+                      &:only-child {
+                        width: 100%;
+                      }
+                      p {
+                        display: flex;
+                        flex-flow: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        padding-top: 20px;
+                        gap: 0px 8px;
+                        span {
+                          &.discount-infor {
+                            display: flex;
+                            padding: 6px 10px;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 4px;
+                            border-radius: 999px;
+                            background: #e4eeff;
+                            em {
+                              color: #3b5dfb;
+                              font-size: var(--font-16);
+                              font-weight: 700;
+                              line-height: normal;
+                              letter-spacing: -0.32px;
+                            }
+                          }
+                          &.discount-price {
+                            padding-top: 0px;
+                          }
+                        }
+                      }
+                    }
+                    .infor-txt {
+                      color: rgba(0, 0, 0, 0.4);
+                      text-align: center;
+                      font-size: 16px;
+                      font-weight: 500;
+                      line-height: normal;
+                      letter-spacing: -0.32px;
+                      padding-top: 11px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .service-infor-txt {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+        margin-top: 26px;
+        li {
+          span {
+            display: block;
+            color: #4e5262;
+            font-size: var(--font-16);
+            font-weight: 400;
+            line-height: normal;
+            position: relative;
+            padding: 0 0 0 10px;
+            &::before {
+              content: '';
+              width: 3px;
+              height: 3px;
+              background: #4e5262;
+              border-radius: 100%;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translate(0, -50%);
+            }
+          }
+        }
+      }
+    }
+    .section03 {
+      width: 100%;
+      background: #f2f6ff;
+      padding: 100px 0;
+      .tit-box {
+        .tit {
+          display: block;
+          color: #212529;
+          text-align: center;
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 62px;
+        }
+      }
+      .list {
+        display: flex;
+        width: 100%;
+        height: 216px;
+        background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/landing/sec03-bg01.png)
+          no-repeat center;
+        margin-top: 60px;
+        li {
+          width: 25%;
+          &:nth-child(2) {
+            .inner {
+              padding: 40px 0 40px 70px;
+            }
+          }
+          &:nth-child(3) {
+            .inner {
+              padding: 40px 0 40px 70px;
+            }
+          }
+
+          &:nth-child(4) {
+            .inner {
+              padding: 40px 0 40px 70px;
+            }
+          }
+
+          .inner {
+            width: 100%;
+            padding: 40px 0 40px 35px;
+            span {
+              display: block;
+              &.step-num {
+                display: inline-flex;
+                padding: 2px 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 24px;
+                border: 1px solid #3b5dfb;
+                background: #fff;
+                em {
+                  color: #3b5dfb;
+                  font-size: var(--font-18);
+                  font-weight: 700;
+                  line-height: 150%;
+                }
+              }
+              &.tit {
+                color: #252525;
+                font-size: var(--font-22);
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: -0.066px;
+                padding-top: 22px;
+              }
+              &.desc {
+                color: #4e5262;
+                font-size: var(--font-18);
+                font-weight: 400;
+                line-height: 24px;
+                padding-top: 12px;
+              }
+            }
+          }
+        }
+      }
+      .impor-list {
+        display: block;
+        padding-top: 32px;
+        li {
+          padding-bottom: 10px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+          span {
+            color: #4e5262;
+            font-size: var(--font-16);
+            font-weight: 400;
+            line-height: normal;
+            padding-left: 13px;
+            display: block;
+            position: relative;
+            &::before {
+              content: '';
+              width: 3px;
+              height: 3px;
+              background: #4e5262;
+              border-radius: 100%;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translate(0, -50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.SOLModal-root {
+  .SOLModal-box {
+    .SOLModal-content {
+      .cs-guide-cont {
+        width: 100%;
+        border-radius: 8px;
+        background: #f8f9fb;
+        padding: 24px;
+        .guide-con-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 20px;
+          align-self: stretch;
+          li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+            &:last-child {
+              border-top: solid 1px #dee4ea;
+              padding-top: 20px;
+            }
+            .crediview-logo {
+              display: block;
+              width: 72px;
+              height: 72px;
+              background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/logo-crediview.png)
+                no-repeat center;
+              background-size: 72px;
+            }
+            .cs-logo {
+              display: block;
+              width: 72px;
+              height: 72px;
+              background: url(/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/logo-cs.png)
+                no-repeat center;
+              background-size: 72px;
+            }
+            p {
+              span {
+                display: block;
+                &.tit {
+                  color: #242a30;
+                  font-size: var(--font-16);
+                  font-weight: 700;
+                  line-height: 130%;
+                  .cs-phone {
+                    display: inline-block;
+                    color: #0046ff;
+                    font-size: var(--font-18);
+                    font-weight: 700;
+                    line-height: 148%;
+                    letter-spacing: -0.72px;
+                    padding-left: 8px;
+                  }
+                }
+                &.desc {
+                  color: #222;
+                  font-size: var(--font-13);
+                  font-weight: 400;
+                  line-height: 130%;
+                  padding-top: 2px;
+                }
+              }
+            }
+            .crediview-btn {
+              display: flex;
+              height: 28px;
+              padding: 7px 10px;
+              justify-content: center;
+              align-items: center;
+              gap: 4px;
+              border-radius: 4px;
+              border: 1px solid rgba(10, 43, 88, 0.18);
+              background: #fff;
+              transition: ease-in-out 0.2s;
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translate(0, -50%);
+              span {
+                display: block;
+                color: #222;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: normal;
+              }
+              &:hover {
+                background: #f0f4ff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

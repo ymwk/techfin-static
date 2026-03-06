@@ -1,0 +1,52 @@
+// 공통
+@import '../../../Common/font/pretendard/pretendardvariable.css';
+@import '../../../Common/font/gmarketsans/GmarketSans.css';
+@import './views/aidata-report-v2/base/normalize';
+@import './views/aidata-report-v2/base/variable';
+@import './views/aidata-report-v2/base/default';
+@import './base/mixin';
+@import './base/_animations';
+
+//페이지,커버
+@import './views/aidata-report-v2/cover';
+@import './views/aidata-report-v2/index';
+@import './views/aidata-report-v2/page';
+@import './views/aidata-report-v2/print';
+
+// AI경영진단보고서v2 컴포넌트
+@import './views/aidata-report-v2/component/partials/header';
+@import './views/aidata-report-v2/component/partials/footer';
+@import './views/aidata-report-v2/component/box-layout/box';
+@import './views/aidata-report-v2/component/table/table';
+@import './views/aidata-report-v2/component/style/font';
+@import './views/aidata-report-v2/component/grapth/grapth';
+@import './views/aidata-report-v2/component/appindex/Appendix';
+
+// 크레디뷰 컴포넌트
+@import './components/styles/color';
+@import './components/styles/font';
+@import './components/icons/cssicon';
+@import './components/icons/svgicon';
+@import './components/icons/labelicon';
+@import './components/buttons/button';
+@import './components/inputs/input';
+@import './components/inputs/radio';
+@import './components/inputs/checkbox';
+@import './components/inputs/switch';
+@import './components/inputs/file';
+@import './components/inputs/textarea';
+@import './components/inputs/searchbox';
+@import './components/inputs/selectgroup';
+@import './components/inputs/datepicker';
+@import './components/selects/select';
+@import './components/selects/combobox';
+@import './components/etc/stepper';
+@import './components/etc/pagenation';
+@import './components/etc/accordian';
+@import './components/etc/loader';
+@import './components/modals/modal';
+@import './components/modals/alert';
+@import './components/modals/toast';
+@import './components/popups/popper';
+@import './components/tabs/tab';
+@import './components/tabs/filter';

@@ -1,0 +1,330 @@
+.table {
+  &-root {
+    .table-wrap {
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        tbody {
+          tr {
+            th,
+            td {
+              border-bottom: solid 1px #c7c8ca;
+              vertical-align: middle;
+              span {
+                display: block;
+                font-size: var(--font-18);
+                font-weight: 400;
+              }
+            }
+            th {
+              background: #e6eaf2;
+              vertical-align: middle;
+              text-align: left;
+              span {
+                color: #221f20;
+              }
+            }
+            td {
+              background: #fff;
+              span {
+                color: #292d36;
+                display: inline-block;
+                width: 100%;
+                &.ellipsis {
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.tbody-type {
+        table {
+          border-top: solid 1px #838c9a;
+          border-bottom: solid 1px #838c9a;
+          tbody {
+            tr {
+              th {
+                border-bottom: solid 1px #a1a7b8;
+                .inner {
+                  padding: 0.875rem 1rem;
+                  background: #e6eaf2;
+                  span {
+                    display: block;
+                    font-size: var(--font-18);
+                    font-weight: 500;
+                    color: #000000;
+                    @media print {
+                      font-size: var(--font-16);
+                    }
+                    &.ellipsis {
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      -webkit-line-clamp: 1;
+                      -webkit-box-orient: vertical;
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+              td {
+                border-bottom: solid 1px #a1a7b8;
+                .inner {
+                  padding: 0.875rem 1rem;
+                  background: #fff;
+                  span {
+                    display: block;
+                    font-size: var(--font-18);
+                    font-weight: 400;
+                    color: #000000;
+                    @media print {
+                      font-size: var(--font-16);
+                    }
+                  }
+                }
+              }
+              &:last-child {
+                th,
+                td {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
+
+        &.mgt20 {
+          margin-top: 1.25rem;
+        }
+        &.mgt30 {
+          margin-top: 1.875rem;
+        }
+      }
+      &.default-type {
+        table {
+          thead {
+            th {
+              border-top: 1px solid #6e7683;
+              border-bottom: 1px solid #6e7683;
+              .inner {
+                background: #e6eaf2;
+                padding: 0.625rem 0;
+                span {
+                  display: block;
+                  color: #000;
+                  font-size: var(--font-16);
+                  font-weight: 400;
+                  text-align: center;
+                  @media print {
+                    font-size: var(--font-14);
+                  }
+                }
+              }
+              &.borde-r {
+                border-right: 1px solid #a1a7b8;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                border-bottom: 1px solid #a1a7b8;
+                .inner {
+                  padding: 0.625rem;
+                  span {
+                    display: block;
+                    color: #000;
+                    font-size: var(--font-16);
+                    font-weight: 400;
+                    text-align: center;
+                    @media print {
+                      font-size: var(--font-14);
+                    }
+                    &.left {
+                      text-align: left;
+                    }
+                    &.right {
+                      text-align: right;
+                    }
+                    &.adequate {
+                      color: var(--c-adequate);
+                    }
+                    &.decrease {
+                      color: var(--c-decrease);
+                    }
+                    &.excellent {
+                      color: var(--c-excellent);
+                    }
+                    &.judgment {
+                      color: var(--c-judgment);
+                    }
+                    &.diagnosis {
+                      color: var(--c-diagnosis);
+                    }
+                  }
+                }
+                &.borde-r {
+                  border-right: 1px solid #a1a7b8;
+                }
+                &.bg-blue {
+                  background: #e2edff;
+                }
+              }
+              &.bg-blue {
+                td {
+                  background: #e2edff;
+                }
+              }
+            }
+          }
+        }
+        &.mgt20 {
+          margin-top: 1.25rem;
+          @media print {
+            margin-top: 0.625rem;
+          }
+        }
+        &.mgt30 {
+          margin-top: 1.875rem;
+          @media print {
+            margin-top: 1.25rem;
+          }
+        }
+
+        &.mgt62 {
+          margin-top: 3.9rem;
+        }
+      }
+
+      &.all-border-type {
+        table {
+          thead {
+            tr {
+              th {
+                border-top: 1px solid #6e7683;
+                border-bottom: 1px solid #6e7683;
+                border-right: 1px solid #a1a7b8;
+                &:last-child {
+                  border-right: none;
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                border-right: 1px solid #a1a7b8;
+                border-bottom: 1px solid #696c71;
+                &:last-child {
+                  border-right: none;
+                }
+                .inner {
+                  padding: 1rem 0.75rem;
+                  .list {
+                    padding-bottom: 0.625rem;
+                    &:last-child {
+                      padding-bottom: 0rem;
+                    }
+                    li {
+                      &.tit {
+                        span {
+                          display: block;
+                          color: #000;
+                          font-size: var(--font-16);
+                          font-weight: 700;
+                          letter-spacing: -0.16px;
+                        }
+                      }
+                      span {
+                        text-align: left;
+                      }
+                    }
+                  }
+
+                  span {
+                    line-height: 150%;
+                  }
+                }
+              }
+            }
+            &.h-default {
+              tr {
+                td {
+                  height: 118px;
+                }
+              }
+            }
+          }
+        }
+
+        &.mgt20 {
+          margin-top: 1.25rem;
+        }
+        &.mgt30 {
+          margin-top: 1.875rem;
+        }
+      }
+    }
+
+    @media print {
+      .table {
+        &-root {
+          .table-wrap {
+            &.tbody-type {
+              table {
+                tbody {
+                  tr {
+                    th {
+                      .inner {
+                        padding: 0.525rem 1rem;
+                        span {
+                          font-size: var(--font-16);
+                        }
+                      }
+                    }
+                    td {
+                      .inner {
+                        padding: 0.525rem 1rem;
+                        span {
+                          font-size: var(--font-16);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            &.default-type {
+              table {
+                thead {
+                  th {
+                    .inner {
+                      padding: 0.5rem 0;
+                    }
+                  }
+                }
+                tbody {
+                  tr {
+                    td {
+                      .inner {
+                        padding: 0.5rem 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

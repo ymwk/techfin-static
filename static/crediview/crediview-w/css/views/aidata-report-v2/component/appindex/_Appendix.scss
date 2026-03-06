@@ -1,0 +1,16 @@
+.appendix {
+  &-root {
+  }
+  &-wrap {
+    .tit-box {
+      border-bottom: 1px solid #a1a7b8;
+      padding-bottom: 1.5rem;
+      .tit {
+        color: #000;
+        font-size: 44px;
+        font-weight: 700;
+        letter-spacing: -0.44px;
+      }
+    }
+  }
+}

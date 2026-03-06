@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+// 공통
+@import '../../../Common/font/pretendard/pretendardvariable.css';
+@import '../../../Common/font/gmarketsans/GmarketSans.css';
+@import './base/normalize';
+@import './base/mixin';
+@import './base/variable';
+@import './base/default';
+
+//표지
+@import './views/aidata-report/cover_v2';
+@import './views/aidata-report/section';
+@import './views/aidata-report/index';
+@import './views/aidata-report/_cover_print';
+@import './views/aidata-report/print';

@@ -1,0 +1,85 @@
+/* 페이지 박스 모델을 확실하게: */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+/* 프린트 전용 재정의 */
+@media print {
+  html,
+  body {
+    width: 77.375rem;
+    height: calc(297mm - 0.5mm);
+    min-height: 109.375rem;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .BizInsightReport {
+    &-root {
+    }
+
+    &-wrap {
+      width: 100%;
+      box-sizing: border-box;
+      page-break-inside: avoid;
+      &.cover {
+        height: calc(297mm - 0.5mm);
+        overflow: hidden;
+        margin: 0; /* 여백 제거 */
+        page-break-after: avoid; /* 다음 페이지로 강제 나눔 방지 */
+        page-break-before: avoid;
+        break-after: avoid-page;
+        break-before: avoid-page;
+        display: block;
+        .BizInsightReport-cover {
+          &::after {
+            content: "";
+            width: 1000px;
+            height: 1213px;
+            background-size: 1000px;
+          }
+          &-contents {
+            .main-contents {
+              .company-infor {
+                padding: 10.875rem 0 13rem 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 강제 개행 */
+  .page-break {
+    break-before: page;
+  }
+
+  /* 표, 이미지 품질 */
+  img,
+  svg,
+  canvas {
+    max-width: 100%;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* 링크 밑줄 제거(선택 사항) */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

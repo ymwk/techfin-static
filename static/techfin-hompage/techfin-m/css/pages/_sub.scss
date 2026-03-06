@@ -1,0 +1,220 @@
+.container-sub {
+  padding: 64px var(--spc-w);
+  word-break: keep-all;
+
+  & + .container-wide {
+    margin-top: -32px;
+  }
+}
+
+.container-wide {
+  word-break: keep-all;
+  .wide-inner {
+    padding-right: var(--spc-w);
+    padding-left: var(--spc-w);
+
+    &.t--bg {
+      background-color: #f7f8fc;
+      padding: 64px var(--spc-w);
+    }
+
+    .TMStickyNav-list {
+      right: var(--spc-w);
+      left: var(--spc-w);
+    }
+  }
+}
+
+.sub-headline-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  word-break: keep-all;
+  line-height: 1.5;
+
+  &.t--sub {
+    .TMTitle-headline {
+      font-size: 24px;
+    }
+
+    .sub-headline-desc {
+      font-size: 15px;
+      margin-top: -5px;
+      color: var(--fc-gray);
+      font-weight: 500;
+    }
+  }
+}
+
+.sub-headline {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--fc-default);
+}
+
+.sub-headline-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--c-active);
+}
+
+.sub-headline-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 24px;
+  color: var(--fc-default);
+}
+
+.container-footer {
+  z-index: 97;
+  position: sticky;
+  bottom: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px var(--spc-w);
+  background-color: #fff;
+  box-shadow: 0px -2px 12px 0px #00000012;
+}
+
+.sub-keyvisual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 270px;
+  padding: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5;
+  text-shadow: 0 0 4px #0000004d;
+  background: #081443 no-repeat center center / cover;
+
+  .tit {
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  //회사소개
+  &.about-01 {
+    background-image: url(../image/keyvisual/sub_about_01.png);
+  }
+
+  //서비스소개
+  &.service-01 {
+    background-image: url(../image/keyvisual/sub_service_01.png);
+  }
+  &.service-02 {
+    background-image: url(../image/keyvisual/sub_service_02.png);
+  }
+
+  //새소식
+  &.news-01 {
+    background-image: url(../image/keyvisual/sub_news_01.png);
+  }
+  &.news-02 {
+    background-image: url(../image/keyvisual/sub_news_02.png);
+  }
+  &.news-03 {
+    background-image: url(../image/keyvisual/sub_news_03.png);
+  }
+
+  //인재채용
+  &.hr-01 {
+    background-image: url(../image/keyvisual/sub_hr_01.png);
+  }
+  &.hr-02 {
+    background-image: url(../image/keyvisual/sub_hr_02.png);
+  }
+  &.hr-03 {
+    background-image: url(../image/keyvisual/sub_hr_03.png);
+  }
+
+  // 이용안내
+  &.terms-01 {
+    background-image: url(../image/keyvisual/sub_terms_01.png);
+  }
+
+  &.terms-02 {
+    background-image: url(../image/keyvisual/sub_terms_02.png);
+  }
+
+  &.terms-03 {
+    background-image: url(../image/keyvisual/sub_terms_03.png);
+  }
+
+  // 문의하기
+  &.contact-01 {
+    background-image: url(../image/keyvisual/sub_contact_01.png);
+  }
+}
+
+.sub-cont-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+
+.sub-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  word-break: keep-all;
+
+  li {
+    position: relative;
+    padding-left: 11px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 3px;
+      height: 3px;
+      background-color: currentColor;
+    }
+  }
+}
+
+.sub-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.TMBanner-root {
+  padding: 32px 24px;
+  background: #004FFF url(../image/bg/bg_service_banner.png) no-repeat right center / auto 100%;
+  font-size: 13px;
+  color: rgba(255,255,255,.8);
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  .tit {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 8px
+  }
+
+  &.banner-02 {
+    background-image: url(../image/bg/bg_service_banner02.png);
+    background-size: cover;
+  }
+}

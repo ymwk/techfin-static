@@ -1,0 +1,141 @@
+.aicomment-root {
+  margin: 16px 0;
+  .aicomment-box {
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(76, 87, 150, 0.2);
+    background: linear-gradient(270deg, #f6e5fa -0.88%, #e8f0ff 99.98%);
+    box-shadow: 0 0 12px 0 rgba(19, 37, 151, 0.1);
+    .tit-box {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      flex-direction: column;
+      span {
+        display: block;
+        &.tit {
+          color: #222;
+          font-size: var(--font-18);
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: -0.18px;
+          padding-left: 25px;
+          position: relative;
+          &::before {
+            content: "";
+            width: 21px;
+            height: 18px;
+            background: url(/static/crediview/crediview-w/image/icon/ic_ar01_24.png) no-repeat
+              center;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+          }
+        }
+        &.desc {
+          color: #5b3f75;
+          font-size: var(--font-13);
+          font-weight: 400;
+          line-height: 22px;
+          letter-spacing: -0.26px;
+          padding: 10px 0 0 0px;
+        }
+        &.biz-infor-txt {
+          color: #222;
+          font-size: var(--font-20);
+          font-weight: 700;
+          line-height: 30px;
+          letter-spacing: -0.2px;
+          padding: 21px 0 0px 0;
+        }
+      }
+    }
+    .sales-trend-box {
+      width: 100%;
+      display: flex;
+      padding: 20px 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.8);
+      .sales-trend-tit-box {
+        width: 100%;
+        padding-bottom: 12px;
+        border-bottom: solid 1px #e6e8eb;
+        .tit {
+          display: inline-block;
+          font-size: var(--font-16);
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: -0.16px;
+          background: var(
+            --gradient,
+            linear-gradient(272deg, #60a5ff -17.26%, #b731f0 112.55%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .sales-trend-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+        li {
+          .con {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #222;
+            font-size: var(--font-14);
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: -0.14px;
+            padding-left: 21px;
+            position: relative;
+            &::before {
+              content: "";
+              width: 13px;
+              height: 14px;
+              background: url(/static/crediview/crediview-w/image/views/aireport-v2/web/img/ai_search_ic.svg);
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translate(0, -50%);
+            }
+          }
+        }
+      }
+    }
+  }
+  //AI comment box empty state
+  &.empty {
+    margin: 16px 0 120px 0;
+    .aicomment-box {
+      .tit-box {
+        span.biz-infor-txt {
+          display: none;
+        }
+      }
+      .sales-trend-box {
+        height: 135px;
+        .grapth-empty-root {
+          width: 100%;
+          height: 100%;
+          span.empty-txt {
+            padding: 0px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}

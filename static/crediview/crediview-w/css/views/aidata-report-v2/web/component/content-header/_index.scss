@@ -1,0 +1,185 @@
+.diagnosis-header {
+  &-root {
+  }
+  &-box {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 8px;
+    padding: 40px;
+    &.bg01 {
+      background: #e3f3f7;
+    }
+    &.bg02 {
+      background: #e6f3ff;
+      .title-box {
+        span {
+          &.tit {
+            &::before {
+              background: url(/static/crediview/crediview-w/image/views/aireport-v2/web/img/content-h-ico02.svg)
+                no-repeat center;
+            }
+          }
+        }
+      }
+    }
+    &.bg03 {
+      background: #e8eefa;
+      .title-box {
+        span {
+          &.tit {
+            &::before {
+              background: url(/static/crediview/crediview-w/image/views/aireport-v2/web/img/content-h-ico03.svg)
+                no-repeat center;
+            }
+          }
+        }
+      }
+    }
+    &.bg04 {
+      background: #f8f8ea;
+      .title-box {
+        span {
+          &.tit {
+            &::before {
+              background: url(/static/crediview/crediview-w/image/views/aireport-v2/web/img/content-h-ico04.svg)
+                no-repeat center;
+            }
+          }
+        }
+      }
+    }
+    &.bg05 {
+      background: #f0f8e9;
+      .title-box {
+        span {
+          &.tit {
+            &::before {
+              background: url(/static/crediview/crediview-w/image/views/aireport-v2/web/img/content-h-ico05.svg)
+                no-repeat center;
+            }
+          }
+        }
+      }
+    }
+    &.bg06 {
+      background: #efeeff;
+      .title-box {
+        span {
+          &.tit {
+            &::before {
+              background: url(/static/crediview/crediview-w/image/views/aireport-v2/web/img/content-h-ico06.svg)
+                no-repeat center;
+            }
+          }
+        }
+      }
+    }
+    &.bg07 {
+      background: #e7eaf5;
+      .title-box {
+        span {
+          &.tit {
+            &::before {
+              background: url(/static/crediview/crediview-w/image/views/aireport-v2/web/img/content-h-ico07.svg)
+                no-repeat center;
+            }
+          }
+        }
+      }
+    }
+    .title-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px 0;
+      flex: 1;
+      span {
+        display: block;
+        &.tit {
+          height: 48px;
+          font-size: var(--font-24);
+          font-weight: 700;
+          line-height: 100%;
+          letter-spacing: -0.24px;
+          color: #222;
+          padding: 12px 0 0 64px;
+          position: relative;
+          &::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            background: url(/static/crediview/crediview-w/image/views/aireport-v2/web/img/content-h-ico01.svg)
+              no-repeat center;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+          }
+        }
+        &.desc {
+          color: #222;
+          font-size: var(--font-14);
+          font-weight: 500;
+          line-height: 22px;
+          letter-spacing: -0.14px;
+        }
+      }
+    }
+    .sales-box {
+      flex: 1;
+      padding: 20px 25px;
+      background: #fafbfd;
+      border-radius: 8px;
+      .sales-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px 0;
+        li {
+          display: flex;
+          align-items: center;
+          &.price-sales {
+            border-bottom: solid 1px #e6e8eb;
+            padding-bottom: 17px;
+          }
+          span {
+            display: block;
+            flex: 1;
+            &.tit {
+              color: #222;
+              font-size: var(--font-14);
+              font-weight: 500;
+              line-height: 20px;
+              letter-spacing: -0.14px;
+            }
+            &.price {
+              text-align: right;
+              color: #222;
+              font-size: var(--font-20);
+              font-weight: 700;
+              line-height: 30px;
+              letter-spacing: -0.2px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              gap: 0 2px;
+              em {
+                color: #222;
+                font-size: var(--font-14);
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: -0.14px;
+              }
+            }
+          }
+          &:not(.price-sales) {
+            span {
+              &.tit {
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

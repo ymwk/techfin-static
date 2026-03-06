@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="always" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <title>크레디뷰 - Amaranth10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <!-- SEO -->
+    <meta name="description" content="Amaranth 10 고객은 신용평가도 똑똑하게" />
+    <meta
+      name="keywords"
+      content="크레디뷰, 신용평가등급확인서, 확인서발급, 기업신용등급, 가업신용등급산출, 공공기관 제출, 민간기업 제출, 기업신용정보, Amaranth10"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="크레디뷰 기업 신용평가등급조회" />
+    <meta
+      property="og:description"
+      content="별도 서류 제출없이 신용평가등급확인서 신청부터 발급"
+    />
+    <meta property="og:url" content="https://crediview.co.kr/landing" />
+    <meta property="og:site_name" content="크레디뷰 기업신용평가등급조회" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:image" content="/og-img/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="크레디뷰 기업신용평가등급조회" />
+
+    <!-- App Links -->
+    <meta property="al:web:url" content="https://crediview.co.kr/landing" />
+
+    <link rel="canonical" href="https://crediview.co.kr/landing" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <style>
+      /* 페이지 기본 리셋 (이 파일 안에서만 영향) */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        border: 0;
+        display: block;
+      }
+
+      .TipLinkPage-root {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: #fff;
+      }
+
+      .TipLinkPage-wrap {
+        /* 원본이 1000px 기준이면, 아래 값만 바꾸면 됨 */
+        --page-max-width: 1000px;
+        width: min(var(--page-max-width), 100%);
+        padding: 0;
+      }
+
+      .tip-partner-img-box {
+        position: relative;
+        width: 100%;
+      }
+
+      .tip-partner-img-box img {
+        width: 100%;
+        height: auto;
+        /* 왜곡 방지 */
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="TipLinkPage-root">
+      <div class="TipLinkPage-wrap">
+        <div class="tip-partner-img-box">
+          <!-- 원본 좌표 기준의 이미지. usemap 이름과 map[name] 일치 필수 -->
+          <img
+            src="/static/crediview/crediview-w/image/views/external-site/amaranth10-integrat/amaranth10-detail-intro.png"
+            alt="아마란스 안내 이미지"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- 반응형 이미지맵 스케일 스크립트 (외부 의존성 없음) -->
+    <script>
+      (function () {
+        function setupResponsiveImageMap(img) {
+          const useMap = img.getAttribute("usemap");
+          if (!useMap) return;
+
+          const mapName = useMap.replace("#", "");
+          const map = document.querySelector('map[name="' + mapName + '"]');
+          if (!map) return;
+
+          const areas = Array.from(map.querySelectorAll("area[coords]"));
+
+          // 원본 좌표 보관
+          areas.forEach(function (area) {
+            if (!area.dataset.originalCoords) {
+              area.dataset.originalCoords = area.coords;
+            }
+          });
+
+          function resize() {
+            const natW = img.naturalWidth || img.width;
+            const natH = img.naturalHeight || img.height;
+            const rect = img.getBoundingClientRect();
+            const scaleX = rect.width / natW;
+            const scaleY = rect.height / natH;
+
+            areas.forEach(function (area) {
+              const orig = (area.dataset.originalCoords || area.coords)
+                .split(",")
+                .map(Number);
+              const shape = (area.shape || "rect").toLowerCase();
+              let scaled = [];
+
+              if (shape === "circle") {
+                // x, y, r  (r은 평균 스케일 적용)
+                scaled = [
+                  Math.round(orig[0] * scaleX),
+                  Math.round(orig[1] * scaleY),
+                  Math.round(orig[2] * ((scaleX + scaleY) / 2)),
+                ];
+              } else if (shape === "poly") {
+                // x1,y1,x2,y2,...
+                scaled = orig.map(function (v, i) {
+                  return Math.round(v * (i % 2 ? scaleY : scaleX));
+                });
+              } else {
+                // rect: x1,y1,x2,y2
+                scaled = [
+                  Math.round(orig[0] * scaleX),
+                  Math.round(orig[1] * scaleY),
+                  Math.round(orig[2] * scaleX),
+                  Math.round(orig[3] * scaleY),
+                ];
+              }
+
+              area.coords = scaled.join(",");
+            });
+          }
+
+          // 이미지 로드/리사이즈 시 좌표 재계산
+          if (img.complete) {
+            resize();
+          } else {
+            img.addEventListener("load", resize, { once: true });
+          }
+          window.addEventListener("resize", resize);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          var img = document.getElementById("tip-partner-img");
+          if (img) setupResponsiveImageMap(img);
+        });
+      })();
+    </script>
+  </body>
+</html>

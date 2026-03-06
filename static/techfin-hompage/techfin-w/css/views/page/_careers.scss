@@ -1,0 +1,687 @@
+.careersintro {
+  &-root {
+  }
+  &-container {
+    padding: 40px 0 0 0;
+    .sec01 {
+      position: relative;
+    }
+    .sec02 {
+      padding: 80px 0 120px 0;
+      .list {
+        display: flex;
+        flex-flow: wrap;
+        gap: 80px 0;
+
+        li {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 64px;
+          height: 375px;
+
+          .desc-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 24px;
+
+            dl {
+              .tit {
+                span {
+                  display: block;
+                  font-size: var(--font-28);
+                  font-weight: 700;
+                  color: #222222;
+                  padding-bottom: 24px;
+                }
+              }
+              dd {
+                padding-bottom: 12px;
+
+                span {
+                  display: block;
+                  font-size: var(--font-16);
+                  font-weight: 400;
+                  color: #222222;
+                  padding: 0 0 0 10px;
+                  position: relative;
+
+                  &::before {
+                    content: "";
+                    width: 3px;
+                    height: 3px;
+                    background: #222222;
+                    position: absolute;
+                    top: 7px;
+                    left: 0;
+                  }
+                }
+
+                &:last-child {
+                  padding-bottom: 0;
+                }
+              }
+            }
+          }
+
+          .img {
+            width: 600px;
+            height: 375px;
+            border-radius: 16px;
+            background: #f3f4fa;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; // 꽉 채우되 비율 유지
+            }
+          }
+        }
+      }
+    }
+    .sec03 {
+      padding: 0 0 120px 0;
+      .list {
+        display: flex;
+        justify-content: space-between;
+        gap: 80px 20px;
+        flex-flow: wrap;
+        li {
+          width: 23%;
+
+          .box {
+            background: #f7f7f9;
+            border-radius: 16px;
+            height: 224px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+              img {
+                max-width: 100%;
+              }
+            }
+          }
+          .tit {
+            display: block;
+            font-size: var(--font-18);
+            font-weight: 500;
+            text-align: center;
+            padding-top: 20px;
+            em {
+              display: block;
+              font-weight: 500;
+              font-size: var(--font-16);
+              color: #7b7b7b;
+              padding-top: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//채용제도
+.recruit {
+  &-root {
+  }
+  &-container {
+    .recruit-content {
+      position: relative;
+      padding: 40px 0 120px 0;
+      &::before {
+        content: "";
+        width: 450px;
+        height: 540px;
+        background: url(/static/techfin-hompage/techfin-w/image/views/intro/cp-intro-sec04-img01.png)
+          no-repeat center;
+        background-size: 450px;
+        position: absolute;
+        top: 150px;
+        left: 0;
+      }
+
+      .recruit-process-content {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        .left {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .bottom-infor-list {
+            li {
+              padding-bottom: 40px;
+              &:last-child {
+                padding-bottom: 0;
+              }
+              span {
+                display: block;
+                &.tit {
+                  font-size: var(--font-18);
+                  font-weight: 700;
+                  color: var(--fc-default);
+                  padding-bottom: 12px;
+                }
+              }
+              ul {
+                li {
+                  padding-bottom: 5px;
+                  span {
+                    display: block;
+                    font-size: var(--font-16);
+                    font-weight: 400;
+                    color: var(--fc-default);
+                    padding: 0 0 0px 8px;
+                    position: relative;
+                    &::before {
+                      content: "";
+                      width: 3px;
+                      height: 3px;
+                      background: #222222;
+                      position: absolute;
+                      top: 50%;
+                      left: 0;
+                      transform: translate(0, -50%);
+                    }
+                  }
+                  &:last-child {
+                    padding-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .right {
+          width: 50%;
+          .process-list {
+            li {
+              padding: 34px 0;
+              border-bottom: solid 1px #dddddd;
+              span {
+                display: block;
+                &.num {
+                  font-size: var(--font-16);
+                  font-weight: 700;
+                  color: var(--c-active);
+                  padding-bottom: 16px;
+                }
+                &.tit {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  padding-bottom: 8px;
+                  em {
+                    font-size: var(--font-20);
+                  }
+                }
+                &.desc {
+                  font-size: var(--font-18);
+                  font-weight: 400;
+                  color: var(--fc-default);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .job-description {
+      padding: 120px 0;
+      position: relative;
+      .job-scroll-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        left: auto;
+        padding: 20px 0;
+        background: #fff;
+        transition: ease-in-out 0.2s;
+        &.active {
+          &::before {
+            content: "";
+            width: 2000px;
+            height: 1px;
+            background: #dddddd;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-left: -444px;
+          }
+        }
+
+        li {
+          a {
+            display: block;
+            font-size: var(--font-16);
+            font-weight: 500;
+            color: #9b9ba0;
+            padding: 0 16px;
+            transition: ease-in-out 0.2s;
+            position: relative;
+            &::before {
+              content: "";
+              width: 4px;
+              height: 4px;
+              background: #dddddd;
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translate(0, -50%);
+            }
+            &:hover {
+              color: #0046ff;
+              font-weight: 700;
+            }
+            &.active {
+              color: #0046ff;
+              font-weight: 700;
+            }
+          }
+
+          &:last-child {
+            a {
+              &::before {
+                content: none;
+              }
+            }
+          }
+        }
+      }
+      .description-category-box {
+        padding-top: 96px;
+        &.pdt-0 {
+          padding-top: 56px;
+        }
+
+        .category-tit {
+          font-size: var(--font-24);
+          font-weight: 700;
+          color: var(--fc-default);
+        }
+        .lsit-inner {
+          padding-top: 28px;
+          display: flex;
+          justify-content: space-between;
+          gap: 20px 20px;
+          flex-flow: wrap;
+          .list {
+            width: 49%;
+            border: solid 1px #dddddd;
+            border-radius: 16px;
+            padding: 40px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            span {
+              display: block;
+              color: var(--fc-default);
+              &.tit {
+                font-size: var(--font-20);
+                font-weight: 700;
+                padding-bottom: 16px;
+              }
+              &.desc {
+                font-size: var(--font-16);
+                font-weight: 500;
+                line-height: 150%;
+              }
+            }
+            .keywords-list {
+              padding-top: 56px;
+              display: flex;
+              gap: 6px;
+              align-items: center;
+              flex-flow: wrap;
+              .keywords {
+                display: flex;
+                align-items: center;
+                width: auto;
+                border-radius: 4px;
+                text-align: center;
+                background: #f5f6fa;
+                padding: 5px 10px;
+
+                i {
+                  display: block;
+                  font-style: normal;
+                  font-size: var(--font-14);
+                  font-weight: 500;
+                  color: #7b7b7b;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.recruit-list-notice {
+  &-root {
+  }
+  &-container {
+    .content {
+      padding: 40px 0 120px 0;
+      .notice-list-con {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        .filter-box {
+          width: 20%;
+          .h-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: solid 2px #222222;
+            padding-bottom: 12px;
+            .tit {
+              display: block;
+              font-size: var(--font-16);
+              font-weight: 400;
+              color: #222222;
+            }
+            .reset-btn-wrap {
+              .SOLTextBtn-root {
+                padding: 0px;
+              }
+            }
+          }
+          .filter-list {
+            padding-top: 32px;
+            .filter-category-box {
+              padding-bottom: 30px;
+              &:last-child {
+                padding-bottom: 0px;
+              }
+              .tit {
+                display: block;
+                font-size: var(--font-18);
+                font-weight: 700;
+                color: #222222;
+                padding-bottom: 10px;
+              }
+              .list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li {
+                  .SOLCheck-root {
+                    span {
+                      display: inline-block;
+                      font-size: var(--font-15);
+                      font-weight: 400;
+                      color: #222222;
+                      padding-left: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .filter-result-box {
+          width: 80%;
+
+          .count-num {
+            display: block;
+            font-size: var(--font-18);
+            font-weight: 400;
+            color: #222222;
+            padding: 2px 0 12px 0;
+            i {
+              font-style: normal;
+              display: inline-block;
+              color: #3869fc;
+              font-weight: 700;
+            }
+          }
+          .filter-result-list {
+            border-top: solid 2px #222222;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            li {
+              &.empty {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-bottom: solid 1px #dddddd;
+                div {
+                  .img {
+                    img {
+                      display: block;
+                      margin: 0 auto;
+                    }
+                  }
+                  .desc {
+                    display: block;
+                    text-align: center;
+                    padding-top: 12px;
+                    font-size: var(--font-15);
+                    font-weight: 500;
+                  }
+                }
+              }
+              a {
+                display: block;
+                padding: 48px 0;
+                border-bottom: solid 1px #dddddd;
+                transition: ease-in-out 0.2s;
+                &:hover {
+                  background: #f7f7f9;
+                }
+
+                .tit-box {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding-bottom: 10px;
+                  .recruit-named {
+                    font-size: var(--font-20);
+                    font-weight: 700;
+                    color: #222222;
+                  }
+                  .date {
+                    font-size: var(--font-15);
+                    font-weight: 400;
+                    color: #9b9ba0;
+                  }
+                }
+                .employment-terms {
+                  display: flex;
+                  align-items: center;
+                  span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    color: #7b7b7b;
+                    position: relative;
+                    &:first-child {
+                      padding-left: 0;
+                    }
+                    &:last-child {
+                      padding-right: 0;
+                    }
+                    &::before {
+                      content: "";
+                      width: 1px;
+                      height: 8px;
+                      background: rgba(0, 0, 0, 0.2);
+                      position: absolute;
+                      top: 50%;
+                      right: 0;
+                      transform: translate(0, -50%);
+                    }
+                    &:last-child {
+                      &::before {
+                        content: none;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.recruit-detail-notice {
+  &-root {
+  }
+  &-container {
+    padding: 40px 0 120px 0;
+    .console-title {
+      padding-bottom: 48px;
+    }
+    .detail-tit-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .detail-tit {
+        font-size: var(--font-32);
+        font-weight: 700;
+        padding-bottom: 12px;
+      }
+      .SOLBtn-root {
+        width: 200px;
+      }
+      .employment-terms {
+        display: flex;
+        span {
+          display: block;
+          padding: 0 10px;
+          font-size: var(--font-16);
+          font-weight: 400;
+          color: #7b7b7b;
+          position: relative;
+          &::before {
+            content: "";
+            width: 1px;
+            height: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+          }
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-right: 0;
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+    .SOLBoard-body {
+      .recruit-detail-top-img {
+        width: 100%;
+        height: auto;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .recruit-detail-bn {
+        width: 100%;
+        height: 320px;
+        background: url(/static/techfin-hompage/techfin-w/image/views/careers/recruit-detail-bg01.png)
+          no-repeat center/ cover;
+        display: flex;
+        align-items: center;
+        padding: 0 95px;
+        margin-bottom: 20px;
+        .tit-box {
+          span {
+            display: block;
+            color: #fff;
+            line-height: 150%;
+            &.tit {
+              font-size: var(--font-36);
+              font-weight: 700;
+            }
+            &.desc {
+              font-size: var(--font-18);
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      .desc-con-box {
+        padding-top: 60px;
+        .desc-con {
+          padding-bottom: 40px;
+          &:last-child {
+            padding-bottom: 0px;
+          }
+          .h3-tit {
+            font-size: var(--font-20);
+            font-weight: 700;
+            padding-bottom: 24px;
+          }
+          .h4-tit {
+            font-size: var(--font-16);
+            font-weight: 700;
+            padding: 0 0 0 10px;
+            position: relative;
+            &::before {
+              content: "";
+              width: 4px;
+              height: 4px;
+              background: #222222;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translate(0, -50%);
+            }
+          }
+          .txt {
+            padding-top: 10px;
+            line-height: 150%;
+          }
+          .list {
+            li {
+              padding-bottom: 5px;
+              span {
+                display: block;
+                font-size: var(--font-16);
+                font-weight: 400;
+                padding: 0 0 0 15px;
+                position: relative;
+                &::before {
+                  content: "";
+                  width: 3px;
+                  height: 3px;
+                  border-radius: 100%;
+                  background: #222222;
+                  position: absolute;
+                  top: 9px;
+                  left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

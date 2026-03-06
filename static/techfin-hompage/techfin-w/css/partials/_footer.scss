@@ -1,0 +1,180 @@
+.TCFFooter-root {
+  width: 100%;
+  padding: 52px 0;
+  background: #2a2e36;
+  .TCFFooter-inner {
+    width: 1200px;
+    margin: 0 auto;
+    .footer-h {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .f-logo {
+        display: block;
+        width: 189px;
+        height: 29px;
+        background: url(/static/techfin-hompage/techfin-w/image/logo/techfin-f-logo.png)
+          no-repeat center center;
+      }
+      .link-box {
+        width: 328px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+          a {
+            display: block;
+            font-size: var(--font-14);
+            font-weight: 400;
+            color: #aaabaf;
+            text-align: center;
+            position: relative;
+            &.on {
+              color: #fff;
+            }
+            &::before {
+              content: "";
+              width: 1px;
+              height: 12px;
+              background: #aaabaf;
+              position: absolute;
+              top: 3px;
+              right: -17px;
+            }
+          }
+          &:last-child {
+            a {
+              &::before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .copyright-b {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: wrap;
+      .tch-address {
+        display: flex;
+        align-items: top;
+        li {
+          padding-left: 20px;
+          position: relative;
+          &::before {
+            content: "";
+            width: 1px;
+            height: 12px;
+            background: #7f8286;
+            position: absolute;
+            top: 3px;
+            left: 9px;
+          }
+          &:first-child {
+            padding-left: 0;
+            &::before {
+              display: none;
+            }
+          }
+          span {
+            display: inline-block;
+            font-size: var(--font-14);
+            font-weight: 400;
+            color: #7f8286;
+            &.bold {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .copyright {
+        display: block;
+        width: 100%;
+        font-size: var(--font-14);
+        font-weight: 400;
+        color: #7f8286;
+        padding-top: 10px;
+      }
+      .SOLCombobox-root {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 6px;
+        .SOLCombobox-button {
+          background: #353840;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          color: #fff;
+          font-size: var(--font-14);
+          font-weight: 400;
+          &::after {
+            content: "";
+            width: 12px;
+            height: 7px;
+            position: absolute;
+            top: 19px;
+            right: 14px;
+            background: url(/static/techfin-hompage/techfin-w/image/icon/combobox-arrorw02.png)
+              no-repeat center;
+            transition: ease-in-out 0.2s;
+          }
+        }
+        .SOLCombobox-option {
+          top: -85px;
+          background: #353840;
+          li {
+            button {
+              color: #fff;
+            }
+            &:hover:not(.st--active, :has(button:disabled)) {
+              background: #3f424a;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.en {
+    .TCFFooter-inner {
+      .footer-h {
+        .link-box {
+          display: none;
+        }
+      }
+      .copyright-b {
+        flex-flow: wrap;
+        position: relative;
+        .tch-address {
+          width: 80%;
+          flex-flow: wrap;
+          li {
+            &:nth-child(2) {
+              padding-right: 20px;
+              padding-bottom: 12px;
+              &::after {
+                content: "";
+                width: 1px;
+                height: 12px;
+                background: #7f8286;
+                position: absolute;
+                top: 3px;
+                right: 9px;
+              }
+            }
+            &:nth-child(3) {
+              position: relative;
+              padding-left: 0;
+              &::before {
+                content: none;
+              }
+            }
+          }
+        }
+        .SOLCombobox-root {
+          position: absolute;
+          top: 22px;
+          right: 0;
+        }
+      }
+    }
+  }
+}

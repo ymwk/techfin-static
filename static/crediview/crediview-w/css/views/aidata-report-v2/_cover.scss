@@ -1,0 +1,310 @@
+@charset "UTF-8";
+.BizInsightReport {
+  &-wrap {
+    .BizInsightReport-cover {
+      padding: 4.75rem 6.25rem 6.25rem 6.25rem;
+      min-height: 100vh;
+      position: relative;
+      //표지버전 v-2
+      &::before {
+        content: "";
+        width: 100%;
+        height: 1023px;
+        background: url(/static/crediview/crediview-w/image/views/aireport-v2/cover/cover-bg-top-v2-2.png)
+          no-repeat;
+        background-size: 944px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 1501px;
+        background: url(/static/crediview/crediview-w/image/views/aireport-v2/cover/cover-bg-bottom-v2.png)
+          no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+      }
+
+      .BizInsightReport-cover-contents {
+        position: relative;
+        z-index: 1;
+        //상단타이틀
+        .top-infor-contents {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          .left-tit {
+            span {
+              display: block;
+              font-size: var(--font-17);
+              font-weight: 500;
+              color: rgba(0, 0, 0, 0.6);
+            }
+          }
+          .aims-reprot-tit {
+            display: block;
+            font-size: var(--font-22);
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+        //메인컨텐츠
+        .main-contents {
+          padding: 15.188rem 0 0 0;
+          .main-tit {
+            h2 {
+              font-family: "GmarketSans";
+              span {
+                display: block;
+                font-size: 6.25rem;
+                font-weight: 700;
+                &.active-txt {
+                  color: #225eff;
+                  font-size: 6.25rem;
+                  padding-bottom: 5px;
+                }
+              }
+            }
+            .desc {
+              padding-top: 3.125rem;
+              font-size: var(--font-22);
+              font-weight: 500;
+              line-height: 32px;
+              color: rgba(0, 0, 0, 0.8);
+            }
+          }
+          //회사정보
+          .company-infor {
+            padding: 10.875rem 0 15.938rem 0;
+            .title {
+              font-size: var(--font-22);
+              font-weight: 700;
+              color: #000000;
+              padding: 1.25rem 0 2.5rem 0;
+              position: relative;
+              &::before {
+                content: "";
+                width: 30px;
+                height: 4px;
+                background: #000000;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+            }
+            .company-list {
+              li {
+                display: flex;
+                align-items: center;
+                padding-bottom: 1.125rem;
+                span {
+                  display: block;
+                  font-size: var(--font-20);
+                  color: #000;
+                  &.tit {
+                    width: 150px;
+                    font-weight: 500;
+                  }
+                  &.con {
+                    font-weight: 600;
+                  }
+                }
+                &:last-child {
+                  padding-bottom: 0;
+                }
+              }
+            }
+            .desc {
+              padding-top: 3.125rem;
+              color: rgba(0, 0, 0, 0.6);
+              font-size: var(--font-17);
+              font-weight: 500;
+              line-height: 26px;
+            }
+          }
+          .footer-contents {
+            .title {
+              font-size: var(--font-22);
+              font-weight: 500;
+              color: rgba(41, 45, 54, 1);
+              padding-bottom: 1.25rem;
+            }
+            .desc {
+              font-size: var(--font-17);
+              font-weight: 500;
+              color: rgba(0, 0, 0, 0.5);
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+    &.even {
+      .BizInsightReport-cover {
+        background: rgba(34, 49, 79, 1);
+        .BizInsightReport-cover-contents {
+          .top-infor-contents {
+            .left-tit {
+              span {
+                color: rgba(255, 255, 255, 0.6);
+              }
+            }
+            .aims-reprot-tit {
+              color: rgba(255, 255, 255, 0.6);
+            }
+          }
+          .main-contents {
+            .main-tit {
+              h2 {
+                span {
+                  color: rgba(255, 255, 255, 1);
+                  &.active-txt {
+                    color: #4c7dff;
+                  }
+                }
+              }
+              .desc {
+                color: rgba(255, 255, 255, 0.8);
+              }
+            }
+            .company-infor {
+              .title {
+                color: rgba(255, 255, 255, 0.7);
+                &::before {
+                  background: rgba(255, 255, 255, 0.7);
+                }
+              }
+              .company-list {
+                li {
+                  span {
+                    color: rgba(255, 255, 255, 0.7);
+                  }
+                }
+              }
+              .desc {
+                color: rgba(255, 255, 255, 0.5);
+              }
+            }
+            .footer-contents {
+              .title {
+                color: rgba(255, 255, 255, 1);
+              }
+              .desc {
+                color: rgba(255, 255, 255, 0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.BizInsightReport {
+  &-wrap {
+    .BizInsightReport-list {
+      padding: 17.75rem 6.25rem 6.25rem 6.25rem;
+      min-height: 100vh;
+      position: relative;
+      //표지버전 v-2
+      &::before {
+        content: "";
+        width: 100%;
+        height: 1023px;
+        background: url(/static/crediview/crediview-w/image/views/aireport-v2/cover/cover-bg-top-v2-2.png)
+          no-repeat;
+        background-size: 944px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+      &::after {
+        content: "";
+        width: 546px;
+        height: 581px;
+        background: url(/static/crediview/crediview-w/image/views/aireport-v2/cover/list-bg-top01.png)
+          no-repeat;
+        //background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+      }
+
+      .BizInsightReport-list-contents {
+        position: relative;
+        z-index: 1;
+        .list-title-box {
+          border-bottom: 2px solid #3d58c9;
+          padding-bottom: 1.75rem;
+          .tit {
+            display: block;
+            color: #3d58c9;
+            font-size: 80px;
+            font-weight: 700;
+          }
+        }
+        .list-wrap {
+          width: 100%;
+          padding-top: 6.25rem;
+          .list {
+            width: 100%;
+            li {
+              padding-bottom: 6.25rem;
+              .inner-box {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                span {
+                  display: block;
+                  &.chapter {
+                    color: #3d58c9;
+                    font-size: var(--font-26);
+                    font-weight: 700;
+                  }
+                  &.page-tit {
+                    color: #000;
+                    font-size: var(--font-24);
+                    font-weight: 700;
+                    letter-spacing: -0.24px;
+                    .num {
+                      display: inline-block;
+                      color: #3d58c9;
+                      font-size: var(--font-24);
+                      font-weight: 700;
+                      padding: 0 0.625rem 0 0;
+                    }
+                  }
+                  &.page-num {
+                    color: #000;
+                    font-size: var(--font-20);
+                    font-weight: 400;
+                  }
+                }
+                dl {
+                  width: 520px;
+                  dd {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 3.125rem;
+                    &:last-child {
+                      padding-bottom: 0rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

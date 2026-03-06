@@ -1,0 +1,153 @@
+.userguide {
+  &-root {
+  }
+  &-container {
+    padding: 40px 0 120px 0;
+    .console {
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px #222222;
+        padding-bottom: 20px;
+        margin-bottom: 56px;
+      }
+      &-title {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.guide-body {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-16);
+  line-height: 1.4;
+  word-break: keep-all;
+
+  .SOLTitle-t2 {
+    margin-bottom: 60px;
+  }
+
+  .SOLTitle-t3 {
+    padding-bottom: 16px;
+  }
+
+  table {
+    margin: 24px 0;
+    // font-size: var(--font-14);
+
+    caption {
+      @extend .SOLTitle-t4;
+      margin-top: 0;
+      text-align: left;
+      padding-bottom: 20px;
+    }
+
+    & + .footnote {
+      margin-top: -24px;
+      margin-bottom: 24px;
+    }
+  }
+  .SOLTable-list {
+    thead {
+      th {
+        height: 80px;
+        border-right: solid 1px #dddddd;
+        background: #f7f8fc;
+        font-size: var(--font-18);
+        font-weight: 500;
+        &::after {
+          content: none;
+        }
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          border-right: solid 1px #dddddd;
+          font-size: var(--font-18);
+          font-weight: 400;
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+
+  .SOLTable-list.s--sm {
+    font-size: var(--font-14);
+    td {
+      height: 3em;
+    }
+  }
+
+  a {
+    color: var(--c-active);
+    text-decoration: underline;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .footnote {
+    color: var(--fc-gray1);
+    font-size: var(--font-14);
+  }
+}
+
+.guide-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 1em;
+  text-indent: -1em;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: solid 1px #dddddd;
+  &.bd-no {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &.pdl-0 {
+    padding-left: 0;
+    text-indent: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-left: 1em;
+    text-indent: -1em;
+    margin: 9px 0;
+    color: var(--fc-gray1);
+  }
+}
+
+.guide-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 40px;
+
+  ul:not(.guide-list, .footnote) {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 9px;
+    color: var(--fc-gray1);
+  }
+}
+
+.guide-img {
+  margin: 24px 0;
+}

@@ -1,0 +1,881 @@
+.serviceintro {
+  &-root {
+    .serviceintro-container {
+      .service-sec-intro {
+        height: 400px;
+        padding: 40px 0 117px 0;
+        .flex-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          .tit-box {
+            width: 50%;
+            .tit {
+              font-size: 40px;
+              font-weight: 700;
+              line-height: 150%;
+            }
+          }
+          .desc-box {
+            width: 50%;
+            span {
+              display: block;
+              font-size: var(--font-18);
+              font-weight: 400;
+              line-height: 150%;
+            }
+          }
+        }
+      }
+      .sec02 {
+        position: relative;
+      }
+
+      .sv-mdbn-box {
+        width: 100%;
+        height: 360px;
+        background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-md-bg01.png)
+          no-repeat center/cover;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        &.mdbn02 {
+          background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-md-bg02.png)
+            no-repeat center/cover;
+        }
+        &.mdbn03 {
+          background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-md-bg03.png)
+            no-repeat center/cover;
+        }
+        &.mdbn04 {
+          background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-md-bg04.png)
+            no-repeat center/cover;
+        }
+        &.mdbn05 {
+          background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-md-bg05.png)
+            no-repeat center/cover;
+        }
+        .tit-box {
+          span {
+            display: block;
+            text-align: center;
+            &.tit {
+              font-size: 40px;
+              font-weight: 700;
+              color: #fff;
+              text-align: center;
+            }
+            &.desc {
+              font-size: var(--font-18);
+              font-weight: 500;
+              color: rgba(255, 255, 255, 0.8);
+              line-height: 150%;
+              padding-top: 16px;
+            }
+          }
+        }
+      }
+      .company-infor-list-box {
+        width: 100%;
+        padding-top: 120px;
+        position: relative;
+        &.pettern-l {
+          &::before {
+            content: "";
+            width: 620px;
+            height: 723px;
+            background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-pettern-bg01.png)
+              no-repeat center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+        &.pettern-r {
+          &::after {
+            content: "";
+            width: 450px;
+            height: 688px;
+            background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-pettern-bg02.png)
+              no-repeat center;
+            position: absolute;
+            top: 0px;
+            right: 0;
+          }
+        }
+        .flex-box {
+          display: flex;
+          justify-content: space-between;
+          gap: 100px;
+          .tit-box {
+            width: 45%;
+            span {
+              display: block;
+              &.tit {
+                font-size: var(--font-32);
+                font-weight: 700;
+                color: #222222;
+              }
+              &.desc {
+                font-size: var(--font-18);
+                font-weight: 500;
+                color: #7b7b7b;
+                padding-top: 12px;
+              }
+            }
+          }
+          .infor-box {
+            width: 55%;
+            padding-bottom: 120px;
+            dl {
+              padding-bottom: 55px;
+              margin-bottom: 48px;
+              border-bottom: solid 1px #7b7b7b;
+              &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+              }
+              dt {
+                display: flex;
+                align-items: center;
+                padding-bottom: 28px;
+                span {
+                  display: block;
+                  &.title {
+                    font-size: var(--font-20);
+                    font-weight: 700;
+                    color: #3869fc;
+                    padding: 0 0 0 5px;
+                  }
+                }
+              }
+              dd {
+                padding: 0 0 24px 5px;
+                &:last-child {
+                  padding-bottom: 0;
+                }
+                span {
+                  display: block;
+                  &.tit {
+                    font-size: var(--font-16);
+                    font-weight: 700;
+                    padding-bottom: 5px;
+                  }
+                  &.desc {
+                    font-size: var(--font16);
+                    font-weight: 500;
+                    color: #7b7b7b;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .infor-list-box02 {
+        padding-top: 120px;
+        .box {
+          display: flex;
+          flex-flow: wrap;
+          li {
+            width: 100%;
+            display: flex;
+            .img {
+              width: 50%;
+              img {
+                max-width: 100%;
+              }
+            }
+            .desc {
+              width: 50%;
+              font-size: var(--font-32);
+              font-weight: 700;
+              color: #222222;
+              line-height: 150%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              span {
+                display: block;
+                i {
+                  display: inline-block;
+                  color: #3869fc;
+                  font-style: normal;
+                }
+              }
+            }
+            &:first-child {
+              .desc {
+                padding-left: 80px;
+              }
+            }
+            &:last-child {
+              padding-top: 80px;
+            }
+          }
+        }
+      }
+      .md-link-bn-box {
+        width: 100%;
+        height: 240px;
+        background: url(/static/techfin-hompage/techfin-w/image/views/intro/md-link-bn-bg01.png)
+          no-repeat center/cover;
+        margin: 120px 0 120px 0;
+        padding: 76px 60px;
+        &.bg02 {
+          background: url(/static/techfin-hompage/techfin-w/image/views/intro/md-link-bn-bg02.png)
+            no-repeat center/cover;
+        }
+        &.bg03 {
+          background: url(/static/techfin-hompage/techfin-w/image/views/intro/md-link-bn-bg03.png)
+            no-repeat center/cover;
+        }
+        &.mgb-0 {
+          margin-bottom: 0;
+        }
+        .tit-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .tit {
+            display: block;
+            font-size: var(--font-32);
+            font-weight: 700;
+            color: #fff;
+            .logo {
+              display: inline-block;
+              padding: 0 10px;
+            }
+          }
+          .sub-tit {
+            display: block;
+            font-size: var(--font-18);
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+            padding-top: 12px;
+          }
+          .btn-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+              height: 48px;
+              background: #fff;
+              border-radius: 8px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 8px;
+              padding: 0 20px 0 24px;
+              span {
+                font-size: var(--font-16);
+                font-weight: 700;
+                color: #222222;
+              }
+            }
+          }
+        }
+      }
+      .service-target-box {
+        padding: 120px 0;
+        .list {
+          display: flex;
+          justify-content: flex-start;
+          gap: 80px 20px;
+          flex-flow: wrap;
+          padding-top: 80px;
+          li {
+            width: 23%;
+            .img {
+              width: 100%;
+              height: 224px;
+              background: #f7f8fc;
+              border-radius: 16px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .tit-box {
+              padding-top: 20px;
+              text-align: center;
+              span {
+                display: block;
+                &.tit {
+                  font-size: var(--font-18);
+                  font-weight: 700;
+                  color: #222222;
+                }
+                &.sub-tit {
+                  font-size: var(--font-16);
+                  font-weight: 500;
+                  color: #7b7b7b;
+                  padding-top: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .use-cases-box {
+        padding: 120px 0;
+        background: #f7f8fc;
+        .list {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          padding-top: 80px;
+          li {
+            width: 580px;
+            height: 552px;
+            position: relative;
+            overflow: hidden;
+
+            &.bg01 {
+              background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img01.png)
+                no-repeat center;
+              .hover-box {
+                width: 100%;
+                background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img01-on.png);
+              }
+            }
+            &.bg02 {
+              background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img02.png)
+                no-repeat center;
+              .hover-box {
+                width: 100%;
+                background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img02-on.png);
+              }
+            }
+            &.bg03 {
+              background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img03.png)
+                no-repeat center;
+              .hover-box {
+                background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img03-on.png);
+              }
+            }
+            &.bg04 {
+              background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img04.png)
+                no-repeat center;
+              .hover-box {
+                width: 100%;
+                background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img04-on.png);
+              }
+            }
+            &.bg05 {
+              background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img05.png)
+                no-repeat center;
+              .hover-box {
+                width: 100%;
+                background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img05-on.png);
+              }
+            }
+            &.bg06 {
+              background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img06.png)
+                no-repeat center;
+              .hover-box {
+                width: 100%;
+                background: url(/static/techfin-hompage/techfin-w/image/views/intro/use-cases-img06-on.png);
+              }
+            }
+            .common-st {
+              padding: 40px;
+              width: 100%;
+              height: 100%;
+              transition: ease-in-out 0.3s;
+              &.hover-box {
+                width: 100%;
+                height: 100%;
+                display: none;
+                border-radius: 16px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-repeat: no-repeat center;
+              }
+            }
+            span {
+              display: block;
+              color: #fff;
+              &.tit {
+                font-size: var(--font-30);
+                font-weight: 700;
+                line-height: 150%;
+                padding-bottom: 16px;
+              }
+              &.sub-tit {
+                font-size: var(--font-16);
+                font-weight: 500;
+                line-height: 150%;
+                &.flex {
+                  display: flex;
+                  i {
+                    font-style: normal;
+                    display: inline-block;
+                    padding-right: 10px;
+                    position: relative;
+                    &::before {
+                      content: "";
+                      width: 1px;
+                      height: 14px;
+                      background: rgba(255, 255, 255, 0.2);
+                      position: absolute;
+                      top: 3px;
+                      right: 0;
+                    }
+                    &:last-child {
+                      padding-left: 10px;
+                      color: #fff;
+                      &::before {
+                        content: none;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .more-btn {
+              position: absolute;
+              bottom: 48px;
+              left: 40px;
+              span {
+                display: block;
+                position: relative;
+                width: 24px;
+                height: 24px;
+                background: #fff;
+                border-radius: 100%;
+                &::before {
+                  content: "";
+                  width: 12px;
+                  height: 12px;
+                  background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-more-btn.svg)
+                    no-repeat;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .scope-provision-box {
+        padding: 120px 0;
+        position: relative;
+        background: #f7f8fc;
+        z-index: 1;
+
+        .list-box {
+          padding-top: 80px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+          li {
+            position: relative;
+            span {
+              display: block;
+              &.img {
+                position: relative;
+                width: 224px;
+
+                img {
+                  max-width: 100%;
+                  opacity: 0.9;
+                  filter: blur(1px);
+                  clip-path: inset(4px round 16px);
+                }
+              }
+              &.tit {
+                width: 100%;
+                text-align: center;
+                font-size: var(--font-18);
+                font-weight: 700;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .sub-tit {
+                  font-style: normal;
+                  font-size: var(--font-16);
+                  font-weight: 400;
+                  color: rgba(255, 255, 255, 0.9);
+                  padding-top: 5px;
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        .list-box-type02 {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          padding-top: 80px;
+          li {
+            width: 50%;
+            border: solid 1px #dddddd;
+            border-radius: 16px;
+            padding: 40px 40px;
+            background: #fff;
+            .tit {
+              display: block;
+              font-size: var(--font-20);
+              font-weight: 700;
+              color: #222222;
+            }
+            dl {
+              padding-top: 20px;
+              display: flex;
+              justify-content: space-between;
+              flex-flow: wrap;
+
+              dd {
+                width: 50%;
+                padding-bottom: 12px;
+                &:nth-child(5) {
+                  padding-bottom: 0;
+                }
+                &:nth-child(6) {
+                  padding-bottom: 0;
+                }
+                span {
+                  display: block;
+                  font-size: 16px;
+                  font-weight: 500;
+                  color: #222222;
+                  padding: 2px 0 0 25px;
+                  position: relative;
+                  &::before {
+                    content: "";
+                    width: 18px;
+                    height: 18px;
+                    background: url(/static/techfin-hompage/techfin-w/image/views/intro/ic_list_check.png)
+                      no-repeat center;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .field-activity-box {
+        padding: 120px 0;
+        .list-box {
+          padding-top: 80px;
+          display: flex;
+          justify-content: flex-start;
+          &.list-3 {
+            gap: 20px;
+            li {
+              width: 33%;
+            }
+          }
+          &.list-2 {
+            gap: 20px;
+            flex-flow: wrap;
+            li {
+              width: 49%;
+            }
+          }
+          li {
+            padding: 40px 40px;
+            border: solid 1px #dddddd;
+            border-radius: 16px;
+            position: relative;
+            .tit {
+              display: block;
+              font-size: 20px;
+              font-weight: 700;
+              color: #222222;
+            }
+            .sub-desc-inner {
+              padding-top: 24px;
+              .sub-desc {
+                display: block;
+                font-size: var(--font-16);
+                font-weight: 400;
+                color: #222222;
+                position: relative;
+                padding: 0 0 4px 10px;
+                &:last-child {
+                  padding-bottom: 0;
+                }
+                &::before {
+                  content: "";
+                  width: 2px;
+                  height: 2px;
+                  background: #222222;
+                  border-radius: 100%;
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  transform: translate(0, -50%);
+                }
+              }
+            }
+            img {
+              position: absolute;
+              bottom: 40px;
+              right: 40px;
+            }
+          }
+        }
+      }
+      .expected-effext-box {
+        padding: 120px 0;
+        .list {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          padding-top: 80px;
+          li {
+            width: 24%;
+            background: #f7f8fc;
+            border-radius: 16px;
+            padding: 30px 40px;
+            span {
+              display: block;
+              &.num {
+                text-align: right;
+                font-size: var(--font-24);
+                font-weight: 700;
+                color: rgba(34, 34, 34, 0.3);
+              }
+              &.tit {
+                font-size: var(--font-20);
+                font-weight: 700;
+                color: #222222;
+                text-align: left;
+              }
+            }
+            .img {
+              padding: 24px 0;
+            }
+          }
+        }
+      }
+      .factoring-receivable-box {
+        padding: 120px 0;
+        background: #f7f8fc;
+        .img {
+          padding-top: 80px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &.en {
+            img {
+              display: none;
+              &.en {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .factoring-receivable-inforbox {
+        padding: 120px 0;
+        .top-con {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          .tit-box {
+            .tit {
+              display: block;
+              font-size: 32px;
+              font-weight: 700;
+              color: #222222;
+            }
+          }
+          .current-situat {
+            display: flex;
+            align-items: center;
+            li {
+              padding-right: 50px;
+              position: relative;
+              &:last-child {
+                padding-left: 50px;
+                padding-right: 0px;
+                &::before {
+                  content: none;
+                }
+              }
+              &::before {
+                content: "";
+                width: 1px;
+                height: 100px;
+                background: #dddddd;
+                position: absolute;
+                top: 40px;
+                right: 0;
+              }
+              span {
+                display: block;
+                color: #222222;
+                text-align: center;
+                &.tit {
+                  font-size: var(--font-18);
+                  font-weight: 700;
+                  padding-bottom: 20px;
+                }
+                &.num {
+                  font-size: 68px;
+                  font-weight: 700;
+                  color: #3869fc;
+                  padding-bottom: 20px;
+                }
+                &.date {
+                  font-size: var(--font-16);
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+        .bottom-con {
+          width: 100%;
+          background: #f7f8fc;
+          border-radius: 16px;
+          padding: 40px 48px;
+          margin-top: 80px;
+          .tit-box {
+            padding-bottom: 40px;
+            span {
+              display: block;
+              color: #222222;
+              &.tit {
+                font-size: var(--font-24);
+                font-weight: 700;
+              }
+              &.desc {
+                font-size: var(--font-16);
+                font-weight: 400;
+                padding-top: 10px;
+              }
+            }
+          }
+          .bn-list {
+            display: flex;
+            justify-content: space-between;
+            li {
+              width: 25%;
+            }
+          }
+        }
+      }
+      .intro-movie-box {
+        padding: 120px 0;
+        .movie-list {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          padding-top: 80px;
+          li {
+            width: 25%;
+            a {
+              display: block;
+              width: 100%;
+              color: #222222;
+              span {
+                display: block;
+                &.movie-link-img {
+                  padding-bottom: 25px;
+                  img {
+                    display: block;
+                    max-width: 100%;
+                  }
+                }
+                &.tit {
+                  font-size: var(--font-18);
+                  font-weight: 700;
+                  padding-bottom: 16px;
+                }
+                &.episode-tit {
+                  font-size: var(--font-14);
+                  font-weight: 500;
+                  color: #9b9ba0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .sv-bottom-bn {
+        width: 100%;
+        height: 280px;
+        background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-btbn-bg.png)
+          no-repeat center/cover;
+        padding: 65px 0;
+        &.bg02 {
+          background: url(/static/techfin-hompage/techfin-w/image/views/intro/intro-sv-btbn-bg02.png)
+            no-repeat center/cover;
+        }
+        .tit-box {
+          padding-bottom: 24px;
+          .tit {
+            font-size: var(--font-32);
+            font-weight: 700;
+            color: #fff;
+            line-height: 150%;
+          }
+        }
+        .cs-box {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          span {
+            display: block;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            i {
+              font-style: normal;
+              display: inline-block;
+              font-size: var(--font-18);
+              color: #fff;
+
+              &.title {
+                font-size: var(--font-18);
+                font-weight: 700;
+              }
+              &.desc {
+                font-size: var(--font-18);
+                font-weight: 300;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 타이틀 공통
+    .title-common-box {
+      position: relative;
+      z-index: 100;
+      span {
+        display: block;
+        &.tit {
+          font-size: var(--font-32);
+          font-weight: 700;
+          color: #222222;
+        }
+        &.desc {
+          font-size: var(--font-18);
+          font-weight: 400;
+          color: #7b7b7b;
+          padding-top: 12px;
+        }
+      }
+    }
+  }
+}

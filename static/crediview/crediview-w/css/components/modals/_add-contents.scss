@@ -1,0 +1,59 @@
+// 신용평가 등급 제출 확인서 선택 모달 컨텐츠
+.certificate-selct-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0 10px;
+  li {
+    flex: 1 1 0;
+    min-width: 0;
+
+    button {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid var(--Table-td-border, #e6e8eb);
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 22px 0;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &.active {
+        border: 1px solid #3b5dfb;
+        box-shadow: 0 3px 12px 0 rgba(55, 29, 110, 0.07);
+      }
+      span {
+        display: block;
+        &.img {
+          width: 60px;
+          height: 60px;
+          &.company {
+            background: url(/static/crediview/crediview-w/image/icon/ic_company.svg) no-repeat
+              center;
+          }
+          &.board {
+            background: url(/static/crediview/crediview-w/image/icon/ic_board.svg) no-repeat
+              center;
+          }
+          &.bulding {
+            background: url(/static/crediview/crediview-w/image/icon/ic_building.svg) no-repeat
+              center;
+          }
+        }
+        &.title {
+          text-align: center;
+          color: #222;
+          font-size: var(--font-16);
+          font-weight: 700;
+          line-height: 120%;
+          letter-spacing: -0.16px;
+          padding-top: 12px;
+        }
+      }
+    }
+  }
+}

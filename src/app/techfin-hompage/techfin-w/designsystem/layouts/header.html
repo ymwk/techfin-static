@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/techfin-hompage/techfin-w/css/designsystem.css" />
+    <style>
+      .SOLHeader-root.t--landing {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Header</h2>
+        <p class="comp-pagetitle-desc">Landing 및 로그인화면 header</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Header theme : landing</h3>
+          <header class="TCFHeader-root">
+            <div class="TCFHeader-inner">
+              <h1 class="TCFHeader-logo">
+                <a href=""><span class="blind">테크핀 로고</span></a>
+              </h1>
+              <div class="nav-wrap">
+                <ul class="nav">
+                  <li>
+                    <a href=""><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>서비스소개</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>새소식</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>문의하기</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>인재채용</span></a>
+                  </li>
+                </ul>
+
+                <div class="sub-menu">
+                  <ul class="sub-menu-box-list">
+                    <li>
+                      <a href=""><span>회사소개</span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="sub-menu-box-list">
+                    <li>
+                      <a href=""><span>기업신용평가</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span>기업금융중개</span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="sub-menu-box-list">
+                    <li>
+                      <a href=""><span>공지사항</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span>언론보도</span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="sub-menu-box-list">
+                    <li>
+                      <a href=""><span>문의하기</span></a>
+                    </li>
+                  </ul>
+
+                  <ul class="sub-menu-box-list">
+                    <li>
+                      <a href=""><span>문화</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span>채용제도</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span>채용공고</span></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-menu">
+                  <span class="service-dropdwn-btn">서비스 바로가기</span>
+                  <p class="menu-link">
+                    <button><span>크레디뷰</span></button>
+                    <button><span>매출채권팩토링 플랫폼</span></button>
+                  </p>
+                </div>
+              </div>
+              <div class="language-link">
+                <span class="kr active">KR</span>
+                <span class="en">EN</span>
+              </div>
+            </div>
+          </header>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      //gnb
+      document.addEventListener("DOMContentLoaded", () => {
+        const headerRoot = document.querySelector(".TCFHeader-root");
+        const navWrap = headerRoot.querySelector(".nav-wrap");
+        const nav = navWrap.querySelector(".nav");
+        const subMenu = navWrap.querySelector(".sub-menu");
+
+        nav.addEventListener("mouseenter", () => {
+          headerRoot.classList.add("on");
+          subMenu.style.display = "flex";
+        });
+
+        navWrap.addEventListener("mouseleave", () => {
+          headerRoot.classList.remove("on");
+          subMenu.style.display = "none";
+        });
+
+        //서비스 바로가기 토글
+        const dropdownBtn = document.querySelector(".service-dropdwn-btn");
+        const menuLink = document.querySelector(
+          ".TCFHeader-root .nav-wrap .service-menu .menu-link"
+        );
+
+        dropdownBtn.addEventListener("click", () => {
+          dropdownBtn.classList.toggle("on");
+
+          if (menuLink.style.display === "block") {
+            menuLink.style.display = "none";
+          } else {
+            menuLink.style.display = "block";
+          }
+        });
+      });
+    </script>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

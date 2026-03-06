@@ -1,0 +1,195 @@
+.bullit {
+  &-root {
+    width: 100%;
+
+    &.right {
+      text-align: right;
+    }
+    .h3-tit {
+      font-size: var(--font-24);
+      font-weight: 700;
+      color: #000000;
+      padding-bottom: 24px;
+      .sub-tit {
+        font-size: var(--font-18);
+        font-weight: 700;
+        color: #000000;
+        padding-left: 0.313rem;
+      }
+      &.mgt40 {
+        margin-top: 40px;
+      }
+      .txt {
+        font-style: normal;
+        font-size: var(--font-15);
+        font-weight: 400;
+        padding-left: 0.625rem;
+      }
+    }
+    &.one-page-type {
+      .h3-tit {
+        &.mgt40 {
+        }
+      }
+    }
+
+    .h4-tit {
+      padding-bottom: 0rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #222;
+      font-size: var(--font-18);
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: -0.18px;
+      &.pdb0 {
+        padding-bottom: 0rem;
+      }
+      .sm-unit {
+        display: inline-block;
+        color: #8a8d8f;
+        font-size: var(--font-14);
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: -0.14px;
+      }
+    }
+    .h5-tit {
+      color: #222;
+      font-size: var(--font-16);
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+    }
+    .bullit-type {
+      .h4-tit {
+        font-size: var(--font-18);
+        font-weight: 700;
+        color: #000000;
+        position: relative;
+
+        &.mtg24 {
+          margin-top: 24px;
+        }
+      }
+    }
+    .badge-bullit-type {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      .badge {
+        display: block;
+        width: 28px;
+        height: 28px;
+        background: url(/static/crediview/crediview-w/image/views/aireport-v2/web/img/badge-bg01.png)
+          no-repeat center;
+        position: relative;
+        &.st02 {
+          background: url(/static/crediview/crediview-w/image/views/aireport-v2/page/badge-bg02.png)
+            no-repeat center;
+        }
+        &.st03 {
+          background: url(/static/crediview/crediview-w/image/views/aireport-v2/page/badge-bg03.png)
+            no-repeat center;
+        }
+        .num {
+          position: absolute;
+          top: -1px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          font-size: var(--font-18);
+          font-weight: 500;
+          color: #fff;
+        }
+      }
+      .h4-tit {
+        font-size: var(--font-20);
+        font-weight: 700;
+        color: #000000;
+        padding-bottom: 0;
+        gap: 0px;
+        em {
+          display: block;
+          padding-right: 7px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          max-width: 250px;
+        }
+        .biznum {
+          display: inline-block;
+          color: #000;
+          font-size: var(--font-16);
+          font-weight: 400;
+          position: relative;
+          padding-left: 7px;
+          &::before {
+            content: "";
+            width: 1px;
+            height: 14px;
+            background: #a1a7b8;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+          }
+        }
+      }
+
+      &.case02 {
+        align-items: center;
+        .badge {
+          width: 28px;
+          height: 28px;
+          background: #e6eaf2;
+          border-radius: 8px;
+          .num {
+            color: #000000;
+            top: 1px;
+          }
+        }
+      }
+    }
+    .unit {
+      display: block;
+      color: #8a8d8f;
+      font-size: var(--font-14);
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: -0.14px;
+      &.pdb5 {
+        padding-bottom: 5px;
+        padding-right: 16px;
+      }
+    }
+    .bullit-flex-type {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &.flex-end {
+        justify-content: flex-end;
+      }
+      &.pdb-0 {
+        padding-bottom: 0rem;
+      }
+    }
+    .tolltip-fbox {
+      display: flex;
+      align-items: center;
+      gap: 0 6px;
+      .ic {
+        width: 18px;
+        height: 18px;
+        display: block;
+      }
+      .sm-unit {
+        color: #8a8d8f;
+        font-size: var(--font-14);
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: -0.14px;
+      }
+    }
+  }
+}

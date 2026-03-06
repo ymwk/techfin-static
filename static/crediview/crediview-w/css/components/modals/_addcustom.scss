@@ -1,0 +1,92 @@
+.SOLModal-custom-root {
+  .sec-box-wrap {
+    .sec-title-box {
+      display: flex;
+      align-items: center;
+      height: 46px;
+      padding: 9px 16px;
+      gap: 9px 16px;
+      border-top: 1px solid #e6e8eb;
+      border-bottom: 1px solid #e6e8eb;
+      background: #f7f8fa;
+      .title {
+        color: #222;
+        font-size: var(--font-14);
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+      }
+    }
+    .content-box {
+      .inner-box {
+        padding: 10px 16px;
+        &.border-bt {
+          border-bottom: 1px solid #e6e8eb;
+        }
+      }
+      .email-list-box {
+        padding-top: 24px;
+        .tit-box {
+          display: flex;
+          align-items: center;
+          span {
+            display: block;
+            &.tit {
+              flex: 1;
+              color: #1d2129;
+              font-size: var(--font-16);
+              font-weight: 700;
+              line-height: 24px;
+            }
+          }
+          .all-delete {
+            color: #2966f5;
+            font-size: var(--font-12);
+            font-weight: 600;
+            line-height: 18px;
+            letter-spacing: -0.33px;
+          }
+        }
+        .email-list {
+          display: flex;
+          padding: 20px 4px;
+          flex-direction: column;
+          align-items: center;
+          gap: 18px 4px;
+          border-top: 1px solid #e6e8eb;
+          border-bottom: 1px solid #e6e8eb;
+          background: #fff;
+          margin-top: 24px;
+          li {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            span {
+              display: block;
+              &.email-infor {
+                color: #1d2129;
+                font-size: var(--font-14);
+                font-weight: 400;
+                line-height: 23px;
+                flex: 1;
+                position: relative;
+                padding-left: 26px;
+                &::before {
+                  content: "";
+                  width: 18px;
+                  height: 18px;
+                  background: url(/static/crediview/crediview-w/image/icon/ic_me_email.svg)
+                    no-repeat center;
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  transform: translate(0, -50%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

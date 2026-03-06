@@ -1,0 +1,187 @@
+.SOLModal-root {
+  z-index: 1004;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.s--mb .SOLModal-box {
+    max-width: 360px;
+  }
+
+  &.s--sm .SOLModal-box {
+    max-width: 520px;
+  }
+  &.s--md .SOLModal-box {
+    max-width: 890px;
+  }
+  &.s--lg .SOLModal-box {
+    max-width: var(--max-w);
+  }
+  &.s--full .SOLModal-box {
+    max-width: unset;
+  }
+
+  .SOLTable-data:not(.t--result) {
+    caption {
+      margin-bottom: 0.7em;
+    }
+
+    th,
+    td {
+      height: 42px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }
+}
+
+.SOLModal-backdrop {
+  @include backdrop;
+}
+
+.SOLModal-box {
+  @include popBox;
+  width: calc(100% - 80px);
+  min-height: 250px;
+  max-width: 590px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.SOLModal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  margin: -2px -2px 0 auto;
+}
+
+.SOLModal-title {
+  position: relative;
+  flex-shrink: 0;
+  &-desc {
+    font-size: 14px;
+    font-weight: 400;
+    color: #404252;
+    display: block;
+    padding: 10px 0 0 0;
+  }
+  .SOLTitle-t2 {
+    height: 40px;
+    border-bottom: 1px solid #eaeaea;
+    &.center {
+      text-align: center;
+      border: none;
+    }
+  }
+
+  .SOLTitle-t3.pdt40 {
+    padding: 40px 0 0 0;
+  }
+
+  .SOLTitle-t3.border-type {
+    border-bottom: solid 1px #e6e8eb;
+    padding-bottom: 10px;
+  }
+}
+
+.SOLModal-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 0;
+  overflow-y: auto;
+}
+
+.SOLModal-desc {
+  font-size: var(--font-14);
+  text-align: center;
+  line-height: 20px;
+}
+
+.SOLModal-bottom-desc {
+  padding: 0 0 20px 0;
+  font-size: 14px;
+  border-bottom: solid 1px #e6e8eb;
+  span.bold {
+    font-weight: 700;
+  }
+}
+
+.SOLModal-action {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 0 6px;
+
+  .SOLBtn-root {
+    flex: 1;
+    max-width: 160px;
+  }
+}
+
+.SOLModal-msgbox {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--c-bg);
+  line-height: 1.6;
+
+  li {
+    &::before {
+      content: "·";
+      padding-right: 4px;
+    }
+  }
+}
+
+.SOLModal-terms-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  color: var(--fc-gray1);
+  line-height: 1.43;
+}
+
+.SOLModal-terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  &.h--sm {
+    & > li {
+      padding: 8px 16px;
+    }
+  }
+
+  & > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+
+    &:not(:first-of-type) {
+      font-size: var(--font-13);
+    }
+  }
+}
+
+.txt-link {
+  color: var(--c-active);
+  text-decoration: underline;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  padding: 20px 0 0 0;
+  &:hover {
+    text-decoration: none;
+  }
+}

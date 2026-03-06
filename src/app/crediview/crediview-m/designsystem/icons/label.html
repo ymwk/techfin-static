@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System - Icons</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, interactive-widget=resizes-content"
+    />
+    <link rel="stylesheet" href="/static/crediview/crediview-m/css/designsystem.css" />
+  </head>
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Label Icon</h2>
+        <p class="comp-pagetitle-desc">라벨 아이콘 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">Code View</button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Card Label</h3>
+          <div class="comp-fbox">
+            <span class="SOLLabel-root">미등록</span>
+            <span class="SOLLabel-root c--success">등록</span>
+            <span class="SOLLabel-root c--active">인증</span>
+            <span class="SOLLabel-root c--error">미인증</span>
+            <span class="SOLLabel-root c--warn">대기중</span>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Board Label</h3>
+          <div class="comp-fbox">
+            <span class="SOLLabel-root t--contained">답변대기</span>
+            <span class="SOLLabel-root c--success t--contained">답변완료</span>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Category Label</h3>
+          <div class="comp-fbox">
+            <span class="SOLLabel-root t--outlined r--edge">법인</span>
+            <span class="SOLLabel-root c--success t--outlined r--edge">법인</span>
+            <span class="SOLLabel-root c--active t--outlined r--edge">법인</span>
+            <span class="SOLLabel-root c--error t--outlined r--edge">법인</span>
+            <span class="SOLLabel-root c--warn t--outlined r--edge">법인</span>
+          </div>
+        </section>
+
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Small Label</h3>
+          <div class="comp-fbox">
+            <span class="SOLLabel-root t--contained r--edge s--sm">사용완료</span>
+            <span class="SOLLabel-root c--normal t--contained r--edge s--sm">사용완료</span>
+            <span class="SOLLabel-root c--success t--contained r--edge s--sm">등록완료</span>
+            <span class="SOLLabel-root c--active t--contained r--edge s--sm">사용가능</span>
+            <span class="SOLLabel-root c--error t--contained r--edge s--sm">기한만료</span>
+            <span class="SOLLabel-root c--warn t--contained r--edge s--sm">대기중</span>
+          </div>
+          <div class="comp-fbox">
+            <span class="SOLLabel-root c--em t--contained s--sm">D-100</span>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/designsystem/js/go.min.js"></script>
+    <script src="/src/app/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/designsystem/js/custom.js"></script>
+  </body>
+</html>

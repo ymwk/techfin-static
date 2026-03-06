@@ -1,0 +1,140 @@
+:root {
+  /* 화면 미리보기용 픽셀 기준 (150dpi) */
+  --a4-w: 1240px;
+  --a4-h: 1754px;
+
+  /* 프린트 실측(mm) 기준 */
+  --a4-w-mm: 210mm;
+  --a4-h-mm: 297mm;
+
+  /* 프린트 여백 (출력 여백) */
+  --print-margin: 10mm; /* 필요 시 조정 */
+  /* 안전 여백 (내용이 닿지 않도록) */
+  --safe-pad: 24px;
+
+  // color
+  --fc-default: #222;
+  --fc-gray1: #7b7b7b;
+  --fc-gray2: #9b9ba0;
+  --fc-rating: #1e479f;
+
+  // state-color
+  --c-component: #265cf0;
+  --c-disabled: #bebebe;
+  --c-active: #3b5dfb;
+  --c-success: #18be71;
+  --c-error: #fc5356;
+  --c-warn: #febb2b;
+  --c-bg: #f8f9fb;
+  --tb-border: #e6e8eb;
+  --tb-bg: #f7f8fa;
+  --c-hover: #e9eff3;
+  --bc-hover: rgba(77, 124, 254, 0.1);
+
+  --c-gray01: #7a8aa5;
+  --c-blue01: #3f59d3;
+  --c-adequate: #2995ff;
+  --c-excellent: #1eb98b;
+  --c-decrease: #ee6368;
+  --c-judgment: #f1a400;
+  --c-profitability: #32cbd0;
+  --c-diagnosis: #9da3aa;
+
+  //font size
+  --font-14: 1rem;
+  --font-9: 0.64rem;
+  --font-11: 0.79rem;
+  --font-12: 0.86rem;
+  --font-13: 0.93rem;
+  --font-15: 1.07rem;
+  --font-16: 1.14rem;
+  --font-17: 1.21rem;
+  --font-18: 1.29rem;
+  --font-19: 1.36rem;
+  --font-20: 1.43rem;
+  --font-21: 1.5rem;
+  --font-22: 1.57rem;
+  --font-24: 1.71rem;
+  --font-26: 1.86rem;
+  --font-28: 2rem;
+  --font-30: 2.142rem;
+  --font-32: 2.29rem;
+  --font-34: 2.43rem;
+  --font-36: 2.57rem;
+  --font-50: 3.57rem;
+  --font-60: 4.29rem;
+  --font-80: 5.71rem;
+}
+
+// margin,padding
+.pt10 {
+  padding-top: 10px !important;
+}
+
+.pt15 {
+  padding-top: 15px !important;
+}
+
+.pt20 {
+  padding-top: 20px !important;
+}
+
+.pt25 {
+  padding-top: 25px !important;
+}
+
+.pt30 {
+  padding-top: 30px !important;
+}
+
+.pt35 {
+  padding-top: 35px !important;
+}
+
+.pt40 {
+  padding-top: 40px !important;
+}
+
+.pt45 {
+  padding-top: 45px !important;
+}
+
+.pt50 {
+  padding-top: 50px !important;
+}
+
+.mt10 {
+  margin-top: 10px !important;
+}
+
+.mt15 {
+  margin-top: 15px !important;
+}
+
+.mt20 {
+  margin-top: 20px !important;
+}
+
+.mt25 {
+  margin-top: 25px !important;
+}
+
+.mt30 {
+  margin-top: 30px !important;
+}
+
+.mt35 {
+  margin-top: 35px !important;
+}
+
+.mt40 {
+  margin-top: 40px !important;
+}
+
+.mt45 {
+  margin-top: 45px !important;
+}
+
+.mt50 {
+  margin-top: 50px !important;
+}

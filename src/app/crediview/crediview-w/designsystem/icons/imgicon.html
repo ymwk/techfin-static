@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/crediview/crediview-w/css/designsystem.css" />
+    <style>
+      .comp-fbox {
+        gap: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="comp-inner-root">
+      <div class="comp-top">
+        <h2 class="comp-pagetitle">Img Icon</h2>
+        <p class="comp-pagetitle-desc">아이콘 컴포넌트</p>
+        <button type="button" class="comp-btn-code" onclick="openCode()">
+          Code View
+        </button>
+      </div>
+
+      <div id="compContents">
+        <section class="comp-section">
+          <h3 class="comp-objtitle">Img Icon</h3>
+          <div class="comp-fbox">
+            <div class="aireprot-imgic-root">
+              <span>
+                <img src="/static/crediview/crediview-w/image/icon/ic_ar01_32.png" alt="" />
+              </span>
+              <span>
+                <img src="/static/crediview/crediview-w/image/icon/ic_ar02_32.png" alt="" />
+              </span>
+              <span>
+                <img src="/static/crediview/crediview-w/image/icon/ic_ar03_32.png" alt="" />
+              </span>
+              <span>
+                <img src="/static/crediview/crediview-w/image/icon/ic_ar04_32.png" alt="" />
+              </span>
+              <span>
+                <img src="/static/crediview/crediview-w/image/icon/ic_ar05_32.png" alt="" />
+              </span>
+              <span>
+                <img src="/static/crediview/crediview-w/image/icon/ic_ar06_32.png" alt="" />
+              </span>
+              <span>
+                <img src="/static/crediview/crediview-w/image/icon/ic_ar07_32.png" alt="" />
+              </span>
+              <span>
+                <img src="/static/crediview/crediview-w/image/icon/ic_ar01_24.png" alt="" />
+              </span>
+              <span>
+                <img src="/static/crediview/crediview-w/image/icon/ic_ar01_18.png" alt="" />
+              </span>
+              <span>
+                <img src="/static/crediview/crediview-w/image/icon/ic_ar01_15.png" alt="" />
+              </span>
+            </div>
+          </div>
+          <div class="comp-fbox">
+            <div class="aireprot-label-root">
+              <span class="label01"><em>1</em></span>
+              <span class="label02"><em>2</em></span>
+              <span class="label03"><em>3</em></span>
+              <span class="label04 default-label"><em>4</em></span>
+              <span class="label05 default-label"><em>5</em></span>
+            </div>
+          </div>
+          <div class="comp-fbox">
+            <div class="aireprotGrade-state-root up">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M6.57692 2.67172C6.77304 2.36035 7.22696 2.36035 7.42308 2.67172L11.7134 9.48353C11.9231 9.81649 11.6838 10.25 11.2903 10.25H2.70968C2.31618 10.25 2.07689 9.81649 2.2866 9.48353L6.57692 2.67172Z"
+                  fill="#1EB98B"
+                />
+              </svg>
+              <span>-등급</span>
+            </div>
+            <div class="aireprotGrade-state-root dwn">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M6.57692 11.3283C6.77304 11.6396 7.22696 11.6396 7.42308 11.3283L11.7134 4.51647C11.9231 4.18351 11.6838 3.75 11.2903 3.75H2.70968C2.31618 3.75 2.07689 4.18351 2.2866 4.51647L6.57692 11.3283Z"
+                  fill="#FC5356"
+                />
+              </svg>
+              <span>-등급</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- code view -->
+    <script src="/src/app/crediview/crediview-w/designsystem/js/highlight.min.js"></script>
+    <script src="/src/app/crediview/crediview-w/designsystem/js/go.min.js"></script>
+    <script src="/src/app/crediview/crediview-w/designsystem/js/codeview.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <!-- component js -->
+    <script src="/src/app/crediview/crediview-w/designsystem/js/popper.min.js"></script>
+    <script src="/src/app/crediview/crediview-w/designsystem/js/tippy-bundle.umd.js"></script>
+    <script src="/src/app/crediview/crediview-w/designsystem/js/custom.js"></script>
+  </body>
+</html>

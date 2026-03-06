@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.BizInsightReport {
+  &-wrap {
+    .BizInsightReport-contents {
+      display: flex;
+      flex-grow: 1;
+      &-wrap {
+        width: 100%;
+        padding: 1.5rem 3.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &.pd-st {
+          padding: 0.625rem 3.75rem 1.5rem 3.75rem;
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  .BizInsightReport {
+    &-wrap {
+      .BizInsightReport-contents {
+        &-wrap {
+          width: 100%;
+          padding: 1.5rem 2rem;
+        }
+      }
+    }
+  }
+}

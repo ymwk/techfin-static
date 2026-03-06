@@ -1,0 +1,50 @@
+.SOLLocation-root {
+  &.bg {
+    background: #333;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .SOLLocation-box {
+    display: flex;
+    li {
+      a {
+        display: inline-block;
+        color: #fff;
+        padding-left: 24px;
+        color: rgba(255, 255, 255, 0.6);
+        position: relative;
+        &:before {
+          content: "";
+          width: 7px;
+          height: 11px;
+          background: url(/static/techfin-hompage/techfin-w/image/icon/ic_gray_arrorw.png)
+            no-repeat center;
+          position: absolute;
+          top: 50%;
+          left: 9px;
+          transform: translate(0, -50%);
+        }
+        &.home {
+          width: 16px;
+          height: 17px;
+          background: url(/static/techfin-hompage/techfin-w/image/icon/ic_home.png) no-repeat
+            center center;
+        }
+        &.active {
+          color: #fff;
+        }
+      }
+      &:first-child {
+        a {
+          padding-left: 0;
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.diagnosis-totalpage-wrap {
+  .SOLAccordian-root {
+    margin-top: 16px;
+    padding: 0px 0px;
+    background: #eff1f8;
+    .SOLAccordian-item {
+      .SOLAccordian-title {
+        border-bottom: none;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        margin: 0px 0;
+        border-radius: 8px;
+        background: #fff;
+      }
+      &.st--open {
+        .SOLAccordian-title {
+          border-bottom: none;
+          padding-bottom: 0px;
+          margin-bottom: 0px;
+          margin: 0px 0;
+        }
+      }
+      .SOLAccordian-btn {
+        padding: 20px 24px;
+        border-radius: 8px;
+        span {
+          display: block;
+          color: #222;
+          font-size: var(--font-18);
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: -0.18px;
+        }
+      }
+      .SOLAccordian-body {
+        background: #eff1f8;
+        border-radius: 0px;
+        .SOLAccordian-box {
+          padding: 20px;
+          background: #eff1f8;
+          overflow-y: hidden;
+        }
+      }
+      &.js-accordian-root {
+        &.st--open {
+          .js-accordian-body,
+          .SOLAccordian-item.st--open .js-accordian-body {
+            max-height: 3000px;
+          }
+        }
+      }
+    }
+  }
+}

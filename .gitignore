@@ -1,15 +1,1 @@
-src/app/crediview/
-src/app/crediview-m/
-src/app/designsystem/
-src/app/designsystem-m/
-src/app/crediview-mo/
-src/app/techfin-m/
-
-static/Common/
-static/Web/
-static/Mobile/
-static/Techfin-web/
-static/crediview-mo/
-static/designsystem/
-static/techfin-m/
-static/Techfin-mb/
+src/app/backoffice/

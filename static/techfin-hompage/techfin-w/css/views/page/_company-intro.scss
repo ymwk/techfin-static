@@ -1,0 +1,559 @@
+.companyintro {
+  &-root {
+    .companyintro-container {
+      .sec01 {
+        width: 100%;
+        padding: 40px 0 120px 0;
+
+        .tit-box {
+          font-size: 40px;
+          font-weight: 700;
+          color: #222222;
+          line-height: 150%;
+        }
+        .list-box {
+          width: 100%;
+          padding-top: 80px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          z-index: 1;
+          li {
+            width: 32%;
+            padding: 40px 20px;
+            border: solid 1px #dddddd;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            flex-flow: wrap;
+            background: #fff;
+            span {
+              display: block;
+              width: 100%;
+              text-align: center;
+              &.img {
+                img {
+                  margin: 0 auto;
+                }
+              }
+              &.tit {
+                font-size: 18px;
+                font-weight: 400;
+                color: #222222;
+                padding-top: 20px;
+                i {
+                  display: block;
+                  font-style: normal;
+                }
+                em {
+                  display: block;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+      .sec02 {
+        width: 100%;
+        height: 622px;
+        background: url(/static/techfin-hompage/techfin-w/image/views/intro/cp-intro-sec02-bg01.png)
+          no-repeat center;
+        padding: 120px 0;
+        .tit-box {
+          span {
+            display: block;
+            color: #fff;
+            &.tit {
+              font-size: var(--font-18);
+              font-weight: 700;
+              padding-bottom: 12px;
+            }
+            &.desc {
+              font-size: var(--font-32);
+              font-weight: 700;
+            }
+          }
+        }
+        .list-box {
+          width: 100%;
+          padding-top: 80px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          &.en {
+            li {
+              height: 270px;
+            }
+          }
+          li {
+            width: 50%;
+            border-radius: 16px;
+            background: #fff;
+            padding: 48px 40px;
+            span {
+              display: block;
+              &.tit {
+                font-size: var(--font-15);
+                font-weight: 700;
+                color: #3869fc;
+                padding-bottom: 12px;
+              }
+              &.sub-tit {
+                font-size: 20px;
+                font-weight: 700;
+                color: #222222;
+                padding-bottom: 24px;
+              }
+              &.desc {
+                font-size: var(--font-16);
+                font-weight: 500;
+                color: #7b7b7b;
+                line-height: 150%;
+              }
+            }
+          }
+        }
+      }
+      .sec03 {
+        width: 100%;
+        background: #fff;
+        padding: 120px 0;
+        .tit-box {
+          padding-bottom: 80px;
+          span {
+            display: block;
+            &.tit {
+              font-size: var(--font-32);
+              font-weight: 700;
+              color: #222222;
+            }
+            &.desc {
+              font-size: var(--font-18);
+              font-weight: 500;
+              color: #7b7b7b;
+              padding-top: 12px;
+            }
+          }
+        }
+        .circle-box {
+          width: 607px;
+          height: 574px;
+          background: url(/static/techfin-hompage/techfin-w/image/views/intro/cp-intro-sec03-img01.png)
+            no-repeat center;
+          margin: 0 auto;
+          position: relative;
+          span {
+            display: block;
+            &.common {
+              font-size: var(--font-14);
+              font-weight: 400;
+              color: #222222;
+              position: absolute;
+              &.desc01 {
+                top: 0;
+                right: -89px;
+                &::before {
+                  content: "";
+                  width: 100px;
+                  height: 26px;
+                  background: url(/static/techfin-hompage/techfin-w/image/views/intro/cp-intro-sec03-img02.png);
+                  position: absolute;
+                  top: 7px;
+                  right: 237px;
+                }
+              }
+              &.desc02 {
+                top: 500px;
+                left: -262px;
+                text-align: right;
+                &::before {
+                  content: "";
+                  width: 100px;
+                  height: 26px;
+                  background: url(/static/techfin-hompage/techfin-w/image/views/intro/cp-intro-sec03-img03.png);
+                  position: absolute;
+                  top: -5px;
+                  left: 191px;
+                }
+              }
+              &.desc03 {
+                top: 500px;
+                right: -239px;
+                &::before {
+                  content: "";
+                  width: 100px;
+                  height: 26px;
+                  background: url(/static/techfin-hompage/techfin-w/image/views/intro/cp-intro-sec03-img04.png);
+                  position: absolute;
+                  top: -10px;
+                  right: 156px;
+                }
+              }
+            }
+          }
+        }
+        &.en {
+          .circle-box {
+            span {
+              &.common {
+                line-height: 150%;
+                &.desc01 {
+                  top: -1px;
+                  right: -233px;
+                  &::before {
+                    top: 8px;
+                    right: 380px;
+                  }
+                }
+                &.desc02 {
+                  top: 499px;
+                  left: -252px;
+                  &::before {
+                    top: -2px;
+                    left: 181px;
+                  }
+                }
+                &.desc03 {
+                  right: -260px;
+                  &::before {
+                    right: 175px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .sec04 {
+        width: 100%;
+        background: #f7f8fc;
+        padding: 120px 0;
+        position: relative;
+        &::before {
+          content: "";
+          width: 450px;
+          height: 540px;
+          background: url(/static/techfin-hompage/techfin-w/image/views/intro/cp-intro-sec04-img01.png)
+            no-repeat center;
+          background-size: 450px;
+          position: absolute;
+          bottom: 50px;
+          left: 0;
+        }
+        .flex-box {
+          display: flex;
+          justify-content: space-between;
+          .tit-box {
+            span {
+              display: block;
+              &.tit {
+                font-size: var(--font-18);
+                font-weight: 700;
+                color: #3869fc;
+                padding-bottom: 12px;
+              }
+              &.sub-tit {
+                font-size: var(--font-32);
+                font-weight: 700;
+                color: #222222;
+              }
+            }
+          }
+          .history-box {
+            .history-inner {
+              position: relative;
+              &::before {
+                content: "";
+                width: 1px;
+                height: 100%;
+                background: #c9d6ff;
+                position: absolute;
+                top: 7px;
+                left: 85px;
+              }
+              li {
+                display: flex;
+                align-items: top;
+                padding-bottom: 30px;
+                &:last-child {
+                  padding-bottom: 0;
+                }
+                .year-tit {
+                  display: block;
+                  font-size: var(--font-22);
+                  font-weight: 700;
+                  color: #222222;
+                  padding: 0px 30px 0 0;
+                  position: relative;
+                  &::before {
+                    content: "";
+                    width: 11px;
+                    height: 11px;
+                    background: #fff;
+                    border: solid 3px #3869fc;
+                    border-radius: 100%;
+                    position: absolute;
+                    top: 7px;
+                    right: -6px;
+                  }
+                }
+                .year-content {
+                  padding: 0px 0 0 30px;
+                  li {
+                    padding-bottom: 24px;
+                    align-items: top;
+                    &:last-child {
+                      padding-bottom: 0;
+                    }
+                    .month-tit {
+                      width: 36px;
+                      font-size: var(--font-18);
+                      font-weight: 600;
+                      color: #222222;
+                    }
+                    dl {
+                      padding: 0 0 0 20px;
+                      dd {
+                        padding-bottom: 10px;
+                        &:last-child {
+                          padding-bottom: 0;
+                        }
+                        span {
+                          display: block;
+                          font-size: var(--font-15);
+                          font-weight: 500;
+                          color: #7b7b7b;
+                          position: relative;
+                          padding: 0 0 0 10px;
+                          &::before {
+                            content: "";
+                            width: 3px;
+                            height: 3px;
+                            background: #7b7b7b;
+                            border-radius: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translate(0, -50%);
+                          }
+                        }
+                        .depth02 {
+                          padding: 10px 0 0 0px;
+                          dd {
+                            padding-bottom: 7px;
+                            &:last-child {
+                              padding-bottom: 0;
+                            }
+                            span {
+                              display: block;
+                              padding: 0 0 0 25px;
+                              position: relative;
+                              &::before {
+                                content: "";
+                                width: 7px;
+                                height: 2px;
+                                background: #7b7b7b;
+                                position: absolute;
+                                top: 50%;
+                                left: 13px;
+                                transform: translate(0, -50%);
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .sec05 {
+        padding: 120px 0;
+        background: #fff;
+        .tit-box {
+          padding-bottom: 60px;
+          span {
+            display: block;
+            &.tit {
+              font-size: var(--font-18);
+              font-weight: 700;
+              color: #3869fc;
+              padding-bottom: 12px;
+            }
+            &.sub-tit {
+              font-size: var(--font-32);
+              font-weight: 700;
+              color: #222222;
+            }
+          }
+        }
+        .tch-location-box {
+          .map {
+            padding-bottom: 40px;
+            img {
+              max-width: 100%;
+            }
+          }
+          .tch-address {
+            li {
+              display: flex;
+              align-items: center;
+              border-bottom: solid 1px #dddddd;
+              padding: 30px 30px;
+              &:last-child {
+                align-items: flex-start;
+              }
+
+              .tit {
+                font-size: var(--font-20);
+                font-weight: 700;
+                color: #3869fc;
+                width: 200px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                em {
+                  display: block;
+                  height: 28px;
+                }
+              }
+              .infor-box {
+                span {
+                  display: inline-block;
+                  font-size: var(--font-18);
+                  font-weight: 500;
+                  color: #7b7b7b;
+                }
+                .lct-infor {
+                  li {
+                    border-bottom: none;
+                    padding: 10px 0 20px 0;
+                    .title {
+                      font-size: var(--font-18);
+                      font-weight: 500;
+                      color: #222222;
+                      width: 140px;
+                    }
+                    .desc {
+                      font-size: var(--font-18);
+                      font-weight: 500;
+                      color: #7b7b7b;
+                      span {
+                        display: inline-block;
+                        padding: 0 0 0 10px;
+                        position: relative;
+                        &:last-child {
+                          padding: 0 0 0 40px;
+                          &::before {
+                            left: 30px;
+                          }
+                          &:after {
+                            content: "";
+                            width: 1px;
+                            height: 12px;
+                            background: #7b7b7b;
+                            position: absolute;
+                            top: 50%;
+                            left: 12px;
+                            transform: translate(0, -50%);
+                          }
+                        }
+                        &::before {
+                          content: "";
+                          width: 3px;
+                          height: 3px;
+                          background: #7b7b7b;
+                          border-radius: 100%;
+                          position: absolute;
+                          top: 50%;
+                          left: 0;
+                          transform: translate(0, -50%);
+                        }
+                        i {
+                          font-style: normal;
+                          display: inline-block;
+                          position: relative;
+
+                          &.subway {
+                            padding: 0 0 0 28px;
+                            &::before {
+                              content: "2";
+                              width: 20px;
+                              height: 20px;
+                              background: #18be71;
+                              color: #fff;
+                              border-radius: 100%;
+                              font-size: var(--font-16);
+                              font-weight: 500;
+                              display: inline-block;
+                              text-align: center;
+                              position: absolute;
+                              top: 50%;
+                              left: 5px;
+                              transform: translate(0, -50%);
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.en {
+          .tch-location-box {
+            .tch-address {
+              li {
+                span {
+                  &.tit {
+                    width: 20%;
+                  }
+                }
+                .infor-box {
+                  width: 80%;
+                  .lct-infor {
+                    li {
+                      .title {
+                        width: 32%;
+                      }
+                      .desc {
+                        width: 68%;
+                        span {
+                          &:last-child {
+                            padding: 0 0 0 10px;
+                            &::before {
+                              left: 0px;
+                            }
+                            &::after {
+                              content: none;
+                            }
+                          }
+                        }
+                      }
+                      &:last-child {
+                        align-items: center;
+                        .desc {
+                          display: flex;
+                          flex-direction: column;
+                          gap: 15px 0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

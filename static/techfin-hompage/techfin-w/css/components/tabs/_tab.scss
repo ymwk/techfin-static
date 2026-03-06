@@ -1,0 +1,86 @@
+.SOLTab-root {
+  .SOLTab-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .SOLTab-left {
+    display: flex;
+    align-items: center;
+  }
+  .SOLTab-menu {
+    display: flex;
+    justify-content: flex-start;
+    background: #fff;
+    padding: 18px 24px;
+    transition: ease-in-out 0.3s;
+    .SOLTab-btn {
+      font-size: var(--font-16);
+      font-weight: 500;
+      color: #9b9ba0;
+      padding: 0 0 0 56px;
+      position: relative;
+      &:first-child {
+        padding-left: 0;
+        &::before {
+          content: none;
+        }
+      }
+      &::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        background: #dddddd;
+        position: absolute;
+        top: 7px;
+        left: 26px;
+      }
+      &:hover {
+        color: var(--c-active);
+      }
+      &.st--active {
+        font-weight: 700;
+        color: var(--c-active);
+      }
+    }
+    &.type02 {
+      gap: 8px;
+
+      .SOLTab-btn {
+        height: 48px;
+        padding: 0 16px;
+        border: solid 1px #3869fc;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.st--active {
+          background: #e2e7f6;
+
+          span {
+            color: var(--c-active);
+          }
+        }
+        &:hover {
+          background: #e2e7f6;
+          span {
+            color: var(--c-active);
+          }
+        }
+        &:before {
+          content: none;
+        }
+        span {
+          display: inline-block;
+          color: #222222;
+        }
+      }
+    }
+  }
+
+  .SOLTab-container {
+    .SOLTab-content {
+      padding: 0 0 0 24px;
+    }
+  }
+}

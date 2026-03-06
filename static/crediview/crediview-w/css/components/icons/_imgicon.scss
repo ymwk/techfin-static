@@ -1,0 +1,101 @@
+.aireprot-label {
+  &-root {
+    display: flex;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+      color: #fff;
+      position: relative;
+      &::before {
+        content: "";
+        width: 12px;
+        height: 7px;
+        background: url(/static/crediview/crediview-w/image/icon/ar-label-img01.png) no-repeat
+          bottom center;
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: -1;
+      }
+      &.label01 {
+        background: #ffd526;
+        border: solid 2px #fceda1;
+      }
+      &.label02 {
+        background: #bebebe;
+        border: solid 2px #e8e8e8;
+        &::before {
+          background: url(/static/crediview/crediview-w/image/icon/ar-label-img02.png)
+            no-repeat bottom center;
+        }
+      }
+      &.label03 {
+        background: #c8785d;
+        border: solid 2px #eab196;
+        &::before {
+          background: url(/static/crediview/crediview-w/image/icon/ar-label-img03.png)
+            no-repeat bottom center;
+        }
+      }
+      &.default-label {
+        display: flex;
+        width: 28px;
+        height: 28px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: #f2f2f2;
+        &::before {
+          content: none;
+        }
+        em {
+          color: #292d36;
+          text-align: center;
+          font-size: var(--font-16);
+          font-weight: 500;
+          line-height: 150%;
+          letter-spacing: -0.16px;
+        }
+      }
+    }
+  }
+}
+
+.aireprotGrade-state {
+  &-root {
+    display: flex;
+    align-items: center;
+    span {
+      display: block;
+      color: #1eb98b;
+      text-align: center;
+      font-size: var(--font-16);
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: -0.16px;
+    }
+    &.up {
+      span {
+        color: #1eb98b;
+      }
+    }
+    &.dwn {
+      span {
+        color: #fc5356;
+      }
+      svg {
+        path {
+          fill: #fc5356;
+        }
+      }
+    }
+  }
+}
