@@ -18,7 +18,7 @@ titleList.forEach((element) => {
   gsap.from(element, {
     scrollTrigger: {
       trigger: element,
-      start: 'top 60%',
+      start: 'top 80%',
     },
     opacity: 0,
     yPercent: 30,

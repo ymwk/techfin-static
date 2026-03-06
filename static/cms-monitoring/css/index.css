@@ -2739,9 +2739,9 @@ button.swiper-pagination-bullet {
   background-image: url(../image/icon/ic_heart_on.svg);
 }
 
-.i--increase {
+.i--increase2 {
   width: 20px;
-  background-image: url(../image/icon/ic_increase.svg);
+  background-image: url(../image/icon/ic_increase2.svg);
 }
 
 .i--menual {
@@ -9693,13 +9693,13 @@ td .msg-list {
 }
 .main-step-list .desc {
   display: flex;
-  align-items: center;
   gap: 16px;
 }
 .main-step-list .desc::before {
   content: "";
   width: 41px;
   height: 41px;
+  margin-top: 2px;
   flex-shrink: 0;
   background: url(../image/main/step_swiper_icon.svg) no-repeat left top;
 }
@@ -9888,6 +9888,9 @@ td .msg-list {
 .main-exact-list > li.turn-03 .tit::before {
   background-image: url(../image/main/turn_ic_06.svg);
 }
+.main-exact-list.swiper-wrapper {
+  gap: 0;
+}
 
 .main-exact-swiper .swiper-pagination-bullet,
 .main-design-swiper .swiper-pagination-bullet,
@@ -10073,7 +10076,7 @@ td .msg-list {
   margin: 64px auto 0;
   font-size: 20px;
   line-height: 1.5;
-  color: var(--c-gray2);
+  color: var(--c-gray1);
   word-break: keep-all;
 }
 .main-faq-list .item {
@@ -10087,7 +10090,7 @@ td .msg-list {
   opacity: 1;
 }
 .main-faq-list .item.open .cont {
-  max-height: 200px;
+  max-height: 300px;
 }
 .main-faq-list .item:hover .tit::before {
   background-color: #f9f9f9;
@@ -10128,6 +10131,14 @@ td .msg-list {
   max-height: 0;
   transition: max-height 0.4s;
   overflow: hidden;
+}
+.main-faq-list .cont ul {
+  padding-left: 0.4em;
+  margin-bottom: 1em;
+}
+.main-faq-list .cont li::before {
+  content: "•";
+  padding-right: 0.5em;
 }
 .main-faq-list .desc {
   padding: 8px 0 24px;
@@ -11343,9 +11354,13 @@ td .msg-list {
     margin: 0 var(--pd);
     padding-top: 64px;
     padding-bottom: 64px;
+    width: auto;
   }
   .landing-root:has(.global-btn-user.t--service.ac--active) .console-header.sticky .console-area {
     top: 0;
+  }
+  .landing-root .main-section {
+    overflow-x: hidden;
   }
   .landing-root .main-section .text-active {
     font-size: 18px;
@@ -11443,10 +11458,14 @@ td .msg-list {
     width: 100%;
     height: 400px;
   }
+  .landing-root .main-step-list li {
+    padding-right: 20px;
+  }
   .landing-root .main-step-list .desc {
     font-size: 16px;
     word-break: keep-all;
     line-height: 1.4;
+    gap: 12px;
   }
   .landing-root .main-step-list .screen {
     overflow: hidden;
@@ -11462,6 +11481,11 @@ td .msg-list {
        object-fit: none;
     -o-object-position: left top;
        object-position: left top;
+  }
+  .landing-root .main-step-list .screen img.img-mo {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .landing-root .main-section.main-faq .main-section-title br {
     display: block;
@@ -11550,6 +11574,12 @@ td .msg-list {
     transform: none;
     font-size: 14px;
   }
+  .landing-root .main-design-msg li {
+    padding: 10px 16px;
+  }
+  .landing-root .main-design-msg li:nth-of-type(3) ~ li {
+    display: none;
+  }
   .landing-root .main-design-list {
     gap: 0;
     align-items: stretch !important;
@@ -11571,6 +11601,7 @@ td .msg-list {
     gap: 8px;
   }
   .landing-root .main-service .main-service-btns > * {
+    flex: 1;
     height: 32px;
     font-size: 13px;
     white-space: nowrap;
@@ -11588,20 +11619,19 @@ td .msg-list {
     flex-direction: column-reverse;
   }
   .landing-root .main-service-item .screen {
+    display: flex;
     width: 100%;
     aspect-ratio: 312/228;
-    padding: 15%;
+    overflow: hidden;
   }
-  .landing-root .main-service-item .screen img {
+  .landing-root .main-service-item .viewbox {
     position: absolute;
-    top: 0;
     left: 0;
-    width: auto;
-    height: 100%;
-    -o-object-fit: none;
-       object-fit: none;
-    -o-object-position: left top;
-       object-position: left top;
+    top: 0;
+    width: 150%;
+  }
+  .landing-root .main-service-item .viewbox img {
+    inset: 0 auto auto 0;
   }
   .landing-root .main-service-item .cont {
     padding: 26px;

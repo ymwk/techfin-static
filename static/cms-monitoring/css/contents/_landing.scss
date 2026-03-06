@@ -526,13 +526,13 @@
 
   .desc {
     display: flex;
-    align-items: center;
     gap: 16px;
 
     &::before {
       content: '';
       width: 41px;
       height: 41px;
+      margin-top: 2px;
       flex-shrink: 0;
       background: url(../image/main/step_swiper_icon.svg) no-repeat left top;
     }
@@ -748,6 +748,10 @@
       background-image: url(../image/main/turn_ic_06.svg);
     }
   }
+
+  &.swiper-wrapper {
+    gap: 0;
+  }
 }
 
 .main-exact-swiper,
@@ -947,7 +951,7 @@
   margin: 64px auto 0;
   font-size: 20px;
   line-height: 1.5;
-  color: var(--c-gray2);
+  color: var(--c-gray1);
   word-break: keep-all;
 
   .item {
@@ -963,7 +967,7 @@
       }
 
       .cont {
-        max-height: 200px;
+        max-height: 300px;
       }
     }
 
@@ -1019,6 +1023,16 @@
     max-height: 0;
     transition: max-height 0.4s;
     overflow: hidden;
+
+    ul {
+      padding-left: 0.4em;
+      margin-bottom: 1em;
+    }
+    
+    li::before {
+      content: '•';
+      padding-right: 0.5em
+    }
   }
 
   .desc {
