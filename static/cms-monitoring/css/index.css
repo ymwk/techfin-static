@@ -378,20 +378,19 @@ textarea {
 
 :root {
   --c-primary: #3b5dfb;
-  --c-secondary: #3d58c9;
   --c-black: #212126;
-  --c-gray1: #4F4F55;
+  --c-gray1: #4f4f55;
   --c-gray2: #75757a;
   --c-gray3: #8b8b8f;
   --c-gray4: #f9f9f9;
   --c-disabled: #bebebe;
-  --c-error: #E14B5F;
+  --c-error: #f26b7a;
   --c-success: #35a785;
   --c-warn: #ff9900;
   --c-fail: #718ebf;
   --c-cta: #5a7299;
   --c-active: #5a71fe;
-  --c-border: #D4D4D9;
+  --c-border: #d4d4d9;
   --c-border2: #e8e8eb;
   --c-bg: #f7f7f7;
   --w-sidebar: 368px;
@@ -399,6 +398,7 @@ textarea {
   --w-gap: 12px;
   --w-space: 30px;
   --h-header: 72px;
+  --form-h: 40px;
   --min-width: 1160px;
   --max-width: 1440px;
 }
@@ -1601,7 +1601,7 @@ button.swiper-pagination-bullet {
 }
 
 .c--secondary {
-  color: var(--c-secondary) !important;
+  color: var(--c-primary) !important;
 }
 
 .c--error {
@@ -1649,7 +1649,7 @@ button.swiper-pagination-bullet {
 }
 
 .bg--secondary {
-  background-color: var(--c-secondary) !important;
+  background-color: var(--c-primary) !important;
 }
 
 .bg--error {
@@ -1689,7 +1689,7 @@ button.swiper-pagination-bullet {
 }
 
 .bg--active {
-  background-color: var(--c-secondary) !important;
+  background-color: var(--c-primary) !important;
 }
 
 .bg--border {
@@ -1783,15 +1783,15 @@ button.swiper-pagination-bullet {
   gap: 8px;
 }
 .textfield-root.ac--active .textfield-form {
-  border-color: var(--c-secondary);
+  border-color: var(--c-primary);
 }
 .textfield-root.ac--invalid .textfield-form {
-  border-color: var(--c-error);
+  border-color: var(--c-error) !important;
 }
-.textfield-root.ac--focus .btn-clear {
+.textfield-root.form--focus .btn-clear {
   display: block !important;
 }
-.textfield-root.ac--focus .textfield-form {
+.textfield-root.form--focus .textfield-form {
   background-color: #fff;
 }
 
@@ -1912,10 +1912,11 @@ button.swiper-pagination-bullet {
   opacity: 1;
 }
 .textarea-form {
-  height: 8em;
+  height: 15em;
   padding: 12px;
   line-height: 1.5;
   resize: vertical;
+  display: block;
 }
 
 .textfield-btn {
@@ -1932,19 +1933,15 @@ button.swiper-pagination-bullet {
 }
 
 .textfield-root:has(.textfield-form:hover:not(:disabled):not(:-moz-read-only)) .textfield-btn {
-  border-left-color: var(--c-secondary);
+  border-left-color: var(--c-primary);
 }
 
 .textfield-root.ac--active .textfield-btn,
 .textfield-root:has(.textfield-form:hover:not(:disabled):not(:read-only)) .textfield-btn {
-  border-left-color: var(--c-secondary);
+  border-left-color: var(--c-primary);
 }
 
 .textfield-msg {
-  position: absolute;
-  top: 100%;
-  left: 11px;
-  margin-top: 3px;
   color: var(--c-error);
   font-size: 12px;
   font-weight: 500;
@@ -1987,7 +1984,6 @@ button.swiper-pagination-bullet {
   align-items: stretch;
   gap: 8px;
   width: 100%;
-  height: var(--form-h);
   font-size: 14px;
 }
 .filefield-root input[type=file] {
@@ -2071,6 +2067,15 @@ button.swiper-pagination-bullet {
   word-break: keep-all;
 }
 
+.filefield-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.filefield-wrap .filefield-root {
+  width: auto;
+}
+
 .btn-comm,
 .btn-contained,
 .btn-outlined,
@@ -2152,6 +2157,13 @@ button.swiper-pagination-bullet {
 .btn-link .icon-comm {
   min-width: 20px;
   margin-left: -4px;
+}
+.btn-comm .icon-comm:first-child,
+.btn-contained .icon-comm:first-child,
+.btn-outlined .icon-comm:first-child,
+.btn-cta .icon-comm:first-child,
+.btn-link .icon-comm:first-child {
+  margin-right: -4px;
 }
 .btn-comm:has(.icon-comm:only-child), .btn-comm:has(.blind),
 .btn-contained:has(.icon-comm:only-child),
@@ -2332,7 +2344,7 @@ button.swiper-pagination-bullet {
   padding: 0 10px;
   margin-right: auto;
   color: #fff;
-  background-color: var(--c-secondary);
+  background-color: var(--c-primary);
 }
 .link-go .icon-comm {
   background-size: 6px;
@@ -2348,7 +2360,7 @@ button.swiper-pagination-bullet {
   border: 1px solid currentColor;
   padding: 0 10px;
   background-color: #fff;
-  color: var(--c-secondary);
+  color: var(--c-primary);
   font-size: 12px;
   font-weight: 600;
 }
@@ -2639,9 +2651,14 @@ button.swiper-pagination-bullet {
   background-image: url(../image/icon/ic_apply.svg);
 }
 
-.i--file {
+.i--dir {
   width: 20px;
-  background-image: url(../image/icon/ic_file.svg);
+  background-image: url(../image/icon/ic_dir.svg);
+}
+
+.i--file {
+  width: 16px;
+  background-image: url(../image/icon/ic_clip.svg);
 }
 
 .i--pdf {
@@ -3975,6 +3992,11 @@ button.swiper-pagination-bullet {
 .searchbox-root .textfield-form:read-only {
   background-color: #fff;
 }
+.searchbox-root .textfield-msg {
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 11px;
+}
 .searchbox-root div.textfield-form {
   display: flex;
   align-items: center;
@@ -4277,7 +4299,7 @@ button.swiper-pagination-bullet {
   color: var(--c-error);
 }
 .sticker-side.c--second {
-  color: var(--c-secondary);
+  color: var(--c-primary);
 }
 
 .label-state {
@@ -4290,7 +4312,7 @@ button.swiper-pagination-bullet {
   border-radius: 4px;
   font-size: 12px;
   color: #fff;
-  background-color: var(--c-secondary);
+  background-color: var(--c-primary);
 }
 .label-state.s--sm {
   min-width: 50px;
@@ -4324,7 +4346,7 @@ button.swiper-pagination-bullet {
   border-radius: 26px;
   font-size: 12px;
   color: #fff;
-  background-color: var(--c-secondary);
+  background-color: var(--c-primary);
 }
 
 .label-ratings {
@@ -4367,7 +4389,7 @@ button.swiper-pagination-bullet {
   color: #fff !important;
 }
 .label-grade.g--active {
-  background-color: var(--c-secondary) !important;
+  background-color: var(--c-primary) !important;
   color: #fff !important;
 }
 
@@ -4566,7 +4588,7 @@ button.swiper-pagination-bullet {
 }
 .table-datatree tfoot td,
 .table-datatree .line-foot td {
-  background-color: var(--c-secondary);
+  background-color: var(--c-primary);
   color: #fff;
   border-color: rgba(255, 255, 255, 0.6);
 }
@@ -4775,9 +4797,8 @@ button.swiper-pagination-bullet {
   content: "*";
   color: var(--c-error);
   position: absolute;
-  top: 5px;
-  left: 100%;
-  margin-top: -10px;
+  top: 0;
+  left: calc(100% + 2px);
 }
 
 .datagrid-list {
@@ -7314,29 +7335,6 @@ body.open .sidebar-menu-top .ac--active.sidebar-csBtn::after {
   border-radius: 1px;
 }
 
-.file-list {
-  color: var(--c-gray2);
-  font-size: 12px;
-}
-.file-list:not(:last-child) {
-  margin-bottom: 8px;
-}
-.file-list li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 3px 0;
-}
-.file-list a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--c-secondary);
-}
-.file-list a:hover {
-  text-decoration: underline;
-}
-
 .btns-wrap {
   display: flex;
   align-items: center;
@@ -7692,6 +7690,12 @@ td .msg-list {
   justify-content: center;
 }
 
+.msg-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .msg-border {
   display: flex;
   flex-direction: column;
@@ -7738,6 +7742,31 @@ td .msg-list {
   width: 2px;
   height: 2px;
   background-color: currentColor;
+}
+.noti-bullet-list.s--sm {
+  padding: 1px 0;
+  gap: 2px;
+  font-size: 13px;
+}
+.noti-bullet-list.s--sm li {
+  padding-left: 6px;
+}
+.noti-bullet-list.s--sm li::before {
+  top: 7px;
+}
+
+.btn-summary.ac--open .icon-comm.i--down {
+  transform: scaleY(-1);
+}
+
+.summary-detail {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+.summary-detail.ac--open {
+  max-height: 200px;
 }
 
 .mt0 {
@@ -7929,7 +7958,7 @@ td .msg-list {
   align-items: center;
   gap: 12px;
   padding: 20px;
-  border: 2px solid var(--c-secondary);
+  border: 2px solid var(--c-primary);
   border-radius: 12px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2509803922);
   background-color: #f3f6ff;
@@ -8256,7 +8285,7 @@ td .msg-list {
   background-color: #999;
 }
 .panel-progress-list .current .bar {
-  background-color: var(--c-secondary);
+  background-color: var(--c-primary);
 }
 .panel-progress-list em {
   font-weight: 600;
@@ -8410,7 +8439,7 @@ td .msg-list {
 }
 .dashboard-chat-body .chat-msg-speaker.t--our .chat-bubble {
   margin-left: auto;
-  background-color: var(--c-secondary);
+  background-color: var(--c-primary);
   color: #fff;
   font-weight: 300;
   border-bottom-right-radius: 0;
@@ -8471,7 +8500,7 @@ td .msg-list {
   outline: 0;
 }
 .chat-enter-box:has(.input-chat:focus) {
-  border-color: var(--c-secondary);
+  border-color: var(--c-primary);
 }
 
 .dashboard-tit {
@@ -8521,13 +8550,13 @@ td .msg-list {
   transition: border-color 0.2s;
 }
 .dashboard-list li:hover {
-  border-color: var(--c-secondary);
+  border-color: var(--c-primary);
 }
 .dashboard-list li.c--request {
   gap: 10px;
 }
 .dashboard-list li.c--request:hover {
-  border-color: var(--c-secondary);
+  border-color: var(--c-primary);
 }
 .dashboard-list li.c--submit {
   gap: 10px;
@@ -10442,6 +10471,48 @@ td .msg-list {
   text-transform: uppercase;
 }
 
+.board-file-root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.board-file-root .btn-text {
+  height: 33px;
+}
+
+.board-file-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  color: var(--c-gray2);
+  font-size: 13px;
+}
+.board-file-list:not(:last-child) {
+  margin-bottom: 8px;
+}
+.board-file-list li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.board-file-list a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--c-black);
+  font-weight: 500;
+}
+.board-file-list a:hover {
+  text-decoration: underline;
+}
+.board-file-list .btn-icon {
+  width: 32px;
+  height: 18px;
+}
+.board-file-list .btn-icon .i--close.s--sm {
+  opacity: 1;
+}
+
 .board-body {
   display: flex;
   flex-direction: column;
@@ -10491,7 +10562,7 @@ td .msg-list {
   transform: translateY(-50%);
   margin-top: -3px;
   border-style: solid;
-  border-color: transparent transparent var(--c-secondary) transparent;
+  border-color: transparent transparent var(--c-primary) transparent;
   border-width: 7px 5px;
   border-radius: 2px;
 }
@@ -10522,6 +10593,15 @@ td .msg-list {
   gap: 8px;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.board-term {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.board-term .radiocheck-root {
+  font-size: 16px;
 }
 
 .landing-root.st--db {

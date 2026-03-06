@@ -2,7 +2,7 @@
   color: var(--c-primary) !important;
 }
 .c--secondary {
-  color: var(--c-secondary) !important;
+  color: var(--c-primary) !important;
 }
 .c--error {
   color: var(--c-error) !important;
@@ -39,7 +39,7 @@
   background-color: var(--c-primary) !important;
 }
 .bg--secondary {
-  background-color: var(--c-secondary) !important;
+  background-color: var(--c-primary) !important;
 }
 .bg--error {
   background-color: var(--c-error) !important;
@@ -69,7 +69,7 @@
   background-color: var(--c-gray4) !important;
 }
 .bg--active {
-  background-color: var(--c-secondary) !important;
+  background-color: var(--c-primary) !important;
 }
 
 .bg--border {

@@ -103,9 +103,13 @@
   width: 20px;
   background-image: url(../image/icon/ic_apply.svg);
 }
-.i--file {
+.i--dir {
   width: 20px;
-  background-image: url(../image/icon/ic_file.svg);
+  background-image: url(../image/icon/ic_dir.svg);
+}
+.i--file {
+  width: 16px;
+  background-image: url(../image/icon/ic_clip.svg);
 }
 .i--pdf {
   min-width: unset !important;

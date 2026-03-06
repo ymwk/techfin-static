@@ -193,6 +193,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 검색창 관련
   const updateFieldState = (field, eventType) => {
+    if (field.readOnly || field.disabled) return;
+    
     const hasValue = field.value.trim() !== '';
 
     // 검색 popper
@@ -207,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // textfield
     const textfieldRoot = field.closest('.textfield-root');
-    if (textfieldRoot) textfieldRoot.classList.toggle('ac--focus', hasValue);
+    if (textfieldRoot) textfieldRoot.classList.toggle('form--focus', hasValue);
   };
 
   document.querySelectorAll('.textfield-form').forEach((field) => {
@@ -242,3 +244,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// file change
+function fileChange(el) {
+  if (el.files && el.files[0]) {
+    el.parentNode.querySelector('.filefield-name').textContent = el.files[0].name;
+  } else {
+    el.parentNode.querySelector('.filefield-name').textContent = '파일을 첨부해 주세요.';
+  }
+}

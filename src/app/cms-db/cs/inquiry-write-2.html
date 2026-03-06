@@ -485,10 +485,11 @@
                     <tr>
                       <th><span class="require">문의제목</span></th>
                       <td>
-                        <div class="textfield-root">
+                        <div class="textfield-root ac--invalid">
                           <label class="textfield-label">
                             <input type="text" class="textfield-form" name="" placeholder="문의 제목을 입력해주세요." />
                           </label>
+                          <p class="textfield-msg">문의 제목은 필수입니다.</p>
                         </div>
                       </td>
                     </tr>
@@ -506,21 +507,47 @@
                     <tr>
                       <th>첨부파일</th>
                       <td>
-                        <div class="filefield-wrap">
-                          <label class="filefield-root">
-                            <input type="file" name="" />
-                            <span class="btn-comm">
-                              <i class="icon-comm i--file"></i>
-                              <span>첨부파일</span>
-                            </span>
-                          </label>
+                        <div class="board-file-root">
+                          <button type="button" class="btn-text btn-summary" data-target-id="filelist">
+                            <span>첨부 <span class="c--active">3</span>개</span>
+                            <span class="c--gray2">36KB</span>
+                            <i class="icon-comm i--down"></i>
+                          </button>
 
-                          <ul class="noti-bullet-list s--sm">
+                          <ul class="board-file-list summary-detail" id="filelist">
                             <li>
-                              첨부가능 파일은 이미지(jpg.jpeg.git.bmp.png.tif,tift), 문서(doc,docx.xls, xlsx,xlsm, ppt,
-                              pptx, bwp, hwpx), pdf 입니다.
+                              <a href="#file">
+                                <img src="/static/cms-monitoring/image/file/ic_file_img.svg" alt="img" />
+                                확인용 이미지_260220.jpg
+                              </a>
+                              <span>업로드 완료(파일 크기: 12KB)</span>
+                              <button type="button" class="btn-icon">
+                                <span class="blind">삭제</span>
+                                <i class="icon-comm i--close s--sm"></i>
+                              </button>
                             </li>
-                            <li>파일 용량은 1개당 10MB를 초과할 수 없으며, 최대 10개까지 첨부 가능합니다</li>
+                            <li>
+                              <a href="#file">
+                                <img src="/static/cms-monitoring/image/file/ic_file_pdf.svg" alt="img" />
+                                260220_제출서류.pdf
+                              </a>
+                              <span>업로드 완료(파일 크기: 12KB)</span>
+                              <button type="button" class="btn-icon">
+                                <span class="blind">삭제</span>
+                                <i class="icon-comm i--close s--sm"></i>
+                              </button>
+                            </li>
+                            <li>
+                              <a href="#file">
+                                <img src="/static/cms-monitoring/image/file/ic_file_pdf.svg" alt="img" />
+                                260220_심사서류.pdf
+                              </a>
+                              <span>업로드 완료(파일 크기: 12KB)</span>
+                              <button type="button" class="btn-icon">
+                                <span class="blind">삭제</span>
+                                <i class="icon-comm i--close s--sm"></i>
+                              </button>
+                            </li>
                           </ul>
                         </div>
                       </td>
@@ -597,7 +624,7 @@
                     <span><span class="c--active">(필수)</span> 문의 접수 및 처리에 따른 개인정보 활용 동의</span>
                   </label>
                 </div>
-                
+
                 <button type="button" class="btn-comm">약관보기</button>
               </div>
 

@@ -60,6 +60,9 @@
   .icon-comm {
     min-width: 20px;
     margin-left: -4px;
+    &:first-child {
+      margin-right: -4px;
+    }
   }
 
   &:has(.icon-comm:only-child),
@@ -267,7 +270,7 @@
   padding: 0 10px;
   margin-right: auto;
   color: #fff;
-  background-color: var(--c-secondary);
+  background-color: var(--c-primary);
 
   .icon-comm {
     background-size: 6px;
@@ -284,7 +287,7 @@
   border: 1px solid currentColor;
   padding: 0 10px;
   background-color: #fff;
-  color: var(--c-secondary);
+  color: var(--c-primary);
   font-size: 12px;
   font-weight: 600;
 

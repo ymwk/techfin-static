@@ -3,7 +3,6 @@
   align-items: stretch;
   gap: 8px;
   width: 100%;
-  height: var(--form-h);
   font-size: 14px;
 
   input[type='file'] {
@@ -38,4 +37,14 @@
   color: var(--c-gray1);
   line-height: 1.4;
   word-break: keep-all;
+}
+
+.filefield-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+  .filefield-root {
+    width: auto
+  }
 }

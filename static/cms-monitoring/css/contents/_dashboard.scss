@@ -358,7 +358,7 @@
   }
 
   .current .bar {
-    background-color: var(--c-secondary);
+    background-color: var(--c-primary);
   }
 
   em {
@@ -529,7 +529,7 @@
 
       .chat-bubble {
         margin-left: auto;
-        background-color: var(--c-secondary);
+        background-color: var(--c-primary);
         color: #fff;
         font-weight: 300;
         border-bottom-right-radius: 0;
@@ -600,7 +600,7 @@
   }
 
   &:has(.input-chat:focus) {
-    border-color: var(--c-secondary);
+    border-color: var(--c-primary);
   }
 }
 
@@ -654,14 +654,14 @@
     transition: border-color 0.2s;
 
     &:hover {
-      border-color: var(--c-secondary);
+      border-color: var(--c-primary);
     }
 
     &.c--request {
       gap: 10px;
 
       &:hover {
-        border-color: var(--c-secondary);
+        border-color: var(--c-primary);
       }
     }
 

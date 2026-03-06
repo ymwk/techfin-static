@@ -1,17 +1,15 @@
 :root {
   // color
   --c-primary: #3b5dfb;
-  --c-secondary: #3d58c9;
-
   --c-black: #212126;
-  --c-gray1: #4F4F55;
+  --c-gray1: #4f4f55;
   --c-gray2: #75757a;
   --c-gray3: #8b8b8f;
   --c-gray4: #f9f9f9;
 
   // state-color
   --c-disabled: #bebebe;
-  --c-error: #E14B5F;
+  --c-error: #f26b7a;
   --c-success: #35a785;
   --c-warn: #ff9900;
   --c-fail: #718ebf;
@@ -19,7 +17,7 @@
   --c-active: #5a71fe;
 
   // other color
-  --c-border: #D4D4D9;
+  --c-border: #d4d4d9;
   --c-border2: #e8e8eb;
   --c-bg: #f7f7f7;
 
@@ -29,10 +27,11 @@
   --w-gap: 12px;
   --w-space: 30px;
   --h-header: 72px;
-  
+  --form-h: 40px;
+
   --min-width: 1160px;
   --max-width: 1440px;
-  
+
   .console-root:has(.table-xscroll) {
     --min-width: 1240px;
   }

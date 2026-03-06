@@ -13,6 +13,12 @@
     }
   }
 
+  .textfield-msg {
+    position: absolute;
+    top: calc(100% + 3px);
+    left: 11px;
+  }
+
   div.textfield-form {
     display: flex;
     align-items: center;
@@ -321,5 +327,5 @@
 
 .select-btns {
   display: flex;
-  gap: 8px
+  gap: 8px;
 }

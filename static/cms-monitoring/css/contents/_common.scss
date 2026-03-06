@@ -258,33 +258,6 @@
   }
 }
 
-.file-list {
-  color: var(--c-gray2);
-  font-size: 12px;
-
-  &:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-  li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 3px 0;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--c-secondary);
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 .btns-wrap {
   display: flex;
   align-items: center;
@@ -679,6 +652,12 @@ td .msg-list {
   }
 }
 
+.msg-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .msg-border {
   display: flex;
   flex-direction: column;
@@ -727,6 +706,37 @@ td .msg-list {
       height: 2px;
       background-color: currentColor;
     }
+  }
+
+  &.s--sm {
+    padding: 1px 0;
+    gap: 2px;
+    font-size: 13px;
+
+    li {
+      padding-left: 6px;
+
+      &::before {
+        top: 7px;
+      }
+    }
+  }
+}
+
+.btn-summary.ac--open {
+  .icon-comm.i--down {
+    transform: scaleY(-1)
+  }
+}
+
+.summary-detail {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+
+  &.ac--open {
+    max-height: 200px;
   }
 }
 

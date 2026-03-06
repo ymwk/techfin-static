@@ -8,12 +8,12 @@
   gap: 8px;
 
   &.ac--active .textfield-form {
-    border-color: var(--c-secondary);
+    border-color: var(--c-primary);
   }
   &.ac--invalid .textfield-form {
-    border-color: var(--c-error);
+    border-color: var(--c-error) !important;
   }
-  &.ac--focus {
+  &.form--focus {
     .btn-clear {
       display: block !important;
     }
@@ -48,10 +48,11 @@
 
 .textarea-form {
   @include formStyle;
-  height: 8em;
+  height: 15em;
   padding: 12px;
   line-height: 1.5;
   resize: vertical;
+  display: block;
 }
 
 .textfield-btn {
@@ -70,15 +71,11 @@
 .textfield-root.ac--active,
 .textfield-root:has(.textfield-form:hover:not(:disabled):not(:read-only)) {
   .textfield-btn {
-    border-left-color: var(--c-secondary);
+    border-left-color: var(--c-primary);
   }
 }
 
 .textfield-msg {
-  position: absolute;
-  top: 100%;
-  left: 11px;
-  margin-top: 3px;
   color: var(--c-error);
   font-size: 12px;
   font-weight: 500;
@@ -115,4 +112,7 @@
   margin: auto 0;
   color: var(--c-error);
   font-weight: 400;
+}
+
+.filelist-root {
 }
