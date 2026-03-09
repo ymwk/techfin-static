@@ -1330,6 +1330,13 @@ img {
   border-radius: 6px;
   font-size: 16px;
 }
+.btn-comm.w--full,
+.btn-contained.w--full,
+.btn-outlined.w--full,
+.btn-cta.w--full,
+.btn-link.w--full {
+  width: 100%;
+}
 .btn-comm:has(.icon-comm),
 .btn-contained:has(.icon-comm),
 .btn-outlined:has(.icon-comm),

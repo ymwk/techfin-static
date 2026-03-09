@@ -302,6 +302,13 @@
 .box-panel {
   border: 1px solid var(--c-border2);
   border-radius: 8px;
+  
+  &.chk-box {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px;
+  }
 }
 
 .terms-pop {
@@ -841,6 +848,10 @@ td .msg-list {
 
 .mb30 {
   margin-bottom: 30px !important;
+}
+
+.mb32 {
+  margin-bottom: 32px !important;
 }
 
 .mb40 {

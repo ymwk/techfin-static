@@ -898,6 +898,12 @@
     }
   }
 
+  &.grid-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.dashboard-panel {
   .panel-title {
     display: flex;
     align-items: center;
@@ -958,10 +964,6 @@
     .table-datagrid td {
       padding: 0 4px;
     }
-  }
-
-  &.grid-8 {
-    grid-template-columns: repeat(8, 1fr);
   }
 }
 
@@ -1037,6 +1039,11 @@
     background-color: #eaf7f1;
     color: #35a785;
   }
+  &.c--warn {
+    border: 1px solid #FFD8C2;
+    background-color: #FFF1E8;
+    color: #D96826;
+  }
 
   &.g--lv1 {
     color: #0f7d00;
@@ -1068,6 +1075,11 @@
     border: 1px solid #99999966;
     background-color: #99999926;
   }
+}
+
+.label-comm {
+  border: 1px solid #d4d4d9;
+  color: var(--c-gray2);
 }
 
 // 정상
