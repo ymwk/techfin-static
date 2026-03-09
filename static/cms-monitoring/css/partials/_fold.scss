@@ -34,9 +34,9 @@ body.open {
     .sidebar-container {
       width: calc(var(--w-sidebar) - var(--w-fold));
     }
-    .console-contents-inner,
-    .console-area {
-      padding-left: 20px;
-    }
+    // .console-contents-inner,
+    // .console-area {
+    //   padding-left: 20px;
+    // }
   }
 }

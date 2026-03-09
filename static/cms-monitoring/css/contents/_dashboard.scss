@@ -1032,6 +1032,11 @@
     background-color: #f1f1f3;
     color: #75757a;
   }
+  &.c--complete {
+    border: 1px solid #cdeedf;
+    background-color: #eaf7f1;
+    color: #35a785;
+  }
 
   &.g--lv1 {
     color: #0f7d00;

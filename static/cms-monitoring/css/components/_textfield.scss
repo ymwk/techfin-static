@@ -23,6 +23,23 @@
   }
 }
 
+.datepicker-root {
+  &.ac--active .textfield-form {
+    border-color: var(--c-primary);
+  }
+  &.ac--invalid .textfield-form {
+    border-color: var(--c-error) !important;
+  }
+  &.form--focus {
+    .btn-clear {
+      display: block !important;
+    }
+    .textfield-form {
+      background-color: #fff;
+    }
+  }
+}
+
 .textfield-label {
   position: relative;
   display: flex;

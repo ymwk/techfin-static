@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 기업DB조회</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/cms-monitoring/css/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="console-root st--db">
+        <div class="console-container">
+          <!-- Sidebar Start -->
+          <div class="console-sidebar">
+            <div class="sidebar-posistion">
+              <div class="sidebar-menu">
+                <div class="sidebar-menu-top">
+                  <button type="button" class="sidebar-foldBtn">
+                    <span class="blind">접기</span>
+                  </button>
+                  <button type="button" class="sidebar-btn menu ac--active" data-target-id="tab1">
+                    <span class="blind">메뉴</span>
+                  </button>
+                  <button type="button" class="sidebar-btn fav" data-target-id="tab2">
+                    <span class="blind">스크랩</span>
+                  </button>
+                  <button type="button" class="sidebar-btn history" data-target-id="tab3">
+                    <span class="blind">최근 기록</span>
+                  </button>
+                </div>
+
+                <div class="sidebar-menu-cont" id="tab1">
+                  <button type="button" class="sidebar-btn globe ac--active">
+                    <span class="label">기업탐색</span>
+                  </button>
+                  <button type="button" class="sidebar-btn calculator">
+                    <span class="label">월별매입매출</span>
+                  </button>
+                  <button type="button" class="sidebar-btn money">
+                    <span class="label">월별재무제표</span>
+                  </button>
+                  <button type="button" class="sidebar-btn network">
+                    <span class="label">거래처관계망</span>
+                  </button>
+                  <button type="button" class="sidebar-btn shield">
+                    <span class="label">사기거래탐지</span>
+                  </button>
+
+                  <div class="sidebar-popper-root popper-comm-root">
+                    <button type="button" class="sidebar-csBtn cs btn-popper">
+                      <span class="label">고객지원</span>
+                    </button>
+
+                    <div class="popper-comm sidebar-popper">
+                      <ul class="user-menu-list">
+                        <li>
+                          <a href="#">
+                            <span>공지사항</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>1:1 문의</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>이용가이드</span>
+                            <i class="icon-comm i--next"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sidebar-menu-cont" id="tab2" style="display: none">
+                  <div class="sidebar-cont-scroll">
+                    <ul class="sidebar-companylist">
+                      <li>
+                        <span>LG전자</span>
+                        <span class="num">기업</span>
+                        <button type="button" class="btn-fav ac--active">
+                          <i class="icon-comm i--fav"></i>
+                          <span class="blind">즐겨찾기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <span>삼성전자</span>
+                        <span class="num">기업</span>
+                        <button type="button" class="btn-fav">
+                          <i class="icon-comm i--fav"></i>
+                          <span class="blind">즐겨찾기</span>
+                        </button>
+                      </li>
+                      <li>
+                        <span>서울 영업 대상 발굴</span>
+                        <span class="num">템플릿</span>
+                        <button type="button" class="btn-fav">
+                          <i class="icon-comm i--fav"></i>
+                          <span class="blind">즐겨찾기</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- <div class="sidebar-empty">
+                    아직 스크랩한<br />
+                    기업 또는 템플릿이 없습니다.
+                  </div> -->
+                </div>
+
+                <div class="sidebar-menu-cont" id="tab3" style="display: none">
+                  <div class="sidebar-cont-scroll">
+                    <ul class="sidebar-companylist">
+                      <li>
+                        <span class="ellipsis">LG전자</span>
+                        <span class="num">기업</span>
+                        <button type="button" class="btn-del">
+                          <i class="icon-comm i--close"></i>
+                          <span class="blind">삭제</span>
+                        </button>
+                      </li>
+                      <li>
+                        <span class="ellipsis">삼성전자</span>
+                        <span class="num">기업</span>
+                        <button type="button" class="btn-del">
+                          <i class="icon-comm i--close"></i>
+                          <span class="blind">삭제</span>
+                        </button>
+                      </li>
+                      <li>
+                        <span class="ellipsis">서울 영업 대상 발굴 서울 영업 대상 발굴</span>
+                        <span class="num">템플릿</span>
+                        <button type="button" class="btn-del">
+                          <i class="icon-comm i--close"></i>
+                          <span class="blind">삭제</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- <div class="sidebar-empty">
+                    아직 조회한<br />
+                    기업 또는 템플릿이 없습니다.
+                  </div> -->
+                </div>
+              </div>
+              <!-- // sidebar-menu -->
+            </div>
+            <!-- // sidebar-posistion -->
+          </div>
+          <!-- Sidebar End -->
+
+          <!-- Main Contents Start -->
+          <main class="console-contents">
+            <!-- Header -->
+            <header class="console-header">
+              <div class="console-area">
+                <h1 class="console-header-logo">
+                  <a href="/">
+                    <div class="logo db">
+                      <span class="blind">Crediview 기업DB조회</span>
+                    </div>
+                  </a>
+                </h1>
+                <div class="console-header-search">
+                  <div class="textfield-root">
+                    <i class="icon-comm i--search"></i>
+                    <label class="textfield-label">
+                      <span class="label blind">전체검색</span>
+                      <input type="text" class="textfield-form" name="" placeholder="원하는 데이터를 입력해 보세요" />
+                    </label>
+                  </div>
+                </div>
+                <div class="console-header-global">
+                  <div class="global-btns">
+                    <button type="button" class="btn-comm t--round">
+                      <i class="icon-comm i--globe"></i>
+                      <span>기업탐색</span>
+                    </button>
+
+                    <div class="global-btn-user">
+                      <button type="button" class="btn-user btn-popper">
+                        <i class="icon-comm i--user"></i>
+                        <span>kimtech@techfinratings.com</span>
+                      </button>
+
+                      <div class="global-user-menu">
+                        <div class="user-menu-info">
+                          <em>김테크님</em>
+                          <div class="info-detail">
+                            <span class="company">테크핀비즈온</span>
+                            <span class="info-detail-item">
+                              <i class="icon-comm i--clock"></i>
+                              <span class="time">25:35</span>
+                              <button type="button" class="btn-text">
+                                <span class="hoverline">로그인 연장</span>
+                              </button>
+                            </span>
+                          </div>
+                        </div>
+                        <ul class="user-menu-list">
+                          <li>
+                            <a href="#">
+                              <span>스크랩 관리</span>
+                              <i class="icon-comm i--next"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>플랜 관리</span>
+                              <i class="icon-comm i--next"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>정산 관리</span>
+                              <i class="icon-comm i--next"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>회사 관리</span>
+                              <i class="icon-comm i--next"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>내정보 관리</span>
+                              <i class="icon-comm i--next"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>권한 관리</span>
+                              <i class="icon-comm i--next"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>활동이력</span>
+                              <i class="icon-comm i--next"></i>
+                            </a>
+                          </li>
+                        </ul>
+                        <button type="button" class="btn-logout">
+                          <i class="icon-comm i--logout"></i>
+                          로그아웃
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="global-btn-notify">
+                      <button type="button" class="btn-icon btn-popper">
+                        <i class="icon-comm i--bell"></i>
+                        <span class="blind">알림</span>
+                        <span class="badge">14</span>
+                      </button>
+
+                      <div class="popper-comm notify-popper">
+                        <div class="notify-header">
+                          <h3 class="font-h3">알림</h3>
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--set"></i>
+                          </button>
+                        </div>
+                        <div class="notify-cont">
+                          <div class="notify-tit">
+                            <h4 class="font-h4">최근 알림을 확인해 주세요.</h4>
+                            <small>(표시 기준: 최근 6개월)</small>
+                            <div class="btns">
+                              <button type="button" class="btn-comm">모두 읽음</button>
+                              <button type="button" class="btn-comm">모두 삭제</button>
+                            </div>
+                          </div>
+
+                          <div class="notify-body">
+                            <ul class="notify-list">
+                              <li class="ac--new">
+                                <button type="button" class="btn-icon notify-close">
+                                  <i class="icon-comm i--close s--sm"></i>
+                                  <span class="blind">Close</span>
+                                </button>
+                                <i class="notify-icon i--notify-user"></i>
+                                <div class="notify-item-tit">회원등급 변경 요청<small>1시간 전</small></div>
+                                <div class="notify-item-cont">
+                                  <p class="desc">인증서 등록이 완료되었습니다.</p>
+                                </div>
+                              </li>
+
+                              <li class="ac--new">
+                                <button type="button" class="btn-icon notify-close">
+                                  <i class="icon-comm i--close s--sm"></i>
+                                  <span class="blind">Close</span>
+                                </button>
+                                <i class="notify-icon i--notify-user"></i>
+                                <div class="notify-item-tit">회원등급 변경 완료<small>2시간 전</small></div>
+                                <div class="notify-item-cont">
+                                  <p class="desc">회원등급 변경 승인이 완료되었습니다. (이전등급 -> 변경등급)</p>
+                                </div>
+                              </li>
+
+                              <li>
+                                <button type="button" class="btn-icon notify-close">
+                                  <i class="icon-comm i--close s--sm"></i>
+                                  <span class="blind">Close</span>
+                                </button>
+                                <i class="notify-icon i--notify-user"></i>
+                                <div class="notify-item-tit">마스터 관리자 권한 위임<small>3일전</small></div>
+                                <div class="notify-item-cont">
+                                  <p class="desc">마스터관리자가 김테크님으로 변경되었습니다.</p>
+                                </div>
+                              </li>
+
+                              <li>
+                                <button type="button" class="btn-icon notify-close">
+                                  <i class="icon-comm i--close s--sm"></i>
+                                  <span class="blind">Close</span>
+                                </button>
+                                <i class="notify-icon i--notify-company"></i>
+                                <div class="notify-item-tit">EWS 등급 정보 변경<small>2024년 5월 30일</small></div>
+                                <div class="notify-item-cont">
+                                  <p class="desc">크레디뷰의 EWS 등급 정보가 변경되었습니다.</p>
+                                </div>
+                              </li>
+
+                              <li>
+                                <button type="button" class="btn-icon notify-close">
+                                  <i class="icon-comm i--close s--sm"></i>
+                                  <span class="blind">Close</span>
+                                </button>
+                                <i class="notify-icon i--notify-company"></i>
+                                <div class="notify-item-tit">실시간 등급 정보 변경<small>2024년 4월 30일</small></div>
+                                <div class="notify-item-cont">
+                                  <p class="desc">
+                                    크레디뷰의 실시간 등급 정보가 변경되었습니다.크레디뷰의 실시간 등급 정보가
+                                    변경되었습니다.크레디뷰의 실시간 등급 정보가 변경되었습니다.크레디뷰의 실시간 등급
+                                    정보가 변경되었습니다.
+                                  </p>
+                                </div>
+                              </li>
+
+                              <li>
+                                <button type="button" class="btn-icon notify-close">
+                                  <i class="icon-comm i--close s--sm"></i>
+                                  <span class="blind">Close</span>
+                                </button>
+                                <i class="notify-icon i--notify-user"></i>
+                                <div class="notify-item-tit">인증서 유효기간 만료<small>2024년 2월 21일</small></div>
+                                <div class="notify-item-cont">
+                                  <p class="desc">
+                                    공동인증서가 만료되었습니다. 공동인증서를 재등록 해주시기 바랍니다.
+                                  </p>
+                                </div>
+                              </li>
+
+                              <li>
+                                <button type="button" class="btn-icon notify-close">
+                                  <i class="icon-comm i--close s--sm"></i>
+                                  <span class="blind">Close</span>
+                                </button>
+                                <i class="notify-icon i--notify-user"></i>
+                                <div class="notify-item-tit">
+                                  인증서 유효기간 만료 예정<small>2024년 2월 21일</small>
+                                </div>
+                                <div class="notify-item-cont">
+                                  <p class="desc">공동인증서가 10일 후 만료될 예정입니다.</p>
+                                </div>
+                              </li>
+
+                              <li>
+                                <button type="button" class="btn-icon notify-close">
+                                  <i class="icon-comm i--close s--sm"></i>
+                                  <span class="blind">Close</span>
+                                </button>
+                                <i class="notify-icon i--notify-user"></i>
+                                <div class="notify-item-tit">
+                                  인증서 유효기간 만료 예정<small>2024년 2월 1일</small>
+                                </div>
+                                <div class="notify-item-cont">
+                                  <p class="desc">공동인증서가 30일 후 만료될 예정입니다.</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 알림내역 없음 
+                      <div class="notify-empty">
+                        <p class="msg">최근 6개월간 표시할 알림이 없습니다.</p>
+                      </div> -->
+                        </div>
+                        <!-- // notify-cont -->
+                      </div>
+                      <!-- // notify-popper -->
+                    </div>
+                    <!-- // global-btn-notify -->
+
+                    <div class="global-btn-apps">
+                      <button type="button" class="btn-icon btn-popper">
+                        <i class="icon-comm i--apps"></i>
+                        <span class="blind">Apps</span>
+                      </button>
+
+                      <div class="popper-comm notify-popper">
+                        <h3 class="font-h4">Crediview 제공 서비스</h3>
+                        <ul class="notify-list mt10">
+                          <li>
+                            <a href="#">
+                              <i class="notify-icon i--notify-company"></i>
+                              <div class="notify-item-tit">기업신용평가</div>
+                              <div class="notify-item-cont">
+                                <p class="desc">우리회사 신용등급조회</p>
+                              </div>
+                            </a>
+                          </li>
+
+                          <li>
+                            <a href="#">
+                              <i class="notify-icon i--notify-monitoring"></i>
+                              <div class="notify-item-tit">기업모니터링</div>
+                              <div class="notify-item-cont">
+                                <p class="desc">거래기업 포트폴리오 관리</p>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- // global-btn -->
+                </div>
+                <!-- // console-header-global -->
+              </div>
+            </header>
+
+            <div class="console-contents-inner">
+              <div class="cont-headline">
+                <h2 class="font-h2">활동이력</h2>
+                <p>기업DB조회 내에서 활동한 이력을 확인할 수 있습니다.</p>
+              </div>
+
+              <div class="searchbox-root">
+                <div class="searchbox-item">
+                  <span class="searchbox-label">활동기간</span>
+                  <div class="datepicker-root ac--invalid">
+                    <!-- ac--active class추가시 보임 -->
+                    <label class="textfield-label">
+                      <span class="label blind">날짜선택</span>
+                      <input
+                        type="text"
+                        class="textfield-form"
+                        name=""
+                        placeholder="날짜를 선택해주세요."
+                        value="2025-08-22"
+                        readonly=""
+                      />
+                      <button type="button" class="textfield-btn">
+                        <i class="icon-comm i--calendar"> </i>
+                        <span class="blind">달력 열기</span>
+                      </button>
+                    </label>
+                    <span>~</span>
+                    <label class="textfield-label">
+                      <span class="label blind">날짜선택</span>
+                      <input
+                        type="text"
+                        class="textfield-form"
+                        name=""
+                        placeholder="날짜를 선택해주세요."
+                        value="2025-08-22"
+                        readonly=""
+                      />
+                      <button type="button" class="textfield-btn">
+                        <i class="icon-comm i--calendar"> </i>
+                        <span class="blind">달력 열기</span>
+                      </button>
+                    </label>
+
+                    <div class="datepicker-popper">
+                      <div class="datepicker-box">
+                        <div class="datepicker-section">
+                          <div class="datepicker-cont">
+                            <div class="datepicker-month">
+                              <span>2024.12</span>
+                              <div class="datepicker-month-prev">
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--first"></i>
+                                  <span class="blind">이전해</span>
+                                </button>
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--prev"></i>
+                                  <span class="blind">이전달</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="datepicker-calendar">
+                              <div class="datepicker-week">
+                                <span class="datepicker-item">일</span>
+                                <span class="datepicker-item">월</span>
+                                <span class="datepicker-item">화</span>
+                                <span class="datepicker-item">수</span>
+                                <span class="datepicker-item">목</span>
+                                <span class="datepicker-item">금</span>
+                                <span class="datepicker-item">토</span>
+                              </div>
+                              <div class="datepicker-days">
+                                <span class="datepicker-item t--disabled">
+                                  <button type="button" class="datepicker-btn">31</button>
+                                </span>
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">1</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">2</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">3</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">4</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">5</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">6</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">7</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">8</button></span
+                                >
+                                <span class="datepicker-item">
+                                  <button type="button" class="datepicker-btn">9</button>
+                                </span>
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">10</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">11</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">12</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">13</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">14</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">15</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">16</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">17</button></span
+                                >
+                                <span class="datepicker-item t--start"
+                                  ><button type="button" class="datepicker-btn t--selected">18</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">19</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">20</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">21</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">22</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">23</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">24</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">25</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">26</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">27</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">28</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">29</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">30</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">31</button></span
+                                >
+                                <span class="datepicker-item t--disabled">
+                                  <button type="button" class="datepicker-btn">1</button>
+                                </span>
+                                <span class="datepicker-item t--disabled">
+                                  <button type="button" class="datepicker-btn">2</button>
+                                </span>
+                                <span class="datepicker-item t--disabled">
+                                  <button type="button" class="datepicker-btn">3</button>
+                                </span>
+                              </div>
+                            </div>
+                            <!-- //datepicker-calendar -->
+                          </div>
+                          <!-- //datepicker-cont -->
+
+                          <div class="datepicker-cont">
+                            <div class="datepicker-month">
+                              <span>2025.01</span>
+                              <div class="datepicker-month-next">
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--next"></i>
+                                  <span class="blind">다음달</span>
+                                </button>
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--last"></i>
+                                  <span class="blind">다음해</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="datepicker-calendar">
+                              <div class="datepicker-week">
+                                <span class="datepicker-item">일</span>
+                                <span class="datepicker-item">월</span>
+                                <span class="datepicker-item">화</span>
+                                <span class="datepicker-item">수</span>
+                                <span class="datepicker-item">목</span>
+                                <span class="datepicker-item">금</span>
+                                <span class="datepicker-item">토</span>
+                              </div>
+                              <div class="datepicker-days">
+                                <span class="datepicker-item t--disabled">
+                                  <button type="button" class="datepicker-btn">28</button>
+                                </span>
+                                <span class="datepicker-item t--disabled"
+                                  ><button type="button" class="datepicker-btn">29</button></span
+                                >
+                                <span class="datepicker-item t--disabled"
+                                  ><button type="button" class="datepicker-btn">30</button></span
+                                >
+                                <span class="datepicker-item t--disabled"
+                                  ><button type="button" class="datepicker-btn">31</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">1</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">2</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">3</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">4</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">5</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">6</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">7</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">8</button></span
+                                >
+                                <span class="datepicker-item t--end">
+                                  <button type="button" class="datepicker-btn t--selected">9</button>
+                                </span>
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">10</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">11</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">12</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">13</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">14</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">15</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">16</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">17</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">18</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">19</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">20</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">21</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">22</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">23</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">24</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">25</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">26</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">27</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">28</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">29</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">30</button></span
+                                >
+                                <span class="datepicker-item"
+                                  ><button type="button" class="datepicker-btn">31</button></span
+                                >
+                              </div>
+                            </div>
+                            <!-- //datepicker-calendar -->
+                          </div>
+                          <!-- //datepicker-cont -->
+                        </div>
+
+                        <div class="datepicker-action">
+                          <button type="button" class="btn-outlined">취소</button>
+                          <button type="button" class="btn-contained">적용</button>
+                        </div>
+                      </div>
+                      <!-- //datepicker-box -->
+                    </div>
+                    <!-- // datepicker-popper -->
+                    <p class="textfield-msg">조회기간은 최대 1년까지 설정할 수 있습니다.</p>
+                  </div>
+                  <!-- // datepicker-root -->
+                </div>
+
+                <div class="searchbox-btns">
+                  <button type="button" class="btn-contained">조회</button>
+                  <button type="button" class="btn-comm">
+                    <i class="icon-comm i--refresh"></i>
+                    <span class="blind">초기화</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="datagrid-container">
+                <div class="table-header">
+                  <div class="count font-h3">전체 <em>245</em>건</div>
+                </div>
+
+                <div class="table-wrap table-link">
+                  <table class="table-datagrid">
+                    <colgroup>
+                      <col style="width: 60px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th><span class="tit">번호</span></th>
+                        <th>
+                          <span class="tit"> 활동일시 </span>
+                        </th>
+                        <th><span class="tit">접속IP</span></th>
+                        <th>
+                          <span class="tit">메뉴 </span>
+                        </th>
+                        <th>
+                          <span class="tit">처리내용 </span>
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">월별 매출매입</td>
+                        <td class="al--left">월별 매출매입에서 " 테크핀레이팅스"기업을 상세 조회했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">1depth > 2depth > 3depth</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      
+                      
+                      <tr>
+                        <td>11</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">월별 매출매입</td>
+                        <td class="al--left">월별 매출매입에서 " 테크핀레이팅스"기업을 상세 조회했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">1depth > 2depth > 3depth</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>15</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>16</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>17</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>18</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>19</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                      <tr>
+                        <td>20</td>
+                        <td>2026.01.07 13:06:05</td>
+                        <td>10.111.11.11</td>
+                        <td class="al--left">기업탐색</td>
+                        <td class="al--left">기업탐색 메뉴에서 엑셀 다운로드 했습니다.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="pagenation-root">
+                  <button type="button" class="pagenation-btn" disabled="">
+                    <i class="icon-comm i--first"></i>
+                    <span class="blind">First Page</span>
+                  </button>
+                  <button type="button" class="pagenation-btn" disabled="">
+                    <i class="icon-comm i--prev"></i>
+                    <span class="blind">Prev Page</span>
+                  </button>
+                  <button type="button" class="pagenation-btn ac--active">
+                    <span>1</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>2</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>3</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>4</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>5</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>6</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>7</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>8</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>9</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <span>10</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <i class="icon-comm i--next"></i>
+                    <span class="blind">Next Page</span>
+                  </button>
+                  <button type="button" class="pagenation-btn">
+                    <i class="icon-comm i--last"></i>
+                    <span class="blind">Last Page</span>
+                  </button>
+                </div>
+              </div>
+              <!-- // datagrid-container -->
+            </div>
+            <!-- // console-contents-inner -->
+          </main>
+          <!-- Main Contents End -->
+        </div>
+        <!-- //console-container -->
+      </div>
+      <!-- console-root -->
+    </div>
+
+    <script src="../js/custom.js"></script>
+  </body>
+</html>

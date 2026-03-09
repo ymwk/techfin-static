@@ -12,6 +12,12 @@
 
   &.s--sm {
     width: 18px;
+    min-width: unset;
+    background-size: contain;
+  }
+  &.s--xs {
+    width: 16px;
+    min-width: unset;
     background-size: contain;
   }
 }
@@ -485,7 +491,7 @@
 
 .i--up-tr {
   &::after {
-    transform: rotate(-45deg);;
+    transform: rotate(-45deg);
   }
 }
 
