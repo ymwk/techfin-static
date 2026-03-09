@@ -167,7 +167,7 @@
                   </a>
                 </h1>
 
-                <div class="console-header-search popper-comm-root popper-search-root ac--active">
+                <div class="console-header-search popper-search-root">
                   <div class="textfield-root">
                     <i class="icon-comm i--search"></i>
                     <label class="textfield-label">
@@ -177,7 +177,7 @@
                         class="textfield-form"
                         name=""
                         placeholder="원하는 데이터를 입력해 보세요"
-                        value="테크"
+                        value=""
                       />
                       <button type="button" class="btn-clear">
                         <span class="blind">삭제</span>
@@ -189,32 +189,35 @@
                     <div class="search-popper-cont">
                       <section class="search-section">
                         <div class="search-section-header">
-                          <h6 class="tit">기업</h6>
-                          <a href="#" class="btn-text">더보기</a>
+                          <h6 class="tit">최근검색</h6>
                         </div>
                         <ul class="search-section-list">
                           <li>
-                            <span class="keyword"><em>테크</em>핀레이팅스</span>
+                            <span class="keyword">테크핀레이팅스</span>
                             <div class="data">
                               <span class="txt">370-88-02545</span>
                               <span class="txt">옥형석</span>
-                              <i class="icon-comm i--up-tr"></i>
+                              <i class="icon-comm i--close"></i>
                             </div>
                           </li>
                           <li>
-                            <span class="keyword">(주)주연<em>테크</em></span>
+                            <span class="keyword">고성장 기업</span>
                             <div class="data">
-                              <span class="txt">111-88-02545</span>
-                              <span class="txt">옥형석</span>
-                              <i class="icon-comm i--up-tr"></i>
+                              <i class="icon-comm i--close"></i>
                             </div>
                           </li>
                           <li>
-                            <span class="keyword"><em>테크</em>핀레이팅스</span>
+                            <span class="keyword">더존비즈온</span>
                             <div class="data">
                               <span class="txt">370-88-02545</span>
-                              <span class="txt">옥형석</span>
-                              <i class="icon-comm i--up-tr"></i>
+                              <span class="txt">김용우</span>
+                              <i class="icon-comm i--close"></i>
+                            </div>
+                          </li>
+                          <li>
+                            <span class="keyword">테크 성장 기업</span>
+                            <div class="data">
+                              <i class="icon-comm i--close"></i>
                             </div>
                           </li>
                         </ul>
@@ -222,23 +225,13 @@
 
                       <section class="search-section">
                         <div class="search-section-header">
-                          <h6 class="tit">템플릿</h6>
-                          <a href="#" class="btn-text">더보기</a>
+                          <h6 class="tit">추천 검색어</h6>
                         </div>
-                        <ul class="search-section-list">
-                          <li>
-                            <span class="keyword"><em>테크</em> 고성장 기업</span>
-                            <div class="data">
-                              <i class="icon-comm i--up-tr"></i>
-                            </div>
-                          </li>
-                          <li>
-                            <span class="keyword">R&D 집중 투자형 <em>테크</em> 기업</span>
-                            <div class="data">
-                              <i class="icon-comm i--up-tr"></i>
-                            </div>
-                          </li>
-                        </ul>
+                        <div class="search-keyword">
+                          <button type="button" class="btn">우량기업</button>
+                          <button type="button" class="btn">포용적 지원</button>
+                          <button type="button" class="btn">지역별 성장기업</button>
+                        </div>
                       </section>
                     </div>
                   </div>
@@ -519,22 +512,424 @@
               </div>
 
               <div class="tabmenu-menu">
-                <button type="button" class="tabmenu-btn" onclick="location.href = '../arap/company.html'">
+                <button type="button" class="tabmenu-btn ac--active" data-target-tab="search1">
                   전체
                   <em>20</em>
                 </button>
-                <button type="button" class="tabmenu-btn" onclick="location.href = '../arap/finance.html'">
+                <button type="button" class="tabmenu-btn" data-target-tab="search2">
                   템플릿
                   <em>8</em>
                 </button>
-                <button type="button" class="tabmenu-btn ac--active" onclick="location.href = '../arap/network.html'">
+                <button type="button" class="tabmenu-btn" data-target-tab="search3">
                   기업
                   <em>12</em>
                 </button>
               </div>
 
-              <div class="tabmenu-content" id="tab1">
-                <h3 class="font-h4">템플릿<span class="c--primary">8</span></h3>
+              <div class="tabmenu-content" id="search1">
+                <div class="table-header">
+                  <h3 class="font-h4">템플릿<span class="c--primary">8</span></h3>
+                </div>
+
+                <ul class="template-list">
+                  <li>
+                    <span class="sort">
+                      <span>내 템플릿</span>
+                    </span>
+                    <em class="tit">26-03 영업대상조건</em>
+                    <button type="button" class="btn-icon btn-del">
+                      <i class="icon-comm i--trash"></i>
+                      <span class="blind">좋아요</span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <span class="sort">
+                      <span>투자 검토</span>
+                      <span>영업 타겟</span>
+                    </span>
+                    <em class="tit">26-03 영업대상조건</em>
+                    <button type="button" class="btn-icon btn-fav ac--active">
+                      <i class="icon-comm i--like s--sm"></i>
+                      <span class="blind">좋아요</span>
+                    </button>
+
+                    <p>3개월 이상 매출액이 연속 증가하는 기업</p>
+                  </li>
+
+                  <li>
+                    <span class="sort">
+                      <span>투자 검토</span>
+                      <span>영업 타겟</span>
+                    </span>
+                    <em class="tit">26-03 영업대상조건</em>
+                    <button type="button" class="btn-icon btn-fav ac--active">
+                      <i class="icon-comm i--like s--sm"></i>
+                      <span class="blind">좋아요</span>
+                    </button>
+
+                    <p>3개월 이상 매출액이 연속 증가하는 기업</p>
+                  </li>
+
+                  <li>
+                    <span class="sort">
+                      <span>투자 검토</span>
+                      <span>영업 타겟</span>
+                    </span>
+                    <em class="tit">26-03 영업대상조건</em>
+                    <button type="button" class="btn-icon btn-fav ac--active">
+                      <i class="icon-comm i--like s--sm"></i>
+                      <span class="blind">좋아요</span>
+                    </button>
+
+                    <p>3개월 이상 매출액이 연속 증가하는 기업</p>
+                  </li>
+
+                  <li>
+                    <span class="sort">
+                      <span>투자 검토</span>
+                      <span>영업 타겟</span>
+                    </span>
+                    <em class="tit">26-03 영업대상조건</em>
+                    <button type="button" class="btn-icon btn-fav">
+                      <i class="icon-comm i--like s--sm"></i>
+                      <span class="blind">좋아요</span>
+                    </button>
+
+                    <p>3개월 이상 매출액이 연속 증가하는 기업</p>
+                  </li>
+
+                  <li>
+                    <span class="sort">
+                      <span>투자 검토</span>
+                      <span>영업 타겟</span>
+                    </span>
+                    <em class="tit">26-03 영업대상조건</em>
+                    <button type="button" class="btn-icon btn-fav">
+                      <i class="icon-comm i--like s--sm"></i>
+                      <span class="blind">좋아요</span>
+                    </button>
+
+                    <p>3개월 이상 매출액이 연속 증가하는 기업</p>
+                  </li>
+
+                  <li>
+                    <span class="sort">
+                      <span>투자 검토</span>
+                      <span>영업 타겟</span>
+                    </span>
+                    <em class="tit">26-03 영업대상조건</em>
+                    <button type="button" class="btn-icon btn-fav ac--active">
+                      <i class="icon-comm i--like s--sm"></i>
+                      <span class="blind">좋아요</span>
+                    </button>
+
+                    <p>3개월 이상 매출액이 연속 증가하는 기업</p>
+                  </li>
+
+                  <li>
+                    <span class="sort">
+                      <span>내 템플릿</span>
+                    </span>
+                    <em class="tit">전년영업이익 흑자전환</em>
+                    <button type="button" class="btn-icon btn-del">
+                      <i class="icon-comm i--trash"></i>
+                      <span class="blind">좋아요</span>
+                    </button>
+
+                    <p>전년 영업이익에서 흑자 전환된 기업</p>
+                  </li>
+                </ul>
+
+                <div class="section-action mt0">
+                  <button type="button" class="btn-comm s--bd">더보기</button>
+                </div>
+
+                <div class="table-header">
+                  <h3 class="font-h4">기업<span class="c--primary">12</span></h3>
+                </div>
+
+                <ul class="company-list">
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <em class="tit">(주)고성구리</em>
+
+                    <ul class="list">
+                      <li>
+                        <span class="label">사업자 등록번호</span>
+                        <span>110-11-12345</span>
+                      </li>
+                      <li>
+                        <span class="label">대표자명</span>
+                        <span>심학규, 김기방</span>
+                      </li>
+                      <li>
+                        <span class="label">설립일자</span>
+                        <span>2025.03.24</span>
+                      </li>
+                      <li>
+                        <span class="label">주소</span>
+                        <span>서울특별시 성수동 성수이로 123, 4층</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                
+                <div class="section-action mt0">
+                  <button type="button" class="btn-comm s--bd">더보기</button>
+                </div>
               </div>
               <!-- // tabmenu-content -->
             </div>

@@ -25,6 +25,7 @@
   align-items: center;
   width: 224px;
   height: var(--h-header);
+  margin-right: auto;
   font-size: 18px;
   font-weight: 500;
 
@@ -347,7 +348,7 @@
   width: 568px;
 
   .textfield-root {
-    z-index: 999999;
+    z-index: 100;
   }
 
   .textfield-form {
@@ -479,6 +480,12 @@
         color: var(--c-black);
       }
     }
+  }
+  
+  .search-empty {
+    padding: 18px 0;
+    font-size: 13px;
+    color: #B1B1B4
   }
 }
 

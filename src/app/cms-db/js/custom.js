@@ -234,6 +234,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // 초기 실행
     updateFieldState(field, 'init');
   });
+  
+  // header 검색창
+  const headerSearchField = document.querySelector('.console-header-search .textfield-form');
+  if (headerSearchField) {
+    const headerSearchRoot = headerSearchField.closest('.console-header-search.popper-search-root');
+
+    headerSearchField.addEventListener('focus', () => {
+      headerSearchRoot.classList.add('ac--active');
+    });
+
+    headerSearchField.addEventListener('input', () => {
+      headerSearchRoot.classList.add('ac--active');
+    });
+  }
 
   // 바깥 영역 클릭
   document.addEventListener('click', (e) => {

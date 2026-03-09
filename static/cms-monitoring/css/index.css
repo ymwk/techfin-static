@@ -3270,6 +3270,11 @@ button.swiper-pagination-bullet {
   background-image: url(../image/icon/ic_empty_report.svg);
 }
 
+.i--empty-search {
+  width: 80px;
+  background-image: url(../image/icon/ic_empty_search.svg);
+}
+
 .i--phone {
   width: 24px;
   background-image: url(../image/icon/ic_phone.svg);
@@ -4307,6 +4312,52 @@ button.swiper-pagination-bullet {
 .select-btns {
   display: flex;
   gap: 8px;
+}
+
+.search-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--c-gray1);
+}
+.search-empty .tit {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--c-black);
+}
+.search-empty .search-keyword {
+  margin-top: 36px;
+}
+
+.search-keyword {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.search-keyword .tit {
+  font-size: 16px;
+  margin-right: 8px;
+}
+.search-keyword .btn {
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 28px;
+  background-color: #f0f4ff;
+  font-size: 13px;
+  color: var(--c-gray1);
+  font-weight: 500;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+.search-keyword .btn:hover {
+  background-color: #D8E0FF;
 }
 
 .sticker-side {
@@ -5787,6 +5838,7 @@ button.swiper-pagination-bullet {
   align-items: center;
   width: 224px;
   height: var(--h-header);
+  margin-right: auto;
   font-size: 18px;
   font-weight: 500;
 }
@@ -6064,7 +6116,7 @@ button.swiper-pagination-bullet {
   width: 568px;
 }
 .console-header-search .textfield-root {
-  z-index: 999999;
+  z-index: 100;
 }
 .console-header-search .textfield-form {
   height: 36px;
@@ -6175,6 +6227,11 @@ button.swiper-pagination-bullet {
 .console-header-search .search-section-list .data .icon-comm {
   font-size: 18px;
   color: var(--c-black);
+}
+.console-header-search .search-empty {
+  padding: 18px 0;
+  font-size: 13px;
+  color: #B1B1B4;
 }
 
 .popper-search-root {
@@ -7821,8 +7878,8 @@ td .msg-list {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 30px;
-  padding-top: 30px;
+  margin-top: 16px;
+  padding-top: 16px;
 }
 
 .section-footer {
