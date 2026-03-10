@@ -141,13 +141,6 @@
 
   .progress-wrap {
     color: var(--c-primary);
-
-    .progressbar {
-      background-color: #d4d4d9;
-      .value {
-        background-color: currentColor;
-      }
-    }
   }
 }
 
@@ -172,6 +165,53 @@
     border-radius: 50%;
     background-color: #d4d4d9;
   }
+}
+
+/////////////////////////////// progressbar
+.progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  color: var(--c-primary);
+  
+  &.t--rows {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    
+    .progressbar {
+      flex-grow: 1;
+    }
+  }
+
+  .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--c-black);
+
+    em {
+      color: var(--c-primary);
+    }
+  }
+
+  .progressbar {
+    height: 10px;
+    border-radius: 10px;
+    background-color: #d4d4d9;
+  
+
+    .value {
+      height: 100%;
+      border-radius: 10px;
+      background-color: currentColor;
+    }
+  }
+}
+
+.table-datagrid .progressbar {
+  height: 8px
 }
 
 /////////////////////////// legend

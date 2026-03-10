@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           // tab contents
           if (targetCont) {
-            targetCont.style.display = 'block';
+            targetCont.style.display = 'flex';
 
             const siblingContents = targetCont.parentElement.querySelectorAll('.tabmenu-content');
 

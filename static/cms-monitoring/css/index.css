@@ -3726,6 +3726,12 @@ button.swiper-pagination-bullet {
   font-size: 16px;
 }
 
+.tabmenu-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .tabmenu-filter {
   display: flex;
   gap: 8px;
@@ -4492,6 +4498,24 @@ button.swiper-pagination-bullet {
   padding: 0 4px;
   color: var(--c-primary);
 }
+.table-header .titles {
+  display: inline-flex;
+  align-items: center;
+}
+.table-header .titles .tit {
+  display: inline-flex;
+  align-items: center;
+  height: 10px;
+  font-size: 16px;
+}
+.table-header .titles .tit:not(:first-child) {
+  padding-left: 12px;
+  margin-left: 12px;
+  border-left: 1px solid #d4d4d9;
+}
+.table-header .titles em {
+  padding-left: 0.4em;
+}
 .table-header .msg-result {
   color: #0f172a;
 }
@@ -5051,59 +5075,6 @@ button.swiper-pagination-bullet {
 }
 .sort-wrap .btn-sort .icon-comm {
   scale: 0.8;
-}
-
-.slide-root {
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  display: flex;
-}
-.slide-root .slide-backdrop {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.25);
-  animation: fadeIn 0.5s;
-}
-.slide-root .slide-backdrop.t--blur {
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(6px);
-}
-.slide-root .slide-container {
-  position: absolute;
-  inset: 0 0 0 auto;
-  width: 1080px;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1215686275);
-  display: flex;
-  flex-direction: column;
-  transform: translateX(100%);
-  animation: slideIn 0.8s var(--ease) forwards;
-}
-.slide-root .slide-header {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 66px;
-  padding: 0 32px;
-  border-bottom: 1px solid var(--c-border2);
-}
-.slide-root .slide-header-tit {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.slide-root .tooltip-popper {
-  bottom: unset;
-  top: 100%;
-}
-.slide-root .slide-contents {
-  flex-grow: 1;
-  padding: 28px 32px 32px;
-  display: flex;
-  flex-direction: column;
 }
 
 .table-sticky-position {
@@ -6853,6 +6824,59 @@ body.open .sidebar-menu-top .sidebar-csBtn:hover::after,
 body.open .sidebar-menu-top .sidebar-btn.ac--active::after,
 body.open .sidebar-menu-top .ac--active.sidebar-csBtn::after {
   border-bottom-color: #fff;
+}
+
+.slide-root {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+}
+.slide-root .slide-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.5s;
+}
+.slide-root .slide-backdrop.t--blur {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+}
+.slide-root .slide-container {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 1080px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1215686275);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  animation: slideIn 0.8s var(--ease) forwards;
+}
+.slide-root .slide-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--c-border2);
+}
+.slide-root .slide-header-tit {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.slide-root .tooltip-popper {
+  bottom: unset;
+  top: 100%;
+}
+.slide-root .slide-contents {
+  flex-grow: 1;
+  padding: 28px 32px 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .SOLFooter-root {
@@ -8968,7 +8992,8 @@ td .msg-list {
   font-size: 11px;
 }
 
-.grade-label::before {
+.grade-label::before,
+.label-comm.t--bullet::before {
   content: "";
   display: inline-block;
   width: 4px;
@@ -9019,8 +9044,9 @@ td .msg-list {
   border: 1px solid rgba(157, 163, 170, 0.4);
   background-color: rgba(157, 163, 170, 0.1490196078);
 }
-.grade-label.c--on,
-.label-comm.c--on {
+.grade-label.c--on, .grade-label.c--warn,
+.label-comm.c--on,
+.label-comm.c--warn {
   border: 1px solid #ffe9b3;
   background-color: #fff7e0;
   color: #d9a636;
@@ -9036,6 +9062,12 @@ td .msg-list {
   border: 1px solid #cdeedf;
   background-color: #eaf7f1;
   color: #35a785;
+}
+.grade-label.c--danger,
+.label-comm.c--danger {
+  border: 1px solid #FFD6DA;
+  background-color: #FFEDEE;
+  color: #E14B5F;
 }
 .grade-label.c--warn,
 .label-comm.c--warn {
@@ -9538,12 +9570,6 @@ td .msg-list {
 .chart-network-list .progress-wrap {
   color: var(--c-primary);
 }
-.chart-network-list .progress-wrap .progressbar {
-  background-color: #d4d4d9;
-}
-.chart-network-list .progress-wrap .progressbar .value {
-  background-color: currentColor;
-}
 
 .legend-list {
   display: flex;
@@ -9564,6 +9590,45 @@ td .msg-list {
   height: 8px;
   border-radius: 50%;
   background-color: #d4d4d9;
+}
+
+.progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  color: var(--c-primary);
+}
+.progress-wrap.t--rows {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.progress-wrap.t--rows .progressbar {
+  flex-grow: 1;
+}
+.progress-wrap .label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--c-black);
+}
+.progress-wrap .label em {
+  color: var(--c-primary);
+}
+.progress-wrap .progressbar {
+  height: 10px;
+  border-radius: 10px;
+  background-color: #d4d4d9;
+}
+.progress-wrap .progressbar .value {
+  height: 100%;
+  border-radius: 10px;
+  background-color: currentColor;
+}
+
+.table-datagrid .progressbar {
+  height: 8px;
 }
 
 .progress-wrap.legend-01 {
@@ -11357,6 +11422,9 @@ td .msg-list {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.main-section.main-db-dashboard .db-list .dashboard-list .progressbar {
+  background-color: #e8e8e8;
+}
 .main-section.main-db-dashboard .db-list .row {
   display: flex;
   flex-direction: row;
@@ -11374,31 +11442,6 @@ td .msg-list {
   border: 1px solid currentColor;
   background-color: #fff;
   font-size: 14px;
-}
-
-.progress-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
-.progress-wrap .label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.progress-wrap .label em {
-  color: var(--c-primary);
-}
-.progress-wrap .progressbar {
-  height: 10px;
-  border-radius: 10px;
-  background-color: #e8e8eb;
-}
-.progress-wrap .progressbar .value {
-  height: 100%;
-  border-radius: 10px;
-  background-color: var(--c-primary);
 }
 
 .board-header {

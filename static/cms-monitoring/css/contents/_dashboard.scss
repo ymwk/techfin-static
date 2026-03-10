@@ -978,7 +978,8 @@
   }
 }
 
-.grade-label::before {
+.grade-label::before,
+.label-comm.t--bullet::before {
   content: '';
   display: inline-block;
   width: 4px;
@@ -1024,7 +1025,8 @@
     background-color: #9da3aa26;
   }
 
-  &.c--on {
+  &.c--on,
+  &.c--warn {
     border: 1px solid #ffe9b3;
     background-color: #fff7e0;
     color: #d9a636;
@@ -1038,6 +1040,11 @@
     border: 1px solid #cdeedf;
     background-color: #eaf7f1;
     color: #35a785;
+  }
+  &.c--danger {
+    border: 1px solid #FFD6DA;
+    background-color: #FFEDEE;
+    color: #E14B5F;
   }
   &.c--warn {
     border: 1px solid #FFD8C2;

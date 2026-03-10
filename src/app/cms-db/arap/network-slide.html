@@ -924,7 +924,7 @@
                           </button>
                           <div class="tooltip-popper">
                             <div class="tooltip-box">
-                              <p>상위 5개 주요 매출처에 대한 거래비중을 확인할 수 있습니다.</p>
+                              <p class="font-">상위 5개 주요 매출처에 대한 거래비중을 확인할 수 있습니다.</p>
                             </div>
                           </div>
                         </div>
@@ -949,7 +949,7 @@
                           <div class="chart-donut" style="--val01: 72; --val02: 28">
                             <svg class="donut-svg" width="120" height="120" viewBox="0 0 120 120">
                               <circle class="donut-segment legend-01" cx="60" cy="60" r="46"></circle>
-                              <circle class="donut-segment " cx="60" cy="60" r="46"></circle>
+                              <circle class="donut-segment" cx="60" cy="60" r="46"></circle>
                             </svg>
                           </div>
                         </div>
@@ -994,7 +994,7 @@
                           <div class="chart-donut" style="--val01: 88; --val02: 12">
                             <svg class="donut-svg" width="120" height="120" viewBox="0 0 120 120">
                               <circle class="donut-segment legend-02" cx="60" cy="60" r="46"></circle>
-                              <circle class="donut-segment " cx="60" cy="60" r="46"></circle>
+                              <circle class="donut-segment" cx="60" cy="60" r="46"></circle>
                             </svg>
                           </div>
                         </div>
@@ -1067,7 +1067,7 @@
                           </div>
                           <div class="progress-wrap legend-01">
                             <div class="progressbar">
-                              <div class="value" style="width: 10%"></div>
+                              <div class="value" style="width: 30%"></div>
                             </div>
                             <div class="label">
                               <ul class="legend-list">
@@ -1129,7 +1129,7 @@
                           </div>
                           <div class="progress-wrap legend-01">
                             <div class="progressbar">
-                              <div class="value" style="width: 10%"></div>
+                              <div class="value" style="width: 30%"></div>
                             </div>
                             <div class="label">
                               <ul class="legend-list">
@@ -1160,7 +1160,7 @@
                           </div>
                           <div class="progress-wrap legend-01">
                             <div class="progressbar">
-                              <div class="value" style="width: 10%"></div>
+                              <div class="value" style="width: 30%"></div>
                             </div>
                             <div class="label">
                               <ul class="legend-list">
@@ -1191,7 +1191,7 @@
                           </div>
                           <div class="progress-wrap legend-01">
                             <div class="progressbar">
-                              <div class="value" style="width: 10%"></div>
+                              <div class="value" style="width: 30%"></div>
                             </div>
                             <div class="label">
                               <ul class="legend-list">
@@ -1232,7 +1232,7 @@
                           </div>
                           <div class="progress-wrap legend-02">
                             <div class="progressbar">
-                              <div class="value" style="width: 10%"></div>
+                              <div class="value" style="width: 30%"></div>
                             </div>
                             <div class="label">
                               <ul class="legend-list">
@@ -1294,7 +1294,7 @@
                           </div>
                           <div class="progress-wrap legend-02">
                             <div class="progressbar">
-                              <div class="value" style="width: 10%"></div>
+                              <div class="value" style="width: 30%"></div>
                             </div>
                             <div class="label">
                               <ul class="legend-list">
@@ -1325,7 +1325,7 @@
                           </div>
                           <div class="progress-wrap legend-02">
                             <div class="progressbar">
-                              <div class="value" style="width: 10%"></div>
+                              <div class="value" style="width: 30%"></div>
                             </div>
                             <div class="label">
                               <ul class="legend-list">
@@ -1356,7 +1356,7 @@
                           </div>
                           <div class="progress-wrap legend-02">
                             <div class="progressbar">
-                              <div class="value" style="width: 10%"></div>
+                              <div class="value" style="width: 30%"></div>
                             </div>
                             <div class="label">
                               <ul class="legend-list">
@@ -1759,7 +1759,7 @@
                   </div>
                   <!-- // chk-box -->
 
-                  <div style="background-color: rgb(230, 230, 230); height: 600px"></div>
+                  <div style="flex: 1; background-color: rgb(230, 230, 230); height: 600px"></div>
                 </div>
                 <!-- // tabmenu-content -->
               </div>
@@ -1773,6 +1773,618 @@
       </div>
       <!-- console-root -->
     </div>
+
+    <div class="slide-root">
+      <div class="slide-backdrop"></div>
+      <div class="slide-container">
+        <div class="slide-header">
+          <div class="slide-header-tit">
+            <h2 class="font-h3">전체 거래처 리스트</h2>
+          </div>
+          <button type="button" class="btn-icon btn-slide-close">
+            <i class="icon-comm i--close s--lg"></i>
+          </button>
+        </div>
+
+        <div class="slide-contents">
+          <div class="tabmenu-menu">
+            <button type="button" class="tabmenu-btn ac--active" data-target-tab="slide1">
+              전체 매출처
+            </button>
+            <button type="button" class="tabmenu-btn" data-target-tab="slide2">
+              전체 매입처
+            </button>
+          </div>
+
+          <div class="tabmenu-content" id="slide1">
+            <h3 class="blind">전체 매출처</h3>
+            <div class="table-header">
+              <div class="titles">
+                <span class="tit"
+                  >전체 매출처 <em><span class="c--primary">10</span>개</em></span
+                >
+                <span class="tit"
+                  >부도 매출처 <em><span class="c--primary">3</span>개</em></span
+                >
+              </div>
+              <div class="utils">
+                <span class="unit">조회기간 : YYYY.MM ~ YYYY.MM</span>
+              </div>
+            </div>
+
+            <div class="table-sticky-position">
+              <div class="table-wrap table-sticky">
+                <table class="table-datagrid">
+                  <thead>
+                    <tr>
+                      <th style="width: 60px"><span class="tit">순위</span></th>
+                      <th><span class="tit">매출처명</span></th>
+                      <th><span class="tit">사업자번호</span></th>
+                      <th><span class="tit">거래금액</span></th>
+                      <th style="width: 200px"><span class="tit">거래비중</span></th>
+                      <th style="width: 100px"><span class="tit">모니터링등급</span></th>
+                      <th style="width: 100px"><span class="tit">부도여부</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>2</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--warn t--bullet">주의</span></td>
+                      <td><span class="label-comm c--danger t--bullet">부도</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>3</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>4</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>5</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>6</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>7</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>8</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>9</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>10</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>11</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>12</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>13</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>14</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>15</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-01">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- // tabmenu-content -->
+           
+          <div class="tabmenu-content" id="slide2" style="display: none;">
+            <h3 class="blind">전체 매입처</h3>
+            <div class="table-header">
+              <div class="titles">
+                <span class="tit"
+                  >전체 매입처 <em><span class="c--primary">10</span>개</em></span
+                >
+                <span class="tit"
+                  >부도 매입처 <em><span class="c--primary">3</span>개</em></span
+                >
+              </div>
+              <div class="utils">
+                <span class="unit">조회기간 : YYYY.MM ~ YYYY.MM</span>
+              </div>
+            </div>
+
+            <div class="table-sticky-position">
+              <div class="table-wrap table-sticky">
+                <table class="table-datagrid">
+                  <thead>
+                    <tr>
+                      <th style="width: 60px"><span class="tit">순위</span></th>
+                      <th><span class="tit">매출처명</span></th>
+                      <th><span class="tit">사업자번호</span></th>
+                      <th><span class="tit">거래금액</span></th>
+                      <th style="width: 200px"><span class="tit">거래비중</span></th>
+                      <th style="width: 100px"><span class="tit">모니터링등급</span></th>
+                      <th style="width: 100px"><span class="tit">부도여부</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>2</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--warn t--bullet">주의</span></td>
+                      <td><span class="label-comm c--danger t--bullet">부도</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>3</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>4</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>5</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>6</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>7</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>8</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>9</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>10</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>11</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>12</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>13</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>14</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>15</td>
+                      <td>(주)한국**</td>
+                      <td>101-55-*****</td>
+                      <td class="al--right">175억</td>
+                      <td>
+                        <div class="progress-wrap t--rows legend-02">
+                          <div class="progressbar">
+                            <div class="value" style="width: 30%"></div>
+                          </div>
+                          <span class="label">30%</span>
+                        </div>
+                      </td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                      <td><span class="label-comm c--complete t--bullet">정상</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- // tabmenu-content -->
+        </div>
+        <!-- // slide-contents -->
+      </div>
+      <!-- // slide-container -->
+    </div>
+    <!-- // slide-root -->
 
     <script src="../js/custom.js"></script>
   </body>
