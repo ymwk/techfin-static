@@ -116,6 +116,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (tabs.length > 0) {
     tabs.forEach((tab) => {
       tab.addEventListener('click', (e) => {
+        e.stopPropagation();
+
         const parent = tab.parentElement;
         const siblingTabs = parent.querySelectorAll('.tabmenu-btn');
 
@@ -131,13 +133,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
           // tab contents
           if (targetCont) {
-            targetCont.style.display = 'flex';
-
-            const siblingContents = targetCont.parentElement.querySelectorAll('.tabmenu-content');
-
-            siblingContents.forEach((content) => {
-              if (content !== targetCont) {
-                content.style.display = 'none';
+            const contentContainer = targetCont.parentElement;
+            Array.from(contentContainer.children).forEach((child) => {
+              if (child.classList.contains('tabmenu-content')) {
+                if (child === targetCont) {
+                  child.style.display = 'flex'; // 혹은 block
+                } else {
+                  child.style.display = 'none';
+                }
               }
             });
           }
@@ -194,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // 검색창 관련
   const updateFieldState = (field, eventType) => {
     if (field.readOnly || field.disabled) return;
-    
+
     const hasValue = field.value.trim() !== '';
 
     // 검색 popper
@@ -213,8 +216,8 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   document.querySelectorAll('.textfield-form').forEach((field) => {
-    ['input', 'focus', 'blur'].forEach((event) => {
-      field.addEventListener(event, () => updateFieldState(field, event));
+    ['input', 'focus', 'blur'].forEach((eventName) => {
+      field.addEventListener(eventName, () => updateFieldState(field, eventName));
     });
 
     // Clear button
@@ -234,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 초기 실행
     updateFieldState(field, 'init');
   });
-  
+
   // header 검색창
   const headerSearchField = document.querySelector('.console-header-search .textfield-form');
   if (headerSearchField) {

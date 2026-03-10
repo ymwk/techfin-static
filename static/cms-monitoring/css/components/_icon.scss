@@ -253,6 +253,14 @@
   width: 56px;
   background-image: url(../image/icon/ic_db_templeate.svg);
 }
+.i--info {
+  width: 18px;
+  background-image: url(../image/icon/ic_question.svg);
+}
+.i--panel {
+  width: 18px;
+  background-image: url(../image/icon/ic_panel.svg);
+}
 
 .i--plus,
 .i--minus {
@@ -260,10 +268,14 @@
   width: 16px;
   height: 16px;
 
-  &:not(.s--lg) {
+  &:not(.s--lg, .s--md, .s--sm) {
     border-radius: 3px;
     border: 1px solid var(--c-border2);
     background-color: #fff;
+  }
+
+  &.s--sm {
+    transform: scale(0.8);
   }
 
   &.s--lg {
@@ -712,6 +724,10 @@
 .i--empty-search {
   width: 80px;
   background-image: url(../image/icon/ic_empty_search.svg);
+}
+.i--empty-list {
+  width: 80px;
+  background-image: url(../image/icon/ic_empty_list.svg);
 }
 
 .i--phone {

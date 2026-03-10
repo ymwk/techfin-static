@@ -363,12 +363,10 @@
   }
 
   .icon-comm.i--search {
-    z-index: 1;
-    position: absolute;
-    top: 50%;
     left: 12px;
+    right: auto;
     margin-top: -7px;
-    width: 15px;
+    width: 14px
   }
 
   &.ac--active {
@@ -481,11 +479,11 @@
       }
     }
   }
-  
+
   .search-empty {
     padding: 18px 0;
     font-size: 13px;
-    color: #B1B1B4
+    color: #b1b1b4;
   }
 }
 

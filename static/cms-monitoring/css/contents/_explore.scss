@@ -1,0 +1,153 @@
+.explore-container {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.explore-contents {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.explore-filter {
+  display: flex;
+  gap: 24px;
+
+  .cont-headline-sub {
+    margin-top: 20px;
+  }
+}
+
+.explore-filter-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.explore-filter-box {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px dashed var(--c-border2);
+  
+  .btn-text {
+    width: 100%;
+    padding: 4px;
+    font-size: 14px
+  }
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: 1px solid #d4d4d9;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+
+    &.ac--active {
+      color: var(--c-primary);
+      border-color: #7d98ff;
+      background-color: #d8e0ff;
+    }
+  }
+}
+
+///////////////////////////// PANEL
+.explore-panel {
+  position: sticky;
+  top: 32px;
+  margin-bottom: -16px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 320px;
+  min-height: calc(100vh - 260px);
+  padding: 8px 20px 20px;
+  border-radius: 12px;
+  border: 1px solid #d4d4d9;
+  box-shadow: 8px 12px 30px 0px #00000005;
+  background-color: #f9f9f9;
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .company-list,
+  .template-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tabmenu-filter {
+    margin: 0;
+  }
+
+  .tabmenu-content {
+    gap: 16px;
+  }
+
+  .switch-root {
+    align-self: start;
+  }
+
+  .textfield-root {
+    .icon-comm.i--search {
+      width: 16px;
+      right: auto;
+      left: 10px;
+    }
+
+    .textfield-form {
+      height: 32px;
+      font-size: 13px;
+      padding-left: 32px;
+    }
+  }
+}
+
+.explore-panel-scroll {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 650px;
+  margin-right: -20px;
+  padding-right: 14px;
+  overflow-y: scroll;
+}
+
+.explore-empty {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  color: var(--c-gray2);
+  font-size: 14px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../image/icon/ic_empty_search.svg) no-repeat center center;
+  }
+}
