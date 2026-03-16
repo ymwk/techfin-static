@@ -72,6 +72,7 @@
   .icon-comm {
     min-width: 20px;
     margin-left: -4px;
+    
     &:first-child {
       margin-right: -4px;
     }
@@ -83,7 +84,7 @@
     padding: 0;
 
     .icon-comm {
-      margin-left: 0;
+      margin: 0
     }
   }
 }

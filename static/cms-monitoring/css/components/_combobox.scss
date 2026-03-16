@@ -1,5 +1,4 @@
 .combobox-root {
-  z-index: 10;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -23,6 +22,22 @@
       width: 0;
       height: 0;
     }
+  }
+
+  &.s--sm {
+    .combobox-btn {
+      height: 32px;
+      font-size: 13px;
+    }
+  }
+}
+
+.combobox-group {
+  display: flex;
+  gap: 8px;
+
+  .combobox-root {
+    flex: 1;
   }
 }
 

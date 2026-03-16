@@ -791,7 +791,7 @@
                         </div>
                       </div>
 
-                      <div class="searchbox-filter-result explore-filter-box">
+                      <div class="searchbox-filter-result explore-filter-box" id="guide03">
                         <span class="chip">
                           <i class="icon-comm i--sort"></i>
                           <span>매출액 증가율 > 30%</span>
@@ -1024,8 +1024,43 @@
         <!-- //console-container -->
       </div>
       <!-- console-root -->
+
+      <div class="guide-pop" id="guidePop03">
+        <span class="stepper"><span></span></span>
+        <h3 class="font-h4">Step 3. 필터 수치 조정</h3>
+        <p class="desc">기준정보나 재무데이터를 클릭하면 필터 수치를 직접 조정하여 데이터를 다시 조회할 수 있습니다.</p>
+        <div class="guide-action">
+          <button type="button" class="btn-text">
+            <span class="underline">나중에 할게요</span>
+          </button>
+          <button type="button" class="btn-contained">완료</button>
+        </div>
+      </div>
     </div>
 
     <script src="../js/custom.js"></script>
+    <script>
+      window.addEventListener('load', function () {
+        applyPosition();
+        window.addEventListener('resize', applyPosition);
+      });
+
+      function applyPosition() {
+        const target = document.querySelector('#guide03');
+        const popup = document.querySelector('#guidePop03');
+
+        if (target && popup) {
+          const rect = target.getBoundingClientRect();
+
+          const top = rect.top;
+          const left = rect.left;
+
+          popup.style.top = `${top + rect.height + 16}px`;
+          popup.style.left = `${left + rect.width / 2}px`;
+          popup.style.transform = 'translateX(-50%)';
+          popup.style.opacity = '1';
+        }
+      }
+    </script>
   </body>
 </html>

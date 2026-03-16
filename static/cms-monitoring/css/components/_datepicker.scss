@@ -3,7 +3,7 @@
   flex-grow: 1;
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 6px;
 
   // &.ac--focus {
   //   .datepicker-popper {
@@ -25,6 +25,17 @@
     position: static !important;
     font-size: 14px;
     margin-left: 16px
+  }
+  
+  &.s--sm {
+    .textfield-form {
+      height: 32px;
+      font-size: 13px
+    }
+  }
+  
+  .textfield-form {
+    background-color: #fff !important;
   }
 }
 

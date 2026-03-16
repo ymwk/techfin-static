@@ -40,9 +40,89 @@
     justify-content: center;
     gap: 6px 40px;
   }
+  
+  &.t--reverse {
+    .radiocheck-label {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+  
+  &.t--list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    color: var(--c-gray1);
+    font-weight: 500;
+    
+    .radiocheck-label {
+      padding: 11px 16px;
+      border-radius: 8px;
+      transition: background-color .2s;
+      
+      &:hover {
+        background-color: var(--c-bg);
+      }
+    }
+  }
 
   .btn-icon {
     margin-left: auto;
+  }
+
+  &.t--btns {
+    gap: 8px;
+
+    [type='checkbox'],
+    [type='radio'] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    .radiocheck-label {
+      flex: 1;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 75px;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid var(--c-border);
+      border-radius: 6px;
+      background-color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      color: var(--c-black);
+      transition:
+        color 0.2s,
+        background-color 0.2s,
+        border-color 0.2s;
+
+      &:hover {
+        background-color: var(--c-bg);
+      }
+
+      &:has(:checked) {
+        border-color: var(--c-primary);
+        background-color: #f0f4ff;
+        color: var(--c-primary);
+      }
+    }
+
+    &.s--sm {
+      .radiocheck-label {
+        min-width: 65px;
+        height: 32px;
+        font-size: 13px;
+      }
+    }
   }
 }
 
@@ -151,6 +231,39 @@
         padding-left: 0;
         font-weight: 400;
         font-size: 13px;
+      }
+    }
+  }
+
+  &.t--min {
+    .item {
+      position: relative;
+      gap: 4px;
+      padding: 8px 12px;
+      border: 0;
+      color: var(--c-gray1);
+
+      &:hover {
+        background-color: var(--c-bg);
+      }
+
+      &:has([type='radio']:checked) {
+        color: var(--c-primary);
+        background-color: #f0f4ff;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 15px;
+          display: block;
+          width: 5px;
+          height: 8px;
+          margin-top: -2px;
+          border-right: 2px solid currentColor;
+          border-bottom: 2px solid currentColor;
+          transform: rotate(45deg) scale(0.9);
+          border-radius: 2px;
+        }
       }
     }
   }

@@ -677,12 +677,12 @@
     td,
     th {
       transition: background-color 0.3s;
+      cursor: pointer;
     }
-    tr:hover {
+    tr:not(.ac--selected):hover {
       td,
       th {
-        background-color: #f0f4ff !important;
-        cursor: pointer;
+        background-color: var(--c-bg) !important;
       }
     }
   }
@@ -702,7 +702,7 @@
     align-items: center;
     width: 16px;
     height: 10px;
-    color: #4f4f55;
+    color: var(--c-gray1);
 
     .icon-comm {
       scale: 0.8;
@@ -764,63 +764,5 @@
   .textfield-form {
     height: 32px;
     padding-right: 34px;
-  }
-}
-
-.tableset-popper-root,
-.popper-search-root {
-  @include popper;
-}
-
-.tablesearch-popper {
-  min-width: 100%;
-  top: calc(100% + 6px);
-  box-shadow: 12px 16px 40px 0px #0000000a;
-
-  .combobox-option {
-    max-height: 134px;
-  }
-}
-
-.tableset-popper {
-  top: calc(100% + 6px);
-  right: 0;
-  min-width: 200px;
-  padding: 16px;
-  border-radius: 8px;
-  background-color: #fff;
-  border: 1px solid var(--c-border2);
-  box-shadow: 12px 16px 40px 0px #0000000a;
-  font-size: 13px;
-
-  .switch-wrap {
-    padding: 0;
-
-    .switch-root {
-      gap: 16px;
-      padding: 6px 0;
-      font-size: inherit;
-
-      &:not(:first-child) {
-        border-top: 0;
-      }
-    }
-  }
-
-  .tableset-combobox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 8px;
-  }
-
-  .combobox-root {
-    flex-direction: row;
-    font-size: inherit;
-
-    .combobox-btn {
-      height: 32px;
-      font-size: inherit;
-    }
   }
 }

@@ -459,11 +459,11 @@
               <div class="explore-container">
                 <div class="explore-panel">
                   <div class="tabmenu-menu s--sm">
-                    <button type="button" class="tabmenu-btn ac--active" data-target-tab="panel1">템플릿</button>
-                    <button type="button" class="tabmenu-btn" data-target-tab="panel2">탐색조건</button>
+                    <button type="button" class="tabmenu-btn" data-target-tab="panel1">템플릿</button>
+                    <button type="button" class="tabmenu-btn ac--active" data-target-tab="panel2">탐색조건</button>
                   </div>
 
-                  <div class="tabmenu-content" id="panel1">
+                  <div class="tabmenu-content" id="panel1" style="display: none">
                     <h3 class="blind">템플릿</h3>
                     <div class="tabmenu-filter">
                       <button type="button" class="tabmenu-btn ac--active" data-target-tab="panelFilter1">
@@ -588,7 +588,7 @@
                   </div>
                   <!-- // tabmenu-content -->
 
-                  <div class="tabmenu-content" id="panel2" style="display: none">
+                  <div class="tabmenu-content" id="panel2">
                     <h3 class="blind">탐색조건</h3>
 
                     <div class="textfield-root">
@@ -868,7 +868,7 @@
                             <td>2025년 4월</td>
                             <td><button type="button" class="btn-comm">기업 상세</button></td>
                           </tr>
-                          <tr class="ac--selected">
+                          <tr>
                             <td class="al--left">삼성전자</td>
                             <td>370-88-12345</td>
                             <td class="al--left">전자</td>
@@ -1009,6 +1009,20 @@
                         <i class="icon-comm i--last"></i>
                         <span class="blind">Last Page</span>
                       </button>
+                    </div>
+
+                    <div class="shade-wrap">
+                      <div class="search-empty">
+                        <i class="icon-comm i--empty-lock"></i>
+                        <p class="tit">플랜 업그레이드</p>
+                        <p>
+                          플랜 업그레이드 후 이용할 수 있습니다.<br />
+                          업그레이드하고 더 많은 기업 데이터를 확인해 보세요.
+                        </p>
+                        <div class="mt20">
+                          <button type="button" class="btn-contained s--md">업그레이드 하기</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <!-- // datagrid-container -->
