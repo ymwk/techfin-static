@@ -9,6 +9,30 @@
   gap: 24px;
   font-size: 14px;
   font-weight: 300;
+  white-space: nowrap;
+
+  &.t--floating {
+    inset: auto;
+    font-size: 13px;
+    font-weight: 400;
+    transform: translate(-50%, -110%);
+
+    .toast-box {
+      padding: 11px;
+      border: 1px solid var(--c-border);
+      background-color: #fff;
+      color: var(--c-black);
+      box-shadow: 0px 3px 12px 0px #00000012;
+    }
+
+    .toast-icon {
+      padding-left: 5px;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
 }
 
 .toast-backdrop {
@@ -40,9 +64,10 @@
       color: #fff;
     }
   }
-  
-  a, button {
-    color: inherit
+
+  & > a,
+  & > button {
+    color: inherit;
   }
 }
 
@@ -64,4 +89,9 @@
     margin-right: 10px;
     font-size: 10px;
   }
+}
+
+.toast-btns {
+  display: flex;
+  gap: 8px;
 }

@@ -24,11 +24,19 @@
   &:disabled {
     color: #b1b1b4;
     border: 1px solid var(--c-border2);
-    background-color: #f9f9f9;
+    background-color: var(--c-bg);
     font-weight: 500;
     cursor: not-allowed;
   }
 
+  &.s--xs {
+    height: 24px;
+    padding: 0 7px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 13px;
+  }
+  
   &.s--sm {
     min-width: 50px;
     height: 26px;
@@ -92,7 +100,7 @@
   &:active,
   &.active {
     &:not(:disabled) {
-      background-color: #f1f1f3;
+      background-color: var(--c-bg);
     }
   }
 
@@ -101,15 +109,19 @@
   }
 
   &.ac--active {
-    border-color: #7d98ff;
-    background-color: #d8e0ff;
-    color: #3b5dfb;
+    border-color: var(--c-primary);
+    background-color: #F0F4FF;
+    color: var(--c-primary);
+    
+    &:hover {
+      background-color: #D8E0FF;
+    }
   }
 }
 
 .btn-contained {
   border-color: #1c3bdb;
-  background-color: #3b5dfb;
+  background-color: var(--c-primary);
   color: #fff;
   font-weight: 400;
 

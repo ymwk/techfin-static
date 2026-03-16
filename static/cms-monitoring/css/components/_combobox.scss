@@ -89,7 +89,7 @@
 
     &.ac--active,
     &:hover:not(.ac--active, :has(button:disabled)) {
-      background-color: #f9f9f9;
+      background-color: var(--c-bg);
     }
     & > * {
       display: flex;

@@ -30,9 +30,6 @@
                 </div>
 
                 <div class="sidebar-menu-cont" id="tab1">
-                  <button type="button" class="sidebar-btn globe ac--active">
-                    <span class="label">기업탐색</span>
-                  </button>
                   <button type="button" class="sidebar-btn calculator">
                     <span class="label">월별매입매출</span>
                   </button>
@@ -44,6 +41,9 @@
                   </button>
                   <button type="button" class="sidebar-btn shield">
                     <span class="label">사기거래탐지</span>
+                  </button>
+                  <button type="button" class="sidebar-btn globe ac--active">
+                    <span class="label">데이터 스튜디오</span>
                   </button>
 
                   <div class="sidebar-popper-root popper-comm-root">
@@ -179,7 +179,7 @@
                   <div class="global-btns">
                     <button type="button" class="btn-comm t--round">
                       <i class="icon-comm i--globe"></i>
-                      <span>기업탐색</span>
+                      <span>데이터 스튜디오</span>
                     </button>
 
                     <div class="global-btn-user">
@@ -211,13 +211,7 @@
                           </li>
                           <li>
                             <a href="#">
-                              <span>플랜 관리</span>
-                              <i class="icon-comm i--next"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <span>정산 관리</span>
+                              <span>플랜 이용 관리</span>
                               <i class="icon-comm i--next"></i>
                             </a>
                           </li>
@@ -229,19 +223,19 @@
                           </li>
                           <li>
                             <a href="#">
+                              <span>권한관리</span>
+                              <i class="icon-comm i--next"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
                               <span>내정보 관리</span>
                               <i class="icon-comm i--next"></i>
                             </a>
                           </li>
                           <li>
                             <a href="#">
-                              <span>권한 관리</span>
-                              <i class="icon-comm i--next"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <span>활동이력</span>
+                              <span>계약 관리</span>
                               <i class="icon-comm i--next"></i>
                             </a>
                           </li>
@@ -905,7 +899,7 @@
                     </div>
 
                     <div class="table-wrap table-link">
-                      <table class="table-datagrid">
+                      <table class="table-datagrid" id="floatingToastTable">
                         <colgroup>
                           <col style="width: 60px" />
                         </colgroup>
@@ -914,125 +908,93 @@
                             <th><span class="tit">번호</span></th>
                             <th>
                               <span class="tit">
-                                기준년월
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                                <button type="button" class="btn-order ac--asc">
+                                  <span>기준년월</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th><span class="tit">매출처 사업자번호</span></th>
                             <th>
-                              <span class="tit"
-                                >매출처명
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>매출처명</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th>
-                              <span class="tit"
-                                >공급가액
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>공급가액</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th>
-                              <span class="tit"
-                                >부가세
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>부가세</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th><span class="tit">매출유형</span></th>
                             <th>
-                              <span class="tit"
-                                >공급건수
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>공급건수</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th><span class="tit">취소건수</span></th>
                             <th>
-                              <span class="tit"
-                                >취소금액
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>취소금액</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th>
-                              <span class="tit"
-                                >총 공급가액
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>총 공급가액</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th>
-                              <span class="tit"
-                                >총 취소금액
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>총 취소금액</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                           </tr>
@@ -1562,125 +1524,93 @@
                             <th><span class="tit">번호</span></th>
                             <th>
                               <span class="tit">
-                                기준년월
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                                <button type="button" class="btn-order">
+                                  <span>기준년월</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th><span class="tit">매입처 사업자번호</span></th>
                             <th>
-                              <span class="tit"
-                                >매입처명
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>매입처명</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th>
-                              <span class="tit"
-                                >공급가액
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>공급가액</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th>
-                              <span class="tit"
-                                >부가세
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>부가세</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th><span class="tit">매출유형</span></th>
                             <th>
-                              <span class="tit"
-                                >공급건수
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>공급건수</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th><span class="tit">취소건수</span></th>
                             <th>
-                              <span class="tit"
-                                >취소금액
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>취소금액</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th>
-                              <span class="tit"
-                                >총 공급가액
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>총 공급가액</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                             <th>
-                              <span class="tit"
-                                >총 취소금액
-                                <span class="sort-wrap">
-                                  <button type="button" class="btn-sort">
+                              <span class="tit">
+                                <button type="button" class="btn-order">
+                                  <span>총 취소금액</span>
+                                  <span class="sort-wrap">
                                     <i class="icon-comm i--gt-u"></i>
-                                    <span class="blind">오름차순</span>
-                                  </button>
-                                  <button type="button" class="btn-sort">
                                     <i class="icon-comm i--gt-d"></i>
-                                    <span class="blind">내림차순</span>
-                                  </button>
-                                </span>
+                                  </span>
+                                </button>
                               </span>
                             </th>
                           </tr>
@@ -2863,7 +2793,6 @@
       </div>
       <!-- console-root -->
     </div>
-
     <script src="../js/custom.js"></script>
   </body>
 </html>

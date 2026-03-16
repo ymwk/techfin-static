@@ -167,7 +167,7 @@
   &.t--db {
     padding: 24px 32px;
     border-color: var(--c-border2);
-    background-color: #f9f9f9;
+    background-color: var(--c-bg);
     flex-wrap: wrap;
 
     .headline-title {
@@ -587,7 +587,7 @@ td .msg-list {
   gap: 16px;
   padding: 24px;
   border-radius: 16px;
-  background-color: #f9f9f9;
+  background-color: var(--c-bg);
   font-size: 14px;
   color: var(--c-gray1);
   font-weight: 500;
@@ -663,7 +663,7 @@ td .msg-list {
   display: flex;
   padding: 16px;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--c-bg);
   font-size: 13px;
   color: var(--c-gray1);
   line-height: 1.4;

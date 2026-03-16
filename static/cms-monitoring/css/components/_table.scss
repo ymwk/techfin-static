@@ -107,7 +107,7 @@
   th {
     height: 56px;
     border-bottom: 1px solid var(--c-border2);
-    background-color: #f9f9f9;
+    background-color: var(--c-bg);
     vertical-align: middle;
     font-weight: 500;
   }
@@ -200,7 +200,7 @@
   }
 
   .tfoot-comm td {
-    background-color: #f9f9f9 !important;
+    background-color: var(--c-bg) !important;
     font-weight: 500;
   }
 
@@ -688,6 +688,10 @@
   }
 }
 
+.table-datagrid tbody tr.ac--selected {
+  background-color: #f0f4ff !important;
+}
+
 .sort-wrap {
   display: inline-flex;
   flex-direction: column;
@@ -702,6 +706,40 @@
 
     .icon-comm {
       scale: 0.8;
+    }
+  }
+}
+
+.btn-order {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #e8e8eb;
+  }
+
+  .icon-comm {
+    margin: 0;
+    aspect-ratio: unset;
+    height: 4px;
+    scale: 0.85;
+    color: var(--c-gray2);
+  }
+
+  .i--gt-d {
+    color: var(--c-black);
+  }
+
+  &.ac--asc {
+    .i--gt-u {
+      color: var(--c-black);
+    }
+    .i--gt-d {
+      color: var(--c-gray2);
     }
   }
 }

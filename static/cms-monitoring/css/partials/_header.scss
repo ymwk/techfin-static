@@ -181,7 +181,7 @@
       transition: background-color 0.2s;
 
       &:hover {
-        background-color: #f1f1f3;
+        background-color: var(--c-bg);
       }
     }
   }
@@ -331,7 +331,7 @@
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: #f1f1f3;
+      background-color: var(--c-bg);
     }
   }
 
@@ -354,7 +354,7 @@
   .textfield-form {
     height: 36px;
     padding-left: 34px;
-    background-color: #f9f9f9;
+    background-color: var(--c-bg);
 
     &:hover {
       background-color: #f1f1f3;
@@ -442,7 +442,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #f1f1f3;
+        background-color: var(--c-bg);
       }
     }
 

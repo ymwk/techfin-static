@@ -260,6 +260,55 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // 클릭위치에 토스트 생성
+  const targetRows = document.querySelectorAll('#floatingToastTable tbody tr');
+  let activeCloseListener = null;
+
+  targetRows.forEach((row) => {
+    row.addEventListener('click', (e) => {
+      // 초기화
+      if (activeCloseListener) document.removeEventListener('click', activeCloseListener);
+      document
+        .querySelectorAll('#floatingToastTable tr.ac--selected')
+        .forEach((el) => el !== row && el.classList.remove('ac--selected'));
+
+      const oldToast = document.querySelector('.toast-root.t--floating');
+      if (oldToast) oldToast.remove();
+
+      // 생성
+      row.classList.add('ac--selected');
+      const toast = document.createElement('div');
+      toast.className = 'toast-root t--floating';
+      toast.innerHTML = `
+      <div class="toast-box">
+        <p class="toast-icon">선택한 거래처로만 필터링해서 보시겠습니까?</p>
+        <div class="toast-btns">
+          <button type="button" class="btn-contained s--xs btn-confirm">선택한 거래처만 보기</button>
+          <button type="button" class="btn-comm s--xs btn-cancel">취소</button>
+        </div>
+      </div>`;
+      document.body.appendChild(toast);
+
+      // 위치지정
+      const rect = toast.getBoundingClientRect();
+      let x = Math.max(rect.width / 2 + 10, Math.min(e.clientX, window.innerWidth - rect.width / 2 - 10));
+      toast.style.cssText = `left: ${x}px; top: ${e.clientY}px;`;
+
+      const close = () => {
+        row.classList.remove('ac--selected');
+        toast.remove();
+        document.removeEventListener('click', activeCloseListener);
+        activeCloseListener = null;
+      };
+
+      toast.querySelector('.btn-confirm').onclick = () => (console.log('필터링 실행'), close());
+      toast.querySelector('.btn-cancel').onclick = close;
+
+      activeCloseListener = (ev) => !toast.contains(ev.target) && !row.contains(ev.target) && close();
+      setTimeout(() => document.addEventListener('click', activeCloseListener), 0);
+    });
+  });
 });
 
 // file change
