@@ -3,9 +3,13 @@
 
   .console-area,
   .console-contents-inner {
-    max-width: unset;
+    max-width: 100%;
     padding-left: 40px;
     padding-right: 40px;
+  }
+  
+  .console-contents {
+    overflow: auto
   }
 
   .console-header {

@@ -146,8 +146,6 @@
   margin-top: -33px;
 }
 
-
-
 .filter-chip-list {
   display: flex;
   flex-wrap: wrap;
@@ -158,7 +156,7 @@
     align-items: center;
     height: 26px;
     padding: 0 4px 0 8px;
-    background-color: #F0F4FF;
+    background-color: #f0f4ff;
     border-radius: 6px;
     font-size: 13px;
     color: var(--c-gray1);
@@ -185,7 +183,7 @@
   }
 
   --chk-h: 40px;
-  
+
   height: calc(var(--chk-h) * 5 + 16px);
 
   .checklist-box {
@@ -198,14 +196,14 @@
     &:not(:first-child) {
       border-left: 1px solid var(--c-border2);
     }
-    
+
     .empty-msg {
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: var(--c-gray2)
+      color: var(--c-gray2);
     }
   }
 
@@ -224,9 +222,9 @@
     font-weight: 500;
     color: var(--c-gray1);
     transition: background-color 0.2s;
-    
+
     [type='checkbox'] {
-      transition: box-shadow .2s
+      transition: box-shadow 0.2s;
     }
 
     &:hover,
@@ -237,57 +235,15 @@
       }
     }
   }
-  
+
   .search-empty {
     font-size: 14px;
-    color: var(--c-gray2)
+    color: var(--c-gray2);
   }
 }
 
 .searchbox-root:has(.searchbox-filter-result) {
   flex-wrap: wrap;
-}
-
-.searchbox-root .searchbox-filter-result {
-  padding-top: 16px;
-  margin-top: -8px;
-  border-top: 1px solid var(--c-border2);
-}
-
-.searchbox-filter-result {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  width: 100%;
-
-  .chip {
-    display: inline-flex;
-    align-items: center;
-    height: 32px;
-    padding-left: 8px;
-    border: 1px solid #e8e8eb;
-    border-radius: 6px;
-    background-color: #fff;
-
-    & > .icon-comm {
-      margin-right: 2px;
-      margin-left: -4px;
-    }
-
-    .btn-icon {
-      width: 24px;
-      height: 30px;
-    }
-  }
-}
-
-.searchbox-filter-btns {
-  margin-left: auto;
-
-  .btn-comm {
-    height: 40px;
-  }
 }
 
 .select-btns {

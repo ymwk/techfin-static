@@ -432,442 +432,404 @@
 
             <div class="console-contents-inner">
               <div class="cont-headline">
-                <h2 class="font-h2">월별매입매출</h2>
-                <p>기업의 월 단위 상세 데이터를 조회할 수 있습니다.</p>
+                <h2 class="font-h2">사기거래탐지</h2>
+                <p>월단위 매입매출 데이터를 바탕으로 사기 및 의심거래를 탐지합니다.</p>
+                <div class="headline-utils">
+                  <button type="button" class="btn-comm">
+                    <i class="icon-comm i--hamburger s--sm"></i>
+                    <span>목록</span>
+                  </button>
+                </div>
               </div>
 
-              <!-- 검색 -->
-              <div class="searchbox-root">
-                <div class="searchbox-item s--full">
-                  <span class="searchbox-label">기업정보</span>
-                  <div class="textfield-root">
-                    <label class="textfield-label">
-                      <span class="label blind">검색키워드</span>
-                      <input
-                        type="text"
-                        class="textfield-form"
-                        name=""
-                        placeholder="기업명 또는 사업자번호를 입력해 주세요."
-                      />
-                    </label>
-                  </div>
-                </div>
-
-                <div class="searchbox-btns">
-                  <button type="button" class="btn-contained">조회</button>
-                  <div class="search-filter-root popper-comm-root">
-                    <button type="button" class="btn-comm btn-popper">
-                      <i class="icon-comm i--filter"></i>
-                      <span class="blind">Filter</span>
-                    </button>
-
-                    <div class="popper-comm search-filter-popper">
-                      <div class="filter-header">
-                        <h3 class="font-h3">상세 검색 필터</h3>
-                        <button type="button" class="btn-icon btn-popper-close">
-                          <i class="icon-comm i--close s--lg"></i>
-                        </button>
-                      </div>
-
-                      <div class="tabmenu-menu s--full">
-                        <button type="button" class="tabmenu-btn ac--active">지역</button>
-                        <button type="button" class="tabmenu-btn">업종</button>
-                        <button type="button" class="tabmenu-btn">기업구분</button>
-                        <button type="button" class="tabmenu-btn">자산규모</button>
-                        <button type="button" class="tabmenu-btn">매출규모</button>
-                      </div>
-
-                      <div class="filter-cont">
-                        <h3 class="font-h4">주소검색</h3>
-                        <div class="textfield-root">
-                          <label class="textfield-label">
-                            <input type="text" class="textfield-form" name="" placeholder="시/도/군/구/입력" />
-                            <button type="button" class="btn-comm">검색</button>
-                          </label>
-                        </div>
-
-                        <div class="filter-checklist-root">
-                          <div class="checklist-box">
-                            <div class="radiocheck-root">
-                              <label class="radiocheck-label ac--active">
-                                <span>서울특별시</span>
-                                <input type="checkbox" name="" checked />
-                              </label>
-
-                              <label class="radiocheck-label">
-                                <span>경기도</span>
-                                <input type="checkbox" name="" />
-                              </label>
-
-                              <label class="radiocheck-label">
-                                <span>대전광역시</span>
-                                <input type="checkbox" name="" />
-                              </label>
-
-                              <label class="radiocheck-label">
-                                <span>부산광역시</span>
-                                <input type="checkbox" name="" />
-                              </label>
-
-                              <label class="radiocheck-label">
-                                <span>광주광역시</span>
-                                <input type="checkbox" name="" />
-                              </label>
-
-                              <label class="radiocheck-label">
-                                <span>인천광역시</span>
-                                <input type="checkbox" name="" />
-                              </label>
-                            </div>
-                          </div>
-                          <div class="checklist-box">
-                            <div class="radiocheck-root">
-                              <label class="radiocheck-label">
-                                <em>전체</em>
-                                <input type="checkbox" name="" />
-                              </label>
-
-                              <label class="radiocheck-label">
-                                <span>종로구</span>
-                                <input type="checkbox" name="" checked />
-                              </label>
-
-                              <label class="radiocheck-label">
-                                <span>중구</span>
-                                <input type="checkbox" name="" />
-                              </label>
-
-                              <label class="radiocheck-label">
-                                <span>용산구</span>
-                                <input type="checkbox" name="" />
-                              </label>
-
-                              <label class="radiocheck-label">
-                                <span>성동구</span>
-                                <input type="checkbox" name="" />
-                              </label>
-
-                              <label class="radiocheck-label">
-                                <span>금천구</span>
-                                <input type="checkbox" name="" />
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="filter-footer">
-                          <div class="filter-chip-list">
-                            <button class="btn-chip">
-                              <span>주소</span>
-                              <i class="icon-comm i--close s--sm"></i>
-                              <span class="blind">삭제</span>
-                            </button>
-
-                            <button class="btn-chip">
-                              <span>업종</span>
-                              <i class="icon-comm i--close s--sm"></i>
-                              <span class="blind">삭제</span>
-                            </button>
-                          </div>
-
-                          <button type="button" class="btn-text">
-                            <i class="icon-comm i--refresh s--sm"></i>
-                            <span>초기화</span>
-                          </button>
-                        </div>
-
-                        <!-- // filter-footer -->
-                      </div>
-                      <!-- // filter-cont -->
-
-                      <div class="filter-action">
-                        <button type="button" class="btn-contained">적용</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- // searchbox-btns -->
+              <div class="cont-headline-box t--db t--filter">
+                <div class="headline-title"><em>분석 대상 기업</em></div>
 
                 <div class="searchbox-filter-result">
                   <span class="chip">
-                    <i class="icon-comm i--sort"></i>
-                    <span>업종 : 도소매 외 1개</span>
-                    <button type="button" class="btn-icon">
-                      <i class="icon-comm i--close s--sm"></i>
-                      <span class="blind">삭제</span>
-                    </button>
+                    <span>조선내화</span>
                   </span>
-
                   <span class="chip">
-                    <i class="icon-comm i--sort"></i>
-                    <span>업종 : 도소매 외 1개</span>
-                    <button type="button" class="btn-icon">
-                      <i class="icon-comm i--close s--sm"></i>
-                      <span class="blind">삭제</span>
-                    </button>
+                    <span>기업1</span>
                   </span>
-
                   <span class="chip">
-                    <i class="icon-comm i--sort"></i>
-                    <span>기업구분 : 법인</span>
-                    <button type="button" class="btn-icon">
-                      <i class="icon-comm i--close s--sm"></i>
-                      <span class="blind">삭제</span>
-                    </button>
+                    <span>기업2</span>
                   </span>
-
-                  <div class="searchbox-filter-btns">
-                    <button type="button" class="btn-comm">
-                      <i class="icon-comm i--refresh"></i>
-                      <span class="blind">refresh</span>
-                    </button>
-                  </div>
+                  <span class="chip">
+                    <span>기업3</span>
+                  </span>
+                  <span class="chip">
+                    <span>기업4</span>
+                  </span>
                 </div>
+                <!-- // searchbox-filter-result -->
               </div>
-              <!-- //searchbox-root -->
+              <!-- // cont-headline-box -->
 
-              <div class="datagrid-container">
-                <div class="table-header">
-                  <div class="count font-h3">
-                    총<em>512,324</em>개의 기업데이터를 확인하실 수 있습니다.
-                    <div class="tooltip-root ac-hover">
-                      <button type="button" class="btn-icon">
-                        <i class="icon-comm i--tooltip"></i>
-                        <span class="blind">툴팁보기</span>
-                      </button>
-                      <div class="tooltip-popper">
-                        <div class="tooltip-box">
-                          <p class="msg">
-                            데이터 기준월 최신 기준으로 정렬되었으며, <br />
-                            매월 최신 정보로 갱신됩니다.
-                          </p>
+              <div class="tabmenu-menu">
+                <button type="button" class="tabmenu-btn ac--active" onclick="location.href = './doubt.html'">
+                  의심거래탐지
+                </button>
+                <button type="button" class="tabmenu-btn" onclick="location.href = './carousel.html'">
+                  회전거래탐지
+                </button>
+              </div>
+
+              <div class="tabmenu-content">
+                <div class="tabmenu-filter">
+                  <button type="button" class="tabmenu-btn ac--active" data-target-tab="filter1">2022</button>
+                  <button type="button" class="tabmenu-btn" data-target-tab="filter2">2023</button>
+                  <button type="button" class="tabmenu-btn" data-target-tab="filter3">2024</button>
+                  <button type="button" class="tabmenu-btn" data-target-tab="filter4">2025</button>
+                </div>
+
+                <div class="tabmenu-content" id="filter1">
+                  <section class="section-detect">
+                    <div class="table-header">
+                      <div class="count font-h3">
+                        <h3>탐지 상세 내역</h3>
+                        <div class="tooltip-root ac-hover">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span class="blind">툴팁보기</span>
+                          </button>
+                          <div class="tooltip-popper">
+                            <div class="tooltip-box">
+                              <p class="msg">
+                                데이터 기준월 최신 기준으로 정렬되었으며, <br />
+                                매월 최신 정보로 갱신됩니다.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="utils">
+                        <button type="button" class="btn-comm">
+                          <i class="icon-comm i--panel"></i>
+                          <span>상세설명보기</span>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- // table-header -->
+
+                    <div class="table-detect-wrap table-xscroll">
+                      <table class="table-detect">
+                        <colgroup>
+                          <col style="width: 240px" />
+                          <col style="width: 200px" />
+                          <col style="width: 400px" />
+                          <col style="width: 145px" span="7" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th colspan="3">탐지 기준</th>
+                            <td>
+                              <em class="tit">조선내화</em>
+                              <span>201-88-44444</span>
+                            </td>
+                            <td>
+                              <em class="tit">더존철강</em>
+                              <span>201-88-44444</span>
+                            </td>
+                            <td>
+                              <em class="tit">한일시멘트(주)</em>
+                              <span>201-88-44444</span>
+                            </td>
+                            <td>
+                              <em class="tit">기업 4</em>
+                              <span>201-88-44444</span>
+                            </td>
+                            <td>
+                              <em class="tit">기업 5</em>
+                              <span>201-88-44444</span>
+                            </td>
+                            <td>
+                              <em class="tit">기업 6</em>
+                              <span>201-88-44444</span>
+                            </td>
+                            <td>
+                              <em class="tit">기업 7</em>
+                              <span>201-88-44444</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colspan="3">사기의심 징후</th>
+                            <td><span class="grade-label g--warn">주의</span></td>
+                            <td><span class="grade-label g--defer">유보</span></td>
+                            <td><span class="grade-label g--observe">관찰</span></td>
+                            <td><span class="grade-label g--normal">정상</span></td>
+                            <td><span class="grade-label g--normal">정상</span></td>
+                            <td><span class="grade-label g--normal">정상</span></td>
+                            <td><span class="grade-label g--normal">정상</span></td>
+                          </tr>
+                          <tr>
+                            <th colspan="3">사기의심 스코어</th>
+                            <td><em>50점</em></td>
+                            <td><em>50점</em></td>
+                            <td><em>50점</em></td>
+                            <td><em>50점</em></td>
+                            <td><em>50점</em></td>
+                            <td><em>50점</em></td>
+                            <td><em>50점</em></td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th rowspan="2">대금 거래 실재성 탐지</th>
+                            <th>매출 대금 회수 이력(판매자)</th>
+                            <th>선택한 회사들로부터 매출 대금을 회수한 이력이 한번도 없습니까?</th>
+                            <td>
+                              <div class="tooltip-root ac-hover t--detect">
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--tooltip"></i>
+                                  <span class="blind">툴팁보기</span>
+                                </button>
+                                <div class="tooltip-popper">
+                                  <div class="tooltip-box">
+                                    <span class="tit">관련기업 정보</span>
+                                    <p class="msg"><span class="label">관련기업</span>더존철강, 한일시멘트(주)</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>-</td>
+                            <td>
+                              <div class="tooltip-root ac-hover t--detect">
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--tooltip"></i>
+                                  <span class="blind">툴팁보기</span>
+                                </button>
+                                <div class="tooltip-popper">
+                                  <div class="tooltip-box">
+                                    <span class="tit">관련기업 정보</span>
+                                    <p class="msg"><span class="label">관련기업</span>더존철강, 한일시멘트(주)</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <th>매출 대금 지급 이력(구매자)</th>
+                            <th>선택한 회사들로부터 매입 대금을 지급한 이력이 한번도 없습니까?</th>
+                            <td>-</td>
+                            <td>
+                              <div class="tooltip-root ac-hover t--detect">
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--tooltip"></i>
+                                  <span class="blind">툴팁보기</span>
+                                </button>
+                                <div class="tooltip-popper">
+                                  <div class="tooltip-box">
+                                    <span class="tit">관련기업 정보</span>
+                                    <p class="msg"><span class="label">관련기업</span>더존철강, 한일시멘트(주)</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>
+                              <div class="tooltip-root ac-hover t--detect">
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--tooltip"></i>
+                                  <span class="blind">툴팁보기</span>
+                                </button>
+                                <div class="tooltip-popper">
+                                  <div class="tooltip-box">
+                                    <span class="tit">관련기업 정보</span>
+                                    <p class="msg"><span class="label">관련기업</span>더존철강, 한일시멘트(주)</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>-</td>
+                          </tr>
+
+                          <tr>
+                            <th rowspan="3">회전거래 탐지</th>
+                            <th>회전거래 업체 연루 여부</th>
+                            <th>회전거래 업체와 한 곳이라도 거래한 이력이 있습니까?</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <th>회전거래 업체 여부</th>
+                            <th>해당 회사가 회전거래 업체로 분류되어 있습니까?</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <th>회전거래 참여 여부</th>
+                            <th>
+                              선택한 회사 간 회전거래가 존재할 경우, 해당 회사가 그 거래 관계에 포함되어 있습니까?
+                            </th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+
+                          <tr>
+                            <th rowspan="3">고위험 거래처 연루 탐지</th>
+                            <th>폭탄 업체 연루 여부</th>
+                            <th>폭탄 업체(국세 체납 업체)로 분류된 회사와 한 곳이라도 거래한 이력이 있습니까?</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <th>가공거래 업체 연루 여부</th>
+                            <th>
+                              가공거래 업체(실질적 경제활동이 수반되지 않는 거래 업체)로 분류된 회사와 한 곳이라도
+                              거래한 이력이 있습니까?
+                            </th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <th>가공거래 여부</th>
+                            <th>해당 회사가 가공거래 업체로 분류되어 있습니까?</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+
+                          <tr>
+                            <th rowspan="4">인적·물적 연계성(특수관계) 탐지</th>
+                            <th>동일 세무대리인 여부</th>
+                            <th>해당 회사와 선택한 회사의 세무대리인이 동일합니까?</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <th>사업장 주소지 유사성</th>
+                            <th>해당 회사와 선택한 회사의 사업장 주소지가 매우 유사합니까?</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <th>주주 구성 동일성</th>
+                            <th>해당 회사와 선택한 회사의 주주 또는 지분구조가 매우 유사합니까?</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <th>동일 대표자 여부</th>
+                            <th>해당 회사와 선택한 회사의 대표자가 동일합니까?</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+
+                  <section class="section-detect">
+                    <div class="table-header">
+                      <div class="count font-h3">
+                        <h3>기업별 상세 분석</h3>
+                        <div class="tooltip-root ac-hover">
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--tooltip"></i>
+                            <span class="blind">툴팁보기</span>
+                          </button>
+                          <div class="tooltip-popper">
+                            <div class="tooltip-box">
+                              <p class="msg">기업을 선택하면 해당 기업의<br />상세 분석 내용을 확인할 수 있습니다.</p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                    <!-- // table-header -->
 
-                <div class="table-wrap table-link">
-                  <table class="table-datagrid">
-                    <colgroup>
-                      <col style="width: 60px" />
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th><span class="tit">번호</span></th>
-                        <th><span class="tit">기업명</span></th>
-                        <th><span class="tit">사업자등록번호</span></th>
-                        <th><span class="tit">기업구분</span></th>
-                        <th><span class="tit">대표자명</span></th>
-                        <th><span class="tit">업종</span></th>
-                        <th><span class="tit">기업주소</span></th>
-                        <th><span class="tit">설립연도</span></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">정형 내화 요업제품 제조업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">서울특별시 강서구 공항대로 18-1</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>11</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>12</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">정형 내화 요업제품 제조업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>13</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">서울특별시 강서구 공항대로 18-1</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>14</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                      <tr>
-                        <td>15</td>
-                        <td class="al--left">삼성전자</td>
-                        <td>370-88-12345</td>
-                        <td>법인</td>
-                        <td>홍길동</td>
-                        <td class="al--left">의료업</td>
-                        <td class="al--left">경기도 성남시 분당구 판교역로 10번길</td>
-                        <td>2025.11.01</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                    <div class="tabmenu-menu s--sm">
+                      <button type="button" class="tabmenu-btn ac--active" data-target-tab="company1">조선내화</button>
+                      <button type="button" class="tabmenu-btn" data-target-tab="company2">기업1</button>
+                      <button type="button" class="tabmenu-btn" data-target-tab="company2">기업2</button>
+                      <button type="button" class="tabmenu-btn" data-target-tab="company2">기업3</button>
+                      <button type="button" class="tabmenu-btn" data-target-tab="company2">기업4</button>
+                    </div>
 
-                <div class="pagenation-root">
-                  <button type="button" class="pagenation-btn" disabled>
-                    <i class="icon-comm i--first"></i>
-                    <span class="blind">First Page</span>
-                  </button>
-                  <button type="button" class="pagenation-btn" disabled>
-                    <i class="icon-comm i--prev"></i>
-                    <span class="blind">Prev Page</span>
-                  </button>
-                  <button type="button" class="pagenation-btn ac--active">
-                    <span>1</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>2</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>3</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>4</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>5</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>6</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>7</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>8</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>9</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <span>10</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <i class="icon-comm i--next"></i>
-                    <span class="blind">Next Page</span>
-                  </button>
-                  <button type="button" class="pagenation-btn">
-                    <i class="icon-comm i--last"></i>
-                    <span class="blind">Last Page</span>
-                  </button>
+                    <div class="tabmenu-content" id="company1">
+                      <h4 class="font-h4 mt16">분석 결과 요약</h4>
+                      <div class="detect-result-box mt16">
+                        <ul class="detect-result-list">
+                          <li>동일 업체와의 다수 거래 존재</li>
+                          <li>회전 거래 다수 포착됨</li>
+                          <li>거래처 간 주소 유사도 높음</li>
+                          <li>거래처 간 주소 유사도 높음</li>
+                        </ul>
+                        <div class="detect-result-ai">
+                          <div class="tit">
+                            <i class="icon-comm i--ai"></i>
+                            <span>AI Comment</span>
+                          </div>
+                          <div class="cont">
+                            이 기업이 ‘주의' 인 이슈 설명(코멘트 자동 생성)<br />
+                            초기에는 설정된 규칙(Rule-based)에 따라 분석 결과를 제공하고,<br />
+                            향후 AI 모델을 도입하여 탐지 고도화 추진 예정
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- // tabmenu-content -->
+                  </section>
                 </div>
+                <!-- // tabmenu-content -->
               </div>
+              <!-- // tabmenu-content -->
             </div>
           </main>
           <!-- Main Contents End -->

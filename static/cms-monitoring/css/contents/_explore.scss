@@ -29,18 +29,6 @@
   flex-direction: column;
 }
 
-.explore-filter-box {
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px dashed var(--c-border2);
-  
-  .btn-text {
-    width: 100%;
-    padding: 4px;
-    font-size: 14px
-  }
-}
-
 .tag-list {
   display: flex;
   flex-wrap: wrap;

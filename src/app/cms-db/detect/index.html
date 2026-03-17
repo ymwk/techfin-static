@@ -432,9 +432,20 @@
 
             <div class="console-contents-inner">
               <div class="cont-headline">
-                <h2 class="font-h2">월별매입매출</h2>
-                <p>기업의 월 단위 상세 데이터를 조회할 수 있습니다.</p>
+                <h2 class="font-h2">사기거래탐지</h2>
+                <p>월단위 매입매출 데이터를 바탕으로 사기 및 의심거래를 탐지합니다.</p>
               </div>
+
+              <div class="table-header">
+                <div class="count font-h3">분석할 기업을 선택해 주세요 (최대 <em>7</em>개)</div>
+              </div>
+
+              <div class="searchbox-filter-result explore-filter-box">
+                <span class="empty">선택된 기업이 없습니다.</span>
+              </div>
+              <!-- // searchbox-filter-result -->
+
+              <div class="mt30"></div>
 
               <!-- 검색 -->
               <div class="searchbox-root">
@@ -587,42 +598,6 @@
                   </div>
                 </div>
                 <!-- // searchbox-btns -->
-
-                <div class="searchbox-filter-result">
-                  <span class="chip">
-                    <i class="icon-comm i--sort"></i>
-                    <span>업종 : 도소매 외 1개</span>
-                    <button type="button" class="btn-icon">
-                      <i class="icon-comm i--close s--sm"></i>
-                      <span class="blind">삭제</span>
-                    </button>
-                  </span>
-
-                  <span class="chip">
-                    <i class="icon-comm i--sort"></i>
-                    <span>업종 : 도소매 외 1개</span>
-                    <button type="button" class="btn-icon">
-                      <i class="icon-comm i--close s--sm"></i>
-                      <span class="blind">삭제</span>
-                    </button>
-                  </span>
-
-                  <span class="chip">
-                    <i class="icon-comm i--sort"></i>
-                    <span>기업구분 : 법인</span>
-                    <button type="button" class="btn-icon">
-                      <i class="icon-comm i--close s--sm"></i>
-                      <span class="blind">삭제</span>
-                    </button>
-                  </span>
-
-                  <div class="searchbox-filter-btns">
-                    <button type="button" class="btn-comm">
-                      <i class="icon-comm i--refresh"></i>
-                      <span class="blind">refresh</span>
-                    </button>
-                  </div>
-                </div>
               </div>
               <!-- //searchbox-root -->
 
@@ -651,21 +626,48 @@
                   <table class="table-datagrid">
                     <colgroup>
                       <col style="width: 60px" />
+                      <col style="width: 60px" />
                     </colgroup>
                     <thead>
                       <tr>
+                        <th><span class="tit"></span></th>
                         <th><span class="tit">번호</span></th>
-                        <th><span class="tit">기업명</span></th>
+                        <th>
+                          <span class="tit">
+                            <button type="button" class="btn-order">
+                              <span>기업명</span>
+                              <span class="sort-wrap">
+                                <i class="icon-comm i--gt-u"></i>
+                                <i class="icon-comm i--gt-d"></i>
+                              </span>
+                            </button>
+                          </span>
+                        </th>
                         <th><span class="tit">사업자등록번호</span></th>
                         <th><span class="tit">기업구분</span></th>
                         <th><span class="tit">대표자명</span></th>
                         <th><span class="tit">업종</span></th>
                         <th><span class="tit">기업주소</span></th>
-                        <th><span class="tit">설립연도</span></th>
+                        <th>
+                          <span class="tit">
+                            <button type="button" class="btn-order">
+                              <span>설립연도</span>
+                              <span class="sort-wrap">
+                                <i class="icon-comm i--gt-u"></i>
+                                <i class="icon-comm i--gt-d"></i>
+                              </span>
+                            </button>
+                          </span>
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>1</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -676,6 +678,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>2</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -686,6 +693,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>3</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -696,6 +708,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>4</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -706,6 +723,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>5</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -716,6 +738,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>6</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -726,6 +753,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>7</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -736,6 +768,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>8</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -746,6 +783,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>9</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -756,6 +798,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>10</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -766,6 +813,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>11</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -776,6 +828,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>12</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -786,6 +843,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>13</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -796,6 +858,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>14</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>
@@ -806,6 +873,11 @@
                         <td>2025.11.01</td>
                       </tr>
                       <tr>
+                        <td>
+                          <label class="radiocheck-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                         <td>15</td>
                         <td class="al--left">삼성전자</td>
                         <td>370-88-12345</td>

@@ -27,6 +27,12 @@
       right: -10px;
     }
   }
+  
+  &.t--detect {
+    .icon-comm.i--tooltip {
+      background-image: url(../image/icon/ic_tooltip_warn.svg);
+    }
+  }
 }
 
 .tooltip-popper {
@@ -44,12 +50,13 @@
   position: relative;
   width: 320px;
   padding: 10px 12px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid var(--c-border2);
   background-color: #fff;
   color: var(--c-black);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.4;
+  font-weight: 400;
   text-align: left;
   white-space: normal;
   box-shadow: 0px 3px 12px 0px #00000012;
@@ -68,10 +75,10 @@
       font-weight: 400;
     }
   }
-
-  .msg {
-    font-size: 13px;
-    font-weight: 400;
+  
+  .label {
+    font-weight: 500;
+    padding-right: 4px;
   }
 
   ul {
