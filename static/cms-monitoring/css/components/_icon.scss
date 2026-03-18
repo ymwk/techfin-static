@@ -265,6 +265,46 @@
   width: 16px;
   background-image: url(../image/icon/ic_ai.svg);
 }
+.i--account {
+  width: 32px;
+  background-image: url(../image/icon/ic_users.svg);
+}
+.i--company {
+  width: 32px;
+  background-image: url(../image/icon/ic_company.svg);
+}
+.i--lock-g {
+  width: 32px;
+  background-image: url(../image/icon/ic_lock_g.svg);
+}
+.i--doc-gr {
+  width: 32px;
+  background-image: url(../image/icon/ic_doc_gr.svg);
+}
+.i--plan-graph {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_graph.svg);
+}
+.i--plan-text {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_text.svg);
+}
+.i--plan-file {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_file.svg);
+}
+.i--plan-customer {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_customer.svg);
+}
+.i--plan-users {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_users.svg);
+}
+.i--plan-company {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_company.svg);
+}
 
 .i--plus,
 .i--minus {
@@ -527,6 +567,20 @@
 .i--check {
   width: 48px;
   background-image: url(../image/icon/ic_alert_check.svg);
+}
+.i--check-list {
+  color: var(--c-primary);
+  &::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 9px;
+    margin-top: -2px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    border-radius: 2px;
+  }
 }
 
 .i--more {

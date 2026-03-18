@@ -174,12 +174,12 @@
   gap: 12px;
   width: 100%;
   color: var(--c-primary);
-  
+
   &.t--rows {
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    
+
     .progressbar {
       flex-grow: 1;
     }
@@ -196,11 +196,31 @@
     }
   }
 
+  .tit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .icon-comm {
+      width: 40px;
+      background-color: #fff;
+      border: 1px solid var(--c-border2);
+      border-radius: 8px;
+    }
+  }
+
+  .empty {
+    display: flex;
+    align-items: center;
+    height: 10px;
+    font-weight: 700;
+    color: var(--c-gray1);
+  }
+
   .progressbar {
     height: 10px;
     border-radius: 10px;
     background-color: #d4d4d9;
-  
 
     .value {
       height: 100%;
@@ -211,16 +231,54 @@
 }
 
 .table-datagrid .progressbar {
-  height: 8px
+  height: 8px;
 }
 
 /////////////////////////// legend
 .progress-wrap {
   &.legend-01 {
     color: #17bbd3 !important;
+    .label em {
+      color: #17bbd3 !important;
+    }
   }
   &.legend-02 {
     color: #6249da !important;
+    .label em {
+      color: #6249da !important;
+    }
+  }
+  &.legend-03 {
+    .progressbar {
+      background-color: #e8e8eb;
+      .value {
+        background: linear-gradient(90.26deg, #3b5dfb 0.23%, #7d98ff 113.21%);
+      }
+    }
+  }
+  &.legend-04 {
+    color: #6249da !important;
+    .label em {
+      color: #6249da !important;
+    }
+    .progressbar {
+      background-color: #e8e8eb;
+      .value {
+        background: linear-gradient(90.26deg, #8980ff 0.23%, #aba8ff 113.21%);
+      }
+    }
+  }
+  &.legend-05 {
+    color: #17bbd3 !important;
+    .label em {
+      color: #17bbd3 !important;
+    }
+    .progressbar {
+      background-color: #e8e8eb;
+      .value {
+        background: linear-gradient(90.27deg, #17bbd3 0.24%, #5fcddd 108.42%);
+      }
+    }
   }
 }
 

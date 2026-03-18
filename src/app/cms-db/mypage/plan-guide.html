@@ -431,174 +431,256 @@
             </header>
 
             <div class="console-contents-inner">
-              <div class="cont-headline">
-                <h2 class="font-h2">1:1문의</h2>
+              <div class="cont-headline t--guide">
+                <h2 class="font-h2">플랜 안내</h2>
+                <p>비즈니스 규모와 필요에 적합한 플랜을 확인할 수 있습니다.</p>
               </div>
 
-              <div class="msg-box">
-                <div class="msg-column">
-                  <p class="font-h6">문의 전 확인해주세요!</p>
-                  <ul class="noti-bullet-list s--sm c--black">
-                    <li>
-                      답변 등록 시, 입력하신 휴대폰번호로 안내 문자가 발송되며 답변 내용은 입력하신 이메일로도 함께
-                      받아보실 수 있습니다.
-                    </li>
-                  </ul>
-                </div>
+              <div class="tabmenu-switch">
+                <button type="button" class="tabmenu-btn ac--active" data-target-tab="plan1">일반 플랜</button>
+                <button type="button" class="tabmenu-btn" data-target-tab="plan2">엔터프라이즈 플랜</button>
               </div>
 
-              <div class="table-header mt32">
-                <div class="count font-h3">문의내용</div>
-              </div>
-              <div class="table-wrap">
-                <table class="table-rows">
-                  <tbody>
-                    <tr>
-                      <th><span class="require">문의유형</span></th>
-                      <td>
-                        <div class="radiocheck-root">
-                          <label class="radiocheck-label">
-                            <input type="radio" name="radiogroup2" checked="" />
-                            <span>회원서비스</span>
-                          </label>
-                          <label class="radiocheck-label">
-                            <input type="radio" name="radiogroup2" />
-                            <span>결제</span>
-                          </label>
-                          <label class="radiocheck-label">
-                            <input type="radio" name="radiogroup2" />
-                            <span>이벤트</span>
-                          </label>
-                          <label class="radiocheck-label">
-                            <input type="radio" name="radiogroup2" />
-                            <span>기타</span>
-                          </label>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th><span class="require">문의제목</span></th>
-                      <td>
-                        <div class="textfield-root">
-                          <label class="textfield-label">
-                            <input type="text" class="textfield-form" name="" placeholder="문의 제목을 입력해주세요." />
-                          </label>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th><span class="require">문의내용</span></th>
-                      <td>
-                        <textarea
-                          name=""
-                          id=""
-                          class="textarea-form"
-                          placeholder="문의 내용을 입력해주세요."
-                        ></textarea>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>첨부파일</th>
-                      <td>
-                        <div class="filefield-wrap">
-                          <label class="filefield-root">
-                            <input type="file" name="" />
-                            <span class="btn-comm">
-                              <i class="icon-comm i--file"></i>
-                              <span>첨부파일</span>
-                            </span>
-                          </label>
+              <div class="tabmenu-content" id="plan1">
+                <ul class="plan-guide-list">
+                  <li class="box-panel">
+                    <div class="title">
+                      <span class="tit">Lite</span>
+                      <p>소규모 기업을 위한 기본 플랜</p>
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>플랜 공통 기능과 혜택</span>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>기업조회 월 100개</span>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>이용 계정 1개</span>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn-contained s--md w--full">가격 문의</button>
+                  </li>
 
-                          <ul class="noti-bullet-list s--sm">
-                            <li>
-                              첨부가능 파일은 이미지(jpg.jpeg.git.bmp.png.tif,tift), 문서(doc,docx.xls, xlsx,xlsm, ppt,
-                              pptx, bwp, hwpx), pdf 입니다.
-                            </li>
-                            <li>파일 용량은 1개당 10MB를 초과할 수 없으며, 최대 10개까지 첨부 가능합니다</li>
-                          </ul>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                  <li class="box-panel">
+                    <div class="title">
+                      <span class="tit">Standard</span>
+                      <p>성장하는 비즈니스를 위한 표준 플랜</p>
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>플랜 공통 기능과 혜택</span>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>기업조회 월 500개</span>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>이용 계정 5개</span>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn-contained s--md w--full">가격 문의</button>
+                  </li>
 
-              <div class="table-header mt32">
-                <div class="count font-h3">담당자 정보</div>
-              </div>
+                  <li class="box-panel">
+                    <div class="title">
+                      <span class="tit">Pro</span>
+                      <p>전문 조직을 위한 플랜</p>
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>플랜 공통 기능과 혜택</span>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>기업조회 월 1,000개</span>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>이용 계정 10개</span>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn-contained s--md w--full">가격 문의</button>
+                  </li>
 
-              <div class="table-wrap">
-                <table class="table-rows">
-                  <tbody>
-                    <tr>
-                      <th>회사명</th>
-                      <td>
-                        <div class="textfield-root">
-                          <label class="textfield-label">
-                            <input type="text" class="textfield-form" name="" value="테크핀레이팅스" readonly />
-                          </label>
-                        </div>
-                      </td>
-                      <th>이름</th>
-                      <td>
-                        <div class="textfield-root">
-                          <label class="textfield-label">
-                            <input type="text" class="textfield-form" name="" value="홍길동" readonly />
-                          </label>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th><span class="require">이메일</span></th>
-                      <td>
-                        <div class="textfield-root">
-                          <label class="textfield-label">
-                            <input
-                              type="text"
-                              class="textfield-form"
-                              name=""
-                              placeholder="이메일 주소를 입력해주세요."
-                            />
-                          </label>
-                        </div>
-                      </td>
-                      <th><span class="require">휴대폰번호</span></th>
-                      <td>
-                        <div class="textfield-root">
-                          <label class="textfield-label">
-                            <input
-                              type="text"
-                              class="textfield-form"
-                              name=""
-                              placeholder="휴대폰 번호를 입력해주세요."
-                            />
-                          </label>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                  <li class="box-panel t--selected">
+                    <div class="title">
+                      <span class="tit">Business</span>
+                      <p>대규모 기업을 위한 플랜</p>
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>플랜 공통 기능과 혜택</span>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>기업조회 월 2,000개</span>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>이용 계정 20개</span>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn-contained s--md w--full">가격 문의</button>
+                  </li>
+                </ul>
 
-              <div class="table-header mt32">
-                <div class="count font-h3">약관동의</div>
-              </div>
-
-              <div class="board-term">
-                <div class="radiocheck-root">
-                  <label class="radiocheck-label">
-                    <input type="checkbox" name="" />
-                    <span><span class="c--active">(필수)</span> 문의 접수 및 처리에 따른 개인정보 활용 동의</span>
-                  </label>
+                <div class="table-header mt40">
+                  <div class="count font-h3">모든 플랜 공통 제공</div>
                 </div>
 
-                <button type="button" class="btn-comm">약관보기</button>
+                <ul class="box-panel plan-guide-comm">
+                  <li>
+                    <div class="tit">
+                      <i class="icon-comm i--plan-graph"></i>
+                      <span class="font-h4">데이터 스튜디오 미리보기</span>
+                    </div>
+                    <p>설정한 조건에 따른 맞춤형 기업 발굴 및<br />고도화된 데이터 분석 기능 체험</p>
+                  </li>
+                  <li>
+                    <div class="tit">
+                      <i class="icon-comm i--plan-text"></i>
+                      <span class="font-h4">월별 매입매출</span>
+                    </div>
+                    <p>
+                      특정 기업과 거래처 간에 발생하는 월 단위 <br />
+                      거래흐름 및 매입매출 상세 데이터 조회
+                    </p>
+                  </li>
+                  <li>
+                    <div class="tit">
+                      <i class="icon-comm i--plan-file"></i>
+                      <span class="font-h4">월별 재무제표</span>
+                    </div>
+                    <p>
+                      연 단위 결산 재무제표의 한계를 넘어, <br />
+                      매월 업데이트되는 기업 재무제표 조회
+                    </p>
+                  </li>
+                  <li>
+                    <div class="tit">
+                      <i class="icon-comm i--plan-customer"></i>
+                      <span class="font-h4">거래처 관계망</span>
+                    </div>
+                    <p>
+                      대상 기업 중심으로 연결된 주요 거래처와의 <br />
+                      공급망 관계를 시각화하여 제공
+                    </p>
+                  </li>
+                </ul>
               </div>
+              <!-- // tabmenu-content -->
 
-              <div class="board-footer">
-                <button type="button" class="btn-comm s--bd">취소</button>
-                <button type="submit" class="btn-contained s--bd">문의 등록</button>
+              <div class="tabmenu-content" id="plan2" style="display: none">
+                <ul class="plan-guide-list">
+                  <li class="box-panel t--selected align-top">
+                    <div class="title">
+                      <span class="tit">엔터프라이즈 플랜 안내</span>
+                      <p>
+                        모든 핵심 데이터 상품을 하나로 묶어 제공합니다. <br />
+                        전사적으로 장벽없는 데이터 활용과 비즈니스 성장을 위해 최적화된 통합 패키지를 도입해 보세요.
+                      </p>
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <i class="icon-comm i--plan-users"></i>
+                        <span>이용 계정 수 무제한</span>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--plan-company"></i>
+                        <span>기업별 맞춤 견적 안내</span>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn-contained s--md w--full">엔터프라이즈 도입 문의</button>
+                  </li>
+
+                  <li class="box-panel">
+                    <div class="title">
+                      <span class="tit">기업조회</span>
+                      <p>원하는 기업의 월별 매입매출, 월별 재무제표, 거래처관계망을 상세하게 조회할 수 있습니다.</p>
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>주요타겟 기업 상세 데이터 1회성 조회</span>
+                        <p class="desc">연간 1,200건 데이터 조회 가능</p>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>주요타겟 기업 상세 데이터 주기적 조회</span>
+                        <p class="desc">연간 6,000건 데이터 조회 가능</p>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>대규모 기업 상세 데이터 조회</span>
+                        <p class="desc">연간 12,000건 데이터 조회 가능</p>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>대규모 기업 상세 데이터 주기적 조회</span>
+                        <p class="desc">연간 24,000건 데이터 조회 가능</p>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>상시적인 기업 상세 데이터 조회</span>
+                        <p class="desc">무제한 데이터 조회 가능</p>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="box-panel">
+                    <div class="title">
+                      <span class="tit">데이터 스튜디오</span>
+                      <p>다양한 템플릿과 필드 조건으로 최적의 영업 및 투자 대상을 발굴 할 수 있습니다.</p>
+                      <span class="label-comm c--active">엔터프라이즈 전용 상품</span>
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>특정 타겟 위주 데이터 탐색</span>
+                        <p class="desc">40,000행 데이터 탐색 가능</p>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>성장 비즈니스를 위한 광범위 탐색</span>
+                        <p class="desc">100,000행 데이터 탐색 가능</p>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>대규모 영업 및 기업 발굴을 위한 탐색</span>
+                        <p class="desc">200,000행 데이터 탐색 가능</p>
+                      </li>
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>제한 없는 실시간 데이터 탐색</span>
+                        <p class="desc">무제한 데이터 탐색 가능</p>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="box-panel">
+                    <div class="title">
+                      <span class="tit">사거거래탐지</span>
+                      <p>여러 기업을 선택하여 기업 간의 의심 · 회전거래를 탐지하여 분석할 수 있습니다.</p>
+                      <span class="label-comm c--active">엔터프라이즈 전용 상품</span>
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <i class="icon-comm i--check-list"></i>
+                        <span>별도의 구간 제한 없이 구매 시 무제한 이용</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
+              <!-- // tabmenu-content -->
             </div>
             <!-- // console-contents-inner -->
           </main>

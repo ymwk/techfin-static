@@ -102,7 +102,7 @@
 
     .btn-fav,
     .btn-del {
-      position: static
+      position: static;
     }
   }
 }
@@ -122,5 +122,326 @@
   .tit {
     display: flex;
     align-items: center;
+  }
+}
+
+//////////////////////// 플랜 이용 관리
+.planlist-wrap,
+.plan-service-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.planlist-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 24px;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--c-border2);
+  background-color: var(--c-bg);
+  font-size: 16px;
+  color: var(--c-gray1);
+
+  .progress-wrap {
+    gap: 27px;
+
+    .label em {
+      font-size: 1.2em;
+    }
+    .tit {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  .cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  .desc em {
+    font-weight: 500;
+  }
+
+  .btn-text {
+    color: inherit;
+  }
+}
+
+.plan-service-wrap {
+  margin-top: 24px;
+
+  .plan-service-section:first-child {
+    grid-column: span 2;
+  }
+}
+
+.plan-service-section {
+  display: flex;
+  flex-direction: column;
+
+  .box-panel {
+    flex-grow: 1;
+  }
+}
+
+.plan-service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  color: var(--c-gray1);
+  font-size: 14px;
+  line-height: 1.5;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:first-of-type) {
+      padding-top: 20px;
+      border-top: 1px solid var(--c-border2);
+    }
+
+    &.disabled .cont {
+      opacity: 0.4;
+    }
+  }
+
+  .tit {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--c-black);
+  }
+
+  .cont {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .utils {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    white-space: nowrap;
+    color: var(--c-black);
+  }
+
+  .textfield-form {
+    width: 120px;
+  }
+
+  &.s--sm {
+    .tit {
+      font-size: 14px;
+    }
+
+    .cont {
+      gap: 2px;
+    }
+  }
+}
+
+.plan-payment-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.plan-payment-list {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 16px;
+  color: var(--c-gray1);
+  line-height: 1.5;
+  font-weight: 500;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .value {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 4px;
+    color: var(--c-black);
+
+    small {
+      font-size: 14px;
+      color: var(--c-gray1);
+      font-weight: 400;
+    }
+  }
+}
+
+.plan-price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--c-gray1);
+
+  .price em {
+    color: var(--c-primary);
+    font-size: 1.12em;
+  }
+}
+
+////////////////////// 플랜 안내
+.console-contents:has(.cont-headline.t--guide) {
+  background-color: var(--c-bg);
+  .console-contents-inner {
+    max-width: 1432px;
+    gap: 40px;
+  }
+}
+.cont-headline.t--guide {
+  flex-direction: column;
+  border-bottom: 0;
+  text-align: center;
+  margin-bottom: 0
+}
+
+.plan-guide-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  line-height: 1.5;
+  font-size: 14px;
+  word-break: keep-all;
+
+  & > li {
+    display: flex;
+    flex-direction: column;
+    padding: 28px 24px;
+    border-radius: 16px;
+
+    &.t--selected {
+      border-color: #d8e0ff;
+      background: linear-gradient(302.82deg, #ffffff -33%, #f0f4ff 65.13%);
+
+      box-shadow:
+        0px 1px 1px 0.5px #29292908,
+        0px 3px 3px -1.5px #29292904,
+        0px 6px 6px -3px #29292908,
+        0px 12px 12px -6px #29292908,
+        0px 24px 24px -12px #29292908,
+        0px 48px 48px -24px #29292908;
+
+      .list {
+        border-top-color: #d8e0ff;
+      }
+    }
+    
+    &.align-top {
+      align-self: flex-start;
+    }
+  }
+
+  .title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .tit {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    
+    .label-comm {
+      position: absolute;
+      top: 3px;
+      right: 0
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0 auto;
+    padding: 20px 0;
+    border-top: 1px solid var(--c-border2);
+    font-weight: 500;
+    color: var(--c-black);
+
+    li {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      &:has(.icon-comm) {
+        padding-left: 24px;
+      }
+    }
+
+    .desc {
+      font-weight: 400;
+      color: var(--c-gray1);
+    }
+
+    .icon-comm {
+      position: absolute;
+      top: 2px;
+      left: -2px;
+    }
+  }
+}
+
+.plan-guide-comm {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px 32px;
+  border-radius: 16px;
+  line-height: 1.5;
+  font-size: 14px;
+  color: var(--c-gray1);
+
+  & > li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 24px;
+
+    &:not(:first-of-type) {
+      padding-left: 48px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 40px;
+        margin-top: -20px;
+        border-left: 1px solid var(--c-border2);
+      }
+    }
+  }
+
+  .tit {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .icon-comm {
+      position: absolute;
+      top: 2px;
+      left: -24px;
+    }
   }
 }

@@ -1051,6 +1051,10 @@
     background-color: #FFF1E8;
     color: #D96826;
   }
+  &.c--active {
+    border: 1px solid #d8e0ff;
+    background-color: #f0f4ff;
+  }
 
   &.g--lv1 {
     color: #0f7d00;

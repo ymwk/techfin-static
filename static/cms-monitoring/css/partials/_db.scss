@@ -9,7 +9,8 @@
   }
   
   .console-contents {
-    overflow: auto
+    overflow: auto;
+    // min-height: calc(100vh + var(--h-header));
   }
 
   .console-header {

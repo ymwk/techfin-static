@@ -40,26 +40,26 @@
     justify-content: center;
     gap: 6px 40px;
   }
-  
+
   &.t--reverse {
     .radiocheck-label {
       flex-direction: row-reverse;
       justify-content: space-between;
     }
   }
-  
+
   &.t--list {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     color: var(--c-gray1);
     font-weight: 500;
-    
+
     .radiocheck-label {
       padding: 11px 16px;
       border-radius: 8px;
-      transition: background-color .2s;
-      
+      transition: background-color 0.2s;
+
       &:hover {
         background-color: var(--c-bg);
       }
@@ -264,6 +264,71 @@
           transform: rotate(45deg) scale(0.9);
           border-radius: 2px;
         }
+      }
+    }
+  }
+
+  &.t--contract {
+    gap: 12px;
+
+    .item {
+      gap: 16px;
+      padding: 20px;
+      font-size: 14px;
+      color: var(--c-gray1);
+    }
+
+    .cont {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      font-size: 14px;
+      color: var(--c-black);
+      font-weight: 400;
+
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      em {
+        display: inline-block;
+        color: var(--c-gray2);
+        font-weight: inherit;
+        font-size: inherit !important;
+      }
+    }
+
+    .price {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 24px;
+      margin-left: auto;
+      margin-bottom: auto;
+      font-size: 16px;
+      color: var(--c-gray2);
+      font-weight: 400;
+
+      em {
+        color: var(--c-black);
       }
     }
   }

@@ -1472,12 +1472,12 @@ img {
 .btn-comm.ac--active,
 .btn-link.ac--active {
   border-color: var(--c-primary);
-  background-color: #F0F4FF;
+  background-color: #f0f4ff;
   color: var(--c-primary);
 }
 .btn-comm.ac--active:hover,
 .btn-link.ac--active:hover {
-  background-color: #D8E0FF;
+  background-color: #d8e0ff;
 }
 
 .btn-contained {
@@ -1553,6 +1553,8 @@ img {
   padding: 4px 0;
   font-size: 13px;
   color: var(--c-black);
+  font-weight: 500;
+  white-space: nowrap;
 }
 .btn-text:hover {
   text-decoration: none !important;
@@ -1583,6 +1585,15 @@ img {
   font-size: 10px;
   font-weight: 700;
   color: #7e7e88;
+}
+.btn-text.s--md {
+  font-size: 16px;
+}
+.btn-text.s--mmd {
+  font-size: 14px;
+}
+.btn-text .i--gt-r {
+  margin: 0 -4px;
 }
 
 .btn-link {
@@ -1652,6 +1663,13 @@ img {
 .btn-fav {
   width: 24px;
   height: 24px;
+}
+
+.link-underline {
+  color: inherit;
+  display: inline-block;
+  line-height: 1.05em;
+  border-bottom: 1px solid currentColor;
 }
 
 .radiocheck-root {
@@ -1881,6 +1899,61 @@ img {
   border-bottom: 2px solid currentColor;
   transform: rotate(45deg) scale(0.9);
   border-radius: 2px;
+}
+.radiocheck-list.t--contract {
+  gap: 12px;
+}
+.radiocheck-list.t--contract .item {
+  gap: 16px;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--c-gray1);
+}
+.radiocheck-list.t--contract .cont {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.radiocheck-list.t--contract .title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.radiocheck-list.t--contract .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  font-size: 14px;
+  color: var(--c-black);
+  font-weight: 400;
+}
+.radiocheck-list.t--contract .list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.radiocheck-list.t--contract .list em {
+  display: inline-block;
+  color: var(--c-gray2);
+  font-weight: inherit;
+  font-size: inherit !important;
+}
+.radiocheck-list.t--contract .price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+  margin-left: auto;
+  margin-bottom: auto;
+  font-size: 16px;
+  color: var(--c-gray2);
+  font-weight: 400;
+}
+.radiocheck-list.t--contract .price em {
+  color: var(--c-black);
 }
 
 .icon-comm {
@@ -2208,6 +2281,56 @@ img {
   background-image: url(../image/icon/ic_ai.svg);
 }
 
+.i--account {
+  width: 32px;
+  background-image: url(../image/icon/ic_users.svg);
+}
+
+.i--company {
+  width: 32px;
+  background-image: url(../image/icon/ic_company.svg);
+}
+
+.i--lock-g {
+  width: 32px;
+  background-image: url(../image/icon/ic_lock_g.svg);
+}
+
+.i--doc-gr {
+  width: 32px;
+  background-image: url(../image/icon/ic_doc_gr.svg);
+}
+
+.i--plan-graph {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_graph.svg);
+}
+
+.i--plan-text {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_text.svg);
+}
+
+.i--plan-file {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_file.svg);
+}
+
+.i--plan-customer {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_customer.svg);
+}
+
+.i--plan-users {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_users.svg);
+}
+
+.i--plan-company {
+  width: 16px;
+  background-image: url(../image/icon/ic_plan_company.svg);
+}
+
 .i--plus,
 .i--minus {
   position: relative;
@@ -2468,6 +2591,21 @@ img {
 .i--check {
   width: 48px;
   background-image: url(../image/icon/ic_alert_check.svg);
+}
+
+.i--check-list {
+  color: var(--c-primary);
+}
+.i--check-list::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 9px;
+  margin-top: -2px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  border-radius: 2px;
 }
 
 .i--more {
@@ -2965,10 +3103,12 @@ img {
 .modal-header {
   display: flex;
   align-items: center;
+  gap: 6px;
   flex-shrink: 0;
   height: 36px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--c-border2);
+  color: var(--c-gray1);
 }
 .modal-header .font-h3 {
   font-size: 20px;
@@ -3161,6 +3301,31 @@ img {
 }
 .dashboard-tab .btn.ac--active span, .dashboard-tab .btn:hover span {
   color: #fff;
+}
+
+.tabmenu-switch {
+  display: flex;
+  gap: 8px;
+  padding: 5px;
+  border-radius: 48px;
+  margin: 0 auto;
+  border: 1px solid var(--c-border2);
+  background-color: #f1f1f3;
+  font-size: 14px;
+  font-weight: 500;
+}
+.tabmenu-switch .tabmenu-btn {
+  height: 36px;
+  border-radius: 36px;
+  padding: 0 12px;
+  color: #B1B1B4;
+  transition: background-color 0.2s;
+}
+.tabmenu-switch .tabmenu-btn.ac--active {
+  background-color: #fff;
+  box-shadow: 0px -1px 1px -0.5px rgba(51, 51, 51, 0.031372549) inset, 0px 1px 1px 0.5px rgba(41, 41, 41, 0.0196078431), 0px 3px 3px -1.5px rgba(41, 41, 41, 0.0117647059), 0px 6px 6px -3px rgba(41, 41, 41, 0.0196078431), 0px 12px 12px -6px rgba(41, 41, 41, 0.0196078431), 0px 24px 24px -12px rgba(41, 41, 41, 0.0196078431), 0px 48px 48px -24px rgba(41, 41, 41, 0.0196078431), 0px 0px 0px 1px rgba(41, 41, 41, 0.0392156863);
+  font-weight: 700;
+  color: var(--c-black);
 }
 
 .tooltip-root {

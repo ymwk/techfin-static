@@ -90,29 +90,6 @@
   color: var(--c-gray2);
 }
 
-.box-centered {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border: 1px solid var(--c-border2);
-  background-color: var(--c-gray4);
-  border-radius: 4px;
-  margin: 0 auto;
-  padding: 25px 50px;
-}
-
-.box-panel {
-  border: 1px solid var(--c-border2);
-  border-radius: 8px;
-
-  &.chk-box {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding: 20px;
-  }
-}
-
 .terms-pop {
   display: flex;
   flex-direction: column;
@@ -587,6 +564,7 @@ td .msg-list {
   align-items: center;
   gap: 8px;
   margin: auto 0 0 auto;
+  padding-top: 20px;
 }
 
 .datagrid-container {
