@@ -200,7 +200,7 @@
   &.ac--active {
     .global-user-menu {
       opacity: 1;
-      max-height: 400px;
+      max-height: 800px;
       visibility: visible;
     }
 
@@ -219,12 +219,14 @@
     position: relative;
     display: inline-flex;
     align-items: center;
+    min-width: 228px;
     height: 32px;
     padding-right: 30px;
     padding-left: 8px;
     border-radius: 6px;
     color: inherit;
     font-weight: 400;
+    white-space: nowrap;
 
     &::after {
       content: '';
@@ -267,6 +269,7 @@
     max-height 0.2s ease-in-out;
   overflow: hidden;
   visibility: hidden;
+  // white-space: nowrap;
 
   .btn-logout {
     display: flex;
@@ -289,6 +292,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4px;
     font-size: 13px;
     font-weight: 400;
   }
@@ -301,6 +305,7 @@
 
   .company {
     color: #75757a;
+    @include ellipsis;
   }
 
   .time {

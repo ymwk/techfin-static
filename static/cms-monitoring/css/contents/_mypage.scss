@@ -312,7 +312,7 @@
   flex-direction: column;
   border-bottom: 0;
   text-align: center;
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .plan-guide-list {
@@ -345,7 +345,7 @@
         border-top-color: #d8e0ff;
       }
     }
-    
+
     &.align-top {
       align-self: flex-start;
     }
@@ -361,11 +361,11 @@
       font-size: 20px;
       font-weight: 700;
     }
-    
+
     .label-comm {
       position: absolute;
       top: 3px;
-      right: 0
+      right: 0;
     }
   }
 
@@ -443,5 +443,113 @@
       top: 2px;
       left: -24px;
     }
+  }
+}
+
+.plan-inquiry-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 600px;
+  margin: 0 auto;
+  padding: 36px 32px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow:
+    0px -1px 1px -0.5px #3333330f inset,
+    0px 1px 1px 0.5px #29292908,
+    0px 3px 3px -1.5px #29292904,
+    0px 6px 6px -3px #29292908,
+    0px 12px 12px -6px #29292908,
+    0px 24px 24px -12px #29292908,
+    0px 48px 48px -24px #29292908,
+    0px 0px 0px 1px #29292914;
+}
+
+.plan-inquiry-header {
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid var(--c-border2);
+
+  .tit {
+    font-size: 20px;
+  }
+}
+
+.plan-inquiry-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .desc {
+    font-size: 14px;
+    color: var(--c-gray3);
+    margin-top: -8px;
+  }
+
+  .radiocheck-list,
+  .radiocheck-root.t--btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .radiocheck-root.t--btns {
+    .radiocheck-label {
+      justify-content: flex-start;
+    }
+  }
+
+  .msg-err {
+    font-size: 14px;
+    grid-column: span 2;
+  }
+}
+
+.plan-inquiry-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  color: var(--c-gray1);
+}
+
+.summary-wrap {
+  border-radius: 12px;
+  background-color: var(--c-bg);
+
+  .btn-summary.ac--open {
+    transform: scaleY(-1);
+  }
+
+  .summary-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    color: var(--c-gray2);
+
+    .radiocheck-label em {
+      color: var(--c-black);
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  .summary-detail {
+    width: auto;
+    margin: 0 24px;
+    overflow-y: auto;
+
+    &.ac--open {
+      max-height: 400px;
+      box-shadow: inset 0 1px 0 var(--c-border2);
+    }
+  }
+
+  .term-wrap {
+    padding: 20px 0;
+    font-size: 14px;
+    color: var(--c-gray2);
+    line-height: 1.6;
   }
 }

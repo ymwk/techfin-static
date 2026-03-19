@@ -1081,6 +1081,10 @@ img {
   height: 32px;
   font-size: 13px;
 }
+.textfield-root.t--column .textfield-label {
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 .datepicker-root.ac--active .textfield-form {
   border-color: var(--c-primary);
@@ -1375,6 +1379,8 @@ img {
 .btn-outlined.s--lg,
 .btn-cta.s--lg,
 .btn-link.s--lg {
+  height: 48px;
+  font-size: 16px;
   min-width: 90px;
 }
 .btn-comm.s--bd,
@@ -1746,13 +1752,12 @@ img {
   clip: rect(0, 0, 0, 0);
 }
 .radiocheck-root.t--btns .radiocheck-label {
-  flex: 1;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   min-width: 75px;
   height: 40px;
-  padding: 0 12px;
+  padding: 0 20px;
   border: 1px solid var(--c-border);
   border-radius: 6px;
   background-color: #fff;
@@ -1771,9 +1776,11 @@ img {
   color: var(--c-primary);
 }
 .radiocheck-root.t--btns.s--sm .radiocheck-label {
+  flex: 1;
   min-width: 65px;
   height: 32px;
   font-size: 13px;
+  padding: 0 6px;
 }
 
 .radiocheck-label {
@@ -1846,10 +1853,28 @@ img {
   border-color: var(--c-primary);
   background-color: #f0f4ff;
 }
+.radiocheck-list .item .cont {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 .radiocheck-list small {
   padding-left: 12px;
   font-weight: 400;
   color: #75757a;
+}
+.radiocheck-list.s--sm .item {
+  gap: 12px;
+  padding: 9px 16px;
+}
+.radiocheck-list.s--sm .cont {
+  color: var(--c-gray3);
+  font-weight: 400;
+}
+.radiocheck-list.s--sm .tit {
+  color: var(--c-black);
+  font-size: 14px;
+  font-weight: 500;
 }
 .radiocheck-list.t--register {
   width: 100%;
@@ -1910,8 +1935,6 @@ img {
   color: var(--c-gray1);
 }
 .radiocheck-list.t--contract .cont {
-  display: flex;
-  flex-direction: column;
   gap: 16px;
 }
 .radiocheck-list.t--contract .title {
@@ -1954,6 +1977,11 @@ img {
 }
 .radiocheck-list.t--contract .price em {
   color: var(--c-black);
+}
+
+.radiocheck-root .msg-err,
+.radiocheck-list .msg-err {
+  color: var(--c-error);
 }
 
 .icon-comm {
@@ -3071,6 +3099,7 @@ img {
 }
 .modal-root.t--terms .modal-contents {
   height: 333px;
+  padding-bottom: 20px;
 }
 .modal-root.t--terms .modal-action:has([type=checkbox]) {
   margin: auto -24px -24px;
@@ -3133,6 +3162,9 @@ img {
   margin-right: -18px;
   padding-right: 12px;
   gap: 16px;
+}
+.modal-contents > .font-h4 {
+  margin-bottom: -4px;
 }
 
 .modal-action-btns,

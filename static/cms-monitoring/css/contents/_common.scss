@@ -297,7 +297,7 @@ td .msg-list {
     font-size: 13px;
     text-align: center;
     word-break: keep-all;
-    color: #8b8b8f;
+    color: var(--c-gray3);
     transition: border-color 0.2s;
 
     &:not(:first-of-type) {

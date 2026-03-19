@@ -1,0 +1,97 @@
+.loader-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s;
+
+  &.t--absolute {
+    z-index: 9999;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  &.t--fixed {
+    z-index: 9999;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes dash-stretch {
+  0% {
+    stroke-dasharray: 1, 377;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 282, 377;
+    stroke-dashoffset: -50;
+  }
+  100% {
+    stroke-dasharray: 1, 377;
+    stroke-dashoffset: -377;
+  }
+}
+
+.loader-donut {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+
+  .donut-svg {
+    transform-origin: center;
+    animation: spin 2s linear infinite;
+  }
+
+  .donut-track {
+    fill: transparent;
+    stroke-width: 10px;
+    stroke: #f1f1f3;
+  }
+
+  .donut-segment {
+    fill: transparent;
+    stroke-width: 10px;
+    stroke: var(--c-primary, #333);
+    stroke-linecap: round;
+    animation: dash-stretch 1.5s ease-in-out infinite;
+  }
+
+  &.s--sm {
+    width: 22px;
+    height: 22px;
+
+    .donut-track,
+    .donut-segment {
+      stroke-width: 14px;
+    }
+  }
+
+  &.s--md {
+    width: 60px;
+    height: 60px;
+
+    .donut-track,
+    .donut-segment {
+      stroke-width: 14px;
+    }
+  }
+
+  &.s--lg {
+    &::after {
+      content: 'loading';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--c-primary);
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}

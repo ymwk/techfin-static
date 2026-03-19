@@ -86,13 +86,12 @@
     }
 
     .radiocheck-label {
-      flex: 1;
       display: inline-flex;
       justify-content: center;
       align-items: center;
       min-width: 75px;
       height: 40px;
-      padding: 0 12px;
+      padding: 0 20px;
       border: 1px solid var(--c-border);
       border-radius: 6px;
       background-color: #fff;
@@ -118,9 +117,11 @@
 
     &.s--sm {
       .radiocheck-label {
+        flex: 1;
         min-width: 65px;
         height: 32px;
         font-size: 13px;
+        padding: 0 6px;
       }
     }
   }
@@ -202,12 +203,36 @@
       border-color: var(--c-primary);
       background-color: #f0f4ff;
     }
+
+    .cont {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
   }
 
   small {
     padding-left: 12px;
     font-weight: 400;
     color: #75757a;
+  }
+
+  &.s--sm {
+    .item {
+      gap: 12px;
+      padding: 9px 16px;
+    }
+
+    .cont {
+      color: var(--c-gray3);
+      font-weight: 400;
+    }
+
+    .tit {
+      color: var(--c-black);
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
 
   &.t--register {
@@ -279,8 +304,6 @@
     }
 
     .cont {
-      display: flex;
-      flex-direction: column;
       gap: 16px;
     }
 
@@ -297,7 +320,6 @@
       font-size: 14px;
       color: var(--c-black);
       font-weight: 400;
-
 
       li {
         display: flex;
@@ -331,5 +353,12 @@
         color: var(--c-black);
       }
     }
+  }
+}
+
+.radiocheck-root,
+.radiocheck-list {
+  .msg-err {
+    color: var(--c-error);
   }
 }

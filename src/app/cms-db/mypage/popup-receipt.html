@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/cms-monitoring/css/index.css" />
+  </head>
+  <body>
+    <div class="modal-root s--lg">
+      <div class="modal-backdrop"></div>
+      <div class="modal-box">
+        <button type="button" class="modal-close">
+          <i class="icon-comm i--close s--lg"></i>
+          <span class="blind">Close</span>
+        </button>
+        <div class="modal-header">
+          <h2 class="font-h3">현금영수증/전자세금계산서 발급신청</h2>
+        </div>
+
+        <div class="modal-contents">
+          <h3 class="font-h4">발급정보</h3>
+
+          <div>
+            <div class="radiocheck-root t--btns">
+              <label class="radiocheck-label">
+                <input type="radio" name="selectGroup" checked />
+                <span>전자세금계산서</span>
+              </label>
+              <label class="radiocheck-label">
+                <input type="radio" name="selectGroup" />
+                <span>현금영수증</span>
+              </label>
+            </div>
+          </div>
+
+          <h3 class="font-h4 mt10">회사정보</h3>
+          <div class="table-wrap">
+            <table class="table-rows">
+              <colgroup>
+                <col style="width: 160px" />
+                <col />
+                <col style="width: 160px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>기업명</th>
+                  <td colspan="3">주식회사테크핀레이팅스</td>
+                </tr>
+                <tr>
+                  <th>사업자등록번호</th>
+                  <td>123-45-13456</td>
+                  <th>개업일</th>
+                  <td>2011-01-10</td>
+                </tr>
+                <tr>
+                  <th>대표자명</th>
+                  <td>옥형석</td>
+                  <th>업태</th>
+                  <td>서비스업/금융업</td>
+                </tr>
+                <tr>
+                  <th>법인등록번호</th>
+                  <td>110111-4517771</td>
+                  <th>종목</th>
+                  <td>매출채권 중개업/금융 서비스업</td>
+                </tr>
+                <tr>
+                  <th>사업장소재지</th>
+                  <td colspan="3">서울특별시 중구 을지로 29, 10층(을지로1가 더존을지타워)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="font-h4 mt10">담당자 정보</h3>
+          <div class="table-wrap">
+            <table class="table-rows">
+              <tbody>
+                <tr>
+                  <th><span class="require">이메일주소</span></th>
+                  <td>
+                    <div class="textfield-root">
+                      <label class="textfield-label">
+                        <input type="text" class="textfield-form" name="" placeholder="이메일 주소를 입력해주세요." />
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="require">이름</span></th>
+                  <td>
+                    <div class="textfield-root">
+                      <label class="textfield-label">
+                        <input type="text" class="textfield-form" name="" placeholder="이름을 입력해주세요." />
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>휴대폰번호</th>
+                  <td>
+                    <div class="textfield-root">
+                      <label class="textfield-label">
+                        <input type="text" class="textfield-form" name="" placeholder="휴대폰 번호를 입력해주세요." />
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- //modal-contents -->
+
+        <div class="modal-action">
+          <div class="modal-action-btns">
+            <button type="button" class="btn-contained">
+              <span>신청하기</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //modal-root -->
+  </body>
+</html>

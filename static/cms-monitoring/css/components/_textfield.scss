@@ -40,6 +40,13 @@
       font-size: 13px;
     }
   }
+  
+  &.t--column {
+    .textfield-label {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 }
 
 .datepicker-root {
