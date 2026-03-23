@@ -471,6 +471,44 @@
       });
     </script>
 
+    <!-- lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+    <script>
+      function createHoverLottie(containerSelector, path) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        const anim = lottie.loadAnimation({
+          container: container,
+          renderer: 'svg',
+          loop: true,
+          autoplay: false,
+          path: path,
+        });
+
+        anim.addEventListener('DOMLoaded', function () {
+          anim.goToAndStop(0, true);
+        });
+
+        const target = container.closest('li') || container;
+
+        target.addEventListener('mouseenter', () => {
+          anim.goToAndPlay(0, true);
+        });
+
+        target.addEventListener('mouseleave', () => {
+          anim.goToAndStop(0, true);
+        });
+
+        return anim;
+      }
+
+      var lottie01 = createHoverLottie('.expert-list .expert-01 .animation', './lottie/interaction01.json');
+      var lottie02 = createHoverLottie('.expert-list .expert-02 .animation', './lottie/interaction02.json');
+      var lottie03 = createHoverLottie('.expert-list .expert-03 .animation', './lottie/interaction03.json');
+      var lottie04 = createHoverLottie('.expert-list .expert-04 .animation', './lottie/interaction04.json');
+    </script>
+
     <!-- GSAP -->
     <script src="../js/gsap/gsap.min.js"></script>
     <script src="../js/gsap/ScrollTrigger.min.js"></script>

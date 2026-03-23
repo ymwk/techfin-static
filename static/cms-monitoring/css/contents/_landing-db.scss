@@ -232,21 +232,45 @@
       border-radius: 20px;
       background-color: #f5f7fd;
       overflow: hidden;
+      transition:
+        background-color 0.5s,
+        color 0.5s;
 
-      &.expert-01 .animation {
+      &.expert-01 .animation::before {
         background: url(../image/main-db/img_expert_01.png) no-repeat center bottom / 100%;
       }
 
-      &.expert-02 .animation {
+      &.expert-02 .animation::before {
         background: url(../image/main-db/img_expert_02.png) no-repeat center bottom / 100%;
       }
 
-      &.expert-03 .animation {
+      &.expert-03 .animation::before {
         background: url(../image/main-db/img_expert_03.png) no-repeat center bottom / 100%;
       }
 
-      &.expert-04 .animation {
+      &.expert-04 .animation::before {
         background: url(../image/main-db/img_expert_04.png) no-repeat center bottom / 100%;
+      }
+
+      &:hover {
+        background-color: var(--c-primary);
+        color: #fff;
+
+        .animation {
+
+
+          svg {
+            opacity: 1;
+          }
+        }
+
+        .btn {
+          color: #fff;
+        }
+        
+        &:not(.expert-01) .animation::before {
+           opacity: 0;
+        }
       }
     }
 
@@ -254,6 +278,18 @@
       position: absolute;
       inset: auto 0 0 0;
       height: 194px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        transition: opacity 0.5s;
+      }
+
+      svg {
+        opacity: 0;
+        transition: opacity 0.5;
+      }
     }
 
     .label {
@@ -745,13 +781,13 @@
   height: 26px;
   border-radius: 8px;
   padding: 0 8px;
-  color: #75757A;
+  color: #75757a;
   font-size: 13px;
   font-weight: 400;
-  border: 1px solid #D4D4D9;
-  background: #F1F1F3;
+  border: 1px solid #d4d4d9;
+  background: #f1f1f3;
   font-weight: 500;
-    
+
   &.s--sm {
     border-radius: 6px;
     height: 24px;
