@@ -81,8 +81,12 @@
     margin-left: -8px;
   }
 
-  &:has(.tabmenu-filter) .utils {
-    margin-bottom: auto;
+  &:has(.tabmenu-filter) {
+    margin-bottom: 0;
+    
+    .utils {
+      margin-bottom: auto;
+    }
   }
 }
 
@@ -128,13 +132,22 @@
     transition: background-color 0.2s;
   }
 
+  th > .tit {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 16px;
+
+    .btn-icon:has(.i--plus, .i--minus) {
+      position: absolute;
+      right: 28px;
+    }
+  }
+
   th:not(:first-of-type) {
     & > .tit {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 16px;
       border-left: 1px solid var(--c-border2);
     }
   }

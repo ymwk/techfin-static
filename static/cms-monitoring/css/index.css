@@ -5038,6 +5038,9 @@ button.swiper-pagination-bullet {
 .table-header > .desc {
   margin-left: -8px;
 }
+.table-header:has(.tabmenu-filter) {
+  margin-bottom: 0;
+}
 .table-header:has(.tabmenu-filter) .utils {
   margin-bottom: auto;
 }
@@ -5086,14 +5089,25 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   transition: background-color 0.2s;
 }
-.table-datagrid th:not(:first-of-type) > .tit,
-.table-datatree th:not(:first-of-type) > .tit,
-.table-checklist th:not(:first-of-type) > .tit {
+.table-datagrid th > .tit,
+.table-datatree th > .tit,
+.table-checklist th > .tit {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 16px;
+}
+.table-datagrid th > .tit .btn-icon:has(.i--plus, .i--minus),
+.table-datatree th > .tit .btn-icon:has(.i--plus, .i--minus),
+.table-checklist th > .tit .btn-icon:has(.i--plus, .i--minus) {
+  position: absolute;
+  right: 28px;
+}
+.table-datagrid th:not(:first-of-type) > .tit,
+.table-datatree th:not(:first-of-type) > .tit,
+.table-checklist th:not(:first-of-type) > .tit {
   border-left: 1px solid var(--c-border2);
 }
 .table-datagrid thead th:not(:has(> .tit)),
@@ -12089,11 +12103,11 @@ td .msg-list {
   background-color: var(--c-primary);
   color: #fff;
 }
-.main-db-expert .expert-list li:hover .animation svg {
-  opacity: 1;
-}
 .main-db-expert .expert-list li:hover .btn {
   color: #fff;
+}
+.main-db-expert .expert-list li:hover .animation svg {
+  opacity: 1;
 }
 .main-db-expert .expert-list li:hover:not(.expert-01) .animation::before {
   opacity: 0;

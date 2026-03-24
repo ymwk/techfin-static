@@ -256,16 +256,12 @@
         background-color: var(--c-primary);
         color: #fff;
 
-        .animation {
-
-
-          svg {
-            opacity: 1;
-          }
-        }
-
         .btn {
           color: #fff;
+        }
+
+        .animation svg {
+          opacity: 1;
         }
         
         &:not(.expert-01) .animation::before {

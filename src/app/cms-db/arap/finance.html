@@ -524,11 +524,16 @@
               </div>
 
               <div class="tabmenu-content">
-                <div class="tabmenu-filter">
-                  <button type="button" class="tabmenu-btn ac--active" data-target-tab="filter1">재무상태표</button>
-                  <button type="button" class="tabmenu-btn" data-target-tab="filter2">손익계산서</button>
-                  <button type="button" class="tabmenu-btn" data-target-tab="filter3">제조원가명세서</button>
-                  <button type="button" class="tabmenu-btn" data-target-tab="filter4">현금수지분석표</button>
+                <div class="table-header">
+                  <div class="tabmenu-filter">
+                    <button type="button" class="tabmenu-btn ac--active" data-target-tab="filter1">재무상태표</button>
+                    <button type="button" class="tabmenu-btn" data-target-tab="filter2">손익계산서</button>
+                    <button type="button" class="tabmenu-btn" data-target-tab="filter3">제조원가명세서</button>
+                    <button type="button" class="tabmenu-btn" data-target-tab="filter4">현금수지분석표</button>
+                  </div>
+                  <div class="utils">
+                    <button type="button" class="btn-comm">전체화면보기</button>
+                  </div>
                 </div>
 
                 <div class="tabmenu-content" id="filter1">
@@ -678,7 +683,15 @@
                       <table class="table-datatree">
                         <thead>
                           <tr>
-                            <th style="width: 30%"><span class="tit">구분</span></th>
+                            <th style="width: 30%">
+                              <span class="tit">
+                                구분
+                                <button type="button" class="btn-icon">
+                                  <i class="icon-comm i--plus"></i>
+                                  <span class="blind">닫기</span>
+                                </button>
+                              </span>
+                            </th>
                             <th><span class="tit">2024년 9월</span></th>
                             <th><span class="tit">2024년 8월</span></th>
                             <th><span class="tit">2024년 7월</span></th>
