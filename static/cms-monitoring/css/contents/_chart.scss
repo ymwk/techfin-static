@@ -47,7 +47,14 @@
     transform: rotate(-90deg);
   }
 
+  .donut-track {
+    fill: transparent;
+    stroke-width: 26px;
+    stroke: #d4d4d9;
+  }
+
   .donut-segment {
+    z-index: 1;
     fill: transparent;
     stroke-width: 26px;
     stroke: #d4d4d9;
@@ -56,12 +63,12 @@
     transition: stroke-dashoffset 0.5s ease;
     transform-origin: center;
 
-    &:nth-child(1) {
+    &:nth-child(1 of .donut-segment) {
       stroke-dashoffset: calc(289.02 - 289.02 * (var(--val01) / 100));
       transform: rotate(0deg);
     }
 
-    &:nth-child(2) {
+    &:nth-child(2 of .donut-segment) {
       stroke-dashoffset: calc(289.02 - 289.02 * (var(--val02) / 100));
       transform: rotate(calc(var(--val01) * 3.6deg));
     }

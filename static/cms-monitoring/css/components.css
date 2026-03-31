@@ -1344,6 +1344,13 @@ img {
   font-weight: 500;
   cursor: not-allowed;
 }
+.btn-comm:disabled .icon-comm,
+.btn-contained:disabled .icon-comm,
+.btn-outlined:disabled .icon-comm,
+.btn-cta:disabled .icon-comm,
+.btn-link:disabled .icon-comm {
+  opacity: 0.4;
+}
 .btn-comm.s--xs,
 .btn-contained.s--xs,
 .btn-outlined.s--xs,
@@ -2821,6 +2828,11 @@ img {
 .i--empty-class {
   width: 80px;
   background-image: url(../image/icon/ic_empty_class.svg);
+}
+
+.i--empty-fav {
+  width: 80px;
+  background-image: url(../image/icon/ic_empty_fav.svg);
 }
 
 .i--phone {

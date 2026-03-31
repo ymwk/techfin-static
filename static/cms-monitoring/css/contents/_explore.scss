@@ -21,6 +21,10 @@
   .cont-headline-sub {
     margin-top: 20px;
   }
+  
+  .btn-text {
+    color: var(--c-gray2)
+  }
 }
 
 .explore-filter-item {
@@ -44,8 +48,16 @@
     background-color: #fff;
     font-size: 13px;
     font-weight: 500;
-
+    transition: background-color .2s, border-color .2s, color .2s;
+    cursor: pointer;
+    
     &.ac--active {
+      color: var(--c-primary);
+      border-color: #7d98ff;
+      background-color: #F0F4FF;
+    }
+
+    &:hover {
       color: var(--c-primary);
       border-color: #7d98ff;
       background-color: #d8e0ff;
@@ -120,22 +132,26 @@
   overflow-y: scroll;
 }
 
-.explore-empty {
-  flex-grow: 1;
+.explore-result-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-  color: var(--c-gray2);
-  font-size: 14px;
-
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    background: url(../image/icon/ic_empty_search.svg) no-repeat center center;
+  gap: 12px;
+  padding: 20px 24px;
+  margin: 12px 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .name {
+    font-size: 14px
+  }
+  
+  .value {
+    color: var(--c-primary)
   }
 }

@@ -304,14 +304,29 @@
     .btn-icon {
       width: 24px;
       height: 30px;
+      color: var(--c-black)
+    }
+    
+    .value {
+      color: var(--c-primary);
+      margin-left: 4px;
     }
 
     &:not(:has(.btn-icon)) {
       padding-right: 8px;
     }
+    
+    &.t--disabled {
+      background-color: var(--c-bg);
+      color: #B1B1B4;
+      .icon-comm {
+        opacity: 0.4;
+      }
+    }
   }
 
   &.explore-filter-box {
+    min-height: 64px;
     padding: 15px;
     border-radius: 8px;
     border: 1px dashed var(--c-border2);

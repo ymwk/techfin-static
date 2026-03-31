@@ -166,15 +166,7 @@
                     </div>
                   </a>
                 </h1>
-                <div class="console-header-search">
-                  <div class="textfield-root">
-                    <i class="icon-comm i--search"></i>
-                    <label class="textfield-label">
-                      <span class="label blind">전체검색</span>
-                      <input type="text" class="textfield-form" name="" placeholder="원하는 데이터를 입력해 보세요" />
-                    </label>
-                  </div>
-                </div>
+
                 <div class="console-header-global">
                   <div class="global-btns">
                     <button type="button" class="btn-comm t--round">
@@ -430,325 +422,85 @@
               </div>
             </header>
 
-            <div class="console-contents-inner">
-              <div class="cont-headline">
-                <h2 class="font-h2">기업탐색</h2>
-                <p>기업 재무 정보를 활용하여 원하는 기업을 탐색할 수 있습니다.</p>
-                <div class="headline-utils">
-                  <button type="button" class="btn-text">
-                    <span>기업탐색 가이드</span>
-                  </button>
-                  <button type="button" class="btn-comm">
-                    <i class="icon-comm i--panel"></i>
-                    <span>패널닫기</span>
-                  </button>
-                  <button type="button" class="btn-comm">
-                    <span>템플릿 저장</span>
-                  </button>
-                  <button type="button" class="btn-comm">
-                    <span>엑셀 다운로드</span>
-                  </button>
-                  <button type="button" class="btn-contained">
-                    <span>조회</span>
-                  </button>
-                </div>
-              </div>
-              <!-- // cont-headline -->
+            <div class="main-section main-db-banner t--login">
+              <div class="main-section-inner">
+                <span class="label">
+                  <i class="icon-comm i--business"></i>
+                  오늘 오전 09:00 기준 총 <em>512,324</em>개 기업의 데이터를 확인할 수 있습니다.
+                </span>
+                <p class="headline s--sm">
+                  안녕하세요 김테크님<br />
+                  <em>어떤 기업의 데이터가 필요하신가요?</em>
+                </p>
 
-              <div class="explore-container">
-                <div class="explore-panel">
-                  <div class="tabmenu-menu s--sm">
-                    <button type="button" class="tabmenu-btn ac--active" data-target-tab="panel1">템플릿</button>
-                    <button type="button" class="tabmenu-btn" data-target-tab="panel2">탐색조건</button>
-                  </div>
-
-                  <div class="tabmenu-content" id="panel1">
-                    <h3 class="blind">템플릿</h3>
-                    <div class="tabmenu-filter">
-                      <button type="button" class="tabmenu-btn ac--active" data-target-tab="panelFilter1">
-                        추천 템플릿
-                      </button>
-                      <button type="button" class="tabmenu-btn" data-target-tab="panelFilter2">저장 템플릿</button>
-                    </div>
-
-                    <div class="tabmenu-content" id="panelFilter1">
-                      <div class="tag-list">
-                        <span class="tag">포용적•생산적 금융</span>
-                        <span class="tag">영업 타겟</span>
-                        <span class="tag ac--active">여신심사</span>
-                        <span class="tag">지역 영업/금융</span>
-                        <span class="tag ac--active">시장/경쟁사 분석</span>
-                        <span class="tag">투자 검토</span>
-                        <span class="tag">정책사업</span>
-                        <span class="tag">공급망 안정성 분석</span>
-                        <span class="tag">리스크 관리</span>
-                        <span class="tag">세무/회계 컨설팅 영업</span>
-                      </div>
-                      <!-- // tag-list  -->
-
-                      <div class="explore-panel-scroll">
-                        <ul class="template-list">
-                          <li id="guide01">
-                            <span class="sort">
-                              <span>투자 검토</span>
-                              <span>영업 타겟</span>
-                            </span>
-                            <em class="tit">전년영업이익 흑자전환</em>
-                            <button type="button" class="btn-icon btn-fav">
-                              <i class="icon-comm i--like s--sm"></i>
-                              <span class="blind">좋아요</span>
-                            </button>
-
-                            <p>전년 영업이익에서 흑자 전환된 기업</p>
-                          </li>
-
-                          <li>
-                            <span class="sort">
-                              <span>투자 검토</span>
-                              <span>영업 타겟</span>
-                            </span>
-                            <em class="tit">전년영업이익 흑자전환</em>
-                            <button type="button" class="btn-icon btn-fav">
-                              <i class="icon-comm i--like s--sm"></i>
-                              <span class="blind">좋아요</span>
-                            </button>
-
-                            <p>전년 영업이익에서 흑자 전환된 기업</p>
-                          </li>
-
-                          <li>
-                            <span class="sort">
-                              <span>투자 검토</span>
-                              <span>영업 타겟</span>
-                            </span>
-                            <em class="tit">전년영업이익 흑자전환</em>
-                            <button type="button" class="btn-icon btn-fav ac--active">
-                              <i class="icon-comm i--like s--sm"></i>
-                              <span class="blind">좋아요</span>
-                            </button>
-
-                            <p>전년 영업이익에서 흑자 전환된 기업</p>
-                          </li>
-                        </ul>
-                        <!-- // template-list -->
-                      </div>
-                      <!-- // explore-panel-scroll -->
-                    </div>
-                    <!-- // tabmenu-content -->
-
-                    <div class="tabmenu-content" id="panelFilter2" style="display: none">
-                      <label class="switch-root">
-                        <input type="checkbox" name="" checked />
-                        <span class="switch-label">내 템플릿만 보기</span>
-                      </label>
-
-                      <div class="explore-panel-scroll">
-                        <ul class="template-list">
-                          <li>
-                            <span class="sort">
-                              <span>내 템플릿</span>
-                            </span>
-                            <em class="tit">26-03 영업대상조건</em>
-                          </li>
-
-                          <li>
-                            <span class="sort">
-                              <span>투자 검토</span>
-                              <span>영업 타겟</span>
-                            </span>
-                            <em class="tit">26-03 영업대상조건</em>
-                            <button type="button" class="btn-icon btn-fav ac--active">
-                              <i class="icon-comm i--like s--sm"></i>
-                              <span class="blind">좋아요</span>
-                            </button>
-
-                            <p>3개월 이상 매출액이 연속 증가하는 기업</p>
-                          </li>
-
-                          <li>
-                            <span class="sort">
-                              <span>투자 검토</span>
-                              <span>영업 타겟</span>
-                            </span>
-                            <em class="tit">26-03 영업대상조건</em>
-                            <button type="button" class="btn-icon btn-fav">
-                              <i class="icon-comm i--like s--sm"></i>
-                              <span class="blind">좋아요</span>
-                            </button>
-
-                            <p>3개월 이상 매출액이 연속 증가하는 기업</p>
-                          </li>
-                        </ul>
-                        <!-- // template-list -->
-                      </div>
-                      <!-- // explore-panel-scroll -->
-                    </div>
-                    <!-- // tabmenu-content -->
-                  </div>
-                  <!-- // tabmenu-content -->
-
-                  <div class="tabmenu-content" id="panel2" style="display: none">
-                    <h3 class="blind">탐색조건</h3>
-
+                <div class="main-db-searchbox">
+                  <div class="searchbox-form">
                     <div class="textfield-root">
                       <i class="icon-comm i--search"></i>
                       <label class="textfield-label">
-                        <span class="label blind">검색</span>
-                        <input type="text" class="textfield-form" name="" placeholder="필드 검색" value="탐색" />
-                        <button type="button" class="btn-clear">
-                          <span class="blind">삭제</span>
-                        </button>
+                        <span class="label blind">전체검색</span>
+                        <input
+                          type="text"
+                          class="textfield-form"
+                          name=""
+                          placeholder="기업명, 사업자등록번호 또는 키워드를 입력해 보세요"
+                        />
                       </label>
                     </div>
 
-                    <div class="tabmenu-filter">
-                      <button type="button" class="tabmenu-btn ac--active">전체</button>
-                      <button type="button" class="tabmenu-btn">기준정보</button>
-                      <button type="button" class="tabmenu-btn">재무데이터</button>
-                    </div>
-
-                    <div class="tabmenu-content">
-                      <div class="explore-panel-scroll">
-                        <div class="result-empty">
-                          <i class="icon-comm i--empty-search"></i>
-                          <p>일치하는 검색어가 없습니다.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- // tabmenu-content -->
+                    <button type="submit" class="btn">검색</button>
                   </div>
-                  <!-- // tabmenu-content -->
                 </div>
-                <!-- // explore-panel -->
-
-                <div class="explore-contents">
-                  <div class="explore-filter">
-                    <div class="explore-filter-item">
-                      <div class="cont-headline-sub">
-                        <h3 class="font-h3">기준정보(Rows)</h3>
-                      </div>
-
-                      <div class="searchbox-filter-result explore-filter-box">
-                        <button type="button" class="btn-text">
-                          <i class="icon-comm i--plus s--sm"></i>
-                          <span>기준 정보 추가</span>
-                        </button>
-                      </div>
-                      <!-- // explore-filter-box -->
-                    </div>
-                    <!-- // explore-filter-item -->
-
-                    <div class="explore-filter-item">
-                      <div class="cont-headline-sub">
-                        <h3 class="font-h3">재무 데이터(Values)</h3>
-                      </div>
-
-                      <div class="searchbox-filter-result explore-filter-box">
-                        <button type="button" class="btn-text">
-                          <i class="icon-comm i--plus s--sm"></i>
-                          <span>재무 정보 추가</span>
-                        </button>
-                      </div>
-                      <!-- // explore-filter-box -->
-                    </div>
-                    <!-- // explore-filter-item -->
-                  </div>
-                  <!-- // explore-filter -->
-
-                  <div class="search-empty">
-                    <i class="icon-comm i--empty-list"></i>
-                    <p class="tit">원하는 조건을 선택하여 분석해 보세요</p>
-                    <p>
-                      템플릿 혹은 탐색 조건의 원하는 값을 선택하여<br />
-                      [조회]를 실행하시면 원하는 데이터를 확인할 수 있습니다.
-                    </p>
-
-                    <div class="search-template">
-                      <em class="tit">추천 템플릿</em>
-                      <ul class="template-list">
-                        <li>
-                          <span class="sort">
-                            <span>투자 검토</span>
-                            <span>영업 타겟</span>
-                          </span>
-                          <em class="tit">전년영업이익 흑자전환</em>
-                          <button type="button" class="btn-icon btn-fav">
-                            <i class="icon-comm i--like s--sm"></i>
-                            <span class="blind">좋아요</span>
-                          </button>
-
-                          <p>전년 영업이익에서 흑자 전환된 기업</p>
-                        </li>
-
-                        <li>
-                          <span class="sort">
-                            <span>투자 검토</span>
-                            <span>영업 타겟</span>
-                          </span>
-                          <em class="tit">전년영업이익 흑자전환</em>
-                          <button type="button" class="btn-icon btn-fav">
-                            <i class="icon-comm i--like s--sm"></i>
-                            <span class="blind">좋아요</span>
-                          </button>
-
-                          <p>전년 영업이익에서 흑자 전환된 기업</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!-- // search-empty -->
-                </div>
-                <!-- // explore-contents -->
               </div>
-              <!-- // explore-container -->
             </div>
-            <!-- // console-contents-inner -->
+
+            <div class="main-section main-db-dashboard">
+              <div class="main-section-inner">
+                <ul class="db-list t--free">
+                  <li>
+                    <i class="icon-comm i--db-lock"></i>
+                    <div class="desc">
+                      <em class="tit">현재 체험판 이용 중입니다.</em>
+                      <p>
+                        PRO로 업그레이드하고<br />
+                        기업의 실시간 데이터를 확인해 보세요.
+                      </p>
+                    </div>
+                    <button type="button" class="btn-outlined s--md">플랜 가입하기</button>
+                  </li>
+                  <li>
+                    <i class="icon-comm i--db-nocompany"></i>
+                    <div class="desc">
+                      <em class="tit">아직 스크랩한 기업이 없습니다.</em>
+                      <p>
+                        분석하고 싶은 기업을<br />
+                        스크랩해 보세요.
+                      </p>
+                    </div>
+                    <button type="button" class="btn-outlined s--md">기업 조회하기</button>
+                  </li>
+                  <li>
+                    <i class="icon-comm i--db-notempleate"></i>
+                    <div class="desc">
+                      <em class="tit">아직 저장한 템플릿이 없습니다.</em>
+                      <p>
+                        기업 탐색을 위해 추천 템플릿을 저장하거나<br />
+                        내 템플릿으로 만들어 보세요.
+                      </p>
+                    </div>
+                    <button type="button" class="btn-outlined s--md">기업 탐색하기</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </main>
           <!-- Main Contents End -->
         </div>
         <!-- //console-container -->
       </div>
       <!-- console-root -->
-
-      <div class="guide-pop" id="guidePop01">
-        <span class="stepper"><span></span></span>
-        <h3 class="font-h4">Step 1. 템플릿 선택</h3>
-        <p class="desc">
-          처음이시라면 전문가들이 미리 만들어둔 추천 템플릿으로 시작해 보세요.<br />
-          목적에 맞는 템플릿을 선택해 주세요.
-        </p>
-        <div class="guide-action">
-          <button type="button" class="btn-text">
-            <span class="underline">나중에 할게요</span>
-          </button>
-          <button type="button" class="btn-contained">다음으로</button>
-        </div>
-      </div>
     </div>
+
     <script src="../js/custom.js"></script>
-
-    <script>
-      window.addEventListener('load', function () {
-        applyPosition();
-        window.addEventListener('resize', applyPosition);
-      });
-
-      function applyPosition() {
-        const target = document.querySelector('#guide01');
-        const popup = document.querySelector('#guidePop01');
-
-        if (target && popup) {
-          const rect = target.getBoundingClientRect();
-
-          const top = rect.top;
-          const left = rect.left;
-
-          popup.style.top = `${top + rect.height / 2}px`;
-          popup.style.left = `${left + rect.width + 20}px`;
-          popup.style.transform = 'translateY(-50%)';
-          popup.style.opacity = '1';
-        }
-      }
-    </script>
   </body>
 </html>

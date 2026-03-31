@@ -460,6 +460,7 @@
                   <div class="tabmenu-menu s--sm">
                     <button type="button" class="tabmenu-btn ac--active" data-target-tab="panel1">템플릿</button>
                     <button type="button" class="tabmenu-btn" data-target-tab="panel2">탐색조건</button>
+                    <button type="button" class="tabmenu-btn" data-target-tab="panel3">조회이력</button>
                   </div>
 
                   <div class="tabmenu-content" id="panel1">
@@ -538,48 +539,15 @@
 
                     <div class="tabmenu-content" id="panelFilter2" style="display: none">
                       <label class="switch-root">
-                        <input type="checkbox" name="" checked />
+                        <input type="checkbox" name="" />
                         <span class="switch-label">내 템플릿만 보기</span>
                       </label>
 
                       <div class="explore-panel-scroll">
-                        <ul class="template-list">
-                          <li>
-                            <span class="sort">
-                              <span>내 템플릿</span>
-                            </span>
-                            <em class="tit">26-03 영업대상조건</em>
-                          </li>
-
-                          <li>
-                            <span class="sort">
-                              <span>투자 검토</span>
-                              <span>영업 타겟</span>
-                            </span>
-                            <em class="tit">26-03 영업대상조건</em>
-                            <button type="button" class="btn-icon btn-fav ac--active">
-                              <i class="icon-comm i--like s--sm"></i>
-                              <span class="blind">좋아요</span>
-                            </button>
-
-                            <p>3개월 이상 매출액이 연속 증가하는 기업</p>
-                          </li>
-
-                          <li>
-                            <span class="sort">
-                              <span>투자 검토</span>
-                              <span>영업 타겟</span>
-                            </span>
-                            <em class="tit">26-03 영업대상조건</em>
-                            <button type="button" class="btn-icon btn-fav">
-                              <i class="icon-comm i--like s--sm"></i>
-                              <span class="blind">좋아요</span>
-                            </button>
-
-                            <p>3개월 이상 매출액이 연속 증가하는 기업</p>
-                          </li>
-                        </ul>
-                        <!-- // template-list -->
+                        <div class="result-empty">
+                          <i class="icon-comm i--empty-fav"></i>
+                          <p>저장된 템플릿이 없습니다.</p>
+                        </div>
                       </div>
                       <!-- // explore-panel-scroll -->
                     </div>
@@ -609,10 +577,50 @@
 
                     <div class="tabmenu-content">
                       <div class="explore-panel-scroll">
-                        <div class="explore-empty">일치하는 검색어가 없습니다.</div>
+                        <div class="result-empty">
+                          <i class="icon-comm i--empty-search"></i>
+                          <p>일치하는 검색어가 없습니다.</p>
+                        </div>
                       </div>
                     </div>
                     <!-- // tabmenu-content -->
+                  </div>
+                  <!-- // tabmenu-content -->
+                   
+                  <div class="tabmenu-content" id="panel3" style="display: none">
+                    <h3 class="blind">조회이력</h3>
+
+                    <div class="msg-border">
+                      <ul class="noti-bullet-list s--sm">
+                        <li>최근 7일간 조회한 탐색 조건 결과에 대해 다시 확인할 수 있습니다.</li>
+                        <li>자주 조회하는 탐색 조건은 [템플릿 저장]을 통해 저장하여 조회할 수 있습니다.</li>
+                      </ul>
+                    </div>
+
+                    <div class="explore-panel-scroll">
+                      <ul class="template-list">
+                        <li>
+                          <span class="sort"> 2026년 4월 12일 </span>
+                          <div class="history">
+                            <span>기업 데이터 조회결과</span>
+                            <em class="tit">8,342건</em>
+                          </div>
+
+                          <button type="button" class="btn-outlined w--full">다시 조회하기</button>
+                        </li>
+                        <li>
+                          <span class="sort"> 2026년 4월 12일 </span>
+                          <div class="history">
+                            <span>기업 데이터 조회결과</span>
+                            <em class="tit">342건</em>
+                          </div>
+
+                          <button type="button" class="btn-outlined w--full">다시 조회하기</button>
+                        </li>
+                      </ul>
+                      <!-- // template-list -->
+                    </div>
+                    <!-- // explore-panel-scroll -->
                   </div>
                   <!-- // tabmenu-content -->
                 </div>
@@ -623,13 +631,26 @@
                     <div class="explore-filter-item">
                       <div class="cont-headline-sub">
                         <h3 class="font-h3">기준정보(Rows)</h3>
+                        <div class="utils">
+                          <button type="button" class="btn-text">
+                            <i class="icon-comm i--file"></i>
+                            <span>기업 업로드</span>
+                          </button>
+                          <button type="button" class="btn-text">
+                            <i class="icon-comm i--plus s--md"></i>
+                            <span>추가</span>
+                          </button>
+                        </div>
                       </div>
 
                       <div class="searchbox-filter-result explore-filter-box">
-                        <button type="button" class="btn-text">
-                          <i class="icon-comm i--plus s--sm"></i>
-                          <span>기준 정보 추가</span>
-                        </button>
+                        <span class="chip">
+                          <span>기본 기업정보</span>
+                          <span class="value">2</span>
+                        </span>
+                        <span class="chip">
+                          <span>업종</span>
+                        </span>
                       </div>
                       <!-- // explore-filter-box -->
                     </div>
@@ -643,7 +664,7 @@
                       <div class="searchbox-filter-result explore-filter-box">
                         <button type="button" class="btn-text">
                           <i class="icon-comm i--plus s--sm"></i>
-                          <span>재무 정보 추가</span>
+                          <span>재무 데이터 추가</span>
                         </button>
                       </div>
                       <!-- // explore-filter-box -->
@@ -651,6 +672,13 @@
                     <!-- // explore-filter-item -->
                   </div>
                   <!-- // explore-filter -->
+
+                  <div class="search-utils mb-8">
+                    <button type="button" class="btn-comm">
+                      <i class="icon-comm i--filter s--sm"></i>
+                      <span>데이터 기준월 : 최근 12개월</span>
+                    </button>
+                  </div>
 
                   <div class="search-empty">
                     <i class="icon-comm i--empty-list"></i>

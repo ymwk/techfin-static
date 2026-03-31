@@ -27,6 +27,10 @@
     background-color: var(--c-bg);
     font-weight: 500;
     cursor: not-allowed;
+    
+    .icon-comm {
+      opacity: 0.4;
+    }
   }
 
   &.s--xs {

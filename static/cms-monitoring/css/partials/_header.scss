@@ -247,6 +247,10 @@
 
   &.t--service {
     margin-right: 16px;
+    
+    .btn-user {
+      min-width: unset
+    }
 
     .global-user-menu {
       inset: -8px -8px auto;
