@@ -162,6 +162,7 @@
     border: 1px solid var(--c-border);
     border-radius: 50%;
     background-color: #fff;
+    transition: border-color .2s;
 
     &:checked {
       border-color: #3b5dfb;
@@ -293,7 +294,8 @@
     }
   }
 
-  &.t--contract {
+  &.t--contract,
+  &.t--plan {
     gap: 12px;
 
     .item {
@@ -352,6 +354,39 @@
       em {
         color: var(--c-black);
       }
+    }
+  }
+
+  &.t--plan {
+    [type=radio] {
+      margin-bottom: auto;
+      margin-top: 2px
+    }
+    
+    & > .item {
+      &:hover [type=radio]{
+        border-width: 6px
+      }
+      &:has([type='radio']:checked) {
+        border-color: var(--c-border2);
+        background-color: unset;
+      }
+    }
+
+    .cont {
+      flex-grow: 1;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .list {
+      margin-left: auto;
+      text-align: right;
+    }
+    
+    .radiocheck-root.t--btns.s--sm .radiocheck-label {
+      flex: revert;
+      padding: 0 8px
     }
   }
 }

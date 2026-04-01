@@ -274,7 +274,8 @@
   }
 }
 
-.search-template {
+.search-template,
+.plan-banner {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -294,6 +295,18 @@
 
     & > li {
       flex: 1;
+    }
+  }
+}
+
+.plan-banner {
+  max-width: 656px;
+  
+  .template-list {
+    gap: 10px;
+    
+    & > li {
+      gap: 0
     }
   }
 }

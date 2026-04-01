@@ -638,32 +638,6 @@
           color: var(--c-gray1);
           font-weight: 500;
         }
-
-        &.free {
-          align-items: center;
-          text-align: center;
-          padding: 50px 20px 37px;
-
-          .icon-comm {
-            position: relative;
-            right: inherit;
-            top: inherit;
-          }
-
-          .desc {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            font-size: 16px;
-            color: var(--c-gray1);
-          }
-
-          .tit {
-            font-size: 20px;
-            color: var(--c-black);
-          }
-        }
       }
 
       .desc {
@@ -676,6 +650,28 @@
 
       .tit {
         font-size: 18px;
+        color: var(--c-black);
+      }
+    }
+
+    &.t--free {
+      & > li {
+        align-items: center;
+        text-align: center;
+        padding: 50px 20px 37px;
+      }
+
+      .desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        color: var(--c-gray1);
+      }
+
+      .tit {
+        font-size: 20px;
         color: var(--c-black);
       }
     }

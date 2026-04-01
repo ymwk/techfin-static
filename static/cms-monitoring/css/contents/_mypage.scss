@@ -66,13 +66,24 @@
       color: var(--c-gray2);
     }
   }
-  
+
   .history {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+  }
+
+  .headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .desc {
+    font-size: 14px;
   }
 }
 
@@ -112,6 +123,18 @@
     .btn-del {
       position: static;
     }
+  }
+
+  .plan-guide,
+  .plan-cs {
+    padding-left: 80px;
+    background: no-repeat 19px center;
+  }
+  .plan-guide {
+    background-image: url(../image/icon/ic_plan_guide.svg);
+  }
+  .plan-cs {
+    background-image: url(../image/icon/ic_plan_cs.svg);
   }
 }
 
@@ -299,12 +322,16 @@
   align-items: center;
   padding: 20px 24px;
   font-size: 16px;
-  font-weight: 500;
-  color: var(--c-gray1);
+  font-weight: 700;
 
-  .price em {
-    color: var(--c-primary);
-    font-size: 1.12em;
+  .price {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+
+    em {
+      color: var(--c-primary);
+    }
   }
 }
 
@@ -559,5 +586,24 @@
     font-size: 14px;
     color: var(--c-gray2);
     line-height: 1.6;
+  }
+}
+
+.plan-enter-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > li {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid var(--c-border2);
+    padding-top: 4px;
+  }
+
+  .modal-headline {
+    opacity: 0.8;
   }
 }
