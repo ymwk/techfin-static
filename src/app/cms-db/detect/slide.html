@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>크레디뷰 기업DB조회</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/cms-monitoring/css/index.css" />
+  </head>
+  <body>
+    <div class="slide-root">
+      <div class="slide-backdrop"></div>
+      <div class="slide-container">
+        <div class="slide-header">
+          <div class="slide-header-tit">
+            <h3 class="font-h3">사기거래분석 내역</h3>
+            <p class="desc">최근 3개월 이내 내역까지 이력만 조회할 수 있습니다.</p>
+          </div>
+          <button type="button" class="btn-icon btn-slide-close">
+            <i class="icon-comm i--close s--lg"></i>
+          </button>
+        </div>
+
+        <div class="slide-contents">
+          <div class="table-sticky-position">
+            <div class="table-wrap table-sticky">
+              <table class="table-datagrid table-fixed">
+                <colgroup>
+                  <col style="width: 60px" />
+                  <col style="width: 200px" />
+                  <col />
+                  <col style="width: 120px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th><span class="tit">번호</span></th>
+                    <th>
+                      <span class="tit">
+                        <button type="button" class="btn-order">
+                          <span>조회일시</span>
+                        </button>
+                      </span>
+                    </th>
+                    <th><span class="tit">매출처명</span></th>
+                    <th><span class="tit">조회</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2026.03.21 13:11:15</td>
+                    <td>
+                      <div class="ellipsis-wrap">
+                        <div class="ellipsis" data-tooltip="조선내화, 간장공장, ㈜실현산업">
+                          조선내화, 간장공장, ㈜실현산업
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button type="button" class="btn-comm">재조회</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>2026.03.21 13:11:15</td>
+                    <td>
+                      <div class="ellipsis-wrap">
+                        <div
+                          class="ellipsis"
+                          data-tooltip="㈜삼성전자, 한미반도체, 휴먼로봇,원익IPS, 미음상사, 이오테크닉스, 주성엔지니어링, 테스, 유진테크, 솔브레인, 레인보우로보틱스, 로보스타"
+                        >
+                          ㈜삼성전자, 한미반도체, 휴먼로봇,원익IPS, 미음상사, 이오테크닉스, 주성엔지니어링, 테스,
+                          유진테크, 솔브레인, 레인보우로보틱스, 로보스타
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button type="button" class="btn-comm">재조회</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // slide-root -->
+
+    <script src="../js/custom.js"></script>
+  </body>
+</html>

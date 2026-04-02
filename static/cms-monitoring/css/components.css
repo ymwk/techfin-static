@@ -3440,6 +3440,17 @@ img {
 .tooltip-root.t--detect .icon-comm.i--tooltip {
   background-image: url(../image/icon/ic_tooltip_warn.svg);
 }
+.tooltip-root.p--bottom .tooltip-popper {
+  top: 50%;
+  bottom: auto;
+}
+.tooltip-root.p--left .tooltip-popper {
+  top: 50%;
+  bottom: auto;
+  left: auto;
+  right: 30px !important;
+  transform: translateY(-50%);
+}
 
 .tooltip-popper {
   z-index: 1;
@@ -3454,7 +3465,10 @@ img {
   flex-direction: column;
   gap: 8px;
   position: relative;
-  width: 320px;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 160px;
+  max-width: 320px;
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid var(--c-border2);
@@ -3493,6 +3507,44 @@ img {
 }
 .tooltip-box li::before {
   content: "• ";
+}
+
+.ellipsis-wrap {
+  position: relative;
+  text-align: left;
+  min-width: 0;
+}
+.ellipsis-wrap.show-tooltip:hover .ellipsis::after {
+  opacity: 1;
+  visibility: visible;
+}
+.ellipsis-wrap .ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.ellipsis-wrap .ellipsis::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background-color: rgba(33, 33, 38, 0.8);
+  color: #fff;
+  line-height: 1.5;
+  padding: 0.5em 1em;
+  min-width: 120px;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: normal;
+  word-break: break-all;
+  max-width: var(--local-w, 100%);
 }
 
 .datepicker-root {

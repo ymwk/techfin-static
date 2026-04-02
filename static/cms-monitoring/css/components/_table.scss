@@ -723,34 +723,32 @@
   border-radius: 4px;
   transition: background-color 0.2s;
 
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 -4px 0 4px;
+    background: url(../image/icon/ic_order.svg) no-repeat center center;
+  }
+
   &:hover {
     background-color: #e8e8eb;
   }
 
-  .icon-comm {
-    margin: 0;
-    aspect-ratio: unset;
-    height: 4px;
-    scale: 0.85;
-    color: var(--c-gray2);
-  }
-
-  &.ac--asc {
-    .i--gt-u {
-      color: var(--c-black);
-    }
-    .i--gt-d {
-      color: var(--c-gray3);
-    }
-  }
-
+  &.ac--asc,
   &.ac--desc {
-    .i--gt-u {
-      color: var(--c-gray3);
+    color: var(--c-primary);
+
+    &::after {
+      content: '→';
+      background: none;
+      transform: rotate(-90deg);
     }
-    .i--gt-d {
-      color: var(--c-black);
-    }
+  }
+
+  &.ac--desc::after {
+    transform: rotate(90deg);
   }
 }
 

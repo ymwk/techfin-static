@@ -310,12 +310,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // 회사이름 툴팁
-  const el = document.querySelector('.user-menu-info .company');
-  el.onmouseenter = () => {
-    const txt = el.querySelector('.ellipsis');
-    el.classList.toggle('show-tooltip', txt.scrollWidth > txt.offsetWidth);
-  };
+  // ellipsis tooltip
+  const ellipsisTooltips = document.querySelectorAll('.ellipsis-wrap');
+
+  ellipsisTooltips.forEach((el) => {
+    el.onmouseenter = () => {
+      const txt = el.querySelector('.ellipsis');
+      if (txt) {
+        const isOverflowing = txt.scrollWidth > txt.offsetWidth;
+        if (isOverflowing) {
+          el.classList.add('show-tooltip');
+        }
+      }
+    };
+
+    el.onmouseleave = () => {
+      el.classList.remove('show-tooltip');
+    };
+  });
 });
 
 // file change

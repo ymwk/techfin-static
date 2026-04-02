@@ -24,12 +24,32 @@
   }
 }
 
-
-
 .headline-utils {
   margin-left: auto;
   display: flex;
   gap: 8px;
+}
+
+.arap-utils {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  small {
+    color: var(--c-gray3);
+  }
+  em {
+    color: var(--c-primary);
+    padding-left: 8px
+  }
+}
+
+.arap-utils-line {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--c-black)
 }
 
 .cont-breadcrumbs {
