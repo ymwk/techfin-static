@@ -184,6 +184,10 @@
         background-color: var(--c-bg);
       }
     }
+    
+    .btn-comm.t--round + .btn-comm {
+      margin-left: 8px
+    }
   }
 }
 
@@ -247,9 +251,9 @@
 
   &.t--service {
     margin-right: 16px;
-    
+
     .btn-user {
-      min-width: unset
+      min-width: unset;
     }
 
     .global-user-menu {
@@ -308,8 +312,35 @@
   }
 
   .company {
+    position: relative;
     color: #75757a;
-    @include ellipsis;
+    min-width: 0;
+
+    &::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      top: 125%;
+      left: 0;
+      background-color: #212126;
+      color: #fff;
+      padding: 5px 10px;
+      min-width: 120px;
+      border-radius: 4px;
+      font-size: 12px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+      width: max-content;
+      max-width: 228px;
+      white-space: normal;
+      word-break: break-all;
+    }
+
+    &.show-tooltip:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   .time {
@@ -375,7 +406,7 @@
     left: 12px;
     right: auto;
     margin-top: -7px;
-    width: 14px
+    width: 14px;
   }
 
   &.ac--active {

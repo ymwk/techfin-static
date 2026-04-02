@@ -309,6 +309,13 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(() => document.addEventListener('click', activeCloseListener), 0);
     });
   });
+
+  // 회사이름 툴팁
+  const el = document.querySelector('.user-menu-info .company');
+  el.onmouseenter = () => {
+    const txt = el.querySelector('.ellipsis');
+    el.classList.toggle('show-tooltip', txt.scrollWidth > txt.offsetWidth);
+  };
 });
 
 // file change

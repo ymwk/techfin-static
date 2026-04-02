@@ -1775,7 +1775,63 @@
                   </div>
                   <!-- // chk-box -->
 
-                  <div style="background-color: rgb(230, 230, 230); height: 600px"></div>
+                  <ul class="network-box-list mb32">
+                    <li class="legend-01">
+                      <div class="network-box-header">2차 거래처</div>
+                      <div class="network-box-cont"></div>
+                    </li>
+                    <li class="legend-02">
+                      <div class="network-box-header">1차 매출처</div>
+                      <div class="network-box-cont"></div>
+                    </li>
+                    <li class="legend-03">
+                      <div class="network-box-header">1차 매입처</div>
+                      <div class="network-box-cont"></div>
+                    </li>
+                    <li class="legend-01">
+                      <div class="network-box-header">2차 거래처</div>
+                      <div class="network-box-cont">
+                        <div class="labels">
+                          <span class="label-comm c--danger">부도</span>
+                          <span class="label-comm c--done">폐업</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="table-wrap table-detect-wrap table-xscroll">
+                    <table class="table-datagrid">
+                      <colgroup>
+                        <col style="width: 160px" />
+                        <col />
+                        <col style="width: 160px" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th><span class="tit">구분</span></th>
+                          <th><span class="tit">거래처명</span></th>
+                          <th><span class="tit">사업자번호</span></th>
+                          <th><span class="tit">거래금액</span></th>
+                          <th><span class="tit">거래비중</span></th>
+                          <th><span class="tit">모니터링 등급</span></th>
+                          <th><span class="tit">휴폐업 여부</span></th>
+                          <th><span class="tit">부도 여부</span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1차 메출처</td>
+                          <td>(주)한국전자</td>
+                          <td>101-55-99999</td>
+                          <td class="al--right">175억</td>
+                          <td>30%</td>
+                          <td>정상</td>
+                          <td><span class="c--error">폐업</span></td>
+                          <td><span class="grade-label c--complete">정상</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <!-- // tabmenu-content -->
               </div>

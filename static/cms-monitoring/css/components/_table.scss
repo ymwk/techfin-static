@@ -781,6 +781,10 @@
   position: relative;
   border-radius: 12px;
   border: 1px solid var(--c-border2);
+
+  & > table {
+    border: 0 hidden;
+  }
 }
 
 .table-detect {
@@ -790,7 +794,7 @@
   font-size: 14px;
   color: var(--c-gray2);
   line-height: 1.5;
-  border: 0 hidden;
+
   word-break: keep-all;
 
   thead {
@@ -873,7 +877,7 @@
   text-align: center !important;
   font-size: 14px;
   color: var(--c-gray3);
-  
+
   &.table-empty {
     border-bottom: 1px solid var(--c-border2);
   }
