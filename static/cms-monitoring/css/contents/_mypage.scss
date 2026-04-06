@@ -413,6 +413,10 @@
     border-top: 1px solid var(--c-border2);
     font-weight: 500;
     color: var(--c-black);
+    
+    &:last-child {
+      padding-bottom: 0
+    }
 
     li {
       position: relative;
@@ -423,10 +427,18 @@
       &:has(.icon-comm) {
         padding-left: 24px;
       }
+
+      &:has(.num) {
+        flex-direction: row;
+      }
+    }
+    
+    .num {
+      margin-left: auto
     }
 
     .desc {
-      font-weight: 400;
+      font-weight: 500;
       color: var(--c-gray1);
     }
 
@@ -533,6 +545,13 @@
     .radiocheck-label {
       justify-content: flex-start;
     }
+  }
+  
+  .radiochk-root.t--box,
+  .radiochk-root.t--btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .msg-err {

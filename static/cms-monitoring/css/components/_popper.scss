@@ -12,11 +12,34 @@
   align-items: center;
 }
 
+.filter-box {
+  display: flex;
+  height: 378px;
+  overflow: hidden;
+
+  .filter-cont {
+    flex-grow: 1;
+    margin: 0;
+    padding: 8px;
+    gap: 8px;
+  }
+}
+
 .filter-cont {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin: 24px 0;
+
+  &:has(.filter-checklist-root) {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .filter-checklist-root {
+    flex-grow: 1;
+  }
 }
 
 .filter-action {
@@ -29,6 +52,43 @@
   .btn-contained {
     min-width: 63px;
   }
+}
+
+.filter-footer {
+  display: flex;
+  justify-content: space-between;
+
+  .filter-chip-list {
+    max-width: calc(100% - 80px);
+  }
+
+  .btn-text {
+    height: 26px;
+    font-size: 14px;
+  }
+}
+
+.filter-tabs {
+  position: relative;
+  width: 195px;
+  border-right: 1px solid var(--c-border2);
+}
+
+.filter-cont-scroll {
+  flex-grow: 1;
+  position: relative;
+  margin: 0 -8px;
+
+  .filter-scroll {
+    padding-top: 0;
+  }
+}
+
+.filter-scroll {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  padding: 8px;
 }
 
 .tablesearch-popper {
@@ -114,20 +174,6 @@
       min-width: 160px;
       height: 48px;
       font-size: 16px;
-    }
-  }
-
-  .filter-footer {
-    display: flex;
-    justify-content: space-between;
-
-    .filter-chip-list {
-      max-width: calc(100% - 80px);
-    }
-
-    .btn-text {
-      height: 26px;
-      font-size: 14px;
     }
   }
 }

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/cms-monitoring/css/index.css" />
+  </head>
+  <body>
+    <div class="modal-root s--lg">
+      <div class="modal-backdrop"></div>
+      <div class="modal-box">
+        <button type="button" class="modal-close">
+          <i class="icon-comm i--close s--lg"></i>
+          <span class="blind">Close</span>
+        </button>
+        <div class="modal-header">
+          <h2 class="font-h3">기준정보 설정</h2>
+        </div>
+
+        <div class="modal-contents">
+          <div class="box-panel filter-box">
+            <div class="filter-tabs">
+              <div class="filter-scroll">
+                <div class="radiochk-root t--list t--checkicon t--reverse">
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>기업기본정보</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>기업규모</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>기업구분</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>상장여부</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>외감여부</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>신용등급</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>EWS등급</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" checked />
+                    <span>업종</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>지역</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-cont">
+              <div class="msg-box">
+                <div class="msg-column">
+                  <ul class="noti-bullet-list s--sm c--black">
+                    <li>Crediview에서 정의한 업종구분 체계를 따릅니다.</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- // msg-box -->
+
+              <div class="filter-cont-scroll">
+                <div class="filter-scroll">
+                  <div class="radiochk-root t--list t--reverse">
+                    <label class="radiochk-label ac--active">
+                      <input type="checkbox" name="" checked />
+                      <span>제조업</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" checked />
+                      <span>도매 및 소매업</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>법인등록번호</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>대표자명</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>설립일자</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>폐업일자</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>대표전화번호</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>대표전화번호</span>
+                    </label>
+                  </div>
+                </div>
+                <!-- // filter-scroll -->
+              </div>
+              <!-- // filter-cont-scroll -->
+            </div>
+            <!-- // filter-cont -->
+          </div>
+          <!-- // box-panel
+            -->
+          <div class="filter-footer">
+            <div class="filter-chip-list">
+              <button class="btn-chip">
+                <span>업종</span>
+                <i class="icon-comm i--close s--sm"></i>
+                <span class="blind">삭제</span>
+              </button>
+
+              <button class="btn-chip">
+                <span>기업 기본정보</span>
+                <i class="icon-comm i--close s--sm"></i>
+                <span class="blind">삭제</span>
+              </button>
+            </div>
+
+            <button type="button" class="btn-text">
+              <i class="icon-comm i--refresh s--sm"></i>
+              <span>초기화</span>
+            </button>
+          </div>
+        </div>
+        <!-- //modal-contents -->
+
+        <div class="modal-action">
+          <div class="modal-action-btns">
+            <button type="button" class="btn-contained">
+              <span>적용</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //modal-root -->
+  </body>
+</html>

@@ -82,7 +82,7 @@
 
   .btn-comm {
     min-width: 65px;
-    height: 40px;
+    @extend .s--md
   }
 
   .unit {

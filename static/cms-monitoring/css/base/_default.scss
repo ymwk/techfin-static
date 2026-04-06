@@ -142,16 +142,16 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 5px;
-  background-color: #D4D4D9;
+  background-color: #e4e4e7;
 }
 
 ol,

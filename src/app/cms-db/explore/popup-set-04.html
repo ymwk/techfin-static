@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/cms-monitoring/css/index.css" />
+  </head>
+  <body>
+    <div class="modal-root s--lg">
+      <div class="modal-backdrop"></div>
+      <div class="modal-box">
+        <button type="button" class="modal-close">
+          <i class="icon-comm i--close s--lg"></i>
+          <span class="blind">Close</span>
+        </button>
+        <div class="modal-header">
+          <h2 class="font-h3">기준정보 설정</h2>
+        </div>
+
+        <div class="modal-contents">
+          <div class="box-panel filter-box">
+            <div class="filter-tabs">
+              <div class="filter-scroll">
+                <div class="radiochk-root t--list t--checkicon t--reverse">
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>기업기본정보</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>기업규모</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>기업구분</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>상장여부</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>외감여부</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>신용등급</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>EWS등급</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>업종</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" checked />
+                    <span>지역</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-cont">
+              <div class="textfield-root">
+                <label class="textfield-label">
+                  <input type="text" class="textfield-form" name="" placeholder="시/도/군/구/입력" />
+                  <button type="button" class="btn-comm">검색</button>
+                </label>
+              </div>
+
+              <div class="filter-checklist-root">
+                <div class="checklist-box">
+                  <div class="radiochk-root t--list t--reverse">
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>서울특별시</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>경기도</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>대전광역시</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>부산광역시</span>
+                    </label>
+
+                    <label class="radiochk-label">
+                      <input type="checkbox" name="" />
+                      <span>광주광역시</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="checklist-box">
+                  <div class="result-empty">
+                    <p>시/도 구분을 선택해 주세요</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // filter-cont -->
+          </div>
+          <!-- // box-panel
+            -->
+          <div class="filter-footer">
+            <div class="filter-chip-list">
+              <button class="btn-chip">
+                <span>서울특별시 전체</span>
+                <i class="icon-comm i--close s--sm"></i>
+                <span class="blind">삭제</span>
+              </button>
+
+              <button class="btn-chip">
+                <span>대전광역시 동구, 유성구</span>
+                <i class="icon-comm i--close s--sm"></i>
+                <span class="blind">삭제</span>
+              </button>
+
+              <button class="btn-chip">
+                <span>부산광역시 전체</span>
+                <i class="icon-comm i--close s--sm"></i>
+                <span class="blind">삭제</span>
+              </button>
+
+              <button class="btn-chip">
+                <span>인천광역시 전체</span>
+                <i class="icon-comm i--close s--sm"></i>
+                <span class="blind">삭제</span>
+              </button>
+            </div>
+
+            <button type="button" class="btn-text">
+              <i class="icon-comm i--refresh s--sm"></i>
+              <span>초기화</span>
+            </button>
+          </div>
+        </div>
+        <!-- //modal-contents -->
+
+        <div class="modal-action">
+          <div class="modal-action-btns">
+            <button type="button" class="btn-contained">
+              <span>적용</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //modal-root -->
+  </body>
+</html>

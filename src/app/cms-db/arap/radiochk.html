@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>투자기업관리플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/cms-monitoring/css/index.css" />
+    <style>
+      .tmp {
+        padding: 20px;
+      }
+
+      .tmp-rows {
+        display: flex;
+        gap: 40px;
+      }
+
+      .tmp-rows section {
+        flex: 1;
+      }
+
+      .tmp h3 {
+        font-size: 16px;
+        margin: 30px 0 10px;
+      }
+
+      .tmp .box-panel {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tmp">
+      <section>
+        <h3>Radio Default</h3>
+        <div class="box-panel">
+          <div class="radiochk-root">
+            <label class="radiochk-label">
+              <input type="radio" name="selectGroup" checked />
+              <span>기업기본정보</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="selectGroup" />
+              <span>기업규모</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="selectGroup" />
+              <span>기업구분</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="selectGroup" disabled />
+              <span>상장여부</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="selectGroup" disabled checked />
+              <span>외감여부</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Check Default</h3>
+        <div class="box-panel">
+          <div class="radiochk-root">
+            <label class="radiochk-label">
+              <input type="checkbox" name="" checked />
+              <span>기업기본정보</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="checkbox" name="" />
+              <span>기업규모</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="checkbox" name="" />
+              <span>기업구분</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="checkbox" name="" disabled />
+              <span>상장여부</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="checkbox" name="" disabled checked />
+              <span>외감여부</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>text first (reverse)</h3>
+        <div class="box-panel">
+          <div class="radiochk-root t--reverse">
+            <label class="radiochk-label">
+              <input type="checkbox" name="" checked />
+              <span>기업기본정보</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="checkbox" name="" />
+              <span>기업규모</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="checkbox" name="" />
+              <span>기업구분</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="checkbox" name="" />
+              <span>상장여부</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="checkbox" name="" />
+              <span>외감여부</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>button type</h3>
+        <div class="box-panel">
+          <div class="radiochk-root t--btns">
+            <label class="radiochk-label">
+              <input type="radio" name="btnGroup" checked />
+              <span>기업기본정보</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="btnGroup" />
+              <span>기업규모</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="btnGroup" />
+              <span>기업구분</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="btnGroup" />
+              <span>상장여부</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="btnGroup" />
+              <span>외감여부</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>round</h3>
+        <div class="box-panel">
+          <div class="radiochk-root t--round">
+            <label class="radiochk-label">
+              <input type="checkbox" name="" />
+              <span>위 내용을 확인하였으며 이에 동의합니다.</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <div class="tmp-rows">
+        <section>
+          <h3>column</h3>
+          <div class="box-panel">
+            <div class="radiochk-root t--list">
+              <label class="radiochk-label">
+                <input type="checkbox" name="" checked />
+                <span>기업기본정보</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>기업규모</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>기업구분</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>상장여부</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>외감여부</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>column reverse</h3>
+          <div class="box-panel">
+            <div class="radiochk-root t--list t--reverse">
+              <label class="radiochk-label ac--active">
+                <input type="checkbox" name="" checked />
+                <span>기업기본정보</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" checked />
+                <span>기업규모</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>기업구분</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>상장여부</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>외감여부</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>column reverse - radio</h3>
+          <div class="box-panel">
+            <div class="radiochk-root t--list t--reverse">
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup2" checked />
+                <span>기업기본정보</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup2" />
+                <span>기업규모</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup2" />
+                <span>기업구분</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup2" />
+                <span>상장여부</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup2" />
+                <span>외감여부</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>column check-icon</h3>
+          <div class="box-panel">
+            <div class="radiochk-root t--list t--checkicon">
+              <label class="radiochk-label">
+                <input type="checkbox" name="" checked />
+                <span>기업기본정보</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>기업규모</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>기업구분</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>상장여부</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="checkbox" name="" />
+                <span>외감여부</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>column reverse check-icon</h3>
+          <div class="box-panel">
+            <div class="radiochk-root t--list t--reverse t--checkicon">
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup3" checked />
+                <span>기업기본정보</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup3" />
+                <span>기업규모</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup3" />
+                <span>기업구분</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup3" />
+                <span>상장여부</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup3" />
+                <span>외감여부</span>
+              </label>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- // tmp-rows -->
+
+      <div class="tmp-rows">
+        <section>
+          <h3>border type</h3>
+
+          <div class="radiochk-root t--box">
+            <label class="radiochk-label">
+              <input type="radio" name="btnGroup" checked />
+              <span>기업기본정보</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="btnGroup" />
+              <span>기업규모</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="btnGroup" />
+              <span>기업구분</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="btnGroup" />
+              <span>상장여부</span>
+            </label>
+            <label class="radiochk-label">
+              <input type="radio" name="btnGroup" />
+              <span>외감여부</span>
+            </label>
+          </div>
+        </section>
+
+        <section>
+          <h3>input hide</h3>
+          <div class="radiochk-root t--box t--hide">
+            <label class="radiochk-label">
+              <input type="radio" name="radioGroup" />
+              <span>개별등록</span>
+            </label>
+
+            <label class="radiochk-label">
+              <input type="radio" name="radioGroup" />
+              <span>일괄등록</span>
+              <small>기업 일괄등록은 최대 50건 까지 가능합니다.</small>
+            </label>
+          </div>
+        </section>
+
+        <section>
+          <h3>input hide icon</h3>
+          <div class="radiochk-root t--box t--hide">
+            <label class="radiochk-label">
+              <input type="radio" name="radioGroup" />
+              <i class="icon-comm i--member-lv1"></i>
+              <span>마스터관리자</span>
+              <small>마스터 관리자는 1명만 설정 가능합니다.</small>
+            </label>
+
+            <label class="radiochk-label">
+              <input type="radio" name="radioGroup" />
+              <i class="icon-comm i--member-lv2"></i>
+              <span>일반관리자</span>
+            </label>
+
+            <label class="radiochk-label">
+              <input type="radio" name="radioGroup" />
+              <i class="icon-comm i--member-lv3"></i>
+              <span>일반회원</span>
+            </label>
+
+            <label class="radiochk-label">
+              <input type="radio" name="radioGroup" />
+              <i class="icon-comm i--member-lv4"></i>
+              <span>임시회원</span>
+            </label>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
