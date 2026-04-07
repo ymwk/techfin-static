@@ -6523,7 +6523,7 @@ button.swiper-pagination-bullet {
 
 .toast-root.t--floating .toast-box,
 .toast-box.b--light {
-  padding: 11px 15px;
+  padding: 11px 16px 11px 20px;
   border: 1px solid var(--c-border);
   background-color: #fff;
   color: var(--c-black);
