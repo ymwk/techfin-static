@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
       toast.className = 'toast-root t--floating';
       toast.innerHTML = `
       <div class="toast-box">
-        <p class="toast-icon">선택한 거래처로만 필터링해서 보시겠습니까?</p>
+        <p>선택한 거래처로만 필터링해서 보시겠습니까?</p>
         <div class="toast-btns">
           <button type="button" class="btn-contained s--xs btn-confirm">선택한 거래처만 보기</button>
           <button type="button" class="btn-comm s--xs btn-cancel">취소</button>

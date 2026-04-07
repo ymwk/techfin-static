@@ -157,14 +157,13 @@
 }
 
 //////////////////////// 플랜 이용 관리
-.planlist-wrap,
-.plan-service-wrap {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.planlist-wrap {
+  display: flex;
   gap: 20px;
 }
 
 .planlist-box {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -188,6 +187,16 @@
     }
   }
 
+  &:has(.planlist-title) {
+    .progress-wrap {
+      gap: 8px;
+    }
+
+    .desc em {
+      font-weight: 700;
+    }
+  }
+
   .cont {
     display: flex;
     align-items: center;
@@ -204,7 +213,69 @@
   }
 }
 
+.planlist-title {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  margin-bottom: 16px;
+
+  .utils {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+
+    .count {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      font-weight: 500;
+
+      em {
+        color: var(--c-primary);
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.planlist-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .planlist-title {
+    margin-bottom: 0;
+  }
+}
+
+.planlist-list {
+  display: flex;
+
+  li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 64px;
+    padding: 4px 12px;
+
+    &:not(:first-of-type) {
+      padding-left: 24px;
+      border-left: 1px solid var(--c-border2);
+    }
+  }
+
+  .value {
+    color: var(--c-black);
+    font-size: 20px;
+  }
+}
+
 .plan-service-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin-top: 24px;
 
   .plan-service-section:first-child {
@@ -413,9 +484,9 @@
     border-top: 1px solid var(--c-border2);
     font-weight: 500;
     color: var(--c-black);
-    
+
     &:last-child {
-      padding-bottom: 0
+      padding-bottom: 0;
     }
 
     li {
@@ -432,9 +503,9 @@
         flex-direction: row;
       }
     }
-    
+
     .num {
-      margin-left: auto
+      margin-left: auto;
     }
 
     .desc {
@@ -546,7 +617,7 @@
       justify-content: flex-start;
     }
   }
-  
+
   .radiochk-root.t--box,
   .radiochk-root.t--btns {
     display: grid;

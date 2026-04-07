@@ -2,16 +2,29 @@
   display: flex;
   flex-direction: column;
   padding: 0 24px;
-  
+
   .switch-root {
     padding: 20px 0;
-    
+
     &:not(:first-child) {
-      border-top: 1px solid #F1F1F3
+      border-top: 1px solid #f1f1f3;
     }
-    
+
     [type='checkbox'] {
-     margin-left: auto 
+      margin-left: auto;
+    }
+  }
+
+  &.t--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0;
+    
+    .switch-root {
+      padding: 16px;
+      border: 1px solid var(--c-border2);
+      border-radius: 8px;
     }
   }
 }
@@ -106,6 +119,16 @@
           content: '승인';
         }
       }
+    }
+  }
+  
+  &:has(.cont) {
+    flex-wrap: wrap;
+    
+    .cont {
+      width: 100%;
+      font-size: 13px;
+      color: var(--c-gray2)
     }
   }
 }

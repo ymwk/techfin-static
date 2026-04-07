@@ -101,6 +101,15 @@
   gap: 8px;
 }
 
+.modal-contents {
+  .table-datagrid {
+    th,
+    td {
+      height: 48px;
+    }
+  }
+}
+
 .table-datagrid,
 .table-datatree,
 .table-checklist {

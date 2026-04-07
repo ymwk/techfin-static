@@ -220,6 +220,17 @@
       }
     }
   }
+  
+  &.s--md {
+    font-size: 14px;
+    gap: 6px;
+    
+    & > li::before {
+      width: 3px;
+      height: 3px;
+      left: 2px
+    }
+  }
 
   a {
     color: inherit;
@@ -552,6 +563,10 @@ td .msg-list {
         top: 7px;
       }
     }
+  }
+  
+  &.s--md {
+    font-size: 14px
   }
 }
 
