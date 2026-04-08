@@ -780,13 +780,14 @@
       color 0.2s,
       border-color 0.2s;
 
-    &:checked {
+    &:checked:not(:disabled) {
       border-color: transparent;
-      background: var(--c-primary) url(../image/icon/ic_check_w.svg) no-repeat center center;
-
-      &:disabled {
-        background-color: #dbdbdb;
-      }
+      background: var(--c-primary) url(../image/icon/ic_check_w.svg) no-repeat center center;      
+    }
+    &:checked:disabled {
+      background-image: url(../image/icon/ic_check_g.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
     }
   }
 
@@ -814,8 +815,8 @@
   [type='checkbox'],
   [type='radio'] {
     &:disabled {
-      border-color: #dbdbdb;
-      background-color: #f7f7f7;
+      border-color: #E8E8EB;
+      background-color: #F1F1F3;
       cursor: default;
 
       // &:checked {

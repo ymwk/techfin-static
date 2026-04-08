@@ -25,6 +25,7 @@
 .cont-headline-box {
   display: flex;
   align-items: center;
+  gap: 0 8px;
   margin: 10px 0 32px;
   padding: 38px 32px;
   border: 1px solid var(--c-border);
@@ -96,6 +97,10 @@
       font-weight: inherit;
       font-size: inherit !important;
     }
+  }
+
+  .desc {
+    color: var(--c-gray2);
   }
 
   .utils {
@@ -383,14 +388,14 @@
   & > li {
     flex: 1;
   }
-  
+
   .legend-02 .network-box-header {
-    border-color: #248E70;
-    background-color: #35A785;
+    border-color: #248e70;
+    background-color: #35a785;
   }
   .legend-03 .network-box-header {
-    border-color: #138EAA;
-    background-color: #17BBD3;
+    border-color: #138eaa;
+    background-color: #17bbd3;
   }
 
   .network-box-header {
@@ -399,8 +404,8 @@
     justify-content: center;
     height: 40px;
     border-radius: 16px 16px 0 0;
-    border: 1px solid #4522BF;
-    background-color: #6249DA;
+    border: 1px solid #4522bf;
+    background-color: #6249da;
     border-bottom: 0;
     color: #fff;
     font-size: 14px;
@@ -417,10 +422,10 @@
     border-radius: 0 0 16px 16px;
     background-color: #fff;
   }
-  
+
   .labels {
     display: flex;
     align-items: center;
-    gap: 12px
+    gap: 12px;
   }
 }

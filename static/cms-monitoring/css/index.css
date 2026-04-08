@@ -3287,12 +3287,14 @@ button.swiper-pagination-bullet {
   background: #fff;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
-.radiochk-label [type=checkbox]:checked {
+.radiochk-label [type=checkbox]:checked:not(:disabled) {
   border-color: transparent;
   background: var(--c-primary) url(../image/icon/ic_check_w.svg) no-repeat center center;
 }
 .radiochk-label [type=checkbox]:checked:disabled {
-  background-color: #dbdbdb;
+  background-image: url(../image/icon/ic_check_g.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .radiochk-label [type=radio] {
   -webkit-appearance: none;
@@ -3316,8 +3318,8 @@ button.swiper-pagination-bullet {
 }
 .radiochk-label [type=checkbox]:disabled,
 .radiochk-label [type=radio]:disabled {
-  border-color: #dbdbdb;
-  background-color: #f7f7f7;
+  border-color: #E8E8EB;
+  background-color: #F1F1F3;
   cursor: default;
 }
 .radiochk-label.ac--active {
@@ -4178,7 +4180,12 @@ button.swiper-pagination-bullet {
 
 .i--empty-lock {
   width: 80px;
-  background-image: url(../image/icon/ic_empty_lock.svg);
+  background-image: url(../image/icon/ic_db_lock.svg);
+}
+
+.i--empty-unlock {
+  width: 80px;
+  background-image: url(../image/icon/ic_empty_unlock.svg);
 }
 
 .i--empty-company {
@@ -5631,6 +5638,12 @@ button.swiper-pagination-bullet {
   align-items: center;
   justify-content: center;
 }
+.table-datagrid .td-border,
+.table-datatree .td-border,
+.table-checklist .td-border {
+  border-right: 1px solid var(--c-border2);
+  border-left: 1px solid var(--c-border2);
+}
 
 .table-small thead th {
   height: 48px;
@@ -6251,6 +6264,10 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   white-space: nowrap;
 }
+.switch-root.s--lg {
+  gap: 12px;
+  font-size: 16px;
+}
 .switch-root.s--lg [type=checkbox] {
   width: 42px;
   height: 24px;
@@ -6540,7 +6557,7 @@ button.swiper-pagination-bullet {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   min-height: 48px;
   padding: 11px 16px;
   margin: 0 auto;
@@ -6565,9 +6582,7 @@ button.swiper-pagination-bullet {
 .toast-box .count {
   display: flex;
   align-items: center;
-  height: 12px;
-  padding: 0 16px 0 4px;
-  border-right: 1px solid var(--c-border2);
+  padding: 0 4px;
   font-size: 16px;
   font-weight: 700;
 }
@@ -6620,7 +6635,22 @@ button.swiper-pagination-bullet {
 .toast-cont {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-right: 48px;
+}
+
+.toast-service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 12px;
+  height: 16px;
+  padding-left: 16px;
+  border-left: 1px solid var(--c-border2);
+}
+.toast-service .radiochk-root.t--btns.s--sm .radiochk-label {
+  min-width: 58px;
 }
 
 .global-btn-apps {
@@ -9395,6 +9425,7 @@ td .msg-list {
 .cont-headline-box {
   display: flex;
   align-items: center;
+  gap: 0 8px;
   margin: 10px 0 32px;
   padding: 38px 32px;
   border: 1px solid var(--c-border);
@@ -9459,6 +9490,9 @@ td .msg-list {
   color: var(--c-gray2);
   font-weight: inherit;
   font-size: inherit !important;
+}
+.cont-headline-box .desc {
+  color: var(--c-gray2);
 }
 .cont-headline-box .utils {
   display: flex;
@@ -9705,12 +9739,12 @@ td .msg-list {
   flex: 1;
 }
 .network-box-list .legend-02 .network-box-header {
-  border-color: #248E70;
-  background-color: #35A785;
+  border-color: #248e70;
+  background-color: #35a785;
 }
 .network-box-list .legend-03 .network-box-header {
-  border-color: #138EAA;
-  background-color: #17BBD3;
+  border-color: #138eaa;
+  background-color: #17bbd3;
 }
 .network-box-list .network-box-header {
   display: flex;
@@ -9718,8 +9752,8 @@ td .msg-list {
   justify-content: center;
   height: 40px;
   border-radius: 16px 16px 0 0;
-  border: 1px solid #4522BF;
-  background-color: #6249DA;
+  border: 1px solid #4522bf;
+  background-color: #6249da;
   border-bottom: 0;
   color: #fff;
   font-size: 14px;

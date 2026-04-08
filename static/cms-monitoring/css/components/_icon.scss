@@ -793,7 +793,11 @@
 }
 .i--empty-lock {
   width: 80px;
-  background-image: url(../image/icon/ic_empty_lock.svg);
+  background-image: url(../image/icon/ic_db_lock.svg);
+}
+.i--empty-unlock {
+  width: 80px;
+  background-image: url(../image/icon/ic_empty_unlock.svg);
 }
 .i--empty-company {
   width: 80px;

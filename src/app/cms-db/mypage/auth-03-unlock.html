@@ -437,79 +437,67 @@
               </div>
 
               <div class="tabmenu-menu">
-                <button type="button" class="tabmenu-btn ac--active" onclick="location.href = '../mypage/auth.html'">
+                <button type="button" class="tabmenu-btn" onclick="location.href = '../mypage/auth.html'">
                   권한설정
                 </button>
                 <button type="button" class="tabmenu-btn" onclick="location.href = '../mypage/auth-02.html'">
                   등급별 접근 설정
                 </button>
-                <button type="button" class="tabmenu-btn" onclick="location.href = '../mypage/auth-03.html'">
+                <button type="button" class="tabmenu-btn ac--active" onclick="location.href = '../mypage/auth-03.html'">
                   계정별 서비스 설정
                 </button>
               </div>
 
               <div class="tabmenu-content">
+                <div class="cont-headline-box t--db">
+                  <span class="font-h3">계정별 서비스 제한 설정</span>
+                  <p class="desc">기업이 이용중인 서비스에 대해 계정별로 이용할 수 있도록 설정할 수 있습니다.</p>
+                  <div class="utils">
+                    <label class="switch-root s--lg">
+                      <span class="switch-label">제한 설정</span>
+                      <input type="checkbox" name="" />
+                    </label>
+                  </div>
+                </div>
+                <!-- // cont-headline-box -->
+
                 <div class="planlist-wrap">
                   <div class="planlist-box">
-                    <div class="planlist-title">
-                      <span class="font-h3">계정 이용 현황</span>
-                    </div>
-                    <div class="progress-wrap legend-03">
+                    <div class="progress-wrap legend-04">
                       <div class="label">
-                        <span class="font-h8">Pro</span>
-                        <span><em>5</em>/10</span>
+                        <span class="tit">
+                          <i class="icon-comm i--company"></i>
+                          <span>기업조회 이용 현황</span>
+                        </span>
+                        <span><em>5</em>명 이용중</span>
                       </div>
-                      <div class="progressbar">
-                        <div class="value" style="width: 75%"></div>
-                      </div>
-                    </div>
-                    <div class="cont">
-                      <p class="desc">잔여 이용가능 계정 <em>5개</em></p>
                     </div>
                   </div>
                   <!-- // planlist-box -->
 
                   <div class="planlist-box">
-                    <div class="planlist-title">
-                      <span class="font-h3">회원등급 현황</span>
-                      <div class="tooltip-root ac-hover">
-                        <button type="button" class="btn-icon">
-                          <i class="icon-comm i--tooltip"></i>
-                          <span class="blind">툴팁보기</span>
-                        </button>
-                        <div class="tooltip-popper">
-                          <div class="tooltip-box">
-                            <p class="msg">툴팁 메시지</p>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- // tooltip-root -->
-                      <span>승인 대기 중인 임시회원이 <em>1명</em> 있습니다.</span>
-
-                      <div class="utils">
-                        <button type="button" class="btn-comm">승인</button>
+                    <div class="progress-wrap legend-05">
+                      <div class="label">
+                        <span class="tit">
+                          <i class="icon-comm i--doc-gr"></i>
+                          <span>데이터 스튜디오 이용 현황</span>
+                        </span>
+                        <span><em>3</em>명 이용중</span>
                       </div>
                     </div>
-                    <!-- // planlist-title -->
+                  </div>
+                  <!-- // planlist-box -->
 
-                    <ul class="planlist-list">
-                      <li>
-                        <span>마스터관리자</span>
-                        <em class="value">1명</em>
-                      </li>
-                      <li>
-                        <span>일반관리자</span>
-                        <em class="value">1명</em>
-                      </li>
-                      <li>
-                        <span>일반회원</span>
-                        <em class="value">4명</em>
-                      </li>
-                      <li>
-                        <span>임시회원</span>
-                        <em class="value">1명</em>
-                      </li>
-                    </ul>
+                  <div class="planlist-box">
+                    <div class="progress-wrap legend-03">
+                      <div class="label">
+                        <span class="tit">
+                          <i class="icon-comm i--account"></i>
+                          <span>사기거래탐지 이용 현황</span>
+                        </span>
+                        <span><em>4</em>명 이용중</span>
+                      </div>
+                    </div>
                   </div>
                   <!-- // planlist-box -->
                 </div>
@@ -517,9 +505,6 @@
 
                 <div class="table-header mt32">
                   <div class="count font-h3">전체 <em>7</em>건</div>
-                  <div class="utils">
-                    <button type="button" class="btn-comm">회원등급 변경</button>
-                  </div>
                 </div>
 
                 <div class="table-wrap">
@@ -534,87 +519,127 @@
                         <th><span class="tit">이름</span></th>
                         <th><span class="tit">이메일 주소</span></th>
                         <th><span class="tit">소속부서</span></th>
-                        <th><span class="tit">회원등급</span></th>
-                        <th><span class="tit">서비스 이용 권한</span></th>
-                        <th><span class="tit">마지막 접속일시</span></th>
+                        <th><span class="tit">기업조회</span></th>
+                        <th><span class="tit">데이터 스튜디오</span></th>
+                        <th><span class="tit">사기거래탐지</span></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>
                           <label class="radiochk-label">
-                            <input type="checkbox" name="" checked />
+                            <input type="checkbox" name="" />
                           </label>
                         </td>
                         <td>1</td>
                         <td>김더존</td>
                         <td>cskim@tech.com</td>
                         <td>솔루션 기획팀</td>
-                        <td>마스터관리자</td>
                         <td>
                           <label class="switch-root">
                             <span class="switch-label">이용중</span>
                             <input type="checkbox" name="" checked />
                           </label>
                         </td>
-                        <td>2026.01.07 13:06:05</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label class="radiochk-label">
-                            <input type="checkbox" name="" checked />
-                          </label>
-                        </td>
-                        <td>2</td>
-                        <td>김더존</td>
-                        <td>cskim@tech.com</td>
-                        <td>솔루션 기획팀</td>
-                        <td>마스터관리자</td>
-                        <td>
-                          <label class="switch-root">
-                            <span class="switch-label">이용중</span>
-                            <input type="checkbox" name="" checked />
-                          </label>
-                        </td>
-                        <td>2026.01.07 13:06:05</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label class="radiochk-label">
-                            <input type="checkbox" name="" checked />
-                          </label>
-                        </td>
-                        <td>3</td>
-                        <td>김더존</td>
-                        <td>cskim@tech.com</td>
-                        <td>솔루션 기획팀</td>
-                        <td>마스터관리자</td>
-                        <td>
-                          <label class="switch-root">
-                            <span class="switch-label">이용중</span>
-                            <input type="checkbox" name="" checked />
-                          </label>
-                        </td>
-                        <td>2026.01.07 13:06:05</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label class="radiochk-label">
-                            <input type="checkbox" name="" />
-                          </label>
-                        </td>
-                        <td>4</td>
-                        <td>김더존</td>
-                        <td>cskim@tech.com</td>
-                        <td>솔루션 기획팀</td>
-                        <td>마스터관리자</td>
                         <td>
                           <label class="switch-root">
                             <span class="switch-label">미이용</span>
                             <input type="checkbox" name="" />
                           </label>
                         </td>
-                        <td>2026.01.07 13:06:05</td>
+                        <td>
+                          <label class="switch-root">
+                            <span class="switch-label">미이용</span>
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="radiochk-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
+                        <td>2</td>
+                        <td>김더존</td>
+                        <td>cskim@tech.com</td>
+                        <td>솔루션 기획팀</td>
+                        <td>
+                          <label class="switch-root">
+                            <span class="switch-label">이용중</span>
+                            <input type="checkbox" name="" checked />
+                          </label>
+                        </td>
+                        <td>
+                          <label class="switch-root">
+                            <span class="switch-label">미이용</span>
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
+                        <td>
+                          <label class="switch-root">
+                            <span class="switch-label">미이용</span>
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="radiochk-label">
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
+                        <td>3</td>
+                        <td>김더존</td>
+                        <td>cskim@tech.com</td>
+                        <td>솔루션 기획팀</td>
+                        <td>
+                          <label class="switch-root">
+                            <span class="switch-label">이용중</span>
+                            <input type="checkbox" name="" checked />
+                          </label>
+                        </td>
+                        <td>
+                          <label class="switch-root">
+                            <span class="switch-label">미이용</span>
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
+                        <td>
+                          <label class="switch-root">
+                            <span class="switch-label">미이용</span>
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="radiochk-label">
+                            <input type="checkbox" name="" checked />
+                          </label>
+                        </td>
+                        <td>4</td>
+                        <td>김더존</td>
+                        <td>cskim@tech.com</td>
+                        <td>솔루션 기획팀</td>
+                        <td>
+                          <label class="switch-root">
+                            <span class="switch-label">이용중</span>
+                            <input type="checkbox" name="" checked />
+                          </label>
+                        </td>
+                        <td>
+                          <label class="switch-root">
+                            <span class="switch-label">미이용</span>
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
+                        <td>
+                          <label class="switch-root">
+                            <span class="switch-label">미이용</span>
+                            <input type="checkbox" name="" />
+                          </label>
+                        </td>
                       </tr>
                       <tr>
                         <td>
@@ -626,52 +651,24 @@
                         <td>김더존</td>
                         <td>cskim@tech.com</td>
                         <td>솔루션 기획팀</td>
-                        <td>일반회원</td>
                         <td>
                           <label class="switch-root">
-                            <span class="switch-label">미이용</span>
-                            <input type="checkbox" name="" />
-                          </label>
-                        </td>
-                        <td>2026.01.07 13:06:05</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label class="radiochk-label">
+                            <span class="switch-label">이용중</span>
                             <input type="checkbox" name="" checked />
                           </label>
                         </td>
-                        <td>6</td>
-                        <td>김더존</td>
-                        <td>cskim@tech.com</td>
-                        <td>솔루션 기획팀</td>
-                        <td>일반관리자</td>
                         <td>
                           <label class="switch-root">
                             <span class="switch-label">미이용</span>
                             <input type="checkbox" name="" />
                           </label>
                         </td>
-                        <td>2026.01.07 13:06:05</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label class="radiochk-label">
-                            <input type="checkbox" name="" />
-                          </label>
-                        </td>
-                        <td>7</td>
-                        <td>김더존</td>
-                        <td>cskim@tech.com</td>
-                        <td>솔루션 기획팀</td>
-                        <td>임시회원</td>
                         <td>
                           <label class="switch-root">
                             <span class="switch-label">미이용</span>
                             <input type="checkbox" name="" />
                           </label>
                         </td>
-                        <td>2026.01.07 13:06:05</td>
                       </tr>
                     </tbody>
                   </table>
@@ -691,10 +688,10 @@
     <div class="toast-root">
       <!-- <div class="SOLToast-backdrop"></div> -->
       <div class="toast-box b--light">
-        <span class="count"><em>5</em>명 선택됨</span>
+        <span class="count"><em>2</em>명 선택됨</span>
         <div class="toast-cont">
           <div class="toast-service">
-            <p>서비스 이용권한</p>
+            <p>기업조회</p>
             <div class="radiochk-root t--btns s--sm">
               <label class="radiochk-label">
                 <input type="radio" name="selectGroup" checked />
@@ -702,6 +699,34 @@
               </label>
               <label class="radiochk-label">
                 <input type="radio" name="selectGroup" />
+                <span>미이용</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="toast-service">
+            <p>데이터 스튜디오</p>
+            <div class="radiochk-root t--btns s--sm">
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup2" />
+                <span>이용중</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup2" />
+                <span>미이용</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="toast-service">
+            <p>사기거래탐지</p>
+            <div class="radiochk-root t--btns s--sm">
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup3" />
+                <span>이용중</span>
+              </label>
+              <label class="radiochk-label">
+                <input type="radio" name="selectGroup3" />
                 <span>미이용</span>
               </label>
             </div>
@@ -715,7 +740,7 @@
 
       <!-- <div class="SOLToast-backdrop"></div> -->
       <div class="toast-box">
-        <p class="toast-icon">선택한 구성원의 등급과 이용권한을 일괄 변경했습니다.</p>
+        <p class="toast-icon">서비스 제한 설정을 변경했습니다.</p>
         <button type="button" class="btn-text">닫기</button>
       </div>
     </div>

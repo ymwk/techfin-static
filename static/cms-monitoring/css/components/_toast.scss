@@ -30,8 +30,8 @@
 
   .toast-icon {
     &::before {
-      box-shadow: 0 0 1px 1px rgba(0,0,0,0.3);
-      opacity: 0.6
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+      opacity: 0.6;
     }
   }
 }
@@ -40,7 +40,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   min-height: 48px;
   padding: 11px 16px;
   margin: 0 auto;
@@ -65,18 +65,16 @@
   & > .btn-text {
     color: inherit;
   }
-  
+
   .count {
     display: flex;
     align-items: center;
-    height: 12px;
-    padding: 0 16px 0 4px;
-    border-right: 1px solid var(--c-border2);
+    padding: 0 4px;
     font-size: 16px;
     font-weight: 700;
-    
+
     em {
-      color: var(--c-primary)
+      color: var(--c-primary);
     }
   }
 }
@@ -104,9 +102,9 @@
 .toast-btns {
   display: flex;
   gap: 8px;
-  
+
   .btn-contained:not(.s--xs, .s--sm) {
-    min-width: 63px
+    min-width: 63px;
   }
 }
 
@@ -119,5 +117,21 @@
 .toast-cont {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-right: 48px
+}
+
+.toast-service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 12px;
+  height: 16px;
+  padding-left: 16px;
+  border-left: 1px solid var(--c-border2);
+  
+  .radiochk-root.t--btns.s--sm .radiochk-label {
+    min-width: 58px
+  }
 }
