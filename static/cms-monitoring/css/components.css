@@ -3955,6 +3955,9 @@ img {
   position: absolute;
   top: 100%;
   left: 0;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
   opacity: 0;
   transition: opacity 0.2s;
   visibility: hidden;
@@ -4083,11 +4086,32 @@ img {
   background-color: inherit;
 }
 
+.datepicker-months {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px 0;
+  padding: 8px 0;
+}
+.datepicker-months .datepicker-btn {
+  width: 44px;
+  height: 44px;
+}
+.datepicker-months .datepicker-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+}
+
 .datepicker-btn {
   z-index: 1;
   position: relative;
   width: 32px;
   height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   border: 1px solid transparent;
   font-size: 15px;
