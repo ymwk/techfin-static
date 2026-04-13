@@ -85,6 +85,22 @@
   .desc {
     font-size: 14px;
   }
+  
+  &.t--selectable {
+    & > li {
+      cursor: pointer;
+      transition: border-color .2s, background-color .2s;
+      
+      &:hover {
+        border-color: var(--c-border);
+        background-color: var(--c-bg);
+      }
+      &.ac--active {
+        border-color: var(--c-primary);
+        background-color: var(--c-primary-bg);
+      }
+    }
+  }
 }
 
 .company-list {

@@ -378,6 +378,7 @@ textarea {
 
 :root {
   --c-primary: #3b5dfb;
+  --c-primary-bg: #F0F4FF;
   --c-black: #212126;
   --c-gray1: #4f4f55;
   --c-gray2: #75757a;
@@ -13688,6 +13689,21 @@ td .msg-list {
 .company-list .desc,
 .template-list .desc {
   font-size: 14px;
+}
+.company-list.t--selectable > li,
+.template-list.t--selectable > li {
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.company-list.t--selectable > li:hover,
+.template-list.t--selectable > li:hover {
+  border-color: var(--c-border);
+  background-color: var(--c-bg);
+}
+.company-list.t--selectable > li.ac--active,
+.template-list.t--selectable > li.ac--active {
+  border-color: var(--c-primary);
+  background-color: var(--c-primary-bg);
 }
 
 .company-list > li {
