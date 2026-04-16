@@ -14335,10 +14335,16 @@ td .msg-list {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  max-height: 650px;
+  max-height: 564px;
   margin-right: -20px;
   padding-right: 14px;
   overflow-y: scroll;
+}
+.explore-panel-scroll:has(.tree-group) {
+  max-height: 648px;
+}
+.explore-panel-scroll:has(.history) {
+  max-height: 615px;
 }
 
 .explore-result-list {
