@@ -121,22 +121,19 @@
   }
 }
 
-.explore-panel-scroll {
+.explore-scroll-wrap {
   position: relative;
   flex-grow: 1;
+}
+
+.explore-panel-scroll {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  max-height: 564px;
   margin-right: -20px;
   padding-right: 14px;
   overflow-y: scroll;
-  
-  &:has(.tree-group) {
-    max-height: 648px
-  }
-  &:has(.history) {
-    max-height: 615px
-  }
 }
 
 .explore-result-list {
