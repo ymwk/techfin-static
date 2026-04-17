@@ -14276,12 +14276,27 @@ td .msg-list {
 .tag-list .tag.ac--active {
   color: var(--c-primary);
   border-color: #7d98ff;
-  background-color: #F0F4FF;
+  background-color: #f0f4ff;
 }
 .tag-list .tag:hover {
   color: var(--c-primary);
   border-color: #7d98ff;
   background-color: #d8e0ff;
+}
+
+.explore-scroll-wrap {
+  position: relative;
+  flex-grow: 1;
+}
+
+.explore-panel-scroll {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: -20px;
+  padding-right: 14px;
+  overflow-y: scroll;
 }
 
 .explore-panel {
@@ -14293,7 +14308,8 @@ td .msg-list {
   flex-direction: column;
   gap: 16px;
   width: 320px;
-  min-height: calc(100vh - 72px);
+  min-height: calc(100vh - 260px);
+  max-height: 839px;
   padding: 8px 20px 20px;
   border-radius: 12px;
   border: 1px solid #d4d4d9;
@@ -14328,21 +14344,6 @@ td .msg-list {
   height: 32px;
   font-size: 13px;
   padding-left: 32px;
-}
-
-.explore-scroll-wrap {
-  position: relative;
-  flex-grow: 1;
-}
-
-.explore-panel-scroll {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  margin-right: -20px;
-  padding-right: 14px;
-  overflow-y: scroll;
 }
 
 .explore-result-list {

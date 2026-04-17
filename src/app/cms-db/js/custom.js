@@ -338,3 +338,26 @@ function fileChange(el) {
     el.parentNode.querySelector('.filefield-name').textContent = '파일을 첨부해 주세요.';
   }
 }
+
+//데이터스튜디오 사이드패널
+document.addEventListener('DOMContentLoaded', () => {
+  const sidepanel = document.querySelector('.explore-panel');
+  const scrollContainer = document.querySelector('.console-contents');
+
+  if (sidepanel && scrollContainer) {
+    const initialHeight = sidepanel.offsetHeight;
+
+    scrollContainer.addEventListener(
+      'scroll',
+      () => {
+        const currentScroll = scrollContainer.scrollTop;
+
+        // 높이 업데이트
+        sidepanel.style.height = `${initialHeight + currentScroll}px`;
+
+        // console.log(sidepanel.style.height);
+      },
+      { passive: true },
+    );
+  }
+});

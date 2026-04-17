@@ -21,9 +21,9 @@
   .cont-headline-sub {
     margin-top: 20px;
   }
-  
+
   .btn-text {
-    color: var(--c-gray2)
+    color: var(--c-gray2);
   }
 }
 
@@ -48,13 +48,16 @@
     background-color: #fff;
     font-size: 13px;
     font-weight: 500;
-    transition: background-color .2s, border-color .2s, color .2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      color 0.2s;
     cursor: pointer;
-    
+
     &.ac--active {
       color: var(--c-primary);
       border-color: #7d98ff;
-      background-color: #F0F4FF;
+      background-color: #f0f4ff;
     }
 
     &:hover {
@@ -66,6 +69,21 @@
 }
 
 ///////////////////////////// PANEL
+.explore-scroll-wrap {
+  position: relative;
+  flex-grow: 1;
+}
+
+.explore-panel-scroll {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: -20px;
+  padding-right: 14px;
+  overflow-y: scroll;
+}
+
 .explore-panel {
   position: sticky;
   top: 32px;
@@ -75,7 +93,9 @@
   flex-direction: column;
   gap: 16px;
   width: 320px;
-  min-height: calc(100vh - 72px);
+  min-height: calc(100vh - 260px);
+  // min-height: calc(100vh - 72px);
+  max-height: 839px;
   padding: 8px 20px 20px;
   border-radius: 12px;
   border: 1px solid #d4d4d9;
@@ -121,21 +141,6 @@
   }
 }
 
-.explore-scroll-wrap {
-  position: relative;
-  flex-grow: 1;
-}
-
-.explore-panel-scroll {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  margin-right: -20px;
-  padding-right: 14px;
-  overflow-y: scroll;
-}
-
 .explore-result-list {
   display: flex;
   flex-direction: column;
@@ -144,18 +149,18 @@
   margin: 12px 0 8px;
   font-size: 16px;
   font-weight: 700;
-  
+
   li {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .name {
-    font-size: 14px
+    font-size: 14px;
   }
-  
+
   .value {
-    color: var(--c-primary)
+    color: var(--c-primary);
   }
 }

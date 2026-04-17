@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>프로젝트 INDEX 리스트</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        display: flex;
+        align-items: stretch; /* 좌우 높이를 동일하게 맞춤 */
+      }
+
+      .sidebar {
+        width: 250px;
+        background-color: #f8f9fa; /* 사이드바 배경 */
+        position: relative;
+      }
+
+      .sticky-box {
+        position: sticky;
+        bottom: 50px; /* 화면 하단 50px에서 멈춤 */
+
+        /* 높이 설정이 중요합니다 */
+        height: auto;
+        min-height: 400px; /* 최소 높이 설정 */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .main-content {
+        flex: 1;
+        background-color: #fff;
+        padding: 20px;
+        border-left: 1px solid #ddd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="sticky-box">
+          <div class="top-content">
+            <h3>상단 메뉴</h3>
+            <p>스크롤하면 위로 올라갑니다.</p>
+          </div>
+
+          <div class="middle-spacer"></div>
+
+          <div class="bottom-content">
+            <p>여기는 하단 50px에 고정!</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <h2>우측 컨텐츠</h2>
+        <p>스크롤을 위해 매우 긴 영역...</p>
+        <div style="height: 2000px"></div>
+      </main>
+    </div>
+  </body>
+</html>
