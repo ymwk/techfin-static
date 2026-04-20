@@ -8238,6 +8238,8 @@ body.open .console-root:has(.console-sidebar) .sidebar-container {
   max-width: 100%;
   padding-left: 40px;
   padding-right: 40px;
+}
+.console-root.st--db .console-contents-inner {
   padding-bottom: 40px;
 }
 .console-root.st--db .console-contents {

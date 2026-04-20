@@ -6,9 +6,12 @@
     max-width: 100%;
     padding-left: 40px;
     padding-right: 40px;
-    padding-bottom: 40px
   }
-  
+
+  .console-contents-inner {
+    padding-bottom: 40px;
+  }
+
   .console-contents {
     overflow: auto;
     height: 100vh;
