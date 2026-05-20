@@ -187,3 +187,34 @@
   background-color: #fff;
   box-shadow: 12px 16px 40px 0px #0000000a;
 }
+
+.exfilter-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    .i--down {
+      transform: scale(0.8);
+      opacity: 0.6;
+    }
+  }
+  
+  &[open] {
+    summary .i--down {
+      transform: scale(0.8) rotate(180deg);
+    }
+  }
+}
+
+.exfilter-details-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}

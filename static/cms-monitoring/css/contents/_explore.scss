@@ -12,18 +12,20 @@
   flex-direction: column;
   gap: 24px;
   align-self: stretch;
+
+  .cont-headline-sub {
+    margin-top: 0;
+  }
 }
 
 .explore-filter {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
 
   .cont-headline-sub {
     margin-top: 20px;
-  }
-
-  .btn-text {
-    color: var(--c-gray2);
   }
 }
 
@@ -164,3 +166,5 @@
     color: var(--c-primary);
   }
 }
+
+

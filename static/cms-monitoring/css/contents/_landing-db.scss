@@ -16,6 +16,7 @@
   background: rgb(226, 230, 237) linear-gradient(90deg, rgb(226, 230, 237) 4.58%, rgba(226, 230, 237, 0) 17.29%);
 
   &.t--login {
+    overflow: visible;
     background: url(../image/main-db/main_intro_bg.png) no-repeat center center / cover;
 
     .main-section-inner {
@@ -599,6 +600,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: #f9f9f9;
+  overflow: visible;
 
   .main-section-inner {
     padding-top: 60px;
@@ -730,6 +732,13 @@
 
       .progressbar {
         background-color: #e8e8e8;
+      }
+      
+      .msg {
+        text-align: center;
+        font-size: 14px;
+        color: var(--c-gray2);
+        margin-bottom: -4px
       }
     }
 

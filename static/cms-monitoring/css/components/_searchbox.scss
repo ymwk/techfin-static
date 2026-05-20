@@ -106,6 +106,7 @@
 
   button {
     height: 40px;
+    font-size: 14px;
   }
 
   .btn-contained {
@@ -237,9 +238,9 @@
         box-shadow: 0 0 0 3px #f1f1f3;
       }
     }
-    
+
     &.ac--active {
-      background-color: #F0F4FF
+      background-color: #f0f4ff;
     }
   }
 
@@ -279,6 +280,15 @@
   .search-keyword {
     margin-top: 36px;
   }
+  
+  &.s--sm {
+    font-size: 14px;
+    
+    .tit {
+      font-size: 15px;
+      color: inherit
+    }
+  }
 }
 
 .search-template,
@@ -308,12 +318,12 @@
 
 .plan-banner {
   max-width: 656px;
-  
+
   .template-list {
     gap: 10px;
-    
+
     & > li {
-      gap: 0
+      gap: 0;
     }
   }
 }
@@ -349,5 +359,37 @@
 .search-utils {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
+
+  .utils {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+    
+    .btn-contained {
+      min-width: 63px;
+    }
+  }
+}
+
+.utils-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .btn-text + .btn-text {
+    margin-left: 9px;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 50%;
+      height: 11px;
+      margin-top: -5px;
+      border-left: 1px solid #D4D4D9
+      
+    }
+  }
 }

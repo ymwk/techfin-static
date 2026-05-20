@@ -51,7 +51,7 @@
                 <span>6개월</span>
               </label>
               <label class="radiochk-label">
-                <input type="radio" name="selectGroup" />
+                <input type="radio" name="selectGroup" checked />
                 <span>12개월</span>
               </label>
             </div>
@@ -68,7 +68,7 @@
                   readonly=""
                 />
                 <button type="button" class="textfield-btn">
-                  <i class="icon-comm i--calendar"> </i>
+                  <i class="icon-comm i--calendar"></i>
                   <span class="blind">달력 열기</span>
                 </button>
               </label>
@@ -84,7 +84,7 @@
                   readonly=""
                 />
                 <button type="button" class="textfield-btn">
-                  <i class="icon-comm i--calendar"> </i>
+                  <i class="icon-comm i--calendar"></i>
                   <span class="blind">달력 열기</span>
                 </button>
               </label>
@@ -139,9 +139,9 @@
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">15</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">16</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">17</button></span>
-                          <span class="datepicker-item t--start"
-                            ><button type="button" class="datepicker-btn t--selected">18</button></span
-                          >
+                          <span class="datepicker-item t--start">
+                            <button type="button" class="datepicker-btn t--selected">18</button>
+                          </span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">19</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">20</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">21</button></span>
@@ -198,15 +198,15 @@
                           <span class="datepicker-item t--disabled">
                             <button type="button" class="datepicker-btn">28</button>
                           </span>
-                          <span class="datepicker-item t--disabled"
-                            ><button type="button" class="datepicker-btn">29</button></span
-                          >
-                          <span class="datepicker-item t--disabled"
-                            ><button type="button" class="datepicker-btn">30</button></span
-                          >
-                          <span class="datepicker-item t--disabled"
-                            ><button type="button" class="datepicker-btn">31</button></span
-                          >
+                          <span class="datepicker-item t--disabled">
+                            <button type="button" class="datepicker-btn">29</button>
+                          </span>
+                          <span class="datepicker-item t--disabled">
+                            <button type="button" class="datepicker-btn">30</button>
+                          </span>
+                          <span class="datepicker-item t--disabled">
+                            <button type="button" class="datepicker-btn">31</button>
+                          </span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">1</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">2</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">3</button></span>
@@ -256,6 +256,26 @@
               </div>
               <!-- // datepicker-popper -->
             </div>
+
+            <details class="exfilter-details">
+              <summary>
+                <span class="font-h5">추가설정</span>
+                <i class="icon-comm i--down"></i>
+              </summary>
+              <div class="exfilter-details-cont">
+                <span>데이터기준월 조건</span>
+                <div class="radiochk-root t--btns s--sm">
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup2" checked />
+                    <span>모든 데이터기준월 포함</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup2" />
+                    <span>하나라도 포함</span>
+                  </label>
+                </div>
+              </div>
+            </details>
           </div>
           <div class="filter-action">
             <button type="button" class="btn-comm">닫기</button>
@@ -473,18 +493,25 @@
             <ul class="upload-data">
               <li>
                 <span>업로드된 기업</span>
-                <span class="value"><em class="c--primary">120</em>개</span>
+                <span class="value">
+                  <em class="c--primary">120</em>
+                  개
+                </span>
               </li>
               <li>
                 <span>조회 가능 기업</span>
-                <span class="value"><em class="c--primary">3</em>개</span>
+                <span class="value">
+                  <em class="c--primary">3</em>
+                  개
+                </span>
               </li>
             </ul>
 
             <div class="desc-info">
               <i class="icon-comm i--tooltip"></i>
               <p>
-                기업명과 사업자등록번호 모두 일치하는 기업을 찾았습니다.<br />
+                기업명과 사업자등록번호 모두 일치하는 기업을 찾았습니다.
+                <br />
                 업로드된 기업 중 DB 내 정보가 없거나 형식이 올바르지 않은 경우 제외되었습니다.
               </p>
             </div>
@@ -518,7 +545,7 @@
                   readonly=""
                 />
                 <button type="button" class="textfield-btn">
-                  <i class="icon-comm i--calendar"> </i>
+                  <i class="icon-comm i--calendar"></i>
                   <span class="blind">달력 열기</span>
                 </button>
               </label>
@@ -534,7 +561,7 @@
                   readonly=""
                 />
                 <button type="button" class="textfield-btn">
-                  <i class="icon-comm i--calendar"> </i>
+                  <i class="icon-comm i--calendar"></i>
                   <span class="blind">달력 열기</span>
                 </button>
               </label>
@@ -589,9 +616,9 @@
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">15</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">16</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">17</button></span>
-                          <span class="datepicker-item t--start"
-                            ><button type="button" class="datepicker-btn t--selected">18</button></span
-                          >
+                          <span class="datepicker-item t--start">
+                            <button type="button" class="datepicker-btn t--selected">18</button>
+                          </span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">19</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">20</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">21</button></span>
@@ -648,15 +675,15 @@
                           <span class="datepicker-item t--disabled">
                             <button type="button" class="datepicker-btn">28</button>
                           </span>
-                          <span class="datepicker-item t--disabled"
-                            ><button type="button" class="datepicker-btn">29</button></span
-                          >
-                          <span class="datepicker-item t--disabled"
-                            ><button type="button" class="datepicker-btn">30</button></span
-                          >
-                          <span class="datepicker-item t--disabled"
-                            ><button type="button" class="datepicker-btn">31</button></span
-                          >
+                          <span class="datepicker-item t--disabled">
+                            <button type="button" class="datepicker-btn">29</button>
+                          </span>
+                          <span class="datepicker-item t--disabled">
+                            <button type="button" class="datepicker-btn">30</button>
+                          </span>
+                          <span class="datepicker-item t--disabled">
+                            <button type="button" class="datepicker-btn">31</button>
+                          </span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">1</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">2</button></span>
                           <span class="datepicker-item"><button type="button" class="datepicker-btn">3</button></span>

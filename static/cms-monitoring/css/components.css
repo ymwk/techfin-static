@@ -1324,6 +1324,7 @@ img {
 .btn-outlined,
 .btn-cta,
 .btn-link {
+  position: relative;
   flex-shrink: 0;
   display: inline-flex;
   justify-content: center;
@@ -1565,6 +1566,7 @@ img {
 }
 
 .btn-text {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1574,6 +1576,7 @@ img {
   color: var(--c-black);
   font-weight: 500;
   white-space: nowrap;
+  min-height: 24px;
 }
 .btn-text:hover {
   text-decoration: none !important;
@@ -1584,7 +1587,11 @@ img {
   transition: background-color 0.2s;
 }
 .btn-text:not(:has(.underline, .hoverline)):not(:disabled):hover {
-  background-color: rgba(0, 0, 0, 0.015);
+  background-color: rgba(0, 0, 0, 0.025);
+}
+.btn-text:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .btn-text .underline {
   display: inline-block;
@@ -2465,6 +2472,9 @@ img {
   width: 24px;
   background-image: url(../image/icon/ic_reset.svg);
 }
+.i--refresh.s--sm {
+  transform: scale(0.8);
+}
 
 .i--refresh-w {
   background-image: url(../image/icon/ic_refresh_w.svg);
@@ -2529,6 +2539,11 @@ img {
 .i--file {
   width: 16px;
   background-image: url(../image/icon/ic_clip.svg);
+}
+
+.i--download {
+  width: 16px;
+  background-image: url(../image/icon/ic_download2.svg);
 }
 
 .i--pdf {
@@ -2819,6 +2834,19 @@ img {
   content: "";
   width: 2px;
   height: 18px;
+}
+
+.i--plus-b {
+  position: relative;
+  font-size: 1.6em;
+  font-weight: 300;
+}
+.i--plus-b::before {
+  content: "+";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%);
 }
 
 .i--add-w {
@@ -3214,6 +3242,9 @@ img {
 .i--empty-list {
   width: 80px;
   background-image: url(../image/icon/ic_empty_list.svg);
+}
+.i--empty-list.c--gray {
+  background-image: url(../image/icon/ic_empty_list_gray.svg);
 }
 
 .i--empty-info {
@@ -4222,6 +4253,7 @@ img {
 }
 .searchbox-btns button {
   height: 40px;
+  font-size: 14px;
 }
 .searchbox-btns .btn-contained {
   padding: 0 20px;
@@ -4327,7 +4359,7 @@ img {
   box-shadow: 0 0 0 3px #f1f1f3;
 }
 .filter-checklist-root .radiocheck-label.ac--active {
-  background-color: #F0F4FF;
+  background-color: #f0f4ff;
 }
 .filter-checklist-root .search-empty {
   font-size: 14px;
@@ -4363,6 +4395,13 @@ img {
 }
 .search-empty .search-keyword {
   margin-top: 36px;
+}
+.search-empty.s--sm {
+  font-size: 14px;
+}
+.search-empty.s--sm .tit {
+  font-size: 15px;
+  color: inherit;
 }
 
 .search-template,
@@ -4428,5 +4467,32 @@ img {
 .search-utils {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
+}
+.search-utils .utils {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+.search-utils .utils .btn-contained {
+  min-width: 63px;
+}
+
+.utils-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.utils-btns .btn-text + .btn-text {
+  margin-left: 9px;
+}
+.utils-btns .btn-text + .btn-text::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  height: 11px;
+  margin-top: -5px;
+  border-left: 1px solid #D4D4D9;
 }

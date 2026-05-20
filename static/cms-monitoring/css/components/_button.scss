@@ -3,6 +3,7 @@
 .btn-outlined,
 .btn-cta,
 .btn-link {
+  position: relative;
   flex-shrink: 0;
   display: inline-flex;
   justify-content: center;
@@ -27,7 +28,7 @@
     background-color: var(--c-bg);
     font-weight: 500;
     cursor: not-allowed;
-    
+
     .icon-comm {
       opacity: 0.4;
     }
@@ -225,6 +226,7 @@
 }
 
 .btn-text {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -234,6 +236,7 @@
   color: var(--c-black);
   font-weight: 500;
   white-space: nowrap;
+  min-height: 24px;
 
   &:hover {
     text-decoration: none !important;
@@ -245,8 +248,13 @@
     transition: background-color 0.2s;
 
     &:not(:disabled):hover {
-      background-color: rgba(0, 0, 0, 0.015);
+      background-color: rgba(0, 0, 0, 0.025);
     }
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
   .underline {
@@ -279,9 +287,9 @@
   &.s--mmd {
     font-size: 14px;
   }
-  
+
   .i--gt-r {
-    margin: 0 -4px
+    margin: 0 -4px;
   }
 }
 
