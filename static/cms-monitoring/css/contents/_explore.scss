@@ -18,6 +18,12 @@
   }
 }
 
+.explore-filter.v1 {
+  flex-direction: row;
+  gap: 24px;
+  padding: 0
+}
+
 .explore-filter {
   display: flex;
   flex-direction: column;
@@ -166,5 +172,3 @@
     color: var(--c-primary);
   }
 }
-
-

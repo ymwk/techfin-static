@@ -14365,6 +14365,12 @@ td .msg-list {
   margin-top: 0;
 }
 
+.explore-filter.v1 {
+  flex-direction: row;
+  gap: 24px;
+  padding: 0;
+}
+
 .explore-filter {
   display: flex;
   flex-direction: column;
