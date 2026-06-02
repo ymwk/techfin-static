@@ -2281,7 +2281,8 @@ button.swiper-pagination-bullet {
 .btn-contained,
 .btn-outlined,
 .btn-cta,
-.btn-link {
+.btn-link,
+.btn-box {
   position: relative;
   flex-shrink: 0;
   display: inline-flex;
@@ -2302,7 +2303,8 @@ button.swiper-pagination-bullet {
 .btn-contained:disabled,
 .btn-outlined:disabled,
 .btn-cta:disabled,
-.btn-link:disabled {
+.btn-link:disabled,
+.btn-box:disabled {
   color: #b1b1b4;
   border: 1px solid var(--c-border2);
   background-color: var(--c-bg);
@@ -2313,14 +2315,16 @@ button.swiper-pagination-bullet {
 .btn-contained:disabled .icon-comm,
 .btn-outlined:disabled .icon-comm,
 .btn-cta:disabled .icon-comm,
-.btn-link:disabled .icon-comm {
+.btn-link:disabled .icon-comm,
+.btn-box:disabled .icon-comm {
   opacity: 0.4;
 }
 .btn-comm.s--xs,
 .btn-contained.s--xs,
 .btn-outlined.s--xs,
 .btn-cta.s--xs,
-.btn-link.s--xs {
+.btn-link.s--xs,
+.btn-box.s--xs {
   height: 24px;
   padding: 0 7px;
   border-radius: 4px;
@@ -2331,7 +2335,8 @@ button.swiper-pagination-bullet {
 .btn-contained.s--sm,
 .btn-outlined.s--sm,
 .btn-cta.s--sm,
-.btn-link.s--sm {
+.btn-link.s--sm,
+.btn-box.s--sm {
   min-width: 50px;
   height: 26px;
   padding: 0 5px;
@@ -2341,7 +2346,8 @@ button.swiper-pagination-bullet {
 .btn-contained.s--md,
 .btn-outlined.s--md,
 .btn-cta.s--md,
-.btn-link.s--md {
+.btn-link.s--md,
+.btn-box.s--md {
   height: 40px;
   font-size: 14px;
   padding: 0 20px;
@@ -2350,7 +2356,8 @@ button.swiper-pagination-bullet {
 .btn-contained.s--lg,
 .btn-outlined.s--lg,
 .btn-cta.s--lg,
-.btn-link.s--lg {
+.btn-link.s--lg,
+.btn-box.s--lg {
   height: 48px;
   font-size: 16px;
   min-width: 90px;
@@ -2359,7 +2366,8 @@ button.swiper-pagination-bullet {
 .btn-contained.s--bd,
 .btn-outlined.s--bd,
 .btn-cta.s--bd,
-.btn-link.s--bd {
+.btn-link.s--bd,
+.btn-box.s--bd {
   min-width: 160px;
   height: 48px;
   border-radius: 6px;
@@ -2369,21 +2377,24 @@ button.swiper-pagination-bullet {
 .btn-contained.w--full,
 .btn-outlined.w--full,
 .btn-cta.w--full,
-.btn-link.w--full {
+.btn-link.w--full,
+.btn-box.w--full {
   width: 100%;
 }
 .btn-comm:has(.icon-comm),
 .btn-contained:has(.icon-comm),
 .btn-outlined:has(.icon-comm),
 .btn-cta:has(.icon-comm),
-.btn-link:has(.icon-comm) {
+.btn-link:has(.icon-comm),
+.btn-box:has(.icon-comm) {
   padding: 0 12px;
 }
 .btn-comm .icon-comm,
 .btn-contained .icon-comm,
 .btn-outlined .icon-comm,
 .btn-cta .icon-comm,
-.btn-link .icon-comm {
+.btn-link .icon-comm,
+.btn-box .icon-comm {
   min-width: 20px;
   margin-left: -4px;
 }
@@ -2391,7 +2402,8 @@ button.swiper-pagination-bullet {
 .btn-contained .icon-comm:first-child,
 .btn-outlined .icon-comm:first-child,
 .btn-cta .icon-comm:first-child,
-.btn-link .icon-comm:first-child {
+.btn-link .icon-comm:first-child,
+.btn-box .icon-comm:first-child {
   margin-right: -4px;
 }
 .btn-comm:has(.icon-comm:only-child), .btn-comm:has(.blind),
@@ -2402,7 +2414,9 @@ button.swiper-pagination-bullet {
 .btn-cta:has(.icon-comm:only-child),
 .btn-cta:has(.blind),
 .btn-link:has(.icon-comm:only-child),
-.btn-link:has(.blind) {
+.btn-link:has(.blind),
+.btn-box:has(.icon-comm:only-child),
+.btn-box:has(.blind) {
   aspect-ratio: 1;
   padding: 0;
 }
@@ -2414,7 +2428,9 @@ button.swiper-pagination-bullet {
 .btn-cta:has(.icon-comm:only-child) .icon-comm,
 .btn-cta:has(.blind) .icon-comm,
 .btn-link:has(.icon-comm:only-child) .icon-comm,
-.btn-link:has(.blind) .icon-comm {
+.btn-link:has(.blind) .icon-comm,
+.btn-box:has(.icon-comm:only-child) .icon-comm,
+.btn-box:has(.blind) .icon-comm {
   margin: 0;
 }
 .btn-comm:has(.icon-comm:only-child).s--md, .textfield-label .btn-comm:has(.icon-comm:only-child), .btn-comm:has(.blind).s--md, .textfield-label .btn-comm:has(.blind),
@@ -2425,7 +2441,9 @@ button.swiper-pagination-bullet {
 .btn-cta:has(.icon-comm:only-child).s--md,
 .btn-cta:has(.blind).s--md,
 .btn-link:has(.icon-comm:only-child).s--md,
-.btn-link:has(.blind).s--md {
+.btn-link:has(.blind).s--md,
+.btn-box:has(.icon-comm:only-child).s--md,
+.btn-box:has(.blind).s--md {
   width: 40px;
 }
 
@@ -2464,7 +2482,7 @@ button.swiper-pagination-bullet {
   color: #fff;
   font-weight: 400;
 }
-.btn-contained:disabled {
+.btn-contained:disabled, .btn-contained.disabled {
   background-color: #f0f4ff;
   border-color: #d8e0ff;
   color: #bac7ff;
@@ -2585,6 +2603,17 @@ button.swiper-pagination-bullet {
   color: var(--c-gray2);
 }
 .btn-link .utils {
+  margin-left: auto;
+  color: var(--c-gray2);
+}
+
+.btn-box {
+  font-weight: 500;
+  color: var(--c-gray2);
+  background-color: var(--c-bg);
+  border: 0;
+}
+.btn-box .utils {
   margin-left: auto;
   color: var(--c-gray2);
 }
@@ -14136,14 +14165,14 @@ td .msg-list {
 }
 
 .plan-guide-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 16px;
   line-height: 1.5;
   font-size: 14px;
   word-break: keep-all;
 }
 .plan-guide-list > li {
+  flex: 1;
   display: flex;
   flex-direction: column;
   padding: 28px 24px;

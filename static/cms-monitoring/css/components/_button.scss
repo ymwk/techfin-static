@@ -2,7 +2,8 @@
 .btn-contained,
 .btn-outlined,
 .btn-cta,
-.btn-link {
+.btn-link,
+.btn-box {
   position: relative;
   flex-shrink: 0;
   display: inline-flex;
@@ -137,7 +138,8 @@
   color: #fff;
   font-weight: 400;
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     background-color: #f0f4ff;
     border-color: #d8e0ff;
     color: #bac7ff;
@@ -251,7 +253,7 @@
       background-color: rgba(0, 0, 0, 0.025);
     }
   }
-  
+
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -296,6 +298,18 @@
 .btn-link {
   font-weight: 500;
   color: var(--c-gray2);
+
+  .utils {
+    margin-left: auto;
+    color: var(--c-gray2);
+  }
+}
+
+.btn-box {
+  font-weight: 500;
+  color: var(--c-gray2);
+  background-color: var(--c-bg);
+  border: 0;
 
   .utils {
     margin-left: auto;
