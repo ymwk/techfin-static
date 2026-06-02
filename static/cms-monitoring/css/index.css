@@ -5987,6 +5987,14 @@ button.swiper-pagination-bullet {
   text-align: left !important;
 }
 
+.bd--right {
+  border-right: 1px solid var(--c-border2) !important;
+}
+
+.bg--selected {
+  background-color: var(--c-primary-bg) !important;
+}
+
 .al--right {
   text-align: right !important;
   font-feature-settings: "tnum" 1;
@@ -9661,7 +9669,8 @@ td .msg-list {
   background-color: #f0f4ff;
 }
 .cont-headline-box.t--detail.s--sm {
-  padding: 20px 24px;
+  min-height: 72px;
+  padding: 19px 24px;
 }
 .cont-headline-box.t--detail.s--sm .headline-title {
   flex-direction: row;
@@ -13083,7 +13092,6 @@ td .msg-list {
 }
 .main-db-insight .insight-list .tit {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   font-size: 20px;
   margin-bottom: 16px;
@@ -13092,20 +13100,21 @@ td .msg-list {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  margin-left: auto;
   font-size: 13px;
   color: var(--c-gray1);
 }
 .main-db-insight .insight-list .list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   counter-reset: index;
 }
 .main-db-insight .insight-list .list li {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 24px 20px;
+  padding: 18px 20px;
   border-radius: 12px;
   background-color: #f5f8fd;
   font-size: 16px;
@@ -13126,6 +13135,12 @@ td .msg-list {
 }
 .main-db-insight .insight-list .list .data .icon-comm {
   background-color: #fff;
+}
+.main-db-insight .insight-list .tabmenu-menu {
+  gap: 12px;
+}
+.main-db-insight .insight-list .tabmenu-menu .tabmenu-btn {
+  height: 40px;
 }
 .main-db-insight .insight-table-wrap {
   position: relative;
@@ -14534,22 +14549,12 @@ body:has(#guide01) .guide-pop::before {
   border-color: transparent #fff transparent transparent;
 }
 
-body:has(#guide02) .explore-container {
-  position: relative;
-  z-index: -1;
-}
-body:has(#guide02) .headline-utils:has(#guide02) {
-  position: relative;
-  z-index: 99;
-}
-body:has(#guide02) .headline-utils:has(#guide02)::before {
+body:has(#guide02) .explore-filter:has(#guide02)::before {
   content: "";
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.25);
-}
-body:has(#guide02) .headline-utils:has(#guide02) .btn-comm:not(#guide02) {
-  z-index: -1;
+  z-index: 999;
 }
 body:has(#guide02) #guide02 {
   z-index: 9999;
@@ -14617,8 +14622,7 @@ body:has(#guide03) .guide-pop::before {
   display: flex;
   gap: 7px;
 }
-.guide-pop .stepper span, .guide-pop .stepper::before, .guide-pop .stepper::after {
-  content: "";
+.guide-pop .stepper span {
   display: block;
   width: 4px;
   height: 4px;
@@ -14631,19 +14635,19 @@ body:has(#guide03) .guide-pop::before {
   justify-content: space-between;
 }
 
-#guidePop01 .stepper::before {
+#guidePop01 .stepper span:first-child {
   background-color: var(--c-primary);
-  box-shadow: 0 0 0 3px #D8E0FF;
+  box-shadow: 0 0 0 3px #d8e0ff;
 }
 
-#guidePop02 .stepper span {
+#guidePop02 .stepper span:nth-child(2) {
   background-color: var(--c-primary);
-  box-shadow: 0 0 0 3px #D8E0FF;
+  box-shadow: 0 0 0 3px #d8e0ff;
 }
 
 #guidePop03 .stepper::after {
   background-color: var(--c-primary);
-  box-shadow: 0 0 0 3px #D8E0FF;
+  box-shadow: 0 0 0 3px #d8e0ff;
 }
 
 .section-detect {

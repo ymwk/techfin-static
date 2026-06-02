@@ -173,7 +173,11 @@
               </li>
               <li class="expert-04">
                 <span class="label">신설법인 기업</span>
-                <em class="tit">자본 기반을 갖춘 신생 법인<br/>기업</em>
+                <em class="tit">
+                  자본 기반을 갖춘 신생 법인
+                  <br />
+                  기업
+                </em>
                 <button type="button" class="btn">
                   약 200개 기업 검색
                   <i class="icon-comm i--gt-r"></i>
@@ -195,12 +199,31 @@
             <ul class="insight-list">
               <li>
                 <div class="tit">
-                  <em>전년대비 매출 급증 업종 TOP 3</em>
-                  <span class="date">
+                  <em>매출액 급증 업종 TOP 3</em>
+                  <div class="tooltip-root ac-hover">
+                    <button type="button" class="btn-icon">
+                      <i class="icon-comm i--tooltip"></i>
+                      <span class="blind">툴팁보기</span>
+                    </button>
+                    <div class="tooltip-popper">
+                      <div class="tooltip-box">
+                        <p>당사 보유 데이터 내 기업의 전 · 당기 매출액 합산 기준</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <span class="date">
                     <i class="icon-comm i--chart"></i>
                     데이터 기준 2026년 1월 1일
-                  </span>
+                  </span> -->
                 </div>
+                <div class="tabmenu-menu">
+                  <button type="button" class="tabmenu-btn ac--active" data-target-tab="insight1">법인사업자</button>
+                  <button type="button" class="tabmenu-btn" data-target-tab="insight2">개인사업자</button>
+                </div>
+
+                <div class="tabmenu-content"></div>
+
                 <ul class="list">
                   <li>
                     반도체 제조용 장비

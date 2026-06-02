@@ -473,7 +473,8 @@
                 <div class="explore-panel">
                   <div class="tabmenu-menu s--sm">
                     <button type="button" class="tabmenu-btn ac--active" data-target-tab="panel1">템플릿</button>
-                    <button type="button" class="tabmenu-btn" data-target-tab="panel2">탐색조건</button>
+                    <!-- <button type="button" class="tabmenu-btn" data-target-tab="panel2">탐색조건</button> -->
+                    <button type="button" class="tabmenu-btn" data-target-tab="panel3">조회이력</button>
                   </div>
 
                   <div class="tabmenu-content" id="panel1">
@@ -502,8 +503,22 @@
 
                       <div class="explore-scroll-wrap">
                         <div class="explore-panel-scroll">
-                          <ul class="template-list">
-                            <li id="guide01">
+                          <ul class="template-list t--selectable">
+                            <li>
+                              <span class="sort">
+                                <span>투자 검토</span>
+                                <span>영업 타겟</span>
+                              </span>
+                              <em class="tit">전년영업이익 흑자전환</em>
+                              <button type="button" class="btn-icon btn-fav">
+                                <i class="icon-comm i--like s--sm"></i>
+                                <span class="blind">좋아요</span>
+                              </button>
+
+                              <p>전년 영업이익에서 흑자 전환된 기업</p>
+                            </li>
+
+                            <li class="ac--active">
                               <span class="sort">
                                 <span>투자 검토</span>
                                 <span>영업 타겟</span>
@@ -523,14 +538,39 @@
                                 <span>영업 타겟</span>
                               </span>
                               <em class="tit">전년영업이익 흑자전환</em>
-                              <button type="button" class="btn-icon btn-fav">
+                              <button type="button" class="btn-icon btn-fav ac--active">
                                 <i class="icon-comm i--like s--sm"></i>
                                 <span class="blind">좋아요</span>
                               </button>
 
                               <p>전년 영업이익에서 흑자 전환된 기업</p>
                             </li>
+                            <li>
+                              <span class="sort">
+                                <span>투자 검토</span>
+                                <span>영업 타겟</span>
+                              </span>
+                              <em class="tit">전년영업이익 흑자전환</em>
+                              <button type="button" class="btn-icon btn-fav ac--active">
+                                <i class="icon-comm i--like s--sm"></i>
+                                <span class="blind">좋아요</span>
+                              </button>
 
+                              <p>전년 영업이익에서 흑자 전환된 기업</p>
+                            </li>
+                            <li>
+                              <span class="sort">
+                                <span>투자 검토</span>
+                                <span>영업 타겟</span>
+                              </span>
+                              <em class="tit">전년영업이익 흑자전환</em>
+                              <button type="button" class="btn-icon btn-fav ac--active">
+                                <i class="icon-comm i--like s--sm"></i>
+                                <span class="blind">좋아요</span>
+                              </button>
+
+                              <p>전년 영업이익에서 흑자 전환된 기업</p>
+                            </li>
                             <li>
                               <span class="sort">
                                 <span>투자 검토</span>
@@ -612,7 +652,7 @@
                       <i class="icon-comm i--search"></i>
                       <label class="textfield-label">
                         <span class="label blind">검색</span>
-                        <input type="text" class="textfield-form" name="" placeholder="필드 검색" value="탐색" />
+                        <input type="text" class="textfield-form" name="" placeholder="필드 검색" />
                         <button type="button" class="btn-clear">
                           <span class="blind">삭제</span>
                         </button>
@@ -628,78 +668,441 @@
                     <div class="tabmenu-content">
                       <div class="explore-scroll-wrap">
                         <div class="explore-panel-scroll">
-                          <div class="result-empty">
-                            <i class="icon-comm i--empty-search"></i>
-                            <p>일치하는 검색어가 없습니다.</p>
+                          <div class="tree-group">
+                            <div class="tree-root">
+                              <div class="tree-header">
+                                <button type="button" class="btn-text btn-summary ac--open" data-target-id="tree1">
+                                  <i class="icon-comm i--gt-d"></i>
+                                  <span class="font-h5">기업 기본 정보</span>
+                                </button>
+                                <button type="button" class="btn-icon btn-tree-open">
+                                  <i class="icon-comm i--plus s--md"></i>
+                                  <span class="blind">열기</span>
+                                </button>
+                              </div>
+                              <div class="tree-cont ac--open" id="tree1">
+                                <ul class="tree-list">
+                                  <li class="tree-item">
+                                    <span class="ellipsis">기업명</span>
+                                    <button type="button" class="btn-icon btn-tree-open">
+                                      <i class="icon-comm i--plus s--md"></i>
+                                      <span class="blind">열기</span>
+                                    </button>
+                                  </li>
+                                  <li class="tree-item">
+                                    <span class="ellipsis">사업자등록번호</span>
+                                    <button type="button" class="btn-icon btn-tree-open">
+                                      <i class="icon-comm i--plus s--md"></i>
+                                      <span class="blind">열기</span>
+                                    </button>
+                                  </li>
+                                  <li class="tree-item">
+                                    <span class="ellipsis">법인등록번호</span>
+                                    <button type="button" class="btn-icon btn-tree-open">
+                                      <i class="icon-comm i--plus s--md"></i>
+                                      <span class="blind">열기</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- // tree-root -->
+
+                            <div class="tree-root">
+                              <div class="tree-header">
+                                <button type="button" class="btn-text btn-summary ac--open" data-target-id="tree2">
+                                  <i class="icon-comm i--gt-d"></i>
+                                  <span class="font-h5">재무분석-성장성</span>
+                                </button>
+                                <button type="button" class="btn-icon btn-tree-open">
+                                  <i class="icon-comm i--plus s--md"></i>
+                                  <span class="blind">열기</span>
+                                </button>
+                              </div>
+                              <div class="tree-cont ac--open" id="tree2">
+                                <ul class="tree-list">
+                                  <li class="tree-item">
+                                    <span class="ellipsis">총자산 증가율 (최근 2개년 결산)</span>
+                                    <button type="button" class="btn-icon btn-tree-open">
+                                      <i class="icon-comm i--plus s--md"></i>
+                                      <span class="blind">열기</span>
+                                    </button>
+                                  </li>
+                                  <li class="tree-item">
+                                    <span class="ellipsis">매출액 증가율 (최근 2개년 결산)</span>
+                                    <button type="button" class="btn-icon btn-tree-open">
+                                      <i class="icon-comm i--plus s--md"></i>
+                                      <span class="blind">열기</span>
+                                    </button>
+                                  </li>
+                                  <li class="tree-item">
+                                    <span class="ellipsis">매출성장율 (전년 동기대비)</span>
+                                    <button type="button" class="btn-icon btn-tree-open">
+                                      <i class="icon-comm i--plus s--md"></i>
+                                      <span class="blind">열기</span>
+                                    </button>
+                                  </li>
+                                  <li class="tree-item">
+                                    <span class="ellipsis">매출 진도율 (전년 결산대비)</span>
+                                    <button type="button" class="btn-icon btn-tree-open">
+                                      <i class="icon-comm i--plus s--md"></i>
+                                      <span class="blind">열기</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- // tree-root -->
+
+                            <div class="tree-root">
+                              <div class="tree-header">
+                                <button type="button" class="btn-text btn-summary ac--open" data-target-id="tree3">
+                                  <i class="icon-comm i--gt-d"></i>
+                                  <span class="font-h5">재무분석-수익성</span>
+                                </button>
+                                <button type="button" class="btn-icon btn-tree-open">
+                                  <i class="icon-comm i--plus s--md"></i>
+                                  <span class="blind">열기</span>
+                                </button>
+                              </div>
+                              <div class="tree-cont ac--open" id="tree3">
+                                <ul class="tree-list">
+                                  <li class="tree-item">
+                                    <span class="ellipsis">매출액 대비 영업이익 비율(최근 1개년 결산)</span>
+                                    <button type="button" class="btn-icon btn-tree-open">
+                                      <i class="icon-comm i--plus s--md"></i>
+                                      <span class="blind">열기</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- // tree-root -->
                           </div>
+                          <!-- // tree-group -->
                         </div>
                       </div>
                     </div>
                     <!-- // tabmenu-content -->
                   </div>
                   <!-- // tabmenu-content -->
+
+                  <div class="tabmenu-content" id="panel3" style="display: none">
+                    <h3 class="blind">조회이력</h3>
+
+                    <div class="msg-border">
+                      <ul class="noti-bullet-list s--sm">
+                        <li>최근 7일간 조회한 탐색 조건 결과에 대해 다시 확인할 수 있습니다.</li>
+                        <li>자주 조회하는 탐색 조건은 [템플릿 저장]을 통해 저장하여 조회할 수 있습니다.</li>
+                      </ul>
+                    </div>
+
+                    <div class="explore-scroll-wrap">
+                      <div class="explore-panel-scroll">
+                        <ul class="template-list">
+                          <li>
+                            <span class="sort">2026.04.12 08:13:33</span>
+                            <div class="history">
+                              <span>기업 데이터 조회결과</span>
+                              <em class="tit">8,342건</em>
+                            </div>
+
+                            <button type="button" class="btn-outlined w--full">다시 조회하기</button>
+                          </li>
+                          <li>
+                            <span class="sort">2026.04.12 08:13:33</span>
+                            <div class="history">
+                              <span>기업 데이터 조회결과</span>
+                              <em class="tit">342건</em>
+                            </div>
+
+                            <button type="button" class="btn-outlined w--full">다시 조회하기</button>
+                          </li>
+                        </ul>
+                        <!-- // template-list -->
+                      </div>
+                      <!-- // explore-panel-scroll -->
+                    </div>
+                  </div>
+                  <!-- // tabmenu-content -->
                 </div>
                 <!-- // explore-panel -->
 
                 <div class="explore-contents">
-                  <section>
-                    <div class="cont-headline-sub">
-                      <h3 class="font-h3">데이터 조회설정</h3>
-                      <div class="utils utils-btns">
-                        <button type="button" class="btn-text">
-                          <i class="icon-comm i--file"></i>
-                          <span>기업 업로드</span>
-                        </button>
-                        <button type="button" class="btn-text">
-                          <i class="icon-comm i--download s--md"></i>
-                          <span>템플릿 저장</span>
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="box-panel explore-filter">
-                      <div class="searchbox-filter-result explore-filter-box">
-                        <button type="button" class="btn-outlined">
-                          <i class="icon-comm i--plus-b"></i>
-                          <span>데이터 추가</span>
-                        </button>
-
-                        <p>데이터 조회 조건을 추가하여 원하는 기업 데이터를 조회할 수 있습니다.</p>
-                      </div>
-                      <!-- // explore-filter-box -->
-
-                      <div class="search-utils">
-                        <button type="button" class="btn-text">
-                          <i class="icon-comm i--filter s--sm"></i>
-                          <span>데이터 기준월 : 최근 12개월</span>
-                        </button>
-
+                  <div class="explore-filter v1">
+                    <div class="explore-filter-item">
+                      <div class="cont-headline-sub">
+                        <h3 class="font-h3">기준정보(Rows)</h3>
                         <div class="utils">
-                          <button type="button" class="btn-contained">조회</button>
-                          <button type="button" class="btn-comm">
+                          <button type="button" class="btn-text">
                             <i class="icon-comm i--refresh s--sm"></i>
-                            <span class="blind">초기화</span>
+                            <span>초기화</span>
                           </button>
                         </div>
                       </div>
+
+                      <div class="searchbox-filter-result explore-filter-box">
+                        <span class="chip">
+                          <span>기업명</span>
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--close s--sm"></i>
+                            <span class="blind">삭제</span>
+                          </button>
+                        </span>
+
+                        <span class="chip">
+                          <span>사업자등록번호</span>
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--close s--sm"></i>
+                            <span class="blind">삭제</span>
+                          </button>
+                        </span>
+
+                        <span class="chip">
+                          <span>설립일자</span>
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--close s--sm"></i>
+                            <span class="blind">삭제</span>
+                          </button>
+                        </span>
+
+                        <span class="chip">
+                          <span>업종</span>
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--close s--sm"></i>
+                            <span class="blind">삭제</span>
+                          </button>
+                        </span>
+                      </div>
+                      <!-- // explore-filter-box -->
                     </div>
-                    <!-- // explore-filter -->
-                  </section>
+                    <!-- // explore-filter-item -->
 
-                  <div class="cont-headline-sub">
-                    <h3 class="font-h3">기업데이터 목록</h3>
+                    <div class="explore-filter-item">
+                      <div class="cont-headline-sub">
+                        <h3 class="font-h3">재무 데이터(Values)</h3>
+                        <div class="utils">
+                          <button type="button" class="btn-text">
+                            <i class="icon-comm i--refresh s--sm"></i>
+                            <span>초기화</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="searchbox-filter-result explore-filter-box">
+                        <span class="chip">
+                          <i class="icon-comm i--sort"></i>
+                          <span>매출액 증가율 > 30%</span>
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--close s--sm"></i>
+                            <span class="blind">삭제</span>
+                          </button>
+                        </span>
+
+                        <span class="chip t--disabled">
+                          <i class="icon-comm i--sort"></i>
+                          <span>영업이익 > 0</span>
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--close s--sm"></i>
+                            <span class="blind">삭제</span>
+                          </button>
+                        </span>
+
+                        <span class="chip t--disabled">
+                          <span>매출액</span>
+                          <button type="button" class="btn-icon">
+                            <i class="icon-comm i--close s--sm"></i>
+                            <span class="blind">삭제</span>
+                          </button>
+                        </span>
+                      </div>
+                      <!-- // explore-filter-box -->
+                    </div>
+                    <!-- // explore-filter-item -->
+                  </div>
+                  <!-- // explore-filter -->
+
+                  <div class="search-utils mb-8">
+                    <button type="button" class="btn-comm">
+                      <i class="icon-comm i--filter s--sm"></i>
+                      <span>데이터 기준월 : 최근 12개월</span>
+                    </button>
+                    <button type="button" class="btn-comm" disabled>
+                      <i class="icon-comm i--sort"></i>
+                      <span>매출액 3개월 연속증가</span>
+                    </button>
                   </div>
 
-                  <div class="search-empty s--sm">
-                    <i class="icon-comm i--empty-list c--gray"></i>
-                    <p class="tit">템플릿 혹은 데이터 조회설정 값을 선택해 보세요</p>
-                    <p>
-                      조건을 추가한 후 [조회]를 실행하면
-                      <br />
-                      기업데이터 목록에서 결과를 확인할 수 있습니다.
-                    </p>
+                  <div class="datagrid-container">
+                    <div class="table-header">
+                      <div class="count font-h3">
+                        기업데이터 조회결과
+                        <em>324</em>
+                        건
+                      </div>
+                      <div class="utils">
+                        <span class="unit">(단위 : 원)</span>
+                      </div>
+                    </div>
+
+                    <div class="table-wrap table-link">
+                      <table class="table-datagrid">
+                        <thead>
+                          <tr>
+                            <th><span class="tit">기업명</span></th>
+                            <th style="width: 160px"><span class="tit">사업자등록번호</span></th>
+                            <th><span class="tit">업종</span></th>
+                            <th><span class="tit">매출액</span></th>
+                            <th><span class="tit">매출증가율</span></th>
+                            <th style="width: 160px"><span class="tit">영업이익</span></th>
+                            <th style="width: 160px"><span class="tit">재무 데이터기준</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="al--left">삼성전자</td>
+                            <td>370-88-12345</td>
+                            <td class="al--left">전자</td>
+                            <td class="al--right">1,003,400</td>
+                            <td>30.41</td>
+                            <td class="al--right">7,709,235</td>
+                            <td>2025년 4월</td>
+                          </tr>
+                          <tr class="ac--selected">
+                            <td class="al--left">삼성전자</td>
+                            <td>370-88-12345</td>
+                            <td class="al--left">전자</td>
+                            <td class="al--right">1,003,400</td>
+                            <td>30.41</td>
+                            <td class="al--right">7,709,235</td>
+                            <td>2025년 4월</td>
+                          </tr>
+                          <tr>
+                            <td class="al--left">삼성전자</td>
+                            <td>370-88-12345</td>
+                            <td class="al--left">전자</td>
+                            <td class="al--right">1,003,400</td>
+                            <td>30.41</td>
+                            <td class="al--right">7,709,235</td>
+                            <td>2025년 4월</td>
+                          </tr>
+                          <tr>
+                            <td class="al--left">삼성전자</td>
+                            <td>370-88-12345</td>
+                            <td class="al--left">전자</td>
+                            <td class="al--right">1,003,400</td>
+                            <td>30.41</td>
+                            <td class="al--right">7,709,235</td>
+                            <td>2025년 4월</td>
+                          </tr>
+                          <tr>
+                            <td class="al--left">삼성전자</td>
+                            <td>370-88-12345</td>
+                            <td class="al--left">전자</td>
+                            <td class="al--right">1,003,400</td>
+                            <td>30.41</td>
+                            <td class="al--right">7,709,235</td>
+                            <td>2025년 4월</td>
+                          </tr>
+                          <tr>
+                            <td class="al--left">삼성전자</td>
+                            <td>370-88-12345</td>
+                            <td class="al--left">전자</td>
+                            <td class="al--right">1,003,400</td>
+                            <td>30.41</td>
+                            <td class="al--right">7,709,235</td>
+                            <td>2025년 4월</td>
+                          </tr>
+                          <tr>
+                            <td class="al--left">삼성전자</td>
+                            <td>370-88-12345</td>
+                            <td class="al--left">전자</td>
+                            <td class="al--right">1,003,400</td>
+                            <td>30.41</td>
+                            <td class="al--right">7,709,235</td>
+                            <td>2025년 4월</td>
+                          </tr>
+                          <tr>
+                            <td class="al--left">삼성전자</td>
+                            <td>370-88-12345</td>
+                            <td class="al--left">전자</td>
+                            <td class="al--right">1,003,400</td>
+                            <td>30.41</td>
+                            <td class="al--right">7,709,235</td>
+                            <td>2025년 4월</td>
+                          </tr>
+                          <tr>
+                            <td class="al--left">삼성전자</td>
+                            <td>370-88-12345</td>
+                            <td class="al--left">전자</td>
+                            <td class="al--right">1,003,400</td>
+                            <td>30.41</td>
+                            <td class="al--right">7,709,235</td>
+                            <td>2025년 4월</td>
+                          </tr>
+                          <tr>
+                            <td class="al--left">삼성전자</td>
+                            <td>370-88-12345</td>
+                            <td class="al--left">전자</td>
+                            <td class="al--right">1,003,400</td>
+                            <td>30.41</td>
+                            <td class="al--right">7,709,235</td>
+                            <td>2025년 4월</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="pagenation-root">
+                      <button type="button" class="pagenation-btn" disabled="">
+                        <i class="icon-comm i--first"></i>
+                        <span class="blind">First Page</span>
+                      </button>
+                      <button type="button" class="pagenation-btn" disabled="">
+                        <i class="icon-comm i--prev"></i>
+                        <span class="blind">Prev Page</span>
+                      </button>
+                      <button type="button" class="pagenation-btn ac--active">
+                        <span>1</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <span>2</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <span>3</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <span>4</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <span>5</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <span>6</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <span>7</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <span>8</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <span>9</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <span>10</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <i class="icon-comm i--next"></i>
+                        <span class="blind">Next Page</span>
+                      </button>
+                      <button type="button" class="pagenation-btn">
+                        <i class="icon-comm i--last"></i>
+                        <span class="blind">Last Page</span>
+                      </button>
+                    </div>
                   </div>
-                  <!-- // search-empty -->
+                  <!-- // datagrid-container -->
                 </div>
                 <!-- // explore-contents -->
               </div>
@@ -712,50 +1115,8 @@
         <!-- //console-container -->
       </div>
       <!-- console-root -->
-
-      <div class="guide-pop" id="guidePop01">
-        <span class="stepper">
-          <span></span>
-          <span></span>
-        </span>
-        <h3 class="font-h4">Step 1. 템플릿 선택</h3>
-        <p class="desc">
-          처음이시라면 전문가들이 미리 만들어둔 추천 템플릿으로 시작해 보세요.
-          <br />
-          목적에 맞는 템플릿을 선택해 주세요.
-        </p>
-        <div class="guide-action">
-          <button type="button" class="btn-text">
-            <span class="underline">나중에 할게요</span>
-          </button>
-          <button type="button" class="btn-contained">다음으로</button>
-        </div>
-      </div>
     </div>
+
     <script src="../js/custom.js"></script>
-
-    <script>
-      window.addEventListener('load', function () {
-        applyPosition();
-        window.addEventListener('resize', applyPosition);
-      });
-
-      function applyPosition() {
-        const target = document.querySelector('#guide01');
-        const popup = document.querySelector('#guidePop01');
-
-        if (target && popup) {
-          const rect = target.getBoundingClientRect();
-
-          const top = rect.top;
-          const left = rect.left;
-
-          popup.style.top = `${top + rect.height / 2}px`;
-          popup.style.left = `${left + rect.width + 20}px`;
-          popup.style.transform = 'translateY(-50%)';
-          popup.style.opacity = '1';
-        }
-      }
-    </script>
   </body>
 </html>

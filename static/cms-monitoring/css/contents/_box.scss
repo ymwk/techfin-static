@@ -158,7 +158,8 @@
     background-color: #f0f4ff;
 
     &.s--sm {
-      padding: 20px 24px;
+      min-height: 72px;
+      padding: 19px 24px;
 
       .headline-title {
         flex-direction: row;

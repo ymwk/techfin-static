@@ -45,24 +45,21 @@ body:has(#guide01) {
 
 // guide02
 body:has(#guide02) {
-  .explore-container {
-    position: relative;
-    z-index: -1;
-  }
+  // .explore-container {
+  //   position: relative;
+  //   z-index: -1;
+  // }
 
-  .headline-utils:has(#guide02) {
-    position: relative;
-    z-index: 99;
+  .explore-filter:has(#guide02) {
+    // position: relative;
+    // z-index: 99;
 
     &::before {
       content: '';
       position: fixed;
       inset: 0;
       background-color: rgba(0, 0, 0, 0.25);
-    }
-
-    .btn-comm:not(#guide02) {
-      z-index: -1;
+      z-index: 999;
     }
   }
 
@@ -142,10 +139,7 @@ body:has(#guide03) {
     display: flex;
     gap: 7px;
 
-    span,
-    &::before,
-    &::after {
-      content: '';
+    span {
       display: block;
       width: 4px;
       height: 4px;
@@ -160,23 +154,19 @@ body:has(#guide03) {
   justify-content: space-between;
 }
 
-#guidePop01 .stepper {
-  &::before {
-    background-color: var(--c-primary);
-    box-shadow: 0 0 0 3px #D8E0FF
-  }
+#guidePop01 .stepper span:first-child {
+  background-color: var(--c-primary);
+  box-shadow: 0 0 0 3px #d8e0ff;
 }
 
-#guidePop02 .stepper {
-  span {
-    background-color: var(--c-primary);
-    box-shadow: 0 0 0 3px #D8E0FF
-  }
+#guidePop02 .stepper span:nth-child(2) {
+  background-color: var(--c-primary);
+  box-shadow: 0 0 0 3px #d8e0ff;
 }
 
 #guidePop03 .stepper {
   &::after {
     background-color: var(--c-primary);
-    box-shadow: 0 0 0 3px #D8E0FF
+    box-shadow: 0 0 0 3px #d8e0ff;
   }
 }
