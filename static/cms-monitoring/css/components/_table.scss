@@ -73,7 +73,7 @@
   }
   .desc {
     font-size: 13px;
-    color: var(--c-gray3);
+    color: var(--c-gray2);
     font-weight: 400;
   }
 
@@ -86,6 +86,18 @@
 
     .utils {
       margin-bottom: auto;
+    }
+  }
+
+  &:has(.font-h9) {
+    .desc {
+      font-size: 15px;
+    }
+  }
+
+  &:has(.font-h3) {
+    .desc {
+      font-size: 14px;
     }
   }
 }
@@ -833,9 +845,12 @@
     }
 
     td {
+      width: 200px;
+
       .tit {
         display: block;
         color: var(--c-black);
+        word-break: break-all;
       }
     }
 

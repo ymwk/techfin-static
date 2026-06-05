@@ -43,6 +43,15 @@
       font-weight: 500;
     }
   }
+
+  .empty {
+    color: var(--c-gray2);
+    grid-column: span 3;
+
+    &::before {
+      content: none;
+    }
+  }
 }
 
 .detect-result-ai {
@@ -102,7 +111,7 @@
 
 .detect-details {
   margin-top: 16px;
-  
+
   summary {
     display: flex;
     align-items: center;
@@ -179,7 +188,7 @@
     & > *:not(:first-child) {
       position: relative;
       padding-left: 16px;
-      
+
       &::before {
         content: '';
         position: absolute;
@@ -229,4 +238,100 @@
   .searchbox-filter-result {
     width: auto;
   }
+}
+
+.detect-summary-box {
+  padding: 32px;
+
+  .table-header:not(:first-child) {
+    border-top: 1px solid var(--c-border2);
+    padding-top: 24px;
+    margin-top: 24px;
+  }
+
+  .detect-result-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    li {
+      border: none;
+      background-color: var(--c-bg);
+    }
+  }
+}
+
+.grade-list-detect {
+  .grade-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+
+    li {
+      flex-wrap: wrap;
+    }
+
+    .tit {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--c-black);
+    }
+
+    .cont {
+      width: 100%;
+      color: var(--c-gray2);
+    }
+  }
+}
+
+.detect-detail-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.detect-detail-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  font-size: 15px;
+  color: var(--c-gray1);
+
+  .table-header {
+    border-bottom: 1px solid var(--c-border2);
+    padding-bottom: 16px;
+    margin-bottom: 8px;
+  }
+
+  .searchbox-filter-result {
+    min-height: 44px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background-color: var(--c-bg);
+
+    .chip {
+      height: 24px;
+      border-radius: 24px;
+      padding: 0 10px;
+    }
+  }
+
+  .label-normal {
+    font-size: 15px;
+    font-weight: 700;
+    color: #8b8b8f;
+  }
+
+  .label-warn {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e14b5f;
+    padding-left: 24px;
+    background: url(../image/icon/ic_warning_circle.svg) no-repeat left center;
+  }
+}
+
+.grade-label-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }

@@ -1021,6 +1021,12 @@ img {
   color: var(--c-black);
 }
 
+.font-h9 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--c-black);
+}
+
 .font-lg {
   font-size: 16px;
   font-weight: 500;
@@ -2267,9 +2273,13 @@ img {
 .radiochk-root.t--checkicon.s--sm .radiochk-label input:checked {
   background-size: 13px;
 }
+.radiochk-root.t--tabs .radiochk-label:has(:checked) {
+  background-color: #f0f4ff;
+}
 .radiochk-root.t--btns [type=checkbox],
 .radiochk-root.t--btns [type=radio], .radiochk-root.t--hide [type=checkbox],
-.radiochk-root.t--hide [type=radio] {
+.radiochk-root.t--hide [type=radio], .radiochk-root.t--tabs [type=checkbox],
+.radiochk-root.t--tabs [type=radio] {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -2352,6 +2362,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .radiochk-label [type=checkbox] {
   -webkit-appearance: none;
@@ -2397,8 +2408,8 @@ img {
 }
 .radiochk-label [type=checkbox]:disabled,
 .radiochk-label [type=radio]:disabled {
-  border-color: #E8E8EB;
-  background-color: #F1F1F3;
+  border-color: #e8e8eb;
+  background-color: #f1f1f3;
   cursor: default;
 }
 .radiochk-label.ac--active {
@@ -3734,6 +3745,8 @@ img {
 .tabmenu-menu .tabmenu-btn {
   position: relative;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 4px;
   height: 50px;
   padding-top: 8px;
@@ -3783,6 +3796,7 @@ img {
 }
 
 .tabmenu-content {
+  position: relative;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
