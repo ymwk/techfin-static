@@ -414,11 +414,10 @@
   }
 }
 
-.radiocheck-root,
-.radiocheck-list {
-  .msg-err {
-    color: var(--c-error);
-  }
+.msg-err {
+  color: var(--c-error);
+  font-size: 13px;
+  font-weight: 400;
 }
 
 //////////////////////////////////// 타입이 너무 많아져서 수정함 ////////////////////////////////////
@@ -736,10 +735,6 @@
       border-radius: 50%;
       background: url(../image/icon/ic_check_g.svg) no-repeat center center;
     }
-  }
-
-  .msg-err {
-    color: var(--c-error);
   }
 
   &.t--register {

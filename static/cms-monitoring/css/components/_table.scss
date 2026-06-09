@@ -912,6 +912,8 @@
   text-align: center !important;
   font-size: 14px;
   color: var(--c-gray3);
+  line-height: 1.5;
+  font-weight: 400;
 
   &.table-empty {
     border-bottom: 1px solid var(--c-border2);

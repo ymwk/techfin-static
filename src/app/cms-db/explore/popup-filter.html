@@ -37,39 +37,39 @@
                 <div class="filter-scroll">
                   <div class="radiochk-root t--list t--tabs">
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupCorp" data-filter-target="basic" checked />
                       <span>기업기본정보</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupCorp" data-filter-target="size" />
                       <span>기업규모</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupCorp" data-filter-target="corp-type" />
                       <span>기업구분</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupCorp" data-filter-target="listing" />
                       <span>상장여부</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupCorp" data-filter-target="audit" />
                       <span>외감여부</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupCorp" data-filter-target="grade" />
                       <span>실시간등급</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupCorp" data-filter-target="date" />
                       <span>설립일자</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupCorp" data-filter-target="region" />
                       <span>지역</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" checked />
+                      <input type="radio" name="selectGroupCorp" data-filter-target="tax" />
                       <span>과세유형</span>
                     </label>
                   </div>
@@ -81,27 +81,27 @@
                 <div class="filter-scroll">
                   <div class="radiochk-root t--list t--tabs">
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupFinance" data-filter-target="balance" />
                       <span>재무상태표</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupFinance" data-filter-target="income" />
                       <span>손익계산서</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupFinance" data-filter-target="cashflow" />
                       <span>현금수지분석표</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupFinance" data-filter-target="growth" />
                       <span>성장성</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupFinance" data-filter-target="profit" />
                       <span>수익성</span>
                     </label>
                     <label class="radiochk-label">
-                      <input type="radio" name="selectGroup" />
+                      <input type="radio" name="selectGroupFinance" data-filter-target="stability" />
                       <span>거래처안정성</span>
                     </label>
                   </div>
@@ -109,54 +109,1160 @@
               </div>
               <!-- //filter2 -->
             </div>
-            <div class="filter-cont">
-              <div class="textfield-root">
-                <label class="textfield-label">
-                  <input type="text" class="textfield-form" name="" placeholder="시/도/군/구/입력" />
-                  <button type="button" class="btn-comm">검색</button>
-                </label>
-              </div>
-
-              <div class="filter-checklist-root">
-                <div class="checklist-box">
-                  <div class="radiochk-root t--list t--reverse">
-                    <label class="radiochk-label">
-                      <input type="checkbox" name="" />
-                      <span>서울특별시</span>
-                    </label>
-
-                    <label class="radiochk-label">
-                      <input type="checkbox" name="" />
-                      <span>경기도</span>
-                    </label>
-
-                    <label class="radiochk-label">
-                      <input type="checkbox" name="" />
-                      <span>대전광역시</span>
-                    </label>
-
-                    <label class="radiochk-label">
-                      <input type="checkbox" name="" />
-                      <span>부산광역시</span>
-                    </label>
-
-                    <label class="radiochk-label">
-                      <input type="checkbox" name="" />
-                      <span>광주광역시</span>
-                    </label>
-                  </div>
+            <div class="filter-cont" data-filter-cont-root>
+              <!-- 기업기본정보 -->
+              <div class="filter-cont-section" data-filter-tab="filter1" data-filter-panel="basic" hidden>
+                <div class="table-header">
+                  <span class="font-h10">기업기본정보</span>
+                  <p class="desc">조회하고자 하는 기업 정보를 선택해 주세요.</p>
                 </div>
-                <div class="checklist-box">
-                  <div class="result-empty">
-                    <p>시/도 구분을 선택해 주세요</p>
+                <div class="filter-cont-scroll">
+                  <div class="filter-scroll">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>기업명</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>사업자등록번호</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>법인등록번호</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>대표자명</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>대표전화번호</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              <!-- 기업규모 -->
+              <div class="filter-cont-section" data-filter-tab="filter1" data-filter-panel="size" hidden>
+                <div class="table-header">
+                  <span class="font-h10">기업규모</span>
+                  <div class="utils">
+                    <button type="button" class="btn-outlined">필터 적용</button>
+                  </div>
+                </div>
+                <div class="filter-cont-scroll">
+                  <div class="filter-scroll">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>전체</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>대기업</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>중견기업</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>중소기업</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>개인사업자</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 기업구분 -->
+              <div class="filter-cont-section" data-filter-tab="filter1" data-filter-panel="corp-type" hidden>
+                <div class="table-header">
+                  <span class="font-h10">기업구분</span>
+                  <div class="utils">
+                    <button type="button" class="btn-outlined">필터 적용</button>
+                  </div>
+                </div>
+                <div class="filter-cont-scroll">
+                  <div class="filter-scroll">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="radio" name="corpTypeGroup" checked />
+                        <span>전체</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="radio" name="corpTypeGroup" />
+                        <span>법인사업자</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="radio" name="corpTypeGroup" />
+                        <span>개인사업자</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 상장여부 -->
+              <div class="filter-cont-section" data-filter-tab="filter1" data-filter-panel="listing" hidden>
+                <div class="table-header">
+                  <span class="font-h10">상장여부</span>
+                  <div class="utils">
+                    <button type="button" class="btn-outlined">필터 적용</button>
+                  </div>
+                </div>
+                <div class="filter-cont-scroll">
+                  <div class="filter-scroll">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="radio" name="listingGroup" checked />
+                        <span>전체</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="radio" name="listingGroup" />
+                        <span>상장</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="radio" name="listingGroup" />
+                        <span>비상장</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 외감여부 -->
+              <div class="filter-cont-section" data-filter-tab="filter1" data-filter-panel="audit" hidden>
+                <div class="table-header">
+                  <span class="font-h10">외감여부</span>
+                  <div class="utils">
+                    <button type="button" class="btn-outlined">필터 적용</button>
+                  </div>
+                </div>
+                <div class="filter-cont-scroll">
+                  <div class="filter-scroll">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="radio" name="auditGroup" checked />
+                        <span>전체</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="radio" name="auditGroup" />
+                        <span>외감</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="radio" name="auditGroup" />
+                        <span>비외감</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 실시간등급 -->
+              <div class="filter-cont-section" data-filter-tab="filter1" data-filter-panel="grade" hidden>
+                <div class="table-header">
+                  <span class="font-h10">실시간등급</span>
+                  <div class="utils">
+                    <button type="button" class="btn-outlined">필터 적용</button>
+                  </div>
+                </div>
+                <div class="combobox-root ac--focus s--sm">
+                  <button type="button" class="combobox-btn">직접선택</button>
+                  <div class="combobox-dropdown">
+                    <ul class="combobox-option">
+                      <li class="ac--active">
+                        <button type="button">전체</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="filter-cont-scroll">
+                  <div class="filter-scroll">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>전체</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>AAA</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>AA</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>A</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>BBB</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>BB 이하</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 설립일자 -->
+              <div class="filter-cont-section" data-filter-tab="filter1" data-filter-panel="date" hidden>
+                <div class="table-header">
+                  <span class="font-h10">설립일자</span>
+                  <div class="utils">
+                    <button type="button" class="btn-outlined">필터 적용</button>
+                  </div>
+                </div>
+                <div class="radiochk-root t--btns s--sm">
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" checked />
+                    <span>전체</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>10년 이내</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>5년 이내</span>
+                  </label>
+                  <label class="radiochk-label">
+                    <input type="radio" name="selectGroup" />
+                    <span>1년 이내</span>
+                  </label>
+                </div>
+
+                <div class="datepicker-root s--sm">
+                  <label class="textfield-label">
+                    <span class="label blind">날짜선택</span>
+                    <input
+                      type="text"
+                      class="textfield-form"
+                      name=""
+                      placeholder="날짜를 선택해주세요."
+                      value="2025-08-22"
+                      readonly=""
+                    />
+                    <button type="button" class="textfield-btn">
+                      <i class="icon-comm i--calendar"></i>
+                      <span class="blind">달력 열기</span>
+                    </button>
+                  </label>
+                  <span>~</span>
+                  <label class="textfield-label">
+                    <span class="label blind">날짜선택</span>
+                    <input
+                      type="text"
+                      class="textfield-form"
+                      name=""
+                      placeholder="날짜를 선택해주세요."
+                      value="2025-08-22"
+                      readonly=""
+                    />
+                    <button type="button" class="textfield-btn">
+                      <i class="icon-comm i--calendar"></i>
+                      <span class="blind">달력 열기</span>
+                    </button>
+                  </label>
+
+                  <div class="datepicker-popper">
+                    <div class="datepicker-box">
+                      <div class="datepicker-section">
+                        <div class="datepicker-cont">
+                          <div class="datepicker-month">
+                            <span>2024.12</span>
+                            <div class="datepicker-month-prev">
+                              <button type="button" class="btn-icon">
+                                <i class="icon-comm i--first"></i>
+                                <span class="blind">이전해</span>
+                              </button>
+                              <button type="button" class="btn-icon">
+                                <i class="icon-comm i--prev"></i>
+                                <span class="blind">이전달</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="datepicker-calendar">
+                            <div class="datepicker-week">
+                              <span class="datepicker-item">일</span>
+                              <span class="datepicker-item">월</span>
+                              <span class="datepicker-item">화</span>
+                              <span class="datepicker-item">수</span>
+                              <span class="datepicker-item">목</span>
+                              <span class="datepicker-item">금</span>
+                              <span class="datepicker-item">토</span>
+                            </div>
+                            <div class="datepicker-days">
+                              <span class="datepicker-item t--disabled">
+                                <button type="button" class="datepicker-btn">31</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">1</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">2</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">3</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">4</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">5</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">6</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">7</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">8</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">9</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">10</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">11</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">12</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">13</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">14</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">15</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">16</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">17</button>
+                              </span>
+                              <span class="datepicker-item t--start">
+                                <button type="button" class="datepicker-btn t--selected">18</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">19</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">20</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">21</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">22</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">23</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">24</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">25</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">26</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">27</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">28</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">29</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">30</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">31</button>
+                              </span>
+                              <span class="datepicker-item t--disabled">
+                                <button type="button" class="datepicker-btn">1</button>
+                              </span>
+                              <span class="datepicker-item t--disabled">
+                                <button type="button" class="datepicker-btn">2</button>
+                              </span>
+                              <span class="datepicker-item t--disabled">
+                                <button type="button" class="datepicker-btn">3</button>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- //datepicker-calendar -->
+                        </div>
+                        <!-- //datepicker-cont -->
+
+                        <div class="datepicker-cont">
+                          <div class="datepicker-month">
+                            <span>2025.01</span>
+                            <div class="datepicker-month-next">
+                              <button type="button" class="btn-icon">
+                                <i class="icon-comm i--next"></i>
+                                <span class="blind">다음달</span>
+                              </button>
+                              <button type="button" class="btn-icon">
+                                <i class="icon-comm i--last"></i>
+                                <span class="blind">다음해</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="datepicker-calendar">
+                            <div class="datepicker-week">
+                              <span class="datepicker-item">일</span>
+                              <span class="datepicker-item">월</span>
+                              <span class="datepicker-item">화</span>
+                              <span class="datepicker-item">수</span>
+                              <span class="datepicker-item">목</span>
+                              <span class="datepicker-item">금</span>
+                              <span class="datepicker-item">토</span>
+                            </div>
+                            <div class="datepicker-days">
+                              <span class="datepicker-item t--disabled">
+                                <button type="button" class="datepicker-btn">28</button>
+                              </span>
+                              <span class="datepicker-item t--disabled">
+                                <button type="button" class="datepicker-btn">29</button>
+                              </span>
+                              <span class="datepicker-item t--disabled">
+                                <button type="button" class="datepicker-btn">30</button>
+                              </span>
+                              <span class="datepicker-item t--disabled">
+                                <button type="button" class="datepicker-btn">31</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">1</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">2</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">3</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">4</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">5</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">6</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">7</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">8</button>
+                              </span>
+                              <span class="datepicker-item t--end">
+                                <button type="button" class="datepicker-btn t--selected">9</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">10</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">11</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">12</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">13</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">14</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">15</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">16</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">17</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">18</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">19</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">20</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">21</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">22</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">23</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">24</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">25</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">26</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">27</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">28</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">29</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">30</button>
+                              </span>
+                              <span class="datepicker-item">
+                                <button type="button" class="datepicker-btn">31</button>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- //datepicker-calendar -->
+                        </div>
+                        <!-- //datepicker-cont -->
+                      </div>
+
+                      <div class="datepicker-action">
+                        <button type="button" class="btn-outlined">취소</button>
+                        <button type="button" class="btn-contained">적용</button>
+                      </div>
+                    </div>
+                    <!-- //datepicker-box -->
+                  </div>
+                  <!-- // datepicker-popper -->
+                </div>
+                <!-- //datepicker-root -->
+              </div>
+
+              <!-- 지역 -->
+              <div class="filter-cont-section" data-filter-tab="filter1" data-filter-panel="region" hidden>
+                <div class="table-header">
+                  <span class="font-h10">지역</span>
+                </div>
+                <div class="textfield-root">
+                  <label class="textfield-label">
+                    <input type="text" class="textfield-form" name="" placeholder="시/도/군/구/입력" />
+                    <button type="button" class="btn-icon btn-search-icon" aria-label="검색">
+                      <i class="icon-comm i--search"></i>
+                    </button>
+                  </label>
+                </div>
+                <div class="filter-checklist-root">
+                  <div class="checklist-box">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>서울특별시</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>경기도</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>대전광역시</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>부산광역시</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>광주광역시</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>광주광역시</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>광주광역시</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="checklist-box">
+                    <div class="result-empty">
+                      <p>검색결과가 없습니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 과세유형 (기본) -->
+              <div class="filter-cont-section" data-filter-tab="filter1" data-filter-panel="tax">
+                <div class="table-header">
+                  <span class="font-h10">과세유형</span>
+                  <div class="utils">
+                    <button type="button" class="btn-outlined">필터 적용</button>
+                  </div>
+                </div>
+                <div class="filter-cont-scroll">
+                  <div class="filter-scroll">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>부가가치세 일반과세자</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>부가가치세 간이과세자</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>부가가치세 과세특례자</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>부가가치세 면세사업자</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>수익을 영위하지 않는 비영리법인이거나 고유번호가 부여된 단체, 국가 기관 등</span>
+                      </label>
+                    </div>
+                    <!-- //radiochk-root -->
+                  </div>
+                  <!-- //checklist-box -->
+                </div>
+                <!-- //filter-cont-scroll -->
+              </div>
+              <!-- //filter-cont-section -->
+
+              <!-- 재무상태표 -->
+              <div class="filter-cont-section" data-filter-tab="filter2" data-filter-panel="balance" hidden>
+                <div class="filter-checklist-root filter-finance">
+                  <div class="checklist-box">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label" data-finance-item="finance1">
+                        <input type="checkbox" name="" />
+                        <span>유동자산</span>
+                      </label>
+                      <label class="radiochk-label" data-finance-item="finance2">
+                        <input type="checkbox" name="" />
+                        <span>비유동자산</span>
+                      </label>
+                      <label class="radiochk-label" data-finance-item="finance3">
+                        <input type="checkbox" name="" />
+                        <span>부채총계</span>
+                      </label>
+                      <label class="radiochk-label" data-finance-item="finance4">
+                        <input type="checkbox" name="" />
+                        <span>유동부채</span>
+                      </label>
+                      <label class="radiochk-label" data-finance-item="finance5">
+                        <input type="checkbox" name="" />
+                        <span>비유동부채</span>
+                      </label>
+                      <label class="radiochk-label" data-finance-item="finance6">
+                        <input type="checkbox" name="" />
+                        <span>자본총계</span>
+                      </label>
+                      <label class="radiochk-label" data-finance-item="finance7">
+                        <input type="checkbox" name="" />
+                        <span>자본금</span>
+                      </label>
+                      <label class="radiochk-label" data-finance-item="finance8">
+                        <input type="checkbox" name="" />
+                        <span>전월대비 매출증가율</span>
+                      </label>
+                      <label class="radiochk-label" data-finance-item="finance9">
+                        <input type="checkbox" name="" />
+                        <span>매출채권 잔액 증가 (최근 3M)</span>
+                      </label>
+                      <label class="radiochk-label" data-finance-item="finance10">
+                        <input type="checkbox" name="" />
+                        <span>거래처 수 (매출)</span>
+                      </label>
+                      <label class="radiochk-label" data-finance-item="finance11">
+                        <input type="checkbox" name="" />
+                        <span>평균 회수기간 (전년도)</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="checklist-box" style="flex-grow: 1.5" data-finance-detail-root>
+                    <!-- 유동자산 -->
+                    <div class="filter-cont-section" data-finance-detail="finance1" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">유동자산</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 비유동자산 -->
+                    <div class="filter-cont-section" data-finance-detail="finance2" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">비유동자산</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 부채총계 -->
+                    <div class="filter-cont-section" data-finance-detail="finance3" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">부채총계</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 유동부채 -->
+                    <div class="filter-cont-section" data-finance-detail="finance4" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">유동부채</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 비유동부채 -->
+                    <div class="filter-cont-section" data-finance-detail="finance5" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">비유동부채</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 자본총계 -->
+                    <div class="filter-cont-section" data-finance-detail="finance6" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">자본총계</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 자본금 -->
+                    <div class="filter-cont-section" data-finance-detail="finance7" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">자본금</span>
+                          <div class="utils">
+                            <button type="button" class="btn-outlined">필터 적용</button>
+                          </div>
+                        </div>
+                        <span>필터설정</span>
+                        <div class="radiochk-root t--btns s--sm">
+                          <label class="radiochk-label">
+                            <input type="radio" name="financeAmountGroup-amount" checked />
+                            <span>5억 이하</span>
+                          </label>
+                          <label class="radiochk-label">
+                            <input type="radio" name="financeAmountGroup-amount" />
+                            <span>5~10억</span>
+                          </label>
+                          <label class="radiochk-label">
+                            <input type="radio" name="financeAmountGroup-amount" />
+                            <span>10억 초과</span>
+                          </label>
+                          <label class="radiochk-label">
+                            <input type="radio" name="financeAmountGroup-amount" />
+                            <span>10~50억</span>
+                          </label>
+                        </div>
+                        <div class="textfield-group">
+                          <button type="button" class="btn-comm">+</button>
+                          <div class="textfield-root s--sm">
+                            <label class="textfield-label">
+                              <input type="text" class="textfield-form" name="" placeholder="최소" />
+                              <span class="unit">억원</span>
+                            </label>
+                          </div>
+                          <span>~</span>
+                          <button type="button" class="btn-comm">+</button>
+                          <div class="textfield-root s--sm ac--invalid">
+                            <label class="textfield-label">
+                              <input type="text" class="textfield-form" name="" placeholder="최대" />
+                              <span class="unit">억원</span>
+                            </label>
+                          </div>
+                        </div>
+                        <p class="msg-err">최대 금액은 최소 금액보다 크게 입력해 주세요.</p>
+                      </div>
+                    </div>
+
+                    <!-- 전월대비 매출증가율 -->
+                    <div class="filter-cont-section" data-finance-detail="finance8" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">전월대비 매출증가율</span>
+                          <div class="utils">
+                            <button type="button" class="btn-outlined">필터 적용</button>
+                          </div>
+                        </div>
+                        <span>필터설정</span>
+                        <div class="radiochk-root t--btns s--sm">
+                          <label class="radiochk-label">
+                            <input type="radio" name="financeAmountGroup-amount" checked />
+                            <span>0%~25%</span>
+                          </label>
+                          <label class="radiochk-label">
+                            <input type="radio" name="financeAmountGroup-amount" />
+                            <span>26%~50%</span>
+                          </label>
+                          <label class="radiochk-label">
+                            <input type="radio" name="financeAmountGroup-amount" />
+                            <span>51%~75%</span>
+                          </label>
+                          <label class="radiochk-label">
+                            <input type="radio" name="financeAmountGroup-amount" />
+                            <span>76%~100%</span>
+                          </label>
+                        </div>
+                        <div class="textfield-group">
+                          <button type="button" class="btn-comm">+</button>
+                          <div class="textfield-root s--sm">
+                            <label class="textfield-label">
+                              <input type="text" class="textfield-form" name="" placeholder="최소" />
+                              <span class="unit">%</span>
+                            </label>
+                          </div>
+                          <span>~</span>
+                          <button type="button" class="btn-comm">+</button>
+                          <div class="textfield-root s--sm ac--invalid">
+                            <label class="textfield-label">
+                              <input type="text" class="textfield-form" name="" placeholder="최대" />
+                              <span class="unit">%</span>
+                            </label>
+                          </div>
+                        </div>
+                        <p class="msg-err">최대 증가율은 최소 증가율보다 크게 입력해 주세요.</p>
+                      </div>
+                    </div>
+
+                    <!-- 매출채권 잔액 증가 -->
+                    <div class="filter-cont-section" data-finance-detail="finance9" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">매출채권 잔액 증가</span>
+                          <div class="utils">
+                            <button type="button" class="btn-outlined">필터 적용</button>
+                          </div>
+                        </div>
+
+                        <span>필터설정</span>
+                        <div class="radiochk-root t--btns s--sm">
+                          <label class="radiochk-label">
+                            <input type="radio" name="financeAmountGroup-amount" checked />
+                            <span>증가</span>
+                          </label>
+                          <label class="radiochk-label">
+                            <input type="radio" name="financeAmountGroup-amount" />
+                            <span>감소</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 거래처 수 -->
+                    <div class="filter-cont-section" data-finance-detail="finance10" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">거래처 수 (매출)</span>
+                          <div class="utils">
+                            <button type="button" class="btn-outlined">필터 적용</button>
+                          </div>
+                        </div>
+
+                        <span>필터설정</span>
+                        <div class="textfield-group">
+                          <div class="textfield-root s--sm">
+                            <label class="textfield-label">
+                              <input type="text" class="textfield-form" name="" placeholder="0" />
+                              <span class="unit">개</span>
+                            </label>
+                          </div>
+                          <span>~</span>
+                          <div class="textfield-root s--sm ac--invalid">
+                            <label class="textfield-label">
+                              <input type="text" class="textfield-form" name="" placeholder="9,999" />
+                              <span class="unit">개</span>
+                            </label>
+                          </div>
+                        </div>
+                        <p class="msg-err">최대 개수는 최소 개수보다 크게 입력해 주세요.</p>
+                      </div>
+                    </div>
+
+                    <!-- 평균 회수기간 -->
+                    <div class="filter-cont-section" data-finance-detail="finance11" hidden>
+                      <div class="checklist-cont">
+                        <div class="table-header">
+                          <span class="font-h10">평균 회수기간</span>
+                          <div class="utils">
+                            <button type="button" class="btn-outlined">필터 적용</button>
+                          </div>
+                        </div>
+
+                        <span>필터설정</span>
+                        <div class="textfield-group">
+                          <div class="textfield-root s--sm">
+                            <label class="textfield-label">
+                              <input type="text" class="textfield-form" name="" placeholder="최소" />
+                              <span class="unit">일</span>
+                            </label>
+                          </div>
+                          <span>~</span>
+                          <div class="textfield-root s--sm ac--invalid">
+                            <label class="textfield-label">
+                              <input type="text" class="textfield-form" name="" placeholder="최대" />
+                              <span class="unit">일</span>
+                            </label>
+                          </div>
+                        </div>
+                        <p class="msg-err">최대 일수는 최소 일수보다 크게 입력해 주세요.</p>
+                      </div>
+                    </div>
+
+                    <!-- 미선택 -->
+                    <div class="filter-cont-section" data-finance-detail="empty">
+                      <div class="checklist-cont">
+                        <div class="result-empty">
+                          <p>
+                            체크박스 선택 시 재무 데이터가 즉시 추가되며
+                            <br />
+                            원하는 값을 설정하여 필터링할 수 있습니다.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- //checklist-cont -->
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+                </div>
+                <!-- //filter-checklist-root -->
+              </div>
+
+              <!-- 손익계산서 -->
+              <div class="filter-cont-section" data-filter-tab="filter2" data-filter-panel="income" hidden>
+                <div class="filter-checklist-root filter-finance">
+                  <div class="checklist-box">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>매출액</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>영업이익</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>당기순이익</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+
+                  <div class="checklist-box" style="flex-grow: 1.5">
+                    <div class="result-empty">
+                      <p>
+                        체크박스 선택 시 재무 데이터가 즉시 추가되며
+                        <br />
+                        원하는 값을 설정하여 필터링할 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+                </div>
+                <!-- //filter-checklist-root -->
+              </div>
+              <!-- //filter-cont-section -->
+
+              <!-- 현금수지분석표 -->
+              <div class="filter-cont-section" data-filter-tab="filter2" data-filter-panel="cashflow" hidden>
+                <div class="filter-checklist-root filter-finance">
+                  <div class="checklist-box">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>영업활동현금흐름</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>투자활동현금흐름</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>재무활동현금흐름</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+
+                  <div class="checklist-box" style="flex-grow: 1.5">
+                    <div class="result-empty">
+                      <p>
+                        체크박스 선택 시 재무 데이터가 즉시 추가되며
+                        <br />
+                        원하는 값을 설정하여 필터링할 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+                </div>
+                <!-- //filter-checklist-root -->
+              </div>
+              <!-- //filter-cont-section -->
+
+              <!-- 성장성 -->
+              <div class="filter-cont-section" data-filter-tab="filter2" data-filter-panel="growth" hidden>
+                <div class="filter-checklist-root filter-finance">
+                  <div class="checklist-box">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>자산총계</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>유동자산</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>비유동자산</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>부채총계</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>유동부채</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>비유동부채</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>자본총계</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>자본금</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+
+                  <div class="checklist-box" style="flex-grow: 1.5">
+                    <div class="result-empty">
+                      <p>
+                        체크박스 선택 시 재무 데이터가 즉시 추가되며
+                        <br />
+                        원하는 값을 설정하여 필터링할 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+                </div>
+                <!-- //filter-checklist-root -->
+              </div>
+              <!-- //filter-cont-section -->
+
+              <!-- 수익성 -->
+              <div class="filter-cont-section" data-filter-tab="filter2" data-filter-panel="profit" hidden>
+                <div class="filter-checklist-root filter-finance">
+                  <div class="checklist-box">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>영업이익률</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>순이익률</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>ROE</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+
+                  <div class="checklist-box" style="flex-grow: 1.5">
+                    <div class="result-empty">
+                      <p>
+                        체크박스 선택 시 재무 데이터가 즉시 추가되며
+                        <br />
+                        원하는 값을 설정하여 필터링할 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+                </div>
+                <!-- //filter-checklist-root -->
+              </div>
+              <!-- //filter-cont-section -->
+
+              <!-- 거래처안정성 -->
+              <div class="filter-cont-section" data-filter-tab="filter2" data-filter-panel="stability" hidden>
+                <div class="filter-checklist-root filter-finance">
+                  <div class="checklist-box">
+                    <div class="radiochk-root t--list t--reverse">
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>채권회전기일</span>
+                      </label>
+                      <label class="radiochk-label">
+                        <input type="checkbox" name="" />
+                        <span>재고자산회전기일</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+
+                  <div class="checklist-box" style="flex-grow: 1.5">
+                    <div class="result-empty">
+                      <p>
+                        체크박스 선택 시 재무 데이터가 즉시 추가되며
+                        <br />
+                        원하는 값을 설정하여 필터링할 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- //checklist-box -->
+                </div>
+                <!-- //filter-checklist-root -->
+              </div>
+              <!-- //filter-cont-section -->
             </div>
             <!-- // filter-cont -->
           </div>
-          <!-- // box-panel
-            -->
+          <!-- // box-panel -->
+
           <div class="filter-footer">
             <div class="filter-chip-list">
               <button class="btn-chip">
@@ -195,7 +1301,7 @@
         <div class="modal-action">
           <div class="modal-action-btns">
             <button type="button" class="btn-contained">
-              <span>적용</span>
+              <span>저장하기</span>
             </button>
           </div>
         </div>
@@ -204,5 +1310,61 @@
     <!-- //modal-root -->
 
     <script src="../js/custom.js"></script>
+    <!-- 퍼블 미리보기용 -->
+    <script>
+      (function () {
+        const filterBox = document.querySelector('.filter-box');
+        if (!filterBox) return;
+
+        const contRoot = filterBox.querySelector('[data-filter-cont-root]');
+
+        const updateFilterPanel = () => {
+          const tab = filterBox.querySelector('.filter-tabs .tabmenu-btn.ac--active')?.dataset.targetTab || 'filter1';
+          const panel = document.getElementById(tab)?.querySelector('[data-filter-target]:checked')
+            ?.dataset.filterTarget;
+
+          contRoot?.querySelectorAll('[data-filter-panel]').forEach((el) => {
+            el.hidden = el.dataset.filterTab !== tab || el.dataset.filterPanel !== panel;
+          });
+        };
+
+        filterBox.addEventListener('change', (e) => {
+          if (e.target.matches('[data-filter-target]')) updateFilterPanel();
+        });
+        filterBox.querySelector('.filter-tabs')?.addEventListener('click', (e) => {
+          e.target.closest('.tabmenu-btn') && setTimeout(updateFilterPanel, 0);
+        });
+        updateFilterPanel();
+
+        // 재무
+        document.querySelectorAll('[data-finance-detail-root]').forEach((detailRoot) => {
+          const section = detailRoot.closest('.filter-finance');
+
+          const sync = (label) => {
+            if (!label) return;
+            const checked = label.querySelector('input[type="checkbox"]')?.checked;
+            const key = checked ? label.dataset.financeItem : 'empty';
+            detailRoot.querySelectorAll('[data-finance-detail]').forEach((panel) => {
+              panel.hidden = panel.dataset.financeDetail !== key;
+            });
+            if (!checked) label.classList.remove('ac--active');
+          };
+
+          section?.addEventListener('click', (e) => {
+            const label = e.target.closest('[data-finance-item]');
+            if (!label) return;
+            section
+              .querySelectorAll('[data-finance-item].ac--active')
+              .forEach((el) => el.classList.remove('ac--active'));
+            if (label.querySelector('input[type="checkbox"]')?.checked) {
+              label.classList.add('ac--active');
+            }
+            sync(label);
+          });
+
+          sync(section?.querySelector('[data-finance-item].ac--active'));
+        });
+      })();
+    </script>
   </body>
 </html>

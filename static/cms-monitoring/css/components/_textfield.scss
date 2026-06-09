@@ -40,7 +40,7 @@
       font-size: 13px;
     }
   }
-  
+
   &.t--column {
     .textfield-label {
       flex-direction: column;
@@ -82,7 +82,7 @@
 
   .btn-comm {
     min-width: 65px;
-    @extend .s--md
+    @extend .s--md;
   }
 
   .unit {
@@ -97,7 +97,7 @@
       padding-right: 32px;
     }
   }
-  
+
   .oper {
     z-index: 1;
     position: absolute;
@@ -191,8 +191,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  
+
   .btn-comm {
-    padding: 0 10px
+    padding: 0 10px;
   }
 }

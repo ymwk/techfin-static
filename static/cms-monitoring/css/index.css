@@ -1888,6 +1888,12 @@ button.swiper-pagination-bullet {
   color: var(--c-black);
 }
 
+.font-h10 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--c-black);
+}
+
 .font-lg {
   font-size: 16px;
   font-weight: 500;
@@ -2546,6 +2552,12 @@ button.swiper-pagination-bullet {
   border-radius: 6px;
   color: inherit;
 }
+.btn-icon.btn-search-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
 
 .btn-text {
   position: relative;
@@ -3036,9 +3048,10 @@ button.swiper-pagination-bullet {
   background: url(../image/icon/ic_check_b.svg) no-repeat right center;
 }
 
-.radiocheck-root .msg-err,
-.radiocheck-list .msg-err {
+.msg-err {
   color: var(--c-error);
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .radiochk-root {
@@ -3288,9 +3301,6 @@ button.swiper-pagination-bullet {
 .radiochk-root.t--round [type=radio] {
   border-radius: 50%;
   background: url(../image/icon/ic_check_g.svg) no-repeat center center;
-}
-.radiochk-root .msg-err {
-  color: var(--c-error);
 }
 .radiochk-root.t--register {
   width: 100%;
@@ -4982,6 +4992,9 @@ button.swiper-pagination-bullet {
 .datepicker-root .textfield-form {
   background-color: #fff !important;
 }
+.datepicker-root .textfield-label {
+  flex-grow: 1;
+}
 
 .datepicker-popper {
   z-index: 99;
@@ -5317,7 +5330,7 @@ button.swiper-pagination-bullet {
   height: calc(var(--chk-h) * var(--chk-l) + 18px);
 }
 .filter-checklist-root .checklist-box {
-  flex: 1;
+  flex: 1 0 0;
   display: flex;
   flex-direction: column;
   padding: 8px 0 8px 8px;
@@ -5495,7 +5508,7 @@ button.swiper-pagination-bullet {
   top: 50%;
   height: 11px;
   margin-top: -5px;
-  border-left: 1px solid #D4D4D9;
+  border-left: 1px solid #d4d4d9;
 }
 
 .sticker-side {
@@ -6377,6 +6390,8 @@ button.swiper-pagination-bullet {
   text-align: center !important;
   font-size: 14px;
   color: var(--c-gray3);
+  line-height: 1.5;
+  font-weight: 400;
 }
 .result-empty.table-empty {
   border-bottom: 1px solid var(--c-border2);
@@ -7159,6 +7174,21 @@ button.swiper-pagination-bullet {
 .filter-cont .filter-checklist-root {
   flex-grow: 1;
 }
+.filter-cont .filter-checklist-root.filter-finance {
+  height: auto;
+  border: 0;
+  position: absolute;
+  inset: 0;
+  font-size: 14px;
+  color: var(--c-gray1);
+  font-weight: 500;
+}
+.filter-cont .table-header {
+  margin-bottom: 0;
+}
+.filter-cont .datepicker-root {
+  flex-grow: 0;
+}
 
 .filter-action {
   display: flex;
@@ -7198,13 +7228,26 @@ button.swiper-pagination-bullet {
   padding-top: 8px !important;
 }
 
+.filter-cont-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.filter-cont-section[hidden] {
+  display: none;
+}
+.filter-cont-section > .checklist-cont {
+  flex-grow: 1;
+}
+
 .filter-cont-scroll {
   flex-grow: 1;
   position: relative;
   margin: 0 -8px;
 }
 .filter-cont-scroll .filter-scroll {
-  padding-top: 0;
+  padding: 0;
 }
 
 .filter-scroll {
@@ -7322,6 +7365,13 @@ button.swiper-pagination-bullet {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.checklist-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px;
 }
 
 .loader-wrap {

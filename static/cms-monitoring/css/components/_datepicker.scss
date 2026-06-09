@@ -37,6 +37,10 @@
   .textfield-form {
     background-color: #fff !important;
   }
+  
+  .textfield-label {
+    flex-grow: 1;
+  }
 }
 
 .datepicker-popper {

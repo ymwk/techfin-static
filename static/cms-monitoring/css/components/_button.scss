@@ -225,6 +225,13 @@
   height: 32px;
   border-radius: 6px;
   color: inherit;
+  
+  &.btn-search-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
 }
 
 .btn-text {

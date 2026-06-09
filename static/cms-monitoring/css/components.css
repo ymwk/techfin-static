@@ -1027,6 +1027,12 @@ img {
   color: var(--c-black);
 }
 
+.font-h10 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--c-black);
+}
+
 .font-lg {
   font-size: 16px;
   font-weight: 500;
@@ -1588,6 +1594,12 @@ img {
   border-radius: 6px;
   color: inherit;
 }
+.btn-icon.btn-search-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
 
 .btn-text {
   position: relative;
@@ -2078,9 +2090,10 @@ img {
   background: url(../image/icon/ic_check_b.svg) no-repeat right center;
 }
 
-.radiocheck-root .msg-err,
-.radiocheck-list .msg-err {
+.msg-err {
   color: var(--c-error);
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .radiochk-root {
@@ -2330,9 +2343,6 @@ img {
 .radiochk-root.t--round [type=radio] {
   border-radius: 50%;
   background: url(../image/icon/ic_check_g.svg) no-repeat center center;
-}
-.radiochk-root .msg-err {
-  color: var(--c-error);
 }
 .radiochk-root.t--register {
   width: 100%;
@@ -4024,6 +4034,9 @@ img {
 .datepicker-root .textfield-form {
   background-color: #fff !important;
 }
+.datepicker-root .textfield-label {
+  flex-grow: 1;
+}
 
 .datepicker-popper {
   z-index: 99;
@@ -4359,7 +4372,7 @@ img {
   height: calc(var(--chk-h) * var(--chk-l) + 18px);
 }
 .filter-checklist-root .checklist-box {
-  flex: 1;
+  flex: 1 0 0;
   display: flex;
   flex-direction: column;
   padding: 8px 0 8px 8px;
@@ -4537,5 +4550,5 @@ img {
   top: 50%;
   height: 11px;
   margin-top: -5px;
-  border-left: 1px solid #D4D4D9;
+  border-left: 1px solid #d4d4d9;
 }
